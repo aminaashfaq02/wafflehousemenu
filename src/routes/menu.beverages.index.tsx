@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import beveragesData from "@/data/beverages.json";
+
 import { CategoryMasterView, type MasterItem } from "@/components/category-master-view";
 
 // Section imagery
@@ -27,46 +27,8 @@ const imageMap: Record<string, string> = {
   "popular-drinks.jpg": popularDrinks,
 };
 
-interface BeverageRawItem {
-  slug: string;
-  name: string;
-  price: number;
-  calories: number;
-  rating: number;
-  description: string;
-  image: string;
-}
+import { beverageMasterItems, beverageFaqs } from "@/data/beverages-mapped";
 
-const rawItems = beveragesData.items as BeverageRawItem[];
-
-export const beverageMasterItems: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/beverages/${i.slug}`,
-}));
-
-export const beverageFaqs = [
-  {
-    question: "Is Waffle House coffee bottomless?",
-    answer: "Yes! When you order Classic Blend, Dark Roast, or Decaf Coffee, your server provides unlimited free refills during your diner stay.",
-  },
-  {
-    question: "What is Alice's Teamonade™?",
-    answer: "Alice's Teamonade™ is a signature 50/50 blend of Waffle House sweet iced tea and lemonade served cold over ice.",
-  },
-  {
-    question: "What soda options are available at Waffle House?",
-    answer: "Fountain sodas include Coca-Cola®, Diet Coke®, Sprite®, Pibb Xtra®, Barq's® Root Beer, and Hi-C® Fruit Punch.",
-  },
-  {
-    question: "Are hot and cold drinks served 24/7?",
-    answer: "Yes! Coffee, sweet tea, juices, sodas, and milk are served 24 hours a day, 7 days a week.",
-  },
-];
 
 const SITE = "https://wafflehousemenu.com";
 

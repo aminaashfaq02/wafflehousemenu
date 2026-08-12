@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import allStarData from "@/data/all-star-special.json";
+
 import { CategoryMasterView, type MasterItem } from "@/components/category-master-view";
 
 // Section imagery
@@ -46,46 +46,8 @@ const imageMap: Record<string, string> = {
   "allstar_country_ham_1786278308124.jpg": countryHamImg,
 };
 
-interface AllStarRawItem {
-  slug: string;
-  name: string;
-  price: number;
-  calories: number;
-  rating: number;
-  description: string;
-  image: string;
-}
+import { allStarMasterItems, allStarFaqs } from "@/data/all-star-special-mapped";
 
-const rawItems = allStarData.items as AllStarRawItem[];
-
-export const allStarMasterItems: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/all-star-special/${i.slug}`,
-}));
-
-export const allStarFaqs = [
-  {
-    question: "What comes with the Waffle House All-Star Special™?",
-    answer: "The All-Star Special™ is a complete combo plate including two fresh eggs cooked to order, buttered toast with jelly, your choice of grits or regular hashbrowns (or sliced tomatoes), your choice of bacon, sausage or city/country ham, and a classic golden-brown sweet cream waffle.",
-  },
-  {
-    question: "Can I customize the waffle in my All-Star Special™ combo?",
-    answer: "Yes! You can upgrade from the Classic Waffle to Pecan, Chocolate Chip, Peanut Butter Chip, or Blueberry waffles for a small upcharge.",
-  },
-  {
-    question: "How many calories are in a standard All-Star Special™ breakfast?",
-    answer: "A standard All-Star Special™ with scrambled eggs, white toast, bacon, hashbrowns and a classic waffle contains approximately 1,045 calories.",
-  },
-  {
-    question: "Is the All-Star Special™ served all day and night?",
-    answer: "Yes! The All-Star Special™ is Waffle House's most famous signature combo and is cooked fresh to order 24 hours a day, 7 days a week.",
-  },
-];
 
 const SITE = "https://wafflehousemenu.com";
 

@@ -35,111 +35,118 @@ interface BowlRawItem {
   image: string;
 }
 
-const rawItems = bowlsData.items as BowlRawItem[];
 
-const items: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/hashbrown-bowls/${i.slug}`,
-}));
+let rawItems: any[];
+let items: MasterItem[];
+let tenOfficialBowls: MasterItem[];
 
-const tenOfficialBowls: MasterItem[] = [
-  {
-    slug: "sausage-egg-cheese-hashbrown-bowl",
-    name: "Sausage Egg & Cheese Hashbrown Bowl",
-    price: 10.30,
-    calories: 860,
-    rating: 4.9,
-    image: items[0]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/sausage-egg-cheese-hashbrown-bowl",
-  },
-  {
-    slug: "chicken-sausage-egg-cheese-hashbrown-bowl",
-    name: "Chicken Sausage Egg & Cheese Hashbrown Bowl",
-    price: 10.30,
-    calories: 840,
-    rating: 4.8,
-    image: items[1]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/chicken-sausage-egg-cheese-hashbrown-bowl",
-  },
-  {
-    slug: "bacon-egg-cheese-hashbrown-bowl",
-    name: "Bacon Egg & Cheese Hashbrown Bowl",
-    price: 10.30,
-    calories: 735,
-    rating: 4.9,
-    image: items[2]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/bacon-egg-cheese-hashbrown-bowl",
-  },
-  {
-    slug: "ham-egg-cheese-hashbrown-bowl",
-    name: "Ham Egg & Cheese Hashbrown Bowl",
-    price: 10.30,
-    calories: 725,
-    rating: 4.8,
-    image: items[3]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/ham-egg-cheese-hashbrown-bowl",
-  },
-  {
-    slug: "cheesesteak-melt-hashbrown-bowl",
-    name: "Cheesesteak Melt Hashbrown Bowl",
-    price: 11.85,
-    calories: 742,
-    rating: 4.9,
-    image: items[4]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/cheesesteak-melt-hashbrown-bowl",
-  },
-  {
-    slug: "chicken-melt-hashbrown-bowl",
-    name: "Chicken Melt Hashbrown Bowl",
-    price: 11.85,
-    calories: 682,
-    rating: 4.8,
-    image: items[5]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/chicken-melt-hashbrown-bowl",
-  },
-  {
-    slug: "sausage-egg-cheese-grits-bowl",
-    name: "Sausage Egg & Cheese Grits Bowl",
-    price: 10.30,
-    calories: 685,
-    rating: 4.8,
-    image: items[6]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/sausage-egg-cheese-grits-bowl",
-  },
-  {
-    slug: "bacon-egg-cheese-grits-bowl",
-    name: "Bacon Egg & Cheese Grits Bowl",
-    price: 10.30,
-    calories: 560,
-    rating: 4.8,
-    image: items[7]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/bacon-egg-cheese-grits-bowl",
-  },
-  {
-    slug: "ham-egg-cheese-grits-bowl",
-    name: "Ham Egg & Cheese Grits Bowl",
-    price: 10.30,
-    calories: 550,
-    rating: 4.7,
-    image: items[8]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/ham-egg-cheese-grits-bowl",
-  },
-  {
-    slug: "build-your-own-custom-bowl",
-    name: "Build-Your-Own Custom Bowl",
-    price: 10.30,
-    calories: 750,
-    rating: 4.9,
-    image: items[9]?.image ?? introImg,
-    href: "/menu/hashbrown-bowls/build-your-own-custom-bowl",
-  },
-];
-
+function initData() {
+  if (items) return;
+  rawItems = bowlsData.items as BowlRawItem[];
+  
+  items = rawItems.map((i) => ({
+    slug: i.slug,
+    name: i.name,
+    price: i.price,
+    calories: i.calories,
+    rating: i.rating,
+    image: imageMap[i.image] ?? introImg,
+    href: `/menu/hashbrown-bowls/${i.slug}`,
+  }));
+  
+  tenOfficialBowls = [
+    {
+      slug: "sausage-egg-cheese-hashbrown-bowl",
+      name: "Sausage Egg & Cheese Hashbrown Bowl",
+      price: 10.30,
+      calories: 860,
+      rating: 4.9,
+      image: items[0]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/sausage-egg-cheese-hashbrown-bowl",
+    },
+    {
+      slug: "chicken-sausage-egg-cheese-hashbrown-bowl",
+      name: "Chicken Sausage Egg & Cheese Hashbrown Bowl",
+      price: 10.30,
+      calories: 840,
+      rating: 4.8,
+      image: items[1]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/chicken-sausage-egg-cheese-hashbrown-bowl",
+    },
+    {
+      slug: "bacon-egg-cheese-hashbrown-bowl",
+      name: "Bacon Egg & Cheese Hashbrown Bowl",
+      price: 10.30,
+      calories: 735,
+      rating: 4.9,
+      image: items[2]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/bacon-egg-cheese-hashbrown-bowl",
+    },
+    {
+      slug: "ham-egg-cheese-hashbrown-bowl",
+      name: "Ham Egg & Cheese Hashbrown Bowl",
+      price: 10.30,
+      calories: 725,
+      rating: 4.8,
+      image: items[3]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/ham-egg-cheese-hashbrown-bowl",
+    },
+    {
+      slug: "cheesesteak-melt-hashbrown-bowl",
+      name: "Cheesesteak Melt Hashbrown Bowl",
+      price: 11.85,
+      calories: 742,
+      rating: 4.9,
+      image: items[4]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/cheesesteak-melt-hashbrown-bowl",
+    },
+    {
+      slug: "chicken-melt-hashbrown-bowl",
+      name: "Chicken Melt Hashbrown Bowl",
+      price: 11.85,
+      calories: 682,
+      rating: 4.8,
+      image: items[5]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/chicken-melt-hashbrown-bowl",
+    },
+    {
+      slug: "sausage-egg-cheese-grits-bowl",
+      name: "Sausage Egg & Cheese Grits Bowl",
+      price: 10.30,
+      calories: 685,
+      rating: 4.8,
+      image: items[6]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/sausage-egg-cheese-grits-bowl",
+    },
+    {
+      slug: "bacon-egg-cheese-grits-bowl",
+      name: "Bacon Egg & Cheese Grits Bowl",
+      price: 10.30,
+      calories: 560,
+      rating: 4.8,
+      image: items[7]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/bacon-egg-cheese-grits-bowl",
+    },
+    {
+      slug: "ham-egg-cheese-grits-bowl",
+      name: "Ham Egg & Cheese Grits Bowl",
+      price: 10.30,
+      calories: 550,
+      rating: 4.7,
+      image: items[8]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/ham-egg-cheese-grits-bowl",
+    },
+    {
+      slug: "build-your-own-custom-bowl",
+      name: "Build-Your-Own Custom Bowl",
+      price: 10.30,
+      calories: 750,
+      rating: 4.9,
+      image: items[9]?.image ?? introImg,
+      href: "/menu/hashbrown-bowls/build-your-own-custom-bowl",
+    },
+  ];
+}
 const bowlFaqs = [
   {
     question: "What is the difference between a Hashbrown Bowl and a Grits Bowl?",
@@ -163,6 +170,7 @@ const SITE = "https://wafflehousemenu.com";
 
 export const Route = createFileRoute("/menu/hashbrown-bowls/")({
   head: () => {
+    initData();
     const url = `${SITE}/menu/hashbrown-bowls`;
     const title = "Waffle House Hashbrown & Grits Bowls Menu | Prices & Calories 2026";
     const description =
@@ -223,7 +231,9 @@ export const Route = createFileRoute("/menu/hashbrown-bowls/")({
       ],
     };
   },
-  component: () => (
+  component: () => {
+    initData();
+    return (
     <CategoryMasterView
       categoryId="hashbrown-bowls"
       introImg={introImg}
@@ -306,5 +316,6 @@ export const Route = createFileRoute("/menu/hashbrown-bowls/")({
       subscribeBgImg={subscribeBgImg}
       subscribeIdSuffix="hashbrown-bowls"
     />
-  ),
+    );
+  },
 });

@@ -8,7 +8,7 @@ import videoImg3 from "@/assets/tbone-steak.jpg";
 import videoImg4 from "@/assets/breakfast-nutrition-prep.jpg";
 
 import { CategoryMasterView } from "@/components/category-master-view";
-import { beverageMasterItems, beverageFaqs } from "./menu.beverages.index";
+import { beverageMasterItems, beverageFaqs } from "@/data/beverages-mapped";
 
 const SITE = "https://wafflehousemenu.com";
 

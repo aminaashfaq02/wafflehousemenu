@@ -44,18 +44,24 @@ interface BreakfastItem {
   image: string;
 }
 
-const rawItems = breakfastData.items as BreakfastItem[];
 
-const items: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? hero2Img,
-  href: `/menu/breakfast/${i.slug}`,
-}));
+let rawItems: any[];
+let items: MasterItem[];
 
+function initData() {
+  if (items) return;
+  rawItems = breakfastData.items as BreakfastItem[];
+  
+  items = rawItems.map((i) => ({
+    slug: i.slug,
+    name: i.name,
+    price: i.price,
+    calories: i.calories,
+    rating: i.rating,
+    image: imageMap[i.image] ?? hero2Img,
+    href: `/menu/breakfast/${i.slug}`,
+  }));
+}
 const eggFaqs = [
   {
     question: "How are eggs prepared at Waffle House?",
@@ -83,6 +89,7 @@ const SITE = "https://wafflehousemenu.com";
 
 export const Route = createFileRoute("/menu/breakfast/")({
   head: () => {
+    initData();
     const url = `${SITE}/menu/breakfast`;
     const title = "Waffle House Egg Breakfasts & Steaks Menu | Prices & Calories 2026";
     const description =
@@ -143,7 +150,9 @@ export const Route = createFileRoute("/menu/breakfast/")({
       ],
     };
   },
-  component: () => (
+  component: () => {
+    initData();
+    return (
     <CategoryMasterView
       categoryId="breakfast"
       introImg={introImg}
@@ -227,5 +236,6 @@ export const Route = createFileRoute("/menu/breakfast/")({
       subscribeBgImg={subscribeBgImg}
       subscribeIdSuffix="breakfast"
     />
-  ),
+    );
+  },
 });

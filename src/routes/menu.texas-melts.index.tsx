@@ -37,57 +37,64 @@ interface MeltRawItem {
   image: string;
 }
 
-const rawItems = meltsData.items as MeltRawItem[];
 
-const items: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/texas-melts/${i.slug}`,
-}));
+let rawItems: any[];
+let items: MasterItem[];
+let fourOfficialMelts: MasterItem[];
 
-const fourOfficialMelts: MasterItem[] = [
-  {
-    slug: "texas-grilled-chicken-melt",
-    name: "Texas Grilled Chicken Melt",
-    price: 10.50,
-    calories: 560,
-    rating: 4.9,
-    image: items[0]?.image ?? introImg,
-    href: "/menu/texas-melts/texas-grilled-chicken-melt",
-  },
-  {
-    slug: "texas-cheesesteak-melt",
-    name: "Texas Cheesesteak™ Melt",
-    price: 10.75,
-    calories: 630,
-    rating: 4.9,
-    image: items[1]?.image ?? introImg,
-    href: "/menu/texas-melts/texas-cheesesteak-melt",
-  },
-  {
-    slug: "texas-angus-patty-melt",
-    name: "Texas Angus Patty Melt",
-    price: 11.25,
-    calories: 660,
-    rating: 4.9,
-    image: items[2]?.image ?? introImg,
-    href: "/menu/texas-melts/texas-angus-patty-melt",
-  },
-  {
-    slug: "texas-sausage-melt",
-    name: "Texas Sausage Melt",
-    price: 9.75,
-    calories: 680,
-    rating: 4.8,
-    image: items[3]?.image ?? introImg,
-    href: "/menu/texas-melts/texas-sausage-melt",
-  },
-];
-
+function initData() {
+  if (items) return;
+  rawItems = meltsData.items as MeltRawItem[];
+  
+  items = rawItems.map((i) => ({
+    slug: i.slug,
+    name: i.name,
+    price: i.price,
+    calories: i.calories,
+    rating: i.rating,
+    image: imageMap[i.image] ?? introImg,
+    href: `/menu/texas-melts/${i.slug}`,
+  }));
+  
+  fourOfficialMelts = [
+    {
+      slug: "texas-grilled-chicken-melt",
+      name: "Texas Grilled Chicken Melt",
+      price: 10.50,
+      calories: 560,
+      rating: 4.9,
+      image: items[0]?.image ?? introImg,
+      href: "/menu/texas-melts/texas-grilled-chicken-melt",
+    },
+    {
+      slug: "texas-cheesesteak-melt",
+      name: "Texas Cheesesteak™ Melt",
+      price: 10.75,
+      calories: 630,
+      rating: 4.9,
+      image: items[1]?.image ?? introImg,
+      href: "/menu/texas-melts/texas-cheesesteak-melt",
+    },
+    {
+      slug: "texas-angus-patty-melt",
+      name: "Texas Angus Patty Melt",
+      price: 11.25,
+      calories: 660,
+      rating: 4.9,
+      image: items[2]?.image ?? introImg,
+      href: "/menu/texas-melts/texas-angus-patty-melt",
+    },
+    {
+      slug: "texas-sausage-melt",
+      name: "Texas Sausage Melt",
+      price: 9.75,
+      calories: 680,
+      rating: 4.8,
+      image: items[3]?.image ?? introImg,
+      href: "/menu/texas-melts/texas-sausage-melt",
+    },
+  ];
+}
 const texasMeltFaqs = [
   {
     question: "What makes a Waffle House Texas Melt unique?",
@@ -111,6 +118,7 @@ const SITE = "https://wafflehousemenu.com";
 
 export const Route = createFileRoute("/menu/texas-melts/")({
   head: () => {
+    initData();
     const url = `${SITE}/menu/texas-melts`;
     const title = "Waffle House Texas Melts Menu | Prices & Calories 2026";
     const description =
@@ -171,7 +179,9 @@ export const Route = createFileRoute("/menu/texas-melts/")({
       ],
     };
   },
-  component: () => (
+  component: () => {
+    initData();
+    return (
     <CategoryMasterView
       categoryId="texas-melts"
       introImg={introImg}
@@ -254,5 +264,6 @@ export const Route = createFileRoute("/menu/texas-melts/")({
       subscribeBgImg={subscribeBgImg}
       subscribeIdSuffix="texas-melts"
     />
-  ),
+    );
+  },
 });

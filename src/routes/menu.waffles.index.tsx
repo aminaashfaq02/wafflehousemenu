@@ -38,22 +38,28 @@ interface WaffleItem {
   image: string;
 }
 
-const rawItems = wafflesData.items as WaffleItem[];
 
-const items: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  calorieDetails: i.calorieDetails,
-  allergens: i.allergens,
-  preparation: i.preparation,
-  imageDescription: i.imageDescription,
-  rating: i.rating,
-  image: imageMap[i.image] ?? circleIntroImg,
-  href: `/menu/waffles/${i.slug}`,
-}));
+let rawItems: any[];
+let items: MasterItem[];
 
+function initData() {
+  if (items) return;
+  rawItems = wafflesData.items as WaffleItem[];
+  
+  items = rawItems.map((i) => ({
+    slug: i.slug,
+    name: i.name,
+    price: i.price,
+    calories: i.calories,
+    calorieDetails: i.calorieDetails,
+    allergens: i.allergens,
+    preparation: i.preparation,
+    imageDescription: i.imageDescription,
+    rating: i.rating,
+    image: imageMap[i.image] ?? circleIntroImg,
+    href: `/menu/waffles/${i.slug}`,
+  }));
+}
 const SITE = "https://wafflehousemenu.com";
 
 const waffleFaqs = [
@@ -81,6 +87,7 @@ const waffleFaqs = [
 
 export const Route = createFileRoute("/menu/waffles/")({
   head: () => {
+    initData();
     const url = `${SITE}/menu/waffles`;
     const title = "Waffle House Waffles Menu | Prices & Calories 2026";
     const description =
@@ -141,7 +148,9 @@ export const Route = createFileRoute("/menu/waffles/")({
       ],
     };
   },
-  component: () => (
+  component: () => {
+    initData();
+    return (
     <CategoryMasterView
       categoryId="waffles"
       introImg={circleIntroImg}
@@ -221,6 +230,6 @@ export const Route = createFileRoute("/menu/waffles/")({
       subscribeBgImg={subscribeBgImg}
       subscribeIdSuffix="waffles"
     />
-  ),
+    );
+  },
 });
-

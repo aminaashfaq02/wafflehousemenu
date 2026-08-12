@@ -9,10 +9,7 @@ import videoImg4 from "@/assets/breakfast-nutrition-prep.jpg";
 import {
   CategoryMasterView,
 } from "@/components/category-master-view";
-import {
-  hashbrownMasterItems,
-  hashbrownFaqs,
-} from "./menu.hashbrowns.index";
+import { hashbrownMasterItems, hashbrownFaqs } from "@/data/hashbrowns-mapped";
 
 const SITE = "https://wafflehousemenu.com";
 

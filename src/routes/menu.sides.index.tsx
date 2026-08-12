@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import sidesData from "@/data/sides.json";
+
 import { CategoryMasterView, type MasterItem } from "@/components/category-master-view";
 
 // Section imagery
@@ -41,46 +41,8 @@ const imageMap: Record<string, string> = {
   "Pecan_pie_on_dessert_plate_202608101354.jpeg": pecanPie,
 };
 
-interface SideRawItem {
-  slug: string;
-  name: string;
-  price: number;
-  calories: number;
-  rating: number;
-  description: string;
-  image: string;
-}
+import { sideMasterItems, sideFaqs } from "@/data/sides-mapped";
 
-const rawItems = sidesData.items as SideRawItem[];
-
-export const sideMasterItems: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/sides/${i.slug}`,
-}));
-
-export const sideFaqs = [
-  {
-    question: "What side options are available at Waffle House?",
-    answer: "Options include hickory-smoked bacon, pork sausage patties, city ham, country ham, sliced tomatoes, creamy grits, cheese grits, toast, buttermilk biscuits, Bert's Chili™, and fresh pie slices.",
-  },
-  {
-    question: "Are Waffle House pies baked fresh daily?",
-    answer: "Yes! Southern Pecan Pie and Triple Chocolate Pie are available by the slice (regular or small portion) 24/7.",
-  },
-  {
-    question: "How many calories are in a Side of Cheese Grits?",
-    answer: "A bowl of warm, creamy Cheese Grits contains 140 calories.",
-  },
-  {
-    question: "Are side items served all day?",
-    answer: "Yes! All Southern sides, meats, grits, and pies are served 24 hours a day, 7 days a week.",
-  },
-];
 
 const SITE = "https://wafflehousemenu.com";
 

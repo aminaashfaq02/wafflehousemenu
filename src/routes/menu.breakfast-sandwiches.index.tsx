@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import sandwichesData from "@/data/breakfast-sandwiches.json";
+
 import { CategoryMasterView, type MasterItem } from "@/components/category-master-view";
 
 // Section imagery
@@ -29,50 +29,8 @@ const imageMap: Record<string, string> = {
   "Chicken_sausage_biscuit_with_egg_202608101308.jpeg": chickenSausageBiscuit,
 };
 
-interface SandwichRawItem {
-  slug: string;
-  name: string;
-  price: number;
-  calories: number;
-  rating: number;
-  description: string;
-  image: string;
-}
+import { sandwichMasterItems, sandwichFaqs } from "@/data/breakfast-sandwiches-mapped";
 
-const rawItems = sandwichesData.items as SandwichRawItem[];
-
-export const sandwichMasterItems: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/breakfast-sandwiches/${i.slug}`,
-}));
-
-export const sandwichFaqs = [
-  {
-    question: "What bread choices are available for Waffle House Breakfast Sandwiches?",
-    answer: "You can choose between toasted white bread, wheat bread, raisin toast, or thick, buttery grilled Texas toast.",
-  },
-  {
-    question: "Are Waffle House melts served all day?",
-    answer: "Yes! All Waffle House breakfast sandwiches, Texas melts, and handhelds are cooked fresh to order 24 hours a day, 7 days a week.",
-  },
-  {
-    question: "What meats can I choose for my breakfast sandwich?",
-    answer: "Options include hickory-smoked bacon, savory pork sausage patties, lean chicken sausage patties, grilled city ham, and USDA choice grilled steak.",
-  },
-  {
-    question: "How many calories are in a Texas Bacon, Egg & Cheese Melt?",
-    answer: "A Texas Bacon, Egg & Cheese Melt ranges from 525 to 730 calories depending on cheese and butter options.",
-  },
-  {
-    question: "Can I add extra cheese or double meat to my sandwich?",
-    answer: "Yes! You can customize any sandwich on the flat-top with double cheese, extra eggs, or double sausage/bacon.",
-  },
-];
 
 const SITE = "https://wafflehousemenu.com";
 

@@ -43,84 +43,91 @@ interface SandwichRawItem {
   image: string;
 }
 
-const rawItems = sandwichesData.items as SandwichRawItem[];
 
-const items: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/sandwiches/${i.slug}`,
-}));
+let rawItems: any[];
+let items: MasterItem[];
+let sevenOfficialSandwiches: MasterItem[];
 
-const sevenOfficialSandwiches: MasterItem[] = [
-  {
-    slug: "grilled-chicken-sandwich-deluxe",
-    name: "Grilled Chicken Sandwich Deluxe",
-    price: 9.25,
-    calories: 380,
-    rating: 4.7,
-    image: items[0]?.image ?? introImg,
-    href: "/menu/sandwiches/grilled-chicken-sandwich-deluxe",
-  },
-  {
-    slug: "grilled-chicken-bacon-cheese-sandwich-deluxe",
-    name: "Grilled Chicken Bacon Cheese Sandwich Deluxe",
-    price: 10.50,
-    calories: 420,
-    rating: 4.9,
-    image: items[1]?.image ?? introImg,
-    href: "/menu/sandwiches/grilled-chicken-bacon-cheese-sandwich-deluxe",
-  },
-  {
-    slug: "grilled-cheese-sandwich",
-    name: "Grilled Cheese Sandwich",
-    price: 6.50,
-    calories: 275,
-    rating: 4.6,
-    image: items[2]?.image ?? introImg,
-    href: "/menu/sandwiches/grilled-cheese-sandwich",
-  },
-  {
-    slug: "waffle-sandwich-ham-and-cheese-on-wheat",
-    name: "Waffle Sandwich (Ham & Cheese on Wheat)",
-    price: 8.75,
-    calories: 270,
-    rating: 4.7,
-    image: items[3]?.image ?? introImg,
-    href: "/menu/sandwiches/waffle-sandwich-ham-and-cheese-on-wheat",
-  },
-  {
-    slug: "ham-and-cheese-sandwich-lettuce-tomato",
-    name: "Ham & Cheese Sandwich (Lettuce & Tomato)",
-    price: 8.75,
-    calories: 400,
-    rating: 4.7,
-    image: items[4]?.image ?? introImg,
-    href: "/menu/sandwiches/ham-and-cheese-sandwich-lettuce-tomato",
-  },
-  {
-    slug: "blt-sandwich",
-    name: "BLT Sandwich",
-    price: 8.50,
-    calories: 350,
-    rating: 4.8,
-    image: items[5]?.image ?? introImg,
-    href: "/menu/sandwiches/blt-sandwich",
-  },
-  {
-    slug: "texas-bacon-lovers-blt-sandwich",
-    name: "Texas Bacon Lover's BLT Sandwich",
-    price: 10.25,
-    calories: 520,
-    rating: 4.9,
-    image: items[6]?.image ?? introImg,
-    href: "/menu/sandwiches/texas-bacon-lovers-blt-sandwich",
-  },
-];
-
+function initData() {
+  if (items) return;
+  rawItems = sandwichesData.items as SandwichRawItem[];
+  
+  items = rawItems.map((i) => ({
+    slug: i.slug,
+    name: i.name,
+    price: i.price,
+    calories: i.calories,
+    rating: i.rating,
+    image: imageMap[i.image] ?? introImg,
+    href: `/menu/sandwiches/${i.slug}`,
+  }));
+  
+  sevenOfficialSandwiches = [
+    {
+      slug: "grilled-chicken-sandwich-deluxe",
+      name: "Grilled Chicken Sandwich Deluxe",
+      price: 9.25,
+      calories: 380,
+      rating: 4.7,
+      image: items[0]?.image ?? introImg,
+      href: "/menu/sandwiches/grilled-chicken-sandwich-deluxe",
+    },
+    {
+      slug: "grilled-chicken-bacon-cheese-sandwich-deluxe",
+      name: "Grilled Chicken Bacon Cheese Sandwich Deluxe",
+      price: 10.50,
+      calories: 420,
+      rating: 4.9,
+      image: items[1]?.image ?? introImg,
+      href: "/menu/sandwiches/grilled-chicken-bacon-cheese-sandwich-deluxe",
+    },
+    {
+      slug: "grilled-cheese-sandwich",
+      name: "Grilled Cheese Sandwich",
+      price: 6.50,
+      calories: 275,
+      rating: 4.6,
+      image: items[2]?.image ?? introImg,
+      href: "/menu/sandwiches/grilled-cheese-sandwich",
+    },
+    {
+      slug: "waffle-sandwich-ham-and-cheese-on-wheat",
+      name: "Waffle Sandwich (Ham & Cheese on Wheat)",
+      price: 8.75,
+      calories: 270,
+      rating: 4.7,
+      image: items[3]?.image ?? introImg,
+      href: "/menu/sandwiches/waffle-sandwich-ham-and-cheese-on-wheat",
+    },
+    {
+      slug: "ham-and-cheese-sandwich-lettuce-tomato",
+      name: "Ham & Cheese Sandwich (Lettuce & Tomato)",
+      price: 8.75,
+      calories: 400,
+      rating: 4.7,
+      image: items[4]?.image ?? introImg,
+      href: "/menu/sandwiches/ham-and-cheese-sandwich-lettuce-tomato",
+    },
+    {
+      slug: "blt-sandwich",
+      name: "BLT Sandwich",
+      price: 8.50,
+      calories: 350,
+      rating: 4.8,
+      image: items[5]?.image ?? introImg,
+      href: "/menu/sandwiches/blt-sandwich",
+    },
+    {
+      slug: "texas-bacon-lovers-blt-sandwich",
+      name: "Texas Bacon Lover's BLT Sandwich",
+      price: 10.25,
+      calories: 520,
+      rating: 4.9,
+      image: items[6]?.image ?? introImg,
+      href: "/menu/sandwiches/texas-bacon-lovers-blt-sandwich",
+    },
+  ];
+}
 const sandwichFaqs = [
   {
     question: "What bread options are available for Waffle House Sandwiches?",
@@ -144,6 +151,7 @@ const SITE = "https://wafflehousemenu.com";
 
 export const Route = createFileRoute("/menu/sandwiches/")({
   head: () => {
+    initData();
     const url = `${SITE}/menu/sandwiches`;
     const title = "Waffle House Classic Lunch & Dinner Sandwiches Menu | Prices & Calories 2026";
     const description =
@@ -204,7 +212,9 @@ export const Route = createFileRoute("/menu/sandwiches/")({
       ],
     };
   },
-  component: () => (
+  component: () => {
+    initData();
+    return (
     <CategoryMasterView
       categoryId="sandwiches"
       introImg={introImg}
@@ -287,5 +297,6 @@ export const Route = createFileRoute("/menu/sandwiches/")({
       subscribeBgImg={subscribeBgImg}
       subscribeIdSuffix="sandwiches"
     />
-  ),
+    );
+  },
 });

@@ -9,10 +9,7 @@ import videoImg4 from "@/assets/breakfast-nutrition-prep.jpg";
 import {
   CategoryMasterView,
 } from "@/components/category-master-view";
-import {
-  sandwichMasterItems,
-  sandwichFaqs,
-} from "./menu.breakfast-sandwiches.index";
+import { sandwichMasterItems, sandwichFaqs } from "@/data/breakfast-sandwiches-mapped";
 
 const SITE = "https://wafflehousemenu.com";
 

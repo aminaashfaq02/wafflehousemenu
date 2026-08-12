@@ -35,66 +35,73 @@ interface OmeletRawItem {
   image: string;
 }
 
-const rawItems = omeletsData.items as OmeletRawItem[];
 
-const items: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/omelets/${i.slug}`,
-}));
+let rawItems: any[];
+let items: MasterItem[];
+let fiveOmelets: MasterItem[];
 
-const fiveOmelets: MasterItem[] = [
-  {
-    slug: "cheese-omelet",
-    name: "Cheese Omelet Breakfast",
-    price: 7.95,
-    calories: 280,
-    rating: 4.8,
-    image: items[0]?.image ?? introImg,
-    href: "/menu/omelets/cheese-omelet",
-  },
-  {
-    slug: "ham-cheese-omelet",
-    name: "Ham & Cheese Omelet Breakfast",
-    price: 10.75,
-    calories: 350,
-    rating: 4.9,
-    image: items[1]?.image ?? introImg,
-    href: "/menu/omelets/ham-cheese-omelet",
-  },
-  {
-    slug: "cheesesteak-omelet",
-    name: "Cheesesteak Omelet Breakfast",
-    price: 11.50,
-    calories: 410,
-    rating: 4.9,
-    image: items[2]?.image ?? introImg,
-    href: "/menu/omelets/cheesesteak-omelet",
-  },
-  {
-    slug: "fiesta-omelet",
-    name: "Fiesta Omelet Breakfast",
-    price: 10.75,
-    calories: 380,
-    rating: 4.8,
-    image: items[3]?.image ?? introImg,
-    href: "/menu/omelets/fiesta-omelet",
-  },
-  {
-    slug: "build-your-own-omelet",
-    name: "Build Your Own Omelet Breakfast",
-    price: 8.95,
-    calories: 180,
-    rating: 4.7,
-    image: items[0]?.image ?? introImg,
-    href: "/menu/omelets/build-your-own-omelet",
-  },
-];
-
+function initData() {
+  if (items) return;
+  rawItems = omeletsData.items as OmeletRawItem[];
+  
+  items = rawItems.map((i) => ({
+    slug: i.slug,
+    name: i.name,
+    price: i.price,
+    calories: i.calories,
+    rating: i.rating,
+    image: imageMap[i.image] ?? introImg,
+    href: `/menu/omelets/${i.slug}`,
+  }));
+  
+  fiveOmelets = [
+    {
+      slug: "cheese-omelet",
+      name: "Cheese Omelet Breakfast",
+      price: 7.95,
+      calories: 280,
+      rating: 4.8,
+      image: items[0]?.image ?? introImg,
+      href: "/menu/omelets/cheese-omelet",
+    },
+    {
+      slug: "ham-cheese-omelet",
+      name: "Ham & Cheese Omelet Breakfast",
+      price: 10.75,
+      calories: 350,
+      rating: 4.9,
+      image: items[1]?.image ?? introImg,
+      href: "/menu/omelets/ham-cheese-omelet",
+    },
+    {
+      slug: "cheesesteak-omelet",
+      name: "Cheesesteak Omelet Breakfast",
+      price: 11.50,
+      calories: 410,
+      rating: 4.9,
+      image: items[2]?.image ?? introImg,
+      href: "/menu/omelets/cheesesteak-omelet",
+    },
+    {
+      slug: "fiesta-omelet",
+      name: "Fiesta Omelet Breakfast",
+      price: 10.75,
+      calories: 380,
+      rating: 4.8,
+      image: items[3]?.image ?? introImg,
+      href: "/menu/omelets/fiesta-omelet",
+    },
+    {
+      slug: "build-your-own-omelet",
+      name: "Build Your Own Omelet Breakfast",
+      price: 8.95,
+      calories: 180,
+      rating: 4.7,
+      image: items[0]?.image ?? introImg,
+      href: "/menu/omelets/build-your-own-omelet",
+    },
+  ];
+}
 const omeletFaqs = [
   {
     question: "How are Toddle House® Omelets cooked at Waffle House?",
@@ -122,6 +129,7 @@ const SITE = "https://wafflehousemenu.com";
 
 export const Route = createFileRoute("/menu/omelets/")({
   head: () => {
+    initData();
     const url = `${SITE}/menu/omelets`;
     const title = "Waffle House Toddle House® Omelets Menu | Prices & Calories 2026";
     const description =
@@ -182,7 +190,9 @@ export const Route = createFileRoute("/menu/omelets/")({
       ],
     };
   },
-  component: () => (
+  component: () => {
+    initData();
+    return (
     <CategoryMasterView
       categoryId="omelets"
       introImg={introImg}
@@ -265,5 +275,6 @@ export const Route = createFileRoute("/menu/omelets/")({
       subscribeBgImg={subscribeBgImg}
       subscribeIdSuffix="omelets"
     />
-  ),
+    );
+  },
 });

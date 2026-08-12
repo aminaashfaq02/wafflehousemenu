@@ -35,120 +35,127 @@ interface BurgerRawItem {
   image: string;
 }
 
-const rawItems = burgersData.items as BurgerRawItem[];
 
-const items: MasterItem[] = rawItems.map((i) => ({
-  slug: i.slug,
-  name: i.name,
-  price: i.price,
-  calories: i.calories,
-  rating: i.rating,
-  image: imageMap[i.image] ?? introImg,
-  href: `/menu/classic-dinners/${i.slug}`,
-}));
+let rawItems: any[];
+let items: MasterItem[];
+let elevenOfficialDinners: MasterItem[];
 
-const elevenOfficialDinners: MasterItem[] = [
-  {
-    slug: "chicken-dinner-platter",
-    name: "Chicken Dinner Platter",
-    price: 12.10,
-    calories: 415,
-    rating: 4.8,
-    image: items[0]?.image ?? introImg,
-    href: "/menu/classic-dinners/chicken-dinner-platter",
-  },
-  {
-    slug: "meat-lovers-chicken-dinner-platter",
-    name: "Meat Lovers Chicken Dinner Platter",
-    price: 14.10,
-    calories: 520,
-    rating: 4.8,
-    image: items[1]?.image ?? introImg,
-    href: "/menu/classic-dinners/meat-lovers-chicken-dinner-platter",
-  },
-  {
-    slug: "country-ham-dinner-platter",
-    name: "Country Ham Dinner Platter",
-    price: 13.15,
-    calories: 600,
-    rating: 4.7,
-    image: items[2]?.image ?? introImg,
-    href: "/menu/classic-dinners/country-ham-dinner-platter",
-  },
-  {
-    slug: "pork-chop-dinner-platter",
-    name: "Pork Chop Dinner Platter",
-    price: 13.50,
-    calories: 765,
-    rating: 4.8,
-    image: items[3]?.image ?? introImg,
-    href: "/menu/classic-dinners/pork-chop-dinner-platter",
-  },
-  {
-    slug: "meat-lovers-pork-chop-dinner-platter",
-    name: "Meat Lovers Pork Chop Dinner Platter",
-    price: 15.50,
-    calories: 890,
-    rating: 4.9,
-    image: items[4]?.image ?? introImg,
-    href: "/menu/classic-dinners/meat-lovers-pork-chop-dinner-platter",
-  },
-  {
-    slug: "t-bone-steak-dinner-platter",
-    name: "T-Bone Steak Dinner Platter",
-    price: 15.90,
-    calories: 610,
-    rating: 4.9,
-    image: items[5]?.image ?? introImg,
-    href: "/menu/classic-dinners/t-bone-steak-dinner-platter",
-  },
-  {
-    slug: "sirloin-delmonico-steak-dinner-platter",
-    name: "Sirloin / Delmonico Steak Dinner Platter",
-    price: 12.60,
-    calories: 555,
-    rating: 4.8,
-    image: items[6]?.image ?? introImg,
-    href: "/menu/classic-dinners/sirloin-delmonico-steak-dinner-platter",
-  },
-  {
-    slug: "original-angus-hamburger",
-    name: "Original Angus Hamburger (2-oz)",
-    price: 5.90,
-    calories: 315,
-    rating: 4.7,
-    image: items[0]?.image ?? introImg,
-    href: "/menu/classic-dinners/original-angus-hamburger",
-  },
-  {
-    slug: "quarter-pound-angus-hamburger-deluxe",
-    name: "Quarter Pound Angus Hamburger Deluxe (4-oz)",
-    price: 8.50,
-    calories: 455,
-    rating: 4.8,
-    image: items[1]?.image ?? introImg,
-    href: "/menu/classic-dinners/quarter-pound-angus-hamburger-deluxe",
-  },
-  {
-    slug: "quarter-pound-angus-cheeseburger-deluxe",
-    name: "Quarter Pound Angus Cheeseburger Deluxe",
-    price: 8.50,
-    calories: 420,
-    rating: 4.9,
-    image: items[2]?.image ?? introImg,
-    href: "/menu/classic-dinners/quarter-pound-angus-cheeseburger-deluxe",
-  },
-  {
-    slug: "double-angus-quarter-pound-cheeseburger-deluxe",
-    name: "Double Angus 1/4 LB Cheeseburger Deluxe",
-    price: 10.50,
-    calories: 690,
-    rating: 4.9,
-    image: items[3]?.image ?? introImg,
-    href: "/menu/classic-dinners/double-angus-quarter-pound-cheeseburger-deluxe",
-  },
-];
-
+function initData() {
+  if (items) return;
+  rawItems = burgersData.items as BurgerRawItem[];
+  
+  items = rawItems.map((i) => ({
+    slug: i.slug,
+    name: i.name,
+    price: i.price,
+    calories: i.calories,
+    rating: i.rating,
+    image: imageMap[i.image] ?? introImg,
+    href: `/menu/classic-dinners/${i.slug}`,
+  }));
+  
+  elevenOfficialDinners = [
+    {
+      slug: "chicken-dinner-platter",
+      name: "Chicken Dinner Platter",
+      price: 12.10,
+      calories: 415,
+      rating: 4.8,
+      image: items[0]?.image ?? introImg,
+      href: "/menu/classic-dinners/chicken-dinner-platter",
+    },
+    {
+      slug: "meat-lovers-chicken-dinner-platter",
+      name: "Meat Lovers Chicken Dinner Platter",
+      price: 14.10,
+      calories: 520,
+      rating: 4.8,
+      image: items[1]?.image ?? introImg,
+      href: "/menu/classic-dinners/meat-lovers-chicken-dinner-platter",
+    },
+    {
+      slug: "country-ham-dinner-platter",
+      name: "Country Ham Dinner Platter",
+      price: 13.15,
+      calories: 600,
+      rating: 4.7,
+      image: items[2]?.image ?? introImg,
+      href: "/menu/classic-dinners/country-ham-dinner-platter",
+    },
+    {
+      slug: "pork-chop-dinner-platter",
+      name: "Pork Chop Dinner Platter",
+      price: 13.50,
+      calories: 765,
+      rating: 4.8,
+      image: items[3]?.image ?? introImg,
+      href: "/menu/classic-dinners/pork-chop-dinner-platter",
+    },
+    {
+      slug: "meat-lovers-pork-chop-dinner-platter",
+      name: "Meat Lovers Pork Chop Dinner Platter",
+      price: 15.50,
+      calories: 890,
+      rating: 4.9,
+      image: items[4]?.image ?? introImg,
+      href: "/menu/classic-dinners/meat-lovers-pork-chop-dinner-platter",
+    },
+    {
+      slug: "t-bone-steak-dinner-platter",
+      name: "T-Bone Steak Dinner Platter",
+      price: 15.90,
+      calories: 610,
+      rating: 4.9,
+      image: items[5]?.image ?? introImg,
+      href: "/menu/classic-dinners/t-bone-steak-dinner-platter",
+    },
+    {
+      slug: "sirloin-delmonico-steak-dinner-platter",
+      name: "Sirloin / Delmonico Steak Dinner Platter",
+      price: 12.60,
+      calories: 555,
+      rating: 4.8,
+      image: items[6]?.image ?? introImg,
+      href: "/menu/classic-dinners/sirloin-delmonico-steak-dinner-platter",
+    },
+    {
+      slug: "original-angus-hamburger",
+      name: "Original Angus Hamburger (2-oz)",
+      price: 5.90,
+      calories: 315,
+      rating: 4.7,
+      image: items[0]?.image ?? introImg,
+      href: "/menu/classic-dinners/original-angus-hamburger",
+    },
+    {
+      slug: "quarter-pound-angus-hamburger-deluxe",
+      name: "Quarter Pound Angus Hamburger Deluxe (4-oz)",
+      price: 8.50,
+      calories: 455,
+      rating: 4.8,
+      image: items[1]?.image ?? introImg,
+      href: "/menu/classic-dinners/quarter-pound-angus-hamburger-deluxe",
+    },
+    {
+      slug: "quarter-pound-angus-cheeseburger-deluxe",
+      name: "Quarter Pound Angus Cheeseburger Deluxe",
+      price: 8.50,
+      calories: 420,
+      rating: 4.9,
+      image: items[2]?.image ?? introImg,
+      href: "/menu/classic-dinners/quarter-pound-angus-cheeseburger-deluxe",
+    },
+    {
+      slug: "double-angus-quarter-pound-cheeseburger-deluxe",
+      name: "Double Angus 1/4 LB Cheeseburger Deluxe",
+      price: 10.50,
+      calories: 690,
+      rating: 4.9,
+      image: items[3]?.image ?? introImg,
+      href: "/menu/classic-dinners/double-angus-quarter-pound-cheeseburger-deluxe",
+    },
+  ];
+}
 const dinnerFaqs = [
   {
     question: "What sides come with Waffle House Classic Dinners?",
@@ -164,6 +171,7 @@ const SITE = "https://wafflehousemenu.com";
 
 export const Route = createFileRoute("/menu/classic-dinners/")({
   head: () => {
+    initData();
     const url = `${SITE}/menu/classic-dinners`;
     const title = "Waffle House Classic Dinners & Platters Menu | Prices & Calories 2026";
     const description =
@@ -200,7 +208,9 @@ export const Route = createFileRoute("/menu/classic-dinners/")({
       ],
     };
   },
-  component: () => (
+  component: () => {
+    initData();
+    return (
     <CategoryMasterView
       categoryId="classic-dinners"
       introImg={introImg}
@@ -282,5 +292,6 @@ export const Route = createFileRoute("/menu/classic-dinners/")({
       subscribeBgImg={subscribeBgImg}
       subscribeIdSuffix="classic-dinners"
     />
-  ),
+    );
+  },
 });

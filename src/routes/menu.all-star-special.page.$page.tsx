@@ -8,7 +8,7 @@ import videoImg3 from "@/assets/tbone-steak.jpg";
 import videoImg4 from "@/assets/breakfast-nutrition-prep.jpg";
 
 import { CategoryMasterView } from "@/components/category-master-view";
-import { allStarMasterItems, allStarFaqs } from "./menu.all-star-special.index";
+import { allStarMasterItems, allStarFaqs } from "@/data/all-star-special-mapped";
 
 const SITE = "https://wafflehousemenu.com";
 
