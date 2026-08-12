@@ -1,0 +1,86 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "two-egg-breakfast",
+      "name": "2 Egg Breakfast",
+      "price": 6.25,
+      "calories": 670,
+      "rating": 4.9,
+      "description": "Two fresh eggs cooked to order (scrambled, fried, over-easy), served with your choice of toast and hashbrowns, grits, or sliced tomatoes.",
+      "image": "allstar_scrambled_eggs_1786276403171.jpg"
+    },
+    {
+      "slug": "cheese-n-eggs",
+      "name": "Cheese 'N Eggs",
+      "price": 7.75,
+      "calories": 670,
+      "rating": 4.8,
+      "description": "Two eggs scrambled together with melted American cheese slices, served alongside your choice of toast and a breakfast side.",
+      "image": "nutrition-lowcal-eggs.jpg"
+    },
+    {
+      "slug": "t-bone-and-eggs",
+      "name": "T-Bone & Eggs Breakfast",
+      "price": 12.60,
+      "calories": 1230,
+      "rating": 4.9,
+      "description": "USDA Choice T-Bone steak grilled on the flat top to desired temperature, served with two eggs cooked your way, toast, and choice of side.",
+      "image": "tbone-steak.jpg"
+    },
+    {
+      "slug": "steak-and-eggs",
+      "name": "Steak & Eggs (Delmonico / Sirloin)",
+      "price": 12.60,
+      "calories": 690,
+      "rating": 4.8,
+      "description": "Tender USDA Choice steak grilled flat-top style, served with two eggs, buttered toast, and grits or hashbrowns.",
+      "image": "tbone-steak.jpg"
+    },
+    {
+      "slug": "country-ham-and-eggs",
+      "name": "Country Ham & Eggs",
+      "price": 13.15,
+      "calories": 640,
+      "rating": 4.7,
+      "description": "A thick, salty slice of dry-cured country ham grilled hot, served alongside two eggs, toast, and a choice of side.",
+      "image": "allstar_country_ham_1786278308124.jpg"
+    },
+    {
+      "slug": "chicken-and-eggs",
+      "name": "Chicken & Eggs",
+      "price": 12.10,
+      "calories": 550,
+      "rating": 4.7,
+      "description": "One juicy grilled chicken breast filet served with two eggs cooked to order, toast, and choice of side.",
+      "image": "chicken-sandwich.jpg"
+    },
+    {
+      "slug": "meat-lovers-chicken-and-eggs",
+      "name": "Meat Lover's Chicken & Eggs",
+      "price": 14.10,
+      "calories": 500,
+      "rating": 4.8,
+      "description": "Two tender grilled chicken breast filets served with two fresh eggs cooked to preference, toast, and choice of side.",
+      "image": "chicken-sandwich.jpg"
+    },
+    {
+      "slug": "pork-chops-and-eggs",
+      "name": "Pork Chops & Eggs",
+      "price": 13.50,
+      "calories": 570,
+      "rating": 4.8,
+      "description": "Two center-cut pork chops grilled golden brown on the flat top, accompanied by two eggs, toast, and grits or hashbrowns.",
+      "image": "hero-2-breakfast.jpg"
+    },
+    {
+      "slug": "meat-lovers-pork-chops-and-eggs",
+      "name": "Meat Lover's Pork Chops & Eggs",
+      "price": 15.50,
+      "calories": 1230,
+      "rating": 4.9,
+      "description": "Three grilled center-cut pork chops served with two eggs cooked to order, toast, and your choice of side.",
+      "image": "hero-2-breakfast.jpg"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "texas-cheesesteak-melt",
+      "name": "Texas Cheesesteak Melt",
+      "price": 10.75,
+      "calories": 630,
+      "rating": 4.9,
+      "description": "Thinly shaved USDA Choice beef grilled with yellow onions and melted American cheese on Texas toast.",
+      "image": "Angus_patty_melt_on_toast.jpeg"
+    },
+    {
+      "slug": "texas-patty-melt",
+      "name": "Texas Angus Patty Melt",
+      "price": 11.25,
+      "calories": 660,
+      "rating": 4.8,
+      "description": "100% Angus beef patty topped with caramelized onions and melted American cheese on grilled Texas toast.",
+      "image": "Angus_patty_melt_on_toast.jpeg"
+    },
+    {
+      "slug": "texas-sausage-melt",
+      "name": "Texas Sausage Melt",
+      "price": 9.75,
+      "calories": 680,
+      "rating": 4.8,
+      "description": "A grilled pork sausage patty layered with melted cheese on buttered Texas toast.",
+      "image": "Texas_sausage_melt_on_plate_202608101243.jpeg"
+    },
+    {
+      "slug": "texas-chicken-melt",
+      "name": "Texas Chicken Melt",
+      "price": 10.25,
+      "calories": 490,
+      "rating": 4.7,
+      "description": "Tender grilled chicken breast filet with melted cheese on grilled Texas toast.",
+      "image": "Texas_grilled_chicken_melt_2K_202608101237.jpeg"
+    },
+    {
+      "slug": "texas-bacon-egg-and-cheese-melt",
+      "name": "Texas Bacon, Egg & Cheese Melt",
+      "price": 8.50,
+      "calories": 670,
+      "rating": 4.9,
+      "description": "Crispy bacon strips, cooked egg, and melted cheese served hot on Texas toast.",
+      "image": "Texas_Bacon_Egg_Cheese_Melt_202608101229.jpeg"
+    },
+    {
+      "slug": "texas-sausage-egg-and-cheese-melt",
+      "name": "Texas Sausage, Egg & Cheese Melt",
+      "price": 8.50,
+      "calories": 710,
+      "rating": 4.9,
+      "description": "Grilled sausage patty, scrambled egg, and melted cheese on buttered Texas toast.",
+      "image": "Texas_sausage_melt_on_plate_202608101243.jpeg"
+    },
+    {
+      "slug": "texas-ham-egg-and-cheese-melt",
+      "name": "Texas Ham, Egg & Cheese Melt",
+      "price": 8.50,
+      "calories": 620,
+      "rating": 4.8,
+      "description": "Hickory-smoked city ham slice, egg, and melted cheese assembled on Texas toast.",
+      "image": "Texas_ham_egg_and_cheese_202608101235.jpeg"
+    }
+  ]
+}

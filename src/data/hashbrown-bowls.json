@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "sausage-egg-and-cheese-hashbrown-bowl",
+      "name": "Sausage, Egg & Cheese Hashbrown Bowl",
+      "price": 9.25,
+      "calories": 780,
+      "rating": 4.9,
+      "description": "Double order of hashbrowns topped with two slices of melted American cheese, two scrambled eggs, and two sausage patties.",
+      "image": "Bowl_of_hashbrowns_and_eggs_202608101324.jpeg"
+    },
+    {
+      "slug": "bacon-egg-and-cheese-hashbrown-bowl",
+      "name": "Bacon, Egg & Cheese Hashbrown Bowl",
+      "price": 9.25,
+      "calories": 685,
+      "rating": 4.9,
+      "description": "Double hashbrown base covered with melted American cheese, two scrambled eggs, and three strips of hickory-smoked bacon.",
+      "image": "Hashbrown_bowl_with_eggs_and_202608101318.jpeg"
+    },
+    {
+      "slug": "city-ham-egg-and-cheese-hashbrown-bowl",
+      "name": "City Ham, Egg & Cheese Hashbrown Bowl",
+      "price": 9.25,
+      "calories": 650,
+      "rating": 4.8,
+      "description": "Crispy double hashbrowns topped with melted American cheese, scrambled eggs, and seared hickory-smoked city ham.",
+      "image": "Hashbrown_bowl_with_eggs_and_202608101322.jpeg"
+    },
+    {
+      "slug": "texas-cheesesteak-egg-and-cheese-hashbrown-bowl",
+      "name": "Texas Cheesesteak Egg & Cheese Hashbrown Bowl",
+      "price": 10.75,
+      "calories": 780,
+      "rating": 4.9,
+      "description": "Double hashbrowns topped with melted cheese, scrambled eggs, and thin-shaved USDA Choice beef grilled with onions.",
+      "image": "Bowl_with_hashbrowns_and_beef_202608101325.jpeg"
+    }
+  ]
+}

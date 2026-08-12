@@ -1,0 +1,68 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "bacon-egg-and-cheese-sandwich-toast",
+      "name": "Bacon, Egg & Cheese Sandwich (on Toast)",
+      "price": 6.00,
+      "calories": 585,
+      "rating": 4.9,
+      "description": "Crispy bacon strips, cooked egg, and melted American cheese stacked between toasted bread.",
+      "image": "Texas_Bacon_Egg_Cheese_Melt_202608101229.jpeg"
+    },
+    {
+      "slug": "sausage-egg-and-cheese-sandwich-toast",
+      "name": "Sausage, Egg & Cheese Sandwich (on Toast)",
+      "price": 6.25,
+      "calories": 625,
+      "rating": 4.9,
+      "description": "Grilled pork sausage patty, egg, and melted American cheese on toasted white or wheat bread.",
+      "image": "Texas_sausage_melt_on_plate_202608101243.jpeg"
+    },
+    {
+      "slug": "city-ham-egg-and-cheese-sandwich-toast",
+      "name": "City Ham, Egg & Cheese Sandwich (on Toast)",
+      "price": 6.00,
+      "calories": 550,
+      "rating": 4.8,
+      "description": "Hickory-smoked city ham slice, egg, and melted cheese on toast.",
+      "image": "Texas_ham_egg_and_cheese_202608101235.jpeg"
+    },
+    {
+      "slug": "chicken-sausage-egg-and-cheese-sandwich-toast",
+      "name": "Chicken Sausage, Egg & Cheese Sandwich (on Toast)",
+      "price": 5.30,
+      "calories": 530,
+      "rating": 4.8,
+      "description": "Grilled chicken sausage patty, egg, and melted cheese served on toasted bread.",
+      "image": "Texas_sausage_melt_on_plate_202608101243.jpeg"
+    },
+    {
+      "slug": "bacon-egg-and-cheese-biscuit",
+      "name": "Bacon, Egg & Cheese Biscuit",
+      "price": 6.00,
+      "calories": 585,
+      "rating": 4.9,
+      "description": "Crispy bacon, egg, and melted cheese inside a split warm buttermilk biscuit.",
+      "image": "Bacon_egg_cheese_biscuit_sandwich_202608101255.jpeg"
+    },
+    {
+      "slug": "sausage-egg-and-cheese-biscuit",
+      "name": "Sausage, Egg & Cheese Biscuit",
+      "price": 6.25,
+      "calories": 625,
+      "rating": 4.9,
+      "description": "Grilled pork sausage patty, cooked egg, and melted cheese stacked in a biscuit.",
+      "image": "Breakfast_biscuit_with_sausage_a._202608101254.jpeg"
+    },
+    {
+      "slug": "chicken-sausage-egg-and-cheese-biscuit",
+      "name": "Chicken Sausage, Egg & Cheese Biscuit",
+      "price": 5.30,
+      "calories": 530,
+      "rating": 4.8,
+      "description": "Chicken sausage patty, egg, and melted cheese inside a buttermilk biscuit.",
+      "image": "Chicken_sausage_biscuit_with_egg_202608101308.jpeg"
+    }
+  ]
+}

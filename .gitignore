@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack/**
+.nitro
+*.local
+
+# Vercel build folder
+.vercel/
+
+# Backup zip files
+*.zip
+src.zip
+
+# Push script containing credentials
+git_push.js
+
+# Unused duplicate/uncompressed raw asset directories
+src/assets/wafflehouse images1/
+src/assets/iloveimg-compressed/
+src/assets/iloveimg-compressed (2)/
+src/assets/iloveimg-compressed (3)/
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

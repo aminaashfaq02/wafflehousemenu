@@ -1,0 +1,104 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "original-angus-hamburger",
+      "name": "Original Angus Hamburger (2-oz)",
+      "price": 5.90,
+      "calories": 315,
+      "rating": 4.7,
+      "description": "A 2-oz 100% Angus beef patty seared on the flat-top grill, served on a toasted warm burger bun with optional pickles and onions.",
+      "image": "Classic_burger_on_white_plate_202608101338.jpeg"
+    },
+    {
+      "slug": "quarter-pound-angus-hamburger-deluxe",
+      "name": "Quarter Pound Angus Hamburger Deluxe (4-oz)",
+      "price": 8.50,
+      "calories": 455,
+      "rating": 4.8,
+      "description": "A quarter-pound (4-oz) fresh Angus beef patty grilled flat-top style, served Deluxe with lettuce, tomato, and onions on a toasted bun.",
+      "image": "Beef_burger_on_grilled_bun_202608101340.jpeg"
+    },
+    {
+      "slug": "quarter-pound-angus-cheeseburger-deluxe",
+      "name": "Quarter Pound Angus Cheeseburger Deluxe",
+      "price": 8.50,
+      "calories": 420,
+      "rating": 4.9,
+      "description": "A quarter-pound Angus beef patty seared with a slice of melted American cheese, topped with fresh lettuce, tomato, and mayonnaise.",
+      "image": "Beef_burger_on_grilled_bun_202608101340.jpeg"
+    },
+    {
+      "slug": "double-angus-quarter-pound-cheeseburger-deluxe",
+      "name": "Double Angus 1/4 LB Cheeseburger Deluxe",
+      "price": 10.50,
+      "calories": 690,
+      "rating": 4.9,
+      "description": "Two quarter-pound 100% Angus beef patties layered with two slices of melted American cheese, served Deluxe on a toasted bun.",
+      "image": "Beef_burger_on_grilled_bun_202608101340.jpeg"
+    },
+    {
+      "slug": "chicken-dinner-platter",
+      "name": "Chicken Dinner Platter",
+      "price": 12.10,
+      "calories": 415,
+      "rating": 4.8,
+      "description": "One juicy grilled chicken breast filet served with warm toast and your choice of two dinner sides.",
+      "image": "Grilled_chicken_sandwich_on_plate_202608101346.jpeg"
+    },
+    {
+      "slug": "meat-lovers-chicken-dinner-platter",
+      "name": "Meat Lovers Chicken Dinner Platter",
+      "price": 14.10,
+      "calories": 520,
+      "rating": 4.8,
+      "description": "Two seasoned grilled chicken breast filets served with grill-toasted bread and choice of two sides.",
+      "image": "Grilled_chicken_sandwich_on_plate_202608101346.jpeg"
+    },
+    {
+      "slug": "country-ham-dinner-platter",
+      "name": "Country Ham Dinner Platter",
+      "price": 13.15,
+      "calories": 600,
+      "rating": 4.7,
+      "description": "A thick cut of dry-cured, salty country ham grilled hot, served with buttered toast and choice of two classic sides.",
+      "image": "Grilled_country_ham_slice_2K_202608101140.jpeg"
+    },
+    {
+      "slug": "pork-chop-dinner-platter",
+      "name": "Pork Chop Dinner Platter",
+      "price": 13.50,
+      "calories": 765,
+      "rating": 4.8,
+      "description": "Two center-cut pork chops grilled golden on the flat top, accompanied by toast and choice of two sides.",
+      "image": "Grilled_pork_chops_with_eggs_202608101201.jpeg"
+    },
+    {
+      "slug": "meat-lovers-pork-chop-dinner-platter",
+      "name": "Meat Lovers Pork Chop Dinner Platter",
+      "price": 15.50,
+      "calories": 890,
+      "rating": 4.9,
+      "description": "Three grilled center-cut pork chops served hot with buttered toast slices and two choice sides.",
+      "image": "Grilled_pork_chops_with_eggs_202608101201.jpeg"
+    },
+    {
+      "slug": "t-bone-steak-dinner-platter",
+      "name": "T-Bone Steak Dinner Platter",
+      "price": 15.90,
+      "calories": 610,
+      "rating": 4.9,
+      "description": "A full USDA Choice T-Bone steak grilled to temperature, served with toast and your choice of two dinner sides.",
+      "image": "Sirloin_steak_with_grits_and_202608101346.jpeg"
+    },
+    {
+      "slug": "sirloin-delmonico-steak-dinner-platter",
+      "name": "Sirloin / Delmonico Steak Dinner Platter",
+      "price": 12.60,
+      "calories": 555,
+      "rating": 4.8,
+      "description": "Tender USDA Choice steak grilled on the flat top, served with toast and choice of two sides.",
+      "image": "Sirloin_steak_with_grits_and_202608101346.jpeg"
+    }
+  ]
+}

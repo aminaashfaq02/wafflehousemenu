@@ -1,0 +1,131 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "signature-decaf-coffee",
+      "name": "Signature Decaf Coffee",
+      "price": 2.85,
+      "calories": 5,
+      "rating": 4.7,
+      "description": "Rich 100% Arabica decaffeinated coffee brewed fresh throughout the day with free refills.",
+      "image": "Steaming_coffee_on_diner_saucer_202608101413.jpeg"
+    },
+    {
+      "slug": "regular-coffee",
+      "name": "Waffle House Classic Regular Coffee",
+      "price": 2.85,
+      "calories": 5,
+      "rating": 4.9,
+      "description": "Signature 100% Arabica medium roast coffee, continuously brewed fresh and served piping hot with unlimited refills.",
+      "image": "Steaming_coffee_on_diner_saucer_202608101413.jpeg"
+    },
+    {
+      "slug": "dark-roast-coffee",
+      "name": "Dark Roast Coffee",
+      "price": 2.85,
+      "calories": 5,
+      "rating": 4.8,
+      "description": "Bold, dark-roasted 100% Arabica coffee beans brewed rich and intense.",
+      "image": "Steaming_coffee_on_diner_saucer_202608101414.jpeg"
+    },
+    {
+      "slug": "alice-ice-tea-sweet",
+      "name": "Alice's Iced Tea (Sweet)",
+      "price": 2.85,
+      "calories": 120,
+      "rating": 4.9,
+      "description": "Southern-style sweet iced tea brewed fresh daily with real cane sugar.",
+      "image": "popular-drinks.jpg"
+    },
+    {
+      "slug": "alice-ice-tea-unsweet",
+      "name": "Alice's Iced Tea (Unsweet)",
+      "price": 2.85,
+      "calories": 0,
+      "rating": 4.6,
+      "description": "Freshly brewed black tea served ice-cold with lemon wedges.",
+      "image": "popular-drinks.jpg"
+    },
+    {
+      "slug": "minute-maid-orange-juice",
+      "name": "Minute Maid® Orange Juice",
+      "price": 3.10,
+      "calories": 160,
+      "rating": 4.8,
+      "description": "100% pure orange juice packed with Vitamin C, served chilled.",
+      "image": "Glass_filled_with_orange_juice_202608101414.jpeg"
+    },
+    {
+      "slug": "minute-maid-lemonade",
+      "name": "Minute Maid® Lemonade",
+      "price": 2.85,
+      "calories": 150,
+      "rating": 4.7,
+      "description": "Refreshing sweet and tart lemonade served over ice.",
+      "image": "Glass_filled_with_orange_juice_202608101414.jpeg"
+    },
+    {
+      "slug": "coca-cola-soft-drinks",
+      "name": "Coca-Cola® Soft Drinks",
+      "price": 2.85,
+      "calories": 150,
+      "rating": 4.8,
+      "description": "Fountain favorites including Coca-Cola, Diet Coke, Sprite, and Dr Pepper.",
+      "image": "popular-drinks.jpg"
+    },
+    {
+      "slug": "chocolate-milk",
+      "name": "Whole Chocolate Milk",
+      "price": 3.10,
+      "calories": 230,
+      "rating": 4.9,
+      "description": "Creamy whole milk blended rich with chocolate syrup.",
+      "image": "popular-drinks.jpg"
+    },
+    {
+      "slug": "whole-milk",
+      "name": "Whole Milk",
+      "price": 2.85,
+      "calories": 150,
+      "rating": 4.6,
+      "description": "Fresh Grade A whole milk served ice-cold.",
+      "image": "popular-drinks.jpg"
+    },
+    {
+      "slug": "hot-tea",
+      "name": "Hot Tea",
+      "price": 2.85,
+      "calories": 0,
+      "rating": 4.5,
+      "description": "Steeping hot black tea served with lemon and sweetener options.",
+      "image": "Steaming_coffee_on_diner_saucer_202608101413.jpeg"
+    },
+    {
+      "slug": "hot-chocolate",
+      "name": "Hot Chocolate",
+      "price": 2.85,
+      "calories": 190,
+      "rating": 4.8,
+      "description": "Warm, creamy hot cocoa topped with whipped topping.",
+      "image": "Steaming_coffee_on_diner_saucer_202608101413.jpeg"
+    },
+    {
+      "slug": "southern-pecan-pie",
+      "name": "Southern Pecan Pie",
+      "price": 4.25,
+      "calories": 520,
+      "rating": 4.9,
+      "description": "Classic Southern pecan pie baked with a flaky crust and rich gooey caramel pecan filling.",
+      "image": "Pecan_pie_on_dessert_plate_202608101354.jpeg"
+    },
+    {
+      "slug": "triple-chocolate-pie",
+      "name": "Triple Chocolate Pie",
+      "price": 4.25,
+      "calories": 540,
+      "rating": 4.9,
+      "description": "Decadent chocolate pie layered with dark fudge and chocolate whipped cream.",
+      "image": "Pecan_pie_on_dessert_plate_202608101354.jpeg"
+    }
+  ]
+}

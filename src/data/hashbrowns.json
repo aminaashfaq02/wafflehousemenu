@@ -1,0 +1,122 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "regular-hashbrowns",
+      "name": "Regular Hashbrowns (Plain)",
+      "price": 3.45,
+      "calories": 190,
+      "rating": 4.8,
+      "description": "Shredded real potatoes scattered on a flat-top grill coated with oil and seared until golden crisp.",
+      "image": "Crispy_shredded_potato_hashbrowns_2K_202608101306.jpeg"
+    },
+    {
+      "slug": "large-hashbrowns",
+      "name": "Large Hashbrowns",
+      "price": 3.65,
+      "calories": 380,
+      "rating": 4.9,
+      "description": "Double portion of shredded potatoes scattered and grilled to golden crispness.",
+      "image": "Plate_of_potato_hashbrowns_2K_202608101310.jpeg"
+    },
+    {
+      "slug": "triple-hashbrowns",
+      "name": "Triple Hashbrowns",
+      "price": 4.15,
+      "calories": 570,
+      "rating": 4.9,
+      "description": "Triple portion of shredded real potatoes griddled until evenly golden and crisp.",
+      "image": "Shredded_potato_hashbrowns_on_plate_202608101305.jpeg"
+    },
+    {
+      "slug": "hashbrowns-smothered-covered",
+      "name": "Hashbrowns Scattered, Smothered & Covered",
+      "price": 4.85,
+      "calories": 285,
+      "rating": 4.9,
+      "description": "Shredded hashbrowns scattered on the grill, topped with sautéed onions (Smothered) and melted American cheese slices (Covered).",
+      "image": "Hashbrowns_with_cheese_and_onions_202608101311.jpeg"
+    },
+    {
+      "slug": "hashbrowns-all-the-way",
+      "name": "Hashbrowns All-The-Way",
+      "price": 5.40,
+      "calories": 300,
+      "rating": 5.0,
+      "description": "Hashbrowns loaded with every menu topping: onions, cheese, ham, tomatoes, jalapeños, mushrooms, chili, and gravy.",
+      "image": "Loaded_hashbrowns_with_toppings_2K_202608101313.jpeg"
+    },
+    {
+      "slug": "topping-smothered-onions",
+      "name": "Topping - Smothered (Sautéed Onions)",
+      "price": 0.70,
+      "calories": 15,
+      "rating": 4.7,
+      "description": "Fresh diced yellow onions sautéed on the flat top grill until sweet and translucent.",
+      "image": "Hashbrowns_with_cheese_and_onions_202608101311.jpeg"
+    },
+    {
+      "slug": "topping-covered-cheese",
+      "name": "Topping - Covered (Melted American Cheese)",
+      "price": 0.70,
+      "calories": 75,
+      "rating": 4.8,
+      "description": "Slices of classic yellow American cheese melted over hot hashbrowns.",
+      "image": "Hashbrowns_with_cheese_and_onions_202608101311.jpeg"
+    },
+    {
+      "slug": "topping-chunked-ham",
+      "name": "Topping - Chunked (Hickory Smoked Ham)",
+      "price": 0.70,
+      "calories": 70,
+      "rating": 4.8,
+      "description": "Diced hickory-smoked city ham seared on the grill and mixed into hashbrowns.",
+      "image": "Loaded_hashbrowns_with_toppings_2K_202608101313.jpeg"
+    },
+    {
+      "slug": "topping-diced-tomatoes",
+      "name": "Topping - Diced (Grilled Tomatoes)",
+      "price": 0.70,
+      "calories": 5,
+      "rating": 4.6,
+      "description": "Fresh diced red tomatoes lightly grilled on the flat top.",
+      "image": "Sliced_tomatoes_on_plate_2K_202608101133.jpeg"
+    },
+    {
+      "slug": "topping-peppered-jalapenos",
+      "name": "Topping - Peppered (Jalapeño Peppers)",
+      "price": 0.70,
+      "calories": 10,
+      "rating": 4.7,
+      "description": "Sliced pickled jalapeño peppers tossed onto hot hashbrowns for heat.",
+      "image": "Loaded_hashbrowns_with_toppings_2K_202608101313.jpeg"
+    },
+    {
+      "slug": "topping-capped-mushrooms",
+      "name": "Topping - Capped (Grilled Mushrooms)",
+      "price": 0.70,
+      "calories": 10,
+      "rating": 4.7,
+      "description": "Sliced button mushrooms sautéed on the grill until tender.",
+      "image": "Loaded_hashbrowns_with_toppings_2K_202608101313.jpeg"
+    },
+    {
+      "slug": "topping-topped-chili",
+      "name": "Topping - Topped (Bert's Chili™)",
+      "price": 0.70,
+      "calories": 55,
+      "rating": 4.8,
+      "description": "Signature beef and bean chili ladled warm over crispy hashbrowns.",
+      "image": "Loaded_hashbrowns_with_toppings_2K_202608101313.jpeg"
+    },
+    {
+      "slug": "topping-country-sausage-gravy",
+      "name": "Topping - Country (Sausage Gravy)",
+      "price": 0.70,
+      "calories": 75,
+      "rating": 4.8,
+      "description": "Rich, white peppered sausage gravy smothered over hot hashbrowns.",
+      "image": "Breakfast_biscuit_with_sausage_a._202608101254.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "all-star-special",
+      "name": "All-Star Special®",
+      "price": 11.75,
+      "calories": 1050,
+      "rating": 5.0,
+      "description": "Two eggs cooked to order with toast, jelly, your choice of grits or hashbrowns, choice of bacon, sausage, or ham, and a classic sweet cream waffle.",
+      "image": "Egg_breakfast_plate_with_toast_202608101154.jpeg"
+    },
+    {
+      "slug": "two-egg-breakfast",
+      "name": "Two Egg Breakfast",
+      "price": 6.85,
+      "calories": 360,
+      "rating": 4.8,
+      "description": "Two Grade A eggs cooked to order, served with buttered toast and choice of grits or crispy hashbrowns.",
+      "image": "Scrambled_eggs_on_plate_202608101026.jpeg"
+    },
+    {
+      "slug": "t-bone-steak-and-eggs",
+      "name": "T-Bone Steak & Eggs",
+      "price": 15.90,
+      "calories": 970,
+      "rating": 4.9,
+      "description": "USDA Choice 10-oz T-Bone steak grilled hot, paired with two eggs, buttered toast, and choice of grits or hashbrowns.",
+      "image": "Steak_and_eggs_breakfast_2K_202608101157.jpeg"
+    },
+    {
+      "slug": "sirloin-steak-and-eggs",
+      "name": "Sirloin Steak & Eggs",
+      "price": 12.60,
+      "calories": 915,
+      "rating": 4.8,
+      "description": "Tender USDA Choice Sirloin steak seared on the flat top, served with two eggs, toast, and choice of grits or hashbrowns.",
+      "image": "Steak_and_eggs_breakfast_platter_202608101156.jpeg"
+    },
+    {
+      "slug": "country-ham-and-eggs",
+      "name": "Country Ham & Eggs",
+      "price": 13.15,
+      "calories": 960,
+      "rating": 4.8,
+      "description": "Thick-cut dry-cured Southern country ham paired with two eggs cooked to order, toast, and choice of grits or hashbrowns.",
+      "image": "Grilled_country_ham_slice_2K_202608101140.jpeg"
+    },
+    {
+      "slug": "pork-chop-and-eggs",
+      "name": "Pork Chop & Eggs",
+      "price": 13.50,
+      "calories": 1125,
+      "rating": 4.9,
+      "description": "Two center-cut pork chops grilled golden brown, served with two eggs, buttered toast, and choice of grits or hashbrowns.",
+      "image": "Grilled_pork_chops_with_eggs_202608101201.jpeg"
+    },
+    {
+      "slug": "grilled-chicken-and-eggs",
+      "name": "Grilled Chicken & Eggs",
+      "price": 12.10,
+      "calories": 775,
+      "rating": 4.8,
+      "description": "Juicy grilled chicken breast filet served with two eggs cooked to order, buttered toast, and choice of grits or hashbrowns.",
+      "image": "Grilled_chicken_and_scrambled_eggs_202608101159.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "grilled-biscuit",
+      "name": "Grilled Biscuit",
+      "price": 2.50,
+      "calories": 300,
+      "rating": 4.7,
+      "description": "A warm Southern buttermilk biscuit split in half, buttered, and grilled face-down on the flat top until crisp and toasted.",
+      "image": "Grilled_buttermilk_biscuit_on_plate_202608101242.jpeg"
+    },
+    {
+      "slug": "biscuit-and-sausage-gravy",
+      "name": "Biscuit & Sausage Gravy",
+      "price": 4.75,
+      "calories": 450,
+      "rating": 4.9,
+      "description": "A freshly baked, split buttermilk biscuit topped with rich, creamy white gravy packed with savory sausage crumbles.",
+      "image": "Breakfast_biscuit_with_sausage_a._202608101254.jpeg"
+    },
+    {
+      "slug": "chicken-biscuit",
+      "name": "Chicken Biscuit",
+      "price": 5.25,
+      "calories": 475,
+      "rating": 4.8,
+      "description": "A tender, grilled chicken breast filet served inside a split, warm buttered biscuit.",
+      "image": "Chicken_sausage_biscuit_with_egg_202608101308.jpeg"
+    },
+    {
+      "slug": "sausage-biscuit",
+      "name": "Sausage Biscuit",
+      "price": 4.30,
+      "calories": 430,
+      "rating": 4.8,
+      "description": "A grilled, seasoned pork sausage patty served inside a freshly baked buttermilk biscuit.",
+      "image": "Breakfast_biscuit_with_sausage_a._202608101254.jpeg"
+    },
+    {
+      "slug": "chicken-sausage-biscuit",
+      "name": "Chicken Sausage Biscuit",
+      "price": 3.90,
+      "calories": 390,
+      "rating": 4.7,
+      "description": "A savory grilled chicken sausage patty placed inside a split warm biscuit.",
+      "image": "Chicken_sausage_biscuit_with_egg_202608101308.jpeg"
+    },
+    {
+      "slug": "bacon-biscuit",
+      "name": "Bacon Biscuit",
+      "price": 3.90,
+      "calories": 390,
+      "rating": 4.8,
+      "description": "Crispy strips of hickory-smoked pork bacon served inside a warm buttermilk biscuit.",
+      "image": "Pork_bacon_in_biscuit_2K_202608101247.jpeg"
+    },
+    {
+      "slug": "city-ham-biscuit",
+      "name": "City Ham Biscuit (1)",
+      "price": 4.00,
+      "calories": 400,
+      "rating": 4.7,
+      "description": "A slice of grilled hickory-smoked city ham served inside a warm biscuit.",
+      "image": "Buttermilk_biscuits_with_ham_served_202608101251.jpeg"
+    },
+    {
+      "slug": "country-ham-biscuits",
+      "name": "Country Ham Biscuits (2)",
+      "price": 6.65,
+      "calories": 640,
+      "rating": 4.9,
+      "description": "Two warm buttermilk biscuits filled with thick-cut, salty, dry-cured country ham.",
+      "image": "Buttermilk_biscuits_with_ham_served_202608101251.jpeg"
+    },
+    {
+      "slug": "sausage-egg-and-cheese-biscuit",
+      "name": "Sausage, Egg & Cheese Biscuit",
+      "price": 6.25,
+      "calories": 625,
+      "rating": 4.9,
+      "description": "A grilled pork sausage patty, cooked egg, and melted American cheese assembled inside a fluffy biscuit.",
+      "image": "Breakfast_biscuit_with_sausage_a._202608101254.jpeg"
+    },
+    {
+      "slug": "bacon-egg-and-cheese-biscuit",
+      "name": "Bacon, Egg & Cheese Biscuit",
+      "price": 6.00,
+      "calories": 585,
+      "rating": 4.9,
+      "description": "Strips of crispy bacon, a cooked egg, and melted American cheese stacked inside a split warm biscuit.",
+      "image": "Bacon_egg_cheese_biscuit_sandwich_202608101255.jpeg"
+    },
+    {
+      "slug": "chicken-sausage-egg-and-cheese-biscuit",
+      "name": "Chicken Sausage, Egg & Cheese Biscuit",
+      "price": 5.30,
+      "calories": 530,
+      "rating": 4.8,
+      "description": "A grilled chicken sausage patty, a cooked egg, and melted cheese stacked inside a buttermilk biscuit.",
+      "image": "Chicken_sausage_biscuit_with_egg_202608101308.jpeg"
+    }
+  ]
+}

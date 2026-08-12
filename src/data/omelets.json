@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-08-08",
+  "items": [
+    {
+      "slug": "cheese-omelet",
+      "name": "Cheese Omelet",
+      "price": 7.15,
+      "calories": 510,
+      "rating": 4.8,
+      "description": "Two fresh eggs whipped fluffy and folded around two melted slices of American cheese.",
+      "image": "Cheese_omelet_with_toast_and_202608101203.jpeg"
+    },
+    {
+      "slug": "ham-and-cheese-omelet",
+      "name": "Ham & Cheese Omelet",
+      "price": 8.65,
+      "calories": 610,
+      "rating": 4.9,
+      "description": "Fluffy two-egg omelet filled with diced hickory-smoked ham and melted American cheese.",
+      "image": "Omelet_with_ham_and_cheese_202608101205.jpeg"
+    },
+    {
+      "slug": "fiesta-omelet",
+      "name": "Fiesta Omelet",
+      "price": 9.15,
+      "calories": 650,
+      "rating": 4.9,
+      "description": "Two eggs whipped fluffy, folded with hickory-smoked ham, melted cheese, sautéed onions, and jalapeños.",
+      "image": "Fiesta_omelet_served_with_toast_202608101206.jpeg"
+    },
+    {
+      "slug": "cheesesteak-omelet",
+      "name": "Cheesesteak Omelet",
+      "price": 10.15,
+      "calories": 710,
+      "rating": 4.9,
+      "description": "Shaved USDA Choice steak, grilled onions, and melted American cheese folded inside two fluffy eggs.",
+      "image": "Cheesesteak_omelet_with_toast_an._202608101205.jpeg"
+    }
+  ]
+}
