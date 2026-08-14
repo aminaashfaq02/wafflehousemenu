@@ -41,9 +41,18 @@ interface BreakfastItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -175,14 +184,14 @@ export const Route = createFileRoute("/menu/egg-breakfasts/")({
         heading: "Most Popular Egg & Steak Plates",
         intro:
           "Explore the top-rated Waffle House egg breakfasts, steaks, and meat combos.",
-        items: items,
+        items: fillToTen(items),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Steak, Chicken & Pork Combos",
         intro:
           "Hearty breakfast platters with USDA choice steaks, grilled chicken filets, and center-cut pork chops.",
-        items: items,
+        items: fillToTen([...items].reverse()),
       }}
       videos={{
         heading: "Egg Breakfasts & Steaks at Waffle House, Behind the Grill",
@@ -226,7 +235,7 @@ export const Route = createFileRoute("/menu/egg-breakfasts/")({
       allRecipes={{
         heading: "Waffle House Egg Breakfasts & Steaks Menu",
         intro:
-          "The complete lineup of 9 Waffle House egg breakfasts and steaks with verified 2026 prices and calorie counts.",
+          `The complete lineup of ${items.length} Waffle House egg breakfasts and steaks with verified 2026 prices and calorie counts.`,
         items: items,
       }}
       faqs={eggFaqs}

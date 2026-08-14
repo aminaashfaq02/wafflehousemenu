@@ -35,10 +35,19 @@ interface BurgerRawItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
 let elevenOfficialDinners: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -234,14 +243,14 @@ export const Route = createFileRoute("/menu/classic-dinners/")({
         heading: "10 Most Popular Dinner Platters",
         intro:
           "Explore top-rated Waffle House classic dinner platters, ranked by reader popularity.",
-        items: items,
+        items: fillToTen(elevenOfficialDinners),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Hearty Diner Meal Platters",
         intro:
           "Flat-top seared steaks, chops, chicken, and ham served hot with sides.",
-        items: items,
+        items: fillToTen([...elevenOfficialDinners].reverse()),
       }}
       videos={{
         heading: "Classic Dinners at Waffle House, Behind the Grill",
@@ -250,7 +259,7 @@ export const Route = createFileRoute("/menu/classic-dinners/")({
         items: [
           {
             id: "1",
-            title: "Waffle House Angus Burgers & Dinner Platters",
+            title: "Waffle House Classic Dinners & Steaks",
             duration: "4:15",
             youtubeId: "LtWP08imxG0",
             videoUrl: "https://www.youtube.com/watch?v=LtWP08imxG0",
@@ -258,26 +267,26 @@ export const Route = createFileRoute("/menu/classic-dinners/")({
           },
           {
             id: "2",
-            title: "Waffle House Double Cheeseburger Deluxe Recipe",
+            title: "How Waffle House Grills T-Bone Steak Dinners",
             duration: "5:30",
-            youtubeId: "69we9o7Asqc",
-            videoUrl: "https://www.youtube.com/watch?v=69we9o7Asqc",
+            youtubeId: "7ENUMFsngss",
+            videoUrl: "https://www.youtube.com/watch?v=7ENUMFsngss",
             image: videoImg2,
           },
           {
             id: "3",
-            title: "How Waffle House Grills T-Bone Steak Dinners",
+            title: "Waffle House Pork Chop Dinner Platter Review",
             duration: "6:12",
-            youtubeId: "7ENUMFsngss",
-            videoUrl: "https://www.youtube.com/watch?v=7ENUMFsngss",
+            youtubeId: "y7RyBT2a62U",
+            videoUrl: "https://www.youtube.com/watch?v=y7RyBT2a62U",
             image: videoImg3,
           },
           {
             id: "4",
-            title: "Waffle House Pork Chop Dinner Platter Review",
+            title: "Waffle House Chicken Dinner Platter Recipe",
             duration: "7:45",
-            youtubeId: "y7RyBT2a62U",
-            videoUrl: "https://www.youtube.com/watch?v=y7RyBT2a62U",
+            youtubeId: "69we9o7Asqc",
+            videoUrl: "https://www.youtube.com/watch?v=69we9o7Asqc",
             image: videoImg4,
           },
         ],
@@ -285,7 +294,7 @@ export const Route = createFileRoute("/menu/classic-dinners/")({
       allRecipes={{
         heading: "Waffle House Classic Dinners & Platters Menu",
         intro:
-          "The complete lineup of 11 official dinner platters and burgers with verified 2026 prices and calorie counts.",
+          "The complete lineup of 11 official dinner platters and steaks with verified 2026 prices and calorie counts.",
         items: elevenOfficialDinners,
       }}
       faqs={dinnerFaqs}

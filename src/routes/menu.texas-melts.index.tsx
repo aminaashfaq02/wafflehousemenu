@@ -37,10 +37,19 @@ interface MeltRawItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
 let fourOfficialMelts: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -206,14 +215,14 @@ export const Route = createFileRoute("/menu/texas-melts/")({
         heading: "10 Most Popular Texas Melts",
         intro:
           "Explore top-rated Waffle House Texas Toast melts, ranked by reader popularity.",
-        items: items,
+        items: fillToTen(fourOfficialMelts),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Golden Texas Toast Favorites",
         intro:
           "Gooey melted cheese and grilled onions stacked inside thick, buttered Texas toast.",
-        items: items,
+        items: fillToTen([...fourOfficialMelts].reverse()),
       }}
       videos={{
         heading: "Texas Melts at Waffle House, Behind the Grill",
@@ -248,8 +257,8 @@ export const Route = createFileRoute("/menu/texas-melts/")({
             id: "4",
             title: "Copycat Patty Melt Recipe - Food Network Style",
             duration: "7:45",
-            youtubeId: "FsMEaCtT3TI",
-            videoUrl: "https://www.youtube.com/watch?v=FsMEaCtT3TI",
+            youtubeId: "y7RyBT2a62U",
+            videoUrl: "https://www.youtube.com/watch?v=y7RyBT2a62U",
             image: videoImg4,
           },
         ],

@@ -39,10 +39,19 @@ interface BurgerRawItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
 let elevenOfficialBurgers: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -213,7 +222,7 @@ export const Route = createFileRoute("/menu/burgers/")({
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
               { "@type": "ListItem", position: 2, name: "Menu", item: `${SITE}/menu` },
-              { "@type": "ListItem", position: 3, name: "100% Angus Beef Burgers & Dinners", item: url },
+              { "@type": "ListItem", position: 3, name: "100% Angus Burgers & Dinners", item: url },
             ],
           }),
         },
@@ -271,14 +280,14 @@ export const Route = createFileRoute("/menu/burgers/")({
         heading: "10 Most Popular Burgers & Dinners",
         intro:
           "Explore top-rated Waffle House Angus burgers and dinner platters, ranked by reader popularity.",
-        items: items,
+        items: fillToTen(elevenOfficialBurgers),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Fresh Flat-Top Grill Platters",
         intro:
           "Seared Angus burgers, T-Bone steaks, grilled chicken, country ham, and pork chops.",
-        items: items,
+        items: fillToTen([...elevenOfficialBurgers].reverse()),
       }}
       videos={{
         heading: "100% Angus Burgers & Dinners at Waffle House, Behind the Grill",

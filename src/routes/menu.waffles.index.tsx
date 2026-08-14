@@ -38,9 +38,18 @@ interface WaffleItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -175,15 +184,15 @@ export const Route = createFileRoute("/menu/waffles/")({
         eyebrow: "Reader Favorites",
         heading: "10 Most Popular Waffle Recipes",
         intro:
-          "Explore the 10 top-rated Waffle House waffles and waffle combos, ranked by reader popularity.",
-        items: items,
+          "Explore top-rated Waffle House waffles and waffle combos, ranked by reader popularity.",
+        items: fillToTen(items),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Waffle Favorites & Combos",
         intro:
           "Delicious buttermilk waffles, fruit toppings, sweet chips, and waffle breakfast combos.",
-        items: items,
+        items: fillToTen([...items].reverse()),
       }}
       videos={{
         heading: "Waffles at Waffle House, Behind the Iron",
@@ -223,8 +232,8 @@ export const Route = createFileRoute("/menu/waffles/")({
       allRecipes={{
         heading: "Waffle House Waffles Menu",
         intro:
-          "The complete lineup of 5 signature Waffle House waffles with verified 2026 prices and calorie counts.",
-        items: items.slice(0, 5),
+          `The complete lineup of ${items.length} signature Waffle House waffles with verified 2026 prices and calorie counts.`,
+        items: items,
       }}
       faqs={waffleFaqs}
       subscribeBgImg={subscribeBgImg}

@@ -39,10 +39,19 @@ interface BiscuitRawItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
 let elevenOfficialBiscuits: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -270,14 +279,14 @@ export const Route = createFileRoute("/menu/biscuits/")({
         heading: "10 Most Popular Biscuit Recipes",
         intro:
           "Explore the top-rated Waffle House biscuit sandwiches and gravy plates, ranked by reader popularity.",
-        items: items,
+        items: fillToTen(elevenOfficialBiscuits),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Southern Buttermilk Biscuits & Combos",
         intro:
           "Golden grilled biscuits stuffed with bacon, sausage, chicken, ham, egg, and melted cheese.",
-        items: items,
+        items: fillToTen([...elevenOfficialBiscuits].reverse()),
       }}
       videos={{
         heading: "Biscuits & Gravy at Waffle House, Behind the Grill",

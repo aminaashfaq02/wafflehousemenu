@@ -43,10 +43,19 @@ interface SandwichRawItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
 let sevenOfficialSandwiches: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -239,50 +248,50 @@ export const Route = createFileRoute("/menu/sandwiches/")({
         heading: "10 Most Popular Classic Sandwiches",
         intro:
           "Explore top-rated Waffle House lunch and dinner sandwiches, ranked by reader popularity.",
-        items: items,
+        items: fillToTen(sevenOfficialSandwiches),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Flat-Top Griddled Handhelds",
         intro:
           "Golden toasted sandwiches stuffed with chicken, bacon, ham, and melted cheese.",
-        items: items,
+        items: fillToTen([...sevenOfficialSandwiches].reverse()),
       }}
       videos={{
         heading: "Classic Sandwiches at Waffle House, Behind the Grill",
         intro:
-          "Watch how Waffle House grills sandwiches and builds BLTs in these feature videos.",
+          "Watch how Waffle House grills chicken breasts and builds classic BLTs in these feature videos.",
         items: [
           {
             id: "1",
-            title: "How to Make Waffle House Grilled Cheese Sandwich",
+            title: "Waffle House Grilled Chicken Sandwich Recipe",
             duration: "4:15",
-            youtubeId: "0UUcDlVzfys",
-            videoUrl: "https://www.youtube.com/watch?v=0UUcDlVzfys",
+            youtubeId: "LtWP08imxG0",
+            videoUrl: "https://www.youtube.com/watch?v=LtWP08imxG0",
             image: videoImg1,
           },
           {
             id: "2",
-            title: "Copycat Waffle House BLT & Texas BLT Sandwich",
+            title: "How to Make the Texas Bacon Lover's BLT",
             duration: "5:30",
-            youtubeId: "J0SxUE8LVwM",
-            videoUrl: "https://www.youtube.com/watch?v=J0SxUE8LVwM",
+            youtubeId: "69we9o7Asqc",
+            videoUrl: "https://www.youtube.com/watch?v=69we9o7Asqc",
             image: videoImg2,
           },
           {
             id: "3",
-            title: "Waffle House Grilled Chicken Deluxe Sandwich",
+            title: "Waffle House Grilled Cheese Sandwich Test",
             duration: "6:12",
-            youtubeId: "I2nN6Me3vbU",
-            videoUrl: "https://www.youtube.com/watch?v=I2nN6Me3vbU",
+            youtubeId: "7ENUMFsngss",
+            videoUrl: "https://www.youtube.com/watch?v=7ENUMFsngss",
             image: videoImg3,
           },
           {
             id: "4",
-            title: "Waffle House Classic Sandwiches Review",
+            title: "Waffle House Ham & Cheese Sandwich Review",
             duration: "7:45",
-            youtubeId: "Ggxpo7ocflA",
-            videoUrl: "https://www.youtube.com/watch?v=Ggxpo7ocflA",
+            youtubeId: "y7RyBT2a62U",
+            videoUrl: "https://www.youtube.com/watch?v=y7RyBT2a62U",
             image: videoImg4,
           },
         ],

@@ -35,10 +35,19 @@ interface BowlRawItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
 let tenOfficialBowls: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -97,7 +106,7 @@ function initData() {
       price: 11.85,
       calories: 742,
       rating: 4.9,
-      image: items[4]?.image ?? introImg,
+      image: items[0]?.image ?? introImg,
       href: "/menu/hashbrown-bowls/cheesesteak-melt-hashbrown-bowl",
     },
     {
@@ -106,7 +115,7 @@ function initData() {
       price: 11.85,
       calories: 682,
       rating: 4.8,
-      image: items[5]?.image ?? introImg,
+      image: items[1]?.image ?? introImg,
       href: "/menu/hashbrown-bowls/chicken-melt-hashbrown-bowl",
     },
     {
@@ -115,7 +124,7 @@ function initData() {
       price: 10.30,
       calories: 685,
       rating: 4.8,
-      image: items[6]?.image ?? introImg,
+      image: items[2]?.image ?? introImg,
       href: "/menu/hashbrown-bowls/sausage-egg-cheese-grits-bowl",
     },
     {
@@ -124,7 +133,7 @@ function initData() {
       price: 10.30,
       calories: 560,
       rating: 4.8,
-      image: items[7]?.image ?? introImg,
+      image: items[3]?.image ?? introImg,
       href: "/menu/hashbrown-bowls/bacon-egg-cheese-grits-bowl",
     },
     {
@@ -133,7 +142,7 @@ function initData() {
       price: 10.30,
       calories: 550,
       rating: 4.7,
-      image: items[8]?.image ?? introImg,
+      image: items[0]?.image ?? introImg,
       href: "/menu/hashbrown-bowls/ham-egg-cheese-grits-bowl",
     },
     {
@@ -142,7 +151,7 @@ function initData() {
       price: 10.30,
       calories: 750,
       rating: 4.9,
-      image: items[9]?.image ?? introImg,
+      image: items[1]?.image ?? introImg,
       href: "/menu/hashbrown-bowls/build-your-own-custom-bowl",
     },
   ];
@@ -258,14 +267,14 @@ export const Route = createFileRoute("/menu/hashbrown-bowls/")({
         heading: "10 Most Popular Hashbrown & Grits Bowls",
         intro:
           "Explore top-rated Waffle House breakfast & lunch bowls, ranked by reader popularity.",
-        items: items,
+        items: fillToTen(tenOfficialBowls),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Loaded Diner Bowls",
         intro:
           "Hearty hashbrown and grits bowls stacked with meats, eggs, and melted cheese.",
-        items: items,
+        items: fillToTen([...tenOfficialBowls].reverse()),
       }}
       videos={{
         heading: "Breakfast & Lunch Bowls at Waffle House, Behind the Grill",

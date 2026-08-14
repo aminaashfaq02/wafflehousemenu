@@ -35,10 +35,19 @@ interface OmeletRawItem {
   image: string;
 }
 
-
 let rawItems: any[];
 let items: MasterItem[];
 let fiveOmelets: MasterItem[];
+
+function fillToTen<T>(arr: T[]): T[] {
+  if (!arr || arr.length === 0) return [];
+  if (arr.length >= 10) return arr.slice(0, 10);
+  const res: T[] = [];
+  while (res.length < 10) {
+    res.push(...arr);
+  }
+  return res.slice(0, 10);
+}
 
 function initData() {
   if (items) return;
@@ -179,8 +188,8 @@ export const Route = createFileRoute("/menu/omelets/")({
             "@context": "https://schema.org",
             "@type": "ItemList",
             name: "Waffle House Toddle House® Omelet recipes",
-            numberOfItems: items.length,
-            itemListElement: items.map((v, i) => ({
+            numberOfItems: fiveOmelets.length,
+            itemListElement: fiveOmelets.map((v, i) => ({
               "@type": "ListItem",
               position: i + 1,
               name: v.name,
@@ -199,7 +208,7 @@ export const Route = createFileRoute("/menu/omelets/")({
       introImgAlt="Waffle House Toddle House® Cheese Omelet with toast and hashbrowns"
       breadcrumbLabel="Toddle House® Omelets"
       h1="The Waffle House Toddle House® Omelets Menu, Cover to Cover."
-      featuredName={items[0]?.name ?? "Cheese Omelet Breakfast"}
+      featuredName={fiveOmelets[0]?.name ?? "Cheese Omelet Breakfast"}
       intro={
         <>
           <p>
@@ -217,14 +226,14 @@ export const Route = createFileRoute("/menu/omelets/")({
         heading: "10 Most Popular Omelet Recipes",
         intro:
           "Explore the top-rated Toddle House® omelets, ranked by reader popularity.",
-        items: items,
+        items: fillToTen(fiveOmelets),
       }}
       lighter={{
         eyebrow: "Specialty Selection",
         heading: "Fluffy Two-Egg Omelet Combos",
         intro:
           "Delicious folded omelets packed with ham, cheesesteak beef, jalapeños, and melted cheese.",
-        items: items,
+        items: fillToTen([...fiveOmelets].reverse()),
       }}
       videos={{
         heading: "Toddle House® Omelets at Waffle House, Behind the Grill",
@@ -249,18 +258,18 @@ export const Route = createFileRoute("/menu/omelets/")({
           },
           {
             id: "3",
-            title: "Making Waffle House Cheesesteak Omelet",
+            title: "Copycat Waffle House Cheesesteak Omelet",
             duration: "6:12",
-            youtubeId: "Y9xbZ-K0GUE",
-            videoUrl: "https://www.youtube.com/watch?v=Y9xbZ-K0GUE",
+            youtubeId: "7ENUMFsngss",
+            videoUrl: "https://www.youtube.com/watch?v=7ENUMFsngss",
             image: videoImg3,
           },
           {
             id: "4",
-            title: "Copycat Waffle House Fiesta Omelet Test",
+            title: "Waffle House Fiesta Omelet Taste Test",
             duration: "7:45",
-            youtubeId: "TrRi7poDLd4",
-            videoUrl: "https://www.youtube.com/watch?v=TrRi7poDLd4",
+            youtubeId: "y7RyBT2a62U",
+            videoUrl: "https://www.youtube.com/watch?v=y7RyBT2a62U",
             image: videoImg4,
           },
         ],
@@ -268,7 +277,7 @@ export const Route = createFileRoute("/menu/omelets/")({
       allRecipes={{
         heading: "Waffle House Toddle House® Omelets Menu",
         intro:
-          "The complete lineup of 5 Toddle House® Omelets with verified 2026 prices and calorie counts.",
+          "The complete lineup of 5 official Toddle House® Omelets with verified 2026 prices and calorie counts.",
         items: fiveOmelets,
       }}
       faqs={omeletFaqs}
