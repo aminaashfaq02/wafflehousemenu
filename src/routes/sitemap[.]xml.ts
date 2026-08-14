@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { blogPosts } from "@/data/blogPosts";
-import { categories, menu } from "@/data/menu";
+import { menu } from "@/data/menu";
+import { CENTRAL_MENU_CATEGORIES } from "@/data/centralMenuData";
 import { locationsData } from "@/data/locations";
 
 const BASE_URL = "https://wafflehousemenu.com";
-const TODAY = new Date().toISOString().split("T")[0]; // e.g. 2026-08-06
+const TODAY = "2026-08-14";
 
 function loc(path: string, priority: string, changefreq: string, lastmod?: string) {
   return [
@@ -28,12 +29,11 @@ export const Route = createFileRoute("/sitemap.xml")({
           loc("/categories", "0.8", "weekly"),
           loc("/locations", "0.9", "weekly"),
           loc("/blog", "0.8", "weekly"),
-          loc("/nutrition", "0.7", "monthly"),
+          loc("/nutrition", "0.8", "weekly"),
           loc("/faq", "0.7", "monthly"),
           loc("/about", "0.6", "monthly"),
           loc("/contact", "0.6", "monthly"),
           loc("/author", "0.6", "monthly"),
-          loc("/search", "0.5", "monthly"),
           loc("/sitemap", "0.4", "monthly"),
           loc("/methodology", "0.6", "monthly"),
           loc("/privacy-policy", "0.3", "yearly"),
@@ -43,22 +43,27 @@ export const Route = createFileRoute("/sitemap.xml")({
           loc("/cookie-policy", "0.3", "yearly"),
         ];
 
-        const categoryPages = categories.map((c) =>
-          loc(`/menu/${c.id}`, "0.8", "weekly"),
+        // 13 Central Menu Categories
+        const categoryPages = CENTRAL_MENU_CATEGORIES.map((c) =>
+          loc(c.href, "0.8", "weekly")
         );
 
+        // Blog Posts
         const blogPostPages = blogPosts.map((b) =>
-          loc(`/blog/${b.slug}`, "0.7", "monthly", b.lastUpdated ?? TODAY),
+          loc(`/blog/${b.slug}`, "0.7", "monthly", b.lastUpdated ?? TODAY)
         );
 
+        // Menu Items
         const menuItemPages = menu.map((m) =>
-          loc(`/menu/${m.category}/${m.slug}`, "0.6", "monthly", m.updatedAt ?? TODAY),
+          loc(`/menu/${m.category}/${m.slug}`, "0.6", "monthly", m.updatedAt ?? TODAY)
         );
 
+        // Location State Directories
         const locationStatePages = locationsData.map((state) =>
           loc(`/locations/${state.stateSlug}`, "0.8", "weekly")
         );
 
+        // Location Store Pages
         const locationStorePages = locationsData.flatMap((state) =>
           state.cities.flatMap((city) =>
             city.stores.map((store) =>
