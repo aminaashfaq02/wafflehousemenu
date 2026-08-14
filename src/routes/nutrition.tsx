@@ -9,15 +9,16 @@ import {
   Droplet,
   Info,
   AlertTriangle,
-  
   Egg,
   Milk,
   Nut,
   Bean,
   ShieldAlert,
+  ChevronRight,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { menu, categories, type CategoryId } from "@/data/menu";
+import { CENTRAL_MENU_CATEGORIES } from "@/data/centralMenuData";
 import { PdfNutritionTable } from "@/components/PdfNutritionTable";
 import { SubscriberSection } from "@/components/SubscriberSection";
 import nutritionHero from "@/assets/nutrition-hero.jpg";
@@ -29,34 +30,53 @@ import newsletterBg from "@/assets/hero-5-diner.jpg";
 import tipCalories from "@/assets/nutrition-tip-calories.jpg";
 import lowcalFruit from "@/assets/nutrition-lowcal-fruit.jpg";
 import lowcalEggs from "@/assets/nutrition-lowcal-eggs.jpg";
-import catBreakfast from "@/assets/all-star-breakfast.jpg";
-import catWaffle from "@/assets/hero-waffles.jpg";
-import catProtein from "@/assets/tbone-steak.jpg";
-import catHealthy from "@/assets/popular-healthy.jpg";
-import catDrinks from "@/assets/iced-coffee.jpg";
 import chickenImg from "@/assets/chicken-sandwich.jpg";
+import catWaffle from "@/assets/hero-waffles.jpg";
+
+const SITE = "https://wafflehousemenu.com";
 
 export const Route = createFileRoute("/nutrition")({
-  head: () => ({
-    meta: [
-      { title: "Waffle House Nutrition Guide — Calories, Protein & Allergens (2026)" },
-      {
-        name: "description",
-        content:
-          "A premium nutrition guide to the Waffle House menu: calories, protein, carbs, fat, sodium, allergens, low-calorie picks and high-protein meals. Updated July 2026.",
-      },
-      { property: "og:title", content: "Waffle House Nutrition Guide — 2026" },
-      {
-        property: "og:description",
-        content:
-          "Calories, macros, allergens and healthier menu picks — an independent editorial nutrition guide.",
-      },
-      { property: "og:type", content: "article" },
-      { property: "og:url", content: "/nutrition" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/nutrition" }],
-  }),
+  head: () => {
+    const url = `${SITE}/nutrition`;
+    const title = "Waffle House Nutrition & Calories | Menu Nutrition Guide";
+    const description =
+      "Explore Waffle House nutrition and calorie information, with available details for menu items including calories, protein, carbohydrates, fat and sodium.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: url },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+              { "@type": "ListItem", position: 2, name: "Nutrition", item: url },
+            ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Waffle House Nutrition & Calories | Menu Nutrition Guide",
+            url,
+            description: "A comprehensive guide to Waffle House nutrition facts, calorie counts, macros, and food allergens.",
+          }),
+        },
+      ],
+    };
+  },
   component: NutritionPage,
 });
 
@@ -69,59 +89,22 @@ const overviewCards = [
   {
     icon: Beef,
     title: "Protein",
-    desc: "Keeps you full and supports muscle. Eggs, steak and chicken lead the menu.",
+    desc: "Important for muscle and satiety. Eggs, steak, and chicken are high-protein options.",
   },
   {
     icon: Wheat,
-    title: "Carbs",
-    desc: "Waffles, toast and hashbrowns provide quick fuel — balance with protein.",
+    title: "Carbohydrates",
+    desc: "Waffles, hashbrowns, and bread items are the primary carbohydrate sources on the menu.",
   },
   {
     icon: Droplet,
-    title: "Fat & Sodium",
-    desc: "Watch saturated fat and sodium on smothered plates and melts.",
-  },
-];
-
-const nutritionCategories: {
-  title: string;
-  desc: string;
-  image: string;
-  to: "/menu/$category" | "/nutrition";
-  params?: { category: CategoryId };
-}[] = [
-  {
-    title: "Breakfast Nutrition",
-    desc: "Eggs, bacon, grits and biscuits — macros and calories.",
-    image: catBreakfast,
-    to: "/menu/$category",
-    params: { category: "breakfast" },
+    title: "Fat",
+    desc: "Fat content varies by item, preparation method, and added butter or oils.",
   },
   {
-    title: "Waffle Nutrition",
-    desc: "Classic, pecan and specialty waffles broken down.",
-    image: catWaffle,
-    to: "/menu/$category",
-    params: { category: "waffles" },
-  },
-  {
-    title: "Protein Meals",
-    desc: "T-bone, chicken and hearty plates over 30g protein.",
-    image: catProtein,
-    to: "/nutrition",
-  },
-  {
-    title: "Healthy Choices",
-    desc: "Lighter plates under 500 calories, no compromise on flavor.",
-    image: catHealthy,
-    to: "/nutrition",
-  },
-  {
-    title: "Drinks & Beverages",
-    desc: "Coffee, tea and shakes — sugar and calorie details.",
-    image: catDrinks,
-    to: "/menu/$category",
-    params: { category: "drinks" },
+    icon: Info,
+    title: "Sodium",
+    desc: "Sodium details are helpful to check, particularly for cured meats and seasoned sides.",
   },
 ];
 
@@ -189,28 +172,28 @@ const tips = [
 
 const faqs = [
   {
-    q: "How many calories are in Waffle House meals?",
+    q: "How many calories are in Waffle House menu items?",
     a: "Individual items range from around 5 calories for black coffee to over 1,100 for the loaded All-Star Special. Most plates fall between 400 and 900 calories.",
   },
   {
-    q: "Which menu items are healthiest?",
-    a: "Scrambled eggs, plain hashbrowns, grilled chicken and fresh fruit are the lightest picks. Skip the smothered add-ons and syrup for the leanest plate.",
+    q: "Where can I find Waffle House nutrition information?",
+    a: "Official nutrition details are published by Waffle House, Inc. Our guide compiles available values, such as calories, protein, carbs, fat, and sodium, into searchable tables for easy reference.",
   },
   {
-    q: "Does Waffle House provide nutrition information?",
-    a: "Nutrition is available on request at restaurants and on their official site. The figures on this page are independent editorial estimates — always confirm with your local restaurant.",
+    q: "Does Waffle House provide calorie information?",
+    a: "Yes, Waffle House provides calorie counts on their menus and in official nutritional disclosures for standard menu items.",
   },
   {
-    q: "Which meals have the most protein?",
-    a: "The T-bone Steak & Eggs (68g) and All-Star Special (42g) lead the menu, followed by burgers and grilled chicken plates.",
+    q: "Can nutrition information vary by menu item?",
+    a: "Yes, calories and nutrition values vary considerably depending on choices like egg preparation (scrambled vs. poached), meat options, and toppings.",
   },
   {
-    q: "Are nutrition details different by location?",
-    a: "Recipes are standardized, but portioning and add-ons vary by cook and franchise, so real-world values may differ slightly from published estimates.",
+    q: "How can I compare calories between menu items?",
+    a: "You can use our interactive nutrition cards or the search tool above to filter items by category and compare calories side-by-side.",
   },
   {
-    q: "How accurate are nutrition estimates?",
-    a: "Our figures are based on standard ingredient databases and typical serving sizes. Treat them as guidance, not medical advice.",
+    q: "Is nutrition information the same at every location?",
+    a: "Recipes are standardized, but because individual plates are cooked to order, portions, butter usage, and toppings can vary slightly by location.",
   },
 ];
 
@@ -233,9 +216,18 @@ function NutritionPage() {
   );
 
   return (
-    <>
-      {/* 1. HERO */}
-      <section className="relative overflow-hidden border-b border-border bg-[#0e1013] text-white">
+    <div className="bg-white">
+      {/* 1. BREADCRUMB */}
+      <nav aria-label="Breadcrumb" className="bg-surface py-3 border-b border-border font-sans">
+        <div className="container-editorial flex items-center gap-2 text-xs font-medium text-ink-soft">
+          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          <ChevronRight className="h-3 w-3" aria-hidden />
+          <span className="text-foreground">Nutrition</span>
+        </div>
+      </nav>
+
+      {/* 2. HERO */}
+      <section className="relative overflow-hidden border-b border-border bg-[#0e1013] text-white font-sans">
         <img
           src={nutritionHero}
           alt="Balanced American breakfast plate with eggs, berries and whole grain toast"
@@ -243,65 +235,57 @@ function NutritionPage() {
           height={900}
           className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
         <div className="container-editorial relative py-20 md:py-28">
-          <nav aria-label="Breadcrumb" className="text-xs uppercase tracking-widest text-white/70">
-            <Link to="/" className="hover:text-primary">Home</Link>
-            <span className="px-2">/</span>
-            <span aria-current="page" className="text-white">Nutrition</span>
-          </nav>
-          <span className="chip mt-6 bg-primary/90 text-primary-foreground">Nutrition Guide</span>
-          <h1 className="mt-5 max-w-3xl font-display text-4xl font-semibold leading-[1.05] sm:text-5xl md:text-6xl">
-            Know What You're Eating
+          <span className="chip bg-primary/95 text-primary-foreground">Nutrition Guide</span>
+          <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl text-white">
+            Waffle House Nutrition &amp; Calories
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
-            Explore calories, nutrition facts, ingredients and healthier menu choices with detailed,
-            independently researched food guides.
+            Explore available nutrition and calorie information for Waffle House menu items. Browse nutritional details by menu category and use the information as a reference when comparing different menu options.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#pdf-table" className="btn-primary">
+            <a href="#pdf-table" className="btn-primary font-semibold">
               Official PDF Table <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
-            <a href="#database" className="btn-ghost border-white/30 text-white hover:bg-white/10">
+            <a href="#database" className="btn-ghost border-white/30 text-white hover:bg-white/10 font-semibold">
               Interactive Cards
             </a>
-            <Link to="/menu" className="btn-ghost border-white/30 text-white hover:bg-white/10">
+            <Link to="/menu" className="btn-ghost border-white/30 text-white hover:bg-white/10 font-semibold">
               Explore Menu
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 2. NUTRITION OVERVIEW */}
-      <section className="border-b border-border bg-background">
+      {/* 3. NUTRITION QUICK FACTS */}
+      <section className="border-b border-border bg-background font-sans">
         <div className="container-editorial grid gap-12 py-20 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-6">
             <span className="chip">Overview</span>
-            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
+            <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl text-foreground">
               Understanding Menu Nutrition
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft">
-              Nutrition information helps you plan meals that fit your day — whether you're
-              tracking calories, prioritizing protein or watching sodium. Here's what to look for
-              on every menu item page.
+              Nutrition information helps you plan meals that fit your day — whether you're tracking calories, prioritizing protein or watching sodium. Here's what to look for on every menu item page.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {overviewCards.map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
-                  className="group rounded-2xl border border-border bg-surface p-5 transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(0,0,0,0.2)]"
+                  className="group rounded-2xl border border-border bg-surface p-5 transition-shadow hover:shadow-md"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-foreground transition-colors group-hover:bg-primary">
                     <Icon className="h-5 w-5" aria-hidden />
                   </div>
-                  <h3 className="mt-4 font-display text-lg font-semibold">{title}</h3>
+                  <h3 className="mt-4 font-display text-lg font-bold text-foreground">{title}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-ink-soft">{desc}</p>
                 </div>
               ))}
             </div>
           </div>
           <div className="md:col-span-6">
-            <div className="overflow-hidden rounded-3xl bg-muted">
+            <div className="overflow-hidden rounded-3xl bg-muted h-full min-h-[300px]">
               <img
                 src={nutritionOverview}
                 alt="Fresh eggs, spinach and tomatoes on a marble kitchen counter"
@@ -315,42 +299,40 @@ function NutritionPage() {
         </div>
       </section>
 
-      {/* 3. POPULAR NUTRITION CATEGORIES */}
-      <section className="border-b border-border bg-surface">
+      {/* 4. NUTRITION BY MENU CATEGORY */}
+      <section className="border-b border-border bg-surface font-sans">
         <div className="container-editorial py-20">
-          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <span className="chip">Categories</span>
-              <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
-                Popular Nutrition Categories
-              </h2>
-              <p className="mt-3 max-w-xl text-ink-soft">
-                Jump straight to the corner of the menu you care about most.
-              </p>
-            </div>
+          <div className="mx-auto max-w-2xl text-center space-y-3">
+            <span className="chip">Categories</span>
+            <h2 className="font-display text-3xl font-bold sm:text-4xl text-foreground">
+              Waffle House Nutrition by Menu Category
+            </h2>
+            <p className="text-base text-ink-soft">
+              Browse available nutrition information by menu category to compare calories and other nutritional details across the menu.
+            </p>
           </div>
-          <div className="mt-10 -mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-5 md:gap-6 md:overflow-visible md:px-0 md:pb-0">
-            {nutritionCategories.map((c) => (
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {CENTRAL_MENU_CATEGORIES.map((c) => (
               <Link
-                key={c.title}
-                to={c.to}
-                params={c.params as never}
-                className="group block w-[78%] shrink-0 snap-start md:w-auto"
+                key={c.id}
+                to={c.href as any}
+                className="group block rounded-2xl border border-border bg-white p-5 shadow-xs transition hover:-translate-y-1 hover:shadow-md"
               >
-                <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-muted">
+                <div className="aspect-[4/3] overflow-hidden rounded-xl bg-muted">
                   <img
                     src={c.image}
-                    alt={c.title}
+                    alt={c.name}
                     loading="lazy"
                     width={800}
-                    height={1000}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    height={600}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mt-4 font-display text-base font-semibold">{c.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-ink-soft">{c.desc}</p>
-                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-foreground transition-colors group-hover:text-primary">
-                  Explore <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                <h3 className="mt-4 font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">{c.name}</h3>
+                <p className="mt-1 text-xs text-ink-soft leading-relaxed line-clamp-2">{c.shortDescription}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-primary hover:underline">
+                  View nutrition <ArrowRight className="h-3 w-3" />
                 </span>
               </Link>
             ))}
@@ -358,16 +340,15 @@ function NutritionPage() {
         </div>
       </section>
 
-      {/* 4. NUTRITION DATABASE */}
-      <section id="database" className="border-b border-border bg-background">
+      {/* 5. NUTRITION SEARCH / FILTER */}
+      <section id="database" className="border-b border-border bg-background font-sans">
         <div className="container-editorial py-20">
           <span className="chip">Database</span>
-          <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
-            Waffle House Nutrition Facts
+          <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl text-foreground">
+            Search Waffle House Nutrition Information
           </h2>
           <p className="mt-3 max-w-2xl text-ink-soft">
-            Search any menu item and filter by category. Every card links to a full ingredient and
-            allergen breakdown.
+            Search any menu item and filter by category. Every card links to a full ingredient and allergen breakdown.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
@@ -378,8 +359,8 @@ function NutritionPage() {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search waffles, eggs, burgers…"
-                className="h-12 w-full rounded-full border border-border bg-surface pl-11 pr-4 text-sm outline-none transition focus:border-foreground focus:bg-background"
+                placeholder="Search a menu item..."
+                className="h-12 w-full rounded-full border border-border bg-surface pl-11 pr-4 text-sm outline-none transition focus:border-primary focus:bg-background"
               />
             </label>
             <div className="-mx-5 flex snap-x gap-2 overflow-x-auto px-5 md:mx-0 md:flex-wrap md:px-0">
@@ -420,7 +401,7 @@ function NutritionPage() {
                   key={m.slug}
                   to="/menu/$category/$slug"
                   params={{ category: m.category, slug: m.slug }}
-                  className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-surface transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(0,0,0,0.25)]"
+                  className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-surface transition-shadow hover:shadow-md"
                 >
                   <div className="aspect-[4/3] overflow-hidden bg-muted">
                     <img
@@ -429,35 +410,35 @@ function NutritionPage() {
                       loading="lazy"
                       width={800}
                       height={600}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-5">
                     <span className="text-xs uppercase tracking-widest text-ink-soft">
                       {m.category}
                     </span>
-                    <h3 className="mt-1 font-display text-lg font-semibold">{m.name}</h3>
+                    <h3 className="mt-1 font-display text-lg font-bold text-foreground">{m.name}</h3>
                     <dl className="mt-4 grid grid-cols-4 gap-2 text-center">
                       <div>
-                        <dt className="text-[10px] uppercase tracking-widest text-ink-soft">Cal</dt>
+                        <dt className="text-[10px] uppercase tracking-widest text-ink-soft font-semibold">Cal</dt>
                         <dd className="mt-0.5 font-display text-sm font-semibold">
                           {m.nutrition.calories}
                         </dd>
                       </div>
                       <div>
-                        <dt className="text-[10px] uppercase tracking-widest text-ink-soft">Protein</dt>
+                        <dt className="text-[10px] uppercase tracking-widest text-ink-soft font-semibold">Protein</dt>
                         <dd className="mt-0.5 font-display text-sm font-semibold">
                           {m.nutrition.proteinG}g
                         </dd>
                       </div>
                       <div>
-                        <dt className="text-[10px] uppercase tracking-widest text-ink-soft">Carbs</dt>
+                        <dt className="text-[10px] uppercase tracking-widest text-ink-soft font-semibold">Carbs</dt>
                         <dd className="mt-0.5 font-display text-sm font-semibold">
                           {m.nutrition.carbsG}g
                         </dd>
                       </div>
                       <div>
-                        <dt className="text-[10px] uppercase tracking-widest text-ink-soft">Fat</dt>
+                        <dt className="text-[10px] uppercase tracking-widest text-ink-soft font-semibold">Fat</dt>
                         <dd className="mt-0.5 font-display text-sm font-semibold">
                           {m.nutrition.fatG}g
                         </dd>
@@ -474,18 +455,56 @@ function NutritionPage() {
         </div>
       </section>
 
-      {/* OFFICIAL PDF NUTRITION TABLE SECTION */}
-      <section id="pdf-table" className="border-b border-border bg-surface scroll-mt-6">
+      {/* 6. OFFICIAL PDF NUTRITION TABLE */}
+      <section id="pdf-table" className="border-b border-border bg-surface scroll-mt-6 font-sans">
         <div className="container-editorial py-16 md:py-20">
           <PdfNutritionTable />
         </div>
       </section>
 
-      {/* 5. LOW CALORIE CHOICES */}
-      <section className="border-b border-border bg-surface">
+      {/* 7. NUTRITIONAL DETAIL HIGHLIGHTS (Calories, Protein, Allergens) */}
+      <section className="bg-white py-16 md:py-24 border-b border-border font-sans">
+        <div className="container-editorial max-w-4xl mx-auto space-y-12">
+          {/* Calories detail */}
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl font-bold text-foreground">Waffle House Calories</h2>
+            <p className="text-sm leading-relaxed text-ink-soft">
+              Calories can vary considerably between menu items and combinations. Use the available calorie information as a reference when comparing menu choices. Skipping extra butter, sausage gravy, or heavy syrups can help reduce overall calories on custom plates.
+            </p>
+            <div>
+              <Link to="/menu" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary hover:underline">
+                View Waffle House Menu <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          <hr className="border-border/60" />
+
+          {/* Protein detail */}
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl font-bold text-foreground">Protein Information</h2>
+            <p className="text-sm leading-relaxed text-ink-soft">
+              Protein is essential for muscle health and satiety. Our guide lists protein content for each menu item to help you compare. Dishes like the T-Bone Steak &amp; Eggs, sirloin breakfasts, and grilled chicken breast plates offer high protein density, while waffles and hashbrowns provide moderate amounts.
+            </p>
+          </div>
+
+          <hr className="border-border/60" />
+
+          {/* Allergen detail */}
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl font-bold text-foreground">Waffle House Allergen Information</h2>
+            <p className="text-sm leading-relaxed text-ink-soft">
+              Allergen information can change by item, preparation method and location. Check current ingredient and allergen information with the restaurant before ordering if you have a food allergy. Waffle House kitchens handle eggs, dairy, wheat, soy, peanuts, and pecans on shared cooking surfaces, which may present cross-contact risks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. BETTER CHOICES UNDER 500 CALORIES */}
+      <section className="border-b border-border bg-surface font-sans">
         <div className="container-editorial py-20">
           <span className="chip">Smart Choices</span>
-          <h2 className="mt-4 max-w-2xl font-display text-3xl font-semibold sm:text-4xl">
+          <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold sm:text-4xl text-foreground">
             Better Choices Under 500 Calories
           </h2>
           <p className="mt-3 max-w-2xl text-ink-soft">
@@ -495,7 +514,7 @@ function NutritionPage() {
             {lowCalPicks.map((p) => (
               <article
                 key={p.name}
-                className="group overflow-hidden rounded-3xl border border-border bg-background transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(0,0,0,0.2)]"
+                className="group overflow-hidden rounded-3xl border border-border bg-background transition-shadow hover:shadow-md"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
                   <img
@@ -504,11 +523,11 @@ function NutritionPage() {
                     loading="lazy"
                     width={800}
                     height={600}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-display text-lg font-semibold">{p.name}</h3>
+                  <h3 className="font-display text-lg font-bold text-foreground">{p.name}</h3>
                   <div className="mt-3 flex gap-4 text-xs text-ink-soft">
                     <span>
                       <span className="font-semibold text-foreground">{p.calories}</span> cal
@@ -525,28 +544,23 @@ function NutritionPage() {
         </div>
       </section>
 
-      {/* 6. HIGH PROTEIN MEALS */}
-      <section className="border-b border-border bg-background">
+      {/* 9. FITNESS FRIENDLY PROTEIN */}
+      <section className="border-b border-border bg-background font-sans">
         <div className="container-editorial py-20">
-          <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
-            <div>
-              <span className="chip">Fitness Friendly</span>
-              <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
-                High Protein Menu Options
-              </h2>
-              <p className="mt-3 max-w-xl text-ink-soft">
-                Every plate here delivers <span className="font-semibold text-foreground">30g or more</span> of
-                protein per serving.
-              </p>
-            </div>
-          </div>
+          <span className="chip">Fitness Friendly</span>
+          <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl text-foreground">
+            High Protein Menu Options
+          </h2>
+          <p className="mt-3 max-w-xl text-ink-soft font-sans">
+            Every plate here delivers <span className="font-semibold text-foreground">30g or more</span> of protein per serving.
+          </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {highProtein.map((m) => (
               <Link
                 key={m.slug}
                 to="/menu/$category/$slug"
                 params={{ category: m.category, slug: m.slug }}
-                className="group flex overflow-hidden rounded-3xl border border-border bg-surface transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(0,0,0,0.25)]"
+                className="group flex overflow-hidden rounded-3xl border border-border bg-surface transition-shadow hover:shadow-md"
               >
                 <div className="relative aspect-square w-32 shrink-0 overflow-hidden bg-muted sm:w-40">
                   <img
@@ -555,7 +569,7 @@ function NutritionPage() {
                     loading="lazy"
                     width={400}
                     height={400}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <span className="absolute left-2 top-2 rounded-full bg-primary px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-primary-foreground">
                     {m.nutrition.proteinG}g protein
@@ -565,11 +579,11 @@ function NutritionPage() {
                   <span className="text-xs uppercase tracking-widest text-ink-soft">
                     {m.category}
                   </span>
-                  <h3 className="mt-1 font-display text-lg font-semibold leading-tight">{m.name}</h3>
+                  <h3 className="mt-1 font-display text-lg font-bold leading-tight text-foreground">{m.name}</h3>
                   <p className="mt-2 text-xs text-ink-soft">
                     {m.nutrition.calories} cal · {m.nutrition.fatG}g fat
                   </p>
-                  <p className="mt-2 line-clamp-2 text-sm text-ink-soft">{m.tagline}</p>
+                  <p className="mt-2 line-clamp-2 text-sm text-ink-soft leading-relaxed">{m.tagline}</p>
                 </div>
               </Link>
             ))}
@@ -577,28 +591,27 @@ function NutritionPage() {
         </div>
       </section>
 
-      {/* 7. INGREDIENT & ALLERGEN GUIDE */}
-      <section className="border-b border-border bg-surface">
+      {/* 10. ALLERGEN DETAIL LIST */}
+      <section className="border-b border-border bg-surface font-sans">
         <div className="container-editorial py-20">
           <span className="chip">Allergens</span>
-          <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
-            Ingredients & Allergen Information
+          <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl text-foreground">
+            Ingredients &amp; Allergen Information
           </h2>
           <p className="mt-3 max-w-2xl text-ink-soft">
-            The most common allergens across the Waffle House menu. Each item detail page lists its
-            specific allergens.
+            The most common allergens across the Waffle House menu. Each item detail page lists its specific allergens.
           </p>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {allergenGuide.map(({ icon: Icon, name, notes }) => (
               <div
                 key={name}
-                className="rounded-2xl border border-border bg-background p-5 transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(0,0,0,0.15)]"
+                className="rounded-2xl border border-border bg-background p-5 shadow-xs"
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-foreground">
                   <Icon className="h-5 w-5" aria-hidden />
                 </div>
-                <h3 className="mt-4 font-display text-base font-semibold">{name}</h3>
+                <h3 className="mt-4 font-display text-base font-bold text-foreground">{name}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-ink-soft">{notes}</p>
               </div>
             ))}
@@ -607,26 +620,25 @@ function NutritionPage() {
           <div className="mt-10 flex items-start gap-4 rounded-2xl border border-primary/40 bg-primary/10 p-6">
             <ShieldAlert className="mt-0.5 h-6 w-6 shrink-0 text-foreground" aria-hidden />
             <div>
-              <p className="font-display text-base font-semibold">
+              <p className="font-display text-base font-bold text-foreground">
                 Always check ingredients before ordering if you have food allergies.
               </p>
               <p className="mt-1 text-sm leading-relaxed text-ink-soft">
-                Recipes and cross-contact risks can vary by location and shift. Confirm any allergen
-                concerns directly with your server before ordering.
+                Recipes and cross-contact risks can vary by location and shift. Confirm any allergen concerns directly with your server before ordering.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 8. NUTRITION TIPS & GUIDES */}
-      <section className="border-b border-border bg-background">
+      {/* 11. DETAILED NUTRITION TIPS & ARTICLES */}
+      <section className="border-b border-border bg-background font-sans">
         <div className="container-editorial py-20">
           <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
             <div>
               <span className="chip">Guides</span>
-              <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
-                Nutrition Tips & Food Guides
+              <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl text-foreground">
+                Nutrition Tips &amp; Food Guides
               </h2>
               <p className="mt-3 max-w-xl text-ink-soft">
                 Editorial guides written to help you decode restaurant menus and eat with intent.
@@ -637,7 +649,7 @@ function NutritionPage() {
             {tips.map((t) => (
               <article
                 key={t.title}
-                className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-surface transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(0,0,0,0.2)]"
+                className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-surface transition-shadow hover:shadow-md"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
                   <img
@@ -646,17 +658,17 @@ function NutritionPage() {
                     loading="lazy"
                     width={800}
                     height={600}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-display text-base font-semibold leading-snug">{t.title}</h3>
+                  <h3 className="font-display text-base font-bold leading-snug text-foreground">{t.title}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{t.desc}</p>
                   <Link
-                    to="/menu"
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-widest text-foreground transition-colors group-hover:text-primary"
+                    to="/blog"
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-primary hover:underline"
                   >
-                    Read More <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                    Read Guide <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                   </Link>
                 </div>
               </article>
@@ -665,12 +677,44 @@ function NutritionPage() {
         </div>
       </section>
 
-      {/* 9. FAQ */}
-      <section className="border-b border-border bg-surface">
+      {/* 12. INTERNAL LINKS INTEGRATION */}
+      <section className="bg-surface py-16 md:py-20 border-b border-border font-sans">
+        <div className="container-editorial max-w-4xl mx-auto space-y-8">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="space-y-3">
+              <h2 className="font-display text-2xl font-bold text-foreground">Explore the Full Waffle House Menu</h2>
+              <p className="text-sm leading-relaxed text-ink-soft">
+                Use the main menu guide to browse all 74 menu items across 13 categories, then return here to compare available nutrition information.
+              </p>
+              <div className="flex flex-wrap gap-4 text-xs font-semibold pt-2">
+                <Link to="/menu" className="text-primary hover:underline">Waffle House Menu</Link>
+                <span className="text-border">|</span>
+                <Link to="/menu" hash="prices-heading" className="text-primary hover:underline">Waffle House Menu Prices</Link>
+                <span className="text-border">|</span>
+                <a href="/waffle-house-menu-nutritionals.pdf" download className="text-primary hover:underline">Menu PDF</a>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <h2 className="font-display text-2xl font-bold text-foreground">Planning a Visit?</h2>
+              <p className="text-sm leading-relaxed text-ink-soft">
+                Nutrition information is useful when planning what to order at a nearby restaurant. Browse states and cities to find your nearest location.
+              </p>
+              <div className="pt-2">
+                <Link to="/locations" className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary hover:underline">
+                  Find Waffle House Locations <ArrowRight className="h-3 w-3" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 13. FAQ */}
+      <section className="border-b border-border bg-surface font-sans">
         <div className="container-editorial grid gap-12 py-20 md:grid-cols-12">
           <div className="md:col-span-4">
             <span className="chip">FAQ</span>
-            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
+            <h2 className="mt-4 font-display text-3xl font-bold text-foreground">
               Nutrition Questions
             </h2>
             <p className="mt-3 text-ink-soft">
@@ -679,8 +723,7 @@ function NutritionPage() {
             <div className="mt-6 flex items-start gap-3 rounded-2xl border border-border bg-background p-4 text-sm text-ink-soft">
               <Info className="mt-0.5 h-4 w-4 shrink-0 text-foreground" aria-hidden />
               <p>
-                Independent editorial estimates. Not medical advice — consult a professional for
-                personal nutrition guidance.
+                Independent editorial estimates. Not medical advice — consult a professional for personal nutrition guidance.
               </p>
             </div>
           </div>
@@ -688,7 +731,7 @@ function NutritionPage() {
             <Accordion type="single" collapsible className="divide-y divide-border overflow-hidden rounded-2xl border border-border bg-background">
               {faqs.map((f, i) => (
                 <AccordionItem key={i} value={`q${i}`} className="border-none px-5">
-                  <AccordionTrigger className="py-5 text-left font-display text-base font-semibold hover:no-underline">
+                  <AccordionTrigger className="py-5 text-left font-display text-base font-bold hover:no-underline text-foreground">
                     {f.q}
                   </AccordionTrigger>
                   <AccordionContent className="pb-5 text-sm leading-relaxed text-ink-soft">
@@ -701,23 +744,30 @@ function NutritionPage() {
         </div>
       </section>
 
-      {/* Disclaimer strip before footer */}
-      <section className="bg-background">
-        <div className="container-editorial py-10">
+      {/* 14. MEDICAL DISCLAIMER & LAST UPDATED */}
+      <section className="bg-background font-sans">
+        <div className="container-editorial py-12 space-y-6">
           <div className="flex items-start gap-3 rounded-2xl border border-border bg-surface p-5 text-sm text-ink-soft">
             <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-foreground" aria-hidden />
-            <p>
-              Waffle House Menu is an independent editorial guide and is not affiliated with,
-              endorsed by, or sponsored by Waffle House, Inc. Nutrition values are estimates
-              based on standard ingredients and typical serving sizes — actual values may vary by
-              location.
-            </p>
+            <div>
+              <h3 className="font-bold text-foreground">Medical Disclaimer</h3>
+              <p className="mt-1 leading-relaxed">
+                Nutrition information is provided for general informational purposes. Values may vary by menu item, preparation and location. If you have a medical condition, food allergy or specific dietary requirement, confirm current information with the restaurant or an appropriate qualified professional before ordering.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-ink-soft">
+            <span>Last updated: August 2026</span>
+            <Link to="/about" className="text-primary hover:underline font-semibold">
+              How We Update Nutrition Information →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ============ COMPACT NEWSLETTER ============ */}
-      <SubscriberSection idPrefix="nutrition-sub" />
-    </>
+      {/* NEWSLETTER */}
+      <SubscriberSection bgImage={newsletterBg} idPrefix="nutrition-sub" />
+    </div>
   );
 }
