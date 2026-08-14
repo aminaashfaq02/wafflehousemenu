@@ -4,16 +4,16 @@
     {
       "slug": "t-bone-steak-dinner-platter",
       "name": "T-Bone Steak Dinner Platter",
-      "price": 15.90,
+      "price": 15.9,
       "calories": 610,
       "rating": 4.9,
       "description": "USDA Choice 10-oz T-Bone steak cooked to order on the flat top, served with toast and choice of two sides.",
-      "image": "Sirloin_steak_with_grits_and_202608101346.jpeg"
+      "image": "Steak_and_eggs_breakfast_platter_202608101156.jpeg"
     },
     {
       "slug": "sirloin-delmonico-steak-dinner-platter",
       "name": "Sirloin / Delmonico Steak Dinner Platter",
-      "price": 12.60,
+      "price": 12.6,
       "calories": 555,
       "rating": 4.8,
       "description": "Tender USDA Choice Sirloin steak seared hot, served with buttered toast and choice of two dinner sides.",
@@ -22,20 +22,20 @@
     {
       "slug": "chicken-dinner-platter",
       "name": "Chicken Dinner Platter",
-      "price": 12.10,
+      "price": 12.1,
       "calories": 415,
       "rating": 4.8,
       "description": "Juicy grilled chicken breast filet served with warm toast and choice of two dinner sides.",
-      "image": "Grilled_chicken_sandwich_on_plate_202608101346.jpeg"
+      "image": "Chicken_breast_with_eggs_and_202608121025.jpeg"
     },
     {
       "slug": "meat-lovers-chicken-dinner-platter",
       "name": "Meat Lovers Chicken Dinner Platter",
-      "price": 14.10,
+      "price": 14.1,
       "calories": 520,
       "rating": 4.8,
       "description": "Two grilled chicken breast filets served with buttered toast and choice of two sides.",
-      "image": "Grilled_chicken_sandwich_on_plate_202608101346.jpeg"
+      "image": "contact-cat-dinner.jpg"
     },
     {
       "slug": "country-ham-dinner-platter",
@@ -44,25 +44,25 @@
       "calories": 600,
       "rating": 4.7,
       "description": "Thick-cut dry-cured Southern country ham grilled hot, served with toast and two sides.",
-      "image": "Grilled_country_ham_slice_2K_202608101140.jpeg"
+      "image": "about-hero-griddle.jpg"
     },
     {
       "slug": "pork-chop-dinner-platter",
       "name": "Pork Chop Dinner Platter",
-      "price": 13.50,
+      "price": 13.5,
       "calories": 765,
       "rating": 4.8,
       "description": "Two center-cut pork chops grilled golden on the flat top, served with toast and two sides.",
-      "image": "Grilled_pork_chops_with_eggs_202608101201.jpeg"
+      "image": "Pork_chops_with_eggs_and_202608101203.jpeg"
     },
     {
       "slug": "meat-lovers-pork-chop-dinner-platter",
       "name": "Meat Lovers Pork Chop Dinner Platter",
-      "price": 15.50,
+      "price": 15.5,
       "calories": 890,
       "rating": 4.9,
       "description": "Three center-cut grilled pork chops served hot with toast and choice of two sides.",
-      "image": "Grilled_pork_chops_with_eggs_202608101201.jpeg"
+      "image": "Grilled_pork_chops_with_eggs_202608121031.jpeg"
     }
   ]
 }

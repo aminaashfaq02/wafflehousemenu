@@ -6,7 +6,7 @@
       "name": "Classic Sweet Cream Waffle",
       "price": 4.65,
       "calories": 410,
-      "rating": 5.0,
+      "rating": 5,
       "description": "Golden brown sweet cream waffle baked fresh to order with warm butter and maple syrup.",
       "image": "Waffle_served_with_syrup_2K_202608101149.jpeg"
     },
@@ -35,16 +35,16 @@
       "calories": 560,
       "rating": 4.8,
       "description": "Fresh golden waffle topped with melted creamy peanut butter.",
-      "image": "Sweet_cream_waffle_with_peanut_202608101152.jpeg"
+      "image": "Waffle_with_peanut_butter_drizzle_202608121014.jpeg"
     },
     {
       "slug": "double-waffle-classic",
       "name": "Double Waffle (Classic)",
       "price": 6.85,
       "calories": 820,
-      "rating": 5.0,
+      "rating": 5,
       "description": "Two full classic golden sweet cream waffles served stacked with butter and syrup.",
-      "image": "Waffle_served_with_syrup_2K_202608101149.jpeg"
+      "image": "Sweet_cream_waffles_with_syrup_202608121015.jpeg"
     },
     {
       "slug": "blueberry-waffle",

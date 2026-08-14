@@ -8,7 +8,7 @@
       "calories": 630,
       "rating": 4.9,
       "description": "Thinly shaved USDA Choice beef grilled with yellow onions and melted American cheese on Texas toast.",
-      "image": "Angus_patty_melt_on_toast.jpeg"
+      "image": "texas_cheesesteak_melt_1786372309616.jpg"
     },
     {
       "slug": "texas-patty-melt",
@@ -17,7 +17,7 @@
       "calories": 660,
       "rating": 4.8,
       "description": "100% Angus beef patty topped with caramelized onions and melted American cheese on grilled Texas toast.",
-      "image": "Angus_patty_melt_on_toast.jpeg"
+      "image": "texas_patty_melt_1786372645053.jpg"
     },
     {
       "slug": "texas-sausage-melt",
@@ -26,7 +26,7 @@
       "calories": 680,
       "rating": 4.8,
       "description": "A grilled pork sausage patty layered with melted cheese on buttered Texas toast.",
-      "image": "Texas_sausage_melt_on_plate_202608101243.jpeg"
+      "image": "Pork_sausage_patty_melt_2K_202608121123.jpeg"
     },
     {
       "slug": "texas-chicken-melt",
@@ -40,16 +40,16 @@
     {
       "slug": "texas-bacon-egg-and-cheese-melt",
       "name": "Texas Bacon, Egg & Cheese Melt",
-      "price": 8.50,
+      "price": 8.5,
       "calories": 670,
       "rating": 4.9,
       "description": "Crispy bacon strips, cooked egg, and melted cheese served hot on Texas toast.",
-      "image": "Texas_Bacon_Egg_Cheese_Melt_202608101229.jpeg"
+      "image": "cat-texas-melt.jpg"
     },
     {
       "slug": "texas-sausage-egg-and-cheese-melt",
       "name": "Texas Sausage, Egg & Cheese Melt",
-      "price": 8.50,
+      "price": 8.5,
       "calories": 710,
       "rating": 4.9,
       "description": "Grilled sausage patty, scrambled egg, and melted cheese on buttered Texas toast.",
@@ -58,7 +58,7 @@
     {
       "slug": "texas-ham-egg-and-cheese-melt",
       "name": "Texas Ham, Egg & Cheese Melt",
-      "price": 8.50,
+      "price": 8.5,
       "calories": 620,
       "rating": 4.8,
       "description": "Hickory-smoked city ham slice, egg, and melted cheese assembled on Texas toast.",

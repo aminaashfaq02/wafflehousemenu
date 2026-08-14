@@ -4,7 +4,7 @@
     {
       "slug": "scrambled-eggs",
       "name": "2 Eggs - Scrambled",
-      "price": 0.00,
+      "price": 0,
       "calories": 180,
       "rating": 4.8,
       "description": "Two whole farm-fresh eggs cracked directly onto a medium-heat flat-top grill, whisked quickly with liquid soybean oil, and cooked until soft, fluffy, and fully set.",
@@ -13,7 +13,7 @@
     {
       "slug": "classic-waffle",
       "name": "Classic Waffle",
-      "price": 0.00,
+      "price": 0,
       "calories": 410,
       "rating": 4.9,
       "description": "Sweet cream waffle batter poured into a preheated commercial waffle iron, baked for 2.5 minutes until golden brown, and served hot with a dollop of whipped butter.",
@@ -22,7 +22,7 @@
     {
       "slug": "white-toast",
       "name": "White Toast (2 Slices)",
-      "price": 0.00,
+      "price": 0,
       "calories": 130,
       "rating": 4.5,
       "description": "Two slices of classic enriched white bread lightly brushed with butter spread and toasted golden brown on a flat grill.",
@@ -31,7 +31,7 @@
     {
       "slug": "wheat-toast",
       "name": "Wheat Toast (2 Slices)",
-      "price": 0.00,
+      "price": 0,
       "calories": 120,
       "rating": 4.5,
       "description": "Two slices of whole wheat bread lightly buttered and toasted on the grill top.",
@@ -40,25 +40,25 @@
     {
       "slug": "raisin-toast",
       "name": "Raisin Toast (2 Slices)",
-      "price": 0.00,
+      "price": 0,
       "calories": 220,
       "rating": 4.7,
       "description": "Cinnamon raisin bread slices toasted on the grill and finished with warm butter spread.",
-      "image": "allstar_raisin_toast_1786276572169.jpg"
+      "image": "Cinnamon_raisin_toast_slices_2K_202608101038.jpeg"
     },
     {
       "slug": "grilled-biscuit",
       "name": "Grilled Biscuit",
-      "price": 0.00,
+      "price": 0,
       "calories": 300,
       "rating": 4.6,
       "description": "A flaky Southern buttermilk biscuit split in half, buttered, and grilled face-down until toasted crisp.",
-      "image": "allstar_grilled_biscuit_1786276721841.jpg"
+      "image": "Grilled_buttermilk_biscuit_on_plate_202608101242.jpeg"
     },
     {
       "slug": "texas-toast",
       "name": "Texas Toast (1 Slice)",
-      "price": 0.00,
+      "price": 0,
       "calories": 100,
       "rating": 4.6,
       "description": "One extra-thick slice of white Texas toast bread buttered heavily and grilled on both sides.",
@@ -67,7 +67,7 @@
     {
       "slug": "grits",
       "name": "Grits",
-      "price": 0.00,
+      "price": 0,
       "calories": 90,
       "rating": 4.4,
       "description": "White stone-ground corn hominy boiled with water, salt, and butter until smooth and creamy.",
@@ -76,16 +76,16 @@
     {
       "slug": "regular-hashbrowns",
       "name": "Regular Hashbrowns",
-      "price": 0.00,
+      "price": 0,
       "calories": 190,
       "rating": 4.8,
       "description": "Shredded potatoes scattered loosely on a hot flat-top grill coated with oil and seared until golden and crispy.",
-      "image": "allstar_regular_hashbrowns_1786277145262.jpg"
+      "image": "Shredded_potato_hashbrowns_on_plate_202608101305.jpeg"
     },
     {
       "slug": "sliced-tomatoes",
       "name": "Sliced Tomatoes",
-      "price": 0.00,
+      "price": 0,
       "calories": 10,
       "rating": 4.1,
       "description": "Fresh red ripe tomatoes sliced thick and served cold as a fresh side.",
@@ -94,7 +94,7 @@
     {
       "slug": "bacon",
       "name": "Bacon (3 Slices)",
-      "price": 0.00,
+      "price": 0,
       "calories": 135,
       "rating": 4.8,
       "description": "Three strips of hickory-smoked pork bacon griddled on the flat top until crispy.",
@@ -103,7 +103,7 @@
     {
       "slug": "sausage",
       "name": "Sausage (2 Patties)",
-      "price": 0.00,
+      "price": 0,
       "calories": 260,
       "rating": 4.7,
       "description": "Two seasoned pork sausage patties grilled thoroughly until seared brown on the outside.",
@@ -112,7 +112,7 @@
     {
       "slug": "chicken-sausage",
       "name": "Chicken Sausage (2 Patties)",
-      "price": 0.00,
+      "price": 0,
       "calories": 180,
       "rating": 4.7,
       "description": "Two savory lean chicken sausage patties grilled flat until fully cooked.",
@@ -121,7 +121,7 @@
     {
       "slug": "city-ham",
       "name": "City Ham (1 Slice)",
-      "price": 0.00,
+      "price": 0,
       "calories": 100,
       "rating": 4.6,
       "description": "Sliced hickory-smoked city ham warmed and seared on the grill.",
@@ -130,7 +130,7 @@
     {
       "slug": "country-ham",
       "name": "Country Ham (1 Slice)",
-      "price": 0.00,
+      "price": 0,
       "calories": 190,
       "rating": 4.7,
       "description": "A thick cut of traditional salty, dry-cured country ham grilled until hot and fragrant.",

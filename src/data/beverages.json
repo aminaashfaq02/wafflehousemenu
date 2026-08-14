@@ -49,7 +49,7 @@
     {
       "slug": "minute-maid-orange-juice",
       "name": "Minute Maid® Orange Juice",
-      "price": 3.10,
+      "price": 3.1,
       "calories": 160,
       "rating": 4.8,
       "description": "100% pure orange juice packed with Vitamin C, served chilled.",
@@ -62,7 +62,7 @@
       "calories": 150,
       "rating": 4.7,
       "description": "Refreshing sweet and tart lemonade served over ice.",
-      "image": "Glass_filled_with_orange_juice_202608101414.jpeg"
+      "image": "bev_lemonade_1786254794465.jpg"
     },
     {
       "slug": "coca-cola-soft-drinks",
@@ -76,7 +76,7 @@
     {
       "slug": "chocolate-milk",
       "name": "Whole Chocolate Milk",
-      "price": 3.10,
+      "price": 3.1,
       "calories": 230,
       "rating": 4.9,
       "description": "Creamy whole milk blended rich with chocolate syrup.",

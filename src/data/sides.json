@@ -4,7 +4,7 @@
     {
       "slug": "hickory-smoked-bacon-3-strips",
       "name": "Hickory-Smoked Bacon (3 Strips)",
-      "price": 3.90,
+      "price": 3.9,
       "calories": 135,
       "rating": 4.9,
       "description": "Three strips of crispy, wood-smoked pork bacon griddled to perfection.",
@@ -13,7 +13,7 @@
     {
       "slug": "jimmy-dean-sausage-patties-2",
       "name": "Jimmy Dean® Sausage Patties (2)",
-      "price": 3.90,
+      "price": 3.9,
       "calories": 270,
       "rating": 4.9,
       "description": "Two savory, seasoned pork sausage patties cooked hot on the flat top.",
@@ -22,7 +22,7 @@
     {
       "slug": "chicken-sausage-patties-2",
       "name": "Chicken Sausage Patties (2)",
-      "price": 3.90,
+      "price": 3.9,
       "calories": 140,
       "rating": 4.7,
       "description": "Two lean, seasoned grilled chicken sausage patties.",
@@ -31,7 +31,7 @@
     {
       "slug": "grilled-city-ham-1-slice",
       "name": "Grilled City Ham (1 Slice)",
-      "price": 4.00,
+      "price": 4,
       "calories": 150,
       "rating": 4.8,
       "description": "One slice of hickory-smoked city ham seared warm on the flat top.",
@@ -40,7 +40,7 @@
     {
       "slug": "country-ham-1-slice",
       "name": "Country Ham (1 Slice)",
-      "price": 4.80,
+      "price": 4.8,
       "calories": 210,
       "rating": 4.8,
       "description": "Thick-cut, salty, dry-cured Southern country ham slice grilled hot.",
@@ -49,7 +49,7 @@
     {
       "slug": "sliced-tomatoes-3-slices",
       "name": "Sliced Tomatoes (3 Slices)",
-      "price": 2.50,
+      "price": 2.5,
       "calories": 10,
       "rating": 4.6,
       "description": "Three fresh, juicy red tomato slices served cool or lightly grilled.",
@@ -58,25 +58,25 @@
     {
       "slug": "bowl-of-grits",
       "name": "Bowl of Grits",
-      "price": 2.50,
+      "price": 2.5,
       "calories": 90,
       "rating": 4.8,
       "description": "Warm, creamy Southern white corn grits served with butter.",
-      "image": "Creamy_grits_bowl_with_toppings_202608101333.jpeg"
+      "image": "cat-sides.jpg"
     },
     {
       "slug": "large-bowl-of-grits",
       "name": "Large Bowl of Grits",
-      "price": 3.10,
+      "price": 3.1,
       "calories": 180,
       "rating": 4.8,
       "description": "A generous double portion of warm, buttered Southern stone-ground white grits.",
-      "image": "Creamy_grits_bowl_with_toppings_202608101333.jpeg"
+      "image": "contact-cat-lunch.jpg"
     },
     {
       "slug": "toast-white-or-wheat",
       "name": "Toast (White or Wheat)",
-      "price": 2.50,
+      "price": 2.5,
       "calories": 230,
       "rating": 4.7,
       "description": "Two slices of white or wheat bread toasted golden and buttered.",
@@ -85,16 +85,16 @@
     {
       "slug": "grilled-biscuit-side",
       "name": "Grilled Biscuit (Side)",
-      "price": 2.50,
+      "price": 2.5,
       "calories": 300,
       "rating": 4.8,
       "description": "A split buttermilk biscuit buttered and grilled face-down on the flat top.",
-      "image": "Grilled_buttermilk_biscuit_on_plate_202608101242.jpeg"
+      "image": "Buttermilk_biscuit_on_diner_plate_202608101040.jpeg"
     },
     {
       "slug": "raisin-toast",
       "name": "Raisin Toast",
-      "price": 2.70,
+      "price": 2.7,
       "calories": 270,
       "rating": 4.9,
       "description": "Two slices of cinnamon raisin bread toasted and buttered warm.",
@@ -103,7 +103,7 @@
     {
       "slug": "texas-toast-side",
       "name": "Texas Toast (Side)",
-      "price": 2.70,
+      "price": 2.7,
       "calories": 300,
       "rating": 4.9,
       "description": "Two thick slices of white bread griddled heavy with butter until crispy.",
@@ -116,7 +116,7 @@
       "calories": 330,
       "rating": 4.9,
       "description": "Waffle House signature chili loaded with beef, kidney beans, tomatoes, and spices.",
-      "image": "Creamy_grits_bowl_with_toppings_202608101333.jpeg"
+      "image": "cat-pies.jpg"
     },
     {
       "slug": "slice-of-pie",

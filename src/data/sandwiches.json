@@ -13,20 +13,20 @@
     {
       "slug": "grilled-chicken-bacon-cheese-sandwich-deluxe",
       "name": "Grilled Chicken Bacon Cheese Sandwich Deluxe",
-      "price": 10.50,
+      "price": 10.5,
       "calories": 420,
       "rating": 4.9,
       "description": "A grilled chicken breast filet layered with crispy bacon strips, melted American cheese, lettuce, tomato, and mayo on a toasted bun.",
-      "image": "Texas_grilled_chicken_melt_2K_202608101237.jpeg"
+      "image": "Grilled_chicken_sandwich_on_plate_202608101347.jpeg"
     },
     {
       "slug": "grilled-cheese-sandwich",
       "name": "Grilled Cheese Sandwich",
-      "price": 6.50,
+      "price": 6.5,
       "calories": 275,
       "rating": 4.6,
       "description": "Two slices of bread stuffed with American cheese slices and butter-griddled until golden brown and melted through.",
-      "image": "Egg_and_cheese_sandwich_on_202608101210.jpeg"
+      "image": "grilled_cheese_sandwich_1786372461713.jpg"
     },
     {
       "slug": "waffle-sandwich-ham-and-cheese-on-wheat",
@@ -35,7 +35,7 @@
       "calories": 270,
       "rating": 4.7,
       "description": "Sliced city ham and melted cheese pressed warm inside toasted whole wheat bread slices.",
-      "image": "Grilled_ham_sandwich_on_plate_202608101230.jpeg"
+      "image": "Ham_sandwich_with_cheese_and_202608121128.jpeg"
     },
     {
       "slug": "ham-and-cheese-sandwich-lettuce-tomato",
@@ -44,16 +44,16 @@
       "calories": 400,
       "rating": 4.7,
       "description": "Sliced city ham, melted American cheese, fresh crisp lettuce, red tomato slice, and mayo on toasted bread.",
-      "image": "Grilled_ham_sandwich_on_plate_202608101230.jpeg"
+      "image": "cat-sandwiches.jpg"
     },
     {
       "slug": "blt-sandwich",
       "name": "BLT Sandwich",
-      "price": 8.50,
+      "price": 8.5,
       "calories": 350,
       "rating": 4.8,
       "description": "Strips of crispy hickory-smoked pork bacon layered with fresh lettuce, ripe tomato slices, and mayo between toasted white bread.",
-      "image": "BLT_sandwich_cut_in_half_202608101351.jpeg"
+      "image": "blt_sandwich_1786371838419.jpg"
     },
     {
       "slug": "texas-bacon-lovers-blt-sandwich",
@@ -80,7 +80,7 @@
       "calories": 660,
       "rating": 4.8,
       "description": "100% Angus beef burger with grilled onions and melted cheese on Texas toast.",
-      "image": "Angus_patty_melt_on_toast.jpeg"
+      "image": "Texas_Angus_Patty_Melt_2K_202608121116.jpeg"
     },
     {
       "slug": "texas-sausage-and-cheese-melt",
@@ -89,7 +89,7 @@
       "calories": 680,
       "rating": 4.8,
       "description": "Grilled pork sausage patty with melted cheese on buttered Texas toast.",
-      "image": "Texas_sausage_melt_on_plate_202608101243.jpeg"
+      "image": "Texas_Sausage_Melt_on_plate_202608101244.jpeg"
     }
   ]
 }
