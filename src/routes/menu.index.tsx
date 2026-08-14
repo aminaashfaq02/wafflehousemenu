@@ -32,32 +32,36 @@ const SITE = "https://wafflehousemenu.com";
 
 const menuFaqs = [
   {
-    q: "What is on the Waffle House menu?",
-    a: "Waffle House offers classic American diner dishes including sweet cream waffles, farm-fresh eggs, hashbrowns, Toddle House omelets, biscuits, and Texas melts, alongside 100% Angus burgers, dinner steaks, sides, pies, and bottomless coffee.",
+    q: "What is included on the Waffle House menu?",
+    a: "The Waffle House menu includes classic American diner dishes across 13 categories: waffles, egg breakfasts, Toddle House omelets, hashbrown bowls, breakfast sandwiches and melts, grilled biscuits, Angus burgers, diner sandwiches, classic dinners, hashbrowns and toppings, sides, beverages, and the All-Star Special.",
   },
   {
-    q: "How many menu categories are there?",
-    a: "The menu is organized into 13 primary categories covering breakfast favorites, lunch and dinner options, sides, and beverages.",
+    q: "How many menu categories are available?",
+    a: "The Waffle House menu is organized into 13 primary categories, covering breakfast, lunch, dinner, sides, and beverages.",
   },
   {
-    q: "How many menu items are listed?",
-    a: `Our reference guide organizes ${TOTAL_MENU_ITEMS} standard menu items across all ${TOTAL_MENU_CATEGORIES} categories based on current restaurant menus.`,
+    q: "How many menu items are listed on this website?",
+    a: `This reference guide documents ${TOTAL_MENU_ITEMS} standard Waffle House menu items across all ${TOTAL_MENU_CATEGORIES} categories.`,
   },
   {
-    q: "Does Waffle House serve breakfast all day?",
-    a: "Yes. Waffle House serves its entire menu — including all breakfast waffles, egg plates, and hashbrowns — 24 hours a day, 7 days a week.",
+    q: "Where can I find Waffle House menu prices?",
+    a: "Menu prices are listed on individual item pages and in the price reference table on this page. Prices are reference estimates and can vary by restaurant location.",
   },
   {
-    q: "Do Waffle House menu prices vary by location?",
-    a: "Yes. Individual restaurant prices vary based on local franchise operating costs, location, and regional pricing updates.",
+    q: "Does Waffle House have a menu PDF?",
+    a: "A printable PDF menu reference is available through the Menu PDF section on this page. It provides a convenient overview of available items and categories.",
   },
   {
     q: "Where can I find Waffle House nutrition information?",
-    a: "You can browse complete calorie counts, macros, and allergen details on our dedicated Waffle House Nutrition page.",
+    a: "Complete calorie counts, macronutrient breakdowns, and available allergen information are listed on the Waffle House Nutrition page.",
   },
   {
-    q: "Where can I find the Waffle House menu PDF?",
-    a: "A printable PDF reference is available for viewing and download directly from the menu PDF section on this page and the nutrition guide.",
+    q: "Can menu prices vary by location?",
+    a: "Yes. Waffle House restaurant prices vary based on local operating costs, regional pricing, and individual franchise decisions. Always confirm pricing with your local restaurant.",
+  },
+  {
+    q: "Where can I find Waffle House restaurants?",
+    a: "The Locations section of this website provides a directory of Waffle House restaurants organized by state and city. Waffle House operates more than 1,900 locations across the southeastern and mid-Atlantic United States.",
   },
 ];
 
@@ -70,21 +74,21 @@ export const Route = createFileRoute("/menu/")({
   },
   head: () => ({
     meta: [
-      { title: "Waffle House Menu & Prices 2026 | Complete Menu Guide" },
+      { title: "Waffle House Menu & Prices | Complete Menu Guide" },
       {
         name: "description",
-        content: `Explore the Waffle House menu with ${TOTAL_MENU_ITEMS} items across ${TOTAL_MENU_CATEGORIES} categories, including waffles, breakfast favorites, hashbrowns, burgers, sandwiches, dinners, sides, pies and beverages.`,
+        content: `Explore the Waffle House menu with ${TOTAL_MENU_CATEGORIES} categories and ${TOTAL_MENU_ITEMS} verified menu items, including prices, available nutrition information, menu PDF resources, guides and restaurant locations.`,
       },
-      { property: "og:title", content: "Waffle House Menu & Prices 2026 | Complete Menu Guide" },
+      { property: "og:title", content: "Waffle House Menu & Prices | Complete Menu Guide" },
       {
         property: "og:description",
-        content: `Explore the Waffle House menu with ${TOTAL_MENU_ITEMS} items across ${TOTAL_MENU_CATEGORIES} categories, including waffles, breakfast favorites, hashbrowns, burgers, sandwiches, dinners, sides, pies and beverages.`,
+        content: `Explore the Waffle House menu with ${TOTAL_MENU_CATEGORIES} categories and ${TOTAL_MENU_ITEMS} verified menu items, including prices, available nutrition information, menu PDF resources, guides and restaurant locations.`,
       },
-      { property: "og:url", content: `${SITE}/menu` },
+      { property: "og:url", content: `${SITE}/menu/` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: `${SITE}/menu` }],
+    links: [{ rel: "canonical", href: `${SITE}/menu/` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -290,6 +294,29 @@ function MenuIndex() {
         </div>
       </section>
 
+      {/* 3b. EXPLORE THE MENU — EDITORIAL INTRO */}
+      <section aria-labelledby="explore-heading" className="bg-white py-14 border-b border-border font-sans">
+        <div className="container-editorial max-w-3xl">
+          <span className="chip">Menu Overview</span>
+          <h2 id="explore-heading" className="mt-4 font-display text-2xl font-bold sm:text-3xl text-foreground">
+            Explore the Waffle House Menu
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-ink-soft">
+            The Waffle House menu is organized into {TOTAL_MENU_CATEGORIES} distinct categories, covering everything from
+            breakfast plates and waffles to Angus burgers, diner sandwiches, classic dinner platters, sides,
+            and beverages. Each category page lists the individual menu items within that section, along with
+            available pricing reference information and nutrition details where reliable data exists.
+          </p>
+          <p className="mt-3 text-base leading-relaxed text-ink-soft">
+            Visitors can browse the menu by selecting a category below, use the search tool to find a
+            specific item by name, or reference the complete price table for a side-by-side comparison.
+            Nutrition information for individual items is available through the dedicated
+            {" "}<Link to="/nutrition" className="text-primary font-semibold hover:underline">Waffle House Nutrition page</Link>.
+            Menu prices shown are reference estimates and may vary by restaurant location.
+          </p>
+        </div>
+      </section>
+
       {/* 4. MENU PDF SECTION */}
       <section aria-labelledby="pdf-heading" className="bg-[#0B0C0E] border-b border-white/10 text-white font-sans">
         <div className="container-editorial py-12 md:py-16">
@@ -487,17 +514,108 @@ function MenuIndex() {
         </div>
       </section>
 
-      {/* 14. HOW WE UPDATE MENU INFORMATION */}
-      <section className="bg-white py-16 md:py-20 border-b border-border font-sans">
-        <div className="container-editorial max-w-3xl space-y-4 text-center">
+      {/* 14. HOW TO USE THIS MENU */}
+      <section aria-labelledby="how-to-heading" className="bg-surface py-16 md:py-20 border-b border-border font-sans">
+        <div className="container-editorial max-w-4xl">
+          <div className="text-center mb-10 space-y-3">
+            <span className="chip">Getting Started</span>
+            <h2 id="how-to-heading" className="font-display text-2xl font-bold sm:text-3xl text-foreground">
+              How to Use This Waffle House Menu
+            </h2>
+            <p className="text-sm text-ink-soft max-w-2xl mx-auto leading-relaxed">
+              This page is organized to make browsing the Waffle House menu straightforward, whether you're planning a visit or looking up a specific item.
+            </p>
+          </div>
+          <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { n: "1", title: "Browse by Category", body: "Select any of the 13 menu categories to see every item within that section, along with descriptions and pricing information." },
+              { n: "2", title: "Search for an Item", body: "Use the search tool on this page to find a specific dish by name. Results filter in real time as you type." },
+              { n: "3", title: "Compare Menu Information", body: "The price table lets you sort all menu items by name, category, price, or calorie count to compare options side by side." },
+              { n: "4", title: "Check Nutrition", body: "Visit the Nutrition page for calorie counts, macronutrient breakdowns, and allergen information where available." },
+              { n: "5", title: "Find a Restaurant", body: "Menu prices and item availability can vary by location. Use the Locations directory to find a Waffle House near you." },
+              { n: "6", title: "Read Related Guides", body: "The blog section includes practical guides covering specific menu categories, ordering tips, and restaurant information." },
+            ].map((step) => (
+              <li key={step.n} className="flex gap-4 rounded-2xl border border-border bg-white p-6 shadow-xs">
+                <span className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{step.n}</span>
+                <div>
+                  <h3 className="font-display text-sm font-bold text-foreground">{step.title}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-ink-soft">{step.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* 15. UNDERSTANDING THE WAFFLE HOUSE MENU */}
+      <section aria-labelledby="understanding-heading" className="bg-white py-16 md:py-20 border-b border-border font-sans">
+        <div className="container-editorial max-w-3xl space-y-4">
+          <span className="chip">Menu Structure</span>
+          <h2 id="understanding-heading" className="font-display text-2xl font-bold sm:text-3xl text-foreground">
+            Understanding the Waffle House Menu
+          </h2>
+          <p className="text-base leading-relaxed text-ink-soft">
+            The Waffle House menu is built around the brand's identity as an American diner serving a consistent
+            selection of breakfast and diner food around the clock. The menu is divided into {TOTAL_MENU_CATEGORIES} categories
+            that reflect how the restaurant naturally organizes its offerings — from signature waffle plates and
+            egg-based breakfast combinations through to Angus beef burgers, classic dinner platters, and beverages.
+          </p>
+          <p className="text-base leading-relaxed text-ink-soft">
+            The breakfast side of the menu includes waffles, egg breakfasts, Toddle House omelets, hashbrown bowls,
+            grilled biscuits, and breakfast sandwiches. The lunch and dinner section covers Angus burgers, sandwiches,
+            Texas melts, and classic dinner plates. Sides, hashbrown variations, and beverages round out the complete
+            menu picture. This category structure is reflected throughout this website so that visitors can navigate
+            directly to the section most relevant to their needs.
+          </p>
+          <div className="pt-2">
+            <Link to="/methodology" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary hover:underline">
+              How This Information Is Organized <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 16. ABOUT MENU PRICES AND AVAILABILITY */}
+      <section aria-labelledby="prices-avail-heading" className="bg-surface py-14 border-b border-border font-sans">
+        <div className="container-editorial max-w-3xl space-y-4">
+          <span className="chip">Editorial Note</span>
+          <h2 id="prices-avail-heading" className="font-display text-2xl font-bold sm:text-3xl text-foreground">
+            About Menu Prices and Availability
+          </h2>
+          <p className="text-base leading-relaxed text-ink-soft">
+            Menu pricing at Waffle House restaurants can vary based on local operating costs, regional pricing
+            adjustments, and individual franchise decisions. The prices shown on this website reflect reference
+            estimates gathered from publicly available sources and are provided to give visitors a general sense
+            of menu costs. They should not be treated as guaranteed or universally applicable prices.
+          </p>
+          <p className="text-base leading-relaxed text-ink-soft">
+            Individual menu items and their availability can also vary by restaurant location. Nutrition
+            information may be revised as menu items change over time. This website is an independent
+            informational resource and is not affiliated with, endorsed by, or sponsored by Waffle House, Inc.
+            For the most current prices and menu availability, contact your local Waffle House restaurant directly.
+          </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <Link to="/locations" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary hover:underline">
+              Find a Waffle House Location <ArrowRight className="h-3 w-3" />
+            </Link>
+            <Link to="/methodology" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft hover:text-primary hover:underline">
+              Our Methodology <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 17. HOW WE UPDATE MENU INFORMATION */}
+      <section className="bg-white py-12 border-b border-border font-sans">
+        <div className="container-editorial max-w-3xl space-y-3 text-center">
           <span className="chip">Editorial Process</span>
-          <h2 className="font-display text-2xl font-bold sm:text-3xl text-foreground">
+          <h2 className="font-display text-xl font-bold sm:text-2xl text-foreground">
             How We Update Menu Information
           </h2>
           <p className="text-sm leading-relaxed text-ink-soft">
-            Menu information on this website is organized from reliable publicly available information and reviewed for consistency across menu categories, pricing references and related pages. Menu availability and prices may vary by location and can change over time.
+            Menu information on this website is organized from reliable publicly available sources and reviewed for consistency across menu categories, pricing references, and related pages.
           </p>
-          <div className="pt-2">
+          <div className="pt-1">
             <Link to="/about" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary hover:underline">
               About This Menu Guide <ArrowRight className="h-3 w-3" />
             </Link>

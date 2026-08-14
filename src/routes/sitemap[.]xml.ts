@@ -25,7 +25,7 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const staticPages = [
           loc("/", "1.0", "daily"),
-          loc("/menu", "0.9", "weekly"),
+          loc("/menu/", "0.9", "weekly"),
           loc("/categories", "0.8", "weekly"),
           loc("/locations", "0.9", "weekly"),
           loc("/blog", "0.8", "weekly"),
