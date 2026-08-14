@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CheckCircle2, ShieldCheck, FileText, RefreshCw, Mail, ArrowRight } from "lucide-react";
+import { CheckCircle2, ShieldCheck, FileText, RefreshCw, Mail, ArrowRight, ChevronRight, HelpCircle, Utensils, MapPin, HeartHandshake } from "lucide-react";
 
 const SITE = "https://wafflehousemenu.com";
 
 export const Route = createFileRoute("/methodology")({
   head: () => {
-    const title = "Editorial Methodology & Data Sourcing — Waffle House Menu Guide";
+    const title = "Waffle House Menu Information Methodology | How We Update Content";
     const description =
-      "Learn how we research, compile, fact-check, and update Waffle House menu prices, calorie counts, and allergen data.";
+      "Learn how this independent Waffle House information website organizes menu, prices, nutrition, locations and guide content and handles updates and corrections.";
     const url = `${SITE}/methodology`;
     return {
       meta: [
@@ -27,6 +27,17 @@ export const Route = createFileRoute("/methodology")({
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+              { "@type": "ListItem", position: 2, name: "Methodology", item: url },
+            ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "AboutPage",
             name: title,
             url,
@@ -42,122 +53,180 @@ export const Route = createFileRoute("/methodology")({
 
 function MethodologyPage() {
   return (
-    <article className="min-h-screen bg-background pb-20">
-      {/* Hero Header */}
-      <header className="border-b border-border bg-surface py-12 sm:py-16">
-        <div className="container-editorial max-w-4xl">
-          <nav aria-label="Breadcrumb" className="text-xs uppercase tracking-widest text-ink-soft">
-            <Link to="/" className="hover:text-primary">Home</Link>
-            <span className="px-2">/</span>
-            <span aria-current="page">Editorial Methodology</span>
-          </nav>
-          <div className="mt-4 flex items-center gap-2">
-            <span className="chip">EEAT & Trust Standard</span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-success/10 px-3 py-1 text-xs font-semibold text-success">
-              <ShieldCheck className="h-3.5 w-3.5" aria-hidden /> Fact-Checked July 2026
-            </span>
-          </div>
-          <h1 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">
-            Editorial Methodology & Data Sourcing
+    <main className="min-h-screen bg-background pb-20 font-sans text-foreground">
+      {/* 1. BREADCRUMB */}
+      <nav aria-label="Breadcrumb" className="bg-surface py-3 border-b border-border font-sans">
+        <div className="container-editorial flex items-center gap-2 text-xs font-medium text-ink-soft">
+          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          <ChevronRight className="h-3 w-3" aria-hidden />
+          <span className="text-foreground">Methodology</span>
+        </div>
+      </nav>
+
+      {/* 2. HERO / INTRODUCTION */}
+      <header className="border-b border-border bg-surface py-12 sm:py-16 font-sans">
+        <div className="container-editorial max-w-4xl space-y-4">
+          <span className="chip">Editorial Standards</span>
+          <h1 className="font-display text-3xl font-bold leading-tight sm:text-4xl md:text-5xl text-foreground">
+            How We Organize and Update Waffle House Information
           </h1>
-          <p className="mt-4 text-lg text-ink-soft">
-            How we research, verify, compile, and maintain accurate Waffle House menu prices, nutrition information, and allergen records.
+          <p className="text-base text-ink-soft leading-relaxed max-w-3xl">
+            This methodology document explains how our editorial team researches, structures, reviews, and updates Waffle House menu data, estimated prices, nutrition values, restaurant locations, and diner guides. We believe in transparency about our information sources, organizational processes, and the boundaries of what this independent guide does and does not claim.
           </p>
+          <div className="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-primary">
+            <Link to="/menu" className="hover:underline">Explore Menu →</Link>
+            <Link to="/nutrition" className="hover:underline">Nutrition Guide →</Link>
+            <Link to="/locations" className="hover:underline">Locations Directory →</Link>
+            <Link to="/about" className="hover:underline">About This Site →</Link>
+          </div>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container-editorial max-w-4xl py-12">
-        <div className="space-y-12">
-          {/* Section 1: Overview */}
-          <section aria-labelledby="overview-heading" className="space-y-4">
-            <h2 id="overview-heading" className="font-display text-2xl font-semibold text-foreground">
-              1. Our Data Standard & Independence
-            </h2>
-            <p className="leading-relaxed text-foreground/80">
-              <strong>Waffle House Menu Guide</strong> operates as an independent editorial research publication. We are not affiliated with, endorsed by, or sponsored by Waffle House, Inc.
-            </p>
-            <p className="leading-relaxed text-foreground/80">
-              Our mission is to provide restaurant diners, health-conscious consumers, and researchers with clean, structured, and accurate menu references — including prices, calorie counts, macronutrient breakdowns, and allergen warnings.
-            </p>
-          </section>
-
-          <div className="rule-editorial" />
-
-          {/* Section 2: 3-Pillar Sourcing */}
-          <section aria-labelledby="sourcing-heading" className="space-y-6">
-            <h2 id="sourcing-heading" className="font-display text-2xl font-semibold text-foreground">
-              2. How We Source Our Information
-            </h2>
-            <div className="grid gap-6 sm:grid-cols-3">
-              <div className="rounded-2xl border border-border bg-surface p-5">
-                <FileText className="h-8 w-8 text-primary" aria-hidden />
-                <h3 className="mt-3 font-display text-lg font-semibold">Official PDF Records</h3>
-                <p className="mt-2 text-sm text-ink-soft">
-                  We cross-reference official Waffle House Nutrition & Allergen documentation (v20.2) published under FDA Menu Labeling compliance laws.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-surface p-5">
-                <CheckCircle2 className="h-8 w-8 text-primary" aria-hidden />
-                <h3 className="mt-3 font-display text-lg font-semibold">Counter Verification</h3>
-                <p className="mt-2 text-sm text-ink-soft">
-                  Our editorial staff verifies live prices directly at Waffle House diners across multiple U.S. states to establish accurate regional price averages.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-surface p-5">
-                <RefreshCw className="h-8 w-8 text-primary" aria-hidden />
-                <h3 className="mt-3 font-display text-lg font-semibold">Monthly Audits</h3>
-                <p className="mt-2 text-sm text-ink-soft">
-                  All menu data, calorie figures, ingredients, and allergen tags undergo a comprehensive monthly editorial review cycle.
-                </p>
-              </div>
+      {/* 3. MAIN CONTENT SECTIONS */}
+      <div className="container-editorial max-w-4xl py-12 space-y-12 font-sans">
+        {/* Section: Information Sources */}
+        <section aria-labelledby="sources-heading" className="space-y-4">
+          <h2 id="sources-heading" className="font-display text-2xl font-bold text-foreground">
+            How We Gather Information
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            Our data is gathered through multi-source research combining public diner menus, counter pricing observations across multiple states, verified nutritional disclosures published under FDA menu labeling standards, and direct customer feedback.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-3 pt-2">
+            <div className="rounded-xl border border-border bg-surface p-4">
+              <FileText className="h-5 w-5 text-primary mb-2" />
+              <h3 className="font-bold text-sm text-foreground">Public Nutrition Records</h3>
+              <p className="text-xs text-ink-soft mt-1">Cross-referenced against published diner nutritional and allergen guidelines.</p>
             </div>
-          </section>
-
-          <div className="rule-editorial" />
-
-          {/* Section 3: Nutritional Accuracy */}
-          <section aria-labelledby="nutrition-heading" className="space-y-4">
-            <h2 id="nutrition-heading" className="font-display text-2xl font-semibold text-foreground">
-              3. Calorie & Nutritional Guidelines
-            </h2>
-            <p className="leading-relaxed text-foreground/80">
-              In accordance with FDA guidelines, general nutrition advice recommends 2,000 calories a day, though individual calorie needs vary.
-            </p>
-            <ul className="list-disc space-y-2 pl-6 text-foreground/80">
-              <li>
-                <strong>Base Servings:</strong> Calorie calculations reflect standardized portion sizes as prepared according to master recipe specifications.
-              </li>
-              <li>
-                <strong>Customizations:</strong> Adding toppings (e.g., cheese +50 cal, bacon +140 cal, smothering onions +15 cal) alters total calories and sodium levels.
-              </li>
-              <li>
-                <strong>Allergens:</strong> Allergen tags identify 8 major food allergens (Milk, Eggs, Wheat, Soy, Peanuts, Tree Nuts, Fish, Shellfish) listed in official company disclosure records.
-              </li>
-            </ul>
-          </section>
-
-          <div className="rule-editorial" />
-
-          {/* Section 4: Corrections Policy */}
-          <section aria-labelledby="corrections-heading" className="rounded-3xl border border-primary/20 bg-primary/5 p-6 sm:p-8 space-y-4">
-            <h2 id="corrections-heading" className="font-display text-2xl font-semibold text-foreground flex items-center gap-2">
-              <Mail className="h-6 w-6 text-primary" aria-hidden />
-              4. Corrections & Data Updates
-            </h2>
-            <p className="leading-relaxed text-foreground/80">
-              Because Waffle House restaurants are independently franchised, prices may vary by state or region. If you notice a price discrepancy or menu update at your local restaurant, please let us know so we can update our records.
-            </p>
-            <div className="pt-2">
-              <Link to="/contact" className="btn-primary inline-flex items-center gap-2">
-                Submit a Data Correction <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
+            <div className="rounded-xl border border-border bg-surface p-4">
+              <CheckCircle2 className="h-5 w-5 text-primary mb-2" />
+              <h3 className="font-bold text-sm text-foreground">Counter Observations</h3>
+              <p className="text-xs text-ink-soft mt-1">Compiled from sample diner menus to determine representative price averages.</p>
             </div>
-          </section>
-        </div>
-      </main>
-    </article>
+            <div className="rounded-xl border border-border bg-surface p-4">
+              <RefreshCw className="h-5 w-5 text-primary mb-2" />
+              <h3 className="font-bold text-sm text-foreground">Editorial Reviews</h3>
+              <p className="text-xs text-ink-soft mt-1">Regularly reviewed and refined when updated source documentation is available.</p>
+            </div>
+          </div>
+        </section>
+
+        <hr className="border-border" />
+
+        {/* Section: Menu Organization */}
+        <section aria-labelledby="menu-org-heading" className="space-y-4">
+          <h2 id="menu-org-heading" className="font-display text-2xl font-bold text-foreground">
+            How Menu Information Is Organized
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            Our menu database is organized into 13 canonical categories covering 74 distinct dishes and sides. Each category features an overview page linking to individual dish pages with ingredients, descriptions, calories, and prices. A printable PDF version is also provided for offline reference.
+          </p>
+          <div>
+            <Link to="/menu" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary hover:underline">
+              Browse Complete Menu Hub <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </section>
+
+        <hr className="border-border" />
+
+        {/* Section: Prices */}
+        <section aria-labelledby="prices-heading" className="space-y-4">
+          <h2 id="prices-heading" className="font-display text-2xl font-bold text-foreground">
+            Understanding Menu Prices
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            Waffle House operates both corporate-owned and franchised restaurants across 25 states. Individual franchise owners have the autonomy to adjust menu prices based on local labor costs, rent, and ingredient supply chains. As a result, prices shown on this website represent estimated counter averages and should be confirmed directly with your local diner.
+          </p>
+        </section>
+
+        <hr className="border-border" />
+
+        {/* Section: Nutrition */}
+        <section aria-labelledby="nutrition-heading" className="space-y-4">
+          <h2 id="nutrition-heading" className="font-display text-2xl font-bold text-foreground">
+            How Nutrition Information Is Presented
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            Nutritional metrics — including total calories, protein, carbohydrates, total fat, and sodium — are compiled from standardized serving portions. Customizations (such as topping hashbrowns or ordering extra butter) will change total values. This information is intended for general reference and does not constitute medical or clinical dietary advice.
+          </p>
+          <div>
+            <Link to="/nutrition" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary hover:underline">
+              View Nutrition Table <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </section>
+
+        <hr className="border-border" />
+
+        {/* Section: Locations */}
+        <section aria-labelledby="locations-heading" className="space-y-4">
+          <h2 id="locations-heading" className="font-display text-2xl font-bold text-foreground">
+            How Location Information Is Organized
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            Our location directory organizes over 2,100 diner locations hierarchically by state and city. Store entries list street addresses, operating hours, phone numbers, and direct mapping links where available.
+          </p>
+          <div>
+            <Link to="/locations" className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary hover:underline">
+              Browse Locations Directory <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </section>
+
+        <hr className="border-border" />
+
+        {/* Section: Content Updates */}
+        <section aria-labelledby="updates-heading" className="space-y-4">
+          <h2 id="updates-heading" className="font-display text-2xl font-bold text-foreground">
+            How We Keep Information Current
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            We conduct periodic editorial audits to review active menu categories, check for discontinued items, and update price averages when new sample menus are verified. We do not claim instant real-time synchronization, but rather deliberate, human-curated accuracy.
+          </p>
+        </section>
+
+        <hr className="border-border" />
+
+        {/* Section: Reporting Corrections */}
+        <section aria-labelledby="corrections-heading" className="space-y-4">
+          <h2 id="corrections-heading" className="font-display text-2xl font-bold text-foreground">
+            Reporting an Error or Outdated Information
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            We welcome feedback from diners, employees, and community members. If you spot a pricing difference, an outdated store address, or a broken link, please let us know so our editorial team can investigate and update our records.
+          </p>
+          <div>
+            <Link to="/contact" className="btn-primary">
+              Submit a Correction <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </section>
+
+        <hr className="border-border" />
+
+        {/* Section: Independent Resource */}
+        <section aria-labelledby="independent-heading" className="space-y-4">
+          <h2 id="independent-heading" className="font-display text-2xl font-bold text-foreground">
+            An Independent Information Resource
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            This website is an independent digital publication created for informational and educational purposes. We are not owned by, affiliated with, endorsed by, or sponsored by Waffle House, Inc. All registered trademarks, logos, and service marks remain the property of their respective holders.
+          </p>
+        </section>
+
+        <hr className="border-border" />
+
+        {/* Section: Helpful Content Approach */}
+        <section aria-labelledby="helpful-content-heading" className="space-y-4">
+          <h2 id="helpful-content-heading" className="font-display text-2xl font-bold text-foreground">
+            Our Approach to Helpful Content
+          </h2>
+          <p className="text-sm leading-relaxed text-ink-soft">
+            Every guide, table, and article on this website is created to answer real reader questions. We prioritize clear typography, responsive layouts, factual explanations, and natural navigation over promotional filler or keyword manipulation.
+          </p>
+        </section>
+      </div>
+    </main>
   );
 }
