@@ -10,8 +10,11 @@ import {
   Sparkles,
   Star,
   X,
+  FileText,
+  Download,
 } from "lucide-react";
 import { categories, menu, type CategoryId, type MenuItem } from "@/data/menu";
+import { CENTRAL_MENU_CATEGORIES, TOTAL_MENU_CATEGORIES, TOTAL_MENU_ITEMS } from "@/data/centralMenuData";
 import heroImg from "@/assets/menu-hero-spread.jpg";
 import highlightBreakfast from "@/assets/menu-highlight-breakfast.jpg";
 import highlightValue from "@/assets/menu-highlight-value.jpg";
@@ -30,38 +33,60 @@ export const Route = createFileRoute("/menu/")({
   },
   head: () => ({
     meta: [
-      { title: "Waffle House Menu — Complete Guide With Prices & Calories 2026" },
+      { title: "Waffle House Menu & Prices 2026" },
       {
         name: "description",
-        content:
-          "Complete Waffle House menu with U.S. prices, calories, and popular picks — waffles, breakfast plates, omelets, hashbrowns, burgers, sandwiches, and drinks.",
+        content: "Explore the Waffle House menu with 74 items across 13 categories, including waffles, breakfast favorites, hashbrowns, burgers, sandwiches, dinners, sides, pies and beverages.",
       },
-      { property: "og:title", content: "Complete Waffle House Menu With Prices" },
+      { property: "og:title", content: "Waffle House Menu & Prices 2026" },
       {
         property: "og:description",
-        content:
-          "Browse the latest Waffle House menu, prices, calories, breakfast favorites, waffles, sandwiches, drinks, and more in one easy-to-use guide.",
+        content: "Explore the Waffle House menu with 74 items across 13 categories, including waffles, breakfast favorites, hashbrowns, burgers, sandwiches, dinners, sides, pies and beverages.",
       },
-      { property: "og:url", content: "/menu" },
+      { property: "og:url", content: "https://wafflehousemenu.com/menu" },
     ],
-    links: [{ rel: "canonical", href: "/menu" }],
+    links: [{ rel: "canonical", href: "https://wafflehousemenu.com/menu" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://wafflehousemenu.com/" },
+            { "@type": "ListItem", position: 2, name: "Menu", item: "https://wafflehousemenu.com/menu" },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Waffle House Menu & Prices 2026",
+          description: "Explore the Waffle House menu with 74 items across 13 categories, including waffles, breakfast favorites, hashbrowns, burgers, sandwiches, dinners, sides, pies and beverages.",
+          url: "https://wafflehousemenu.com/menu",
+        }),
+      },
+    ],
   }),
   component: MenuIndex,
 });
 
 const quickNav = [
-  { id: "breakfast", label: "Breakfast", icon: "🥞" },
-  { id: "waffles", label: "Signature Waffles", icon: "🧇" },
-  { id: "omelets", label: "Omelets", icon: "🍳" },
+  { id: "all-star-special", label: "All-Star Special", icon: "🥞" },
+  { id: "waffles", label: "Waffles", icon: "🧇" },
+  { id: "breakfast", label: "Egg Breakfasts", icon: "🍳" },
+  { id: "omelets", label: "Omelets", icon: "🧀" },
+  { id: "hashbrown-bowls", label: "Hashbrown Bowls", icon: "🥣" },
+  { id: "breakfast-sandwiches", label: "Sandwiches & Melts", icon: "🥪" },
+  { id: "biscuits", label: "Grilled Biscuits", icon: "🥯" },
+  { id: "burgers", label: "Angus Burgers", icon: "🍔" },
+  { id: "sandwiches", label: "Sandwiches", icon: "🥪" },
+  { id: "classic-dinners", label: "Dinners", icon: "🥩" },
   { id: "hashbrowns", label: "Hashbrowns", icon: "🥔" },
-  { id: "melts", label: "Texas Melts", icon: "🥪" },
-  { id: "sandwiches", label: "Sandwiches", icon: "🍔" },
-  { id: "lunch", label: "Lunch", icon: "🍽" },
-  { id: "dinner", label: "Dinner", icon: "🥩" },
   { id: "sides", label: "Sides", icon: "🥓" },
-  { id: "drinks", label: "Drinks", icon: "🥤" },
-  { id: "popular", label: "Popular Items", icon: "⭐" },
-  { id: "healthy", label: "Healthy Choices", icon: "🥗" },
+  { id: "beverages", label: "Beverages & Pies", icon: "🥤" },
 ];
 
 const overviewCards = [
@@ -127,42 +152,42 @@ function MenuIndex() {
             width={1920}
             height={1080}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80" />
         </div>
-        <div className="container-editorial relative py-20 md:py-28">
+        <div className="container-editorial relative py-20 md:py-28 text-white">
           <nav aria-label="Breadcrumb" className="text-xs uppercase tracking-[0.25em] text-white/70">
             <Link to="/" className="hover:text-primary">Home</Link>
             <span className="px-2">→</span>
             <span aria-current="page" className="text-white">Menu</span>
           </nav>
           <span className="mt-6 inline-block bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-[0.28em] text-primary-foreground">
-            Waffle House Menu
+            Waffle House Menu Guide
           </span>
-          <h1 className="mt-5 max-w-3xl font-display text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
-            Complete Waffle House Menu With Prices
+          <h1 className="mt-5 max-w-3xl font-sans text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
+            Waffle House Menu &amp; Prices
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-white/85">
-            Browse the latest Waffle House menu, prices, calories, breakfast favorites, waffles,
-            sandwiches, drinks, and more in one easy-to-use guide.
+          <p className="mt-5 max-w-2xl text-lg text-white/85 leading-relaxed font-sans">
+            Explore the Waffle House menu by category, with 74 menu items organized across 13 sections. Browse breakfast favorites, waffles, hashbrowns, burgers, sandwiches, classic dinners, sides, pies and beverages, with menu details, prices and nutrition information where available.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/75">
-            <span>Last updated: July 2026</span>
+            <span>Last updated: August 2026</span>
             <span className="hidden h-1 w-1 rounded-full bg-white/40 sm:inline-block" />
-            <span>7 min read</span>
+            <span>5 min read</span>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <button
-              onClick={() => scrollTo("popular")}
+              onClick={() => scrollTo("menu-categories")}
               className="inline-flex items-center gap-2 bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition hover:brightness-95"
             >
-              View Menu Prices <ArrowRight className="h-4 w-4" />
+              Browse Categories <ArrowRight className="h-4 w-4" />
             </button>
-            <Link
-              to="/nutrition"
+            <a
+              href="/waffle-house-menu-nutritionals.pdf"
+              download
               className="inline-flex items-center gap-2 border border-white/70 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white transition hover:bg-white hover:text-primary"
             >
-              Nutrition Guide
-            </Link>
+              <Download className="h-4 w-4" /> Download PDF
+            </a>
           </div>
         </div>
       </header>
@@ -170,7 +195,7 @@ function MenuIndex() {
       {/* 2. QUICK MENU NAVIGATION */}
       <nav
         aria-label="Menu sections"
-        className="sticky top-0 z-30 border-b border-border bg-white/95 backdrop-blur"
+        className="sticky top-0 z-30 border-b border-border bg-white/95 backdrop-blur font-sans"
       >
         <div className="container-editorial">
           <ul className="flex snap-x snap-mandatory gap-2 overflow-x-auto py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -182,7 +207,7 @@ function MenuIndex() {
                     onClick={() => scrollTo(item.id)}
                     className={`flex items-center gap-2 whitespace-nowrap rounded-full border px-4 py-2 text-sm font-medium transition ${
                       active
-                        ? "border-primary bg-primary text-primary-foreground"
+                        ? "border-primary bg-primary text-primary-foreground font-semibold"
                         : "border-border bg-white text-primary hover:border-primary hover:text-primary"
                     }`}
                   >
@@ -196,135 +221,65 @@ function MenuIndex() {
         </div>
       </nav>
 
-      {/* 3. MENU OVERVIEW */}
-      <section id="overview" aria-labelledby="overview-heading" className="border-b border-border">
-        <div className="container-editorial py-16 md:py-24">
-          <span className="chip">Menu Guide</span>
-          <h2
-            id="overview-heading"
-            className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl"
-          >
-            Everything You Need to Know
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-            Waffle House keeps a straightforward all-day menu — but prices, availability, and
-            nutrition can shift from one location to another. Here's the quick lay of the land
-            before you scroll the full menu.
-          </p>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {overviewCards.map((c) => {
-              const Icon = c.icon;
-              return (
-                <article
-                  key={c.title}
-                  className="group rounded-2xl border border-border bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="mt-5 font-display text-xl font-semibold">{c.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.body}</p>
-                </article>
-              );
-            })}
-          </div>
-
-          <aside
-            role="note"
-            className="mt-10 rounded-2xl border-l-4 border-primary bg-primary/5 p-6 md:p-8"
-          >
-            <div className="flex items-start gap-4">
-              <Sparkles className="mt-1 h-5 w-5 shrink-0 text-primary" />
-              <div>
-                <p className="font-semibold uppercase tracking-widest text-xs text-primary">
-                  Good to know
-                </p>
-                <ul className="mt-3 grid gap-2 text-sm text-primary/90 sm:grid-cols-2">
-                  <li>• Prices may vary by location.</li>
-                  <li>• Menu items may change without notice.</li>
-                  <li>• Nutrition values are estimates.</li>
-                  <li>• Information is reviewed and updated regularly.</li>
-                </ul>
-              </div>
+      {/* 3. QUICK MENU FACTS */}
+      <section className="bg-surface border-b border-border font-sans">
+        <div className="container-editorial py-8">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-5 text-center bg-white p-6 rounded-2xl border border-black/5 shadow-xs">
+            <div>
+              <span className="block text-3xl font-bold font-sans text-primary">{TOTAL_MENU_ITEMS}</span>
+              <span className="block text-xs font-semibold text-ink-soft uppercase tracking-wider mt-1">Menu Items</span>
             </div>
-          </aside>
+            <div className="border-l border-black/5">
+              <span className="block text-3xl font-bold font-sans text-primary">{TOTAL_MENU_CATEGORIES}</span>
+              <span className="block text-xs font-semibold text-ink-soft uppercase tracking-wider mt-1">Menu Categories</span>
+            </div>
+            <div className="border-l border-black/5 col-span-2 sm:col-span-1">
+              <span className="block text-lg font-bold font-sans text-foreground">Prices</span>
+              <span className="block text-xs text-ink-soft mt-0.5">pricing reference</span>
+            </div>
+            <div className="border-l border-black/5">
+              <span className="block text-lg font-bold font-sans text-foreground">Nutrition</span>
+              <span className="block text-xs text-ink-soft mt-0.5">calories &amp; macros</span>
+            </div>
+            <div className="border-l border-black/5">
+              <span className="block text-lg font-bold font-sans text-foreground">PDF</span>
+              <span className="block text-xs text-ink-soft mt-0.5">download guide</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* 4. FEATURED POPULAR MENU ITEMS */}
-      <section id="popular" aria-labelledby="popular-heading" className="border-b border-border bg-surface">
-        <div className="container-editorial py-16 md:py-24">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <span className="chip">Editor's Picks</span>
-              <h2
-                id="popular-heading"
-                className="mt-4 max-w-2xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl"
-              >
-                Most Popular Menu Items
+      {/* 4. MENU PDF SECTION */}
+      <section aria-labelledby="pdf-heading" className="bg-[#0B0C0E] border-b border-white/10 text-white font-sans">
+        <div className="container-editorial py-12 md:py-16">
+          <div className="mx-auto max-w-4xl rounded-3xl bg-gradient-to-br from-[#18191B] to-[#0B0C0E] border border-white/10 p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="space-y-3 text-center md:text-left max-w-xl">
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 ring-1 ring-inset ring-amber-500/20">
+                <FileText className="h-3.5 w-3.5" aria-hidden /> Informational Menu Resource
+              </div>
+              <h2 id="pdf-heading" className="font-display text-2xl font-bold text-white sm:text-3xl">
+                Waffle House Menu PDF
               </h2>
-              <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-                The plates readers order and search for most — from the pecan waffle to the
-                All-Star special.
+              <p className="text-sm leading-relaxed text-white/75">
+                Prefer a printable reference? View or download our current Waffle House menu PDF, organized by category for quick browsing.
               </p>
             </div>
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {popular.map((item) => {
-              const cat = categories.find((c) => c.id === item.category);
-              return (
-                <article
-                  key={item.slug}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={`${item.name} — Waffle House ${cat?.name.toLowerCase() ?? "menu item"}`}
-                      loading="lazy"
-                      width={800}
-                      height={600}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                    />
-                    <span className="absolute left-3 top-3 bg-primary px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
-                      {cat?.name ?? "Menu"}
-                    </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-5">
-                    <h3 className="font-display text-lg font-semibold leading-snug">
-                      {item.name}
-                    </h3>
-                    <p className="mt-2 line-clamp-2 text-sm text-ink-soft">{item.tagline}</p>
-                    <div className="mt-4 flex items-center justify-between text-sm">
-                      <span className="font-semibold text-primary">
-                        ${item.price.toFixed(2)}
-                      </span>
-                      <span className="text-ink-soft">{item.nutrition.calories} cal</span>
-                    </div>
-                    <div className="mt-3 flex items-center gap-1 text-xs text-ink-soft">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-3.5 w-3.5 ${
-                            i < 4 ? "fill-primary text-primary" : "text-border"
-                          }`}
-                        />
-                      ))}
-                      <span className="ml-1">4.{6 + (item.name.length % 3)} / 5</span>
-                    </div>
-                    <Link
-                      to="/menu/$category/$slug"
-                      params={{ category: item.category, slug: item.slug }}
-                      className="mt-5 inline-flex items-center justify-center gap-2 border border-primary bg-white px-4 py-2 text-xs font-semibold uppercase tracking-widest text-primary transition hover:bg-primary hover:text-primary-foreground"
-                    >
-                      View Details <ArrowRight className="h-3.5 w-3.5" />
-                    </Link>
-                  </div>
-                </article>
-              );
-            })}
+            <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full sm:w-auto">
+              <Link
+                to="/nutrition"
+                hash="pdf-table"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-white/10 px-6 text-sm font-semibold text-white border border-white/20 transition-all hover:bg-white/20"
+              >
+                View Menu PDF
+              </Link>
+              <a
+                href="/waffle-house-menu-nutritionals.pdf"
+                download
+                className="group inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-primary px-6 text-sm font-semibold text-black transition-all hover:bg-[#E2B000]"
+              >
+                <Download className="h-4 w-4" /> Download Menu PDF
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -343,11 +298,13 @@ function MenuIndex() {
       <ComboMeals />
       <CustomerFavorites />
       <HealthyChoices />
+      <NutritionSection />
       <SeasonalMenu />
       <OrderingTips />
       <QuickMenuFacts />
       <MenuFaqs />
       <RelatedGuides />
+      <MenuMethodology />
       <MenuDisclaimer />
       <PopularGuides />
       <SubscriberSection idPrefix="menu-sub" />
@@ -451,18 +408,17 @@ function MenuFinder() {
   };
 
   return (
-    <section aria-labelledby="finder-heading" className="border-b border-border bg-white">
+    <section aria-labelledby="finder-heading" className="border-b border-border bg-white font-sans">
       <div className="container-editorial py-16 md:py-24">
-        <span className="chip">Find Your Favorite</span>
+        <span className="chip">Menu Search</span>
         <h2
           id="finder-heading"
-          className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl"
+          className="mt-4 max-w-3xl font-display text-3xl font-bold sm:text-4xl md:text-5xl"
         >
-          Search the Menu
+          Search the Waffle House Menu
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Quickly find your favorite Waffle House menu items by category, price, or nutrition
-          information.
+        <p className="mt-3 text-base text-ink-soft">
+          Search for a menu item, category or nutrition detail.
         </p>
 
         <div className="mt-10 rounded-3xl border border-border bg-surface p-6 shadow-sm md:p-8">
@@ -474,7 +430,7 @@ function MenuFinder() {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search waffles, eggs, burgers…"
+                placeholder="Search waffles, eggs, hashbrowns, burgers..."
                 className="w-full rounded-full border border-border bg-white py-3 pl-11 pr-4 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
               />
             </label>
@@ -669,51 +625,70 @@ function PremiumItemCard({ item }: { item: MenuItem }) {
 /* 6. COMPLETE MENU CATEGORIES                                         */
 /* ------------------------------------------------------------------ */
 
+function getItemsForCategory(catId: string): MenuItem[] {
+  // Map our 13 categories to data/menu.ts categories
+  let targetCat: CategoryId = "breakfast";
+  if (catId === "all-star-special") targetCat = "all-star-special";
+  else if (catId === "waffles") targetCat = "waffles";
+  else if (catId === "breakfast") targetCat = "breakfast";
+  else if (catId === "omelets") targetCat = "omelets";
+  else if (catId === "hashbrown-bowls") return menu.filter(m => m.slug.includes("bowl"));
+  else if (catId === "breakfast-sandwiches") return menu.filter(m => m.slug.includes("biscuit") || m.slug.includes("texas"));
+  else if (catId === "biscuits") targetCat = "biscuits";
+  else if (catId === "burgers") targetCat = "burgers";
+  else if (catId === "sandwiches") targetCat = "sandwiches";
+  else if (catId === "classic-dinners") targetCat = "dinners";
+  else if (catId === "hashbrowns") targetCat = "hashbrowns";
+  else if (catId === "sides") targetCat = "sides";
+  else if (catId === "beverages") targetCat = "drinks";
+
+  return menu.filter((m) => m.category === targetCat);
+}
+
 function CategoryShowcase() {
   return (
-    <section aria-labelledby="categories-heading" className="border-b border-border bg-surface">
+    <section id="menu-categories" aria-labelledby="categories-heading" className="border-b border-border bg-surface font-sans">
       <div className="container-editorial py-16 md:py-24">
-        <span className="chip">Full Menu</span>
+        <span className="chip">Full Menu Categories</span>
         <h2
           id="categories-heading"
-          className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl"
+          className="mt-4 max-w-3xl font-display text-3xl font-bold sm:text-4xl md:text-5xl"
         >
-          Browse Every Menu Category
+          Waffle House Menu Categories
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Explore every section of the Waffle House menu in one organized guide.
+        <p className="mt-3 text-base text-ink-soft">
+          Browse the complete menu by category.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {categories.map((c) => {
-            const items = menu.filter((m) => m.category === c.id);
+        {/* Categories Grid (13 categories) */}
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {CENTRAL_MENU_CATEGORIES.map((c) => {
             return (
               <article
                 key={c.id}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:flex-row"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="relative aspect-[4/3] overflow-hidden md:aspect-auto md:h-auto md:w-2/5">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={c.image}
-                    alt={`Waffle House ${c.name.toLowerCase()} — ${c.blurb}`}
+                    alt={`Waffle House ${c.name.toLowerCase()} category`}
                     loading="lazy"
                     width={800}
                     height={600}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
+                  <span className="absolute bottom-3 right-3 rounded-md bg-black/75 px-2 py-0.5 text-xs font-bold text-white backdrop-blur-xs">
+                    {c.itemCount} Items
+                  </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-display text-2xl font-semibold">{c.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.blurb}</p>
-                  <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-primary">
-                    {items.length} menu items
-                  </p>
+                  <h3 className="font-display text-xl font-bold text-foreground group-hover:text-primary transition-colors">{c.name}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-soft flex-1">{c.shortDescription}</p>
                   <Link
-                    to="/menu/$category"
-                    params={{ category: c.id }}
+                    to={c.href as any}
                     className="mt-5 inline-flex w-fit items-center gap-2 border border-primary bg-white px-4 py-2 text-xs font-semibold uppercase tracking-widest text-primary transition hover:bg-primary hover:text-primary-foreground"
                   >
-                    View Full Category <ArrowRight className="h-3.5 w-3.5" />
+                    View Menu <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
               </article>
@@ -721,23 +696,25 @@ function CategoryShowcase() {
           })}
         </div>
 
-        {categories.map((c) => {
-          const items = menu.filter((m) => m.category === c.id);
-          if (!items.length) return null;
+        {/* Detailed Category Sections with Item Previews */}
+        {CENTRAL_MENU_CATEGORIES.map((c) => {
+          const items = getItemsForCategory(c.id);
           return (
-            <div key={c.id} id={c.id} className="mt-16 scroll-mt-28">
+            <div key={c.id} id={c.id} className="mt-16 scroll-mt-28 border-t border-border/40 pt-10">
               <div className="flex flex-wrap items-end justify-between gap-4">
-                <h3 className="font-display text-2xl font-semibold sm:text-3xl">{c.name}</h3>
+                <div>
+                  <h3 className="font-display text-2xl font-bold sm:text-3xl text-foreground">{c.name}</h3>
+                  <p className="mt-1 text-sm text-ink-soft">{c.shortDescription}</p>
+                </div>
                 <Link
-                  to="/menu/$category"
-                  params={{ category: c.id }}
-                  className="text-sm font-semibold text-primary hover:underline"
+                  to={c.href as any}
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
                 >
-                  View all {c.name.toLowerCase()} →
+                  View All {c.name} →
                 </Link>
               </div>
               <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {items.map((item) => (
+                {items.slice(0, 3).map((item) => (
                   <PremiumItemCard key={item.slug} item={item} />
                 ))}
               </div>
@@ -784,7 +761,7 @@ function PriceTable() {
     <th scope="col" className={`px-4 py-3 text-left ${className}`}>
       <button
         onClick={() => toggleSort(key)}
-        className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-primary hover:opacity-80"
+        className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-primary hover:opacity-80 font-sans"
       >
         {label}
         <ArrowUpDown
@@ -795,17 +772,17 @@ function PriceTable() {
   );
 
   return (
-    <section aria-labelledby="prices-heading" className="border-b border-border bg-white">
+    <section aria-labelledby="prices-heading" className="border-b border-border bg-white font-sans">
       <div className="container-editorial py-16 md:py-24">
-        <span className="chip">Menu Prices</span>
+        <span className="chip">Price Reference</span>
         <h2
           id="prices-heading"
-          className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl"
+          className="mt-4 max-w-3xl font-display text-3xl font-bold sm:text-4xl md:text-5xl"
         >
-          Quick Price Reference
+          Waffle House Menu Prices
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          The full menu at a glance — sortable by name, category, price, or calories.
+        <p className="mt-3 text-base text-ink-soft max-w-2xl leading-relaxed">
+          Menu prices can vary by location and may change over time. Use the menu information on this website as a reference and check with your local restaurant for the most current pricing.
         </p>
 
         <div className="mt-10 overflow-x-auto rounded-2xl border border-border bg-white shadow-sm">
@@ -849,7 +826,7 @@ function PriceTable() {
           </table>
         </div>
         <p className="mt-4 text-xs italic text-ink-soft">
-          Prices may vary slightly by restaurant location.
+          Prices are estimates and may vary slightly by restaurant location.
         </p>
       </div>
     </section>
@@ -857,7 +834,7 @@ function PriceTable() {
 }
 
 /* ------------------------------------------------------------------ */
-/* 9. FEATURED MENU HIGHLIGHTS                                         */
+/* 9. FEATURED MENU ITEMS                                              */
 /* ------------------------------------------------------------------ */
 
 const highlights = [
@@ -909,18 +886,17 @@ const highlights = [
 
 function EditorPicks() {
   return (
-    <section aria-labelledby="picks-heading" className="border-b border-border bg-white">
+    <section aria-labelledby="picks-heading" className="border-b border-border bg-white font-sans">
       <div className="container-editorial py-16 md:py-24">
-        <span className="chip">Editor's Picks</span>
+        <span className="chip">Featured Picks</span>
         <h2
           id="picks-heading"
-          className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl"
+          className="mt-4 max-w-3xl font-display text-3xl font-bold sm:text-4xl md:text-5xl"
         >
-          Editor's Favorite Picks
+          Featured Waffle House Menu Items
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-          Four plates our editors return to every visit — a mix of best sellers, best value, and
-          all-time classics.
+        <p className="mt-3 text-base text-ink-soft max-w-2xl">
+          Six to ten featured menu items that capture the classic Waffle House dining experience.
         </p>
 
         <div className="mt-14 space-y-16">
@@ -945,20 +921,20 @@ function EditorPicks() {
                   <span className="inline-block bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-[0.25em] text-primary-foreground">
                     {h.tag}
                   </span>
-                  <h3 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">
+                  <h3 className="mt-4 font-display text-3xl font-bold sm:text-4xl text-foreground">
                     {h.title}
                   </h3>
-                  <p className="mt-4 text-lg leading-relaxed text-ink-soft">{h.body}</p>
+                  <p className="mt-4 text-base leading-relaxed text-ink-soft">{h.body}</p>
                   <div className="mt-6 flex items-center gap-6 text-sm">
                     <span>
                       <span className="text-xs uppercase tracking-widest text-ink-soft">Price</span>
-                      <span className="ml-2 font-display text-xl font-semibold text-primary">
+                      <span className="ml-2 font-display text-xl font-bold text-primary">
                         {h.price}
                       </span>
                     </span>
                     <span>
                       <span className="text-xs uppercase tracking-widest text-ink-soft">Calories</span>
-                      <span className="ml-2 font-display text-xl font-semibold">{h.cal}</span>
+                      <span className="ml-2 font-display text-xl font-bold text-foreground">{h.cal}</span>
                     </span>
                   </div>
                   <Link
@@ -966,7 +942,7 @@ function EditorPicks() {
                     params={{ category: h.category, slug: h.slug }}
                     className="mt-7 inline-flex items-center gap-2 border-b-2 border-primary pb-1 text-sm font-semibold uppercase tracking-widest text-primary hover:gap-3"
                   >
-                    Read More <ArrowRight className="h-4 w-4" />
+                    View Details <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
               </article>
@@ -1562,28 +1538,44 @@ function QuickMenuFacts() {
    16. FAQ
    ============================================================ */
 const menuFaqs = [
-  { q: "Is this the official Waffle House website?", a: "No. This is an independent informational blog covering Waffle House menu items, prices, and nutrition. We are not affiliated with, endorsed by, or operated by Waffle House." },
-  { q: "How often are menu prices updated?", a: "We review and update our published menu prices quarterly, and after any major nationwide price change. Every price on the site shows the most recent update month." },
-  { q: "Why do prices vary by location?", a: "Waffle House is franchised, and each franchise sets its own prices based on regional food costs, labor, and rent. The prices shown here reflect the U.S. average for July 2026." },
-  { q: "Is breakfast served all day?", a: "Yes — every breakfast item (waffles, eggs, hashbrowns, biscuits, bacon) is served 24 hours a day, 7 days a week at every Waffle House location." },
-  { q: "Which menu item is the most popular?", a: "The Pecan Waffle and the All-Star Special are the two most-ordered items nationwide, followed closely by hashbrowns 'all the way' and the classic patty melt." },
-  { q: "Where can I view nutrition information?", a: "Every menu item on this site includes calories, macros, sodium, and common allergens. See our full nutrition guide for a searchable database of every dish." },
-  { q: "Are vegetarian options available?", a: "Yes. Waffles, omelets with cheese, grits, hashbrowns (plain or with vegetables), toast, and biscuits are all vegetarian. Ask your server to hold any meat toppings." },
-  { q: "How accurate are menu prices?", a: "Prices shown are the current U.S. average and are for informational use only. Always confirm the final price at your local restaurant before ordering." },
+  {
+    q: "What is on the Waffle House menu?",
+    a: "The Waffle House menu features classic 24-hour diner staples including buttermilk waffles, farm-fresh eggs, hashbrowns griddled with toppings, Texas melts, USDA Choice steaks, pork chops, burgers, sides, and beverages.",
+  },
+  {
+    q: "How many menu items does Waffle House have?",
+    a: "Our verified directory covers 74 distinct menu items, including combos, mains, custom side options, and beverages.",
+  },
+  {
+    q: "How many menu categories are there?",
+    a: "The Waffle House menu is organized into 13 distinct categories for easy reference, from waffles and omelets to sandwiches, dinners, and desserts.",
+  },
+  {
+    q: "Does Waffle House serve breakfast all day?",
+    a: "Yes — the entire Waffle House menu, including all breakfast favorites, eggs, and waffles, is served 24 hours a day, 7 days a week, 365 days a year.",
+  },
+  {
+    q: "Do menu prices vary by location?",
+    a: "Yes — individual franchise locations adjust pricing based on state, city, and operational costs. The prices published on this guide serve as a U.S. counter average.",
+  },
+  {
+    q: "Where can I find Waffle House nutrition information?",
+    a: "You can find a detailed breakdown of calories, fat, protein, carbs, and sodium on our Waffle House Nutrition Guide page, or download the menu PDF resource.",
+  },
 ];
 
 function MenuFaqs() {
   const [open, setOpen] = useState(0);
   return (
-    <section aria-labelledby="menu-faq-heading" className="border-b border-border bg-white">
+    <section aria-labelledby="menu-faq-heading" className="border-b border-border bg-white font-sans">
       <div className="container-editorial py-16 md:py-24">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           <div>
             <span className="chip">FAQ</span>
-            <h2 id="menu-faq-heading" className="mt-4 font-display text-3xl font-semibold sm:text-4xl md:text-5xl">
-              Frequently Asked Questions About the Waffle House Menu
+            <h2 id="menu-faq-heading" className="mt-4 font-display text-3xl font-bold sm:text-4xl md:text-5xl text-foreground">
+              Waffle House Menu Questions
             </h2>
-            <p className="mt-4 text-lg text-ink-soft">
+            <p className="mt-4 text-base text-ink-soft">
               Find quick answers to the questions visitors ask most often about menu items, prices, nutrition information, and restaurant availability.
             </p>
             <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-sm">
@@ -1611,9 +1603,9 @@ function MenuFaqs() {
                     type="button"
                     onClick={() => setOpen(isOpen ? -1 : i)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-sans"
                   >
-                    <span className="font-display text-base font-semibold sm:text-lg">{f.q}</span>
+                    <span className="font-display text-base font-semibold sm:text-lg text-foreground">{f.q}</span>
                     <span
                       aria-hidden
                       className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform ${
@@ -1660,23 +1652,52 @@ function MenuFaqs() {
    17. RELATED MENU GUIDES
    ============================================================ */
 const relatedGuides = [
-  { icon: "🥞", title: "Breakfast Menu", body: "Every breakfast plate served 24/7 — waffles, eggs, hashbrowns, bacon, and biscuits.", to: "/menu/$category" as const, params: { category: "breakfast" as CategoryId }, image: menu.find((m) => m.slug === "all-star-special")!.image },
-  { icon: "🧇", title: "Waffle Guide", body: "The full waffle lineup — classic, pecan, and every add-on worth ordering.", to: "/menu/$category" as const, params: { category: "waffles" as CategoryId }, image: menu.find((m) => m.slug === "classic-waffle")!.image },
-  { icon: "💪", title: "Nutrition Guide", body: "Calories, protein, allergens, and healthier picks for every menu item.", to: "/nutrition" as const, params: undefined, image: menu.find((m) => m.slug === "t-bone-and-eggs")!.image },
-  { icon: "🥤", title: "Drinks Menu", body: "Bottomless coffee, sweet tea, hand-spun milkshakes, and every fountain drink.", to: "/menu/$category" as const, params: { category: "drinks" as CategoryId }, image: menu.find((m) => m.slug === "bottomless-coffee")!.image },
-  { icon: "🍔", title: "Lunch & Dinner Guide", body: "Burgers, patty melts, grilled chicken sandwiches, and T-bone dinners.", to: "/menu/$category" as const, params: { category: "burgers" as CategoryId }, image: menu.find((m) => m.slug === "angus-cheeseburger")!.image },
-  { icon: "🍟", title: "Sides & Hashbrowns", body: "The famous flat-top hashbrowns — smothered, covered, chunked, and more.", to: "/menu/$category" as const, params: { category: "hashbrowns" as CategoryId }, image: menu.find((m) => m.slug === "hashbrowns-all-the-way")!.image },
+  {
+    title: "Waffle House Breakfast Menu Guide",
+    body: "Every breakfast plate served 24/7 — waffles, eggs, hashbrowns, bacon, and biscuits.",
+    to: "/blog/$slug" as const,
+    params: { slug: "best-breakfast-items" },
+    image: menu.find((m) => m.slug === "all-star-special")!.image
+  },
+  {
+    title: "Waffle House Menu Calories Guide",
+    body: "Understand calorie metrics for griddled items, waffles, and sides.",
+    to: "/blog/$slug" as const,
+    params: { slug: "hashbrowns-decoded" },
+    image: menu.find((m) => m.slug === "hashbrowns-all-the-way")!.image
+  },
+  {
+    title: "Waffle House Nutrition Guide",
+    body: "Calories, protein, allergens, and healthier picks for every menu item.",
+    to: "/nutrition" as const,
+    params: {},
+    image: menu.find((m) => m.slug === "t-bone-and-eggs")!.image
+  },
+  {
+    title: "Waffle House Menu Prices Guide",
+    body: "Price summaries across 13 distinct categories for easy reference.",
+    to: "/menu" as const,
+    params: {},
+    image: menu.find((m) => m.slug === "classic-waffle")!.image
+  },
+  {
+    title: "Waffle House Locations Guide",
+    body: "Browse state directories, cities, and local restaurant mappings.",
+    to: "/locations" as const,
+    params: {},
+    image: menu.find((m) => m.slug === "angus-cheeseburger")!.image
+  },
 ];
 
 function RelatedGuides() {
   return (
-    <section aria-labelledby="related-heading" className="border-b border-border bg-surface">
+    <section aria-labelledby="related-heading" className="border-b border-border bg-surface font-sans">
       <div className="container-editorial py-16 md:py-24">
-        <span className="chip">Explore More</span>
-        <h2 id="related-heading" className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl">
-          Continue Exploring
+        <span className="chip">Menu Guides</span>
+        <h2 id="related-heading" className="mt-4 max-w-3xl font-display text-3xl font-bold sm:text-4xl md:text-5xl text-foreground">
+          Waffle House Menu Guides
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
+        <p className="mt-3 text-base text-ink-soft">
           Discover more helpful restaurant guides, nutrition resources, and detailed menu categories.
         </p>
 
@@ -1693,32 +1714,74 @@ function RelatedGuides() {
                   loading="lazy"
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
-                <span className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-lg shadow-sm" aria-hidden>
-                  {g.icon}
-                </span>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-xl font-semibold">{g.title}</h3>
+                <h3 className="font-display text-lg font-bold text-foreground">{g.title}</h3>
                 <p className="mt-2 flex-1 text-sm text-ink-soft">{g.body}</p>
-                {g.params ? (
-                  <Link
-                    to={g.to}
-                    params={g.params}
-                    className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary hover:gap-3"
-                  >
-                    Read Guide <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                ) : (
-                  <Link
-                    to={g.to as "/nutrition"}
-                    className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary hover:gap-3"
-                  >
-                    Read Guide <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                )}
+                <Link
+                  to={g.to as any}
+                  params={g.params as any}
+                  className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary hover:gap-3"
+                >
+                  Read Guide <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
               </div>
             </article>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   15. NUTRITION SECTION
+   ============================================================ */
+function NutritionSection() {
+  return (
+    <section aria-labelledby="nutrition-heading" className="border-b border-border bg-white font-sans">
+      <div className="container-editorial py-16 md:py-24 text-center max-w-3xl mx-auto">
+        <span className="chip">Nutrition Info</span>
+        <h2 id="nutrition-heading" className="mt-4 font-display text-3xl font-bold sm:text-4xl text-foreground">
+          Waffle House Nutrition
+        </h2>
+        <p className="mt-4 text-base text-ink-soft leading-relaxed">
+          Explore available calorie and nutrition information for menu items, including protein, carbohydrates, fat and sodium where available.
+        </p>
+        <div className="mt-6">
+          <Link
+            to="/nutrition"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+          >
+            View Complete Nutrition Guide <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   20. METHODOLOGY SECTION
+   ============================================================ */
+function MenuMethodology() {
+  return (
+    <section aria-labelledby="methodology-heading" className="border-b border-border bg-white font-sans">
+      <div className="container-editorial py-16 md:py-24 text-center max-w-3xl mx-auto">
+        <span className="chip">Methodology</span>
+        <h2 id="methodology-heading" className="mt-4 font-display text-3xl font-bold sm:text-4xl text-foreground">
+          How We Update Menu Information
+        </h2>
+        <p className="mt-4 text-base text-ink-soft leading-relaxed">
+          This independent guide organizes publicly available menu, pricing and nutrition information into a convenient reference. Information is reviewed and updated when reliable sources provide new or corrected details.
+        </p>
+        <div className="mt-6">
+          <Link
+            to="/methodology"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+          >
+            Read Our Methodology <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>
@@ -1730,32 +1793,18 @@ function RelatedGuides() {
    ============================================================ */
 function MenuDisclaimer() {
   return (
-    <section aria-labelledby="disclaimer-heading" className="border-b border-border bg-white">
-      <div className="container-editorial py-16 md:py-24">
-        <span className="chip">Important Notice</span>
-        <h2 id="disclaimer-heading" className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl">
-          Menu Information Disclaimer
-        </h2>
-
-        <aside className="mt-8 flex gap-5 rounded-2xl border-l-4 border-primary bg-surface p-6 shadow-sm md:p-8">
-          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary" aria-hidden>
-            <Sparkles className="h-5 w-5" />
+    <section aria-labelledby="disclaimer-heading" className="border-b border-border bg-surface font-sans">
+      <div className="container-editorial py-12 md:py-16">
+        <div className="mx-auto max-w-4xl rounded-2xl border border-black/5 bg-white p-6 shadow-xs text-center">
+          <p className="text-sm leading-relaxed text-ink-soft">
+            This is an independent informational website and is not affiliated with, endorsed by or sponsored by Waffle House, Inc. Menu items, prices and availability may vary by location and change over time.
+          </p>
+          <div className="mt-4">
+            <Link to="/disclaimer" className="text-xs font-bold uppercase tracking-wider text-primary hover:underline">
+              Disclaimer
+            </Link>
           </div>
-          <div className="space-y-4 text-sm leading-relaxed text-ink-soft md:text-base">
-            <p>
-              The menu prices, calories, nutrition information, ingredients, and availability published on this website are provided for <strong className="text-primary">informational purposes only</strong>.
-            </p>
-            <p>
-              Actual menu items, prices, ingredients, and nutritional values may vary depending on restaurant location and may change without prior notice.
-            </p>
-            <p>
-              This website is an independent informational resource and is <strong className="text-primary">not affiliated with, endorsed by, or operated by Waffle House</strong>.
-            </p>
-            <p>
-              Visitors should confirm the latest menu information directly with their local restaurant before placing an order.
-            </p>
-          </div>
-        </aside>
+        </div>
       </div>
     </section>
   );
@@ -1785,26 +1834,26 @@ const popularGuides: Array<{
 
 function PopularGuides() {
   return (
-    <section aria-labelledby="popular-guides-heading" className="border-b border-border bg-surface">
+    <section aria-labelledby="popular-guides-heading" className="border-b border-border bg-surface font-sans">
       <div className="container-editorial py-16 md:py-24">
         <span className="chip">Popular Guides</span>
-        <h2 id="popular-guides-heading" className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl md:text-5xl">
+        <h2 id="popular-guides-heading" className="mt-4 max-w-3xl font-display text-3xl font-bold sm:text-4xl md:text-5xl text-foreground">
           Popular Restaurant Guides
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-soft">
+        <p className="mt-3 text-base text-ink-soft">
           Hand-picked reading to help you get the most out of every visit.
         </p>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {popularGuides.map((g) => {
             const linkClass =
-              "group flex h-full flex-col rounded-2xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg";
+              "group flex h-full flex-col rounded-2xl border border-border bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg font-sans";
             const content = (
               <>
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-xl" aria-hidden>
                   {g.icon}
                 </div>
-                <h3 className="mt-4 font-display text-base font-semibold">{g.title}</h3>
+                <h3 className="mt-4 font-display text-base font-semibold text-foreground">{g.title}</h3>
                 <p className="mt-2 flex-1 text-sm text-ink-soft">{g.body}</p>
                 <span className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary group-hover:gap-3">
                   Read Guide <ArrowRight className="h-3.5 w-3.5" />
@@ -1835,7 +1884,7 @@ function PopularGuides() {
    ============================================================ */
 function MenuFinalCTA() {
   return (
-    <section aria-labelledby="menu-cta-heading" className="relative isolate overflow-hidden">
+    <section aria-labelledby="menu-cta-heading" className="relative isolate overflow-hidden font-sans">
       <div className="absolute inset-0">
         <img
           src={ctaDinerImg}
@@ -1853,7 +1902,7 @@ function MenuFinalCTA() {
           </span>
           <h2
             id="menu-cta-heading"
-            className="mt-6 font-display text-4xl font-semibold text-white sm:text-5xl md:text-6xl"
+            className="mt-6 font-display text-4xl font-bold text-white sm:text-5xl md:text-6xl"
           >
             Ready to Explore the Complete Menu?
           </h2>
