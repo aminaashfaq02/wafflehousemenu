@@ -204,18 +204,18 @@ const SITE_URL = "https://wafflehousemenu.com";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Waffle House Menu & Prices (2026) — Calories & Nutrition Guide" },
+      { title: "Waffle House Menu & Prices 2026 | Nutrition, Calories & Locations" },
       {
         name: "description",
-        content: `Explore the Waffle House menu by category, with ${TOTAL_MENU_ITEMS} menu items across ${TOTAL_MENU_CATEGORIES} categories. Find current menu information, prices, calories, nutrition details and helpful guides in one place. Updated August 2026.`,
+        content: `Explore the Waffle House menu by category, with ${TOTAL_MENU_ITEMS} menu items across ${TOTAL_MENU_CATEGORIES} categories. Find current menu information, prices, calories, nutrition details and locations guide. Updated August 2026.`,
       },
-      { property: "og:title", content: "Waffle House Menu & Prices (2026) — Calories & Nutrition Guide" },
+      { property: "og:title", content: "Waffle House Menu & Prices 2026 | Nutrition, Calories & Locations" },
       { property: "og:url", content: `${SITE_URL}/` },
       {
         property: "og:description",
-        content: `Explore the Waffle House menu by category, with ${TOTAL_MENU_ITEMS} menu items across ${TOTAL_MENU_CATEGORIES} categories. Find current menu information, prices, calories, nutrition details and helpful guides.`,
+        content: `Explore the Waffle House menu by category, with ${TOTAL_MENU_ITEMS} menu items across ${TOTAL_MENU_CATEGORIES} categories. Find current menu information, prices, calories, nutrition details and locations guide.`,
       },
-      { name: "twitter:title", content: "Waffle House Menu & Prices (2026) — Calories & Nutrition Guide" },
+      { name: "twitter:title", content: "Waffle House Menu & Prices 2026 | Nutrition, Calories & Locations" },
     ],
     links: [
       { rel: "canonical", href: `${SITE_URL}/` },
@@ -309,10 +309,11 @@ function HeroSection() {
             }`}
           />
         ))}
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/50 to-black/85" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/55 to-black/90" />
       </div>
 
       <div className="container-editorial relative w-full pb-16 pt-28 text-center text-white md:pb-20 md:pt-32">
+        {/* Subtle Editorial Label */}
         <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-black/40 px-3.5 py-1 backdrop-blur-md">
           <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
           <span className="text-xs font-bold uppercase tracking-[0.22em] text-primary">
@@ -324,31 +325,97 @@ function HeroSection() {
           </span>
         </div>
 
-        <h1 className="mx-auto mt-4 max-w-4xl font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl md:text-7xl">
+        {/* Primary H1 */}
+        <h1 id="hero-title" className="mx-auto mt-4 max-w-4xl font-sans text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl md:text-7xl">
           Waffle House Menu &amp; Prices
         </h1>
 
-        <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
-          Explore the Waffle House menu by category, with {TOTAL_MENU_ITEMS} menu items across {TOTAL_MENU_CATEGORIES} categories. Find current menu information, prices, calories, nutrition details and helpful guides in one place.
+        {/* Factual Editorial Introductory Paragraph with Internal Links */}
+        <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg font-sans">
+          Explore the{" "}
+          <Link to="/menu" className="underline decoration-primary hover:text-primary transition-colors font-medium">
+            Waffle House menu
+          </Link>{" "}
+          with {TOTAL_MENU_ITEMS} menu items across {TOTAL_MENU_CATEGORIES} categories, including classic breakfast favorites, waffles, hashbrowns, burgers, sandwiches, dinners, sides, pies and beverages. Browse{" "}
+          <Link to="/menu" className="underline decoration-primary hover:text-primary transition-colors font-medium">
+            menu prices
+          </Link>
+          ,{" "}
+          <Link to="/nutrition" className="underline decoration-primary hover:text-primary transition-colors font-medium">
+            calories and nutrition information
+          </Link>
+          , or explore{" "}
+          <Link to="/locations" className="underline decoration-primary hover:text-primary transition-colors font-medium">
+            Waffle House locations
+          </Link>{" "}
+          and helpful{" "}
+          <Link to="/blog" className="underline decoration-primary hover:text-primary transition-colors font-medium">
+            menu guides
+          </Link>
+          .
         </p>
 
+        {/* Hero CTA Buttons */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
           <Link to="/menu" className="btn-primary h-12 px-6 text-base font-semibold">
-            Explore the Full Menu <ArrowRight className="h-4 w-4" aria-hidden />
+            View Full Menu <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
+          <a
+            href="/waffle-house-menu-nutritionals.pdf"
+            download
+            className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 text-base font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/20"
+          >
+            <Download className="h-4 w-4 text-primary" aria-hidden /> Download Menu PDF
+          </a>
           <Link
             to="/nutrition"
-            className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 text-base font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/20"
+            className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/20 bg-black/30 px-6 text-base font-semibold text-white/90 backdrop-blur-md transition-colors hover:bg-black/50"
           >
             View Nutrition
           </Link>
-          <Link
-            to="/locations"
-            className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/20 bg-black/30 px-6 text-base font-semibold text-white/90 backdrop-blur-md transition-colors hover:bg-black/50"
-          >
-            <MapPin className="h-4 w-4 text-primary" aria-hidden /> Find a Location
+        </div>
+
+        {/* Factual Information Strip */}
+        <div className="mt-8 grid grid-cols-2 gap-4 max-w-xl mx-auto sm:grid-cols-4 border-t border-white/10 pt-6 text-center">
+          <div>
+            <span className="block text-2xl font-bold font-sans text-white">{TOTAL_MENU_ITEMS}</span>
+            <span className="block text-[10px] font-bold text-white/60 uppercase tracking-wider mt-0.5">Menu Items</span>
+          </div>
+          <div className="border-l border-white/10">
+            <span className="block text-2xl font-bold font-sans text-white">{TOTAL_MENU_CATEGORIES}</span>
+            <span className="block text-[10px] font-bold text-white/60 uppercase tracking-wider mt-0.5">Categories</span>
+          </div>
+          <div className="border-l border-white/10">
+            <span className="block text-2xl font-bold font-sans text-white">Verified</span>
+            <span className="block text-[10px] font-bold text-white/60 uppercase tracking-wider mt-0.5">Nutrition</span>
+          </div>
+          <div className="border-l border-white/10">
+            <span className="block text-2xl font-bold font-sans text-white">U.S.</span>
+            <span className="block text-[10px] font-bold text-white/60 uppercase tracking-wider mt-0.5">Locations</span>
+          </div>
+        </div>
+
+        {/* Subtle Location Path Link */}
+        <div className="mt-5">
+          <Link to="/locations" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
+            Find a Waffle House Location <ArrowRight className="h-3.5 w-3.5" aria-hidden />
           </Link>
         </div>
+
+        {/* Hero Micro-Navigation */}
+        <div className="mt-4 text-xs text-white/70">
+          <span className="font-semibold text-white/50 mr-1.5">Explore:</span>
+          <Link to="/menu" className="hover:text-primary transition-colors">Menu</Link>
+          <span className="mx-2 text-white/30">·</span>
+          <Link to="/nutrition" className="hover:text-primary transition-colors">Nutrition</Link>
+          <span className="mx-2 text-white/30">·</span>
+          <Link to="/locations" className="hover:text-primary transition-colors">Locations</Link>
+          <span className="mx-2 text-white/30">·</span>
+          <a href="/waffle-house-menu-nutritionals.pdf" download className="hover:text-primary transition-colors">Menu PDF</a>
+          <span className="mx-2 text-white/30">·</span>
+          <Link to="/blog" className="hover:text-primary transition-colors">Guides</Link>
+        </div>
+
       </div>
     </section>
   );
@@ -535,12 +602,12 @@ function CategoryGridSection() {
             Explore the Waffle House Menu
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Browse all {TOTAL_MENU_CATEGORIES} menu categories, from classic breakfast favorites and waffles to burgers, sandwiches, dinners, sides, pies and beverages.
+            Browse all {TOTAL_MENU_CATEGORIES} Waffle House menu categories, with {TOTAL_MENU_ITEMS} menu items organized for quick and easy reference. Select a category to view its menu items, prices and available nutrition information.
           </p>
           <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-800 ring-1 ring-amber-500/20">
-            <span>{TOTAL_MENU_CATEGORIES} Categories</span>
+            <span>{TOTAL_MENU_CATEGORIES} Menu Categories</span>
             <span>·</span>
-            <span>{TOTAL_MENU_ITEMS} Items</span>
+            <span>{TOTAL_MENU_ITEMS} Menu Items</span>
           </div>
         </div>
 
@@ -553,7 +620,7 @@ function CategoryGridSection() {
                 aria-label={`Explore ${c.name} menu`}
                 className="group block"
               >
-                <div className="aspect-square w-full overflow-hidden rounded-2xl bg-muted ring-1 ring-transparent transition-all duration-300 ease-out group-hover:shadow-xl group-hover:ring-primary">
+                <div className="aspect-square w-full overflow-hidden rounded-2xl bg-muted ring-1 ring-transparent transition-all duration-300 ease-out group-hover:shadow-xl group-hover:ring-primary relative">
                   <img
                     src={c.image}
                     alt={`${c.name} — Waffle House menu category`}
@@ -563,6 +630,9 @@ function CategoryGridSection() {
                     height={900}
                     className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
+                  <span className="absolute bottom-2.5 right-2.5 rounded-md bg-black/75 px-2 py-0.5 text-[10px] font-bold text-white backdrop-blur-xs">
+                    {c.itemCount} Items
+                  </span>
                 </div>
                 <div className="mt-3 text-center">
                   <span className="block font-display text-sm font-bold tracking-tight text-foreground transition-colors duration-300 group-hover:text-primary sm:text-base">
@@ -572,7 +642,7 @@ function CategoryGridSection() {
                     {c.shortDescription}
                   </p>
                   <span className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:underline">
-                    View {c.name.split(" ")[0]} <ArrowRight className="h-3 w-3" />
+                    View Menu <ArrowRight className="h-3 w-3" />
                   </span>
                 </div>
               </Link>
