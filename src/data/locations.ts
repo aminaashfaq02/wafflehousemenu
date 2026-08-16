@@ -1,5 +1,15 @@
+import locImg1 from "@/assets/iloveimg-compressed (8)/loc-4-exterior.jpeg";
+import locImg2 from "@/assets/iloveimg-compressed (8)/loc-5-exterior-twilight.jpeg";
+import locImg3 from "@/assets/iloveimg-compressed (8)/loc-6-highway.jpeg";
+import locImg4 from "@/assets/iloveimg-compressed (8)/loc-8-yellow-signboard.jpeg";
+import locImg5 from "@/assets/iloveimg-compressed (8)/loc-1-diner-booths.jpeg";
+import locImg6 from "@/assets/iloveimg-compressed (8)/loc-7-signboard-sky.jpeg";
+import locImg7 from "@/assets/iloveimg-compressed (8)/loc-2-empty-diner.jpeg";
+import locImg8 from "@/assets/iloveimg-compressed (8)/loc-3-dining-area.jpeg";
+
 export interface StoreBranch {
   name: string;
+  image: string;
   slug: string;
   address: string;
   city: string;
@@ -55,6 +65,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Downtown Atlanta",
+            image: locImg1,
             slug: "downtown-atlanta",
             address: "135 Andrew Young International Blvd NW",
             city: "Atlanta",
@@ -84,6 +95,7 @@ export const locationsData: StateLocations[] = [
           },
           {
             name: "Waffle House Midtown Atlanta",
+            image: locImg2,
             slug: "midtown-atlanta",
             address: "100 10th St NW",
             city: "Atlanta",
@@ -118,6 +130,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Savannah Historic District",
+            image: locImg3,
             slug: "savannah-historic-district",
             address: "318 W Bay St",
             city: "Savannah",
@@ -159,6 +172,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Charlotte Uptown",
+            image: locImg4,
             slug: "charlotte-uptown",
             address: "330 N Tryon St",
             city: "Charlotte",
@@ -200,6 +214,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Jacksonville Downtown",
+            image: locImg5,
             slug: "jacksonville-downtown",
             address: "100 W Adams St",
             city: "Jacksonville",
@@ -241,6 +256,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Birmingham Southside",
+            image: locImg6,
             slug: "birmingham-southside",
             address: "951 20th St S",
             city: "Birmingham",
@@ -282,6 +298,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Columbia Five Points",
+            image: locImg7,
             slug: "columbia-five-points",
             address: "740 Harden St",
             city: "Columbia",
@@ -323,6 +340,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Houston Central",
+            image: locImg8,
             slug: "houston-central",
             address: "2202 Southwest Fwy",
             city: "Houston",

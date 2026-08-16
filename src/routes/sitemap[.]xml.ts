@@ -6,7 +6,7 @@ import { CENTRAL_MENU_CATEGORIES } from "@/data/centralMenuData";
 import { locationsData } from "@/data/locations";
 
 const BASE_URL = "https://wafflehousemenu.com";
-const TODAY = "2026-08-14";
+const TODAY = new Date().toISOString().split("T")[0];
 
 function loc(path: string, priority: string, changefreq: string, lastmod?: string) {
   return [

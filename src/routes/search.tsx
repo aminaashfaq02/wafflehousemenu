@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ChevronRight, Search as SearchIcon, BookOpen, Utensils, ArrowRight } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
+import { getAllBlogPosts } from "@/data/blogStore";
 import { menu } from "@/data/menu";
 
 const SITE = "https://wafflehousemenu.com";
@@ -47,9 +47,8 @@ function SearchPage() {
       )
     : [];
 
-  // Search in Blog Posts
   const matchedBlogPosts = searchTerm
-    ? blogPosts.filter(
+    ? getAllBlogPosts().filter(
         (b) =>
           b.title.toLowerCase().includes(searchTerm) ||
           b.summary.toLowerCase().includes(searchTerm) ||

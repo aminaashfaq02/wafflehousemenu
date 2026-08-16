@@ -389,5 +389,106 @@ export const blogPosts: BlogPost[] = [
         }
       }
     ]
+  },
+  {
+    slug: "waffle-house-allergen-guide",
+    title: "Waffle House Allergen Guide & Gluten-Free Dining Options",
+    seoTitle: "Waffle House Allergen & Gluten-Free Guide (2026 Edition)",
+    metaDescription: "Looking for gluten-free options or allergen warnings at Waffle House? Read our complete, verified guide to dining safely with food sensitivities.",
+    summary: "A comprehensive review of Waffle House allergens and gluten-free choices, highlighting cross-contact risks and ordering tips for safe dining.",
+    quickAnswer: "Waffle House does not offer a certified gluten-free menu due to high risk of cross-contact on shared griddles. However, hashbrowns griddled in vegetable oil and eggs cooked in designated pans are popular low-risk options.",
+    image: breakfastPlatesImg,
+    author: defaultAuthor,
+    publishDate: "2026-03-01",
+    lastUpdated: "2026-08-15",
+    readMinutes: 6,
+    category: "Dietary",
+    relatedCategories: ["allergens", "dietary", "nutrition"],
+    toc: [
+      { id: "intro", title: "Navigating Food Allergens at Waffle House", level: 2 },
+      { id: "gluten-free", title: "Gluten-Free & Wheat Sensitivity Options", level: 2 },
+      { id: "allergen-cross-contact", title: "Shared Griddles & Cross-Contact Risks", level: 2 },
+      { id: "faqs", title: "Allergen FAQs", level: 2 },
+    ],
+    faqs: [
+      {
+        question: "Are Waffle House hashbrowns gluten-free?",
+        answer: "Waffle House hashbrowns are made from 100% potatoes and griddled in vegetable oil, which contains no gluten. However, they are cooked on a shared griddle where wheat toast, buns, and waffle batters are also handled, posing a cross-contact risk.",
+      },
+      {
+        question: "What oil does Waffle House use for griddling?",
+        answer: "Waffle House uses a liquid vegetable oil shortening for griddling hashbrowns and frying eggs, which is free from dairy and animal products.",
+      }
+    ],
+    sections: [
+      {
+        id: "intro",
+        h2: "Navigating Food Allergens at Waffle House",
+        content: "If you have food allergies or sensitivities, eating out can be challenging. Waffle House prepares all food in open kitchens on shared equipment, which means cross-contact between allergens is common.",
+      },
+      {
+        id: "gluten-free",
+        h2: "Gluten-Free & Wheat Sensitivity Options",
+        content: "While Waffle House has no certified gluten-free products, guests with mild sensitivities frequently order these items:",
+        bulletPoints: [
+          "Classic Hashbrowns: Plain or topped with cheese, onions, or ham (avoid gravy and chili).",
+          "Griddled Eggs: Cooked in individual pans rather than on the main flat top.",
+          "Breakfast Meats: Bacon strips and sausage patties contain no wheat ingredients.",
+          "Beverages: Coffee, Alice's Iced Tea, and Simply Orange Juice are gluten-free."
+        ]
+      }
+    ]
+  },
+  {
+    slug: "waffle-house-nutrition-facts",
+    title: "Waffle House Calories & Nutrition Facts: How to Order Smart",
+    seoTitle: "Waffle House Nutrition Guide 2026: Calorie & Carb Statistics",
+    metaDescription: "Read the full Waffle House nutrition facts breakdown. Learn how to track calories, sodium, carbs, and protein across eggs, hashbrowns, and waffles.",
+    summary: "A practical guide to navigating the Waffle House nutrition menu, helping you find lower-calorie options and track daily macronutrients.",
+    quickAnswer: "A classic Sweet Cream Waffle has 410 calories and 55g of carbs. To build a lower-calorie meal, order scrambled eggs with dry wheat toast and a regular side of griddled hashbrowns.",
+    image: lateNightCoffeeImg,
+    author: defaultAuthor,
+    publishDate: "2026-03-10",
+    lastUpdated: "2026-08-15",
+    readMinutes: 5,
+    category: "Nutrition",
+    relatedCategories: ["nutrition", "dietary", "breakfast"],
+    toc: [
+      { id: "intro", title: "Healthy Eating at Waffle House", level: 2 },
+      { id: "calorie-chart", title: "Calorie & Protein Counts for Popular Items", level: 2 },
+      { id: "tips", title: "Smart Nutrition Ordering Tips", level: 2 },
+    ],
+    faqs: [
+      {
+        question: "How many calories are in a Waffle House All-Star Special?",
+        answer: "The All-Star Special ranges from 950 to 1,250 calories depending on your choice of meat, waffle toppings, and whether you choose hashbrowns or grits.",
+      },
+      {
+        question: "How do I reduce sodium at Waffle House?",
+        answer: "To reduce sodium, choose scrambled eggs, dry toast, and avoid salty breakfast meats like country ham, sausage gravy, or Bert's Chili.",
+      }
+    ],
+    sections: [
+      {
+        id: "intro",
+        h2: "Healthy Eating at Waffle House",
+        content: "Waffle House is known for comfort food, but with a few simple substitutions, you can easily build a meal that fits your macros, whether you're keto, low-calorie, or high-protein.",
+      },
+      {
+        id: "calorie-chart",
+        h2: "Calorie & Protein Counts for Popular Items",
+        content: "Here is a comparison of classic menu items to help you plan your meal:",
+        table: {
+          headers: ["Menu Item", "Calories", "Fat (g)", "Carbs (g)", "Protein (g)"],
+          rows: [
+            ["Single Waffle (Plain)", "410 kcal", "18g", "55g", "8g"],
+            ["Two Eggs (Scrambled)", "180 kcal", "14g", "2g", "12g"],
+            ["Hashbrowns (Regular)", "190 kcal", "8g", "27g", "3g"],
+            ["Bacon (Three Slices)", "110 kcal", "9g", "0g", "8g"],
+            ["Sausage (Two Patties)", "240 kcal", "22g", "1g", "10g"]
+          ]
+        }
+      }
+    ]
   }
 ];

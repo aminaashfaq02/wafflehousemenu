@@ -23,7 +23,8 @@ import { useEffect, useRef, useState } from "react";
 
 // Centralized Menu Data & Dynamic Totals (Single Source of Truth)
 import { CENTRAL_MENU_CATEGORIES, TOTAL_MENU_CATEGORIES, TOTAL_MENU_ITEMS } from "@/data/centralMenuData";
-import { blogPosts } from "@/data/blogPosts";
+import { getAllBlogPosts } from "@/data/blogStore";
+import { menu } from "@/data/menu";
 import { locationsData } from "@/data/locations";
 
 // Hero slides
@@ -57,6 +58,7 @@ import tboneImg from "@/assets/tbone-steak.jpg";
 import lowcalEggsImg from "@/assets/nutrition-lowcal-eggs.jpg";
 import pecanWaffleImg from "@/assets/waffle-peanut-butter.jpg";
 import chocolateWaffleImg from "@/assets/waffle-chocolate-chip.jpg";
+import icedCoffeeImg from "@/assets/iced-coffee.jpg";
 
 import { SubscriberSection } from "@/components/SubscriberSection";
 
@@ -329,7 +331,38 @@ function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [selectedArticleIndex, setSelectedArticleIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeTab, setActiveTab] = useState(0);
   const navigate = useNavigate();
+
+  const tabRecipes = [
+    {
+      tabLabel: "Breakfast Favorites",
+      items: [
+        { name: "All-Star Special™ with Bacon", image: allStarImg, link: "/menu/all-star-special/all-star-special-bacon" },
+        { name: "Classic Sweet Cream Waffle", image: wafflesImg, link: "/menu/waffles/classic-waffle" },
+        { name: "Cheese 'N Eggs Breakfast", image: lowcalEggsImg, link: "/menu/breakfast/cheese-n-eggs" },
+        { name: "Sausage, Egg & Cheese Bowl", image: hashbrownsImg, link: "/menu/hashbrown-bowls/sausage-egg-cheese-bowl" },
+      ]
+    },
+    {
+      tabLabel: "Diner Classics",
+      items: [
+        { name: "Texas Patty Melt", image: pattyMeltImg, link: "/menu/sandwiches/texas-patty-melt" },
+        { name: "Double Angus Cheeseburger", image: burgerImg, link: "/menu/burgers/double-angus-cheeseburger" },
+        { name: "T-Bone Steak Dinner", image: tboneImg, link: "/menu/dinners/t-bone-dinner" },
+        { name: "Hashbrowns All the Way", image: hashbrownsImg, link: "/menu/hashbrowns/hashbrowns-all-the-way" },
+      ]
+    },
+    {
+      tabLabel: "Sweet Treats & Drinks",
+      items: [
+        { name: "Pecan Waffle", image: pecanWaffleImg, link: "/menu/waffles/pecan-waffle" },
+        { name: "Chocolate Chip Waffle", image: chocolateWaffleImg, link: "/menu/waffles/chocolate-chip-waffle" },
+        { name: "Southern Pecan Pie Slice", image: icedCoffeeImg, link: "/menu/drinks/pie-slice" },
+        { name: "Alice's Bottomless Coffee", image: icedCoffeeImg, link: "/menu/drinks/coffee" },
+      ]
+    }
+  ];
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -342,7 +375,8 @@ function HomePage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const activeArticle = blogPosts[selectedArticleIndex] || blogPosts[0];
+  const posts = getAllBlogPosts();
+  const activeArticle = posts[selectedArticleIndex] || posts[0];
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -751,103 +785,187 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 9. RESTORED: CURRENT ARTICLES (TWO-COLUMN EDITORIAL LAYOUT)  */}
+      {/* 9. RECIPE INDEX & EDITORIAL CORNER (TWO-COLUMN SECTION)      */}
       {/* ============================================================ */}
-      <section aria-labelledby="current-articles-heading" className="bg-white py-16 md:py-24 border-b border-border font-sans">
+      <section aria-label="Recipe Index & Editorial" className="bg-white py-16 md:py-24 border-b border-border font-sans">
         <div className="container-editorial">
-          <div className="max-w-3xl space-y-3 mb-12">
-            <span className="chip">Guides &amp; Editorial</span>
-            <h2 id="current-articles-heading" className="font-display text-3xl font-bold sm:text-4xl text-foreground">
-              Current Articles
-            </h2>
-            <p className="text-base text-ink-soft leading-relaxed">
-              Explore insightful guides and articles covering Waffle House menu favorites, pricing breakdowns, ordering strategies, and diner culture written in natural, clear English.
-            </p>
-          </div>
-
-          {/* Two-Column Editorial Layout */}
-          <div className="grid gap-8 lg:grid-cols-12 items-start">
-            {/* Left Column: Interactive Article List */}
-            <div className="lg:col-span-5 space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-ink-soft block mb-1">
-                Select an Article to Preview:
-              </span>
-              {blogPosts.slice(0, 5).map((post, idx) => {
-                const isSelected = selectedArticleIndex === idx;
-                return (
-                  <button
-                    key={post.slug}
-                    onClick={() => setSelectedArticleIndex(idx)}
-                    className={`w-full text-left p-4 rounded-2xl border transition-all ${
-                      isSelected
-                        ? "border-primary bg-amber-500/10 shadow-sm"
-                        : "border-border bg-white hover:border-primary/50 hover:bg-surface"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-primary">
+          <div className="grid gap-10 lg:grid-cols-12 items-start">
+            
+            {/* Left Column: Category-wise Recipes Count Table */}
+            <div className="lg:col-span-7 space-y-6">
+              <div>
+                <span className="chip">Recipe Index</span>
+                <h2 className="font-display text-2xl font-bold sm:text-3xl text-foreground mt-2">
+                  Category-Wise Recipes Count
+                </h2>
+                <p className="text-sm text-ink-soft mt-1">
+                  Explore the complete breakdown of Waffle House recipes, combos, sides and drinks.
+                </p>
+              </div>
+              
+              <div className="overflow-hidden rounded-2xl border border-black/[0.06] bg-surface shadow-sm">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-primary text-black font-semibold text-[11px] uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left">Category Name</th>
+                      <th scope="col" className="px-6 py-3 text-right">Items / Variations</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-black/[0.04]">
+                    {[
+                      { cat: "Breakfast All-Star Special™ (Combos & Options)", count: "~15 items / variations" },
+                      { cat: "Waffles (Classic, Pecan, Choc Chip, Peanut Butter, Blueberry)", count: "5 items" },
+                      { cat: "Egg Breakfasts & Steak Platters (2-Egg, Cheese 'n Eggs, T-Bone, Sirloin)", count: "9 items" },
+                      { cat: "Toddle House® Omelets (Cheese, Ham, Cheesesteak, Fiesta, Custom)", count: "5 items" },
+                      { cat: "Breakfast Sandwiches & Melts (Egg, Sausage, Bacon, Ham options)", count: "19 items" },
+                      { cat: "Texas Melts (Lunch/Dinner: Chicken, Cheesesteak, Patty Melt)", count: "4 items" },
+                      { cat: "Biscuits (Plain, Gravy, Chicken, Sausage, Bacon, Ham)", count: "11 items" },
+                      { cat: "Hashbrowns & Toppings (Regular, Large, Triple + 8 classic toppings)", count: "13 items" },
+                      { cat: "Hashbrown & Grits Bowls (Sausage, Bacon, Ham, Chicken, Cheesesteak)", count: "10 items" },
+                      { cat: "100% Angus Beef Burgers & Dinner Platters (Hamburgers, Dinners)", count: "11 items" },
+                      { cat: "Classic Sandwiches (Grilled Cheese, BLT, Chicken Sandwich)", count: "7 items" },
+                      { cat: "Sides, Pies & Desserts (Pecan/Chocolate Pie, Chili, Bacon/Sausage sides)", count: "14 items" },
+                      { cat: "Beverages (Coffee, Dark Roast, Sweet Tea, Juices, Sodas, Milk)", count: "21 items" },
+                    ].map((row, idx) => (
+                      <tr key={idx} className="hover:bg-muted/40 transition-colors">
+                        <td className="px-6 py-3 text-left font-medium text-foreground">{row.cat}</td>
+                        <td className="px-6 py-3 text-right font-display font-semibold text-amber-700">{row.count}</td>
+                      </tr>
+                    ))}
+                    <tr className="bg-primary/5 font-semibold">
+                      <td className="px-6 py-4 text-left text-foreground">Main Unique Food Dishes</td>
+                      <td className="px-6 py-4 text-right text-foreground font-display">~70 to 80 core recipes</td>
+                    </tr>
+                    <tr className="bg-primary/10 font-bold border-t border-black/10">
+                      <td className="px-6 py-4 text-left text-foreground">Complete Menu (with Sides &amp; Drinks)</td>
+                      <td className="px-6 py-4 text-right text-primary-foreground bg-primary font-display font-bold">~125 total recipes/items</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            {/* Right Column: Updated Articles & Subscription */}
+            <div className="lg:col-span-5 space-y-8">
+              <div className="space-y-4">
+                <div>
+                  <span className="chip">Editorial Corner</span>
+                  <h2 className="font-display text-2xl font-bold text-foreground mt-2">
+                    Updated Articles
+                  </h2>
+                  <p className="text-sm text-ink-soft mt-1">
+                    Recently published guides and resources for Waffle House diners.
+                  </p>
+                </div>
+                
+                <div className="space-y-3.5">
+                  {posts.slice(0, 6).map((post) => (
+                    <article key={post.slug} className="group border-b border-border pb-3.5 last:border-b-0 last:pb-0">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-primary font-semibold">
                         {post.category}
                       </span>
-                      <span className="text-[11px] text-ink-soft">{post.readMinutes} min read</span>
-                    </div>
-                    <h3 className="font-display text-sm font-bold text-foreground mt-1 line-clamp-1">
-                      {post.title}
-                    </h3>
-                    <p className="text-xs text-ink-soft line-clamp-2 mt-1 leading-relaxed">
-                      {post.summary}
-                    </p>
+                      <h3 className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors mt-0.5">
+                        <Link to="/blog/$slug" params={{ slug: post.slug }}>
+                          {post.title}
+                        </Link>
+                      </h3>
+                      <div className="flex items-center justify-between text-xs text-ink-soft mt-1.5">
+                        <span>Updated {post.lastUpdated}</span>
+                        <Link to="/blog/$slug" params={{ slug: post.slug }} className="font-semibold text-primary group-hover:underline">
+                          Read Guide →
+                        </Link>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Inline Subscription Box */}
+              <div className="rounded-2xl border border-primary/30 bg-primary/5 p-6 shadow-sm space-y-4">
+                <div>
+                  <h3 className="font-display text-lg font-bold text-foreground">
+                    Get Waffle House Deals &amp; Updates
+                  </h3>
+                  <p className="text-xs text-ink-soft leading-relaxed mt-1">
+                    Sign up to receive average menu price changes, nutrition guides, and coupon notifications directly in your inbox.
+                  </p>
+                </div>
+                <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 rounded-xl border border-border px-3 py-2 text-xs focus:border-primary focus:outline-none bg-white text-foreground"
+                    required
+                  />
+                  <button type="submit" className="btn-primary py-2 px-4 text-xs font-bold shrink-0">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 9B. FEATURED TABBED RECIPES (PINCH OF YUM STYLE)             */}
+      {/* ============================================================ */}
+      <section className="bg-surface py-16 md:py-24 border-b border-border font-sans">
+        <div className="container-editorial">
+          <div className="text-center max-w-2xl mx-auto space-y-3 mb-10">
+            <span className="chip font-bold text-primary">Recipe Gallery</span>
+            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
+              Explore Popular Dishes
+            </h2>
+            <p className="text-sm text-ink-soft">
+              Click a tab below to explore featured Waffle House favorites by meal type.
+            </p>
+            
+            {/* Joined Tab Buttons (No Space, Pinch of Yum Style) */}
+            <div className="inline-flex rounded-xl overflow-hidden border border-primary shadow-xs mt-6">
+              {tabRecipes.map((tab, idx) => {
+                const isActive = activeTab === idx;
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveTab(idx)}
+                    className={`px-5 py-3 text-xs font-bold uppercase tracking-wider border-r last:border-r-0 border-primary transition-all ${
+                      isActive
+                        ? "bg-white text-black font-extrabold"
+                        : "bg-primary text-primary-foreground hover:bg-[#E2B000]"
+                    }`}
+                  >
+                    {tab.tabLabel}
                   </button>
                 );
               })}
             </div>
-
-            {/* Right Column: Featured Active Article Detail Preview */}
-            <div className="lg:col-span-7 rounded-3xl border border-border bg-surface p-6 sm:p-8 shadow-xs">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-muted mb-6">
-                <img
-                  src={activeArticle.image}
-                  alt={activeArticle.title}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-                <span className="absolute top-3 left-3 rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
-                  {activeArticle.category}
-                </span>
-              </div>
-              <div className="space-y-4">
-                <h3 className="font-display text-2xl font-bold text-foreground">
-                  {activeArticle.title}
-                </h3>
-                <p className="text-sm text-ink-soft leading-relaxed">
-                  {activeArticle.summary}
-                </p>
-                {activeArticle.quickAnswer && (
-                  <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-xs text-amber-950">
-                    <strong className="block font-bold text-amber-900 mb-1">Key Takeaway:</strong>
-                    {activeArticle.quickAnswer}
-                  </div>
-                )}
-                <div className="pt-2 flex items-center justify-between border-t border-border/60">
-                  <span className="text-xs text-ink-soft">
-                    By {activeArticle.author.name} • Updated {activeArticle.lastUpdated}
-                  </span>
-                  <Link
-                    to="/blog/$slug"
-                    params={{ slug: activeArticle.slug }}
-                    className="btn-primary py-2 px-4 text-xs font-semibold"
-                  >
-                    Read Full Guide <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Bottom Explore / See All Articles Button */}
-          <div className="mt-12 text-center">
-            <Link to="/blog" className="btn-primary">
-              See All Articles <ArrowRight className="h-4 w-4" />
-            </Link>
+          {/* Recipe Grid (4 Items, Square Images, Name underneath) */}
+          <div className="grid gap-6 grid-cols-2 md:grid-cols-4">
+            {tabRecipes[activeTab].items.map((item, idx) => (
+              <Link
+                key={idx}
+                to={item.link as any}
+                className="group flex flex-col items-center text-center space-y-3"
+              >
+                <div className="aspect-square w-full overflow-hidden rounded-2xl border border-border bg-muted shadow-xs">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    width={300}
+                    height={300}
+                  />
+                </div>
+                <h3 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors leading-tight px-1">
+                  {item.name}
+                </h3>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

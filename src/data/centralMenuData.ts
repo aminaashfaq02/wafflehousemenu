@@ -1,5 +1,6 @@
 import catAllStar from "@/assets/cat-all-star.jpg";
 import catWaffles from "@/assets/cat-waffles.jpg";
+import { menu } from "./menu";
 import catEggBreakfasts from "@/assets/cat-egg-breakfasts.jpg";
 import catOmelets from "@/assets/cat-omelets.jpg";
 import catBreakfastBowl from "@/assets/cat-breakfast-bowl.jpg";
@@ -130,5 +131,5 @@ export const CENTRAL_MENU_CATEGORIES: CentralCategory[] = [
 
 // Single source of truth dynamically derived from central menu database
 export const TOTAL_MENU_CATEGORIES = CENTRAL_MENU_CATEGORIES.length; // 13
-export const TOTAL_MENU_ITEMS = 73; // Hardcoded to 73 as requested by user
+export const TOTAL_MENU_ITEMS = menu.length; // Dynamically derived from menu database (73 items)
 

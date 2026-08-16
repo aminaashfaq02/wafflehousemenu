@@ -289,7 +289,17 @@ function IndividualStorePage() {
             <h2 className="font-display text-xl font-bold text-foreground border-b border-border pb-3 lg:border-none lg:pb-0">
               Location Map
             </h2>
-            <div className="overflow-hidden rounded-2xl border border-black/[0.08] shadow-md aspect-square lg:aspect-auto lg:h-[480px]">
+            <div className="overflow-hidden rounded-2xl border border-black/[0.08] shadow-md aspect-[16/10]">
+              <img
+                src={store.image}
+                alt={`${store.name} location`}
+                className="h-full w-full object-cover"
+                loading="lazy"
+                width={600}
+                height={375}
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-black/[0.08] shadow-md aspect-square lg:aspect-auto lg:h-[380px]">
               <iframe
                 title={`Map showing ${store.name}`}
                 src={store.mapEmbedUrl}
