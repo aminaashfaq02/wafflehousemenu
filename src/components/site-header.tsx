@@ -114,60 +114,78 @@ export function SiteHeader({ overHero = false }: Props) {
 
       {/* ═══════════════════════════════════════════
           TOP INFO BAR
-          Desktop: Date · 24/7 Open  |  Deals + Menu PDF
-          Mobile:  Date              |  Deals + Contact
+          Desktop: Center Centered Date Line, full desktop
+          Mobile/Tablet: Nicely arranged Date + Deals + About + Contact + PDF
           ═══════════════════════════════════════════ */}
-      <div className="bg-[#050607] border-b border-white/10 py-1.5 px-4">
-        <div className="container-editorial flex items-center justify-between gap-2 text-[11px]">
-
-          {/* LEFT — Calendar icon + date (both screens) */}
-          <div className="flex items-center gap-1.5 min-w-0">
-            <Calendar className="h-3 w-3 text-primary shrink-0" />
-            {/* Desktop full date */}
-            <span className="hidden sm:inline text-white/85 font-medium truncate">
-              {dateDesktop || "Waffle House Menu Guide"}
-            </span>
-            {/* Mobile short date */}
-            <span className="sm:hidden text-white/80 font-semibold truncate">
-              {dateMobile || "Menu Guide"}
-            </span>
-            {/* 24/7 badge — desktop only */}
-            <span className="hidden sm:inline-flex items-center gap-1 ml-1.5 text-amber-400 font-bold">
-              · 24/7 Open
-            </span>
+      <div className="bg-[#050607] border-b border-white/10 py-1.5 px-4 relative">
+        <div className="container-editorial flex items-center justify-between text-[11px] relative min-h-[22px]">
+          
+          {/* Centered Date Line on Desktop */}
+          <div className="hidden lg:flex absolute inset-x-0 top-1/2 -translate-y-1/2 items-center justify-center pointer-events-none">
+            <div className="flex items-center gap-1.5 font-semibold text-white/90">
+              <Calendar className="h-3.5 w-3.5 text-primary" />
+              <span>{dateDesktop || "Waffle House Menu Guide"}</span>
+              <span className="text-amber-400 font-bold ml-1">· 24/7 Open</span>
+            </div>
           </div>
 
-          {/* RIGHT — action buttons */}
-          <div className="flex items-center gap-2 shrink-0">
-            {/* Deals button — both screens */}
+          {/* Left Side: PDF link on desktop, Date on mobile/tablet */}
+          <div className="flex items-center gap-2">
+            <a
+              href="/waffle-house-menu-nutritionals.pdf"
+              download
+              className="hidden lg:flex items-center gap-1.5 text-white/60 hover:text-primary transition-colors font-medium"
+            >
+              <FileText className="h-3.5 w-3.5" />
+              <span>Download Nutrition PDF</span>
+            </a>
+            
+            {/* Mobile/Tablet Date Display */}
+            <div className="flex lg:hidden items-center gap-1.5 text-white/85 font-semibold">
+              <Calendar className="h-3.5 w-3.5 text-primary shrink-0" />
+              <span>{dateMobile || "Menu Guide"}</span>
+              <span className="text-amber-400 font-bold hidden sm:inline">· 24/7 Open</span>
+            </div>
+          </div>
+
+          {/* Right Side: Deals, About, Contact Buttons (Both Screens) */}
+          <div className="flex items-center gap-2.5 relative z-10">
+            {/* Deals / ideals button */}
             <Link
               to="/deals"
               className="flex items-center gap-1 rounded-full bg-primary hover:bg-amber-400 px-2.5 py-0.5 font-bold text-black transition-colors"
             >
               <Tag className="h-2.5 w-2.5" />
-              <span className="hidden sm:inline">Deals &amp; Value</span>
-              <span className="sm:hidden">Deals</span>
+              <span>Deals</span>
             </Link>
 
-            {/* Contact — mobile only */}
+            {/* Small About text button next to Deals on mobile/tablet/desktop */}
+            <Link
+              to="/about"
+              className="text-white/80 hover:text-primary transition-colors font-bold px-1 py-0.5 text-[10px]"
+            >
+              About
+            </Link>
+
             <Link
               to="/contact"
-              className="sm:hidden flex items-center gap-1 rounded-full border border-white/30 bg-white/10 hover:bg-white/20 px-2.5 py-0.5 font-bold text-white transition-colors"
+              className="flex items-center gap-1 rounded-full border border-white/30 bg-white/10 hover:bg-white/20 px-2.5 py-0.5 font-bold text-white transition-colors"
             >
               <Phone className="h-2.5 w-2.5" />
               Contact
             </Link>
 
-            {/* Menu PDF — desktop only */}
+            {/* PDF link on mobile/tablet only */}
             <a
               href="/waffle-house-menu-nutritionals.pdf"
               download
-              className="hidden sm:flex items-center gap-1 text-white/55 hover:text-primary transition-colors"
+              className="lg:hidden flex items-center gap-1 text-white/55 hover:text-primary transition-colors text-[10px] ml-1"
             >
               <FileText className="h-3 w-3" />
-              Menu PDF
+              PDF
             </a>
           </div>
+
         </div>
       </div>
 
@@ -419,6 +437,26 @@ export function SiteHeader({ overHero = false }: Props) {
                     </div>
                   </div>
                 )}
+              </li>
+
+              {/* ── ABOUT ── */}
+              <li>
+                <Link
+                  to="/about"
+                  className="rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+
+              {/* ── CONTACT ── */}
+              <li>
+                <Link
+                  to="/contact"
+                  className="rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </nav>

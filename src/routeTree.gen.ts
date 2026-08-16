@@ -11,16 +11,24 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AllergensRouteImport } from './routes/allergens'
+import { Route as BreakfastRouteImport } from './routes/breakfast'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as CateringRouteImport } from './routes/catering'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as DealsRouteImport } from './routes/deals'
 import { Route as DeliveryRouteImport } from './routes/delivery'
+import { Route as DietaryRouteImport } from './routes/dietary'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
+import { Route as EditorsRouteImport } from './routes/editors'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as HappyHourRouteImport } from './routes/happy-hour'
+import { Route as HashbrownsRouteImport } from './routes/hashbrowns'
+import { Route as HoursRouteImport } from './routes/hours'
 import { Route as MenuRouteImport } from './routes/menu'
+import { Route as MenuDataRouteImport } from './routes/menu-data'
 import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as NutritionRouteImport } from './routes/nutrition'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
@@ -28,6 +36,8 @@ import { Route as SearchRouteImport } from './routes/search'
 import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as UpdatesRouteImport } from './routes/updates'
+import { Route as WafflesRouteImport } from './routes/waffles'
 import { Route as AdminBlogRouteImport } from './routes/admin/blog'
 import { Route as AdminCreatePostRouteImport } from './routes/admin/create-post'
 import { Route as AuthorIndexRouteImport } from './routes/author/index'
@@ -80,6 +90,16 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AllergensRoute = AllergensRouteImport.update({
+  id: '/allergens',
+  path: '/allergens',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BreakfastRoute = BreakfastRouteImport.update({
+  id: '/breakfast',
+  path: '/breakfast',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CategoriesRoute = CategoriesRouteImport.update({
   id: '/categories',
   path: '/categories',
@@ -100,9 +120,19 @@ const CookiePolicyRoute = CookiePolicyRouteImport.update({
   path: '/cookie-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DealsRoute = DealsRouteImport.update({
+  id: '/deals',
+  path: '/deals',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DeliveryRoute = DeliveryRouteImport.update({
   id: '/delivery',
   path: '/delivery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DietaryRoute = DietaryRouteImport.update({
+  id: '/dietary',
+  path: '/dietary',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DisclaimerRoute = DisclaimerRouteImport.update({
@@ -115,6 +145,11 @@ const EditorialPolicyRoute = EditorialPolicyRouteImport.update({
   path: '/editorial-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EditorsRoute = EditorsRouteImport.update({
+  id: '/editors',
+  path: '/editors',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -125,9 +160,24 @@ const HappyHourRoute = HappyHourRouteImport.update({
   path: '/happy-hour',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HashbrownsRoute = HashbrownsRouteImport.update({
+  id: '/hashbrowns',
+  path: '/hashbrowns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HoursRoute = HoursRouteImport.update({
+  id: '/hours',
+  path: '/hours',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MenuRoute = MenuRouteImport.update({
   id: '/menu',
   path: '/menu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenuDataRoute = MenuDataRouteImport.update({
+  id: '/menu-data',
+  path: '/menu-data',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MethodologyRoute = MethodologyRouteImport.update({
@@ -163,6 +213,16 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UpdatesRoute = UpdatesRouteImport.update({
+  id: '/updates',
+  path: '/updates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WafflesRoute = WafflesRouteImport.update({
+  id: '/waffles',
+  path: '/waffles',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminBlogRoute = AdminBlogRouteImport.update({
@@ -377,16 +437,24 @@ const MenuSidesPagePageRoute = MenuSidesPagePageRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/allergens': typeof AllergensRoute
+  '/breakfast': typeof BreakfastRoute
   '/categories': typeof CategoriesRoute
   '/catering': typeof CateringRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/deals': typeof DealsRoute
   '/delivery': typeof DeliveryRoute
+  '/dietary': typeof DietaryRoute
   '/disclaimer': typeof DisclaimerRoute
   '/editorial-policy': typeof EditorialPolicyRoute
+  '/editors': typeof EditorsRoute
   '/faq': typeof FaqRoute
   '/happy-hour': typeof HappyHourRoute
+  '/hashbrowns': typeof HashbrownsRoute
+  '/hours': typeof HoursRoute
   '/menu': typeof MenuRouteWithChildren
+  '/menu-data': typeof MenuDataRoute
   '/methodology': typeof MethodologyRoute
   '/nutrition': typeof NutritionRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -394,6 +462,8 @@ export interface FileRoutesByFullPath {
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/updates': typeof UpdatesRoute
+  '/waffles': typeof WafflesRoute
   '/admin/blog': typeof AdminBlogRoute
   '/admin/create-post': typeof AdminCreatePostRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -439,15 +509,23 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/allergens': typeof AllergensRoute
+  '/breakfast': typeof BreakfastRoute
   '/categories': typeof CategoriesRoute
   '/catering': typeof CateringRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/deals': typeof DealsRoute
   '/delivery': typeof DeliveryRoute
+  '/dietary': typeof DietaryRoute
   '/disclaimer': typeof DisclaimerRoute
   '/editorial-policy': typeof EditorialPolicyRoute
+  '/editors': typeof EditorsRoute
   '/faq': typeof FaqRoute
   '/happy-hour': typeof HappyHourRoute
+  '/hashbrowns': typeof HashbrownsRoute
+  '/hours': typeof HoursRoute
+  '/menu-data': typeof MenuDataRoute
   '/methodology': typeof MethodologyRoute
   '/nutrition': typeof NutritionRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -455,6 +533,8 @@ export interface FileRoutesByTo {
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/updates': typeof UpdatesRoute
+  '/waffles': typeof WafflesRoute
   '/admin/blog': typeof AdminBlogRoute
   '/admin/create-post': typeof AdminCreatePostRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -492,16 +572,24 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/allergens': typeof AllergensRoute
+  '/breakfast': typeof BreakfastRoute
   '/categories': typeof CategoriesRoute
   '/catering': typeof CateringRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/deals': typeof DealsRoute
   '/delivery': typeof DeliveryRoute
+  '/dietary': typeof DietaryRoute
   '/disclaimer': typeof DisclaimerRoute
   '/editorial-policy': typeof EditorialPolicyRoute
+  '/editors': typeof EditorsRoute
   '/faq': typeof FaqRoute
   '/happy-hour': typeof HappyHourRoute
+  '/hashbrowns': typeof HashbrownsRoute
+  '/hours': typeof HoursRoute
   '/menu': typeof MenuRouteWithChildren
+  '/menu-data': typeof MenuDataRoute
   '/methodology': typeof MethodologyRoute
   '/nutrition': typeof NutritionRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -509,6 +597,8 @@ export interface FileRoutesById {
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/updates': typeof UpdatesRoute
+  '/waffles': typeof WafflesRoute
   '/admin/blog': typeof AdminBlogRoute
   '/admin/create-post': typeof AdminCreatePostRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -556,16 +646,24 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/allergens'
+    | '/breakfast'
     | '/categories'
     | '/catering'
     | '/contact'
     | '/cookie-policy'
+    | '/deals'
     | '/delivery'
+    | '/dietary'
     | '/disclaimer'
     | '/editorial-policy'
+    | '/editors'
     | '/faq'
     | '/happy-hour'
+    | '/hashbrowns'
+    | '/hours'
     | '/menu'
+    | '/menu-data'
     | '/methodology'
     | '/nutrition'
     | '/privacy-policy'
@@ -573,6 +671,8 @@ export interface FileRouteTypes {
     | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
+    | '/updates'
+    | '/waffles'
     | '/admin/blog'
     | '/admin/create-post'
     | '/blog/$slug'
@@ -618,15 +718,23 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/allergens'
+    | '/breakfast'
     | '/categories'
     | '/catering'
     | '/contact'
     | '/cookie-policy'
+    | '/deals'
     | '/delivery'
+    | '/dietary'
     | '/disclaimer'
     | '/editorial-policy'
+    | '/editors'
     | '/faq'
     | '/happy-hour'
+    | '/hashbrowns'
+    | '/hours'
+    | '/menu-data'
     | '/methodology'
     | '/nutrition'
     | '/privacy-policy'
@@ -634,6 +742,8 @@ export interface FileRouteTypes {
     | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
+    | '/updates'
+    | '/waffles'
     | '/admin/blog'
     | '/admin/create-post'
     | '/blog/$slug'
@@ -670,16 +780,24 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/allergens'
+    | '/breakfast'
     | '/categories'
     | '/catering'
     | '/contact'
     | '/cookie-policy'
+    | '/deals'
     | '/delivery'
+    | '/dietary'
     | '/disclaimer'
     | '/editorial-policy'
+    | '/editors'
     | '/faq'
     | '/happy-hour'
+    | '/hashbrowns'
+    | '/hours'
     | '/menu'
+    | '/menu-data'
     | '/methodology'
     | '/nutrition'
     | '/privacy-policy'
@@ -687,6 +805,8 @@ export interface FileRouteTypes {
     | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
+    | '/updates'
+    | '/waffles'
     | '/admin/blog'
     | '/admin/create-post'
     | '/blog/$slug'
@@ -733,16 +853,24 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AllergensRoute: typeof AllergensRoute
+  BreakfastRoute: typeof BreakfastRoute
   CategoriesRoute: typeof CategoriesRoute
   CateringRoute: typeof CateringRoute
   ContactRoute: typeof ContactRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
+  DealsRoute: typeof DealsRoute
   DeliveryRoute: typeof DeliveryRoute
+  DietaryRoute: typeof DietaryRoute
   DisclaimerRoute: typeof DisclaimerRoute
   EditorialPolicyRoute: typeof EditorialPolicyRoute
+  EditorsRoute: typeof EditorsRoute
   FaqRoute: typeof FaqRoute
   HappyHourRoute: typeof HappyHourRoute
+  HashbrownsRoute: typeof HashbrownsRoute
+  HoursRoute: typeof HoursRoute
   MenuRoute: typeof MenuRouteWithChildren
+  MenuDataRoute: typeof MenuDataRoute
   MethodologyRoute: typeof MethodologyRoute
   NutritionRoute: typeof NutritionRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -750,6 +878,8 @@ export interface RootRouteChildren {
   SitemapRoute: typeof SitemapRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  UpdatesRoute: typeof UpdatesRoute
+  WafflesRoute: typeof WafflesRoute
   AdminBlogRoute: typeof AdminBlogRoute
   AdminCreatePostRoute: typeof AdminCreatePostRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -774,6 +904,20 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/allergens': {
+      id: '/allergens'
+      path: '/allergens'
+      fullPath: '/allergens'
+      preLoaderRoute: typeof AllergensRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/breakfast': {
+      id: '/breakfast'
+      path: '/breakfast'
+      fullPath: '/breakfast'
+      preLoaderRoute: typeof BreakfastRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/categories': {
@@ -804,11 +948,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookiePolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/deals': {
+      id: '/deals'
+      path: '/deals'
+      fullPath: '/deals'
+      preLoaderRoute: typeof DealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/delivery': {
       id: '/delivery'
       path: '/delivery'
       fullPath: '/delivery'
       preLoaderRoute: typeof DeliveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dietary': {
+      id: '/dietary'
+      path: '/dietary'
+      fullPath: '/dietary'
+      preLoaderRoute: typeof DietaryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/disclaimer': {
@@ -825,6 +983,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EditorialPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/editors': {
+      id: '/editors'
+      path: '/editors'
+      fullPath: '/editors'
+      preLoaderRoute: typeof EditorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -839,11 +1004,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HappyHourRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hashbrowns': {
+      id: '/hashbrowns'
+      path: '/hashbrowns'
+      fullPath: '/hashbrowns'
+      preLoaderRoute: typeof HashbrownsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hours': {
+      id: '/hours'
+      path: '/hours'
+      fullPath: '/hours'
+      preLoaderRoute: typeof HoursRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/menu': {
       id: '/menu'
       path: '/menu'
       fullPath: '/menu'
       preLoaderRoute: typeof MenuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/menu-data': {
+      id: '/menu-data'
+      path: '/menu-data'
+      fullPath: '/menu-data'
+      preLoaderRoute: typeof MenuDataRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/methodology': {
@@ -893,6 +1079,20 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/updates': {
+      id: '/updates'
+      path: '/updates'
+      fullPath: '/updates'
+      preLoaderRoute: typeof UpdatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/waffles': {
+      id: '/waffles'
+      path: '/waffles'
+      fullPath: '/waffles'
+      preLoaderRoute: typeof WafflesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/blog': {
@@ -1351,16 +1551,24 @@ const MenuRouteWithChildren = MenuRoute._addFileChildren(MenuRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AllergensRoute: AllergensRoute,
+  BreakfastRoute: BreakfastRoute,
   CategoriesRoute: CategoriesRoute,
   CateringRoute: CateringRoute,
   ContactRoute: ContactRoute,
   CookiePolicyRoute: CookiePolicyRoute,
+  DealsRoute: DealsRoute,
   DeliveryRoute: DeliveryRoute,
+  DietaryRoute: DietaryRoute,
   DisclaimerRoute: DisclaimerRoute,
   EditorialPolicyRoute: EditorialPolicyRoute,
+  EditorsRoute: EditorsRoute,
   FaqRoute: FaqRoute,
   HappyHourRoute: HappyHourRoute,
+  HashbrownsRoute: HashbrownsRoute,
+  HoursRoute: HoursRoute,
   MenuRoute: MenuRouteWithChildren,
+  MenuDataRoute: MenuDataRoute,
   MethodologyRoute: MethodologyRoute,
   NutritionRoute: NutritionRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
@@ -1368,6 +1576,8 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapRoute: SitemapRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  UpdatesRoute: UpdatesRoute,
+  WafflesRoute: WafflesRoute,
   AdminBlogRoute: AdminBlogRoute,
   AdminCreatePostRoute: AdminCreatePostRoute,
   BlogSlugRoute: BlogSlugRoute,

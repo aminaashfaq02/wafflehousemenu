@@ -124,10 +124,11 @@ export const CENTRAL_MENU_CATEGORIES: CentralCategory[] = [
     shortDescription: "Explore bottomless coffee, iced tea, juices, milkshakes and Southern pecan pies.",
     image: catBeverages,
     href: "/menu/beverages",
-    itemCount: 6,
+    itemCount: 5,
   },
 ];
 
 // Single source of truth dynamically derived from central menu database
 export const TOTAL_MENU_CATEGORIES = CENTRAL_MENU_CATEGORIES.length; // 13
-export const TOTAL_MENU_ITEMS = CENTRAL_MENU_CATEGORIES.reduce((sum, cat) => sum + cat.itemCount, 0); // 74
+export const TOTAL_MENU_ITEMS = 73; // Hardcoded to 73 as requested by user
+

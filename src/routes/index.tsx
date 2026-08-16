@@ -385,13 +385,15 @@ function HomePage() {
               Waffle House Menu &amp; Prices
             </h1>
             <p className="text-lg leading-relaxed text-white/85 max-w-2xl">
-              Explore the complete Waffle House menu with {TOTAL_MENU_CATEGORIES} categories and {TOTAL_MENU_ITEMS} verified menu items, including reference prices, available nutrition information, printable menu PDF resources, restaurant locations and helpful diner guides.
+              Explore the complete Waffle House menu with {TOTAL_MENU_CATEGORIES} categories and {TOTAL_MENU_ITEMS} verified menu items, covering 125+ recipes. View all items on our <Link to="/menu" className="text-primary hover:underline font-semibold">all menu page</Link> or download the official <a href="/waffle-house-menu-nutritionals.pdf" download className="text-primary hover:underline font-semibold">nutrition PDF reference</a>. We also list reference prices, allergen information, restaurant locations and helpful diner guides.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 text-sm font-semibold text-amber-300 pt-1">
               <span>{TOTAL_MENU_CATEGORIES} Menu Categories</span>
               <span>•</span>
               <span>{TOTAL_MENU_ITEMS} Verified Items</span>
+              <span>•</span>
+              <span>125+ Recipes</span>
               <span>•</span>
               <span>24/7 Hours</span>
               <span>•</span>

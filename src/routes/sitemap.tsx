@@ -82,6 +82,16 @@ function HtmlSitemapPage() {
               { to: "/about" as const, label: "About Our Project" },
               { to: "/contact" as const, label: "Contact Us" },
               { to: "/search" as const, label: "Search Engine" },
+              { to: "/allergens" as const, label: "Allergen Guide" },
+              { to: "/dietary" as const, label: "Dietary Options Guide" },
+              { to: "/hours" as const, label: "Diner Operating Hours" },
+              { to: "/deals" as const, label: "Deals & Promotions Guide" },
+              { to: "/menu-data" as const, label: "Menu Database Statistics" },
+              { to: "/breakfast" as const, label: "Breakfast Menu Guide" },
+              { to: "/waffles" as const, label: "Waffles Menu Guide" },
+              { to: "/hashbrowns" as const, label: "Hashbrowns Menu Guide" },
+              { to: "/editors" as const, label: "Editorial Standards" },
+              { to: "/updates" as const, label: "Database Verification Log" },
             ].map((p) => (
               <li key={p.to}>
                 <Link
