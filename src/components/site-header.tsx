@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, Search, X, FileText, ChevronRight, MapPin, Sparkles, BookOpen, HeartHandshake, Info } from "lucide-react";
+import { ChevronDown, Menu, Search, X, FileText, ChevronRight, MapPin, Sparkles, BookOpen, HeartHandshake, Info, Truck, Utensils, Percent } from "lucide-react";
 import { CENTRAL_MENU_CATEGORIES } from "@/data/centralMenuData";
 import { SiteLogo } from "@/components/site-logo";
 
@@ -9,22 +9,14 @@ interface Props {
   overHero?: boolean;
 }
 
-const primaryNav = [
-  { to: "/" as const, label: "Home", exact: true },
-  { to: "/menu" as const, label: "Menu" },
-  { to: "/nutrition" as const, label: "Nutrition" },
-  { to: "/locations" as const, label: "Locations" },
-  { to: "/blog" as const, label: "Blog" },
-  { to: "/about" as const, label: "About" },
-  { to: "/contact" as const, label: "Contact" },
-];
-
 export function SiteHeader({ overHero = false }: Props) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [blogOpen, setBlogOpen] = useState(false);
   const [q, setQ] = useState("");
   const menuTimer = useRef<number | null>(null);
+  const blogTimer = useRef<number | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -40,11 +32,24 @@ export function SiteHeader({ overHero = false }: Props) {
 
   const openMega = () => {
     if (menuTimer.current) window.clearTimeout(menuTimer.current);
+    if (blogTimer.current) window.clearTimeout(blogTimer.current);
+    setBlogOpen(false);
     setMenuOpen(true);
   };
   const closeMega = () => {
     if (menuTimer.current) window.clearTimeout(menuTimer.current);
     menuTimer.current = window.setTimeout(() => setMenuOpen(false), 120);
+  };
+
+  const openBlog = () => {
+    if (blogTimer.current) window.clearTimeout(blogTimer.current);
+    if (menuTimer.current) window.clearTimeout(menuTimer.current);
+    setMenuOpen(false);
+    setBlogOpen(true);
+  };
+  const closeBlog = () => {
+    if (blogTimer.current) window.clearTimeout(blogTimer.current);
+    blogTimer.current = window.setTimeout(() => setBlogOpen(false), 120);
   };
 
   const submit = (e: React.FormEvent) => {
@@ -57,18 +62,18 @@ export function SiteHeader({ overHero = false }: Props) {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-primary bg-[#0B0C0E]/95 backdrop-blur-md shadow-lg transition-all duration-300">
-      <div className="container-editorial flex h-[72px] items-center gap-6">
+    <header className="fixed inset-x-0 top-0 z-50 border-b-2 border-primary bg-[#0B0C0E]/95 backdrop-blur-md shadow-lg transition-all duration-300 font-sans">
+      <div className="container-editorial flex h-[72px] items-center gap-4 xl:gap-6">
         <SiteLogo light={true} />
 
         {/* Desktop Navigation */}
         <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-0.5 xl:gap-1 text-xs xl:text-sm">
             <li>
               <Link
                 to="/"
                 activeOptions={{ exact: true }}
-                className="rounded-full px-3.5 py-2 text-sm font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+                className="rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
               >
                 Home
               </Link>
@@ -82,11 +87,11 @@ export function SiteHeader({ overHero = false }: Props) {
                 onBlur={closeMega}
                 aria-expanded={menuOpen}
                 aria-haspopup="true"
-                className="inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+                className="inline-flex items-center gap-1 rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
               >
                 Menu
                 <ChevronDown
-                  className={`h-3.5 w-3.5 transition-transform ${menuOpen ? "rotate-180" : ""}`}
+                  className={`h-3 w-3 transition-transform ${menuOpen ? "rotate-180" : ""}`}
                   aria-hidden
                 />
               </Link>
@@ -95,7 +100,7 @@ export function SiteHeader({ overHero = false }: Props) {
             <li>
               <Link
                 to="/nutrition"
-                className="rounded-full px-3.5 py-2 text-sm font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+                className="rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
               >
                 Nutrition
               </Link>
@@ -104,25 +109,61 @@ export function SiteHeader({ overHero = false }: Props) {
             <li>
               <Link
                 to="/locations"
-                className="rounded-full px-3.5 py-2 text-sm font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+                className="rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
               >
                 Locations
               </Link>
             </li>
 
-            <li>
+            {/* Blog with Dropdown */}
+            <li className="relative" onMouseEnter={openBlog} onMouseLeave={closeBlog}>
               <Link
                 to="/blog"
-                className="rounded-full px-3.5 py-2 text-sm font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+                onFocus={openBlog}
+                onBlur={closeBlog}
+                aria-expanded={blogOpen}
+                aria-haspopup="true"
+                className="inline-flex items-center gap-1 rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
               >
                 Blog
+                <ChevronDown
+                  className={`h-3 w-3 transition-transform ${blogOpen ? "rotate-180" : ""}`}
+                  aria-hidden
+                />
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/delivery"
+                className="rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+              >
+                Delivery
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/catering"
+                className="rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+              >
+                Catering
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/happy-hour"
+                className="rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+              >
+                Happy Hour
               </Link>
             </li>
 
             <li>
               <Link
                 to="/about"
-                className="rounded-full px-3.5 py-2 text-sm font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+                className="rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
               >
                 About
               </Link>
@@ -131,7 +172,7 @@ export function SiteHeader({ overHero = false }: Props) {
             <li>
               <Link
                 to="/contact"
-                className="rounded-full px-3.5 py-2 text-sm font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
+                className="rounded-full px-2.5 xl:px-3.5 py-2 font-semibold text-white/90 transition-colors hover:bg-white/10 hover:text-primary"
               >
                 Contact
               </Link>
@@ -144,23 +185,23 @@ export function SiteHeader({ overHero = false }: Props) {
           role="search"
           aria-label="Search the menu"
           onSubmit={submit}
-          className="ml-auto hidden lg:block"
+          className="ml-auto hidden xl:block"
         >
-          <div className="relative flex h-11 w-[280px] items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all focus-within:border-primary xl:w-[320px]">
+          <div className="relative flex h-10 w-[240px] items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all focus-within:border-primary">
             <Search
-              className="pointer-events-none absolute left-4 h-4 w-4 text-white/70"
+              className="pointer-events-none absolute left-3.5 h-3.5 w-3.5 text-white/70"
               aria-hidden
             />
             <input
               type="search"
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Search waffles, prices…"
-              className="h-full w-full bg-transparent pl-11 pr-20 text-sm text-white placeholder:text-white/60 focus:outline-none"
+              placeholder="Search menu, prices…"
+              className="h-full w-full bg-transparent pl-9 pr-16 text-xs text-white placeholder:text-white/60 focus:outline-none"
             />
             <button
               type="submit"
-              className="btn-primary absolute right-1 top-1/2 h-9 -translate-y-1/2 px-3 text-xs font-semibold"
+              className="btn-primary absolute right-1 top-1/2 h-8 -translate-y-1/2 px-2.5 text-[11px] font-semibold"
             >
               Search
             </button>
@@ -179,7 +220,7 @@ export function SiteHeader({ overHero = false }: Props) {
         </button>
       </div>
 
-      {/* Mega dropdown (desktop) */}
+      {/* Menu Mega dropdown (desktop) */}
       <div
         onMouseEnter={openMega}
         onMouseLeave={closeMega}
@@ -235,13 +276,107 @@ export function SiteHeader({ overHero = false }: Props) {
                   />
                 </div>
                 <div className="min-w-0">
-                  <p className="font-display text-sm font-bold leading-tight group-hover:text-primary transition-colors">
+                  <p className="font-display text-sm font-bold leading-tight group-hover:text-primary transition-colors text-foreground">
                     {c.name}
                   </p>
                   <p className="text-[11px] text-ink-soft mt-0.5">{c.itemCount} items</p>
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Blog Mega dropdown (desktop) */}
+      <div
+        onMouseEnter={openBlog}
+        onMouseLeave={closeBlog}
+        className={[
+          "absolute inset-x-0 top-full hidden overflow-hidden border-b border-border bg-white shadow-2xl transition-all duration-200 ease-out lg:block",
+          blogOpen
+            ? "pointer-events-auto opacity-100 translate-y-0 visible"
+            : "pointer-events-none opacity-0 -translate-y-2 invisible",
+        ].join(" ")}
+      >
+        <div className="container-editorial grid grid-cols-12 gap-8 py-8">
+          <div className="col-span-4 border-r border-border pr-6 space-y-3">
+            <span className="chip">Editorial Hub</span>
+            <h3 className="font-display text-2xl font-bold leading-tight text-foreground">
+              Waffle House Guides &amp; Articles
+            </h3>
+            <p className="text-xs text-ink-soft leading-relaxed">
+              Explore in-depth articles covering menu prices, waffles, hashbrown modifiers, budget meals, bottomless beverages, and restaurant culture.
+            </p>
+            <div className="pt-2">
+              <Link
+                to="/blog"
+                onClick={() => setBlogOpen(false)}
+                className="btn-primary py-2 px-4 text-xs font-semibold"
+              >
+                See All Guides &amp; Articles →
+              </Link>
+            </div>
+          </div>
+          <div className="col-span-8 grid grid-cols-2 gap-4">
+            <Link
+              to="/blog/$slug"
+              params={{ slug: "best-breakfast-items" }}
+              onClick={() => setBlogOpen(false)}
+              className="p-4 rounded-xl border border-border bg-surface hover:border-primary transition-all group"
+            >
+              <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Breakfast Guide</span>
+              <h4 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors mt-1">
+                7 Best Waffle House Breakfast Plates
+              </h4>
+              <p className="text-xs text-ink-soft line-clamp-2 mt-1">
+                From the All-Star Special to T-Bone &amp; Eggs, ranked by value and calories.
+              </p>
+            </Link>
+
+            <Link
+              to="/blog/$slug"
+              params={{ slug: "waffles-guide" }}
+              onClick={() => setBlogOpen(false)}
+              className="p-4 rounded-xl border border-border bg-surface hover:border-primary transition-all group"
+            >
+              <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Waffles Guide</span>
+              <h4 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors mt-1">
+                A Complete Guide to the House Waffle
+              </h4>
+              <p className="text-xs text-ink-soft line-clamp-2 mt-1">
+                Pecan, chocolate chip, peanut butter, and custom waffle topping hacks.
+              </p>
+            </Link>
+
+            <Link
+              to="/blog/$slug"
+              params={{ slug: "hashbrowns-decoded" }}
+              onClick={() => setBlogOpen(false)}
+              className="p-4 rounded-xl border border-border bg-surface hover:border-primary transition-all group"
+            >
+              <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Hashbrowns</span>
+              <h4 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors mt-1">
+                Hashbrowns Decoded: Smothered &amp; Covered
+              </h4>
+              <p className="text-xs text-ink-soft line-clamp-2 mt-1">
+                All 8 official hashbrown modifiers explained with prices and calories.
+              </p>
+            </Link>
+
+            <Link
+              to="/blog/$slug"
+              params={{ slug: "budget-meals-under-ten" }}
+              onClick={() => setBlogOpen(false)}
+              className="p-4 rounded-xl border border-border bg-surface hover:border-primary transition-all group"
+            >
+              <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Value Meals</span>
+              <h4 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors mt-1">
+                6 Filling Meals Under $10
+              </h4>
+              <p className="text-xs text-ink-soft line-clamp-2 mt-1">
+                Beat inflation with complete diner plates that satisfy for under ten dollars.
+              </p>
+            </Link>
           </div>
         </div>
       </div>
@@ -292,56 +427,53 @@ export function SiteHeader({ overHero = false }: Props) {
                   <a href="/waffle-house-menu-nutritionals.pdf" download className="text-primary font-semibold hover:underline flex items-center gap-1">
                     <FileText className="h-3 w-3" /> Menu PDF Reference
                   </a>
-                  <Link to="/menu" hash="prices-heading" onClick={() => setOpen(false)} className="text-ink-soft hover:text-foreground">
-                    Price Reference
+                  <Link to="/nutrition" onClick={() => setOpen(false)} className="text-ink-soft hover:text-foreground">
+                    Nutrition Table
                   </Link>
                 </div>
               </div>
 
-              {/* Group 2: Nutrition & Health */}
+              {/* Group 2: Services & Ordering */}
               <div>
                 <div className="flex items-center justify-between pb-2 border-b border-border/60">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Nutrition</span>
-                  <Link to="/nutrition" onClick={() => setOpen(false)} className="text-xs font-semibold text-foreground hover:text-primary">
-                    Nutrition Hub →
-                  </Link>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Services &amp; Ordering</span>
                 </div>
-                <ul className="mt-2 space-y-1 text-xs">
+                <ul className="mt-2 grid grid-cols-3 gap-1.5 text-xs">
                   <li>
-                    <Link to="/nutrition" onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
-                      Calories &amp; Macro Table
+                    <Link to="/delivery" onClick={() => setOpen(false)} className="block rounded-lg border border-border p-2.5 text-center hover:border-primary hover:text-primary">
+                      <Truck className="h-4 w-4 mx-auto mb-1 text-primary" />
+                      <span className="font-semibold block">Delivery</span>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/nutrition" hash="allergens" onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
-                      Allergen &amp; Kitchen Disclosures
+                    <Link to="/catering" onClick={() => setOpen(false)} className="block rounded-lg border border-border p-2.5 text-center hover:border-primary hover:text-primary">
+                      <Utensils className="h-4 w-4 mx-auto mb-1 text-primary" />
+                      <span className="font-semibold block">Catering</span>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/nutrition" hash="protein" onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
-                      High-Protein Breakfast Selections
+                    <Link to="/happy-hour" onClick={() => setOpen(false)} className="block rounded-lg border border-border p-2.5 text-center hover:border-primary hover:text-primary">
+                      <Percent className="h-4 w-4 mx-auto mb-1 text-primary" />
+                      <span className="font-semibold block">Happy Hour</span>
                     </Link>
                   </li>
                 </ul>
               </div>
 
-              {/* Group 3: Locations & Plan a Visit */}
+              {/* Group 3: Locations & Nutrition */}
               <div>
                 <div className="flex items-center justify-between pb-2 border-b border-border/60">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Locations &amp; Plan a Visit</span>
-                  <Link to="/locations" onClick={() => setOpen(false)} className="text-xs font-semibold text-foreground hover:text-primary">
-                    Find Stores →
-                  </Link>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Locations &amp; Nutrition</span>
                 </div>
                 <ul className="mt-2 space-y-1 text-xs">
                   <li>
                     <Link to="/locations" onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
-                      2,100+ Restaurant Locations Directory
+                      📍 2,100+ Restaurant Locations Directory
                     </Link>
                   </li>
                   <li>
-                    <Link to="/locations" onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
-                      Hours, Addresses &amp; Phone Numbers
+                    <Link to="/nutrition" onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
+                      🥗 Complete Nutrition &amp; Calorie Guide
                     </Link>
                   </li>
                 </ul>
@@ -357,13 +489,13 @@ export function SiteHeader({ overHero = false }: Props) {
                 </div>
                 <ul className="mt-2 space-y-1 text-xs">
                   <li>
-                    <Link to="/blog" search={{ category: "Menu & Prices" }} onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
-                      Menu &amp; Price Guides
+                    <Link to="/blog/$slug" params={{ slug: "best-breakfast-items" }} onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
+                      📖 7 Best Breakfast Plates Ranked
                     </Link>
                   </li>
                   <li>
-                    <Link to="/blog" search={{ category: "Nutrition & Calories" }} onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
-                      Nutrition &amp; Calorie Explainers
+                    <Link to="/blog/$slug" params={{ slug: "hashbrowns-decoded" }} onClick={() => setOpen(false)} className="block px-2.5 py-1.5 font-medium hover:text-primary">
+                      📖 Hashbrown Modifiers Decoded
                     </Link>
                   </li>
                 </ul>

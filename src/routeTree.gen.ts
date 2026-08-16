@@ -12,11 +12,14 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CategoriesRouteImport } from './routes/categories'
+import { Route as CateringRouteImport } from './routes/catering'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as DeliveryRouteImport } from './routes/delivery'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HappyHourRouteImport } from './routes/happy-hour'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as NutritionRouteImport } from './routes/nutrition'
@@ -82,6 +85,11 @@ const CategoriesRoute = CategoriesRouteImport.update({
   path: '/categories',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CateringRoute = CateringRouteImport.update({
+  id: '/catering',
+  path: '/catering',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -90,6 +98,11 @@ const ContactRoute = ContactRouteImport.update({
 const CookiePolicyRoute = CookiePolicyRouteImport.update({
   id: '/cookie-policy',
   path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeliveryRoute = DeliveryRouteImport.update({
+  id: '/delivery',
+  path: '/delivery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DisclaimerRoute = DisclaimerRouteImport.update({
@@ -105,6 +118,11 @@ const EditorialPolicyRoute = EditorialPolicyRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HappyHourRoute = HappyHourRouteImport.update({
+  id: '/happy-hour',
+  path: '/happy-hour',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MenuRoute = MenuRouteImport.update({
@@ -360,11 +378,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/categories': typeof CategoriesRoute
+  '/catering': typeof CateringRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/delivery': typeof DeliveryRoute
   '/disclaimer': typeof DisclaimerRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/faq': typeof FaqRoute
+  '/happy-hour': typeof HappyHourRoute
   '/menu': typeof MenuRouteWithChildren
   '/methodology': typeof MethodologyRoute
   '/nutrition': typeof NutritionRoute
@@ -419,11 +440,14 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/categories': typeof CategoriesRoute
+  '/catering': typeof CateringRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/delivery': typeof DeliveryRoute
   '/disclaimer': typeof DisclaimerRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/faq': typeof FaqRoute
+  '/happy-hour': typeof HappyHourRoute
   '/methodology': typeof MethodologyRoute
   '/nutrition': typeof NutritionRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -469,11 +493,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/categories': typeof CategoriesRoute
+  '/catering': typeof CateringRoute
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/delivery': typeof DeliveryRoute
   '/disclaimer': typeof DisclaimerRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/faq': typeof FaqRoute
+  '/happy-hour': typeof HappyHourRoute
   '/menu': typeof MenuRouteWithChildren
   '/methodology': typeof MethodologyRoute
   '/nutrition': typeof NutritionRoute
@@ -530,11 +557,14 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/categories'
+    | '/catering'
     | '/contact'
     | '/cookie-policy'
+    | '/delivery'
     | '/disclaimer'
     | '/editorial-policy'
     | '/faq'
+    | '/happy-hour'
     | '/menu'
     | '/methodology'
     | '/nutrition'
@@ -589,11 +619,14 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/categories'
+    | '/catering'
     | '/contact'
     | '/cookie-policy'
+    | '/delivery'
     | '/disclaimer'
     | '/editorial-policy'
     | '/faq'
+    | '/happy-hour'
     | '/methodology'
     | '/nutrition'
     | '/privacy-policy'
@@ -638,11 +671,14 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/categories'
+    | '/catering'
     | '/contact'
     | '/cookie-policy'
+    | '/delivery'
     | '/disclaimer'
     | '/editorial-policy'
     | '/faq'
+    | '/happy-hour'
     | '/menu'
     | '/methodology'
     | '/nutrition'
@@ -698,11 +734,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CategoriesRoute: typeof CategoriesRoute
+  CateringRoute: typeof CateringRoute
   ContactRoute: typeof ContactRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
+  DeliveryRoute: typeof DeliveryRoute
   DisclaimerRoute: typeof DisclaimerRoute
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   FaqRoute: typeof FaqRoute
+  HappyHourRoute: typeof HappyHourRoute
   MenuRoute: typeof MenuRouteWithChildren
   MethodologyRoute: typeof MethodologyRoute
   NutritionRoute: typeof NutritionRoute
@@ -744,6 +783,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/catering': {
+      id: '/catering'
+      path: '/catering'
+      fullPath: '/catering'
+      preLoaderRoute: typeof CateringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -756,6 +802,13 @@ declare module '@tanstack/react-router' {
       path: '/cookie-policy'
       fullPath: '/cookie-policy'
       preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delivery': {
+      id: '/delivery'
+      path: '/delivery'
+      fullPath: '/delivery'
+      preLoaderRoute: typeof DeliveryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/disclaimer': {
@@ -777,6 +830,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/happy-hour': {
+      id: '/happy-hour'
+      path: '/happy-hour'
+      fullPath: '/happy-hour'
+      preLoaderRoute: typeof HappyHourRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/menu': {
@@ -1292,11 +1352,14 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CategoriesRoute: CategoriesRoute,
+  CateringRoute: CateringRoute,
   ContactRoute: ContactRoute,
   CookiePolicyRoute: CookiePolicyRoute,
+  DeliveryRoute: DeliveryRoute,
   DisclaimerRoute: DisclaimerRoute,
   EditorialPolicyRoute: EditorialPolicyRoute,
   FaqRoute: FaqRoute,
+  HappyHourRoute: HappyHourRoute,
   MenuRoute: MenuRouteWithChildren,
   MethodologyRoute: MethodologyRoute,
   NutritionRoute: NutritionRoute,

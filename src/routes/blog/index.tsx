@@ -53,19 +53,17 @@ export const Route = createFileRoute("/blog/")({
 });
 
 const blogCategories = [
-  "All",
-  "Menu & Prices",
-  "Nutrition & Calories",
+  "All Articles",
   "Breakfast",
   "Waffles",
-  "Hashbrowns",
-  "Locations",
-  "Restaurant Guides",
+  "Sides & Hashbrowns",
+  "Value Meals",
+  "Drinks",
 ];
 
 function BlogIndexPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedCategory, setSelectedCategory] = useState<string>("All Articles");
 
   useEffect(() => {
     setPosts(getAllBlogPosts());
@@ -74,9 +72,16 @@ function BlogIndexPage() {
   const featuredPost = posts[0];
 
   const filteredPosts =
-    selectedCategory === "All"
+    selectedCategory === "All Articles"
       ? posts
-      : posts.filter((p) => p.category.toLowerCase().includes(selectedCategory.toLowerCase()) || selectedCategory.toLowerCase().includes(p.category.toLowerCase()));
+      : posts.filter((p) => {
+          const cat = p.category.toLowerCase();
+          const sel = selectedCategory.toLowerCase();
+          if (sel.includes("side") || sel.includes("hashbrown")) return cat.includes("side") || cat.includes("hashbrown");
+          if (sel.includes("value")) return cat.includes("value") || cat.includes("budget");
+          if (sel.includes("drink")) return cat.includes("drink") || cat.includes("coffee") || cat.includes("beverage");
+          return cat.includes(sel) || sel.includes(cat);
+        });
 
   // Dedicated sections
   const menuPriceGuides = posts.filter((p) =>
@@ -108,7 +113,7 @@ function BlogIndexPage() {
           <div className="max-w-3xl space-y-4">
             <span className="chip">Editorial Guides &amp; Articles</span>
             <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-foreground">
-              Waffle House Menu Guides &amp; Information
+              Waffle House Menu &amp; Restaurant Guides
             </h1>
             <p className="text-base text-ink-soft leading-relaxed">
               Explore practical, reader-focused Waffle House guides covering menu items, pricing references, nutrition breakdowns, breakfast favorites, restaurant locations, and diner ordering tips. Our articles are written to make dining choices clear, accessible, and easy to navigate.

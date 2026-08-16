@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
   ArrowRight,
   Search,
@@ -13,10 +13,11 @@ import {
   Layers,
   CheckCircle2,
   AlertCircle,
-  HelpCircle,
   Sparkles,
   Utensils,
   BookOpen,
+  Coffee,
+  HeartHandshake,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -33,10 +34,17 @@ import hero4 from "@/assets/hero-4-coffee.jpg";
 import hero5 from "@/assets/hero-5-diner.jpg";
 import hero6 from "@/assets/hero-6-kitchen.jpg";
 
-// Section images
-import nutritionChef from "@/assets/nutrition-chef.jpg";
-import popularDrinks from "@/assets/popular-drinks.jpg";
+// Restaurant Gallery Images (Real Waffle House atmosphere, exterior, interior, griddle)
 import contactHeroDiner from "@/assets/contact-hero-diner.jpg";
+import nutritionChef from "@/assets/nutrition-chef.jpg";
+import aboutStoryDiner from "@/assets/about-story-diner.jpg";
+import aboutHeroGriddle from "@/assets/about-hero-griddle.jpg";
+import wafflesTablePrep from "@/assets/waffles-table-prep.jpg";
+import wafflesCircleIntro from "@/assets/waffles-circle-intro.jpg";
+import breakfastTableCooking from "@/assets/breakfast-table-cooking.jpg";
+import breakfastNutritionPrep from "@/assets/breakfast-nutrition-prep.jpg";
+import allstarIntro from "@/assets/allstar-intro.jpg";
+import allstarAbout from "@/assets/allstar-about.jpg";
 
 // Menu item images
 import wafflesImg from "@/assets/hero-waffles.jpg";
@@ -183,6 +191,70 @@ const heroSlides = [
   { src: hero6, alt: "Short-order cook preparing breakfast plates on a flat-top grill" },
 ];
 
+// 12 Real Restaurant Images representing exterior, interior, counter, griddle, and atmosphere
+const restaurantGallery = [
+  {
+    src: hero5,
+    title: "Iconic Yellow Sign & Exterior",
+    desc: "A beacon of 24-hour hospitality found across 25 U.S. states.",
+  },
+  {
+    src: contactHeroDiner,
+    title: "Open Counter & Booth Dining",
+    desc: "Classic vinyl booths and front-row seats to the open kitchen.",
+  },
+  {
+    src: hero6,
+    title: "Short-Order Grill Cooking",
+    desc: "Farm-fresh eggs and meats prepared fresh on a 375°F flat top.",
+  },
+  {
+    src: aboutHeroGriddle,
+    title: "Sizzling Breakfast on the Griddle",
+    desc: "Crispy bacon, sausage patties, and customized scattered hashbrowns.",
+  },
+  {
+    src: wafflesTablePrep,
+    title: "Cast-Iron Waffle Bakers",
+    desc: "Heavy 400°F waffle irons baking sweet cream waffles to order.",
+  },
+  {
+    src: nutritionChef,
+    title: "The Kitchen Pass & Server Station",
+    desc: "High-speed coordination delivering hot meals within minutes.",
+  },
+  {
+    src: aboutStoryDiner,
+    title: "Warm Neighborhood Atmosphere",
+    desc: "A welcoming gathering place for regulars, travelers, and late-night diners.",
+  },
+  {
+    src: breakfastTableCooking,
+    title: "Customized Griddle Cooking",
+    desc: "Short-order mastery tailored to each guest's exact order callouts.",
+  },
+  {
+    src: breakfastNutritionPrep,
+    title: "Fresh Ingredient Station",
+    desc: "Quality eggs, cheeses, and meats staged for around-the-clock service.",
+  },
+  {
+    src: wafflesCircleIntro,
+    title: "Fresh Sweet Cream Waffle",
+    desc: "Golden-brown waffle with deep pockets for butter and real syrup.",
+  },
+  {
+    src: allstarIntro,
+    title: "The All-Star Feast Assembly",
+    desc: "Plating the most famous breakfast combination in America.",
+  },
+  {
+    src: allstarAbout,
+    title: "Diner Table Hospitality",
+    desc: "Bottomless coffee mugs and Southern hospitality served 24/7/365.",
+  },
+];
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -255,11 +327,14 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   const [slide, setSlide] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [selectedArticleIndex, setSelectedArticleIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const t = setInterval(() => {
       setSlide((s) => (s + 1) % heroSlides.length);
-    }, 6000);
+    }, 5500);
     return () => clearInterval(t);
   }, []);
 
@@ -267,8 +342,18 @@ function HomePage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const activeArticle = blogPosts[selectedArticleIndex] || blogPosts[0];
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const v = searchQuery.trim();
+    if (v) {
+      navigate({ to: "/search", search: { q: v } });
+    }
+  };
+
   return (
-    <main className="bg-white text-foreground">
+    <main className="bg-white text-foreground font-sans">
       {/* ============================================================ */}
       {/* 1. HERO SECTION                                              */}
       {/* ============================================================ */}
@@ -287,7 +372,7 @@ function HomePage() {
               width={1920}
               height={1080}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/75" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/75" />
           </div>
         ))}
 
@@ -300,34 +385,37 @@ function HomePage() {
               Waffle House Menu &amp; Prices
             </h1>
             <p className="text-lg leading-relaxed text-white/85 max-w-2xl">
-              Explore the Waffle House menu with category information, menu prices, nutrition details, restaurant locations and helpful guides in one easy-to-browse resource.
+              Explore the complete Waffle House menu with {TOTAL_MENU_CATEGORIES} categories and {TOTAL_MENU_ITEMS} verified menu items, including reference prices, available nutrition information, printable menu PDF resources, restaurant locations and helpful diner guides.
             </p>
 
-            <div className="flex items-center gap-2 text-sm font-semibold text-amber-300 pt-1">
+            <div className="flex flex-wrap items-center gap-2 text-sm font-semibold text-amber-300 pt-1">
               <span>{TOTAL_MENU_CATEGORIES} Menu Categories</span>
               <span>•</span>
-              <span>{TOTAL_MENU_ITEMS} Menu Items</span>
+              <span>{TOTAL_MENU_ITEMS} Verified Items</span>
               <span>•</span>
               <span>24/7 Hours</span>
+              <span>•</span>
+              <span>2,100+ Locations</span>
             </div>
 
+            {/* Hero Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-4">
               <Link to="/menu" className="btn-primary">
-                View Full Menu <ArrowRight className="h-4 w-4" />
+                Explore Menu <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/nutrition"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
+              >
+                Nutrition Information
               </Link>
               <a
                 href="/waffle-house-menu-nutritionals.pdf"
                 download
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
               >
-                <FileText className="h-4 w-4" /> View Menu PDF
+                <Download className="h-4 w-4 text-primary" /> Download Menu PDF
               </a>
-              <Link
-                to="/nutrition"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/20 px-4 text-xs font-semibold text-white/90 hover:text-white hover:bg-white/10"
-              >
-                Nutrition Guide
-              </Link>
               <Link
                 to="/locations"
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/20 px-4 text-xs font-semibold text-white/90 hover:text-white hover:bg-white/10"
@@ -340,7 +428,7 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 2. QUICK MENU FACTS                                          */}
+      {/* 2. QUICK MENU FACTS BAR                                      */}
       {/* ============================================================ */}
       <section aria-labelledby="glance-heading" className="bg-surface py-12 border-b border-border font-sans">
         <div className="container-editorial">
@@ -369,7 +457,7 @@ function HomePage() {
             <div className="rounded-2xl border border-border bg-white p-5 text-center shadow-xs">
               <span className="font-display text-3xl font-bold text-primary">Nutrition</span>
               <p className="mt-1 text-xs font-bold uppercase tracking-wider text-foreground">Calories &amp; Macros</p>
-              <p className="mt-1 text-xs text-ink-soft">Allergen information</p>
+              <p className="mt-1 text-xs text-ink-soft">Allergen disclosures</p>
             </div>
             <div className="rounded-2xl border border-border bg-white p-5 text-center shadow-xs">
               <span className="font-display text-3xl font-bold text-primary">PDF</span>
@@ -391,7 +479,7 @@ function HomePage() {
               Explore the Waffle House Menu
             </h2>
             <p className="text-base text-ink-soft leading-relaxed">
-              Browse all 13 Waffle House menu categories, with {TOTAL_MENU_ITEMS} menu items organized for quick reference. Select a category to view dishes, estimated prices, and available nutrition details.
+              Browse all {TOTAL_MENU_CATEGORIES} Waffle House menu categories, with {TOTAL_MENU_ITEMS} menu items organized for quick reference. Select a category to view dishes, estimated prices, and available nutrition details.
             </p>
           </div>
 
@@ -448,7 +536,7 @@ function HomePage() {
                 Waffle House Menu PDF
               </h2>
               <p className="text-sm leading-relaxed text-white/75">
-                Looking for a convenient printable menu reference? Explore the Waffle House menu PDF alongside the full HTML menu and category information on this website.
+                Looking for a convenient printable menu reference? Explore the official nutritional and menu PDF alongside the full interactive categories on this website.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full sm:w-auto">
@@ -525,147 +613,91 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 6. MENU PRICES INFORMATION                                   */}
+      {/* 6. NEW: WAFFLE HOUSE RESTAURANTS GALLERY (12 REAL IMAGES)    */}
       {/* ============================================================ */}
-      <section className="bg-surface py-16 md:py-20 border-b border-border font-sans">
-        <div className="container-editorial max-w-4xl space-y-6 text-center">
-          <span className="chip">Price Reference</span>
-          <h2 className="font-display text-3xl font-bold sm:text-4xl text-foreground">
-            Waffle House Menu Prices
-          </h2>
-          <p className="text-base text-ink-soft leading-relaxed max-w-2xl mx-auto">
-            Menu prices can vary by restaurant location and may change over time. The prices displayed on this website should be treated as an informational reference. We encourage diners to confirm current local pricing directly with their restaurant.
-          </p>
-          <div className="pt-2 flex flex-wrap justify-center gap-3">
-            <Link to="/menu" className="btn-primary">
-              Explore Full Price Table <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/about"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-border bg-white px-5 text-sm font-semibold text-foreground hover:border-primary"
-            >
-              How Prices Are Sourced
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* 7. NUTRITION & CALORIES                                      */}
-      {/* ============================================================ */}
-      <section className="bg-white py-16 md:py-24 border-b border-border font-sans">
-        <div className="container-editorial max-w-4xl space-y-6 text-center">
-          <span className="chip">Nutrition Facts</span>
-          <h2 className="font-display text-3xl font-bold sm:text-4xl text-foreground">
-            Waffle House Nutrition &amp; Calories
-          </h2>
-          <p className="text-base text-ink-soft leading-relaxed max-w-2xl mx-auto">
-            Explore complete calorie counts, macronutrient breakdowns, and kitchen allergen disclosures to help you compare menu choices and plan balanced meals.
-          </p>
-          <div className="pt-2">
-            <Link
-              to="/nutrition"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-xs hover:bg-[#E2B000]"
-            >
-              View Waffle House Nutrition <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* 8. FEATURED GUIDES / BLOG                                    */}
-      {/* ============================================================ */}
-      <section className="bg-surface py-16 md:py-24 border-b border-border font-sans">
+      <section aria-labelledby="restaurants-gallery-heading" className="bg-surface py-16 md:py-24 border-b border-border font-sans">
         <div className="container-editorial">
-          <div className="max-w-2xl mb-10">
-            <span className="chip">Guides &amp; Articles</span>
-            <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl text-foreground">
-              Waffle House Menu Guides
+          <div className="max-w-3xl space-y-3 mb-12">
+            <span className="chip">Atmosphere &amp; Culture</span>
+            <h2 id="restaurants-gallery-heading" className="font-display text-3xl font-bold sm:text-4xl text-foreground">
+              Waffle House Restaurants
             </h2>
-            <p className="mt-2 text-base text-ink-soft">
-              Explore helpful guides covering menu prices, nutrition, breakfast choices, menu categories, locations and other Waffle House information.
+            <p className="text-base text-ink-soft leading-relaxed">
+              Step inside the classic American diner experience. From the iconic yellow rooflines and glowing neon signage to the bustling open-kitchen flat-top grills and booth-lined dining rooms, explore the sights and atmosphere that define Waffle House across more than 2,100 locations nationwide.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.slice(0, 6).map((post) => (
-              <article
-                key={post.slug}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-xs transition hover:-translate-y-1 hover:shadow-md"
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {restaurantGallery.map((img, idx) => (
+              <div
+                key={idx}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               >
-                <Link to="/blog/$slug" params={{ slug: post.slug }} className="block aspect-[16/10] overflow-hidden bg-muted">
+                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                   <img
-                    src={post.image}
-                    alt={post.title}
+                    src={img.src}
+                    alt={`Waffle House restaurant: ${img.title}`}
                     loading="lazy"
                     width={800}
-                    height={500}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    height={600}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                </Link>
-                <div className="p-6 flex flex-col flex-1">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-primary">{post.category}</span>
-                  <h3 className="mt-2 font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                    <Link to="/blog/$slug" params={{ slug: post.slug }}>
-                      {post.title}
-                    </Link>
-                  </h3>
-                  <p className="mt-2 text-xs text-ink-soft line-clamp-2 flex-1 leading-relaxed">{post.summary}</p>
-                  <div className="mt-4 pt-4 border-t border-border/60 flex items-center justify-between text-xs text-ink-soft">
-                    <span>{post.readMinutes} min read</span>
-                    <Link to="/blog/$slug" params={{ slug: post.slug }} className="font-semibold text-primary hover:underline">
-                      Read Guide →
-                    </Link>
-                  </div>
                 </div>
-              </article>
+                <div className="p-4 flex flex-col flex-1">
+                  <h3 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors">
+                    {img.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-ink-soft leading-relaxed flex-1">
+                    {img.desc}
+                  </p>
+                </div>
+              </div>
             ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <Link to="/blog" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
-              Browse All Menu Guides <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* 9. RESTAURANT LOCATIONS & ATMOSPHERE                         */}
+      {/* 7. RESTAURANT LOCATIONS INFORMATION                          */}
       {/* ============================================================ */}
-      <section className="bg-white py-16 md:py-24 border-b border-border font-sans">
+      <section aria-labelledby="locations-heading" className="bg-white py-16 md:py-24 border-b border-border font-sans">
         <div className="container-editorial">
           <div className="grid gap-12 lg:grid-cols-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <span className="chip">Restaurant Directory</span>
-              <h2 className="font-display text-3xl font-bold sm:text-4xl text-foreground leading-tight">
-                Find a Waffle House Near You
+              <h2 id="locations-heading" className="font-display text-3xl font-bold sm:text-4xl text-foreground leading-tight">
+                Waffle House Locations
               </h2>
               <p className="text-base text-ink-soft leading-relaxed">
-                With over 2,100 diner locations across 25 U.S. states, Waffle House is an American icon open 24 hours a day. Browse our comprehensive state and city directory for verified addresses, operating hours, phone numbers, and local menu availability.
+                With more than 2,100 diner locations operating 24 hours a day across 25 U.S. states, finding a hot, fresh meal is easy whether you're commuting early, taking a road trip, or dining late at night. Browse our comprehensive directory to locate verified addresses, store phone numbers, operating hours, and local restaurant details.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
-                {locationsData.slice(0, 6).map((s) => (
+                {locationsData.slice(0, 8).map((s) => (
                   <Link
                     key={s.stateSlug}
                     to="/locations/$state"
                     params={{ state: s.stateSlug }}
-                    className="rounded-full border border-border bg-surface px-3.5 py-1.5 text-xs font-semibold text-foreground hover:border-primary hover:text-primary"
+                    className="rounded-full border border-border bg-surface px-3.5 py-1.5 text-xs font-semibold text-foreground hover:border-primary hover:text-primary transition-colors"
                   >
                     {s.stateName}
                   </Link>
                 ))}
               </div>
-              <div className="pt-2">
+              <div className="pt-2 flex flex-wrap gap-3">
                 <Link to="/locations" className="btn-primary">
-                  Find Waffle House Locations <ArrowRight className="h-4 w-4" />
+                  Explore Locations <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  to="/delivery"
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-border bg-white px-5 text-sm font-semibold text-foreground hover:border-primary hover:text-primary transition-colors"
+                >
+                  Delivery &amp; Takeout Info
                 </Link>
               </div>
             </div>
 
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-              <div className="overflow-hidden rounded-2xl border border-border">
+              <div className="overflow-hidden rounded-2xl border border-border shadow-xs">
                 <img
                   src={hero5}
                   alt="Waffle House restaurant exterior with iconic yellow sign"
@@ -673,10 +705,10 @@ function HomePage() {
                   loading="lazy"
                 />
               </div>
-              <div className="overflow-hidden rounded-2xl border border-border">
+              <div className="overflow-hidden rounded-2xl border border-border shadow-xs">
                 <img
-                  src={hero6}
-                  alt="Short-order cook preparing breakfast on a flat-top griddle in an open diner kitchen"
+                  src={contactHeroDiner}
+                  alt="Waffle House interior counter seating and booth diner layout"
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -687,7 +719,139 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 10. WAFFLE HOUSE HISTORY                                     */}
+      {/* 8. NUTRITION & CALORIES INFORMATION                          */}
+      {/* ============================================================ */}
+      <section aria-labelledby="home-nutrition-heading" className="bg-surface py-16 md:py-24 border-b border-border font-sans">
+        <div className="container-editorial max-w-4xl space-y-6 text-center">
+          <span className="chip">Nutrition Facts</span>
+          <h2 id="home-nutrition-heading" className="font-display text-3xl font-bold sm:text-4xl text-foreground">
+            Waffle House Nutrition &amp; Calories
+          </h2>
+          <p className="text-base text-ink-soft leading-relaxed max-w-2xl mx-auto">
+            Explore complete calorie counts, macronutrient breakdowns, and kitchen allergen disclosures to help you compare menu choices and plan balanced meals.
+          </p>
+          <div className="pt-2 flex flex-wrap justify-center gap-3">
+            <Link
+              to="/nutrition"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-xs hover:bg-[#E2B000] transition-colors"
+            >
+              View Nutrition Guide <ArrowRight className="h-4 w-4" />
+            </Link>
+            <a
+              href="/waffle-house-menu-nutritionals.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-6 py-3 text-sm font-bold text-foreground shadow-xs hover:border-primary transition-colors"
+            >
+              <FileText className="h-4 w-4 text-primary" /> Nutrition PDF
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 9. RESTORED: CURRENT ARTICLES (TWO-COLUMN EDITORIAL LAYOUT)  */}
+      {/* ============================================================ */}
+      <section aria-labelledby="current-articles-heading" className="bg-white py-16 md:py-24 border-b border-border font-sans">
+        <div className="container-editorial">
+          <div className="max-w-3xl space-y-3 mb-12">
+            <span className="chip">Guides &amp; Editorial</span>
+            <h2 id="current-articles-heading" className="font-display text-3xl font-bold sm:text-4xl text-foreground">
+              Current Articles
+            </h2>
+            <p className="text-base text-ink-soft leading-relaxed">
+              Explore insightful guides and articles covering Waffle House menu favorites, pricing breakdowns, ordering strategies, and diner culture written in natural, clear English.
+            </p>
+          </div>
+
+          {/* Two-Column Editorial Layout */}
+          <div className="grid gap-8 lg:grid-cols-12 items-start">
+            {/* Left Column: Interactive Article List */}
+            <div className="lg:col-span-5 space-y-3">
+              <span className="text-xs font-bold uppercase tracking-wider text-ink-soft block mb-1">
+                Select an Article to Preview:
+              </span>
+              {blogPosts.slice(0, 5).map((post, idx) => {
+                const isSelected = selectedArticleIndex === idx;
+                return (
+                  <button
+                    key={post.slug}
+                    onClick={() => setSelectedArticleIndex(idx)}
+                    className={`w-full text-left p-4 rounded-2xl border transition-all ${
+                      isSelected
+                        ? "border-primary bg-amber-500/10 shadow-sm"
+                        : "border-border bg-white hover:border-primary/50 hover:bg-surface"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-primary">
+                        {post.category}
+                      </span>
+                      <span className="text-[11px] text-ink-soft">{post.readMinutes} min read</span>
+                    </div>
+                    <h3 className="font-display text-sm font-bold text-foreground mt-1 line-clamp-1">
+                      {post.title}
+                    </h3>
+                    <p className="text-xs text-ink-soft line-clamp-2 mt-1 leading-relaxed">
+                      {post.summary}
+                    </p>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Right Column: Featured Active Article Detail Preview */}
+            <div className="lg:col-span-7 rounded-3xl border border-border bg-surface p-6 sm:p-8 shadow-xs">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-muted mb-6">
+                <img
+                  src={activeArticle.image}
+                  alt={activeArticle.title}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+                <span className="absolute top-3 left-3 rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
+                  {activeArticle.category}
+                </span>
+              </div>
+              <div className="space-y-4">
+                <h3 className="font-display text-2xl font-bold text-foreground">
+                  {activeArticle.title}
+                </h3>
+                <p className="text-sm text-ink-soft leading-relaxed">
+                  {activeArticle.summary}
+                </p>
+                {activeArticle.quickAnswer && (
+                  <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-xs text-amber-950">
+                    <strong className="block font-bold text-amber-900 mb-1">Key Takeaway:</strong>
+                    {activeArticle.quickAnswer}
+                  </div>
+                )}
+                <div className="pt-2 flex items-center justify-between border-t border-border/60">
+                  <span className="text-xs text-ink-soft">
+                    By {activeArticle.author.name} • Updated {activeArticle.lastUpdated}
+                  </span>
+                  <Link
+                    to="/blog/$slug"
+                    params={{ slug: activeArticle.slug }}
+                    className="btn-primary py-2 px-4 text-xs font-semibold"
+                  >
+                    Read Full Guide <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Explore / See All Articles Button */}
+          <div className="mt-12 text-center">
+            <Link to="/blog" className="btn-primary">
+              See All Articles <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 10. ABOUT WAFFLE HOUSE & HISTORY                             */}
       {/* ============================================================ */}
       <section className="bg-surface py-16 md:py-24 border-b border-border font-sans">
         <div className="container-editorial max-w-4xl space-y-8">
@@ -731,7 +895,7 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 11. FAQ                                                      */}
+      {/* 11. FAQ ACCORDION                                            */}
       {/* ============================================================ */}
       <section aria-labelledby="home-faq-heading" className="bg-white py-16 md:py-24 border-b border-border font-sans">
         <div className="container-editorial max-w-3xl">

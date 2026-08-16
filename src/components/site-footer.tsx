@@ -3,12 +3,15 @@ import { Mail, Facebook, Instagram, Youtube, FileText, ChevronRight } from "luci
 import { SiteLogo } from "@/components/site-logo";
 import { CENTRAL_MENU_CATEGORIES } from "@/data/centralMenuData";
 
-const quickLinks: { label: string; to: "/" | "/about" | "/menu" | "/nutrition" | "/locations" | "/blog" | "/contact" }[] = [
+const quickLinks = [
   { label: "Home", to: "/" },
   { label: "Menu & Prices", to: "/menu" },
   { label: "Nutrition & Calories", to: "/nutrition" },
   { label: "Restaurant Locations", to: "/locations" },
   { label: "Menu Guides & Articles", to: "/blog" },
+  { label: "Delivery & Takeout", to: "/delivery" },
+  { label: "Catering Information", to: "/catering" },
+  { label: "Happy Hour & Specials", to: "/happy-hour" },
   { label: "About This Guide", to: "/about" },
   { label: "Contact & Support", to: "/contact" },
 ];
