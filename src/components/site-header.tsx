@@ -148,42 +148,52 @@ export function SiteHeader({ overHero = false }: Props) {
             </div>
           </div>
 
-          {/* Right Side: Deals, About, Contact Buttons (Both Screens) */}
+          {/* Right Side: Desktop Quick Navigation Links & Mobile Action Buttons */}
           <div className="flex items-center gap-2.5 relative z-10">
-            {/* Deals / ideals button */}
-            <Link
-              to="/deals"
-              className="flex items-center gap-1 rounded-full bg-primary hover:bg-amber-400 px-2.5 py-0.5 font-bold text-black transition-colors"
-            >
-              <Tag className="h-2.5 w-2.5" />
-              <span>Deals</span>
-            </Link>
+            {/* Desktop Quick Nav Links (Dot-separated style like reference) */}
+            <div className="hidden lg:flex items-center gap-2 text-white/70 text-[11px] font-medium mr-1">
+              <Link to="/about" className="hover:text-primary transition-colors">About</Link>
+              <span className="text-white/30">·</span>
+              <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
+              <span className="text-white/30">·</span>
+              <Link to="/updates" className="hover:text-primary transition-colors">Updates</Link>
+              <span className="text-white/30">·</span>
+              <Link to="/deals" className="hover:text-primary transition-colors">Deals</Link>
+              <span className="text-white/30">·</span>
+              <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
+            </div>
 
-            {/* Small About text button next to Deals on mobile/tablet/desktop */}
-            <Link
-              to="/about"
-              className="text-white/80 hover:text-primary transition-colors font-bold px-1 py-0.5 text-[10px]"
-            >
-              About
-            </Link>
-
-            <Link
-              to="/contact"
-              className="flex items-center gap-1 rounded-full border border-white/30 bg-white/10 hover:bg-white/20 px-2.5 py-0.5 font-bold text-white transition-colors"
-            >
-              <Phone className="h-2.5 w-2.5" />
-              Contact
-            </Link>
-
-            {/* PDF link on mobile/tablet only */}
-            <a
-              href="/waffle-house-menu-nutritionals.pdf"
-              download
-              className="lg:hidden flex items-center gap-1 text-white/55 hover:text-primary transition-colors text-[10px] ml-1"
-            >
-              <FileText className="h-3 w-3" />
-              PDF
-            </a>
+            {/* Mobile / Tablet Action Buttons */}
+            <div className="flex lg:hidden items-center gap-2">
+              <Link
+                to="/deals"
+                className="flex items-center gap-1 rounded-full bg-primary hover:bg-amber-400 px-2.5 py-0.5 font-bold text-black transition-colors"
+              >
+                <Tag className="h-2.5 w-2.5" />
+                <span>Deals</span>
+              </Link>
+              <Link
+                to="/about"
+                className="text-white/80 hover:text-primary transition-colors font-bold px-1 py-0.5 text-[10px]"
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className="flex items-center gap-1 rounded-full border border-white/30 bg-white/10 hover:bg-white/20 px-2.5 py-0.5 font-bold text-white transition-colors"
+              >
+                <Phone className="h-2.5 w-2.5" />
+                Contact
+              </Link>
+              <a
+                href="/waffle-house-menu-nutritionals.pdf"
+                download
+                className="flex items-center gap-1 text-white/55 hover:text-primary transition-colors text-[10px] ml-1"
+              >
+                <FileText className="h-3 w-3" />
+                PDF
+              </a>
+            </div>
           </div>
 
         </div>
@@ -207,7 +217,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 <Link
                   to="/"
                   activeOptions={{ exact: true }}
-                  className="rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Home
                 </Link>
@@ -221,7 +231,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <Link
                   to="/menu"
-                  className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Menu
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "menu" ? "rotate-180 text-primary" : ""}`} />
@@ -263,7 +273,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <Link
                   to="/nutrition"
-                  className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Nutrition
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "nutrition" ? "rotate-180 text-primary" : ""}`} />
@@ -307,6 +317,26 @@ export function SiteHeader({ overHero = false }: Props) {
                 )}
               </li>
 
+              {/* ── BREAKFAST (Direct Link) ── */}
+              <li>
+                <Link
+                  to="/breakfast"
+                  className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                >
+                  Breakfast
+                </Link>
+              </li>
+
+              {/* ── CATERING (Direct Link) ── */}
+              <li>
+                <Link
+                  to="/catering"
+                  className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                >
+                  Catering
+                </Link>
+              </li>
+
               {/* ── LOCATIONS ── */}
               <li
                 className="relative"
@@ -315,7 +345,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <Link
                   to="/locations"
-                  className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Locations
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "locations" ? "rotate-180 text-primary" : ""}`} />
@@ -354,6 +384,16 @@ export function SiteHeader({ overHero = false }: Props) {
                 )}
               </li>
 
+              {/* ── DEALS ── */}
+              <li>
+                <Link
+                  to="/deals"
+                  className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                >
+                  Deals
+                </Link>
+              </li>
+
               {/* ── BLOG ── */}
               <li
                 className="relative"
@@ -362,7 +402,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <Link
                   to="/blog"
-                  className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Blog
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "blog" ? "rotate-180 text-primary" : ""}`} />
@@ -405,7 +445,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   More
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "more" ? "rotate-180 text-primary" : ""}`} />
@@ -437,26 +477,6 @@ export function SiteHeader({ overHero = false }: Props) {
                     </div>
                   </div>
                 )}
-              </li>
-
-              {/* ── ABOUT ── */}
-              <li>
-                <Link
-                  to="/about"
-                  className="rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-
-              {/* ── CONTACT ── */}
-              <li>
-                <Link
-                  to="/contact"
-                  className="rounded-full px-3 py-2 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
-                >
-                  Contact
-                </Link>
               </li>
             </ul>
           </nav>
