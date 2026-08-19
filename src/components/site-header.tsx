@@ -13,6 +13,7 @@ import {
   Calendar,
   Phone,
   Tag,
+  Gift,
 } from "lucide-react";
 import { CENTRAL_MENU_CATEGORIES } from "@/data/centralMenuData";
 import { SiteLogo } from "@/components/site-logo";
@@ -49,6 +50,7 @@ const keyStates = [
 const moreLinks = [
   { label: "Delivery & Takeout", href: "/delivery", icon: Truck },
   { label: "Catering & Group Orders", href: "/catering", icon: Utensils },
+  { label: "Gift Cards Guide", href: "/gift-cards", icon: Gift },
   { label: "Happy Hour & Value Guide", href: "/happy-hour", icon: Percent },
   { label: "Hours & Visit Guide", href: "/hours", icon: null },
   { label: "Deals & Promotions", href: "/deals", icon: null },
@@ -159,6 +161,8 @@ export function SiteHeader({ overHero = false }: Props) {
               <Link to="/updates" className="hover:text-primary transition-colors">Updates</Link>
               <span className="text-white/30">·</span>
               <Link to="/deals" className="hover:text-primary transition-colors">Deals</Link>
+              <span className="text-white/30">·</span>
+              <Link to="/gift-cards" className="hover:text-primary transition-colors">Gift Cards</Link>
               <span className="text-white/30">·</span>
               <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
             </div>

@@ -13,6 +13,7 @@ const quickLinks = [
   { label: "Waffles Guide", to: "/waffles" },
   { label: "Hashbrowns Guide", to: "/hashbrowns" },
   { label: "Deals & Promotions", to: "/deals" },
+  { label: "Gift Cards Guide", to: "/gift-cards" },
   { label: "Delivery & Takeout", to: "/delivery" },
   { label: "Catering Information", to: "/catering" },
   { label: "Happy Hour & Value", to: "/happy-hour" },

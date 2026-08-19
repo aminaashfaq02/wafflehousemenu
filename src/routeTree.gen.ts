@@ -24,6 +24,7 @@ import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
 import { Route as EditorsRouteImport } from './routes/editors'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GiftCardsRouteImport } from './routes/gift-cards'
 import { Route as HappyHourRouteImport } from './routes/happy-hour'
 import { Route as HashbrownsRouteImport } from './routes/hashbrowns'
 import { Route as HoursRouteImport } from './routes/hours'
@@ -153,6 +154,11 @@ const EditorsRoute = EditorsRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiftCardsRoute = GiftCardsRouteImport.update({
+  id: '/gift-cards',
+  path: '/gift-cards',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HappyHourRoute = HappyHourRouteImport.update({
@@ -450,6 +456,7 @@ export interface FileRoutesByFullPath {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/editors': typeof EditorsRoute
   '/faq': typeof FaqRoute
+  '/gift-cards': typeof GiftCardsRoute
   '/happy-hour': typeof HappyHourRoute
   '/hashbrowns': typeof HashbrownsRoute
   '/hours': typeof HoursRoute
@@ -522,6 +529,7 @@ export interface FileRoutesByTo {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/editors': typeof EditorsRoute
   '/faq': typeof FaqRoute
+  '/gift-cards': typeof GiftCardsRoute
   '/happy-hour': typeof HappyHourRoute
   '/hashbrowns': typeof HashbrownsRoute
   '/hours': typeof HoursRoute
@@ -585,6 +593,7 @@ export interface FileRoutesById {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/editors': typeof EditorsRoute
   '/faq': typeof FaqRoute
+  '/gift-cards': typeof GiftCardsRoute
   '/happy-hour': typeof HappyHourRoute
   '/hashbrowns': typeof HashbrownsRoute
   '/hours': typeof HoursRoute
@@ -659,6 +668,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/editors'
     | '/faq'
+    | '/gift-cards'
     | '/happy-hour'
     | '/hashbrowns'
     | '/hours'
@@ -731,6 +741,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/editors'
     | '/faq'
+    | '/gift-cards'
     | '/happy-hour'
     | '/hashbrowns'
     | '/hours'
@@ -793,6 +804,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/editors'
     | '/faq'
+    | '/gift-cards'
     | '/happy-hour'
     | '/hashbrowns'
     | '/hours'
@@ -866,6 +878,7 @@ export interface RootRouteChildren {
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   EditorsRoute: typeof EditorsRoute
   FaqRoute: typeof FaqRoute
+  GiftCardsRoute: typeof GiftCardsRoute
   HappyHourRoute: typeof HappyHourRoute
   HashbrownsRoute: typeof HashbrownsRoute
   HoursRoute: typeof HoursRoute
@@ -995,6 +1008,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gift-cards': {
+      id: '/gift-cards'
+      path: '/gift-cards'
+      fullPath: '/gift-cards'
+      preLoaderRoute: typeof GiftCardsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/happy-hour': {
@@ -1564,6 +1584,7 @@ const rootRouteChildren: RootRouteChildren = {
   EditorialPolicyRoute: EditorialPolicyRoute,
   EditorsRoute: EditorsRoute,
   FaqRoute: FaqRoute,
+  GiftCardsRoute: GiftCardsRoute,
   HappyHourRoute: HappyHourRoute,
   HashbrownsRoute: HashbrownsRoute,
   HoursRoute: HoursRoute,
