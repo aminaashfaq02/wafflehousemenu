@@ -637,6 +637,24 @@ export function SiteHeader({ overHero = false }: Props) {
               )}
             </div>
 
+            {/* Direct Quick Pills Row for Mobile */}
+            <div className="grid grid-cols-2 gap-2 pt-1">
+              <Link
+                to="/breakfast"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-1.5 rounded-xl border border-border bg-surface py-2 px-3 text-xs font-bold text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
+              >
+                🍳 Breakfast
+              </Link>
+              <Link
+                to="/catering"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-1.5 rounded-xl border border-border bg-surface py-2 px-3 text-xs font-bold text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
+              >
+                🚚 Catering
+              </Link>
+            </div>
+
             {/* ── 3. Locations ── */}
             <div className="rounded-xl border border-border overflow-hidden">
               <button
@@ -651,7 +669,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 <div className="border-t border-border bg-white">
                   <Link to="/locations" onClick={() => setOpen(false)}
                     className="block px-4 py-2.5 text-xs font-bold text-primary bg-amber-50 border-b border-border/50 hover:underline">
-                    All 2,100+ Locations →
+                    All 1,900+ Locations (25 States) →
                   </Link>
                   {keyStates.map((st) => (
                     <Link
