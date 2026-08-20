@@ -1,11 +1,14 @@
-import locImg1 from "@/assets/iloveimg-compressed (8)/loc-4-exterior.jpeg";
-import locImg2 from "@/assets/iloveimg-compressed (8)/loc-5-exterior-twilight.jpeg";
-import locImg3 from "@/assets/iloveimg-compressed (8)/loc-6-highway.jpeg";
-import locImg4 from "@/assets/iloveimg-compressed (8)/loc-8-yellow-signboard.jpeg";
-import locImg5 from "@/assets/iloveimg-compressed (8)/loc-1-diner-booths.jpeg";
-import locImg6 from "@/assets/iloveimg-compressed (8)/loc-7-signboard-sky.jpeg";
-import locImg7 from "@/assets/iloveimg-compressed (8)/loc-2-empty-diner.jpeg";
-import locImg8 from "@/assets/iloveimg-compressed (8)/loc-3-dining-area.jpeg";
+import locImg1 from "@/assets/hero-5-diner.jpg";
+import locImg2 from "@/assets/contact-hero-diner.jpg";
+import locImg3 from "@/assets/about-story-diner.jpg";
+import locImg4 from "@/assets/story-diner.jpg";
+import locImg5 from "@/assets/hero-6-kitchen.jpg";
+import locImg6 from "@/assets/about-hero-griddle.jpg";
+import locImg7 from "@/assets/breakfast-table-cooking.jpg";
+import locImg8 from "@/assets/waffles-table-prep.jpg";
+import locImg9 from "@/assets/nutrition-chef.jpg";
+import locImg10 from "@/assets/contact-form-kitchen.jpg";
+
 
 export interface StoreBranch {
   name: string;
@@ -68,7 +71,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Birmingham Southside",
-            image: locImg6,
+            image: locImg1,
             slug: "birmingham-southside",
             address: "951 20th St S",
             city: "Birmingham",
@@ -85,7 +88,7 @@ export const locationsData: StateLocations[] = [
           },
           {
             name: "Waffle House Birmingham Lakeshore",
-            image: locImg1,
+            image: locImg2,
             slug: "birmingham-lakeshore",
             address: "249 Lakeshore Pkwy",
             city: "Birmingham",
@@ -108,7 +111,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Huntsville University",
-            image: locImg2,
+            image: locImg3,
             slug: "huntsville-university",
             address: "4110 University Dr NW",
             city: "Huntsville",
@@ -131,7 +134,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Mobile Airport",
-            image: locImg3,
+            image: locImg4,
             slug: "mobile-airport",
             address: "6800 Airport Blvd",
             city: "Mobile",
@@ -154,7 +157,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Montgomery Eastern Blvd",
-            image: locImg4,
+            image: locImg5,
             slug: "montgomery-eastern-blvd",
             address: "2444 Eastern Blvd",
             city: "Montgomery",
@@ -177,7 +180,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Tuscaloosa Strip (Bama)",
-            image: locImg5,
+            image: locImg6,
             slug: "tuscaloosa-university",
             address: "1217 University Blvd",
             city: "Tuscaloosa",
@@ -208,7 +211,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Phoenix I-17",
-            image: locImg1,
+            image: locImg7,
             slug: "phoenix-i17",
             address: "2445 W Thomas Rd",
             city: "Phoenix",
@@ -231,7 +234,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Tucson Speedway",
-            image: locImg2,
+            image: locImg8,
             slug: "tucson-speedway",
             address: "3920 E Speedway Blvd",
             city: "Tucson",
@@ -254,7 +257,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Mesa Superstition",
-            image: locImg3,
+            image: locImg9,
             slug: "mesa-superstition",
             address: "1410 S Country Club Dr",
             city: "Mesa",
@@ -285,7 +288,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Little Rock Broadway",
-            image: locImg4,
+            image: locImg10,
             slug: "little-rock-broadway",
             address: "2600 S Broadway St",
             city: "Little Rock",
@@ -308,7 +311,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Fayetteville Razorback",
-            image: locImg5,
+            image: locImg1,
             slug: "fayetteville-razorback",
             address: "2311 W Martin Luther King Jr Blvd",
             city: "Fayetteville",
@@ -339,7 +342,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Denver Airport Blvd",
-            image: locImg6,
+            image: locImg2,
             slug: "denver-airport",
             address: "15980 E 40th Ave",
             city: "Aurora",
@@ -362,7 +365,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Colorado Springs Academy",
-            image: locImg7,
+            image: locImg3,
             slug: "colorado-springs-academy",
             address: "1725 N Academy Blvd",
             city: "Colorado Springs",
@@ -393,7 +396,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Newark S College",
-            image: locImg8,
+            image: locImg4,
             slug: "newark-college",
             address: "1450 S College Ave",
             city: "Newark",
@@ -441,7 +444,7 @@ export const locationsData: StateLocations[] = [
           },
           {
             name: "Waffle House Jacksonville Beach Blvd",
-            image: locImg1,
+            image: locImg6,
             slug: "jacksonville-beach-blvd",
             address: "10150 Beach Blvd",
             city: "Jacksonville",
@@ -464,7 +467,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Orlando International Dr",
-            image: locImg2,
+            image: locImg7,
             slug: "orlando-international-dr",
             address: "5350 International Dr",
             city: "Orlando",
@@ -487,7 +490,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Tampa Hillsborough",
-            image: locImg3,
+            image: locImg8,
             slug: "tampa-hillsborough",
             address: "4702 E Hillsborough Ave",
             city: "Tampa",
@@ -510,7 +513,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Tallahassee FSU Strip",
-            image: locImg4,
+            image: locImg9,
             slug: "tallahassee-tennessee-st",
             address: "2115 W Tennessee St",
             city: "Tallahassee",
@@ -541,7 +544,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Downtown Atlanta",
-            image: locImg1,
+            image: locImg10,
             slug: "downtown-atlanta",
             address: "135 Andrew Young International Blvd NW",
             city: "Atlanta",
@@ -560,7 +563,7 @@ export const locationsData: StateLocations[] = [
           },
           {
             name: "Waffle House Midtown Atlanta",
-            image: locImg2,
+            image: locImg1,
             slug: "midtown-atlanta",
             address: "100 10th St NW",
             city: "Atlanta",
@@ -576,7 +579,7 @@ export const locationsData: StateLocations[] = [
           },
           {
             name: "Waffle House Tech Square",
-            image: locImg6,
+            image: locImg2,
             slug: "atlanta-tech-square",
             address: "66 5th St NW",
             city: "Atlanta",
@@ -676,7 +679,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Collinsville Beltline",
-            image: locImg7,
+            image: locImg6,
             slug: "collinsville-beltline",
             address: "604 S Morrison Ave",
             city: "Collinsville",
@@ -707,7 +710,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Indianapolis Southport",
-            image: locImg8,
+            image: locImg7,
             slug: "indianapolis-southport",
             address: "7125 S Keystone Ave",
             city: "Indianapolis",
@@ -738,7 +741,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Overland Park 95th",
-            image: locImg1,
+            image: locImg8,
             slug: "overland-park-95th",
             address: "9510 Metcalf Ave",
             city: "Overland Park",
@@ -769,7 +772,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Louisville Preston Hwy",
-            image: locImg2,
+            image: locImg9,
             slug: "louisville-preston",
             address: "4920 Preston Hwy",
             city: "Louisville",
@@ -792,7 +795,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Lexington Broadway",
-            image: locImg3,
+            image: locImg10,
             slug: "lexington-broadway",
             address: "857 S Broadway",
             city: "Lexington",
@@ -823,7 +826,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Baton Rouge College Dr",
-            image: locImg4,
+            image: locImg1,
             slug: "baton-rouge-college-dr",
             address: "2445 College Dr",
             city: "Baton Rouge",
@@ -846,7 +849,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Metairie Veterans",
-            image: locImg5,
+            image: locImg2,
             slug: "metairie-veterans",
             address: "4724 Veterans Memorial Blvd",
             city: "Metairie",
@@ -877,7 +880,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Elkton Pulaski Hwy",
-            image: locImg6,
+            image: locImg3,
             slug: "elkton-pulaski",
             address: "800 Pulaski Hwy",
             city: "Elkton",
@@ -908,7 +911,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Jackson High St",
-            image: locImg7,
+            image: locImg4,
             slug: "jackson-high-st",
             address: "820 High St",
             city: "Jackson",
@@ -931,7 +934,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Biloxi Beach Blvd",
-            image: locImg8,
+            image: locImg5,
             slug: "biloxi-beach-blvd",
             address: "1720 Beach Blvd",
             city: "Biloxi",
@@ -962,7 +965,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House St. Louis Hampton Ave",
-            image: locImg1,
+            image: locImg6,
             slug: "st-louis-hampton",
             address: "3235 Hampton Ave",
             city: "St. Louis",
@@ -985,7 +988,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Kansas City Front St",
-            image: locImg2,
+            image: locImg7,
             slug: "kansas-city-front-st",
             address: "1801 Universal Ave",
             city: "Kansas City",
@@ -1016,7 +1019,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Albuquerque Coors",
-            image: locImg3,
+            image: locImg8,
             slug: "albuquerque-coors",
             address: "2410 Coors Blvd NW",
             city: "Albuquerque",
@@ -1047,7 +1050,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Charlotte Uptown",
-            image: locImg4,
+            image: locImg9,
             slug: "charlotte-uptown",
             address: "330 N Tryon St",
             city: "Charlotte",
@@ -1064,7 +1067,7 @@ export const locationsData: StateLocations[] = [
           },
           {
             name: "Waffle House Charlotte South Blvd",
-            image: locImg5,
+            image: locImg10,
             slug: "charlotte-south-blvd",
             address: "4725 South Blvd",
             city: "Charlotte",
@@ -1087,7 +1090,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Raleigh Hillsborough",
-            image: locImg6,
+            image: locImg1,
             slug: "raleigh-hillsborough",
             address: "3909 Hillsborough St",
             city: "Raleigh",
@@ -1110,7 +1113,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Greensboro High Point Rd",
-            image: locImg7,
+            image: locImg2,
             slug: "greensboro-high-point",
             address: "2408 Gate City Blvd",
             city: "Greensboro",
@@ -1141,7 +1144,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Columbus OSU High St",
-            image: locImg8,
+            image: locImg3,
             slug: "columbus-osu-high-st",
             address: "1712 N High St",
             city: "Columbus",
@@ -1164,7 +1167,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Cincinnati Ridge Rd",
-            image: locImg1,
+            image: locImg4,
             slug: "cincinnati-ridge-rd",
             address: "3295 Ridge Ave",
             city: "Cincinnati",
@@ -1187,7 +1190,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Dayton Miller Ln",
-            image: locImg2,
+            image: locImg5,
             slug: "dayton-miller-ln",
             address: "6800 Miller Ln",
             city: "Dayton",
@@ -1218,7 +1221,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House OKC Meridian",
-            image: locImg3,
+            image: locImg6,
             slug: "okc-meridian",
             address: "700 S Meridian Ave",
             city: "Oklahoma City",
@@ -1241,7 +1244,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Tulsa Memorial",
-            image: locImg4,
+            image: locImg7,
             slug: "tulsa-memorial",
             address: "7108 S Memorial Dr",
             city: "Tulsa",
@@ -1272,7 +1275,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Bethlehem Airport",
-            image: locImg5,
+            image: locImg8,
             slug: "bethlehem-airport",
             address: "2161 Schoenersville Rd",
             city: "Bethlehem",
@@ -1295,7 +1298,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Lancaster Lincoln Hwy",
-            image: locImg6,
+            image: locImg9,
             slug: "lancaster-lincoln-hwy",
             address: "2123 Lincoln Hwy E",
             city: "Lancaster",
@@ -1326,7 +1329,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Columbia Five Points",
-            image: locImg7,
+            image: locImg10,
             slug: "columbia-five-points",
             address: "740 Harden St",
             city: "Columbia",
@@ -1350,7 +1353,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Charleston Savannah Hwy",
-            image: locImg8,
+            image: locImg1,
             slug: "charleston-savannah-hwy",
             address: "1831 Savannah Hwy",
             city: "Charleston",
@@ -1373,7 +1376,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Greenville Laurens Rd",
-            image: locImg1,
+            image: locImg2,
             slug: "greenville-laurens",
             address: "1002 Laurens Rd",
             city: "Greenville",
@@ -1396,7 +1399,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Myrtle Beach Kings Hwy",
-            image: locImg2,
+            image: locImg3,
             slug: "myrtle-beach-kings-hwy",
             address: "110 N Kings Hwy",
             city: "Myrtle Beach",
@@ -1427,7 +1430,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Nashville West End (Vanderbilt)",
-            image: locImg3,
+            image: locImg4,
             slug: "nashville-west-end",
             address: "2104 West End Ave",
             city: "Nashville",
@@ -1443,7 +1446,7 @@ export const locationsData: StateLocations[] = [
           },
           {
             name: "Waffle House Nashville Music Valley",
-            image: locImg4,
+            image: locImg5,
             slug: "nashville-music-valley",
             address: "2416 Music Valley Dr",
             city: "Nashville",
@@ -1466,7 +1469,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Memphis Union Ave",
-            image: locImg5,
+            image: locImg6,
             slug: "memphis-union-ave",
             address: "1631 Union Ave",
             city: "Memphis",
@@ -1489,7 +1492,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Knoxville Cumberland (UT)",
-            image: locImg6,
+            image: locImg7,
             slug: "knoxville-cumberland",
             address: "1840 Cumberland Ave",
             city: "Knoxville",
@@ -1512,7 +1515,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Chattanooga Brainerd Rd",
-            image: locImg7,
+            image: locImg8,
             slug: "chattanooga-brainerd",
             address: "4920 Brainerd Rd",
             city: "Chattanooga",
@@ -1543,7 +1546,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Houston Central (Southwest Fwy)",
-            image: locImg8,
+            image: locImg9,
             slug: "houston-central",
             address: "2202 Southwest Fwy",
             city: "Houston",
@@ -1560,7 +1563,7 @@ export const locationsData: StateLocations[] = [
           },
           {
             name: "Waffle House Houston Westheimer",
-            image: locImg1,
+            image: locImg10,
             slug: "houston-westheimer",
             address: "10901 Westheimer Rd",
             city: "Houston",
@@ -1583,7 +1586,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Dallas Stemmons Fwy",
-            image: locImg2,
+            image: locImg1,
             slug: "dallas-stemmons",
             address: "2444 N Stemmons Fwy",
             city: "Dallas",
@@ -1606,7 +1609,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Austin Ben White",
-            image: locImg3,
+            image: locImg2,
             slug: "austin-ben-white",
             address: "7809 E Ben White Blvd",
             city: "Austin",
@@ -1629,7 +1632,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House San Antonio Walzem",
-            image: locImg4,
+            image: locImg3,
             slug: "san-antonio-walzem",
             address: "5202 Walzem Rd",
             city: "San Antonio",
@@ -1660,7 +1663,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Richmond Broad St",
-            image: locImg5,
+            image: locImg4,
             slug: "richmond-broad-st",
             address: "4715 W Broad St",
             city: "Richmond",
@@ -1683,7 +1686,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Virginia Beach Blvd",
-            image: locImg6,
+            image: locImg5,
             slug: "virginia-beach-blvd",
             address: "3804 Virginia Beach Blvd",
             city: "Virginia Beach",
@@ -1714,7 +1717,7 @@ export const locationsData: StateLocations[] = [
         stores: [
           {
             name: "Waffle House Charleston MacCorkle Ave",
-            image: locImg7,
+            image: locImg6,
             slug: "charleston-maccorkle",
             address: "3901 MacCorkle Ave SE",
             city: "Charleston",

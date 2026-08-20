@@ -8,6 +8,95 @@ import pattyMeltImg from "@/assets/patty-melt.jpg";
 import wafflesImg from "@/assets/hero-waffles.jpg";
 import lowcalEggsImg from "@/assets/nutrition-lowcal-eggs.jpg";
 
+// Verified Recipe-Specific Image Assets
+import img_allstar_bacon from "@/assets/all-star-breakfast.jpg";
+import img_allstar_sausage from "@/assets/Classic_breakfast_with_eggs_and_202608121019.jpeg";
+import img_allstar_ham from "@/assets/Country_ham_and_eggs_breakfast_202608121021.jpeg";
+import img_allstar_pecan from "@/assets/waffle-peanut-butter.jpg";
+import img_allstar_grits from "@/assets/allstar_scrambled_eggs_1786276403171.jpg";
+import img_allstar_dbl_hb from "@/assets/breakfast-table-cooking.jpg";
+
+import img_waffle_classic from "@/assets/Waffle_with_butter_and_syrup_202608101141.jpeg";
+import img_waffle_pecan from "@/assets/waffle-peanut-butter.jpg";
+import img_waffle_choc_chip from "@/assets/waffle-chocolate-chip.jpg";
+import img_waffle_pb from "@/assets/Waffle_with_peanut_butter_drizzle_202608121014.jpeg";
+import img_waffle_double from "@/assets/waffle-double.jpg";
+import img_waffle_blueberry from "@/assets/waffle-blueberry.jpg";
+
+import img_two_eggs from "@/assets/Egg_breakfast_plate_with_toast_202608101154.jpeg";
+import img_cheese_n_eggs from "@/assets/Scrambled_eggs_with_toast_and_202608101155.jpeg";
+import img_tbone_eggs from "@/assets/Steak_and_eggs_breakfast_2K_202608101157.jpeg";
+import img_sirloin_eggs from "@/assets/Sirloin_steak_with_grits_and_202608101346.jpeg";
+import img_pork_chops_eggs from "@/assets/Pork_chops_and_eggs_breakfast_202608121030.jpeg";
+import img_country_ham_eggs from "@/assets/Country_ham_and_eggs_breakfast_202608121021.jpeg";
+import img_chicken_eggs from "@/assets/Grilled_chicken_and_eggs_breakfast_202608121023.jpeg";
+
+import img_cheese_omelet from "@/assets/Cheese_omelet_with_toast_and_202608101203.jpeg";
+import img_ham_cheese_omelet from "@/assets/Omelet_with_ham_and_cheese_202608101205.jpeg";
+import img_fiesta_omelet from "@/assets/Fiesta_omelet_served_with_toast_202608101206 (1).jpeg";
+import img_cheesesteak_omelet from "@/assets/Cheesesteak_omelet_with_toast_an._202608101205.jpeg";
+
+import img_bowl_sausage from "@/assets/Bowl_of_hashbrowns_and_eggs_202608101324.jpeg";
+import img_bowl_bacon from "@/assets/Hashbrown_bowl_with_eggs_and_202608101318.jpeg";
+import img_bowl_ham from "@/assets/Hashbrown_bowl_with_eggs_and_202608101322.jpeg";
+import img_bowl_cheesesteak from "@/assets/Bowl_with_hashbrowns_and_beef_202608101325.jpeg";
+
+import img_sandwich_bacon from "@/assets/Texas_Bacon_Egg_Cheese_Melt_202608101229.jpeg";
+import img_sandwich_sausage from "@/assets/Sausage_egg_and_cheese_sandwich_202608121108.jpeg";
+import img_sandwich_ham from "@/assets/Texas_ham_egg_and_cheese_202608101235.jpeg";
+import img_melt_bacon from "@/assets/Texas_Bacon_Egg_Cheese_Melt_202608101229.jpeg";
+import img_melt_sausage from "@/assets/Texas_sausage_melt_on_plate_202608101243.jpeg";
+import img_melt_ham from "@/assets/Texas_ham_egg_and_cheese_202608101237.jpeg";
+
+import img_biscuit_gravy from "@/assets/biscuit_sausage_gravy_1786323700390.jpg";
+import img_biscuit_sausage from "@/assets/Breakfast_biscuit_with_sausage_a._202608101254.jpeg";
+import img_biscuit_bacon from "@/assets/Pork_bacon_in_biscuit_2K_202608101247.jpeg";
+import img_biscuit_ham from "@/assets/Buttermilk_biscuits_with_ham_served_202608101251.jpeg";
+import img_biscuit_egg_cheese from "@/assets/bacon_egg_cheese_biscuit_1786324162341.jpg";
+import img_biscuit_chicken from "@/assets/Chicken_sausage_biscuit_with_egg_202608101308.jpeg";
+
+import img_burger_angus from "@/assets/Classic_burger_on_white_plate_202608101338.jpeg";
+import img_burger_cheese from "@/assets/Cheeseburger_on_toasted_bun_2K_202608121040.jpeg";
+import img_burger_dbl_cheese from "@/assets/Double-decker_burger_with_cheese_2K_202608121043.jpeg";
+import img_burger_bacon from "@/assets/Angus_beef_burger_on_bun_202608121036.jpeg";
+import img_burger_triple from "@/assets/Burger_on_white_plate_2K_202608121032.jpeg";
+
+import img_sandwich_chicken from "@/assets/Grilled_chicken_sandwich_on_plate_202608101346.jpeg";
+import img_sandwich_grilled_cheese from "@/assets/grilled_cheese_sandwich_1786372461713.jpg";
+import img_sandwich_blt from "@/assets/BLT_sandwich_cut_in_half_202608101351.jpeg";
+import img_melt_cheesesteak from "@/assets/texas_cheesesteak_melt_1786372309616.jpg";
+import img_melt_patty from "@/assets/texas_patty_melt_1786372645053.jpg";
+import img_sandwich_ham_cheese from "@/assets/Ham_sandwich_with_cheese_and_202608121128.jpeg";
+
+import img_dinner_tbone from "@/assets/tbone-steak.jpg";
+import img_dinner_sirloin from "@/assets/Sirloin_steak_with_grits_and_202608101346.jpeg";
+import img_dinner_pork_chop from "@/assets/Grilled_pork_chops_with_eggs_202608101201.jpeg";
+import img_dinner_chicken from "@/assets/Chicken_breast_with_eggs_and_202608121025.jpeg";
+import img_dinner_ham_steak from "@/assets/Hickory-smoked_city_ham_on_plate_202608101139.jpeg";
+import img_dinner_country_fried from "@/assets/Steak_and_eggs_breakfast_platter_202608101156.jpeg";
+
+import img_hb_regular from "@/assets/Crispy_shredded_potato_hashbrowns_2K_202608101306.jpeg";
+import img_hb_large from "@/assets/Plate_of_potato_hashbrowns_2K_202608101310.jpeg";
+import img_hb_triple from "@/assets/Shredded_potato_hashbrowns_on_plate_202608101305.jpeg";
+import img_hb_smothered_cov from "@/assets/Hashbrowns_with_cheese_and_onions_202608101311.jpeg";
+import img_hb_all_the_way from "@/assets/Loaded_hashbrowns_with_toppings_2K_202608101313.jpeg";
+import img_hb_gravy from "@/assets/Hashbrowns_smothered_in_sausage_…_202608131952.jpeg";
+
+import img_side_bacon from "@/assets/Pork_bacon_strips_on_plate_202608101134.jpeg";
+import img_side_sausage from "@/assets/Grilled_pork_sausage_patties_on_202608101136.jpeg";
+import img_side_ham from "@/assets/Grilled_country_ham_slice_2K_202608101140.jpeg";
+import img_side_grits from "@/assets/Creamy_grits_bowl_with_toppings_202608101333.jpeg";
+import img_side_toast from "@/assets/Two_slices_of_buttered_toast_202608101033.jpeg";
+import img_side_tomatoes from "@/assets/Sliced_tomatoes_on_plate_2K_202608101133.jpeg";
+
+import img_bev_coffee from "@/assets/bev_classic_coffee_1786254698534.jpg";
+import img_bev_iced_tea from "@/assets/bev_sweet_tea_1786254748349.jpg";
+import img_bev_oj from "@/assets/bev_orange_juice_1786254860229.jpg";
+import img_bev_choc_milk from "@/assets/Glass_of_dark_chocolate_milk_202608132002.jpeg";
+import img_bev_pecan_pie from "@/assets/Pecan_pie_on_dessert_plate_202608101354.jpeg";
+
+
+
 export type Allergen =
   | "gluten"
   | "dairy"
@@ -159,7 +248,7 @@ export const menu: MenuItem[] = [
     name: "All-Star Special™ with Bacon",
     category: "all-star-special",
     price: 10.95,
-    image: allStarImg,
+    image: img_allstar_bacon,
     tagline: "The house favorite combo with bacon.",
     description: "Two eggs any style, a golden sweet cream waffle, regular scattered hashbrowns, three strips of bacon, and buttered toast.",
     ingredients: ["Two eggs", "Sweet cream waffle", "Hashbrowns", "Bacon strips", "Toast"],
@@ -175,7 +264,7 @@ export const menu: MenuItem[] = [
     name: "All-Star Special™ with Sausage",
     category: "all-star-special",
     price: 10.95,
-    image: allStarImg,
+    image: img_allstar_sausage,
     tagline: "Hearty all-star breakfast with sausage.",
     description: "Two eggs any style, a golden sweet cream waffle, regular scattered hashbrowns, two pork sausage patties, and buttered toast.",
     ingredients: ["Two eggs", "Sweet cream waffle", "Hashbrowns", "Sausage patties", "Toast"],
@@ -189,7 +278,7 @@ export const menu: MenuItem[] = [
     name: "All-Star Special™ with City Ham",
     category: "all-star-special",
     price: 10.95,
-    image: allStarImg,
+    image: img_allstar_ham,
     tagline: "All-star breakfast with grilled city ham.",
     description: "Two eggs any style, a golden sweet cream waffle, regular scattered hashbrowns, a grilled slice of city ham, and buttered toast.",
     ingredients: ["Two eggs", "Sweet cream waffle", "Hashbrowns", "City ham", "Toast"],
@@ -203,7 +292,7 @@ export const menu: MenuItem[] = [
     name: "All-Star Special™ with Pecan Waffle",
     category: "all-star-special",
     price: 11.95,
-    image: allStarImg,
+    image: img_allstar_pecan,
     tagline: "Upgrade to a toasted pecan waffle.",
     description: "Two eggs any style, a toasted Georgia pecan waffle, regular scattered hashbrowns, choice of breakfast meat, and buttered toast.",
     ingredients: ["Two eggs", "Pecan waffle", "Hashbrowns", "Bacon or sausage", "Toast"],
@@ -217,7 +306,7 @@ export const menu: MenuItem[] = [
     name: "All-Star Special™ with Grits",
     category: "all-star-special",
     price: 10.95,
-    image: allStarImg,
+    image: img_allstar_grits,
     tagline: "Classic combo served with a bowl of grits.",
     description: "Two eggs any style, a golden sweet cream waffle, a bowl of hot buttered grits, choice of meat, and buttered toast.",
     ingredients: ["Two eggs", "Sweet cream waffle", "Grits bowl", "Bacon or sausage", "Toast"],
@@ -231,7 +320,7 @@ export const menu: MenuItem[] = [
     name: "All-Star Special™ with Double Hashbrowns",
     category: "all-star-special",
     price: 11.50,
-    image: allStarImg,
+    image: img_allstar_dbl_hb,
     tagline: "All-Star combo with double scattered hashbrowns.",
     description: "Two eggs any style, a golden sweet cream waffle, a double order of scattered hashbrowns, choice of meat, and buttered toast.",
     ingredients: ["Two eggs", "Sweet cream waffle", "Double hashbrowns", "Bacon or sausage", "Toast"],
@@ -249,7 +338,7 @@ export const menu: MenuItem[] = [
     name: "Classic Waffle",
     category: "waffles",
     price: 4.55,
-    image: wafflesImg,
+    image: img_waffle_classic,
     tagline: "The house original since 1955.",
     description: "A single golden buttermilk waffle — crisp at the edges, tender at the center — served with whipped butter and warm syrup.",
     ingredients: ["Buttermilk waffle batter", "Butter", "Table syrup"],
@@ -265,7 +354,7 @@ export const menu: MenuItem[] = [
     name: "Pecan Waffle",
     category: "waffles",
     price: 5.75,
-    image: wafflesImg,
+    image: img_waffle_pecan,
     tagline: "Toasted pecans baked right in.",
     description: "Our classic sweet cream waffle loaded with toasted Georgia pecan pieces baked directly into the batter.",
     ingredients: ["Buttermilk waffle batter", "Toasted pecans", "Butter", "Syrup"],
@@ -279,7 +368,7 @@ export const menu: MenuItem[] = [
     name: "Chocolate Chip Waffle",
     category: "waffles",
     price: 5.25,
-    image: wafflesImg,
+    image: img_waffle_choc_chip,
     tagline: "Loaded with melting chocolate chips.",
     description: "Our classic waffle baked with sweet semi-sweet chocolate chips that melt right inside the griddle lines.",
     ingredients: ["Buttermilk waffle batter", "Chocolate chips", "Butter", "Syrup"],
@@ -293,7 +382,7 @@ export const menu: MenuItem[] = [
     name: "Peanut Butter Waffle",
     category: "waffles",
     price: 5.25,
-    image: wafflesImg,
+    image: img_waffle_pb,
     tagline: "Sweet cream batter baked with peanut butter chips.",
     description: "Sweet cream buttermilk waffle baked with rich peanut butter chips, served hot with whipped butter.",
     ingredients: ["Buttermilk waffle batter", "Peanut butter chips", "Butter"],
@@ -307,7 +396,7 @@ export const menu: MenuItem[] = [
     name: "Double Waffle",
     category: "waffles",
     price: 6.95,
-    image: wafflesImg,
+    image: img_waffle_double,
     tagline: "Two classic golden waffles stacked.",
     description: "A double stack of our signature sweet cream buttermilk waffles served with extra butter and warm syrup.",
     ingredients: ["Buttermilk waffle batter", "Double butter", "Syrup"],
@@ -321,7 +410,7 @@ export const menu: MenuItem[] = [
     name: "Blueberry Waffle",
     category: "waffles",
     price: 5.25,
-    image: wafflesImg,
+    image: img_waffle_blueberry,
     tagline: "Fresh blueberry flavor in every square.",
     description: "Classic sweet cream waffle infused with sweet blueberry nuggets, baked golden brown.",
     ingredients: ["Buttermilk waffle batter", "Blueberry nuggets", "Butter", "Syrup"],
@@ -339,7 +428,7 @@ export const menu: MenuItem[] = [
     name: "Two Eggs Breakfast",
     category: "breakfast",
     price: 6.25,
-    image: lowcalEggsImg,
+    image: img_two_eggs,
     tagline: "Simple, fresh egg breakfast plate.",
     description: "Two eggs cooked any style, served with regular scattered hashbrowns or grits, and buttered toast or biscuit.",
     ingredients: ["Two eggs", "Hashbrowns or grits", "Toast"],
@@ -354,7 +443,7 @@ export const menu: MenuItem[] = [
     name: "Cheese 'N Eggs Breakfast",
     category: "breakfast",
     price: 7.75,
-    image: lowcalEggsImg,
+    image: img_cheese_n_eggs,
     tagline: "Two eggs scrambled with melted American cheese.",
     description: "Two eggs whisked and scrambled with melted American cheese, served with hashbrowns and buttered toast.",
     ingredients: ["Two eggs", "American cheese", "Hashbrowns", "Toast"],
@@ -368,7 +457,7 @@ export const menu: MenuItem[] = [
     name: "T-Bone & Eggs Breakfast",
     category: "breakfast",
     price: 14.25,
-    image: tboneImg,
+    image: img_tbone_eggs,
     tagline: "10oz USDA Choice T-Bone with eggs.",
     description: "A 10oz T-Bone steak cooked to order, served with two eggs, hashbrowns or grits, and buttered toast.",
     ingredients: ["10oz T-Bone steak", "Two eggs", "Hashbrowns", "Toast"],
@@ -384,7 +473,7 @@ export const menu: MenuItem[] = [
     name: "Sirloin Steak & Eggs",
     category: "breakfast",
     price: 12.50,
-    image: tboneImg,
+    image: img_sirloin_eggs,
     tagline: "Lean USDA Choice Sirloin with eggs.",
     description: "A lean USDA Choice Sirloin steak served with two eggs, scattered hashbrowns, and buttered toast.",
     ingredients: ["Sirloin steak", "Two eggs", "Hashbrowns", "Toast"],
@@ -398,7 +487,7 @@ export const menu: MenuItem[] = [
     name: "Pork Chops & Eggs",
     category: "breakfast",
     price: 11.95,
-    image: lowcalEggsImg,
+    image: img_pork_chops_eggs,
     tagline: "Two griddled pork chops with eggs.",
     description: "Two tender, center-cut pork chops seared on the griddle, paired with two eggs, hashbrowns, and buttered toast.",
     ingredients: ["Two pork chops", "Two eggs", "Hashbrowns", "Toast"],
@@ -412,7 +501,7 @@ export const menu: MenuItem[] = [
     name: "Country Ham & Eggs",
     category: "breakfast",
     price: 10.95,
-    image: lowcalEggsImg,
+    image: img_country_ham_eggs,
     tagline: "Salty, hickory-smoked country ham with eggs.",
     description: "A grilled slice of salty country ham, served with two eggs any style, scattered hashbrowns, and toast.",
     ingredients: ["Country ham slice", "Two eggs", "Hashbrowns", "Toast"],
@@ -426,7 +515,7 @@ export const menu: MenuItem[] = [
     name: "Grilled Chicken & Eggs",
     category: "breakfast",
     price: 10.25,
-    image: lowcalEggsImg,
+    image: img_chicken_eggs,
     tagline: "Grilled chicken breast paired with eggs.",
     description: "A marinated, grilled chicken breast served with two eggs, scattered hashbrowns, and buttered toast.",
     ingredients: ["Grilled chicken breast", "Two eggs", "Hashbrowns", "Toast"],
@@ -444,7 +533,7 @@ export const menu: MenuItem[] = [
     name: "Cheese Omelet",
     category: "omelets",
     price: 8.25,
-    image: allStarImg,
+    image: img_cheese_omelet,
     tagline: "Fluffy two-egg cheese omelet.",
     description: "Two eggs beaten and cooked fluffy on the griddle, folded with melted American cheese, served with toast and hashbrowns.",
     ingredients: ["Two eggs", "American cheese", "Hashbrowns", "Toast"],
@@ -458,7 +547,7 @@ export const menu: MenuItem[] = [
     name: "Ham & Cheese Omelet",
     category: "omelets",
     price: 9.25,
-    image: allStarImg,
+    image: img_ham_cheese_omelet,
     tagline: "Classic ham and cheese omelet.",
     description: "Two eggs cooked fluffy, loaded with diced hickory-smoked ham and melted American cheese, served with hashbrowns and toast.",
     ingredients: ["Two eggs", "Diced ham", "American cheese", "Hashbrowns", "Toast"],
@@ -473,7 +562,7 @@ export const menu: MenuItem[] = [
     name: "Fiesta Omelet",
     category: "omelets",
     price: 9.75,
-    image: allStarImg,
+    image: img_fiesta_omelet,
     tagline: "Omelet loaded with peppers, onions, ham and cheese.",
     description: "Two eggs folded with diced ham, melted American cheese, grilled onions, and jalapeños. Served with toast and hashbrowns.",
     ingredients: ["Two eggs", "Diced ham", "American cheese", "Onions", "Jalapeños", "Hashbrowns", "Toast"],
@@ -487,7 +576,7 @@ export const menu: MenuItem[] = [
     name: "Cheesesteak Omelet",
     category: "omelets",
     price: 11.50,
-    image: allStarImg,
+    image: img_cheesesteak_omelet,
     tagline: "Loaded with shaved cheesesteak and melted cheese.",
     description: "Our fluffiest two-egg omelet packed with thin-sliced cheesesteak beef and melted American cheese. Served with hashbrowns and toast.",
     ingredients: ["Two eggs", "Shaved cheesesteak beef", "American cheese", "Hashbrowns", "Toast"],
@@ -507,7 +596,7 @@ export const menu: MenuItem[] = [
     name: "Sausage, Egg & Cheese Bowl",
     category: "hashbrown-bowls",
     price: 9.25,
-    image: hashbrownsImg,
+    image: img_bowl_sausage,
     tagline: "Sausage, scrambled eggs, and melted cheese over hashbrowns.",
     description: "Double griddled hashbrowns layered with melted American cheese, scrambled eggs, and two crumbled pork sausage patties.",
     ingredients: ["Double hashbrowns", "Two scrambled eggs", "American cheese", "Sausage patties"],
@@ -523,7 +612,7 @@ export const menu: MenuItem[] = [
     name: "Bacon, Egg & Cheese Bowl",
     category: "hashbrown-bowls",
     price: 9.25,
-    image: hashbrownsImg,
+    image: img_bowl_bacon,
     tagline: "Crispy bacon, scrambled eggs, and cheese over hashbrowns.",
     description: "Double griddled hashbrowns layered with melted American cheese, scrambled eggs, and three chopped strips of bacon.",
     ingredients: ["Double hashbrowns", "Two scrambled eggs", "American cheese", "Bacon strips"],
@@ -537,7 +626,7 @@ export const menu: MenuItem[] = [
     name: "Ham, Egg & Cheese Bowl",
     category: "hashbrown-bowls",
     price: 9.25,
-    image: hashbrownsImg,
+    image: img_bowl_ham,
     tagline: "Diced ham, scrambled eggs, and cheese over hashbrowns.",
     description: "Double griddled hashbrowns layered with melted American cheese, scrambled eggs, and diced hickory-smoked ham.",
     ingredients: ["Double hashbrowns", "Two scrambled eggs", "American cheese", "Diced ham"],
@@ -551,7 +640,7 @@ export const menu: MenuItem[] = [
     name: "Cheesesteak, Egg & Cheese Bowl",
     category: "hashbrown-bowls",
     price: 9.95,
-    image: hashbrownsImg,
+    image: img_bowl_cheesesteak,
     tagline: "Shaved cheesesteak, scrambled eggs, and cheese over hashbrowns.",
     description: "Double griddled hashbrowns layered with melted American cheese, scrambled eggs, and thin-sliced cheesesteak beef.",
     ingredients: ["Double hashbrowns", "Two scrambled eggs", "American cheese", "Cheesesteak beef"],
@@ -570,7 +659,7 @@ export const menu: MenuItem[] = [
     name: "Bacon, Egg & Cheese Sandwich",
     category: "breakfast-sandwiches",
     price: 6.50,
-    image: pattyMeltImg,
+    image: img_sandwich_bacon,
     tagline: "Bacon, egg, and melted cheese on toast.",
     description: "One egg fried, two strips of bacon, and melted American cheese on toast.",
     ingredients: ["One egg", "Bacon strips", "American cheese", "Toast"],
@@ -585,7 +674,7 @@ export const menu: MenuItem[] = [
     name: "Sausage, Egg & Cheese Sandwich",
     category: "breakfast-sandwiches",
     price: 6.50,
-    image: pattyMeltImg,
+    image: img_sandwich_sausage,
     tagline: "Pork sausage, egg, and cheese on toast.",
     description: "One egg fried, a griddled pork sausage patty, and melted American cheese on toast.",
     ingredients: ["One egg", "Sausage patty", "American cheese", "Toast"],
@@ -599,7 +688,7 @@ export const menu: MenuItem[] = [
     name: "Ham, Egg & Cheese Sandwich",
     category: "breakfast-sandwiches",
     price: 6.50,
-    image: pattyMeltImg,
+    image: img_sandwich_ham,
     tagline: "Grilled ham, egg, and cheese on toast.",
     description: "One egg fried, a slice of grilled city ham, and melted American cheese on toast.",
     ingredients: ["One egg", "City ham slice", "American cheese", "Toast"],
@@ -613,7 +702,7 @@ export const menu: MenuItem[] = [
     name: "Texas Bacon, Egg & Cheese Melt",
     category: "breakfast-sandwiches",
     price: 7.85,
-    image: pattyMeltImg,
+    image: img_melt_bacon,
     tagline: "Melted cheese, eggs, and bacon on Texas toast.",
     description: "Two eggs scrambled, three strips of bacon, and two slices of melted American cheese served on griddled thick Texas toast.",
     ingredients: ["Two eggs", "Bacon strips", "American cheese", "Texas toast"],
@@ -629,7 +718,7 @@ export const menu: MenuItem[] = [
     name: "Texas Sausage, Egg & Cheese Melt",
     category: "breakfast-sandwiches",
     price: 7.85,
-    image: pattyMeltImg,
+    image: img_melt_sausage,
     tagline: "Scrambled eggs, sausage, and cheese on Texas toast.",
     description: "Two eggs scrambled, a griddled sausage patty, and two slices of melted American cheese on griddled thick Texas toast.",
     ingredients: ["Two eggs", "Sausage patty", "American cheese", "Texas toast"],
@@ -643,7 +732,7 @@ export const menu: MenuItem[] = [
     name: "Texas Ham, Egg & Cheese Melt",
     category: "breakfast-sandwiches",
     price: 7.85,
-    image: pattyMeltImg,
+    image: img_melt_ham,
     tagline: "Scrambled eggs, city ham, and cheese on Texas toast.",
     description: "Two eggs scrambled, a slice of city ham, and two slices of melted American cheese on griddled thick Texas toast.",
     ingredients: ["Two eggs", "City ham slice", "American cheese", "Texas toast"],
@@ -661,7 +750,7 @@ export const menu: MenuItem[] = [
     name: "Biscuit & Sausage Gravy",
     category: "biscuits",
     price: 5.25,
-    image: hashbrownsImg,
+    image: img_biscuit_gravy,
     tagline: "Warm biscuit split and smothered in sausage gravy.",
     description: "A freshly griddled buttermilk biscuit, split open and ladled with our signature warm creamy sausage gravy.",
     ingredients: ["Buttermilk biscuit", "Sausage gravy"],
@@ -676,7 +765,7 @@ export const menu: MenuItem[] = [
     name: "Sausage Biscuit",
     category: "biscuits",
     price: 3.50,
-    image: hashbrownsImg,
+    image: img_biscuit_sausage,
     tagline: "A griddled sausage patty inside a biscuit.",
     description: "A griddled pork sausage patty served inside a warm griddled buttermilk biscuit.",
     ingredients: ["Buttermilk biscuit", "Sausage patty"],
@@ -690,7 +779,7 @@ export const menu: MenuItem[] = [
     name: "Bacon Biscuit",
     category: "biscuits",
     price: 3.50,
-    image: hashbrownsImg,
+    image: img_biscuit_bacon,
     tagline: "Two bacon strips inside a buttermilk biscuit.",
     description: "Two crispy strips of hickory-smoked bacon served inside a warm griddled buttermilk biscuit.",
     ingredients: ["Buttermilk biscuit", "Bacon strips"],
@@ -704,7 +793,7 @@ export const menu: MenuItem[] = [
     name: "Ham Biscuit",
     category: "biscuits",
     price: 3.50,
-    image: hashbrownsImg,
+    image: img_biscuit_ham,
     tagline: "Grilled city ham inside a buttermilk biscuit.",
     description: "A grilled slice of city ham served inside a warm griddled buttermilk biscuit.",
     ingredients: ["Buttermilk biscuit", "City ham slice"],
@@ -718,7 +807,7 @@ export const menu: MenuItem[] = [
     name: "Egg & Cheese Biscuit",
     category: "biscuits",
     price: 4.25,
-    image: hashbrownsImg,
+    image: img_biscuit_egg_cheese,
     tagline: "One egg and melted cheese inside a biscuit.",
     description: "One egg fried, and melted American cheese served inside a warm griddled buttermilk biscuit.",
     ingredients: ["Buttermilk biscuit", "One egg", "American cheese"],
@@ -732,7 +821,7 @@ export const menu: MenuItem[] = [
     name: "Chicken Biscuit",
     category: "biscuits",
     price: 4.95,
-    image: hashbrownsImg,
+    image: img_biscuit_chicken,
     tagline: "Seared chicken breast inside a biscuit.",
     description: "A tender, seared chicken breast fillet served inside a warm griddled buttermilk biscuit.",
     ingredients: ["Buttermilk biscuit", "Grilled chicken fillet"],
@@ -751,7 +840,7 @@ export const menu: MenuItem[] = [
     name: "Original Angus Hamburger",
     category: "burgers",
     price: 6.95,
-    image: burgerImg,
+    image: img_burger_angus,
     tagline: "Quarter-pound Angus patty on a toasted bun.",
     description: "A 100% USDA Choice Angus beef quarter-pound patty served on a griddled bun.",
     ingredients: ["Angus beef patty", "Burger bun"],
@@ -765,7 +854,7 @@ export const menu: MenuItem[] = [
     name: "Angus Cheeseburger",
     category: "burgers",
     price: 7.50,
-    image: burgerImg,
+    image: img_burger_cheese,
     tagline: "Quarter-pound patty with melted American cheese.",
     description: "A quarter-pound Angus beef patty with melted American cheese, lettuce, tomato, and pickles on a toasted bun.",
     ingredients: ["Angus beef patty", "American cheese", "Bun", "Lettuce", "Tomato", "Pickles"],
@@ -780,7 +869,7 @@ export const menu: MenuItem[] = [
     name: "Double Angus Cheeseburger",
     category: "burgers",
     price: 8.95,
-    image: burgerImg,
+    image: img_burger_dbl_cheese,
     tagline: "Two quarter-pound patties with melted cheese.",
     description: "Two 100% Angus beef patties stacked with melted American cheese, pickles, and grilled onions on a toasted bun.",
     ingredients: ["Two Angus patties", "American cheese", "Bun", "Onions", "Pickles"],
@@ -796,7 +885,7 @@ export const menu: MenuItem[] = [
     name: "Bacon Angus Cheeseburger",
     category: "burgers",
     price: 8.50,
-    image: burgerImg,
+    image: img_burger_bacon,
     tagline: "Quarter-pound patty with cheese and crispy bacon.",
     description: "A quarter-pound Angus beef patty topped with melted American cheese, two strips of bacon, lettuce, and tomato.",
     ingredients: ["Angus beef patty", "American cheese", "Bacon strips", "Bun", "Lettuce", "Tomato"],
@@ -810,7 +899,7 @@ export const menu: MenuItem[] = [
     name: "Triple Angus Cheeseburger",
     category: "burgers",
     price: 9.95,
-    image: burgerImg,
+    image: img_burger_triple,
     tagline: "Three quarter-pound patties with melting cheese.",
     description: "Three Angus beef patties stacked with melted American cheese, pickles, and grilled onions on a griddled bun.",
     ingredients: ["Three Angus patties", "American cheese", "Bun", "Onions", "Pickles"],
@@ -828,7 +917,7 @@ export const menu: MenuItem[] = [
     name: "Grilled Chicken Sandwich",
     category: "sandwiches",
     price: 7.95,
-    image: chickenSandwichImg,
+    image: img_sandwich_chicken,
     tagline: "Marinated grilled chicken breast on a bun.",
     description: "A tender, marinated grilled chicken breast fillet served with lettuce and tomato on a toasted bun.",
     ingredients: ["Grilled chicken breast", "Lettuce", "Tomato", "Bun"],
@@ -843,7 +932,7 @@ export const menu: MenuItem[] = [
     name: "Grilled Cheese Sandwich",
     category: "sandwiches",
     price: 4.25,
-    image: pattyMeltImg,
+    image: img_sandwich_grilled_cheese,
     tagline: "Crisp griddled bread with melted American cheese.",
     description: "Two slices of melted American cheese griddled golden brown on white bread.",
     ingredients: ["White bread", "American cheese", "Butter"],
@@ -857,7 +946,7 @@ export const menu: MenuItem[] = [
     name: "Classic BLT Sandwich",
     category: "sandwiches",
     price: 6.25,
-    image: chickenSandwichImg,
+    image: img_sandwich_blt,
     tagline: "Hickory-smoked bacon, lettuce, tomato and mayo.",
     description: "Three strips of crispy bacon, fresh lettuce, tomato slice, and mayonnaise served on toasted white bread.",
     ingredients: ["Bacon strips", "Lettuce", "Tomato", "Mayonnaise", "White bread"],
@@ -871,7 +960,7 @@ export const menu: MenuItem[] = [
     name: "Texas Cheesesteak Melt",
     category: "sandwiches",
     price: 8.95,
-    image: pattyMeltImg,
+    image: img_melt_cheesesteak,
     tagline: "Shaved cheesesteak, grilled onions and cheese on Texas toast.",
     description: "Thinly shaved cheesesteak beef, grilled onions, and two slices of melted American cheese served on griddled thick Texas toast.",
     ingredients: ["Shaved cheesesteak beef", "American cheese", "Onions", "Texas toast"],
@@ -887,7 +976,7 @@ export const menu: MenuItem[] = [
     name: "Texas Patty Melt",
     category: "sandwiches",
     price: 8.95,
-    image: pattyMeltImg,
+    image: img_melt_patty,
     tagline: "Angus beef patty, onions and cheese on Texas toast.",
     description: "A quarter-pound Angus beef patty, sauteed onions, Swiss and American cheese griddled on thick Texas toast.",
     ingredients: ["Angus beef patty", "Swiss cheese", "American cheese", "Onions", "Texas toast"],
@@ -902,7 +991,7 @@ export const menu: MenuItem[] = [
     name: "Ham & Cheese Sandwich",
     category: "sandwiches",
     price: 6.25,
-    image: chickenSandwichImg,
+    image: img_sandwich_ham_cheese,
     tagline: "Diced ham and melted cheese on griddled toast.",
     description: "Hickory-smoked diced ham and melted American cheese griddled golden brown on toasted bread.",
     ingredients: ["Ham", "American cheese", "White bread"],
@@ -920,7 +1009,7 @@ export const menu: MenuItem[] = [
     name: "T-Bone Steak Dinner",
     category: "classic-dinners",
     price: 14.95,
-    image: tboneImg,
+    image: img_dinner_tbone,
     tagline: "USDA Choice 10oz T-Bone steak platter.",
     description: "A 10oz T-Bone steak cooked to order, served with double scattered hashbrowns, a garden salad, and toast.",
     ingredients: ["10oz T-Bone steak", "Double hashbrowns", "Salad", "Toast"],
@@ -936,7 +1025,7 @@ export const menu: MenuItem[] = [
     name: "Sirloin Steak Dinner",
     category: "classic-dinners",
     price: 12.95,
-    image: tboneImg,
+    image: img_dinner_sirloin,
     tagline: "Lean USDA Choice Sirloin steak platter.",
     description: "A lean USDA Choice Sirloin steak served with double scattered hashbrowns, a garden salad, and toasted bread.",
     ingredients: ["Sirloin steak", "Double hashbrowns", "Salad", "Toast"],
@@ -950,7 +1039,7 @@ export const menu: MenuItem[] = [
     name: "Pork Chop Dinner",
     category: "classic-dinners",
     price: 11.95,
-    image: tboneImg,
+    image: img_dinner_pork_chop,
     tagline: "Three center-cut pork chops platter.",
     description: "Three center-cut pork chops seared on the griddle, served with double scattered hashbrowns, salad, and toast.",
     ingredients: ["Three pork chops", "Double hashbrowns", "Salad", "Toast"],
@@ -964,7 +1053,7 @@ export const menu: MenuItem[] = [
     name: "Grilled Chicken Dinner",
     category: "classic-dinners",
     price: 10.95,
-    image: tboneImg,
+    image: img_dinner_chicken,
     tagline: "Two marinated grilled chicken breasts platter.",
     description: "Two tender, marinated grilled chicken breasts served with double scattered hashbrowns, salad, and toast.",
     ingredients: ["Two chicken breasts", "Double hashbrowns", "Salad", "Toast"],
@@ -978,7 +1067,7 @@ export const menu: MenuItem[] = [
     name: "Ham Steak Dinner",
     category: "classic-dinners",
     price: 10.25,
-    image: tboneImg,
+    image: img_dinner_ham_steak,
     tagline: "Grilled city ham dinner platter.",
     description: "A thick grilled city ham slice served with double scattered hashbrowns, salad, and toast.",
     ingredients: ["City ham slice", "Double hashbrowns", "Salad", "Toast"],
@@ -992,7 +1081,7 @@ export const menu: MenuItem[] = [
     name: "Country Fried Steak Dinner",
     category: "classic-dinners",
     price: 10.95,
-    image: tboneImg,
+    image: img_dinner_country_fried,
     tagline: "Country fried steak with sausage gravy platter.",
     description: "Country fried steak smothered in cream sausage gravy, served with double scattered hashbrowns, salad, and toast.",
     ingredients: ["Country fried steak", "Sausage gravy", "Double hashbrowns", "Salad", "Toast"],
@@ -1010,7 +1099,7 @@ export const menu: MenuItem[] = [
     name: "Regular Scattered Hashbrowns",
     category: "hashbrowns",
     price: 3.15,
-    image: hashbrownsImg,
+    image: img_hb_regular,
     tagline: "Diner style scattered shredded potatoes.",
     description: "Our signature shredded potato hashbrowns cooked crisp and golden on the flat-top griddle.",
     ingredients: ["Shredded potatoes", "Vegetable shortening oil"],
@@ -1025,7 +1114,7 @@ export const menu: MenuItem[] = [
     name: "Large Scattered Hashbrowns",
     category: "hashbrowns",
     price: 3.65,
-    image: hashbrownsImg,
+    image: img_hb_large,
     tagline: "Double portion of griddled hashbrowns.",
     description: "A double portion of our griddled shredded potato hashbrowns seared golden brown.",
     ingredients: ["Shredded potatoes", "Vegetable shortening oil"],
@@ -1039,7 +1128,7 @@ export const menu: MenuItem[] = [
     name: "Triple Scattered Hashbrowns",
     category: "hashbrowns",
     price: 4.15,
-    image: hashbrownsImg,
+    image: img_hb_triple,
     tagline: "Triple portion of griddled hashbrowns.",
     description: "Our largest triple portion of griddled scattered hashbrowns seared golden crisp.",
     ingredients: ["Shredded potatoes", "Vegetable shortening oil"],
@@ -1053,7 +1142,7 @@ export const menu: MenuItem[] = [
     name: "Smothered & Covered Hashbrowns",
     category: "hashbrowns",
     price: 4.50,
-    image: hashbrownsImg,
+    image: img_hb_smothered_cov,
     tagline: "Hashbrowns griddled with onions and melted cheese.",
     description: "A double portion of griddled hashbrowns seared with sauteed onions and smothered under melted slices of American cheese.",
     ingredients: ["Shredded potatoes", "Onions", "American cheese"],
@@ -1068,7 +1157,7 @@ export const menu: MenuItem[] = [
     name: "Hashbrowns All the Way",
     category: "hashbrowns",
     price: 7.25,
-    image: hashbrownsImg,
+    image: img_hb_all_the_way,
     tagline: "Loaded with all 8 signature toppings.",
     description: "A triple portion of scattered hashbrowns loaded with onions, cheese, ham, tomatoes, jalapeños, mushrooms, chili, and gravy.",
     ingredients: ["Shredded potatoes", "Onions", "Cheese", "Ham", "Tomatoes", "Jalapeños", "Mushrooms", "Chili", "Gravy"],
@@ -1083,7 +1172,7 @@ export const menu: MenuItem[] = [
     name: "Hashbrown Gravy Bowl",
     category: "hashbrowns",
     price: 5.25,
-    image: hashbrownsImg,
+    image: img_hb_gravy,
     tagline: "Double hashbrowns topped with warm sausage gravy.",
     description: "A double portion of griddled scattered hashbrowns smothered under warm creamy sausage gravy.",
     ingredients: ["Double hashbrowns", "Sausage gravy"],
@@ -1101,7 +1190,7 @@ export const menu: MenuItem[] = [
     name: "Side of Bacon (3 Strips)",
     category: "sides",
     price: 3.95,
-    image: hashbrownsImg,
+    image: img_side_bacon,
     tagline: "Three crispy strips of hickory-smoked bacon.",
     description: "A side portion of three crispy strips of hickory-smoked pork bacon griddled to order.",
     ingredients: ["Hickory-smoked pork bacon"],
@@ -1115,7 +1204,7 @@ export const menu: MenuItem[] = [
     name: "Side of Sausage (2 Patties)",
     category: "sides",
     price: 3.95,
-    image: hashbrownsImg,
+    image: img_side_sausage,
     tagline: "Two griddled pork sausage patties.",
     description: "A side portion of two griddled savory pork sausage patties cooked to order.",
     ingredients: ["Pork sausage"],
@@ -1129,7 +1218,7 @@ export const menu: MenuItem[] = [
     name: "Side of Hickory Smoked Ham",
     category: "sides",
     price: 3.95,
-    image: hashbrownsImg,
+    image: img_side_ham,
     tagline: "Grilled slice of hickory-smoked city ham.",
     description: "A side order of one slice of grilled city ham cooked seared on the flat top.",
     ingredients: ["City ham slice"],
@@ -1143,7 +1232,7 @@ export const menu: MenuItem[] = [
     name: "Side of Grits Bowl",
     category: "sides",
     price: 2.40,
-    image: hashbrownsImg,
+    image: img_side_grits,
     tagline: "A bowl of warm southern-style grits.",
     description: "A bowl of creamy southern-style white corn hominy grits served with a pat of butter.",
     ingredients: ["Corn hominy grits", "Butter"],
@@ -1157,7 +1246,7 @@ export const menu: MenuItem[] = [
     name: "Side of Buttered Toast",
     category: "sides",
     price: 2.40,
-    image: hashbrownsImg,
+    image: img_side_toast,
     tagline: "Two slices of toasted and buttered bread.",
     description: "Two slices of white, wheat, or raisin bread toasted and buttered, served with fruit jelly.",
     ingredients: ["Toasted bread", "Butter", "Fruit jelly"],
@@ -1171,7 +1260,7 @@ export const menu: MenuItem[] = [
     name: "Side of Sliced Tomatoes",
     category: "sides",
     price: 2.40,
-    image: hashbrownsImg,
+    image: img_side_tomatoes,
     tagline: "Three slices of fresh beefsteak tomatoes.",
     description: "Three fresh, cold slices of beefsteak tomatoes lightly seasoned.",
     ingredients: ["Beefsteak tomatoes"],
@@ -1189,7 +1278,7 @@ export const menu: MenuItem[] = [
     name: "Alice's Bottomless Coffee",
     category: "beverages",
     price: 2.40,
-    image: icedCoffeeImg,
+    image: img_bev_coffee,
     tagline: "Signature blend Arabica coffee with free refills.",
     description: "Alice's Signature Blend 100% Arabica coffee, brewed fresh daily, served hot with free refills at your booth.",
     ingredients: ["Signature blend Arabica coffee"],
@@ -1205,7 +1294,7 @@ export const menu: MenuItem[] = [
     name: "Alice's Sweet Iced Tea",
     category: "beverages",
     price: 2.65,
-    image: icedCoffeeImg,
+    image: img_bev_iced_tea,
     tagline: "Fresh-brewed southern sweet iced tea.",
     description: "Alice's southern sweet tea brewed fresh daily from premium black tea leaves, served over ice.",
     ingredients: ["Premium black tea leaves", "Sugar", "Water"],
@@ -1219,7 +1308,7 @@ export const menu: MenuItem[] = [
     name: "Simply Orange Juice",
     category: "beverages",
     price: 3.10,
-    image: icedCoffeeImg,
+    image: img_bev_oj,
     tagline: "Simply 100% pure squeezed orange juice.",
     description: "A cold glass of 100% pure squeezed pasteurized orange juice.",
     ingredients: ["Pure squeezed orange juice"],
@@ -1233,7 +1322,7 @@ export const menu: MenuItem[] = [
     name: "Large Chocolate Milk",
     category: "beverages",
     price: 3.50,
-    image: icedCoffeeImg,
+    image: img_bev_choc_milk,
     tagline: "Cold, creamy chocolate whole milk.",
     description: "Rich whole milk blended with sweet chocolate syrup, served cold in a tall glass.",
     ingredients: ["Whole milk", "Chocolate syrup"],
@@ -1247,7 +1336,7 @@ export const menu: MenuItem[] = [
     name: "Southern Pecan Pie Slice",
     category: "beverages",
     price: 3.95,
-    image: icedCoffeeImg,
+    image: img_bev_pecan_pie,
     tagline: "Slice of rich Southern pecan pie.",
     description: "A slice of sweet, rich southern style pecan pie baked in a buttery pastry crust.",
     ingredients: ["Pecan halves", "Corn syrup filling", "Pastry crust"],
