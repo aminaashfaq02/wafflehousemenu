@@ -321,13 +321,13 @@ export function SiteHeader({ overHero = false }: Props) {
                 )}
               </li>
 
-              {/* ── BREAKFAST (Direct Link) ── */}
+              {/* ── RECIPES (Direct Link) ── */}
               <li>
                 <Link
-                  to="/breakfast"
+                  to="/recipes"
                   className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
-                  Breakfast
+                  Recipes
                 </Link>
               </li>
 
@@ -492,18 +492,18 @@ export function SiteHeader({ overHero = false }: Props) {
             onSubmit={handleSearch}
             className="ml-auto hidden lg:flex"
           >
-            <div className="relative flex h-9 w-[210px] xl:w-[240px] items-center rounded-full border border-white/25 bg-white/10 backdrop-blur-md transition-all focus-within:border-primary focus-within:bg-white/15">
-              <Search className="pointer-events-none absolute left-3 h-3.5 w-3.5 text-white/60" />
+            <div className="relative flex h-9.5 w-[230px] xl:w-[270px] items-center rounded-full border border-white/25 bg-white/10 backdrop-blur-md transition-all focus-within:border-primary focus-within:bg-white/15 focus-within:w-[260px] xl:focus-within:w-[300px]">
+              <Search className="pointer-events-none absolute left-3.5 h-4 w-4 text-white/60" />
               <input
                 type="search"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                placeholder="Search menu, prices…"
-                className="h-full w-full bg-transparent pl-8 pr-14 text-[12px] text-white placeholder:text-white/45 focus:outline-none"
+                placeholder="Search menu, prices, calories…"
+                className="h-full w-full bg-transparent pl-9.5 pr-14 text-[12.5px] text-white placeholder:text-white/50 focus:outline-none"
               />
               <button
                 type="submit"
-                className="btn-primary absolute right-1 top-1/2 h-7 -translate-y-1/2 rounded-full px-3 text-[11px] font-bold"
+                className="btn-primary absolute right-1.5 top-1/2 h-7 -translate-y-1/2 rounded-full px-3 text-[11px] font-bold shadow-xs"
               >
                 Go
               </button>

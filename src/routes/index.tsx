@@ -20,6 +20,10 @@ import {
   ExternalLink,
   Flame,
   Award,
+  Star,
+  ChefHat,
+  Baby,
+  Smile,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -35,6 +39,14 @@ import hero3 from "@/assets/hero-3-hashbrowns.jpg";
 import hero4 from "@/assets/hero-4-coffee.jpg";
 import hero5 from "@/assets/hero-5-diner.jpg";
 import hero6 from "@/assets/hero-6-kitchen.jpg";
+
+// Restaurant Gallery & Atmosphere Images
+import contactHeroDiner from "@/assets/contact-hero-diner.jpg";
+import nutritionChef from "@/assets/nutrition-chef.jpg";
+import aboutStoryDiner from "@/assets/about-story-diner.jpg";
+import aboutHeroGriddle from "@/assets/about-hero-griddle.jpg";
+import wafflesTablePrep from "@/assets/waffles-table-prep.jpg";
+import breakfastTableCooking from "@/assets/breakfast-table-cooking.jpg";
 
 // Menu item & Dish images
 import wafflesImg from "@/assets/hero-waffles.jpg";
@@ -80,73 +92,6 @@ const homepageFaqs = [
   },
 ];
 
-interface FeaturedRecipeItem {
-  name: string;
-  category: string;
-  price: string;
-  calories: number;
-  description: string;
-  image: string;
-  link: string;
-}
-
-const featuredMenuItems: FeaturedRecipeItem[] = [
-  {
-    name: "All-Star Special™",
-    category: "All-Star Special™",
-    price: "$10.95",
-    calories: 1180,
-    description: "Two eggs cooked your way, hashbrowns or grits, toast, choice of bacon, sausage or ham, and a Classic Sweet Cream Waffle.",
-    image: allStarImg,
-    link: "/menu/all-star-special",
-  },
-  {
-    name: "Classic Sweet Cream Waffle",
-    category: "Waffles",
-    price: "$4.55",
-    calories: 410,
-    description: "Golden, crisp sweet cream buttermilk waffle baked fresh to order on a flat-top iron.",
-    image: wafflesImg,
-    link: "/menu/waffles",
-  },
-  {
-    name: "Pecan Waffle",
-    category: "Waffles",
-    price: "$5.50",
-    calories: 560,
-    description: "Signature sweet cream waffle baked with toasted Georgia pecans inside the batter.",
-    image: pecanWaffleImg,
-    link: "/menu/waffles",
-  },
-  {
-    name: "Texas Angus Patty Melt",
-    category: "Texas Melts",
-    price: "$9.95",
-    calories: 790,
-    description: "Grilled Angus beef patty with caramelized onions and melted American cheese on Texas toast.",
-    image: pattyMeltImg,
-    link: "/menu/texas-melts",
-  },
-  {
-    name: "Hashbrowns Scattered, Smothered & Covered",
-    category: "Hashbrowns",
-    price: "$5.25",
-    calories: 520,
-    description: "Golden shredded potatoes griddled crisp with sautéed onions and melted American cheese.",
-    image: hashbrownsImg,
-    link: "/menu/hashbrowns",
-  },
-  {
-    name: "T-Bone Steak & Eggs",
-    category: "Classic Dinners",
-    price: "$16.50",
-    calories: 1230,
-    description: "USDA Choice T-Bone steak cooked to order, served with two eggs, hashbrowns & toast.",
-    image: tboneImg,
-    link: "/menu/classic-dinners",
-  },
-];
-
 const topCitiesData = [
   { rank: 1, city: "Atlanta", state: "Georgia", count: 35, stateSlug: "georgia" },
   { rank: 2, city: "Charlotte", state: "North Carolina", count: 22, stateSlug: "north-carolina" },
@@ -156,6 +101,96 @@ const topCitiesData = [
   { rank: 6, city: "Birmingham", state: "Alabama", count: 15, stateSlug: "alabama" },
   { rank: 7, city: "Columbus", state: "Ohio", count: 14, stateSlug: "ohio" },
   { rank: 8, city: "Memphis", state: "Tennessee", count: 12, stateSlug: "tennessee" },
+  { rank: 9, city: "Tampa / St. Petersburg", state: "Florida", count: 11, stateSlug: "florida" },
+  { rank: 10, city: "Jacksonville", state: "Florida", count: 10, stateSlug: "florida" },
+  { rank: 11, city: "Houston", state: "Texas", count: 9, stateSlug: "texas" },
+  { rank: 12, city: "Indianapolis", state: "Indiana", count: 8, stateSlug: "indiana" },
+];
+
+const trendingRecipesData = [
+  {
+    title: "Classic Sweet Cream Waffle (Secret Batter Recipe)",
+    rating: 4.9,
+    reviews: 342,
+    prepTime: "10 mins",
+    cookTime: "4 mins",
+    calories: 410,
+    image: wafflesImg,
+    category: "Waffles",
+    tag: "Most Popular",
+    link: "/recipes"
+  },
+  {
+    title: "Scattered, Smothered & Covered Hashbrowns",
+    rating: 5.0,
+    reviews: 480,
+    prepTime: "15 mins",
+    cookTime: "8 mins",
+    calories: 520,
+    image: hashbrownsImg,
+    category: "Hashbrowns",
+    tag: "Diner Legend",
+    link: "/recipes"
+  },
+  {
+    title: "Fluffy Toddle House® 2-Egg Cheese Omelet",
+    rating: 4.8,
+    reviews: 215,
+    prepTime: "5 mins",
+    cookTime: "3 mins",
+    calories: 500,
+    image: lowcalEggsImg,
+    category: "Omelets",
+    tag: "Secret Technique",
+    link: "/recipes"
+  },
+  {
+    title: "Texas Angus Patty Melt with Grilled Sweet Onions",
+    rating: 4.9,
+    reviews: 295,
+    prepTime: "10 mins",
+    cookTime: "6 mins",
+    calories: 790,
+    image: pattyMeltImg,
+    category: "Melts",
+    tag: "Lunch Pick",
+    link: "/recipes"
+  },
+];
+
+const kidsMealsData = [
+  {
+    name: "Kids Waffle with Bacon or Sausage",
+    price: "$4.50",
+    cal: "500 cal",
+    desc: "A golden kid-sized sweet cream waffle served with warm syrup, butter, and choice of 2 crispy bacon strips or 1 savory sausage patty.",
+    image: wafflesImg,
+    link: "/menu/waffles"
+  },
+  {
+    name: "Kids 1-Egg Breakfast Plate",
+    price: "$4.25",
+    cal: "320 cal",
+    desc: "One farm-fresh egg cooked your way, warm buttered toast, and choice of crispy bacon or sausage patty.",
+    image: lowcalEggsImg,
+    link: "/menu/breakfast"
+  },
+  {
+    name: "Kids Angus Cheeseburger & Hashbrowns",
+    price: "$5.75",
+    cal: "705 cal",
+    desc: "100% Angus beef patty with melted American cheese on a toasted bun, served with a side of crispy regular hashbrowns.",
+    image: burgerImg,
+    link: "/menu/burgers"
+  },
+  {
+    name: "Kids Grilled Cheese with Hashbrowns",
+    price: "$4.95",
+    cal: "520 cal",
+    desc: "Gooey melted American cheese grilled golden brown on white or Texas toast, served with crispy scattered hashbrowns.",
+    image: pattyMeltImg,
+    link: "/menu/sandwiches"
+  },
 ];
 
 const heroSlides = [
@@ -173,12 +208,12 @@ export const Route = createFileRoute("/")({
       { title: "Waffle House Menu & Prices 2026 | Complete Diner Guide" },
       {
         name: "description",
-        content: `Explore the full Waffle House menu with current prices, calorie counts, nutrition facts, 1,900+ restaurant locations across 25 states, and printable PDF guide.`,
+        content: `Explore the full Waffle House menu with current prices, calorie counts, nutrition facts, 1,900+ restaurant locations across 25 states, copycat recipes, and printable PDF guide.`,
       },
       { property: "og:title", content: "Waffle House Menu & Prices 2026 | Complete Diner Guide" },
       {
         property: "og:description",
-        content: `Explore the full Waffle House menu with current prices, calorie counts, nutrition facts, 1,900+ restaurant locations across 25 states, and printable PDF guide.`,
+        content: `Explore the full Waffle House menu with current prices, calorie counts, nutrition facts, 1,900+ restaurant locations across 25 states, copycat recipes, and printable PDF guide.`,
       },
       { property: "og:url", content: `${SITE}/` },
       { property: "og:type", content: "website" },
@@ -240,7 +275,6 @@ function HomePage() {
   const [slide, setSlide] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState(0);
-  const navigate = useNavigate();
 
   const tabRecipes = [
     {
@@ -290,7 +324,7 @@ function HomePage() {
   return (
     <main className="bg-white text-foreground font-sans">
       {/* ============================================================ */}
-      {/* 1. HERO SECTION (PRESERVED AS REQUESTED)                     */}
+      {/* 1. HERO SECTION (PRESERVED)                                  */}
       {/* ============================================================ */}
       <section className="relative min-h-[640px] md:min-h-[720px] flex items-center overflow-hidden bg-black text-white font-sans">
         {heroSlides.map((s, i) => (
@@ -320,7 +354,7 @@ function HomePage() {
               Waffle House Menu &amp; Prices
             </h1>
             <p className="text-lg leading-relaxed text-white/85 max-w-2xl">
-              Explore the complete Waffle House menu with {TOTAL_MENU_CATEGORIES} categories and {TOTAL_MENU_ITEMS} verified menu items, covering 125+ recipes. View all items on our <Link to="/menu" className="text-primary hover:underline font-semibold">all menu page</Link> or download the official <a href="/waffle-house-menu-nutritionals.pdf" download className="text-primary hover:underline font-semibold">nutrition PDF reference</a>. We also list reference prices, allergen information, restaurant locations and helpful diner guides.
+              Explore the complete Waffle House menu with {TOTAL_MENU_CATEGORIES} categories and {TOTAL_MENU_ITEMS} verified menu items, covering 125+ recipes. View all items on our <Link to="/menu" className="text-primary hover:underline font-semibold">all menu page</Link> or download the official <a href="/waffle-house-menu-nutritionals.pdf" download className="text-primary hover:underline font-semibold">nutrition PDF reference</a>. We also list reference prices, allergen information, restaurant locations, copycat recipes, and helpful diner guides.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 text-sm font-semibold text-amber-300 pt-1">
@@ -341,10 +375,10 @@ function HomePage() {
                 Explore Menu <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                to="/nutrition"
+                to="/recipes"
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
               >
-                Nutrition Information
+                Copycat Recipes
               </Link>
               <a
                 href="/waffle-house-menu-nutritionals.pdf"
@@ -481,9 +515,13 @@ function HomePage() {
                 Independent price breakdowns, waffle flavor rankings, secret menu hacks, and diner insights updated continuously.
               </p>
             </div>
-            <div className="flex items-center gap-4 text-xs font-bold text-primary">
-              <Link to="/blog" className="hover:underline">View all guides →</Link>
-              <Link to="/updates" className="hover:underline">Site updates →</Link>
+            <div className="flex items-center gap-3">
+              <Link to="/recipes" className="btn-primary py-2 px-4 text-xs font-bold shrink-0">
+                View all recipes →
+              </Link>
+              <Link to="/blog" className="rounded-full border border-border bg-white px-4 py-2 text-xs font-bold text-foreground hover:border-primary shrink-0">
+                All guides →
+              </Link>
             </div>
           </div>
 
@@ -518,7 +556,7 @@ function HomePage() {
                       <p className="text-xs text-ink-soft leading-relaxed line-clamp-2">
                         {featuredPost.summary}
                       </p>
-                      <div className="pt-2">
+                      <div className="pt-2 flex items-center gap-4">
                         <Link
                           to="/blog/$slug"
                           params={{ slug: featuredPost.slug }}
@@ -686,7 +724,147 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 6. THE READING ROOM (CURATED GUIDES & REFERENCES)            */}
+      {/* 6. TRENDING FOOD BLOG RECIPES (TRENDING RECIPE HUB)          */}
+      {/* ============================================================ */}
+      <section aria-labelledby="trending-recipes-heading" className="bg-surface py-16 md:py-20 border-b border-border font-sans">
+        <div className="container-editorial">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <div>
+              <span className="chip flex items-center gap-1">
+                <Flame className="h-3.5 w-3.5 text-amber-600" /> Trending Food Blog Recipes
+              </span>
+              <h2 id="trending-recipes-heading" className="font-display text-3xl font-bold sm:text-4xl text-foreground mt-2">
+                Make Your Diner Favorites at Home
+              </h2>
+              <p className="text-sm text-ink-soft mt-1">
+                Tested copycat formulas, griddle secrets, and ingredient ratios from short-order cooks.
+              </p>
+            </div>
+            <Link to="/recipes" className="btn-primary py-2 px-5 text-xs font-bold shrink-0">
+              Browse All Copycat Recipes →
+            </Link>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {trendingRecipesData.map((rec, i) => (
+              <article
+                key={i}
+                className="group flex flex-col rounded-2xl border border-border bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-primary transition-all duration-300"
+              >
+                <div className="relative aspect-square w-full overflow-hidden bg-muted">
+                  <img
+                    src={rec.image}
+                    alt={rec.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    width={400}
+                    height={400}
+                  />
+                  <span className="absolute top-3 left-3 rounded-full bg-black/80 px-2.5 py-0.5 text-[10px] font-bold text-white backdrop-blur-xs">
+                    {rec.tag}
+                  </span>
+                  <span className="absolute bottom-3 right-3 rounded-full bg-primary text-black px-2 py-0.5 text-[11px] font-black shadow-xs">
+                    ★ {rec.rating}
+                  </span>
+                </div>
+                <div className="p-5 flex flex-col flex-1 justify-between space-y-3">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-primary">{rec.category}</span>
+                    <h3 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors leading-snug mt-1">
+                      {rec.title}
+                    </h3>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] text-ink-soft pt-2 border-t border-border/50">
+                    <span>⏱ {rec.cookTime} cook</span>
+                    <span className="font-bold text-foreground">{rec.calories} cal</span>
+                  </div>
+                  <Link
+                    to="/recipes"
+                    className="inline-flex items-center justify-center gap-1 rounded-xl border border-primary/50 bg-amber-500/10 py-2 text-xs font-bold text-amber-900 hover:bg-primary hover:text-black transition-colors"
+                  >
+                    View Recipe &amp; Secret →
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 7. KIDS & FAMILY MEALS SECTION                               */}
+      {/* ============================================================ */}
+      <section aria-labelledby="kids-meals-heading" className="bg-white py-16 md:py-20 border-b border-border font-sans">
+        <div className="container-editorial">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <div>
+              <span className="chip flex items-center gap-1">
+                <Smile className="h-3.5 w-3.5 text-amber-600" /> Family &amp; Kids Meals
+              </span>
+              <h2 id="kids-meals-heading" className="font-display text-3xl font-bold sm:text-4xl text-foreground mt-2">
+                Kids Favorites &amp; Family Dining
+              </h2>
+              <p className="text-sm text-ink-soft mt-1 max-w-xl">
+                Portioned meals designed for younger diners, complete with classic diner paper hats, coloring activities, and sweet cream waffles.
+              </p>
+            </div>
+            <Link to="/menu" className="text-sm font-bold text-primary hover:underline">
+              View Kids Menu Items →
+            </Link>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {kidsMealsData.map((kid, idx) => (
+              <div
+                key={idx}
+                className="group flex flex-col rounded-2xl border border-border bg-surface p-4 shadow-xs hover:border-primary hover:bg-white transition-all duration-300"
+              >
+                <div className="aspect-square w-full overflow-hidden rounded-xl bg-muted border border-border">
+                  <img
+                    src={kid.image}
+                    alt={kid.name}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    width={400}
+                    height={400}
+                  />
+                </div>
+                <div className="mt-3 flex-1 flex flex-col justify-between space-y-2">
+                  <div>
+                    <h3 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors leading-snug">
+                      {kid.name}
+                    </h3>
+                    <p className="text-[11px] text-ink-soft mt-1 leading-relaxed line-clamp-2">
+                      {kid.desc}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between text-xs font-bold pt-2 border-t border-border/50">
+                    <span className="text-primary font-black">{kid.price}</span>
+                    <span className="text-ink-soft text-[11px]">{kid.cal}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-amber-300 bg-amber-50/70 p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div className="space-y-1">
+              <h4 className="font-display text-base font-bold text-amber-950 flex items-center justify-center md:justify-start gap-2">
+                <ChefHat className="h-4 w-4 text-amber-800" /> Free Paper Chef Hats &amp; Diner Coloring
+              </h4>
+              <p className="text-xs text-amber-900/80 leading-relaxed max-w-2xl">
+                Every Waffle House counter welcomes kids with signature paper chef hats and crayons to color while watching cooks flip eggs and waffles on the open griddle.
+              </p>
+            </div>
+            <Link to="/about" className="btn-primary py-2 px-4 text-xs font-bold shrink-0">
+              Family Dining Info →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 8. THE READING ROOM (CURATED GUIDES & REFERENCES)            */}
       {/* ============================================================ */}
       <section aria-labelledby="reading-room-heading" className="bg-surface py-16 md:py-20 border-b border-border font-sans">
         <div className="container-editorial">
@@ -737,18 +915,18 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 7. WAFFLE HOUSE LOCATIONS & CITY DIRECTORY                   */}
+      {/* 9. WAFFLE HOUSE LOCATIONS & CITY DIRECTORY (LIKE REFERENCE)  */}
       {/* ============================================================ */}
       <section aria-labelledby="locations-heading" className="bg-white py-16 md:py-20 border-b border-border font-sans">
         <div className="container-editorial">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div>
-              <span className="chip">Locations Hub</span>
+              <span className="chip">The Map &amp; City Directory</span>
               <h2 id="locations-heading" className="font-display text-3xl font-bold sm:text-4xl text-foreground mt-2">
                 Find a Waffle House Restaurant
               </h2>
               <p className="text-sm text-ink-soft mt-1">
-                Over 1,900+ diners operating 24 hours a day across 25 U.S. states.
+                Over 1,900+ diners operating 24 hours a day across 25 U.S. states and 600+ cities.
               </p>
             </div>
             <Link to="/locations" className="text-sm font-bold text-primary hover:underline">
@@ -757,7 +935,7 @@ function HomePage() {
           </div>
 
           <div className="grid gap-10 lg:grid-cols-12 items-start">
-            {/* Left: Top States Grid */}
+            {/* Left: Top States Grid with Real Diner Images */}
             <div className="lg:col-span-7 space-y-6">
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {[
@@ -770,6 +948,9 @@ function HomePage() {
                   { state: "Texas", count: "120+ diners", slug: "texas" },
                   { state: "Ohio", count: "80+ diners", slug: "ohio" },
                   { state: "Virginia", count: "65+ diners", slug: "virginia" },
+                  { state: "Indiana", count: "55+ diners", slug: "indiana" },
+                  { state: "Kentucky", count: "50+ diners", slug: "kentucky" },
+                  { state: "Mississippi", count: "45+ diners", slug: "mississippi" },
                 ].map((st) => (
                   <Link
                     key={st.slug}
@@ -785,34 +966,46 @@ function HomePage() {
                 ))}
               </div>
 
-              {/* 24/7 FEMA Index Feature Box */}
-              <div className="rounded-2xl border border-primary/40 bg-primary/5 p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="space-y-1 text-center sm:text-left">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800">
-                    <ShieldCheck className="h-4 w-4 text-primary" /> Always Open 24/7/365
-                  </span>
-                  <h4 className="font-display text-base font-bold text-foreground">
-                    The FEMA Waffle House Index
-                  </h4>
-                  <p className="text-xs text-ink-soft leading-relaxed max-w-md">
-                    Emergency management officials monitor Waffle House operations to measure storm recovery and community resilience.
-                  </p>
+              {/* 24/7 FEMA Index Feature Box with Diner Atmosphere Image */}
+              <div className="rounded-2xl border border-border bg-surface overflow-hidden shadow-xs grid sm:grid-cols-12 gap-0">
+                <div className="sm:col-span-5 h-44 sm:h-auto overflow-hidden bg-muted">
+                  <img
+                    src={hero5}
+                    alt="Waffle House Diner Signboard Exterior"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                    width={400}
+                    height={300}
+                  />
                 </div>
-                <Link to="/locations" className="btn-primary py-2 px-4 text-xs font-bold shrink-0">
-                  Find Nearest Diner →
-                </Link>
+                <div className="sm:col-span-7 p-5 flex flex-col justify-between space-y-2">
+                  <div className="space-y-1">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800">
+                      <ShieldCheck className="h-4 w-4 text-primary" /> Always Open 24/7/365
+                    </span>
+                    <h4 className="font-display text-base font-bold text-foreground">
+                      The FEMA Waffle House Index
+                    </h4>
+                    <p className="text-xs text-ink-soft leading-relaxed">
+                      Emergency response teams track Waffle House diners to gauge community recovery after major weather events.
+                    </p>
+                  </div>
+                  <Link to="/locations" className="btn-primary py-2 px-4 text-xs font-bold w-fit">
+                    Find Nearest Diner →
+                  </Link>
+                </div>
               </div>
             </div>
 
-            {/* Right: Top Cities Table */}
+            {/* Right: Top 12 Cities Table (Matching Reference Layout) */}
             <div className="lg:col-span-5">
               <div className="overflow-hidden rounded-2xl border border-black/[0.08] bg-white shadow-xs">
                 <div className="bg-[#0B0C0E] text-white px-5 py-3 flex items-center justify-between">
                   <h3 className="font-display text-xs font-bold uppercase tracking-wider text-amber-400">
-                    Top Cities by Restaurant Count
+                    Cities with the Most Restaurants
                   </h3>
                   <Link to="/locations" className="text-[10px] text-white/70 hover:text-white">
-                    View all 600+ cities →
+                    All 600+ cities →
                   </Link>
                 </div>
                 <table className="w-full text-xs">
@@ -848,86 +1041,67 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 8. OPENING HOURS (24/7/365 ROUND-THE-CLOCK SCHEDULE)        */}
+      {/* 10. OPENING HOURS (TYPICAL SCHEDULE LIKE REFERENCE)          */}
       {/* ============================================================ */}
-      <section aria-label="Operating Hours" className="bg-surface py-16 md:py-20 border-b border-border font-sans">
-        <div className="container-editorial max-w-4xl space-y-6">
+      <section aria-label="Opening Hours" className="bg-surface py-16 md:py-20 border-b border-border font-sans">
+        <div className="container-editorial max-w-4xl space-y-8">
           <div>
-            <span className="chip">Operating Schedule</span>
-            <h2 className="font-display text-2xl font-bold sm:text-3xl text-foreground mt-2">
-              Round-the-Clock Diner Hours: 24/7/365
+            <span className="chip">Opening Hours</span>
+            <h2 className="font-display text-3xl font-bold sm:text-4xl text-foreground mt-2">
+              Typical Restaurant Hours
             </h2>
             <p className="text-sm text-ink-soft mt-1">
-              Waffle House locations maintain open kitchen flat-top cooking 24 hours a day with zero closure windows.
+              All Waffle House restaurants follow a strict 24-hour continuous schedule. Individual locations maintain short-order service 24/7/365.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[
-              { time: "Morning", hours: "6:00 AM – 12:00 PM", status: "Full Breakfast & Waffles" },
-              { time: "Afternoon", hours: "12:00 PM – 6:00 PM", status: "Lunch Favorites & Melts" },
-              { time: "Evening", hours: "6:00 PM – 12:00 AM", status: "Dinners, Steaks & Chops" },
-              { time: "Overnight", hours: "12:00 AM – 6:00 AM", status: "Late-Night Short Order" },
-            ].map((slot, i) => (
-              <div key={i} className="rounded-2xl border border-border bg-white p-4 text-center shadow-xs">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-primary">{slot.time}</span>
-                <p className="font-display text-sm font-bold text-foreground mt-1">{slot.hours}</p>
-                <span className="inline-block mt-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 text-[10px] font-bold">
-                  Open · {slot.status}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-            <p className="text-xs text-ink-soft">
-              Planning your visit? Weekend breakfast rush peaks between 8:30 AM and 11:30 AM.
-            </p>
-            <Link to="/locations" className="text-xs font-bold text-primary hover:underline shrink-0">
-              Confirm your restaurant's hours →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* 9. PRINTABLE MENU PDF DOWNLOAD SECTION                       */}
-      {/* ============================================================ */}
-      <section className="bg-[#0B0C0E] border-b border-white/10 text-white font-sans">
-        <div className="container-editorial py-12 md:py-16">
-          <div className="mx-auto max-w-4xl rounded-3xl bg-gradient-to-br from-[#18191B] to-[#0B0C0E] border border-white/10 p-8 md:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="space-y-2 text-center md:text-left max-w-lg">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 ring-1 ring-inset ring-amber-500/20">
-                <FileText className="h-3.5 w-3.5" /> Printable 11-Page Reference Document
-              </span>
-              <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-                Download Waffle House Menu PDF
-              </h2>
-              <p className="text-xs sm:text-sm leading-relaxed text-white/75">
-                Download the complete 11-page Waffle House menu and nutritional panel with all calories, fat, sodium, carbs, protein, and kitchen allergens.
-              </p>
+          {/* Reference Style Day-by-Day Opening Schedule Table */}
+          <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-xs">
+            <div className="grid grid-cols-12 bg-[#0B0C0E] text-white py-3 px-4 sm:px-6 text-[11px] font-bold uppercase tracking-wider">
+              <span className="col-span-3">Day</span>
+              <span className="col-span-6 text-center">Service Hours</span>
+              <span className="col-span-3 text-right">Close</span>
             </div>
-            <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full sm:w-auto">
-              <a
-                href="/waffle-house-menu-nutritionals.pdf"
-                download="waffle-house-menu-nutritionals.pdf"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-primary px-6 text-xs sm:text-sm font-bold text-black transition-all hover:bg-[#E2B000]"
-              >
-                <Download className="h-4 w-4" /> Download Menu PDF (37 KB)
-              </a>
-              <Link
-                to="/menu"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-white/10 px-6 text-xs sm:text-sm font-semibold text-white border border-white/20 transition-all hover:bg-white/20"
-              >
-                Browse Full Menu
+            <div className="divide-y divide-border">
+              {[
+                { day: "Mon", open: "24 Hours (Open All Day & Night)", close: "Never" },
+                { day: "Tue", open: "24 Hours (Open All Day & Night)", close: "Never" },
+                { day: "Wed", open: "24 Hours (Open All Day & Night)", close: "Never" },
+                { day: "Thu", open: "24 Hours (Open All Day & Night)", close: "Never" },
+                { day: "Fri", open: "24 Hours (Open All Day & Night)", close: "Never" },
+                { day: "Sat", open: "24 Hours (Open All Day & Night)", close: "Never" },
+                { day: "Sun", open: "24 Hours (Open All Day & Night)", close: "Never" },
+              ].map((row, idx) => (
+                <div key={idx} className="grid grid-cols-12 py-3 px-4 sm:px-6 text-xs items-center hover:bg-muted/30 transition-colors">
+                  <span className="col-span-3 font-bold text-foreground">{row.day}</span>
+                  <div className="col-span-6 flex items-center justify-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
+                    <span className="text-ink-soft font-medium">{row.open}</span>
+                  </div>
+                  <span className="col-span-3 text-right font-display font-bold text-emerald-700">Open 24/7</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="p-5 rounded-2xl border border-border bg-white shadow-xs space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="font-display text-sm font-bold text-foreground">
+                Planning Your Visit:
+              </span>
+              <Link to="/locations" className="text-xs font-bold text-primary hover:underline">
+                Confirm your restaurant's hours →
               </Link>
             </div>
+            <p className="text-xs text-ink-soft leading-relaxed">
+              If you prefer a quieter booth, visit outside the peak breakfast window (8:30 AM – 11:30 AM on weekends). Arriving late at night or during early morning gives you front-row counter seats to the sizzling griddle and fast short-order cooking.
+            </p>
           </div>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* 10. FAQ ACCORDION (QUICK ANSWERS)                            */}
+      {/* 11. QUICK ANSWERS & FAQ ACCORDION                            */}
       {/* ============================================================ */}
       <section aria-labelledby="home-faq-heading" className="bg-white py-16 md:py-20 border-b border-border font-sans">
         <div className="container-editorial max-w-3xl">
@@ -967,7 +1141,43 @@ function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* 11. SUBSCRIBER NEWSLETTER BOX                                */}
+      {/* 12. PRINTABLE MENU PDF DOWNLOAD SECTION                      */}
+      {/* ============================================================ */}
+      <section className="bg-[#0B0C0E] border-b border-white/10 text-white font-sans">
+        <div className="container-editorial py-12 md:py-16">
+          <div className="mx-auto max-w-4xl rounded-3xl bg-gradient-to-br from-[#18191B] to-[#0B0C0E] border border-white/10 p-8 md:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left max-w-lg">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 ring-1 ring-inset ring-amber-500/20">
+                <FileText className="h-3.5 w-3.5" /> Printable 11-Page Reference Document
+              </span>
+              <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+                Download Waffle House Menu PDF
+              </h2>
+              <p className="text-xs sm:text-sm leading-relaxed text-white/75">
+                Download the complete 11-page Waffle House menu and nutritional panel with all calories, fat, sodium, carbs, protein, and kitchen allergens.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full sm:w-auto">
+              <a
+                href="/waffle-house-menu-nutritionals.pdf"
+                download="waffle-house-menu-nutritionals.pdf"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-primary px-6 text-xs sm:text-sm font-bold text-black transition-all hover:bg-[#E2B000]"
+              >
+                <Download className="h-4 w-4" /> Download Menu PDF (37 KB)
+              </a>
+              <Link
+                to="/menu"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-white/10 px-6 text-xs sm:text-sm font-semibold text-white border border-white/20 transition-all hover:bg-white/20"
+              >
+                Browse Full Menu
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 13. SUBSCRIBER NEWSLETTER BOX                                */}
       {/* ============================================================ */}
       <SubscriberSection idPrefix="home-sub" />
     </main>
