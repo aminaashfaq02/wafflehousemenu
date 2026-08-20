@@ -35,36 +35,32 @@ const nutritionLinks = [
 ];
 
 const planVisitLinks = [
-  { label: "All Locations", href: "/locations", icon: MapPin, desc: "1,900+ diners across 25 states" },
-  { label: "Reservations & Seating", href: "/reservations", icon: Calendar, desc: "Walk-in counter & booth guide" },
-  { label: "Delivery & Takeout", href: "/delivery", icon: Truck, desc: "DoorDash, Uber Eats & pickup" },
-  { label: "Gift Cards & Balance", href: "/gift-cards", icon: Gift, desc: "Physical & digital eGift cards" },
-  { label: "Catering & Group Platters", href: "/catering", icon: Utensils, desc: "Breakfast boxes & hashbrown trays" },
-  { label: "Diner Hours (24/7)", href: "/hours", icon: Clock, desc: "Always open, 365 days a year" },
+  { label: "All Locations", href: "/locations", desc: "1,900+ diners across 25 states" },
+  { label: "Reservations & Seating", href: "/reservations", desc: "Walk-in counter & booth guide" },
+  { label: "Delivery & Takeout", href: "/delivery", desc: "DoorDash, Uber Eats & pickup" },
+  { label: "Gift Cards & Balance", href: "/gift-cards", desc: "Physical & digital eGift cards" },
+  { label: "Catering & Group Platters", href: "/catering", desc: "Breakfast boxes & hashbrown trays" },
+  { label: "Diner Hours (24/7)", href: "/hours", desc: "Always open, 365 days a year" },
 ];
 
-const keyStates = [
-  { name: "Georgia", slug: "georgia" },
-  { name: "Florida", slug: "florida" },
-  { name: "North Carolina", slug: "north-carolina" },
-  { name: "South Carolina", slug: "south-carolina" },
-  { name: "Alabama", slug: "alabama" },
-  { name: "Tennessee", slug: "tennessee" },
-  { name: "Texas", slug: "texas" },
-  { name: "Virginia", slug: "virginia" },
-  { name: "Ohio", slug: "ohio" },
-  { name: "Mississippi", slug: "mississippi" },
-  { name: "Kentucky", slug: "kentucky" },
-  { name: "Louisiana", slug: "louisiana" },
+const shortBlogLinks = [
+  { title: "2026 Price & Calorie Guide", slug: "waffle-house-menu-prices" },
+  { title: "Top Secret Copycat Recipes", slug: "waffle-house-waffle-recipe" },
+  { title: "The FEMA Waffle House Index", slug: "waffle-house-index" },
+  { title: "Nutrition & Calorie Hacks", slug: "waffle-house-healthy-options" },
+  { title: "All-Star Special Breakdown", slug: "all-star-special-calories" },
+  { title: "Late Night Dining Rules", slug: "waffle-house-late-night" },
+  { title: "Hashbrowns: 8 Ways to Order", slug: "waffle-house-hashbrowns-guide" },
+  { title: "DoorDash & Delivery Secrets", slug: "waffle-house-delivery" },
 ];
 
 const moreLinks = [
-  { label: "Happy Hour & Value Guide", href: "/happy-hour", icon: Percent },
-  { label: "Deals & Promotions", href: "/deals", icon: Tag },
-  { label: "FAQ", href: "/faq", icon: null },
-  { label: "About", href: "/about", icon: null },
-  { label: "Contact", href: "/contact", icon: Phone },
-  { label: "Methodology", href: "/methodology", icon: null },
+  { label: "Happy Hour & Value Guide", href: "/happy-hour" },
+  { label: "Deals & Promotions", href: "/deals" },
+  { label: "FAQ", href: "/faq" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Methodology", href: "/methodology" },
 ];
 
 export function SiteHeader({ overHero = false }: Props) {
@@ -339,28 +335,22 @@ export function SiteHeader({ overHero = false }: Props) {
                         </span>
                       </div>
                       <ul className="py-1">
-                        {planVisitLinks.map((item) => {
-                          const IconComp = item.icon;
-                          return (
-                            <li key={item.href}>
-                              <Link
-                                to={item.href as any}
-                                onClick={() => setActiveDropdown(null)}
-                                className="flex items-start gap-2.5 px-4 py-2 hover:bg-amber-50 group transition-colors"
-                              >
-                                <IconComp className="h-4 w-4 text-primary shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                                <div className="space-y-0.5">
-                                  <p className="text-[13px] font-bold text-foreground group-hover:text-amber-800 leading-snug">
-                                    {item.label}
-                                  </p>
-                                  <p className="text-[10.5px] text-ink-soft leading-tight">
-                                    {item.desc}
-                                  </p>
-                                </div>
-                              </Link>
-                            </li>
-                          );
-                        })}
+                        {planVisitLinks.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              to={item.href as any}
+                              onClick={() => setActiveDropdown(null)}
+                              className="block px-4 py-2 hover:bg-amber-50 group transition-colors"
+                            >
+                              <p className="text-[13px] font-bold text-foreground group-hover:text-amber-800 leading-snug">
+                                {item.label}
+                              </p>
+                              <p className="text-[11px] text-ink-soft leading-tight">
+                                {item.desc}
+                              </p>
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -451,7 +441,7 @@ export function SiteHeader({ overHero = false }: Props) {
                   <div
                     onMouseEnter={() => openDd("blog")}
                     onMouseLeave={closeDd}
-                    className="absolute left-0 top-full pt-1 z-50 w-[300px]"
+                    className="absolute left-0 top-full pt-1 z-50 w-[280px]"
                   >
                     <div className="rounded-2xl border border-border bg-white shadow-2xl overflow-hidden">
                       <div className="flex items-center justify-between px-4 py-2.5 bg-amber-50 border-b border-border/50">
@@ -459,7 +449,7 @@ export function SiteHeader({ overHero = false }: Props) {
                         <Link to="/blog" onClick={() => setActiveDropdown(null)} className="text-[11px] font-bold text-primary hover:underline">All →</Link>
                       </div>
                       <ul className="py-1">
-                        {topBlogs.map((p) => (
+                        {shortBlogLinks.map((p) => (
                           <li key={p.slug}>
                             <Link
                               to="/blog/$slug"
@@ -506,9 +496,8 @@ export function SiteHeader({ overHero = false }: Props) {
                             <Link
                               to={ml.href as any}
                               onClick={() => setActiveDropdown(null)}
-                              className="flex items-center gap-2 px-4 py-[7px] text-[13px] font-medium text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
+                              className="block px-4 py-[7px] text-[13px] font-medium text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
                             >
-                              {ml.icon && <ml.icon className="h-4 w-4 text-primary shrink-0" />}
                               {ml.label}
                             </Link>
                           </li>

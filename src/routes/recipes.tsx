@@ -223,8 +223,13 @@ function RecipesPage() {
   return (
     <main className="bg-white text-foreground font-sans min-h-screen">
       {/* Header Banner */}
-      <section className="bg-[#0B0C0E] border-b border-white/10 text-white py-16 md:py-20">
-        <div className="container-editorial">
+      <section className="relative overflow-hidden bg-black text-white py-16 md:py-24 border-b border-white/10">
+        <div className="absolute inset-0 -z-10 opacity-30">
+          <img src={wafflesImg} alt="Diner Waffle Cooking" className="h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/50" />
+        </div>
+
+        <div className="container-editorial relative z-10">
           <div className="max-w-3xl space-y-4">
             <span className="chip text-primary bg-primary/10 border border-primary/20">
               Culinary Kitchen Guide

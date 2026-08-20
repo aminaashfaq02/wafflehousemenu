@@ -124,6 +124,16 @@ function ReservationsPage() {
             Waffle House is world-famous for its open kitchen, stainless steel counters, and welcoming atmosphere. This guide explains how seating works across all 1,900+ restaurants, peak rush hour tips, booth policies, and how to plan visits for groups.
           </p>
 
+          {/* Hero Featured Visual */}
+          <div className="relative h-48 sm:h-64 w-full rounded-2xl overflow-hidden shadow-xs border border-border">
+            <img src={contactHeroDiner} alt="Waffle House Diner Interior Seating" className="h-full w-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <span className="text-xs font-bold text-white bg-black/60 backdrop-blur-xs px-3 py-1 rounded-full">
+                Classic First-Come First-Served Seating · 24/7 Service
+              </span>
+            </div>
+          </div>
+
           {/* Key Facts Summary */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             <div className="rounded-2xl border border-border bg-surface p-4 text-center">
