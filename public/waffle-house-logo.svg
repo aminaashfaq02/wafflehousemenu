@@ -1,57 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" width="360" height="100" role="img" aria-label="Waffle House">
-  <!-- Left Golden Waffle Emblem -->
-  <g transform="translate(0, 5)">
-    <!-- Waffle Base Outer Box -->
-    <rect x="2" y="2" width="86" height="86" rx="18" fill="#F5BA00" stroke="#231F20" stroke-width="4"/>
-    <!-- Waffle Grid Pockets -->
-    <rect x="12" y="12" width="16" height="16" rx="3" fill="#D99B00" stroke="#231F20" stroke-width="2"/>
-    <rect x="36" y="12" width="18" height="16" rx="3" fill="#D99B00" stroke="#231F20" stroke-width="2"/>
-    <rect x="62" y="12" width="16" height="16" rx="3" fill="#D99B00" stroke="#231F20" stroke-width="2"/>
-    <rect x="12" y="36" width="16" height="18" rx="3" fill="#D99B00" stroke="#231F20" stroke-width="2"/>
-    <rect x="36" y="36" width="18" height="18" rx="3" fill="#FFE57F" stroke="#231F20" stroke-width="2.5"/> <!-- Melting butter in center -->
-    <rect x="62" y="36" width="16" height="18" rx="3" fill="#D99B00" stroke="#231F20" stroke-width="2"/>
-    <rect x="12" y="62" width="16" height="16" rx="3" fill="#D99B00" stroke="#231F20" stroke-width="2"/>
-    <rect x="36" y="62" width="18" height="16" rx="3" fill="#D99B00" stroke="#231F20" stroke-width="2"/>
-    <rect x="62" y="62" width="16" height="16" rx="3" fill="#D99B00" stroke="#231F20" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 155" width="440" height="155" role="img" aria-label="The Waffle House Menu">
+  <defs>
+    <linearGradient id="waffleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD054"/>
+      <stop offset="50%" stop-color="#F5BA00"/>
+      <stop offset="100%" stop-color="#D68700"/>
+    </linearGradient>
+    <linearGradient id="syrupGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B3A00"/>
+      <stop offset="100%" stop-color="#542000"/>
+    </linearGradient>
+    <linearGradient id="goldTextGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C5852C"/>
+      <stop offset="50%" stop-color="#935716"/>
+      <stop offset="100%" stop-color="#5E3508"/>
+    </linearGradient>
+    <filter id="plateShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- LEFT: Delicious Illustrated Waffle on Diner Plate -->
+  <g transform="translate(15, 18)">
+    <!-- Plate base -->
+    <ellipse cx="65" cy="105" rx="60" ry="16" fill="#FDFBF7" stroke="#D1B894" stroke-width="2.5" filter="url(#plateShadow)"/>
+    <ellipse cx="65" cy="103" rx="48" ry="11" fill="#EFE8DD" stroke="#C5A882" stroke-width="1.5"/>
+
+    <!-- Round Belgian Waffle Stack -->
+    <!-- Bottom waffle layer -->
+    <ellipse cx="65" cy="86" rx="42" ry="18" fill="#C47900" stroke="#4A2600" stroke-width="2"/>
+    <!-- Top waffle base -->
+    <ellipse cx="65" cy="74" rx="42" ry="20" fill="url(#waffleGrad)" stroke="#4A2600" stroke-width="2.5"/>
+    
+    <!-- Waffle Grid Lines (3D Pockets) -->
+    <ellipse cx="65" cy="74" rx="28" ry="12" fill="none" stroke="#A85C00" stroke-width="2"/>
+    <path d="M40,66 L90,82 M40,82 L90,66 M28,74 L102,74 M65,55 L65,93 M50,58 L80,90 M80,58 L50,90" stroke="#7A3E00" stroke-width="2.2" stroke-linecap="round"/>
+    
+    <!-- Waffle Deep Indent squares -->
+    <rect x="58" y="66" width="14" height="8" rx="2" fill="#995000" opacity="0.6"/>
+    <rect x="42" y="68" width="10" height="6" rx="1.5" fill="#995000" opacity="0.5"/>
+    <rect x="78" y="68" width="10" height="6" rx="1.5" fill="#995000" opacity="0.5"/>
+    <rect x="58" y="58" width="14" height="6" rx="1.5" fill="#995000" opacity="0.5"/>
+    <rect x="58" y="78" width="14" height="6" rx="1.5" fill="#995000" opacity="0.5"/>
+
+    <!-- Warm Maple Syrup Drips flowing over edges -->
+    <path d="M36,75 Q32,85 36,92 Q40,94 44,88 Q48,97 52,90 Q56,98 62,94 Q66,102 72,94 Q78,100 84,91 Q90,96 95,88 Q100,82 96,75" fill="url(#syrupGrad)" opacity="0.9"/>
+
+    <!-- Melting Butter Pat on top -->
+    <polygon points="56,60 74,56 78,65 60,69" fill="#FFF59D" stroke="#D9A800" stroke-width="1.8"/>
+    <polygon points="56,60 74,56 72,52 54,56" fill="#FFFDE7" stroke="#D9A800" stroke-width="1.2"/>
+    <!-- Butter drip -->
+    <path d="M58,68 Q56,76 60,78 Q64,76 62,68 Z" fill="#FFE57F"/>
+
+    <!-- Fresh Red Strawberry Garnish -->
+    <path d="M72,50 C70,42 84,40 86,48 C88,58 76,64 72,50 Z" fill="#D32F2F" stroke="#8B0000" stroke-width="1.2"/>
+    <circle cx="76" cy="48" r="0.8" fill="#FFF"/>
+    <circle cx="80" cy="52" r="0.8" fill="#FFF"/>
+    <circle cx="78" cy="56" r="0.8" fill="#FFF"/>
+    <!-- Strawberry green leaves -->
+    <path d="M78,42 C76,38 72,40 74,43 M78,42 C80,38 84,39 82,43 M78,42 L78,38" stroke="#388E3C" stroke-width="2" fill="none" stroke-linecap="round"/>
   </g>
 
-  <!-- Right: Official Waffle House Yellow Tiles -->
-  <g transform="translate(98, 0)">
-    <!-- WAFFLE row -->
-    <!-- W -->
-    <rect x="0" y="2" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M5,7h6.5l2,14c1.5-4 2.5-7.5 4.5-14h6.5l3.8,14.5l2.3-14.5h6.2l-4.5,29h-6.5c-1-4-3.8-14-5.2-18.5l-5.5,18.5h-6L5,7z"/>
-    <!-- A -->
-    <rect x="44" y="2" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M64,7h6.8l11.5,30h-7.4l-2.3-6.8h-9.2l-2.4,6.8h-7.2L64,7z M63.8,25h7l-3.5-11.2h-0.1L63.8,25z"/>
-    <!-- F -->
-    <rect x="88" y="2" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M96,7h24.5v6.5h-17.7v5.5h15.7v6h-15.7v12h-6.8V7z"/>
-    <!-- F -->
-    <rect x="132" y="2" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M140,7h24.5v6.5h-17.7v5.5h15.7v6h-15.7v12h-6.8V7z"/>
-    <!-- L -->
-    <rect x="176" y="2" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M184,7h6.8v23.5h17.7v6.5h-24.5V7z"/>
-    <!-- E -->
-    <rect x="220" y="2" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M228,7h24.5v6.5h-17.7v5.5h15.7v5.8h-15.7v5.7h17.7v6.5h-24.5V7z"/>
+  <!-- RIGHT: Typography & Flourishes -->
+  <g transform="translate(155, 0)">
+    <!-- "The" in elegant script -->
+    <text x="35" y="38" font-family="'Brush Script MT', 'Playfair Display', 'Georgia', cursive, serif" font-size="28" font-style="italic" font-weight="bold" fill="#B83A1B">
+      The
+    </text>
 
-    <!-- HOUSE row -->
-    <!-- H -->
-    <rect x="22" y="48" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M30,53h7v11.5h12.5V53h7v30h-7V71H37v12h-7V53z"/>
-    <!-- O -->
-    <rect x="66" y="48" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M70,68c0-9 7.2-16 16-16s16,7 16,16s-7.2,16-16,16S70,77,70,68z M86,76.5c4.8,0,8.7-3.9,8.7-8.5c0-4.8-3.9-8.5-8.7-8.5c-4.8,0-8.7,3.7-8.7,8.5C77.3,72.6,81.2,76.5,86,76.5z"/>
-    <!-- U -->
-    <rect x="110" y="48" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M117.5,53h6.8v18c0,4 1.2,7 5.8,7c4.2,0,4.8-3,4.8-7V53h6.8v18.5c-1,7.5-4.2,11.5-11.6,11.5c-7.8,0-11.8-4-12.6-11.5V53z"/>
-    <!-- S -->
-    <rect x="154" y="48" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M185.5,55v6.5c-3.8-1.7-6-2.2-8.7-2.6c-3.5-0.6-6.8,0.1-7.2,2.5c0,0.3,0.3,1,1.1,1.4c4,1.6,18,2.5,15.6,12.8c-2.1,9.2-14.5,7-23.7,3.8v-7.2c8.3,4.3,16.5,6.3,17.2,0.9c0.5-4.1-15.9-2.7-17.3-11c-0.9-5.5,4.9-8.5,10.2-8.9C177.5,52.8,182.4,54.5,185.5,55z"/>
-    <!-- E -->
-    <rect x="198" y="48" width="40" height="40" fill="#FFF200" stroke="#231F20" stroke-width="3"/>
-    <path fill="#231F20" d="M206,53h24.5v6.5h-17.7v5.5h15.7v5.8h-15.7v5.7h17.7v6.5h-24.5V53z"/>
+    <!-- "Waffle" in golden serif script -->
+    <text x="30" y="78" font-family="'Playfair Display', 'Cinzel', 'Georgia', serif" font-size="46" font-weight="900" fill="url(#goldTextGrad)" letter-spacing="1">
+      Waffle
+    </text>
+
+    <!-- Chef Hat perched on top right of House -->
+    <g transform="translate(205, 50) scale(0.68)">
+      <path d="M12,28 C4,28 0,22 4,16 C0,10 8,2 18,5 C24,-2 34,-2 40,5 C50,2 58,10 54,16 C58,22 54,28 46,28 Z" fill="#FFFFFF" stroke="#8C5314" stroke-width="2.5"/>
+      <path d="M14,28 L44,28 L42,35 L16,35 Z" fill="#FFFFFF" stroke="#8C5314" stroke-width="2.5"/>
+      <line x1="20" y1="12" x2="22" y2="25" stroke="#E6D3B8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="29" y1="9" x2="29" y2="25" stroke="#E6D3B8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="38" y1="12" x2="36" y2="25" stroke="#E6D3B8" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- "House" in Crimson Serif -->
+    <text x="65" y="115" font-family="'Playfair Display', 'Cinzel', 'Georgia', serif" font-size="40" font-weight="900" fill="#8B1E0F" letter-spacing="2">
+      House
+    </text>
+
+    <!-- Flourish underline with decorative wing arcs -->
+    <path d="M5,88 Q40,96 120,96 Q200,96 250,88" fill="none" stroke="#C59B58" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="2" cy="87" r="2.5" fill="#C59B58"/>
+    <circle cx="253" cy="87" r="2.5" fill="#C59B58"/>
+
+    <!-- Bottom: • MENU & PRICES • -->
+    <g transform="translate(0, 124)">
+      <line x1="15" y1="10" x2="55" y2="10" stroke="#8C5314" stroke-width="1.2"/>
+      <!-- Small left star/diamond -->
+      <polygon points="61,10 64,7 67,10 64,13" fill="#B83A1B"/>
+
+      <text x="75" y="14" font-family="'Inter', 'Arial', sans-serif" font-size="12" font-weight="800" fill="#4A2600" letter-spacing="3">
+        MENU &amp; PRICES
+      </text>
+
+      <!-- Small right star/diamond -->
+      <polygon points="212,10 215,7 218,10 215,13" fill="#B83A1B"/>
+      <line x1="224" y1="10" x2="265" y2="10" stroke="#8C5314" stroke-width="1.2"/>
+
+      <!-- Crossed Spoon & Fork with Heart below -->
+      <g transform="translate(132, 17) scale(0.7)">
+        <!-- Fork -->
+        <path d="M-8,-4 L12,16 M-8,-4 L-12,-8 M-6,-6 L-10,-10 M-4,-8 L-8,-12" stroke="#8C5314" stroke-width="2" stroke-linecap="round"/>
+        <!-- Spoon -->
+        <path d="M12,-4 L-8,16 M12,-4 C16,-8 18,-4 14,0 Z" stroke="#8C5314" stroke-width="2" fill="#8C5314" stroke-linecap="round"/>
+        <!-- Heart in center -->
+        <path d="M2,5 C2,3 0,1 -2,3 C-4,1 -6,3 -6,5 C-6,8 2,12 2,12 C2,12 10,8 10,5 C10,3 8,1 6,3 C4,1 2,3 2,5 Z" fill="#B83A1B" transform="scale(0.5) translate(-1, 6)"/>
+      </g>
+    </g>
   </g>
 </svg>

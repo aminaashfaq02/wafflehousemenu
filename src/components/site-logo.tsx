@@ -10,38 +10,22 @@ export function SiteLogo({ light = false, className = "" }: SiteLogoProps) {
   return (
     <Link
       to="/"
-      className={`inline-flex items-center gap-2.5 sm:gap-3 group shrink-0 select-none ${className}`}
-      aria-label="Waffle House — Menu & Prices Home"
+      className={`inline-flex items-center group shrink-0 select-none ${className}`}
+      aria-label="The Waffle House Menu & Prices Home"
     >
-      {/* Authentic Waffle House Signboard Badge Icon */}
-      <div className="flex h-8 w-11 sm:h-9 sm:w-13 md:h-10 md:w-14 shrink-0 items-center justify-center rounded-lg overflow-hidden transition-transform duration-200 group-hover:scale-105">
+      {/* High-Resolution Artisan Emblem Logo */}
+      <div className="h-10 sm:h-11 md:h-12 w-auto max-w-[200px] sm:max-w-[240px] md:max-w-[270px] shrink-0 flex items-center transition-transform duration-200 group-hover:scale-[1.02]">
         <img
           src={waffleLogoIcon}
-          alt="Waffle House"
-          width={56}
-          height={40}
-          className="h-full w-full object-contain"
+          alt="The Waffle House Menu"
+          width={440}
+          height={155}
+          className={`h-full w-auto object-contain ${
+            light ? "brightness-105 contrast-105 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" : "drop-shadow-xs"
+          }`}
           loading="eager"
           decoding="async"
         />
-      </div>
-
-      {/* Stylish Typography Branding (Completely Static) */}
-      <div className="flex flex-col justify-center leading-none">
-        <span
-          className={`font-display text-[15px] sm:text-base md:text-lg font-black tracking-tight uppercase transition-colors ${
-            light ? "text-white group-hover:text-primary" : "text-foreground group-hover:text-primary"
-          }`}
-        >
-          Waffle House<span className="text-primary font-bold">.</span>
-        </span>
-        <span
-          className={`text-[8.5px] sm:text-[9.5px] font-bold uppercase tracking-[0.22em] mt-0.5 ${
-            light ? "text-amber-400/90" : "text-amber-700"
-          }`}
-        >
-          Menu &amp; Prices
-        </span>
       </div>
     </Link>
   );
