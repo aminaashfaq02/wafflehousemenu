@@ -614,7 +614,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 onClick={() => toggleMobile("menu")}
                 className="flex w-full items-center justify-between px-4 py-3 text-left font-bold text-sm bg-surface hover:bg-amber-50 transition-colors"
               >
-                <span>🍴 Menu (13 Categories)</span>
+                <span>Menu (13 Categories)</span>
                 <ChevronDown className={`h-4 w-4 text-primary transition-transform ${mobileExpanded["menu"] ? "rotate-180" : ""}`} />
               </button>
               {mobileExpanded["menu"] && (
@@ -644,7 +644,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 onClick={() => toggleMobile("plan-visit")}
                 className="flex w-full items-center justify-between px-4 py-3 text-left font-bold text-sm bg-surface hover:bg-amber-50 transition-colors"
               >
-                <span>🚗 Plan a Visit</span>
+                <span>Plan a Visit</span>
                 <ChevronDown className={`h-4 w-4 text-primary transition-transform ${mobileExpanded["plan-visit"] ? "rotate-180" : ""}`} />
               </button>
               {mobileExpanded["plan-visit"] && (
@@ -677,7 +677,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 onClick={() => toggleMobile("nutrition")}
                 className="flex w-full items-center justify-between px-4 py-3 text-left font-bold text-sm bg-surface hover:bg-amber-50 transition-colors"
               >
-                <span>🥗 Nutrition</span>
+                <span>Nutrition</span>
                 <ChevronDown className={`h-4 w-4 text-primary transition-transform ${mobileExpanded["nutrition"] ? "rotate-180" : ""}`} />
               </button>
               {mobileExpanded["nutrition"] && (
@@ -715,14 +715,14 @@ export function SiteHeader({ overHero = false }: Props) {
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-1.5 rounded-xl border border-border bg-surface py-2 px-3 text-xs font-bold text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
               >
-                🥞 Recipes
+                Recipes
               </Link>
               <Link
                 to="/deals"
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-1.5 rounded-xl border border-border bg-surface py-2 px-3 text-xs font-bold text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
               >
-                🏷️ Deals
+                Deals
               </Link>
             </div>
 
@@ -733,7 +733,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 onClick={() => toggleMobile("locations")}
                 className="flex w-full items-center justify-between px-4 py-3 text-left font-bold text-sm bg-surface hover:bg-amber-50 transition-colors"
               >
-                <span>📍 Locations</span>
+                <span>Locations (1,900+ Diners)</span>
                 <ChevronDown className={`h-4 w-4 text-primary transition-transform ${mobileExpanded["locations"] ? "rotate-180" : ""}`} />
               </button>
               {mobileExpanded["locations"] && (
@@ -763,7 +763,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 onClick={() => toggleMobile("blog")}
                 className="flex w-full items-center justify-between px-4 py-3 text-left font-bold text-sm bg-surface hover:bg-amber-50 transition-colors"
               >
-                <span>📖 Blog &amp; Guides</span>
+                <span>Blog &amp; Guides</span>
                 <ChevronDown className={`h-4 w-4 text-primary transition-transform ${mobileExpanded["blog"] ? "rotate-180" : ""}`} />
               </button>
               {mobileExpanded["blog"] && (
@@ -794,7 +794,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 onClick={() => toggleMobile("more")}
                 className="flex w-full items-center justify-between px-4 py-3 text-left font-bold text-sm bg-surface hover:bg-amber-50 transition-colors"
               >
-                <span>⋯ More</span>
+                <span>More Pages</span>
                 <ChevronDown className={`h-4 w-4 text-primary transition-transform ${mobileExpanded["more"] ? "rotate-180" : ""}`} />
               </button>
               {mobileExpanded["more"] && (
