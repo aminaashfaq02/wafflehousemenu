@@ -1,118 +1,119 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 155" width="440" height="155" role="img" aria-label="The Waffle House Menu">
   <defs>
+    <!-- Radiant Golden Yellow Waffle Gradients -->
     <linearGradient id="waffleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFD054"/>
-      <stop offset="50%" stop-color="#F5BA00"/>
-      <stop offset="100%" stop-color="#D68700"/>
+      <stop offset="0%" stop-color="#FFF200"/>
+      <stop offset="40%" stop-color="#F5BA00"/>
+      <stop offset="100%" stop-color="#D99B00"/>
     </linearGradient>
     <linearGradient id="syrupGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#8B3A00"/>
-      <stop offset="100%" stop-color="#542000"/>
+      <stop offset="0%" stop-color="#994D00"/>
+      <stop offset="100%" stop-color="#5C2900"/>
     </linearGradient>
-    <linearGradient id="goldTextGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#C5852C"/>
-      <stop offset="50%" stop-color="#935716"/>
-      <stop offset="100%" stop-color="#5E3508"/>
+    <linearGradient id="yellowTextGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF766"/>
+      <stop offset="50%" stop-color="#F5BA00"/>
+      <stop offset="100%" stop-color="#D49400"/>
     </linearGradient>
     <filter id="plateShadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.25"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.3"/>
     </filter>
   </defs>
 
-  <!-- LEFT: Delicious Illustrated Waffle on Diner Plate -->
+  <!-- LEFT: Delicious Illustrated Golden Waffle on Diner Plate -->
   <g transform="translate(15, 18)">
     <!-- Plate base -->
-    <ellipse cx="65" cy="105" rx="60" ry="16" fill="#FDFBF7" stroke="#D1B894" stroke-width="2.5" filter="url(#plateShadow)"/>
-    <ellipse cx="65" cy="103" rx="48" ry="11" fill="#EFE8DD" stroke="#C5A882" stroke-width="1.5"/>
+    <ellipse cx="65" cy="105" rx="60" ry="16" fill="#FFFFFF" stroke="#F5BA00" stroke-width="2" filter="url(#plateShadow)"/>
+    <ellipse cx="65" cy="103" rx="48" ry="11" fill="#FFFDE7" stroke="#E2B000" stroke-width="1.5"/>
 
     <!-- Round Belgian Waffle Stack -->
     <!-- Bottom waffle layer -->
-    <ellipse cx="65" cy="86" rx="42" ry="18" fill="#C47900" stroke="#4A2600" stroke-width="2"/>
+    <ellipse cx="65" cy="86" rx="42" ry="18" fill="#C47900" stroke="#1A1A1A" stroke-width="2"/>
     <!-- Top waffle base -->
-    <ellipse cx="65" cy="74" rx="42" ry="20" fill="url(#waffleGrad)" stroke="#4A2600" stroke-width="2.5"/>
+    <ellipse cx="65" cy="74" rx="42" ry="20" fill="url(#waffleGrad)" stroke="#1A1A1A" stroke-width="2.5"/>
     
     <!-- Waffle Grid Lines (3D Pockets) -->
-    <ellipse cx="65" cy="74" rx="28" ry="12" fill="none" stroke="#A85C00" stroke-width="2"/>
-    <path d="M40,66 L90,82 M40,82 L90,66 M28,74 L102,74 M65,55 L65,93 M50,58 L80,90 M80,58 L50,90" stroke="#7A3E00" stroke-width="2.2" stroke-linecap="round"/>
+    <ellipse cx="65" cy="74" rx="28" ry="12" fill="none" stroke="#B87700" stroke-width="2"/>
+    <path d="M40,66 L90,82 M40,82 L90,66 M28,74 L102,74 M65,55 L65,93 M50,58 L80,90 M80,58 L50,90" stroke="#8C5300" stroke-width="2.2" stroke-linecap="round"/>
     
     <!-- Waffle Deep Indent squares -->
-    <rect x="58" y="66" width="14" height="8" rx="2" fill="#995000" opacity="0.6"/>
-    <rect x="42" y="68" width="10" height="6" rx="1.5" fill="#995000" opacity="0.5"/>
-    <rect x="78" y="68" width="10" height="6" rx="1.5" fill="#995000" opacity="0.5"/>
-    <rect x="58" y="58" width="14" height="6" rx="1.5" fill="#995000" opacity="0.5"/>
-    <rect x="58" y="78" width="14" height="6" rx="1.5" fill="#995000" opacity="0.5"/>
+    <rect x="58" y="66" width="14" height="8" rx="2" fill="#B87700" opacity="0.7"/>
+    <rect x="42" y="68" width="10" height="6" rx="1.5" fill="#B87700" opacity="0.6"/>
+    <rect x="78" y="68" width="10" height="6" rx="1.5" fill="#B87700" opacity="0.6"/>
+    <rect x="58" y="58" width="14" height="6" rx="1.5" fill="#B87700" opacity="0.6"/>
+    <rect x="58" y="78" width="14" height="6" rx="1.5" fill="#B87700" opacity="0.6"/>
 
     <!-- Warm Maple Syrup Drips flowing over edges -->
-    <path d="M36,75 Q32,85 36,92 Q40,94 44,88 Q48,97 52,90 Q56,98 62,94 Q66,102 72,94 Q78,100 84,91 Q90,96 95,88 Q100,82 96,75" fill="url(#syrupGrad)" opacity="0.9"/>
+    <path d="M36,75 Q32,85 36,92 Q40,94 44,88 Q48,97 52,90 Q56,98 62,94 Q66,102 72,94 Q78,100 84,91 Q90,96 95,88 Q100,82 96,75" fill="url(#syrupGrad)" opacity="0.95"/>
 
     <!-- Melting Butter Pat on top -->
-    <polygon points="56,60 74,56 78,65 60,69" fill="#FFF59D" stroke="#D9A800" stroke-width="1.8"/>
-    <polygon points="56,60 74,56 72,52 54,56" fill="#FFFDE7" stroke="#D9A800" stroke-width="1.2"/>
+    <polygon points="56,60 74,56 78,65 60,69" fill="#FFF59D" stroke="#F5BA00" stroke-width="1.8"/>
+    <polygon points="56,60 74,56 72,52 54,56" fill="#FFFFFF" stroke="#F5BA00" stroke-width="1.2"/>
     <!-- Butter drip -->
     <path d="M58,68 Q56,76 60,78 Q64,76 62,68 Z" fill="#FFE57F"/>
 
     <!-- Fresh Red Strawberry Garnish -->
-    <path d="M72,50 C70,42 84,40 86,48 C88,58 76,64 72,50 Z" fill="#D32F2F" stroke="#8B0000" stroke-width="1.2"/>
+    <path d="M72,50 C70,42 84,40 86,48 C88,58 76,64 72,50 Z" fill="#E53935" stroke="#990000" stroke-width="1.2"/>
     <circle cx="76" cy="48" r="0.8" fill="#FFF"/>
     <circle cx="80" cy="52" r="0.8" fill="#FFF"/>
     <circle cx="78" cy="56" r="0.8" fill="#FFF"/>
     <!-- Strawberry green leaves -->
-    <path d="M78,42 C76,38 72,40 74,43 M78,42 C80,38 84,39 82,43 M78,42 L78,38" stroke="#388E3C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M78,42 C76,38 72,40 74,43 M78,42 C80,38 84,39 82,43 M78,42 L78,38" stroke="#43A047" stroke-width="2" fill="none" stroke-linecap="round"/>
   </g>
 
-  <!-- RIGHT: Typography & Flourishes -->
+  <!-- RIGHT: Typography & Flourishes Matching Yellow Theme -->
   <g transform="translate(155, 0)">
-    <!-- "The" in elegant script -->
-    <text x="35" y="38" font-family="'Brush Script MT', 'Playfair Display', 'Georgia', cursive, serif" font-size="28" font-style="italic" font-weight="bold" fill="#B83A1B">
+    <!-- "The" in elegant yellow/gold script -->
+    <text x="35" y="38" font-family="'Brush Script MT', 'Playfair Display', 'Georgia', cursive, serif" font-size="28" font-style="italic" font-weight="bold" fill="#F5BA00">
       The
     </text>
 
-    <!-- "Waffle" in golden serif script -->
-    <text x="30" y="78" font-family="'Playfair Display', 'Cinzel', 'Georgia', serif" font-size="46" font-weight="900" fill="url(#goldTextGrad)" letter-spacing="1">
+    <!-- "Waffle" in radiant golden yellow bold serif -->
+    <text x="30" y="78" font-family="'Playfair Display', 'Cinzel', 'Georgia', serif" font-size="46" font-weight="900" fill="url(#yellowTextGrad)" letter-spacing="1">
       Waffle
     </text>
 
     <!-- Chef Hat perched on top right of House -->
     <g transform="translate(205, 50) scale(0.68)">
-      <path d="M12,28 C4,28 0,22 4,16 C0,10 8,2 18,5 C24,-2 34,-2 40,5 C50,2 58,10 54,16 C58,22 54,28 46,28 Z" fill="#FFFFFF" stroke="#8C5314" stroke-width="2.5"/>
-      <path d="M14,28 L44,28 L42,35 L16,35 Z" fill="#FFFFFF" stroke="#8C5314" stroke-width="2.5"/>
-      <line x1="20" y1="12" x2="22" y2="25" stroke="#E6D3B8" stroke-width="2" stroke-linecap="round"/>
-      <line x1="29" y1="9" x2="29" y2="25" stroke="#E6D3B8" stroke-width="2" stroke-linecap="round"/>
-      <line x1="38" y1="12" x2="36" y2="25" stroke="#E6D3B8" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12,28 C4,28 0,22 4,16 C0,10 8,2 18,5 C24,-2 34,-2 40,5 C50,2 58,10 54,16 C58,22 54,28 46,28 Z" fill="#FFFFFF" stroke="#F5BA00" stroke-width="2.5"/>
+      <path d="M14,28 L44,28 L42,35 L16,35 Z" fill="#FFFFFF" stroke="#F5BA00" stroke-width="2.5"/>
+      <line x1="20" y1="12" x2="22" y2="25" stroke="#FFE57F" stroke-width="2" stroke-linecap="round"/>
+      <line x1="29" y1="9" x2="29" y2="25" stroke="#FFE57F" stroke-width="2" stroke-linecap="round"/>
+      <line x1="38" y1="12" x2="36" y2="25" stroke="#FFE57F" stroke-width="2" stroke-linecap="round"/>
     </g>
 
-    <!-- "House" in Crimson Serif -->
-    <text x="65" y="115" font-family="'Playfair Display', 'Cinzel', 'Georgia', serif" font-size="40" font-weight="900" fill="#8B1E0F" letter-spacing="2">
+    <!-- "House" in crisp white & yellow outline -->
+    <text x="65" y="115" font-family="'Playfair Display', 'Cinzel', 'Georgia', serif" font-size="40" font-weight="900" fill="#FFFFFF" letter-spacing="2">
       House
     </text>
 
-    <!-- Flourish underline with decorative wing arcs -->
-    <path d="M5,88 Q40,96 120,96 Q200,96 250,88" fill="none" stroke="#C59B58" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="2" cy="87" r="2.5" fill="#C59B58"/>
-    <circle cx="253" cy="87" r="2.5" fill="#C59B58"/>
+    <!-- Yellow Flourish underline with decorative wing arcs -->
+    <path d="M5,88 Q40,96 120,96 Q200,96 250,88" fill="none" stroke="#F5BA00" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="2" cy="87" r="2.5" fill="#F5BA00"/>
+    <circle cx="253" cy="87" r="2.5" fill="#F5BA00"/>
 
     <!-- Bottom: • MENU & PRICES • -->
     <g transform="translate(0, 124)">
-      <line x1="15" y1="10" x2="55" y2="10" stroke="#8C5314" stroke-width="1.2"/>
+      <line x1="15" y1="10" x2="55" y2="10" stroke="#F5BA00" stroke-width="1.5"/>
       <!-- Small left star/diamond -->
-      <polygon points="61,10 64,7 67,10 64,13" fill="#B83A1B"/>
+      <polygon points="61,10 64,7 67,10 64,13" fill="#F5BA00"/>
 
-      <text x="75" y="14" font-family="'Inter', 'Arial', sans-serif" font-size="12" font-weight="800" fill="#4A2600" letter-spacing="3">
+      <text x="75" y="14" font-family="'Inter', 'Arial', sans-serif" font-size="12" font-weight="900" fill="#F5BA00" letter-spacing="3">
         MENU &amp; PRICES
       </text>
 
       <!-- Small right star/diamond -->
-      <polygon points="212,10 215,7 218,10 215,13" fill="#B83A1B"/>
-      <line x1="224" y1="10" x2="265" y2="10" stroke="#8C5314" stroke-width="1.2"/>
+      <polygon points="212,10 215,7 218,10 215,13" fill="#F5BA00"/>
+      <line x1="224" y1="10" x2="265" y2="10" stroke="#F5BA00" stroke-width="1.5"/>
 
-      <!-- Crossed Spoon & Fork with Heart below -->
+      <!-- Crossed Spoon & Fork with Heart below in golden yellow -->
       <g transform="translate(132, 17) scale(0.7)">
         <!-- Fork -->
-        <path d="M-8,-4 L12,16 M-8,-4 L-12,-8 M-6,-6 L-10,-10 M-4,-8 L-8,-12" stroke="#8C5314" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-8,-4 L12,16 M-8,-4 L-12,-8 M-6,-6 L-10,-10 M-4,-8 L-8,-12" stroke="#F5BA00" stroke-width="2" stroke-linecap="round"/>
         <!-- Spoon -->
-        <path d="M12,-4 L-8,16 M12,-4 C16,-8 18,-4 14,0 Z" stroke="#8C5314" stroke-width="2" fill="#8C5314" stroke-linecap="round"/>
+        <path d="M12,-4 L-8,16 M12,-4 C16,-8 18,-4 14,0 Z" stroke="#F5BA00" stroke-width="2" fill="#F5BA00" stroke-linecap="round"/>
         <!-- Heart in center -->
-        <path d="M2,5 C2,3 0,1 -2,3 C-4,1 -6,3 -6,5 C-6,8 2,12 2,12 C2,12 10,8 10,5 C10,3 8,1 6,3 C4,1 2,3 2,5 Z" fill="#B83A1B" transform="scale(0.5) translate(-1, 6)"/>
+        <path d="M2,5 C2,3 0,1 -2,3 C-4,1 -6,3 -6,5 C-6,8 2,12 2,12 C2,12 10,8 10,5 C10,3 8,1 6,3 C4,1 2,3 2,5 Z" fill="#FFF200" transform="scale(0.5) translate(-1, 6)"/>
       </g>
     </g>
   </g>

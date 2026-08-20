@@ -398,36 +398,53 @@ function MenuIndexPage() {
                   </Link>
                 </div>
 
-                {/* Items Grid for this Category */}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {/* Items Grid for this Category with 100% Matching Food Images */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {items.map((dish) => (
                     <Link
                       key={dish.slug}
                       to="/menu/$category/$slug"
                       params={{ category: dish.category, slug: dish.slug }}
-                      className="group flex flex-col justify-between rounded-2xl border border-border bg-white p-4 shadow-2xs hover:border-primary hover:shadow-md transition-all duration-200"
+                      className="group flex flex-col rounded-2xl border border-border bg-white overflow-hidden shadow-xs hover:border-primary hover:shadow-lg transition-all duration-300"
                     >
-                      <div className="space-y-2">
-                        <div className="flex items-start justify-between gap-2">
-                          <h3 className="font-display text-sm sm:text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug">
-                            {dish.name}
-                          </h3>
-                          <span className="font-display text-sm font-black text-primary shrink-0">
-                            ${dish.price.toFixed(2)}
-                          </span>
-                        </div>
-                        <p className="text-xs text-ink-soft leading-relaxed line-clamp-2">
-                          {dish.description}
-                        </p>
+                      {/* Square Dish Image */}
+                      <div className="aspect-square w-full overflow-hidden bg-muted relative">
+                        <img
+                          src={dish.image}
+                          alt={dish.name}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                          width={400}
+                          height={400}
+                        />
+                        <span className="absolute bottom-3 right-3 rounded-full bg-black/75 px-2.5 py-0.5 text-[11px] font-bold text-white backdrop-blur-xs">
+                          {dish.nutrition.calories} cal
+                        </span>
                       </div>
 
-                      <div className="mt-4 flex items-center justify-between pt-3 border-t border-border/40 text-[11px]">
-                        <span className="inline-flex items-center gap-1 font-bold text-ink-soft">
-                          <Clock className="h-3 w-3 text-primary" /> {dish.nutrition.calories} cal
-                        </span>
-                        <span className="text-[10px] font-bold text-primary group-hover:underline">
-                          View details →
-                        </span>
+                      <div className="p-4 sm:p-5 flex flex-col flex-1 justify-between space-y-3">
+                        <div className="space-y-1.5">
+                          <div className="flex items-start justify-between gap-2">
+                            <h3 className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors leading-snug">
+                              {dish.name}
+                            </h3>
+                            <span className="font-display text-base font-black text-primary shrink-0">
+                              ${dish.price.toFixed(2)}
+                            </span>
+                          </div>
+                          <p className="text-xs text-ink-soft leading-relaxed line-clamp-2">
+                            {dish.description}
+                          </p>
+                        </div>
+
+                        <div className="flex items-center justify-between pt-2.5 border-t border-border/40 text-[11px]">
+                          <span className="font-medium text-ink-soft truncate max-w-[170px]">
+                            {dish.tagline || `${category.name} Classic`}
+                          </span>
+                          <span className="font-bold text-primary group-hover:underline flex items-center gap-0.5 shrink-0">
+                            Details →
+                          </span>
+                        </div>
                       </div>
                     </Link>
                   ))}

@@ -2,7 +2,6 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {
   ChevronDown,
-  ChevronRight,
   Menu,
   Search,
   X,
@@ -14,6 +13,9 @@ import {
   Phone,
   Tag,
   Gift,
+  Clock,
+  MapPin,
+  Sparkles,
 } from "lucide-react";
 import { CENTRAL_MENU_CATEGORIES } from "@/data/centralMenuData";
 import { SiteLogo } from "@/components/site-logo";
@@ -32,6 +34,15 @@ const nutritionLinks = [
   { label: "Download Nutrition PDF", href: "/waffle-house-menu-nutritionals.pdf", download: true },
 ];
 
+const planVisitLinks = [
+  { label: "All Locations", href: "/locations", icon: MapPin, desc: "1,900+ diners across 25 states" },
+  { label: "Reservations & Seating", href: "/reservations", icon: Calendar, desc: "Walk-in counter & booth guide" },
+  { label: "Delivery & Takeout", href: "/delivery", icon: Truck, desc: "DoorDash, Uber Eats & pickup" },
+  { label: "Gift Cards & Balance", href: "/gift-cards", icon: Gift, desc: "Physical & digital eGift cards" },
+  { label: "Catering & Group Platters", href: "/catering", icon: Utensils, desc: "Breakfast boxes & hashbrown trays" },
+  { label: "Diner Hours (24/7)", href: "/hours", icon: Clock, desc: "Always open, 365 days a year" },
+];
+
 const keyStates = [
   { name: "Georgia", slug: "georgia" },
   { name: "Florida", slug: "florida" },
@@ -48,15 +59,11 @@ const keyStates = [
 ];
 
 const moreLinks = [
-  { label: "Delivery & Takeout", href: "/delivery", icon: Truck },
-  { label: "Catering & Group Orders", href: "/catering", icon: Utensils },
-  { label: "Gift Cards Guide", href: "/gift-cards", icon: Gift },
   { label: "Happy Hour & Value Guide", href: "/happy-hour", icon: Percent },
-  { label: "Hours & Visit Guide", href: "/hours", icon: null },
-  { label: "Deals & Promotions", href: "/deals", icon: null },
+  { label: "Deals & Promotions", href: "/deals", icon: Tag },
   { label: "FAQ", href: "/faq", icon: null },
   { label: "About", href: "/about", icon: null },
-  { label: "Contact", href: "/contact", icon: null },
+  { label: "Contact", href: "/contact", icon: Phone },
   { label: "Methodology", href: "/methodology", icon: null },
 ];
 
@@ -113,15 +120,11 @@ export function SiteHeader({ overHero = false }: Props) {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 font-sans">
-
       {/* ═══════════════════════════════════════════
           TOP INFO BAR
-          Desktop: Center Centered Date Line, full desktop
-          Mobile/Tablet: Nicely arranged Date + Deals + About + Contact + PDF
           ═══════════════════════════════════════════ */}
       <div className="bg-[#050607] border-b border-white/10 py-1.5 px-4 relative">
         <div className="container-editorial flex items-center justify-between text-[11px] relative min-h-[22px]">
-          
           {/* Centered Date Line on Desktop */}
           <div className="hidden lg:flex absolute inset-x-0 top-1/2 -translate-y-1/2 items-center justify-center pointer-events-none">
             <div className="flex items-center gap-1.5 font-semibold text-white/90">
@@ -141,7 +144,7 @@ export function SiteHeader({ overHero = false }: Props) {
               <FileText className="h-3.5 w-3.5" />
               <span>Download Nutrition PDF</span>
             </a>
-            
+
             {/* Mobile/Tablet Date Display */}
             <div className="flex lg:hidden items-center gap-1.5 text-white/85 font-semibold">
               <Calendar className="h-3.5 w-3.5 text-primary shrink-0" />
@@ -152,7 +155,7 @@ export function SiteHeader({ overHero = false }: Props) {
 
           {/* Right Side: Desktop Quick Navigation Links & Mobile Action Buttons */}
           <div className="flex items-center gap-2.5 relative z-10">
-            {/* Desktop Quick Nav Links (Dot-separated style like reference) */}
+            {/* Desktop Quick Nav Links (Dot-separated style) */}
             <div className="hidden lg:flex items-center gap-2 text-white/70 text-[11px] font-medium mr-1">
               <Link to="/about" className="hover:text-primary transition-colors">About</Link>
               <span className="text-white/30">·</span>
@@ -189,17 +192,8 @@ export function SiteHeader({ overHero = false }: Props) {
                 <Phone className="h-2.5 w-2.5" />
                 Contact
               </Link>
-              <a
-                href="/waffle-house-menu-nutritionals.pdf"
-                download
-                className="flex items-center gap-1 text-white/55 hover:text-primary transition-colors text-[10px] ml-1"
-              >
-                <FileText className="h-3 w-3" />
-                PDF
-              </a>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -207,21 +201,19 @@ export function SiteHeader({ overHero = false }: Props) {
           MAIN NAV BAR
           ═══════════════════════════════════════════ */}
       <div className="border-b-2 border-primary bg-[#0B0C0E]/95 backdrop-blur-md shadow-lg">
-        <div className="container-editorial flex h-[62px] items-center gap-3">
-
+        <div className="container-editorial flex h-[64px] items-center justify-between gap-2 lg:gap-4">
           {/* Logo */}
           <SiteLogo light />
 
           {/* ── DESKTOP NAV ── */}
-          <nav aria-label="Primary" className="hidden lg:block ml-2">
-            <ul className="flex items-center gap-0.5 text-[13px] font-semibold">
-
+          <nav aria-label="Primary" className="hidden lg:block">
+            <ul className="flex items-center gap-1 xl:gap-2 text-[13px] font-semibold">
               {/* Home */}
               <li>
                 <Link
                   to="/"
                   activeOptions={{ exact: true }}
-                  className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="rounded-full px-3 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Home
                 </Link>
@@ -235,7 +227,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <Link
                   to="/menu"
-                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Menu
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "menu" ? "rotate-180 text-primary" : ""}`} />
@@ -277,7 +269,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <Link
                   to="/nutrition"
-                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Nutrition
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "nutrition" ? "rotate-180 text-primary" : ""}`} />
@@ -321,23 +313,77 @@ export function SiteHeader({ overHero = false }: Props) {
                 )}
               </li>
 
+              {/* ── PLAN A VISIT (DROPDOWN) ── */}
+              <li
+                className="relative"
+                onMouseEnter={() => openDd("plan-a-visit")}
+                onMouseLeave={closeDd}
+              >
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                >
+                  Plan a Visit
+                  <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "plan-a-visit" ? "rotate-180 text-primary" : ""}`} />
+                </button>
+                {activeDropdown === "plan-a-visit" && (
+                  <div
+                    onMouseEnter={() => openDd("plan-a-visit")}
+                    onMouseLeave={closeDd}
+                    className="absolute left-0 top-full pt-1 z-50 w-[290px]"
+                  >
+                    <div className="rounded-2xl border border-border bg-white shadow-2xl overflow-hidden">
+                      <div className="px-4 py-2.5 bg-amber-50 border-b border-border/50">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800">
+                          Visit &amp; Dining Planning
+                        </span>
+                      </div>
+                      <ul className="py-1">
+                        {planVisitLinks.map((item) => {
+                          const IconComp = item.icon;
+                          return (
+                            <li key={item.href}>
+                              <Link
+                                to={item.href as any}
+                                onClick={() => setActiveDropdown(null)}
+                                className="flex items-start gap-2.5 px-4 py-2 hover:bg-amber-50 group transition-colors"
+                              >
+                                <IconComp className="h-4 w-4 text-primary shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                                <div className="space-y-0.5">
+                                  <p className="text-[13px] font-bold text-foreground group-hover:text-amber-800 leading-snug">
+                                    {item.label}
+                                  </p>
+                                  <p className="text-[10.5px] text-ink-soft leading-tight">
+                                    {item.desc}
+                                  </p>
+                                </div>
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </li>
+
               {/* ── RECIPES (Direct Link) ── */}
               <li>
                 <Link
                   to="/recipes"
-                  className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="rounded-full px-3 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Recipes
                 </Link>
               </li>
 
-              {/* ── CATERING (Direct Link) ── */}
+              {/* ── DEALS ── */}
               <li>
                 <Link
-                  to="/catering"
-                  className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  to="/deals"
+                  className="rounded-full px-3 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
-                  Catering
+                  Deals
                 </Link>
               </li>
 
@@ -349,7 +395,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <Link
                   to="/locations"
-                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Locations
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "locations" ? "rotate-180 text-primary" : ""}`} />
@@ -362,7 +408,7 @@ export function SiteHeader({ overHero = false }: Props) {
                   >
                     <div className="rounded-2xl border border-border bg-white shadow-2xl overflow-hidden">
                       <div className="flex items-center justify-between px-4 py-2.5 bg-amber-50 border-b border-border/50">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800">2,100+ Locations · 25 States</span>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800">1,900+ Locations · 25 States</span>
                         <Link to="/locations" onClick={() => setActiveDropdown(null)} className="text-[11px] font-bold text-primary hover:underline">All →</Link>
                       </div>
                       <ul className="py-1 grid grid-cols-2">
@@ -388,16 +434,6 @@ export function SiteHeader({ overHero = false }: Props) {
                 )}
               </li>
 
-              {/* ── DEALS ── */}
-              <li>
-                <Link
-                  to="/deals"
-                  className="rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
-                >
-                  Deals
-                </Link>
-              </li>
-
               {/* ── BLOG ── */}
               <li
                 className="relative"
@@ -406,7 +442,7 @@ export function SiteHeader({ overHero = false }: Props) {
               >
                 <Link
                   to="/blog"
-                  className="inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-white/85 hover:bg-white/10 hover:text-primary transition-colors"
                 >
                   Blog
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform ${activeDropdown === "blog" ? "rotate-180 text-primary" : ""}`} />
@@ -485,25 +521,25 @@ export function SiteHeader({ overHero = false }: Props) {
             </ul>
           </nav>
 
-          {/* ── DESKTOP SEARCH (always visible) ── */}
+          {/* ── DESKTOP SEARCH ── */}
           <form
             role="search"
             aria-label="Search the menu"
             onSubmit={handleSearch}
-            className="ml-auto hidden lg:flex"
+            className="hidden lg:flex"
           >
-            <div className="relative flex h-9.5 w-[230px] xl:w-[270px] items-center rounded-full border border-white/25 bg-white/10 backdrop-blur-md transition-all focus-within:border-primary focus-within:bg-white/15 focus-within:w-[260px] xl:focus-within:w-[300px]">
+            <div className="relative flex h-9.5 w-[200px] xl:w-[240px] items-center rounded-full border border-white/25 bg-white/10 backdrop-blur-md transition-all focus-within:border-primary focus-within:bg-white/15 focus-within:w-[240px] xl:focus-within:w-[280px]">
               <Search className="pointer-events-none absolute left-3.5 h-4 w-4 text-white/60" />
               <input
                 type="search"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                placeholder="Search menu, prices, calories…"
-                className="h-full w-full bg-transparent pl-9.5 pr-14 text-[12.5px] text-white placeholder:text-white/50 focus:outline-none"
+                placeholder="Search menu, calories…"
+                className="h-full w-full bg-transparent pl-9.5 pr-12 text-[12px] text-white placeholder:text-white/50 focus:outline-none"
               />
               <button
                 type="submit"
-                className="btn-primary absolute right-1.5 top-1/2 h-7 -translate-y-1/2 rounded-full px-3 text-[11px] font-bold shadow-xs"
+                className="btn-primary absolute right-1 top-1/2 h-7 -translate-y-1/2 rounded-full px-2.5 text-[11px] font-bold shadow-xs"
               >
                 Go
               </button>
@@ -516,7 +552,7 @@ export function SiteHeader({ overHero = false }: Props) {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="ml-auto grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/30 text-white hover:bg-white/10 lg:hidden transition-colors"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/30 text-white hover:bg-white/10 lg:hidden transition-colors"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -532,8 +568,7 @@ export function SiteHeader({ overHero = false }: Props) {
           className="border-t border-border bg-white text-foreground lg:hidden max-h-[86vh] overflow-y-auto shadow-2xl"
         >
           <div className="px-4 py-4 space-y-3">
-
-            {/* Date + Contact pill row */}
+            {/* Date + Deals row */}
             <div className="flex items-center justify-between gap-2 rounded-xl bg-amber-50 border border-amber-200 px-3 py-2.5">
               <div className="flex items-center gap-1.5 text-xs font-semibold text-amber-900">
                 <Calendar className="h-3.5 w-3.5 text-primary shrink-0" />
@@ -541,7 +576,6 @@ export function SiteHeader({ overHero = false }: Props) {
                 <span className="text-amber-600 font-bold">· 24/7 Open</span>
               </div>
               <div className="flex items-center gap-1.5">
-                {/* Deals — mobile top */}
                 <Link
                   to="/deals"
                   onClick={() => setOpen(false)}
@@ -580,7 +614,7 @@ export function SiteHeader({ overHero = false }: Props) {
                 onClick={() => toggleMobile("menu")}
                 className="flex w-full items-center justify-between px-4 py-3 text-left font-bold text-sm bg-surface hover:bg-amber-50 transition-colors"
               >
-                <span>🍴 Menu</span>
+                <span>🍴 Menu (13 Categories)</span>
                 <ChevronDown className={`h-4 w-4 text-primary transition-transform ${mobileExpanded["menu"] ? "rotate-180" : ""}`} />
               </button>
               {mobileExpanded["menu"] && (
@@ -603,7 +637,40 @@ export function SiteHeader({ overHero = false }: Props) {
               )}
             </div>
 
-            {/* ── 2. Nutrition ── */}
+            {/* ── 2. Plan a Visit ── */}
+            <div className="rounded-xl border border-border overflow-hidden">
+              <button
+                type="button"
+                onClick={() => toggleMobile("plan-visit")}
+                className="flex w-full items-center justify-between px-4 py-3 text-left font-bold text-sm bg-surface hover:bg-amber-50 transition-colors"
+              >
+                <span>🚗 Plan a Visit</span>
+                <ChevronDown className={`h-4 w-4 text-primary transition-transform ${mobileExpanded["plan-visit"] ? "rotate-180" : ""}`} />
+              </button>
+              {mobileExpanded["plan-visit"] && (
+                <div className="border-t border-border bg-white divide-y divide-border/25">
+                  {planVisitLinks.map((item) => {
+                    const IconC = item.icon;
+                    return (
+                      <Link
+                        key={item.href}
+                        to={item.href as any}
+                        onClick={() => setOpen(false)}
+                        className="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
+                      >
+                        <IconC className="h-4 w-4 text-primary shrink-0" />
+                        <div>
+                          <p className="font-bold text-xs">{item.label}</p>
+                          <p className="text-[10px] text-ink-soft">{item.desc}</p>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* ── 3. Nutrition ── */}
             <div className="rounded-xl border border-border overflow-hidden">
               <button
                 type="button"
@@ -644,22 +711,22 @@ export function SiteHeader({ overHero = false }: Props) {
             {/* Direct Quick Pills Row for Mobile */}
             <div className="grid grid-cols-2 gap-2 pt-1">
               <Link
-                to="/breakfast"
+                to="/recipes"
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-1.5 rounded-xl border border-border bg-surface py-2 px-3 text-xs font-bold text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
               >
-                🍳 Breakfast
+                🥞 Recipes
               </Link>
               <Link
-                to="/catering"
+                to="/deals"
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-1.5 rounded-xl border border-border bg-surface py-2 px-3 text-xs font-bold text-foreground hover:bg-amber-50 hover:text-amber-700 transition-colors"
               >
-                🚚 Catering
+                🏷️ Deals
               </Link>
             </div>
 
-            {/* ── 3. Locations ── */}
+            {/* ── 4. Locations ── */}
             <div className="rounded-xl border border-border overflow-hidden">
               <button
                 type="button"
@@ -689,7 +756,7 @@ export function SiteHeader({ overHero = false }: Props) {
               )}
             </div>
 
-            {/* ── 4. Blog ── */}
+            {/* ── 5. Blog ── */}
             <div className="rounded-xl border border-border overflow-hidden">
               <button
                 type="button"
@@ -720,7 +787,7 @@ export function SiteHeader({ overHero = false }: Props) {
               )}
             </div>
 
-            {/* ── 5. More ── */}
+            {/* ── 6. More ── */}
             <div className="rounded-xl border border-border overflow-hidden">
               <button
                 type="button"
@@ -746,7 +813,6 @@ export function SiteHeader({ overHero = false }: Props) {
                 </div>
               )}
             </div>
-
           </div>
         </nav>
       )}
