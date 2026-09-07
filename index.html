@@ -1260,315 +1260,482 @@
       </div>
     </section>
 
-    <!-- ================= 6. STORE HOURS CARD (WARM DINER THEME) ================= -->
+    <!-- ================= 6. STORE HOURS & INTERACTIVE WEEKLY TIMELINE ================= -->
     <section id="hours-location" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-      <div class="max-w-3xl mx-auto">
-        <div class="bg-white rounded-3xl border-2 border-[#E8E2D5] hover:border-brand-yellow shadow-xl p-6 sm:p-10 transition-all">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-3xl border-2 border-[#E8E2D5] hover:border-brand-yellow shadow-2xl p-6 sm:p-10 transition-all">
           
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-gray-100 gap-4">
+          <!-- Header: Title + Status + Realtime Live Clock -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-gray-100 gap-4">
             <div>
-              <div class="flex items-center gap-2">
-                <span class="text-2xl">🕐</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-gray-900 tracking-tight">
-                  Waffle House Hours
-                </h2>
+              <div class="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 px-3.5 py-1.5 rounded-full text-xs font-black text-yellow-900 uppercase tracking-wider mb-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
+                <span>Live Diner Status &bull; 24/7 Service</span>
               </div>
-              <p class="text-xs sm:text-sm text-gray-600 mt-1 leading-relaxed">
-                Waffle House is open 24 hours a day, 7 days a week, 365 days a year at most of its 1,900+ locations across the U.S. Modified hours are rare and only apply to a small number of non-traditional locations.
-              </p>
-            </div>
-            <div class="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 px-4 py-2 rounded-full shrink-0">
-              <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-ping"></span>
-              <span class="text-xs font-black text-yellow-800 uppercase">Currently Open &bull; 24/7</span>
-            </div>
-          </div>
-
-          <!-- 7-Day List (Monday–Sunday) all showing "Open 24 Hours" -->
-          <div class="divide-y divide-gray-100 my-4 text-sm">
-            <div class="py-2.5 flex items-center justify-between"><span class="font-semibold text-gray-800">Monday</span><span class="font-bold text-yellow-700 bg-yellow-50 border border-yellow-200 px-2.5 py-0.5 rounded-md">Open 24 Hours</span></div>
-            <div class="py-2.5 flex items-center justify-between"><span class="font-semibold text-gray-800">Tuesday</span><span class="font-bold text-yellow-700 bg-yellow-50 border border-yellow-200 px-2.5 py-0.5 rounded-md">Open 24 Hours</span></div>
-            <div class="py-2.5 flex items-center justify-between"><span class="font-semibold text-gray-800">Wednesday</span><span class="font-bold text-yellow-700 bg-yellow-50 border border-yellow-200 px-2.5 py-0.5 rounded-md">Open 24 Hours</span></div>
-            <div class="py-2.5 flex items-center justify-between"><span class="font-semibold text-gray-800">Thursday</span><span class="font-bold text-yellow-700 bg-yellow-50 border border-yellow-200 px-2.5 py-0.5 rounded-md">Open 24 Hours</span></div>
-            <div class="py-2.5 flex items-center justify-between"><span class="font-semibold text-gray-800">Friday</span><span class="font-bold text-yellow-700 bg-yellow-50 border border-yellow-200 px-2.5 py-0.5 rounded-md">Open 24 Hours</span></div>
-            <div class="py-2.5 flex items-center justify-between"><span class="font-semibold text-gray-800">Saturday</span><span class="font-bold text-yellow-700 bg-yellow-50 border border-yellow-200 px-2.5 py-0.5 rounded-md">Open 24 Hours</span></div>
-            <div class="py-2.5 flex items-center justify-between"><span class="font-semibold text-gray-800">Sunday</span><span class="font-bold text-yellow-700 bg-yellow-50 border border-yellow-200 px-2.5 py-0.5 rounded-md">Open 24 Hours</span></div>
-          </div>
-
-          <!-- Small Note -->
-          <div class="mt-4 pt-4 border-t border-gray-100 text-xs text-gray-500 text-center font-medium">
-            ★ Hours may vary by location &mdash; confirm with your nearest restaurant. Open 365 days a year including all major holidays.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 7. OFFICIAL 2026 NUTRITION & ALLERGEN GUIDE FEATURE ================= -->
-    <section id="nutrition-guide" class="relative py-16 lg:py-24 bg-[#FAF7F0] border-t border-[#E8E2D5]">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-3xl border-2 border-yellow-300 shadow-xl p-6 sm:p-10">
-          
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-gray-100">
-            <div>
-              <div class="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-2">
-                <span>Verified 10-Page Document &bull; Updated 2026</span>
-              </div>
-              <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-gray-900 tracking-tight">
-                Official Waffle House Nutrition &amp; Allergen Guide
+              <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-gray-900 tracking-tight flex items-center gap-2.5">
+                <span>🕐</span> Waffle House Hours
               </h2>
-              <p class="text-gray-600 text-sm sm:text-base mt-1.5 leading-relaxed max-w-2xl">
-                Direct from the official diner nutritional reference tables. Browse verified calorie counts, macronutrients (fat, carbs, protein), and allergen disclosures for every plate.
+              <p class="text-xs sm:text-sm text-gray-600 mt-1.5 leading-relaxed max-w-xl">
+                Waffle House is famous worldwide for being open <strong>24 hours a day, 7 days a week, 365 days a year</strong> across 1,900+ locations. 100% of daily hours are covered round-the-clock without closing.
               </p>
             </div>
 
-            <!-- Action Button: Open/Print Guide -->
-            <div class="shrink-0 flex flex-col sm:flex-row gap-3">
-              <a href="nutrition-guide-2026.html" target="_blank" class="inline-flex items-center justify-center gap-2 bg-brand-yellow hover:bg-brand-yellow-hover text-black font-extrabold px-6 py-3.5 rounded-xl shadow-btn-yellow transition text-sm">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                <span>View Full 10-Page Guide</span>
-              </a>
-              <a href="waffle-house-nutrition-allergen-guide-2026.pdf" target="_blank" download class="inline-flex items-center justify-center gap-2 bg-[#0B0B0E] hover:bg-neutral-800 text-white font-extrabold px-5 py-3.5 rounded-xl border border-neutral-700 transition text-sm">
-                <svg class="w-4 h-4 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                <span>Download Official PDF (274 KB)</span>
-              </a>
+            <!-- Live Clock & Status Badge -->
+            <div class="flex flex-col sm:items-end gap-2 shrink-0">
+              <div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-300 text-emerald-800 px-4 py-2 rounded-2xl shadow-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-extrabold tracking-wide uppercase">Open Right Now (24/7)</span>
+              </div>
+              <div class="text-xs text-gray-500 flex items-center gap-1.5 font-medium">
+                <span>Current Diner Time:</span>
+                <span id="diner-live-clock" class="font-mono font-bold text-gray-900 bg-gray-100 px-2.5 py-0.5 rounded-md text-xs">--:--:--</span>
+              </div>
             </div>
           </div>
 
-          <!-- Highlight Matrix from the 10 Pages -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6">
-            <div class="bg-[#FBF9F4] p-4 rounded-2xl border border-[#EBE5D8] text-center">
-              <span class="block text-xs font-bold text-gray-500 uppercase">All-Star Special</span>
-              <span class="font-heading font-extrabold text-2xl text-yellow-600">1050 Cal</span>
-              <span class="block text-[11px] text-gray-500 mt-0.5">50g Fat &bull; 8g Protein</span>
-            </div>
-            <div class="bg-[#FBF9F4] p-4 rounded-2xl border border-[#EBE5D8] text-center">
-              <span class="block text-xs font-bold text-gray-500 uppercase">Classic Waffle</span>
-              <span class="font-heading font-extrabold text-2xl text-yellow-600">410 Cal</span>
-              <span class="block text-[11px] text-gray-500 mt-0.5">18g Fat &bull; 15g Sugar</span>
-            </div>
-            <div class="bg-[#FBF9F4] p-4 rounded-2xl border border-[#EBE5D8] text-center">
-              <span class="block text-xs font-bold text-gray-500 uppercase">Hashbrown Bowls</span>
-              <span class="font-heading font-extrabold text-2xl text-yellow-600">795–920</span>
-              <span class="block text-[11px] text-gray-500 mt-0.5">Up to 41g Protein</span>
-            </div>
-            <div class="bg-[#FBF9F4] p-4 rounded-2xl border border-[#EBE5D8] text-center">
-              <span class="block text-xs font-bold text-gray-500 uppercase">Hashbrown Portions</span>
-              <span class="font-heading font-extrabold text-2xl text-yellow-600">190–570</span>
-              <span class="block text-[11px] text-gray-500 mt-0.5">Reg / Lrg / Triple</span>
-            </div>
+          <!-- 24-Hour Timeline Legend -->
+          <div class="hidden sm:flex items-center justify-between text-[11px] font-bold text-gray-400 uppercase tracking-wider pt-6 pb-2 px-3 border-b border-gray-100">
+            <span class="w-32">Day of the Week</span>
+            <span class="w-48 text-center">Opening &amp; Closing Hours</span>
+            <span class="w-60 text-right">Daily Operating Bar (24h)</span>
           </div>
 
-          <!-- Allergen Notice Alert -->
-          <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 leading-relaxed flex items-start gap-3">
-            <span class="text-base shrink-0">⚠️</span>
-            <div>
-              <strong>Allergen Summary:</strong> Diner items are prepared in a shared kitchen. Major allergens tracked in the guide include Egg, Milk, Soy, Wheat, Tree Nuts, and Peanuts. Ask diner staff if you have specific dietary sensitivities.
+          <!-- 7-Day List with Visual Hours Progress Bar -->
+          <div class="divide-y divide-gray-100 my-2" id="weekly-hours-list">
+            
+            <!-- Monday -->
+            <div class="day-row py-3.5 px-3 rounded-2xl transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-yellow-50/60" data-day="1">
+              <div class="flex items-center gap-2 sm:w-32">
+                <span class="font-bold text-gray-900 text-sm sm:text-base">Monday</span>
+                <span class="today-tag hidden text-[10px] font-black uppercase bg-brand-yellow text-black px-2 py-0.5 rounded-md shadow-xs">Today</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-700 sm:w-48 sm:justify-center">
+                <span class="font-semibold text-gray-900">12:00 AM &ndash; 11:59 PM</span>
+                <span class="text-xs text-yellow-800 font-bold bg-yellow-100 border border-yellow-200 px-2 py-0.5 rounded-md">24 Hrs</span>
+              </div>
+              <div class="sm:w-60 flex flex-col gap-1">
+                <div class="w-full bg-white border border-gray-200 rounded-full h-4 overflow-hidden p-0.5 shadow-inner">
+                  <div class="h-full bg-gradient-to-r from-[#FFE500] via-[#FFDE00] to-[#EAB308] rounded-full flex items-center justify-end pr-2 text-[9px] font-black text-black tracking-wider uppercase" style="width: 100%;">
+                    <span>100% OPEN</span>
+                  </div>
+                </div>
+                <div class="flex justify-between text-[9px] text-gray-400 px-1 font-mono">
+                  <span>12 AM</span>
+                  <span>6 AM</span>
+                  <span>12 PM</span>
+                  <span>6 PM</span>
+                  <span>12 AM</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Tuesday -->
+            <div class="day-row py-3.5 px-3 rounded-2xl transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-yellow-50/60" data-day="2">
+              <div class="flex items-center gap-2 sm:w-32">
+                <span class="font-bold text-gray-900 text-sm sm:text-base">Tuesday</span>
+                <span class="today-tag hidden text-[10px] font-black uppercase bg-brand-yellow text-black px-2 py-0.5 rounded-md shadow-xs">Today</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-700 sm:w-48 sm:justify-center">
+                <span class="font-semibold text-gray-900">12:00 AM &ndash; 11:59 PM</span>
+                <span class="text-xs text-yellow-800 font-bold bg-yellow-100 border border-yellow-200 px-2 py-0.5 rounded-md">24 Hrs</span>
+              </div>
+              <div class="sm:w-60 flex flex-col gap-1">
+                <div class="w-full bg-white border border-gray-200 rounded-full h-4 overflow-hidden p-0.5 shadow-inner">
+                  <div class="h-full bg-gradient-to-r from-[#FFE500] via-[#FFDE00] to-[#EAB308] rounded-full flex items-center justify-end pr-2 text-[9px] font-black text-black tracking-wider uppercase" style="width: 100%;">
+                    <span>100% OPEN</span>
+                  </div>
+                </div>
+                <div class="flex justify-between text-[9px] text-gray-400 px-1 font-mono">
+                  <span>12 AM</span>
+                  <span>6 AM</span>
+                  <span>12 PM</span>
+                  <span>6 PM</span>
+                  <span>12 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="day-row py-3.5 px-3 rounded-2xl transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-yellow-50/60" data-day="3">
+              <div class="flex items-center gap-2 sm:w-32">
+                <span class="font-bold text-gray-900 text-sm sm:text-base">Wednesday</span>
+                <span class="today-tag hidden text-[10px] font-black uppercase bg-brand-yellow text-black px-2 py-0.5 rounded-md shadow-xs">Today</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-700 sm:w-48 sm:justify-center">
+                <span class="font-semibold text-gray-900">12:00 AM &ndash; 11:59 PM</span>
+                <span class="text-xs text-yellow-800 font-bold bg-yellow-100 border border-yellow-200 px-2 py-0.5 rounded-md">24 Hrs</span>
+              </div>
+              <div class="sm:w-60 flex flex-col gap-1">
+                <div class="w-full bg-white border border-gray-200 rounded-full h-4 overflow-hidden p-0.5 shadow-inner">
+                  <div class="h-full bg-gradient-to-r from-[#FFE500] via-[#FFDE00] to-[#EAB308] rounded-full flex items-center justify-end pr-2 text-[9px] font-black text-black tracking-wider uppercase" style="width: 100%;">
+                    <span>100% OPEN</span>
+                  </div>
+                </div>
+                <div class="flex justify-between text-[9px] text-gray-400 px-1 font-mono">
+                  <span>12 AM</span>
+                  <span>6 AM</span>
+                  <span>12 PM</span>
+                  <span>6 PM</span>
+                  <span>12 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="day-row py-3.5 px-3 rounded-2xl transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-yellow-50/60" data-day="4">
+              <div class="flex items-center gap-2 sm:w-32">
+                <span class="font-bold text-gray-900 text-sm sm:text-base">Thursday</span>
+                <span class="today-tag hidden text-[10px] font-black uppercase bg-brand-yellow text-black px-2 py-0.5 rounded-md shadow-xs">Today</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-700 sm:w-48 sm:justify-center">
+                <span class="font-semibold text-gray-900">12:00 AM &ndash; 11:59 PM</span>
+                <span class="text-xs text-yellow-800 font-bold bg-yellow-100 border border-yellow-200 px-2 py-0.5 rounded-md">24 Hrs</span>
+              </div>
+              <div class="sm:w-60 flex flex-col gap-1">
+                <div class="w-full bg-white border border-gray-200 rounded-full h-4 overflow-hidden p-0.5 shadow-inner">
+                  <div class="h-full bg-gradient-to-r from-[#FFE500] via-[#FFDE00] to-[#EAB308] rounded-full flex items-center justify-end pr-2 text-[9px] font-black text-black tracking-wider uppercase" style="width: 100%;">
+                    <span>100% OPEN</span>
+                  </div>
+                </div>
+                <div class="flex justify-between text-[9px] text-gray-400 px-1 font-mono">
+                  <span>12 AM</span>
+                  <span>6 AM</span>
+                  <span>12 PM</span>
+                  <span>6 PM</span>
+                  <span>12 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="day-row py-3.5 px-3 rounded-2xl transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-yellow-50/60" data-day="5">
+              <div class="flex items-center gap-2 sm:w-32">
+                <span class="font-bold text-gray-900 text-sm sm:text-base">Friday</span>
+                <span class="today-tag hidden text-[10px] font-black uppercase bg-brand-yellow text-black px-2 py-0.5 rounded-md shadow-xs">Today</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-700 sm:w-48 sm:justify-center">
+                <span class="font-semibold text-gray-900">12:00 AM &ndash; 11:59 PM</span>
+                <span class="text-xs text-yellow-800 font-bold bg-yellow-100 border border-yellow-200 px-2 py-0.5 rounded-md">24 Hrs</span>
+              </div>
+              <div class="sm:w-60 flex flex-col gap-1">
+                <div class="w-full bg-white border border-gray-200 rounded-full h-4 overflow-hidden p-0.5 shadow-inner">
+                  <div class="h-full bg-gradient-to-r from-[#FFE500] via-[#FFDE00] to-[#EAB308] rounded-full flex items-center justify-end pr-2 text-[9px] font-black text-black tracking-wider uppercase" style="width: 100%;">
+                    <span>100% OPEN</span>
+                  </div>
+                </div>
+                <div class="flex justify-between text-[9px] text-gray-400 px-1 font-mono">
+                  <span>12 AM</span>
+                  <span>6 AM</span>
+                  <span>12 PM</span>
+                  <span>6 PM</span>
+                  <span>12 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="day-row py-3.5 px-3 rounded-2xl transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-yellow-50/60" data-day="6">
+              <div class="flex items-center gap-2 sm:w-32">
+                <span class="font-bold text-gray-900 text-sm sm:text-base">Saturday</span>
+                <span class="today-tag hidden text-[10px] font-black uppercase bg-brand-yellow text-black px-2 py-0.5 rounded-md shadow-xs">Today</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-700 sm:w-48 sm:justify-center">
+                <span class="font-semibold text-gray-900">12:00 AM &ndash; 11:59 PM</span>
+                <span class="text-xs text-yellow-800 font-bold bg-yellow-100 border border-yellow-200 px-2 py-0.5 rounded-md">24 Hrs</span>
+              </div>
+              <div class="sm:w-60 flex flex-col gap-1">
+                <div class="w-full bg-white border border-gray-200 rounded-full h-4 overflow-hidden p-0.5 shadow-inner">
+                  <div class="h-full bg-gradient-to-r from-[#FFE500] via-[#FFDE00] to-[#EAB308] rounded-full flex items-center justify-end pr-2 text-[9px] font-black text-black tracking-wider uppercase" style="width: 100%;">
+                    <span>100% OPEN</span>
+                  </div>
+                </div>
+                <div class="flex justify-between text-[9px] text-gray-400 px-1 font-mono">
+                  <span>12 AM</span>
+                  <span>6 AM</span>
+                  <span>12 PM</span>
+                  <span>6 PM</span>
+                  <span>12 AM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sunday -->
+            <div class="day-row py-3.5 px-3 rounded-2xl transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-yellow-50/60" data-day="0">
+              <div class="flex items-center gap-2 sm:w-32">
+                <span class="font-bold text-gray-900 text-sm sm:text-base">Sunday</span>
+                <span class="today-tag hidden text-[10px] font-black uppercase bg-brand-yellow text-black px-2 py-0.5 rounded-md shadow-xs">Today</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-700 sm:w-48 sm:justify-center">
+                <span class="font-semibold text-gray-900">12:00 AM &ndash; 11:59 PM</span>
+                <span class="text-xs text-yellow-800 font-bold bg-yellow-100 border border-yellow-200 px-2 py-0.5 rounded-md">24 Hrs</span>
+              </div>
+              <div class="sm:w-60 flex flex-col gap-1">
+                <div class="w-full bg-white border border-gray-200 rounded-full h-4 overflow-hidden p-0.5 shadow-inner">
+                  <div class="h-full bg-gradient-to-r from-[#FFE500] via-[#FFDE00] to-[#EAB308] rounded-full flex items-center justify-end pr-2 text-[9px] font-black text-black tracking-wider uppercase" style="width: 100%;">
+                    <span>100% OPEN</span>
+                  </div>
+                </div>
+                <div class="flex justify-between text-[9px] text-gray-400 px-1 font-mono">
+                  <span>12 AM</span>
+                  <span>6 AM</span>
+                  <span>12 PM</span>
+                  <span>6 PM</span>
+                  <span>12 AM</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Note below -->
+          <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-yellow text-base">★</span>
+              <span>Hours may vary slightly at rare non-traditional locations (e.g. airports/turnpikes). Confirm with your local diner.</span>
+            </div>
+            <a href="#how-to-order" class="text-xs font-bold text-yellow-700 hover:text-yellow-800 flex items-center gap-1 shrink-0">
+              <span>How to Order &rarr;</span>
+            </a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ================= 7. FAQ SECTION (WARM DINER THEME) ================= -->
+    <!-- ================= 7. NUTRITION & ALLERGEN CALLOUT BOX ================= -->
+    <section id="nutrition-guide" class="relative py-16 lg:py-24 bg-[#FAF7F0] border-t border-[#E8E2D5]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl border-2 border-yellow-300 shadow-xl p-8 sm:p-12 text-center relative overflow-hidden">
+          
+          <!-- Subtle Decorative Diner Glow -->
+          <div class="absolute -top-24 -right-24 w-48 h-48 bg-yellow-300/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-amber-300/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+            <div class="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider">
+              <span>Verified 2026 Reference &bull; 10 Pages</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-gray-900 tracking-tight leading-tight">
+              Download the Full 2026 Nutrition Guide
+            </h2>
+            
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+              Get complete calorie, fat, sodium, and allergen information for every Waffle House menu item in one PDF.
+            </p>
+
+            <!-- Download Button + Interactive Viewer Link -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="/assets/waffle-house-nutrition-2026.pdf" target="_blank" download class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-brand-yellow hover:bg-brand-yellow-hover text-black font-extrabold px-8 py-4 rounded-2xl shadow-btn-yellow transition-transform active:scale-95 text-sm sm:text-base">
+                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                <span>Download Nutrition PDF (Updated 05/05/26)</span>
+              </a>
+              <a href="nutrition-guide-2026.html" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-neutral-900 hover:bg-neutral-800 text-white font-bold px-6 py-4 rounded-2xl transition text-sm">
+                <span>View Online Tables &rarr;</span>
+              </a>
+            </div>
+
+            <!-- Small File Size / Update Date Label under button -->
+            <div class="pt-2 text-xs text-gray-500 font-medium flex items-center justify-center gap-2 flex-wrap">
+              <span>PDF</span>
+              <span>&bull;</span>
+              <span>274 KB</span>
+              <span>&bull;</span>
+              <span>Official 10-Page Table</span>
+              <span>&bull;</span>
+              <span class="text-gray-700 font-semibold">Updated 05/05/26</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. FREQUENTLY ASKED QUESTIONS (EXACT USER SPEC) ================= -->
     <section id="faq" class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
         <div class="inline-flex items-center gap-2 text-yellow-800 text-xs font-black uppercase tracking-widest bg-yellow-100 border border-yellow-300 px-3.5 py-1.5 rounded-full">
-          <span>FAQ Guide &bull; 2026</span>
+          <span>Got Questions?</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-gray-900 tracking-tight">
           Frequently Asked <span class="text-yellow-600">Questions</span>
         </h2>
-        <p class="text-gray-600 text-sm sm:text-base">Everything you need to know about Waffle House menu prices, hours &amp; diner facts.</p>
+        <p class="text-gray-600 text-sm sm:text-base">Everything you need to know about Waffle House prices, calories, and menu info.</p>
       </div>
 
       <div class="space-y-3.5" id="faq-accordion">
-        <!-- FAQ 1 -->
+        
+        <!-- FAQ 1: What's the cheapest item at Waffle House? -->
         <div class="faq-item bg-white rounded-2xl border-2 border-[#E8E2D5] hover:border-brand-yellow shadow-sm transition-all overflow-hidden">
           <button type="button" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
             <span class="text-base font-bold text-gray-900 flex items-center gap-2.5">
               <span class="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0"></span>
-              How much does a meal cost at Waffle House?
+              What's the cheapest item at Waffle House?
             </span>
             <svg class="faq-icon w-4 h-4 text-yellow-600 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-[#FDFBF7] pt-3">
-            Most complete breakfast meals and combos range between $8.00 and $13.50, with fan favorites like the All-Star Special at $12.60. Standalone sweet cream waffles start at $4.95, and signature hashbrowns start at $3.60.
+            The Grilled Biscuit and a Large Coffee are each $2.65, the lowest-priced items on the menu. A Bowl of Grits is $3.70.
           </div>
         </div>
 
-        <!-- FAQ 2 -->
+        <!-- FAQ 2: How much is the All-Star Special? -->
         <div class="faq-item bg-white rounded-2xl border-2 border-[#E8E2D5] hover:border-brand-yellow shadow-sm transition-all overflow-hidden">
           <button type="button" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
             <span class="text-base font-bold text-gray-900 flex items-center gap-2.5">
               <span class="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0"></span>
-              Does Waffle House have a kids menu?
+              How much is the All-Star Special?
             </span>
             <svg class="faq-icon w-4 h-4 text-yellow-600 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-[#FDFBF7] pt-3">
-            Yes, Waffle House offers kids options including junior waffles with bacon or sausage, grilled cheese plates, and kid drinks. Portions are tailored for younger appetites at budget-friendly prices.
+            $12.60 for 1050 calories — includes eggs, bacon or sausage, hash browns, toast, and a waffle.
           </div>
         </div>
 
-        <!-- FAQ 3 -->
+        <!-- FAQ 3: Is Waffle House open 24 hours? -->
         <div class="faq-item bg-white rounded-2xl border-2 border-[#E8E2D5] hover:border-brand-yellow shadow-sm transition-all overflow-hidden">
           <button type="button" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
             <span class="text-base font-bold text-gray-900 flex items-center gap-2.5">
               <span class="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0"></span>
-              Does Waffle House offer catering?
+              Is Waffle House open 24 hours?
             </span>
             <svg class="faq-icon w-4 h-4 text-yellow-600 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-[#FDFBF7] pt-3">
-            Yes! Waffle House provides catering through its famous "Waffle House Food Truck" for private events, weddings, and parties, as well as large bulk to-go orders directly from your local diner counter.
+            Yes, most of the 1,900+ locations are open 24 hours a day, 7 days a week.
           </div>
         </div>
 
-        <!-- FAQ 4 -->
+        <!-- FAQ 4: Are prices the same at every location? -->
         <div class="faq-item bg-white rounded-2xl border-2 border-[#E8E2D5] hover:border-brand-yellow shadow-sm transition-all overflow-hidden">
           <button type="button" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
             <span class="text-base font-bold text-gray-900 flex items-center gap-2.5">
               <span class="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0"></span>
-              Are there vegetarian options at Waffle House?
+              Are prices the same at every location?
             </span>
             <svg class="faq-icon w-4 h-4 text-yellow-600 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-[#FDFBF7] pt-3">
-            Yes, vegetarians can enjoy Classic Sweet Cream Waffles, Cheese 'N Eggs, Texas Grilled Cheese, hashbrowns customized with melted cheese, grilled onions, diced tomatoes, and mushrooms, plus grits and toast.
+            No. Prices vary by state, city, and whether a location is corporate-owned or franchised, due to differences in labor costs and local taxes.
           </div>
         </div>
 
-        <!-- FAQ 5 -->
+        <!-- FAQ 5: Does Waffle House have gluten-free options? -->
         <div class="faq-item bg-white rounded-2xl border-2 border-[#E8E2D5] hover:border-brand-yellow shadow-sm transition-all overflow-hidden">
           <button type="button" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
             <span class="text-base font-bold text-gray-900 flex items-center gap-2.5">
               <span class="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0"></span>
-              What are Waffle House's hours of operation?
+              Does Waffle House have gluten-free options?
             </span>
             <svg class="faq-icon w-4 h-4 text-yellow-600 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-[#FDFBF7] pt-3">
-            Waffle House is world-renowned for being open 24 hours a day, 7 days a week, 365 days a year across virtually all 1,900+ locations, including major holidays like Christmas and Thanksgiving.
+            There's no dedicated gluten-free menu, but items like eggs, grits, and bacon without bread-based sides can work for some gluten-sensitive guests. Always confirm with staff due to shared cooking surfaces.
           </div>
         </div>
 
-        <!-- FAQ 6 -->
-        <div class="faq-item bg-white rounded-2xl border-2 border-[#E8E2D5] hover:border-brand-yellow shadow-sm transition-all overflow-hidden">
-          <button type="button" class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
-            <span class="text-base font-bold text-gray-900 flex items-center gap-2.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0"></span>
-              Is this website affiliated with Waffle House?
-            </span>
-            <svg class="faq-icon w-4 h-4 text-yellow-600 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-[#FDFBF7] pt-3">
-            No. WaffleHouseMenu.us is an independent, unofficial fan guide and menu price tracking resource. We are not endorsed by, sponsored by, or affiliated with Waffle House, Inc. All trademarks and brand names belong to their respective owners.
-          </div>
-        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ================= ULTRA-PROFESSIONAL BLACK & YELLOW FOOTER ================= -->
-  <footer class="bg-[#070709] border-t-2 border-brand-yellow/30 text-gray-300 relative overflow-hidden">
+  <!-- ================= FOOTER (DARK CHOCOLATE #3E2412 & CREAM #FFF8ED) ================= -->
+  <footer class="bg-[#3E2412] text-[#FFF8ED] border-t-4 border-brand-yellow relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
       
-      <!-- 4 Clean Columns -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-brand-border">
+      <!-- 4 Columns Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#5C371B]">
         
-        <!-- Col 1: Brand & Tagline -->
-        <div class="lg:col-span-5 space-y-4">
+        <!-- Column (a): Logo + 1-Line Tagline -->
+        <div class="lg:col-span-4 space-y-4">
           <a href="#" class="flex items-center gap-3 group">
-            <div class="relative w-11 h-11 rounded-xl overflow-hidden shadow-btn-yellow border-2 border-brand-yellow shrink-0 bg-brand-yellow/10">
+            <div class="relative w-12 h-12 rounded-2xl overflow-hidden shadow-btn-yellow border-2 border-brand-yellow shrink-0 bg-brand-yellow/20">
               <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=120&h=120&q=85" alt="Waffle House Food Logo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
             </div>
             <div class="flex flex-col">
-              <span class="font-heading font-extrabold text-2xl text-white tracking-tight leading-none">
+              <span class="font-heading font-black text-2xl text-white tracking-tight leading-none">
                 WaffleHouse<span class="text-brand-yellow">Menu</span>
               </span>
-              <span class="text-[10px] uppercase font-bold text-brand-yellow/90 tracking-widest mt-1">
+              <span class="text-[10px] uppercase font-bold text-yellow-300/90 tracking-widest mt-1">
                 Waffle House Menu Prices 2026
               </span>
             </div>
           </a>
-          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-            Independent, unofficial fan guide providing verified 2026 Waffle House menu prices, calorie counts, and diner information.
+          <p class="text-[#E7DAC7] text-xs sm:text-sm leading-relaxed max-w-sm">
+            Your unofficial independent 2026 guide to Waffle House menu prices, calories, secret hashbrown lingo, and full diner nutrition.
           </p>
-          <div class="flex items-center gap-2 text-xs text-brand-yellow">
-            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span>2026 Price Index Live &bull; Updated Regularly</span>
+          <div class="flex items-center gap-2 text-xs text-brand-yellow pt-1">
+            <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
+            <span class="font-semibold">2026 Price Index Live &bull; Updated Daily</span>
           </div>
         </div>
 
-        <!-- Col 2: Menu Links -->
+        <!-- Column (b): Quick Links -->
         <div class="lg:col-span-3 space-y-3">
-          <h3 class="text-white text-xs font-extrabold uppercase tracking-widest border-l-2 border-brand-yellow pl-2">
-            Menu &amp; Categories
+          <h3 class="text-white text-xs font-black uppercase tracking-widest border-l-2 border-brand-yellow pl-2">
+            Quick Links
           </h3>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li><a href="#popular-items" class="hover:text-brand-yellow transition-colors">&rsaquo; Most Popular Items</a></li>
-            <li><a href="#breakfast-favorites" class="hover:text-brand-yellow transition-colors">&rsaquo; Breakfast Favorites</a></li>
-            <li><a href="#cat-waffles-img" class="hover:text-brand-yellow transition-colors">&rsaquo; Sweet Cream Waffles</a></li>
-            <li><a href="#cat-hashbrown-bowls-img" class="hover:text-brand-yellow transition-colors">&rsaquo; Hashbrown Bowls</a></li>
-            <li><a href="#cat-texas-melts-img" class="hover:text-brand-yellow transition-colors">&rsaquo; Texas Melts</a></li>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-[#E7DAC7]">
+            <li><a href="#breakfast-favorites" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Breakfast Menu</a></li>
+            <li><a href="#full-menu-categories" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Lunch &amp; Dinner</a></li>
+            <li><a href="#nutrition-guide" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Nutrition</a></li>
+            <li><a href="#popular-items" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Deals</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Diner Info -->
+        <!-- Column (c): Company -->
         <div class="lg:col-span-2 space-y-3">
-          <h3 class="text-white text-xs font-extrabold uppercase tracking-widest border-l-2 border-brand-yellow pl-2">
-            Information
+          <h3 class="text-white text-xs font-black uppercase tracking-widest border-l-2 border-brand-yellow pl-2">
+            Company
           </h3>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li><a href="#hours-location" class="hover:text-brand-yellow transition-colors">&rsaquo; 24/7 Store Hours</a></li>
-            <li><a href="#nutrition-pdf" class="hover:text-brand-yellow transition-colors">&rsaquo; Nutrition PDF</a></li>
-            <li><a href="#rewards" class="hover:text-brand-yellow transition-colors">&rsaquo; Rewards &amp; Deals</a></li>
-            <li><a href="#faq" class="hover:text-brand-yellow transition-colors">&rsaquo; Frequently Asked Questions</a></li>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-[#E7DAC7]">
+            <li><a href="#about" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> About Us</a></li>
+            <li><a href="#contact" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Contact Us</a></li>
+            <li><a href="#blog" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Blog</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Legal & Policy -->
-        <div class="lg:col-span-2 space-y-3">
-          <h3 class="text-white text-xs font-extrabold uppercase tracking-widest border-l-2 border-brand-yellow pl-2">
-            Legal &amp; Policy
+        <!-- Column (d): Legal -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-white text-xs font-black uppercase tracking-widest border-l-2 border-brand-yellow pl-2">
+            Legal
           </h3>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li><a href="#privacy" class="hover:text-brand-yellow transition-colors">&rsaquo; Privacy Policy</a></li>
-            <li><a href="#terms" class="hover:text-brand-yellow transition-colors">&rsaquo; Terms of Use</a></li>
-            <li><a href="#disclaimer" class="hover:text-brand-yellow transition-colors">&rsaquo; Brand Disclaimer</a></li>
-            <li><a href="#contact" class="hover:text-brand-yellow transition-colors">&rsaquo; Contact Us</a></li>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-[#E7DAC7]">
+            <li><a href="#privacy" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Privacy Policy</a></li>
+            <li><a href="#terms" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Terms &amp; Conditions</a></li>
+            <li><a href="#disclaimer" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> DMCA Disclaimer</a></li>
+            <li><a href="#accessibility" class="hover:text-brand-yellow transition-colors flex items-center gap-1.5"><span class="text-brand-yellow">&rsaquo;</span> Accessibility Statement</a></li>
           </ul>
         </div>
 
       </div>
 
-      <!-- Professional Muted Gray Disclaimer -->
-      <div class="py-6 border-b border-brand-border">
-        <p class="text-[11px] text-gray-500 leading-relaxed max-w-5xl">
-          <strong>Disclaimer:</strong> WaffleHouseMenu.us is an independent, unofficial fan guide and informational blog. We are not affiliated with, endorsed by, or sponsored by Waffle House Inc. or any of its subsidiaries. All trademarks, logos, and brand names are the property of their respective owners. Menu items, prices, and nutritional information are gathered from public sources and are for informational purposes only and may vary by location.
+      <!-- Muted Small Disclaimer Paragraph -->
+      <div class="py-6 border-b border-[#5C371B]">
+        <p class="text-[11px] text-[#CDBEAA] leading-relaxed max-w-5xl">
+          Disclaimer: WaffleHouseMenu.us is an independent, unofficial fan guide and informational website. We are not affiliated with, endorsed by, or sponsored by Waffle House, Inc. All trademarks, logos, and brand names are the property of their respective owners. Menu items, prices, and nutritional information are gathered from public sources and may vary by location and are subject to change without notice.
         </p>
       </div>
 
-      <!-- Bottom Copyright & Back to Top -->
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+      <!-- Copyright & Back to Top -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#CDBEAA]">
         <div>
-          &copy; 2026 WaffleHouseMenu.us &mdash; Unofficial Menu &amp; Price Guide
+          &copy; 2026 WaffleHouseMenu.us &mdash; All Rights Reserved.
         </div>
         <div>
-          <a href="#" class="text-brand-yellow hover:underline flex items-center gap-1">
+          <a href="#" class="text-brand-yellow hover:underline flex items-center gap-1 font-semibold">
             <span>Back to Top</span>
             <span>&uarr;</span>
           </a>
@@ -1578,9 +1745,31 @@
     </div>
   </footer>
 
-  <!-- ================= MINIMAL VANILLA JAVASCRIPT ================= -->
+  <!-- ================= ENHANCED VANILLA JAVASCRIPT ================= -->
   <script>
-    // 1. Mobile Hamburger Menu Toggle
+    // 1. Live Diner Real-Time Clock
+    function updateDinerClock() {
+      const clockEl = document.getElementById('diner-live-clock');
+      if (clockEl) {
+        const now = new Date();
+        clockEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+      }
+    }
+    updateDinerClock();
+    setInterval(updateDinerClock, 1000);
+
+    // 2. Highlight Today's Row in the Weekly Hours Schedule
+    try {
+      const todayDayIndex = new Date().getDay(); // 0 = Sunday, 1 = Monday, ...
+      const todayRow = document.querySelector(\`.day-row[data-day="\${todayDayIndex}"]\`);
+      if (todayRow) {
+        todayRow.classList.add('bg-yellow-100/70', 'border-l-4', 'border-brand-yellow');
+        const tag = todayRow.querySelector('.today-tag');
+        if (tag) tag.classList.remove('hidden');
+      }
+    } catch(e) {}
+
+    // 3. Mobile Hamburger Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const hamburgerIcon = document.getElementById('hamburger-icon');
@@ -1602,7 +1791,7 @@
         }
       });
 
-      // Auto close on link click
+      // Auto close on mobile link click
       document.querySelectorAll('.mobile-nav-link').forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.classList.add('hidden');
@@ -1613,7 +1802,7 @@
       });
     }
 
-    // 2. FAQ Accordion (Single item open at a time)
+    // 4. FAQ Accordion (Single item open at a time, accessible vanilla JS)
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
       const btn = item.querySelector('.faq-btn');
@@ -1623,7 +1812,7 @@
       btn.addEventListener('click', () => {
         const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
-        // Close all others
+        // Close all other items
         faqItems.forEach(other => {
           other.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
           other.querySelector('.faq-content').classList.add('hidden');
