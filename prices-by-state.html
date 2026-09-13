@@ -1,0 +1,2648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waffle House Prices by State (2026) — Compare Every Menu Item Across 25 States</title>
+  <meta name="description" content="Compare 2026 Waffle House menu prices state by state across 25 U.S. states. Discover which state has the cheapest All-Star Special, waffles, and hashbrown bowls, and see how your local diner compares to the national average.">
+  <link rel="canonical" href="http://localhost:3000/prices-by-state.html">
+  
+  <!-- Google Fonts: Poppins (headings) & Work Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FFC72C',
+              dark: '#0B0B0E',
+              gray: '#F9FAFB',
+              accent: '#E5B020',
+            }
+          },
+          fontFamily: {
+            sans: ['"Work Sans"', 'sans-serif'],
+            heading: ['"Poppins"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      color: #0B0B0E;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- ================= HEADER: EXACT HOMEPAGE TWO-TIER NAVBAR ================= -->
+  <header class="w-full flex flex-col sticky top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-200">
+    
+    <!-- Upper Tier: Clean Centered Branding -->
+    <div class="py-4 md:py-5 text-center px-4 bg-white">
+      <a title="WaffleHouse Menu Home" class="inline-block group focus:outline-none" href="index.html">
+        <div class="flex items-center justify-center gap-2.5 mb-1">
+          <div class="w-8 h-8 rounded-lg bg-[#0B0B0E] text-[#FFC72C] flex items-center justify-center p-1.5 shadow-xs">
+            <!-- Custom Geometric Waffle Icon (pure diner restaurant SVG) -->
+            <svg class="w-full h-full text-[#FFC72C]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm3 1v3h3V6H6zm5 0v3h3V6h-3zm5 0v3h3V6h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3z"/>
+            </svg>
+          </div>
+          <span class="block text-[26px] sm:text-3xl md:text-[34px] whitespace-nowrap font-black text-[#0B0B0E] tracking-tight group-hover:opacity-90 transition-opacity font-heading">
+            WaffleHouse <span class="text-[#FFC72C]">Menu</span>
+          </span>
+        </div>
+      </a>
+      <p class="text-gray-500 font-medium text-xs sm:text-[14px]">
+        Full Information About Waffle House Menu 2026
+      </p>
+    </div>
+
+    <!-- Lower Tier: Solid Yellow Brand Bar with Centered Navigation Links -->
+    <div class="bg-[#FFC72C] border-t border-yellow-400">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 py-3.5" aria-label="Main Navigation">
+          <a title="Menu &amp; Prices" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="menu.html">
+            Menu &amp; Prices
+          </a>
+          <a title="Catering" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="catering.html">
+            Catering
+          </a>
+          <a title="Nutrition" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="nutrition.html">
+            Nutrition
+          </a>
+          <a title="Deals &amp; Coupons" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="coupons.html">
+            Deals &amp; Coupons
+          </a>
+          <a title="Blog" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="blog.html">
+            Blog
+          </a>
+          <a title="Store Hours &amp; Locations" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="locations.html">
+            Store Hours &amp; Locations
+          </a>
+          <a title="About Us" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="about.html">
+            About Us
+          </a>
+          <a title="Contact" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="contact.html">
+            Contact
+          </a>
+        </nav>
+
+        <!-- Mobile Header Row -->
+        <div class="flex lg:hidden justify-between items-center py-2.5">
+          <span class="text-[#0B0B0E] font-black text-sm tracking-wide uppercase">Prices by State</span>
+          <button id="mobile-menu-btn" class="text-[#0B0B0E] p-1.5 hover:bg-black/10 rounded-lg transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 py-4 space-y-2 shadow-lg">
+      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="menu.html">Menu &amp; Prices</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="catering.html">Catering</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="nutrition.html">Nutrition</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="coupons.html">Deals &amp; Coupons</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="locations.html">Store Hours &amp; Locations</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="about.html">About Us</a>
+      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="contact.html">Contact</a>
+    </div>
+
+  </header>
+
+  <main class="flex-1 font-sans">
+
+    <!-- ================= BREADCRUMB (SALADWORKS STYLE) ================= -->
+    <nav class="bg-[#F9FAFB] border-b border-gray-200 py-3 text-xs font-medium text-gray-600" aria-label="Breadcrumb">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ol class="flex items-center space-x-2">
+          <li>
+            <a href="index.html" class="text-gray-500 hover:text-[#0B0B0E] transition-colors">Home</a>
+          </li>
+          <li>
+            <span class="text-gray-400">/</span>
+          </li>
+          <li>
+            <a href="menu.html" class="text-gray-500 hover:text-[#0B0B0E] transition-colors">Menu &amp; Prices</a>
+          </li>
+          <li>
+            <span class="text-gray-400">/</span>
+          </li>
+          <li>
+            <span class="text-amber-600 font-bold" aria-current="page">Prices by State</span>
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ================= HERO SECTION (SALADWORKS STYLE) ================= -->
+    <section class="w-full pt-12 pb-14 md:pt-16 md:pb-16 bg-[#FBFBFC] flex flex-col items-center justify-center text-center px-4 border-b border-gray-200">
+      <div class="max-w-4xl mx-auto">
+        
+        <!-- Eyebrow Badge -->
+        <div class="inline-flex items-center gap-2 bg-[#FFC72C]/20 border border-[#FFC72C]/40 text-[#0B0B0E] px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#FFC72C]"></span>
+          <span>State-by-State Price Index &bull; Verified September 2026</span>
+        </div>
+
+        <!-- H1 Heading -->
+        <h1 class="text-[28px] sm:text-[38px] md:text-[46px] font-black text-[#0B0B0E] mb-4 tracking-tight leading-tight font-heading">
+          Waffle House Prices by State
+        </h1>
+
+        <!-- Subtitle (Exact SaladWorks Pattern adapted for Waffle House) -->
+        <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          Pick a menu item below to see its average price in every state &mdash; which state is cheapest, which is most expensive, and how each compares to the national average across all 25 Waffle House states.
+        </p>
+
+        <!-- Search Bar + Quick Category Filters -->
+        <div class="max-w-2xl mx-auto w-full space-y-4">
+          <div class="relative">
+            <svg class="absolute left-4 top-3.5 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input 
+              type="text" 
+              id="item-search-input" 
+              placeholder="Search any menu item (e.g. All-Star Special, Pecan Waffle, Patty Melt, Hashbrowns)..." 
+              class="w-full bg-white py-3 pl-12 pr-4 rounded-2xl border-2 border-gray-200 focus:border-[#FFC72C] focus:outline-none focus:ring-2 focus:ring-[#FFC72C]/20 text-xs sm:text-sm font-medium transition-all shadow-xs"
+              aria-label="Search menu items"
+            >
+          </div>
+
+          <!-- Category Pills -->
+          <div class="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs" id="category-filter-pills">
+            <button class="cat-pill px-3.5 py-1.5 rounded-full font-bold bg-[#0B0B0E] text-white transition-colors" data-target="all">All Items (55+)</button>
+            <button class="cat-pill px-3.5 py-1.5 rounded-full font-semibold bg-white border border-gray-200 hover:bg-gray-100 text-gray-700 transition-colors" data-target="breakfast-classics">Breakfast</button>
+            <button class="cat-pill px-3.5 py-1.5 rounded-full font-semibold bg-white border border-gray-200 hover:bg-gray-100 text-gray-700 transition-colors" data-target="hashbrown-bowls">Hashbrown Bowls</button>
+            <button class="cat-pill px-3.5 py-1.5 rounded-full font-semibold bg-white border border-gray-200 hover:bg-gray-100 text-gray-700 transition-colors" data-target="sweet-cream-waffles">Waffles</button>
+            <button class="cat-pill px-3.5 py-1.5 rounded-full font-semibold bg-white border border-gray-200 hover:bg-gray-100 text-gray-700 transition-colors" data-target="texas-melts">Texas Melts</button>
+            <button class="cat-pill px-3.5 py-1.5 rounded-full font-semibold bg-white border border-gray-200 hover:bg-gray-100 text-gray-700 transition-colors" data-target="sides-enhancements">Sides</button>
+            <button class="cat-pill px-3.5 py-1.5 rounded-full font-semibold bg-white border border-gray-200 hover:bg-gray-100 text-gray-700 transition-colors" data-target="pies-sweets">Pies</button>
+            <button class="cat-pill px-3.5 py-1.5 rounded-full font-semibold bg-white border border-gray-200 hover:bg-gray-100 text-gray-700 transition-colors" data-target="beverages">Drinks</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 25-STATE QUICK BENCHMARK TICKER ================= -->
+    <section class="bg-[#0B0B0E] text-white py-4 border-b border-gray-800 overflow-x-auto text-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6 whitespace-nowrap">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
+          <span class="font-bold uppercase tracking-wider text-[#FFC72C]">Lowest Price States:</span>
+          <span class="text-gray-300">Mississippi &bull; Alabama &bull; Arkansas &bull; Oklahoma (~5% Below Avg)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-bold uppercase tracking-wider text-gray-400">Core Benchmark:</span>
+          <span class="text-gray-300">Georgia &bull; Tennessee &bull; Carolinas (National Base)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+          <span class="font-bold uppercase tracking-wider text-[#FFC72C]">Higher Cost Tier:</span>
+          <span class="text-gray-300">Virginia &bull; Florida &bull; Maryland (~6% Above Avg)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MAIN SALADWORKS-STYLE MENU ITEMS DIRECTORY ================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      
+      <!-- Search notice (hidden by default) -->
+      <div id="no-search-results" class="hidden text-center py-12">
+        <p class="text-base font-bold text-gray-700 font-heading">No menu items match your search.</p>
+        <button onclick="document.getElementById('item-search-input').value=''; filterItems();" class="mt-2 text-xs text-amber-700 font-bold underline">Reset search</button>
+      </div>
+
+      
+    <!-- Category: Breakfast Classics -->
+    <div class="category-block mb-12" data-category="breakfast-classics">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-gray-200 pb-3 mb-6 gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#FFC72C] inline-block"></span>
+          <span>Breakfast Classics</span>
+        </h2>
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">8 Menu Items Verified</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Farm-fresh eggs cooked to order, savory breakfast meats, buttered toast, and creamy grits.</p>
+      
+      <!-- SaladWorks-Style Item Chips Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+  
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="all-star-special"
+          data-name="ALL-STAR SPECIAL™"
+          data-price="$12.60"
+          data-num="12.6"
+          data-cal="1050 cal"
+          data-cheap="Mississippi ($11.85)"
+          data-exp="Virginia ($13.45)"
+          data-cat="Breakfast Classics"
+          onclick="openStateModal('all-star-special')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              ALL-STAR SPECIAL™
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">1050 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $12.60 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="two-egg-breakfast"
+          data-name="Two Egg Breakfast"
+          data-price="$7.00"
+          data-num="7"
+          data-cal="450–580 cal"
+          data-cheap="Alabama ($6.50)"
+          data-exp="Florida ($7.50)"
+          data-cat="Breakfast Classics"
+          onclick="openStateModal('two-egg-breakfast')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Two Egg Breakfast
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">450–580 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $7.00 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="cheese-n-eggs-raisin-toast"
+          data-name="Cheese 'N Eggs with Raisin Toast"
+          data-price="$8.00"
+          data-num="8"
+          data-cal="670 cal"
+          data-cheap="Mississippi ($7.50)"
+          data-exp="Virginia ($8.50)"
+          data-cat="Breakfast Classics"
+          onclick="openStateModal('cheese-n-eggs-raisin-toast')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Cheese 'N Eggs with Raisin Toast
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">670 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $8.00 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="country-ham-and-eggs"
+          data-name="Country Ham & Eggs"
+          data-price="$9.85"
+          data-num="9.85"
+          data-cal="600 cal"
+          data-cheap="Tennessee ($9.25)"
+          data-exp="Maryland ($10.45)"
+          data-cat="Breakfast Classics"
+          onclick="openStateModal('country-ham-and-eggs')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Country Ham & Eggs
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">600 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $9.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="t-bone-and-eggs"
+          data-name="T-Bone & Eggs Breakfast"
+          data-price="$14.25"
+          data-num="14.25"
+          data-cal="880–1050 cal"
+          data-cheap="Arkansas ($13.45)"
+          data-exp="Florida ($15.15)"
+          data-cat="Breakfast Classics"
+          onclick="openStateModal('t-bone-and-eggs')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              T-Bone & Eggs Breakfast
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">880–1050 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $14.25 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="sirloin-steak-and-eggs"
+          data-name="Sirloin Steak & Eggs"
+          data-price="$11.85"
+          data-num="11.85"
+          data-cal="520–710 cal"
+          data-cheap="Alabama ($11.15)"
+          data-exp="Virginia ($12.65)"
+          data-cat="Breakfast Classics"
+          onclick="openStateModal('sirloin-steak-and-eggs')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Sirloin Steak & Eggs
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">520–710 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="chicken-sausage-and-eggs"
+          data-name="Chicken Sausage & Eggs"
+          data-price="$8.50"
+          data-num="8.5"
+          data-cal="520–710 cal"
+          data-cheap="Georgia ($7.95)"
+          data-exp="Ohio ($8.95)"
+          data-cat="Breakfast Classics"
+          onclick="openStateModal('chicken-sausage-and-eggs')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Chicken Sausage & Eggs
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">520–710 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $8.50 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>22 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="pork-chops-and-eggs"
+          data-name="Pork Chops & Eggs Breakfast"
+          data-price="$11.45"
+          data-num="11.45"
+          data-cal="740–910 cal"
+          data-cheap="Mississippi ($10.75)"
+          data-exp="Florida ($12.15)"
+          data-cat="Breakfast Classics"
+          onclick="openStateModal('pork-chops-and-eggs')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Pork Chops & Eggs Breakfast
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">740–910 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.45 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>24 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+      </div>
+    </div>
+  
+    <!-- Category: Signature Hashbrown Bowls -->
+    <div class="category-block mb-12" data-category="hashbrown-bowls">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-gray-200 pb-3 mb-6 gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#FFC72C] inline-block"></span>
+          <span>Signature Hashbrown Bowls</span>
+        </h2>
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">7 Menu Items Verified</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Double crispy scattered hashbrowns layered with melted American cheese and hearty diner toppings.</p>
+      
+      <!-- SaladWorks-Style Item Chips Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+  
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="cheesesteak-melt-bowl"
+          data-name="Cheesesteak Melt Hashbrown Bowl"
+          data-price="$11.05"
+          data-num="11.05"
+          data-cal="625 cal"
+          data-cheap="Mississippi ($10.35)"
+          data-exp="Maryland ($11.75)"
+          data-cat="Signature Hashbrown Bowls"
+          onclick="openStateModal('cheesesteak-melt-bowl')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Cheesesteak Melt Hashbrown Bowl
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">625 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.05 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="chicken-melt-bowl"
+          data-name="Chicken Melt Hashbrown Bowl"
+          data-price="$11.05"
+          data-num="11.05"
+          data-cal="635 cal"
+          data-cheap="Alabama ($10.35)"
+          data-exp="Virginia ($11.75)"
+          data-cat="Signature Hashbrown Bowls"
+          onclick="openStateModal('chicken-melt-bowl')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Chicken Melt Hashbrown Bowl
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">635 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.05 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="sausage-egg-cheese-bowl"
+          data-name="Sausage Egg & Cheese Bowl"
+          data-price="$11.05"
+          data-num="11.05"
+          data-cal="920 cal"
+          data-cheap="Arkansas ($10.35)"
+          data-exp="Florida ($11.75)"
+          data-cat="Signature Hashbrown Bowls"
+          onclick="openStateModal('sausage-egg-cheese-bowl')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Sausage Egg & Cheese Bowl
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">920 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.05 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="bacon-egg-cheese-bowl"
+          data-name="Bacon Egg & Cheese Bowl"
+          data-price="$11.05"
+          data-num="11.05"
+          data-cal="795 cal"
+          data-cheap="Georgia ($10.35)"
+          data-exp="Ohio ($11.75)"
+          data-cat="Signature Hashbrown Bowls"
+          onclick="openStateModal('bacon-egg-cheese-bowl')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Bacon Egg & Cheese Bowl
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">795 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.05 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="ham-egg-cheese-bowl"
+          data-name="Ham Egg & Cheese Bowl"
+          data-price="$11.05"
+          data-num="11.05"
+          data-cal="800 cal"
+          data-cheap="Tennessee ($10.35)"
+          data-exp="Virginia ($11.75)"
+          data-cat="Signature Hashbrown Bowls"
+          onclick="openStateModal('ham-egg-cheese-bowl')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Ham Egg & Cheese Bowl
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">800 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.05 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="texas-sausage-melt-bowl"
+          data-name="Texas Sausage Melt Hashbrown Bowl"
+          data-price="$11.65"
+          data-num="11.65"
+          data-cal="980 cal"
+          data-cheap="Texas ($10.95)"
+          data-exp="Florida ($12.35)"
+          data-cat="Signature Hashbrown Bowls"
+          onclick="openStateModal('texas-sausage-melt-bowl')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Texas Sausage Melt Hashbrown Bowl
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">980 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>24 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="chicken-fiesta-protein-bowl"
+          data-name="Chicken Fiesta Protein Bowl"
+          data-price="$11.85"
+          data-num="11.85"
+          data-cal="480 cal"
+          data-cheap="Mississippi ($11.15)"
+          data-exp="Maryland ($12.55)"
+          data-cat="Signature Hashbrown Bowls"
+          onclick="openStateModal('chicken-fiesta-protein-bowl')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Chicken Fiesta Protein Bowl
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">480 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>23 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+      </div>
+    </div>
+  
+    <!-- Category: Sweet Cream Waffles -->
+    <div class="category-block mb-12" data-category="sweet-cream-waffles">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-gray-200 pb-3 mb-6 gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#FFC72C] inline-block"></span>
+          <span>Sweet Cream Waffles</span>
+        </h2>
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">6 Menu Items Verified</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">The golden American diner icons baked fresh to order since 1955 in authentic commercial waffle irons.</p>
+      
+      <!-- SaladWorks-Style Item Chips Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+  
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="classic-sweet-cream-waffle"
+          data-name="Classic Sweet Cream Waffle"
+          data-price="$4.95"
+          data-num="4.95"
+          data-cal="410 cal"
+          data-cheap="Mississippi ($4.50)"
+          data-exp="Virginia ($5.35)"
+          data-cat="Sweet Cream Waffles"
+          onclick="openStateModal('classic-sweet-cream-waffle')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Classic Sweet Cream Waffle
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">410 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $4.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="pecan-waffle"
+          data-name="Pecan Waffle"
+          data-price="$5.45"
+          data-num="5.45"
+          data-cal="560 cal"
+          data-cheap="Georgia ($4.95)"
+          data-exp="Florida ($5.85)"
+          data-cat="Sweet Cream Waffles"
+          onclick="openStateModal('pecan-waffle')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Pecan Waffle
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">560 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $5.45 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="chocolate-chip-waffle"
+          data-name="Chocolate Chip Waffle"
+          data-price="$5.45"
+          data-num="5.45"
+          data-cal="520 cal"
+          data-cheap="Alabama ($4.95)"
+          data-exp="Maryland ($5.85)"
+          data-cat="Sweet Cream Waffles"
+          onclick="openStateModal('chocolate-chip-waffle')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Chocolate Chip Waffle
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">520 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $5.45 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="peanut-butter-chip-waffle"
+          data-name="Peanut Butter Chip Waffle"
+          data-price="$5.45"
+          data-num="5.45"
+          data-cal="580 cal"
+          data-cheap="Tennessee ($4.95)"
+          data-exp="Ohio ($5.85)"
+          data-cat="Sweet Cream Waffles"
+          onclick="openStateModal('peanut-butter-chip-waffle')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Peanut Butter Chip Waffle
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">580 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $5.45 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="firework-waffle"
+          data-name="Firework Waffle (Strawberry)"
+          data-price="$5.95"
+          data-num="5.95"
+          data-cal="560–620 cal"
+          data-cheap="Texas ($5.45)"
+          data-exp="Virginia ($6.45)"
+          data-cat="Sweet Cream Waffles"
+          onclick="openStateModal('firework-waffle')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Firework Waffle (Strawberry)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">560–620 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $5.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>21 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="double-waffle-stack"
+          data-name="Double Sweet Cream Waffle"
+          data-price="$7.95"
+          data-num="7.95"
+          data-cal="820 cal"
+          data-cheap="Mississippi ($7.35)"
+          data-exp="Florida ($8.55)"
+          data-cat="Sweet Cream Waffles"
+          onclick="openStateModal('double-waffle-stack')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Double Sweet Cream Waffle
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">820 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $7.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+      </div>
+    </div>
+  
+    <!-- Category: Texas Melts & Sandwiches -->
+    <div class="category-block mb-12" data-category="texas-melts">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-gray-200 pb-3 mb-6 gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#FFC72C] inline-block"></span>
+          <span>Texas Melts & Sandwiches</span>
+        </h2>
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">8 Menu Items Verified</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Thick, buttery Texas toast grilled on the flat top with caramelized sweet onions and melted cheese.</p>
+      
+      <!-- SaladWorks-Style Item Chips Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+  
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="texas-bacon-cheesesteak-melt"
+          data-name="Texas Bacon Cheesesteak Melt"
+          data-price="$10.95"
+          data-num="10.95"
+          data-cal="910 cal"
+          data-cheap="Arkansas ($10.25)"
+          data-exp="Maryland ($11.65)"
+          data-cat="Texas Melts & Sandwiches"
+          onclick="openStateModal('texas-bacon-cheesesteak-melt')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Texas Bacon Cheesesteak Melt
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">910 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $10.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="texas-sausage-egg-cheese-melt"
+          data-name="Texas Sausage Egg & Cheese Melt"
+          data-price="$10.05"
+          data-num="10.05"
+          data-cal="970 cal"
+          data-cheap="Alabama ($9.35)"
+          data-exp="Virginia ($10.75)"
+          data-cat="Texas Melts & Sandwiches"
+          onclick="openStateModal('texas-sausage-egg-cheese-melt')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Texas Sausage Egg & Cheese Melt
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">970 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $10.05 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="texas-patty-melt"
+          data-name="Texas Patty Melt"
+          data-price="$9.65"
+          data-num="9.65"
+          data-cal="810 cal"
+          data-cheap="Mississippi ($8.95)"
+          data-exp="Florida ($10.35)"
+          data-cat="Texas Melts & Sandwiches"
+          onclick="openStateModal('texas-patty-melt')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Texas Patty Melt
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">810 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $9.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="texas-cheesesteak-melt"
+          data-name="Texas Cheesesteak Melt"
+          data-price="$10.35"
+          data-num="10.35"
+          data-cal="760 cal"
+          data-cheap="Georgia ($9.65)"
+          data-exp="Ohio ($10.95)"
+          data-cat="Texas Melts & Sandwiches"
+          onclick="openStateModal('texas-cheesesteak-melt')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Texas Cheesesteak Melt
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">760 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $10.35 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="texas-chicken-melt"
+          data-name="Texas Chicken Melt"
+          data-price="$10.35"
+          data-num="10.35"
+          data-cal="730 cal"
+          data-cheap="Tennessee ($9.65)"
+          data-exp="Virginia ($10.95)"
+          data-cat="Texas Melts & Sandwiches"
+          onclick="openStateModal('texas-chicken-melt')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Texas Chicken Melt
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">730 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $10.35 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="grilled-chicken-sandwich"
+          data-name="Grilled Chicken Sandwich"
+          data-price="$8.85"
+          data-num="8.85"
+          data-cal="470 cal"
+          data-cheap="Kentucky ($8.15)"
+          data-exp="Maryland ($9.45)"
+          data-cat="Texas Melts & Sandwiches"
+          onclick="openStateModal('grilled-chicken-sandwich')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Grilled Chicken Sandwich
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">470 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $8.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="bacon-lovers-blt"
+          data-name="Bacon Lover's BLT (Texas Toast)"
+          data-price="$8.95"
+          data-num="8.95"
+          data-cal="560 cal"
+          data-cheap="Mississippi ($8.25)"
+          data-exp="Florida ($9.65)"
+          data-cat="Texas Melts & Sandwiches"
+          onclick="openStateModal('bacon-lovers-blt')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Bacon Lover's BLT (Texas Toast)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">560 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $8.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="texas-grilled-cheese"
+          data-name="Texas Grilled Cheese"
+          data-price="$5.85"
+          data-num="5.85"
+          data-cal="540 cal"
+          data-cheap="Alabama ($5.25)"
+          data-exp="Virginia ($6.35)"
+          data-cat="Texas Melts & Sandwiches"
+          onclick="openStateModal('texas-grilled-cheese')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Texas Grilled Cheese
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">540 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $5.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+      </div>
+    </div>
+  
+    <!-- Category: Classic Burgers & Dinners -->
+    <div class="category-block mb-12" data-category="burgers-dinners">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-gray-200 pb-3 mb-6 gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#FFC72C] inline-block"></span>
+          <span>Classic Burgers & Dinners</span>
+        </h2>
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">5 Menu Items Verified</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">100% Angus beef patties smashed fresh on the flat-top grill and hearty dinner steaks.</p>
+      
+      <!-- SaladWorks-Style Item Chips Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+  
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="quarter-pound-angus-burger"
+          data-name="1/4 Lb. Angus Burger"
+          data-price="$6.85"
+          data-num="6.85"
+          data-cal="480 cal"
+          data-cheap="Arkansas ($6.25)"
+          data-exp="Maryland ($7.35)"
+          data-cat="Classic Burgers & Dinners"
+          onclick="openStateModal('quarter-pound-angus-burger')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              1/4 Lb. Angus Burger
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">480 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $6.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="double-angus-burger"
+          data-name="Double Angus Burger"
+          data-price="$8.95"
+          data-num="8.95"
+          data-cal="770 cal"
+          data-cheap="Mississippi ($8.25)"
+          data-exp="Virginia ($9.65)"
+          data-cat="Classic Burgers & Dinners"
+          onclick="openStateModal('double-angus-burger')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Double Angus Burger
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">770 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $8.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="t-bone-dinner-plate"
+          data-name="T-Bone Steak Dinner Plate"
+          data-price="$15.45"
+          data-num="15.45"
+          data-cal="1120 cal"
+          data-cheap="Alabama ($14.50)"
+          data-exp="Florida ($16.45)"
+          data-cat="Classic Burgers & Dinners"
+          onclick="openStateModal('t-bone-dinner-plate')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              T-Bone Steak Dinner Plate
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">1120 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $15.45 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="sirloin-steak-dinner"
+          data-name="Sirloin Steak Dinner Plate"
+          data-price="$13.25"
+          data-num="13.25"
+          data-cal="890 cal"
+          data-cheap="Tennessee ($12.45)"
+          data-exp="Maryland ($14.15)"
+          data-cat="Classic Burgers & Dinners"
+          onclick="openStateModal('sirloin-steak-dinner')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Sirloin Steak Dinner Plate
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">890 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $13.25 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="grilled-chicken-dinner"
+          data-name="Grilled Chicken Breast Dinner"
+          data-price="$11.65"
+          data-num="11.65"
+          data-cal="680 cal"
+          data-cheap="Georgia ($10.85)"
+          data-exp="Ohio ($12.35)"
+          data-cat="Classic Burgers & Dinners"
+          onclick="openStateModal('grilled-chicken-dinner')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Grilled Chicken Breast Dinner
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">680 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $11.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+      </div>
+    </div>
+  
+    <!-- Category: Sides & Hashbrown Enhancements -->
+    <div class="category-block mb-12" data-category="sides-enhancements">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-gray-200 pb-3 mb-6 gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#FFC72C] inline-block"></span>
+          <span>Sides & Hashbrown Enhancements</span>
+        </h2>
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">9 Menu Items Verified</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Idaho shredded potatoes cooked in sweet cream oil, southern biscuits, and Bert's Best Chili.</p>
+      
+      <!-- SaladWorks-Style Item Chips Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+  
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="regular-hashbrowns-plain"
+          data-name="Regular Hashbrowns (Plain)"
+          data-price="$3.15"
+          data-num="3.15"
+          data-cal="190 cal"
+          data-cheap="Mississippi ($2.85)"
+          data-exp="Virginia ($3.45)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('regular-hashbrowns-plain')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Regular Hashbrowns (Plain)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">190 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $3.15 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="large-hashbrowns"
+          data-name="Large Hashbrowns"
+          data-price="$3.65"
+          data-num="3.65"
+          data-cal="380 cal"
+          data-cheap="Alabama ($3.25)"
+          data-exp="Florida ($3.95)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('large-hashbrowns')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Large Hashbrowns
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">380 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $3.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="triple-hashbrowns"
+          data-name="Triple Hashbrowns"
+          data-price="$4.15"
+          data-num="4.15"
+          data-cal="570 cal"
+          data-cheap="Arkansas ($3.75)"
+          data-exp="Maryland ($4.55)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('triple-hashbrowns')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Triple Hashbrowns
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">570 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $4.15 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="smothered-covered-hashbrowns"
+          data-name="Smothered & Covered Hashbrowns"
+          data-price="$4.95"
+          data-num="4.95"
+          data-cal="480 cal"
+          data-cheap="Georgia ($4.45)"
+          data-exp="Ohio ($5.45)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('smothered-covered-hashbrowns')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Smothered & Covered Hashbrowns
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">480 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $4.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="all-the-way-hashbrowns"
+          data-name="Hashbrowns 'All The Way' (Triple)"
+          data-price="$8.65"
+          data-num="8.65"
+          data-cal="890 cal"
+          data-cheap="Mississippi ($7.85)"
+          data-exp="Virginia ($9.45)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('all-the-way-hashbrowns')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Hashbrowns 'All The Way' (Triple)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">890 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $8.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="berts-best-chili-bowl"
+          data-name="Bert's Best Chili (Bowl)"
+          data-price="$4.95"
+          data-num="4.95"
+          data-cal="340 cal"
+          data-cheap="Tennessee ($4.45)"
+          data-exp="Florida ($5.45)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('berts-best-chili-bowl')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Bert's Best Chili (Bowl)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">340 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $4.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="grilled-biscuit-with-jelly"
+          data-name="Grilled Biscuit with Butter & Jelly"
+          data-price="$2.65"
+          data-num="2.65"
+          data-cal="280 cal"
+          data-cheap="Mississippi ($2.35)"
+          data-exp="Maryland ($2.95)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('grilled-biscuit-with-jelly')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Grilled Biscuit with Butter & Jelly
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">280 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $2.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="sausage-gravy-biscuit"
+          data-name="Southern Sausage Gravy Biscuit"
+          data-price="$4.95"
+          data-num="4.95"
+          data-cal="540 cal"
+          data-cheap="Alabama ($4.45)"
+          data-exp="Virginia ($5.45)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('sausage-gravy-biscuit')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Southern Sausage Gravy Biscuit
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">540 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $4.95 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="bowl-of-southern-grits"
+          data-name="Bowl of Southern Grits"
+          data-price="$3.70"
+          data-num="3.7"
+          data-cal="200 cal"
+          data-cheap="Georgia ($3.35)"
+          data-exp="Ohio ($4.05)"
+          data-cat="Sides & Hashbrown Enhancements"
+          onclick="openStateModal('bowl-of-southern-grits')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Bowl of Southern Grits
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">200 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $3.70 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+      </div>
+    </div>
+  
+    <!-- Category: Pies & Diner Sweets -->
+    <div class="category-block mb-12" data-category="pies-sweets">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-gray-200 pb-3 mb-6 gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#FFC72C] inline-block"></span>
+          <span>Pies & Diner Sweets</span>
+        </h2>
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">4 Menu Items Verified</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Classic Southern bakery pies baked fresh and served chilled or warmed on the flat top.</p>
+      
+      <!-- SaladWorks-Style Item Chips Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+  
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="southern-pecan-pie-slice"
+          data-name="Southern Pecan Pie Slice"
+          data-price="$4.65"
+          data-num="4.65"
+          data-cal="510 cal"
+          data-cheap="Georgia ($4.15)"
+          data-exp="Florida ($5.15)"
+          data-cat="Pies & Diner Sweets"
+          onclick="openStateModal('southern-pecan-pie-slice')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Southern Pecan Pie Slice
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">510 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $4.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="triple-chocolate-silk-pie-slice"
+          data-name="Triple Chocolate Silk Pie Slice"
+          data-price="$4.65"
+          data-num="4.65"
+          data-cal="480 cal"
+          data-cheap="Mississippi ($4.15)"
+          data-exp="Virginia ($5.15)"
+          data-cat="Pies & Diner Sweets"
+          onclick="openStateModal('triple-chocolate-silk-pie-slice')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Triple Chocolate Silk Pie Slice
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">480 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $4.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="whole-southern-pecan-pie"
+          data-name="Whole Southern Pecan Pie (To-Go)"
+          data-price="$22.00"
+          data-num="22"
+          data-cal="4080 cal"
+          data-cheap="Alabama ($19.95)"
+          data-exp="Maryland ($24.00)"
+          data-cat="Pies & Diner Sweets"
+          onclick="openStateModal('whole-southern-pecan-pie')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Whole Southern Pecan Pie (To-Go)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">4080 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $22.00 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>24 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="whole-chocolate-silk-pie"
+          data-name="Whole Chocolate Silk Pie (To-Go)"
+          data-price="$22.00"
+          data-num="22"
+          data-cal="3840 cal"
+          data-cheap="Tennessee ($19.95)"
+          data-exp="Florida ($24.00)"
+          data-cat="Pies & Diner Sweets"
+          onclick="openStateModal('whole-chocolate-silk-pie')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Whole Chocolate Silk Pie (To-Go)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">3840 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $22.00 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>24 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+      </div>
+    </div>
+  
+    <!-- Category: Royal Cup Beverages -->
+    <div class="category-block mb-12" data-category="beverages">
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-gray-200 pb-3 mb-6 gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#FFC72C] inline-block"></span>
+          <span>Royal Cup Beverages</span>
+        </h2>
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">7 Menu Items Verified</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Custom dark roast coffee brewed fresh around the clock, authentic Southern sweet tea, and diner shakes.</p>
+      
+      <!-- SaladWorks-Style Item Chips Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+  
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="royal-cup-dark-roast-coffee"
+          data-name="Royal Cup® Coffee (Free Refills)"
+          data-price="$2.65"
+          data-num="2.65"
+          data-cal="0 cal"
+          data-cheap="Mississippi ($2.35)"
+          data-exp="Virginia ($2.95)"
+          data-cat="Royal Cup Beverages"
+          onclick="openStateModal('royal-cup-dark-roast-coffee')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Royal Cup® Coffee (Free Refills)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">0 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $2.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="alices-sweet-tea"
+          data-name="Alice's Southern Sweet Tea (Free Refills)"
+          data-price="$2.85"
+          data-num="2.85"
+          data-cal="180 cal"
+          data-cheap="Alabama ($2.50)"
+          data-exp="Florida ($3.15)"
+          data-cat="Royal Cup Beverages"
+          onclick="openStateModal('alices-sweet-tea')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Alice's Southern Sweet Tea (Free Refills)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">180 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $2.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="alices-unsweet-tea"
+          data-name="Alice's Unsweet Iced Tea"
+          data-price="$2.85"
+          data-num="2.85"
+          data-cal="0 cal"
+          data-cheap="Georgia ($2.50)"
+          data-exp="Ohio ($3.15)"
+          data-cat="Royal Cup Beverages"
+          onclick="openStateModal('alices-unsweet-tea')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Alice's Unsweet Iced Tea
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">0 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $2.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="minute-maid-orange-juice"
+          data-name="Minute Maid® 100% Orange Juice"
+          data-price="$3.25"
+          data-num="3.25"
+          data-cal="170–240 cal"
+          data-cheap="Florida ($2.85)"
+          data-exp="Maryland ($3.65)"
+          data-cat="Royal Cup Beverages"
+          onclick="openStateModal('minute-maid-orange-juice')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Minute Maid® 100% Orange Juice
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">170–240 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $3.25 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="borden-chocolate-milk"
+          data-name="Borden® Chocolate Milk Bottle"
+          data-price="$3.15"
+          data-num="3.15"
+          data-cal="230 cal"
+          data-cheap="Arkansas ($2.75)"
+          data-exp="Virginia ($3.45)"
+          data-cat="Royal Cup Beverages"
+          onclick="openStateModal('borden-chocolate-milk')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Borden® Chocolate Milk Bottle
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">230 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $3.15 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="coca-cola-soft-drinks"
+          data-name="Coca-Cola® Fountain Sodas (Refills)"
+          data-price="$2.85"
+          data-num="2.85"
+          data-cal="0–210 cal"
+          data-cheap="Tennessee ($2.50)"
+          data-exp="Florida ($3.15)"
+          data-cat="Royal Cup Beverages"
+          onclick="openStateModal('coca-cola-soft-drinks')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Coca-Cola® Fountain Sodas (Refills)
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">0–210 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $2.85 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+        <button 
+          type="button" 
+          class="item-card text-left bg-white hover:bg-yellow-50/40 p-4 rounded-xl border border-gray-200 hover:border-[#FFC72C] transition-all duration-150 shadow-xs hover:shadow-md flex flex-col justify-between group focus:outline-none focus:ring-2 focus:ring-[#FFC72C]"
+          data-id="hot-chocolate-whipped-cream"
+          data-name="Hot Chocolate with Whipped Cream"
+          data-price="$2.65"
+          data-num="2.65"
+          data-cal="180 cal"
+          data-cheap="Mississippi ($2.35)"
+          data-exp="Maryland ($2.95)"
+          data-cat="Royal Cup Beverages"
+          onclick="openStateModal('hot-chocolate-whipped-cream')"
+        >
+          <div>
+            <span class="font-bold text-sm text-gray-900 group-hover:text-[#0B0B0E] block leading-snug mb-2 font-heading">
+              Hot Chocolate with Whipped Cream
+            </span>
+            <span class="text-[11px] text-gray-500 block mb-3">180 cal</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 text-xs">
+            <span class="font-black text-[#0B0B0E] bg-yellow-100/70 border border-yellow-200/80 px-2.5 py-0.5 rounded-md font-sans">
+              $2.65 avg
+            </span>
+            <span class="text-[11px] font-semibold text-gray-500 group-hover:text-amber-700 flex items-center gap-1">
+              <span>25 states</span>
+              <span class="text-gray-400 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </span>
+          </div>
+        </button>
+    
+      </div>
+    </div>
+  
+
+    </section>
+
+    <!-- ================= SUPERHIT SECTION 1: STATE PRICING TIERS ================= -->
+    <section class="bg-[#F9FAFB] border-t border-b border-gray-200 py-14 md:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Cost Breakdown</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B0B0E] tracking-tight">
+            The 3 Regional Price Tiers Across 25 States
+          </h2>
+          <p class="text-gray-600 text-xs sm:text-sm mt-2">
+            Why you will pay slightly different amounts at a Waffle House in Biloxi, MS compared to Alexandria, VA.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Tier 1 -->
+          <div class="bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-[#FFC72C] transition-all shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-bold mb-4">
+                <span>Tier 1: Best Value (~4% to 6% Below Avg)</span>
+              </div>
+              <h3 class="text-lg font-black text-[#0B0B0E] font-heading mb-2">Deep South Value States</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+                Benefiting from lower minimum wages, abundant local agricultural distribution, and reduced commercial property overhead.
+              </p>
+              <ul class="space-y-1.5 text-xs text-gray-700 font-medium">
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Mississippi (MS)</span><span class="font-bold text-emerald-700">~6% below avg</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Alabama (AL)</span><span class="font-bold text-emerald-700">~5% below avg</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Arkansas (AR)</span><span class="font-bold text-emerald-700">~5% below avg</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Oklahoma (OK)</span><span class="font-bold text-emerald-700">~4% below avg</span></li>
+                <li class="flex items-center justify-between py-1"><span>Kentucky (KY)</span><span class="font-bold text-emerald-700">~3% below avg</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 text-[11px] text-gray-500 font-semibold">
+              Example All-Star: $11.85 to $12.00
+            </div>
+          </div>
+
+          <!-- Tier 2 -->
+          <div class="bg-white p-6 rounded-2xl border-2 border-[#FFC72C] transition-all shadow-sm flex flex-col justify-between relative">
+            <div class="absolute -top-3 right-6 bg-[#0B0B0E] text-[#FFC72C] text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">
+              Baseline Hub
+            </div>
+            <div>
+              <div class="inline-flex items-center gap-2 bg-yellow-100 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold mb-4">
+                <span>Tier 2: Baseline Benchmark (&plusmn;1% Avg)</span>
+              </div>
+              <h3 class="text-lg font-black text-[#0B0B0E] font-heading mb-2">Core Diner Corridor</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+                The historic heartland of Waffle House with the densest store footprint and direct Norcross commissary supply lines.
+              </p>
+              <ul class="space-y-1.5 text-xs text-gray-700 font-medium">
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Georgia (GA &bull; 435+ diners)</span><span class="font-bold text-gray-900">National Base (1.00)</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Tennessee (TN &bull; 135+ diners)</span><span class="font-bold text-gray-900">National Base (1.00)</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>North Carolina (NC)</span><span class="font-bold text-gray-900">+1% variance</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>South Carolina (SC)</span><span class="font-bold text-gray-900">-1% variance</span></li>
+                <li class="flex items-center justify-between py-1"><span>Texas (TX)</span><span class="font-bold text-gray-900">+2% variance</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 text-[11px] text-gray-500 font-semibold">
+              Example All-Star: $12.50 to $12.75
+            </div>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="bg-white p-6 rounded-2xl border-2 border-gray-200 hover:border-[#FFC72C] transition-all shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-1 rounded-full text-xs font-bold mb-4">
+                <span>Tier 3: Higher Overhead (~4% to 7% Above Avg)</span>
+              </div>
+              <h3 class="text-lg font-black text-[#0B0B0E] font-heading mb-2">Urban &amp; Coastal Corridor</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+                Influenced by higher state minimum wage mandates, elevated commercial utility rates, and tourist/corridor foot traffic.
+              </p>
+              <ul class="space-y-1.5 text-xs text-gray-700 font-medium">
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Virginia (VA &bull; Northern VA)</span><span class="font-bold text-amber-700">~7% above avg</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Maryland (MD)</span><span class="font-bold text-amber-700">~7% above avg</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Florida (FL &bull; Theme Park Hubs)</span><span class="font-bold text-amber-700">~6% above avg</span></li>
+                <li class="flex items-center justify-between border-b border-gray-100 py-1"><span>Colorado (CO)</span><span class="font-bold text-amber-700">~6% above avg</span></li>
+                <li class="flex items-center justify-between py-1"><span>Ohio (OH)</span><span class="font-bold text-amber-700">~4% above avg</span></li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 text-[11px] text-gray-500 font-semibold">
+              Example All-Star: $13.15 to $13.45
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SUPERHIT SECTION 2: WHY PRICES VARY EXPLAINER ================= -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-[#0B0B0E] tracking-tight">
+          Why Do Waffle House Prices Vary by State?
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-600 mt-2">
+          Unlike fast food chains with rigid computerized national pricing, Waffle House uses a dynamic decentralized pricing model.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 rounded-xl bg-[#0B0B0E] text-[#FFC72C] font-black flex items-center justify-center shrink-0 text-sm">
+            01
+          </div>
+          <div>
+            <h3 class="font-bold text-[#0B0B0E] text-base mb-1 font-heading">State Minimum Wages &amp; Tip Credits</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              States like Georgia, Alabama, and Mississippi utilize the federal tipped minimum wage credit ($2.13/hr base), keeping store operating labor costs extremely competitive. Conversely, states like Colorado, Ohio, and Maryland enforce higher baseline minimums, requiring minor menu adjustments.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white p-5 rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 rounded-xl bg-[#FFC72C] text-[#0B0B0E] font-black flex items-center justify-center shrink-0 text-sm">
+            02
+          </div>
+          <div>
+            <h3 class="font-bold text-[#0B0B0E] text-base mb-1 font-heading">Franchise vs. Corporate Stores</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              While corporate Waffle House owns roughly 60% of restaurants, the remaining 40% are operated by authorized franchise partners. Franchise operators possess pricing discretion to adjust table rates by 25¢ to 75¢ to counter regional food transport and lease expenses.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white p-5 rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 rounded-xl bg-[#0B0B0E] text-[#FFC72C] font-black flex items-center justify-center shrink-0 text-sm">
+            03
+          </div>
+          <div>
+            <h3 class="font-bold text-[#0B0B0E] text-base mb-1 font-heading">Commissary Hub Distance</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Waffle House ships its proprietary sweet cream waffle batter, custom Royal Cup dark roast coffee, and Smithfield bacon from regional distribution centers originating in Georgia. Distant outliers like Colorado, Arizona, and Pennsylvania involve longer refrigerated transport runs.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-white p-5 rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 rounded-xl bg-[#FFC72C] text-[#0B0B0E] font-black flex items-center justify-center shrink-0 text-sm">
+            04
+          </div>
+          <div>
+            <h3 class="font-bold text-[#0B0B0E] text-base mb-1 font-heading">State Prepared Food Taxes</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              State sales taxes on prepared restaurant meals range from 0% in Delaware to over 9.5% in parts of Tennessee, Louisiana, and Arkansas. While menu base prices are shown pre-tax, final out-of-pocket guest check totals reflect these regional municipal tax laws.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FREQUENTLY ASKED QUESTIONS (EXACT HOMEPAGE STYLE) ================= -->
+    <section class="py-16 md:py-20 bg-[#F9FAFB] border-t border-gray-200" id="faq">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Got Questions?</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-[#0B0B0E] tracking-tight">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-gray-600 text-sm sm:text-base mt-2 font-sans">
+            Quick answers about our state-by-state price comparison methodology and regional diner data.
+          </p>
+        </div>
+
+        <div class="space-y-3 font-sans" id="home-faq-list">
+          
+          <!-- FAQ 1: Why do prices vary by state? -->
+          <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+            <button type="button" class="faq-btn w-full p-5 text-left font-bold text-base sm:text-lg text-gray-900 flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span>Why do Waffle House menu prices vary by state?</span>
+              <span class="faq-icon text-gray-400 font-bold text-sm">↓</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Waffle House operates across 25 states under diverse economic conditions. Menu prices reflect local commercial real estate leases, municipal food taxes, regional distributor freight distances from their Georgia commissary, and whether a location is company-owned or operated by an independent franchisee.
+            </div>
+          </div>
+
+          <!-- FAQ 2: Which state is cheapest? -->
+          <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+            <button type="button" class="faq-btn w-full p-5 text-left font-bold text-base sm:text-lg text-gray-900 flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span>Which state has the cheapest Waffle House prices?</span>
+              <span class="faq-icon text-gray-400 font-bold text-sm">↓</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Mississippi and Alabama consistently rank as the lowest-cost states for Waffle House dining, with average menu prices approximately 4% to 6% below national benchmarks. For example, an All-Star Special averages $11.85 in Mississippi compared to $12.60 nationally.
+            </div>
+          </div>
+
+          <!-- FAQ 3: How many items can I compare? -->
+          <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+            <button type="button" class="faq-btn w-full p-5 text-left font-bold text-base sm:text-lg text-gray-900 flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span>How many menu items can I compare across states?</span>
+              <span class="faq-icon text-gray-400 font-bold text-sm">↓</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Our 2026 database tracks 55+ distinct Waffle House menu items across 8 major dining categories &mdash; including sweet cream waffles, signature hashbrown bowls, Texas melts, Angus burgers, and breakfast egg platters across all 25 diner states.
+            </div>
+          </div>
+
+          <!-- FAQ 4: Where does the data come from? -->
+          <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+            <button type="button" class="faq-btn w-full p-5 text-left font-bold text-base sm:text-lg text-gray-900 flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span>Where does this state price data come from?</span>
+              <span class="faq-icon text-gray-400 font-bold text-sm">↓</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Data is collected through direct in-person diner receipt audits, photographic reviews of tabletop menus submitted by our reader community, and verified local guest checks cross-examined against state food service sales taxes. If you notice an updated price, submit it on our <a href="contact.html" class="text-amber-700 underline font-semibold">Contact Page</a>.
+            </div>
+          </div>
+
+          <!-- FAQ 5: Takeout surcharge -->
+          <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-2xs">
+            <button type="button" class="faq-btn w-full p-5 text-left font-bold text-base sm:text-lg text-gray-900 flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span>Are Waffle House prices higher for takeout or delivery orders?</span>
+              <span class="faq-icon text-gray-400 font-bold text-sm">↓</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+              Yes. Waffle House applies an official 10% to 20% carry-out surcharge on to-go orders to cover packaging, syrups, condiments, and server preparation. Delivery partner apps (such as Uber Eats or DoorDash) may also incorporate third-party platform markups.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= INTERACTIVE STATE BREAKDOWN MODAL ================= -->
+  <div id="state-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border-2 border-gray-200 animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Modal Header -->
+      <div class="bg-[#0B0B0E] text-white p-6 border-b border-gray-800 flex items-start justify-between gap-4 relative">
+        <div>
+          <span id="modal-category" class="text-[11px] font-bold text-[#FFC72C] uppercase tracking-wider block mb-1">Category</span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-black font-heading text-white">Item Name</h3>
+          <p id="modal-calories" class="text-xs text-gray-400 mt-0.5">Calories info</p>
+        </div>
+        <button onclick="closeStateModal()" class="text-gray-400 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-xl focus:outline-none transition-colors" aria-label="Close modal">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-[#FFC72C]"></div>
+      </div>
+
+      <!-- Modal Key Highlights -->
+      <div class="bg-[#FBFBFC] p-4 sm:p-5 border-b border-gray-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+        <div class="bg-white p-3 rounded-xl border border-gray-200 text-center">
+          <span class="text-gray-500 block text-[10px] font-bold uppercase">National Average</span>
+          <span id="modal-nat-avg" class="text-lg font-black text-gray-900">$12.60</span>
+        </div>
+        <div class="bg-white p-3 rounded-xl border border-emerald-200 text-center bg-emerald-50/40">
+          <span class="text-emerald-700 block text-[10px] font-bold uppercase">Lowest Price State</span>
+          <span id="modal-cheapest" class="text-xs sm:text-sm font-bold text-emerald-800">Mississippi ($11.85)</span>
+        </div>
+        <div class="bg-white p-3 rounded-xl border border-amber-200 text-center bg-amber-50/40">
+          <span class="text-amber-800 block text-[10px] font-bold uppercase">Highest Price State</span>
+          <span id="modal-expensive" class="text-xs sm:text-sm font-bold text-amber-900">Virginia ($13.45)</span>
+        </div>
+      </div>
+
+      <!-- Modal Body: 25-State Comparison Table -->
+      <div class="p-4 sm:p-6 overflow-y-auto flex-1">
+        <div class="flex items-center justify-between pb-3 text-xs font-semibold text-gray-500">
+          <span>All 25 Waffle House States</span>
+          <span>Verified 2026 Price</span>
+        </div>
+        
+        <div class="divide-y divide-gray-100 text-xs sm:text-sm" id="modal-states-list">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-gray-50 border-t border-gray-200 flex items-center justify-between text-xs text-gray-500">
+        <span>Prices exclude local sales taxes and takeout surcharges.</span>
+        <button onclick="closeStateModal()" class="bg-[#0B0B0E] hover:bg-neutral-800 text-white font-bold px-4 py-2 rounded-xl transition-colors">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= FOOTER: EXACT HOMEPAGE FOUR-COLUMN FOOTER WITH HIGHLIGHTED LINK ================= -->
+    <!-- ================= SLEEK PROFESSIONAL FOOTER ================= -->
+    <!-- ================= FOOTER: CHEESECAKE FACTORY GUIDE (CFG) STRUCTURE ================= -->
+  <footer id="footer-section" class="bg-[#0B0B0E] text-white pt-14 pb-12 font-sans border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Section: Brand Identity & Intro Tagline -->
+      <div class="mb-10 pb-8 border-b border-gray-800">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-8 h-8 rounded-lg bg-[#FFC72C] text-[#0B0B0E] flex items-center justify-center p-1.5 shadow-sm">
+            <!-- Geometric Waffle Icon -->
+            <svg class="w-full h-full text-[#0B0B0E]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm3 1v3h3V6H6zm5 0v3h3V6h-3zm5 0v3h3V6h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3z"/>
+            </svg>
+          </div>
+          <span class="font-heading font-black text-2xl text-white tracking-tight">
+            WaffleHouse <span class="text-[#FFC72C]">Menu Guide</span>
+          </span>
+        </div>
+        <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed max-w-2xl">
+          Your complete guide to the Waffle House menu, including current prices, full nutrition facts, allergen information, catering options, and restaurant locations across the United States.
+        </p>
+      </div>
+
+      <!-- 3-Column Navigation Grid (Cheesecake Factory Guide Structure) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 pb-10 border-b border-gray-800">
+        
+        <!-- Column 1: Menu & nutrition -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-[16px] md:text-[17px] tracking-tight mb-4">
+            Menu &amp; nutrition
+          </h4>
+          <ul class="space-y-3 text-[14px]">
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="menu.html">
+                Full menu
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="nutrition.html">
+                Nutrition
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-calories-allergies.html">
+                Allergen filter
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-dietary-guide.html">
+                Dietary guides
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="menu.html#panel-waffles">
+                Breakfast &amp; Waffles
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="catering.html">
+                Catering
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="prices-by-state.html">
+                Prices by State (25 States)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Plan a visit -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-[16px] md:text-[17px] tracking-tight mb-4">
+            Plan a visit
+          </h4>
+          <ul class="space-y-3 text-[14px]">
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="locations.html">
+                All locations
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="locations.html#hours-fema">
+                Store Hours &amp; 24/7 Dining
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-food-truck.html">
+                Food truck catering
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-wedding-catering.html">
+                Wedding catering
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-corporate-catering.html">
+                Corporate catering
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-school-event-catering.html">
+                School &amp; other events
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-birthday-party.html">
+                Birthday parties
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="coupons.html">
+                Deals &amp; Regulars Club
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="blog.html">
+                Blog &amp; diner guides
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: About & Legal -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-[16px] md:text-[17px] tracking-tight mb-4">
+            About &amp; Legal
+          </h4>
+          <ul class="space-y-3 text-[14px]">
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="about.html">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="index.html#faq">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="contact.html">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="privacy-policy.html">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="terms-and-conditions.html">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="disclaimer.html">
+                Disclaimer
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="cookies-policy.html">
+                Cookies Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Legal Disclaimer & Copyright (Matching Cheesecake Factory Style) -->
+      <div class="pt-8 text-xs text-gray-400 leading-relaxed space-y-3">
+        <p class="text-gray-400 text-xs md:text-[13px] leading-relaxed">
+          Waffle House Menu Guide is not affiliated with, endorsed by, or sponsored by Waffle House, Inc. Prices, nutrition, and availability are compiled from published sources. Prices are the restaurant&#39;s published figures and can vary by location and over time. For food allergies, always confirm directly with restaurant staff. <a href="disclaimer.html" class="text-gray-300 underline hover:text-[#FFC72C] transition-colors">Full disclaimer</a> &middot; <a href="about.html" class="text-gray-300 underline hover:text-[#FFC72C] transition-colors">About us</a>
+        </p>
+        <p class="text-gray-500 text-xs md:text-[13px] pt-1">
+          &copy; 2026 Waffle House Menu Guide. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT: INTERACTIVE COMPARATOR & MODAL ================= -->
+  <script>
+    // State Factors & Names
+    const stateFactors = [{"code":"GA","name":"Georgia","count":"435+ diners","factor":1,"tag":"Benchmark HQ"},{"code":"NC","name":"North Carolina","count":"180+ diners","factor":1.01,"tag":"Mid-Atlantic"},{"code":"FL","name":"Florida","count":"185+ diners","factor":1.06,"tag":"Higher Coastal"},{"code":"SC","name":"South Carolina","count":"170+ diners","factor":0.99,"tag":"Low-Cost Hub"},{"code":"AL","name":"Alabama","count":"155+ diners","factor":0.95,"tag":"Lowest Price Tier"},{"code":"TN","name":"Tennessee","count":"135+ diners","factor":1,"tag":"Benchmark"},{"code":"TX","name":"Texas","count":"120+ diners","factor":1.02,"tag":"Mid-South"},{"code":"OH","name":"Ohio","count":"85+ diners","factor":1.04,"tag":"Midwest Corridor"},{"code":"VA","name":"Virginia","count":"75+ diners","factor":1.07,"tag":"Highest Avg"},{"code":"MS","name":"Mississippi","count":"80+ diners","factor":0.94,"tag":"Lowest Price Tier"},{"code":"LA","name":"Louisiana","count":"70+ diners","factor":0.98,"tag":"Gulf Coast"},{"code":"KY","name":"Kentucky","count":"65+ diners","factor":0.97,"tag":"Low-Cost Tier"},{"code":"IN","name":"Indiana","count":"60+ diners","factor":1.02,"tag":"Midwest"},{"code":"MO","name":"Missouri","count":"50+ diners","factor":0.99,"tag":"Central"},{"code":"AR","name":"Arkansas","count":"45+ diners","factor":0.95,"tag":"Lowest Price Tier"},{"code":"OK","name":"Oklahoma","count":"35+ diners","factor":0.96,"tag":"Low-Cost Tier"},{"code":"MD","name":"Maryland","count":"15+ diners","factor":1.07,"tag":"Mid-Atlantic High"},{"code":"PA","name":"Pennsylvania","count":"12+ diners","factor":1.05,"tag":"Northeast Edge"},{"code":"IL","name":"Illinois","count":"10+ diners","factor":1.04,"tag":"Midwest"},{"code":"CO","name":"Colorado","count":"10+ diners","factor":1.06,"tag":"Mountain West"},{"code":"AZ","name":"Arizona","count":"15+ diners","factor":1.03,"tag":"Southwest"},{"code":"NM","name":"New Mexico","count":"5+ diners","factor":1.01,"tag":"Southwest"},{"code":"KS","name":"Kansas","count":"12+ diners","factor":0.98,"tag":"Plains"},{"code":"WV","name":"West Virginia","count":"8+ diners","factor":0.97,"tag":"Appalachia"},{"code":"DE","name":"Delaware","count":"4+ diners","factor":1.05,"tag":"East Coast"}];
+    
+    // Items Dictionary
+    const itemsData = [{"id":"all-star-special","name":"ALL-STAR SPECIAL™","avgPrice":"$12.60","numPrice":12.6,"states":25,"cal":"1050 cal","cheapState":"Mississippi ($11.85)","expState":"Virginia ($13.45)","category":"Breakfast Classics"},{"id":"two-egg-breakfast","name":"Two Egg Breakfast","avgPrice":"$7.00","numPrice":7,"states":25,"cal":"450–580 cal","cheapState":"Alabama ($6.50)","expState":"Florida ($7.50)","category":"Breakfast Classics"},{"id":"cheese-n-eggs-raisin-toast","name":"Cheese 'N Eggs with Raisin Toast","avgPrice":"$8.00","numPrice":8,"states":25,"cal":"670 cal","cheapState":"Mississippi ($7.50)","expState":"Virginia ($8.50)","category":"Breakfast Classics"},{"id":"country-ham-and-eggs","name":"Country Ham & Eggs","avgPrice":"$9.85","numPrice":9.85,"states":25,"cal":"600 cal","cheapState":"Tennessee ($9.25)","expState":"Maryland ($10.45)","category":"Breakfast Classics"},{"id":"t-bone-and-eggs","name":"T-Bone & Eggs Breakfast","avgPrice":"$14.25","numPrice":14.25,"states":25,"cal":"880–1050 cal","cheapState":"Arkansas ($13.45)","expState":"Florida ($15.15)","category":"Breakfast Classics"},{"id":"sirloin-steak-and-eggs","name":"Sirloin Steak & Eggs","avgPrice":"$11.85","numPrice":11.85,"states":25,"cal":"520–710 cal","cheapState":"Alabama ($11.15)","expState":"Virginia ($12.65)","category":"Breakfast Classics"},{"id":"chicken-sausage-and-eggs","name":"Chicken Sausage & Eggs","avgPrice":"$8.50","numPrice":8.5,"states":22,"cal":"520–710 cal","cheapState":"Georgia ($7.95)","expState":"Ohio ($8.95)","category":"Breakfast Classics"},{"id":"pork-chops-and-eggs","name":"Pork Chops & Eggs Breakfast","avgPrice":"$11.45","numPrice":11.45,"states":24,"cal":"740–910 cal","cheapState":"Mississippi ($10.75)","expState":"Florida ($12.15)","category":"Breakfast Classics"},{"id":"cheesesteak-melt-bowl","name":"Cheesesteak Melt Hashbrown Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"625 cal","cheapState":"Mississippi ($10.35)","expState":"Maryland ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"chicken-melt-bowl","name":"Chicken Melt Hashbrown Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"635 cal","cheapState":"Alabama ($10.35)","expState":"Virginia ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"sausage-egg-cheese-bowl","name":"Sausage Egg & Cheese Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"920 cal","cheapState":"Arkansas ($10.35)","expState":"Florida ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"bacon-egg-cheese-bowl","name":"Bacon Egg & Cheese Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"795 cal","cheapState":"Georgia ($10.35)","expState":"Ohio ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"ham-egg-cheese-bowl","name":"Ham Egg & Cheese Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"800 cal","cheapState":"Tennessee ($10.35)","expState":"Virginia ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"texas-sausage-melt-bowl","name":"Texas Sausage Melt Hashbrown Bowl","avgPrice":"$11.65","numPrice":11.65,"states":24,"cal":"980 cal","cheapState":"Texas ($10.95)","expState":"Florida ($12.35)","category":"Signature Hashbrown Bowls"},{"id":"chicken-fiesta-protein-bowl","name":"Chicken Fiesta Protein Bowl","avgPrice":"$11.85","numPrice":11.85,"states":23,"cal":"480 cal","cheapState":"Mississippi ($11.15)","expState":"Maryland ($12.55)","category":"Signature Hashbrown Bowls"},{"id":"classic-sweet-cream-waffle","name":"Classic Sweet Cream Waffle","avgPrice":"$4.95","numPrice":4.95,"states":25,"cal":"410 cal","cheapState":"Mississippi ($4.50)","expState":"Virginia ($5.35)","category":"Sweet Cream Waffles"},{"id":"pecan-waffle","name":"Pecan Waffle","avgPrice":"$5.45","numPrice":5.45,"states":25,"cal":"560 cal","cheapState":"Georgia ($4.95)","expState":"Florida ($5.85)","category":"Sweet Cream Waffles"},{"id":"chocolate-chip-waffle","name":"Chocolate Chip Waffle","avgPrice":"$5.45","numPrice":5.45,"states":25,"cal":"520 cal","cheapState":"Alabama ($4.95)","expState":"Maryland ($5.85)","category":"Sweet Cream Waffles"},{"id":"peanut-butter-chip-waffle","name":"Peanut Butter Chip Waffle","avgPrice":"$5.45","numPrice":5.45,"states":25,"cal":"580 cal","cheapState":"Tennessee ($4.95)","expState":"Ohio ($5.85)","category":"Sweet Cream Waffles"},{"id":"firework-waffle","name":"Firework Waffle (Strawberry)","avgPrice":"$5.95","numPrice":5.95,"states":21,"cal":"560–620 cal","cheapState":"Texas ($5.45)","expState":"Virginia ($6.45)","category":"Sweet Cream Waffles"},{"id":"double-waffle-stack","name":"Double Sweet Cream Waffle","avgPrice":"$7.95","numPrice":7.95,"states":25,"cal":"820 cal","cheapState":"Mississippi ($7.35)","expState":"Florida ($8.55)","category":"Sweet Cream Waffles"},{"id":"texas-bacon-cheesesteak-melt","name":"Texas Bacon Cheesesteak Melt","avgPrice":"$10.95","numPrice":10.95,"states":25,"cal":"910 cal","cheapState":"Arkansas ($10.25)","expState":"Maryland ($11.65)","category":"Texas Melts & Sandwiches"},{"id":"texas-sausage-egg-cheese-melt","name":"Texas Sausage Egg & Cheese Melt","avgPrice":"$10.05","numPrice":10.05,"states":25,"cal":"970 cal","cheapState":"Alabama ($9.35)","expState":"Virginia ($10.75)","category":"Texas Melts & Sandwiches"},{"id":"texas-patty-melt","name":"Texas Patty Melt","avgPrice":"$9.65","numPrice":9.65,"states":25,"cal":"810 cal","cheapState":"Mississippi ($8.95)","expState":"Florida ($10.35)","category":"Texas Melts & Sandwiches"},{"id":"texas-cheesesteak-melt","name":"Texas Cheesesteak Melt","avgPrice":"$10.35","numPrice":10.35,"states":25,"cal":"760 cal","cheapState":"Georgia ($9.65)","expState":"Ohio ($10.95)","category":"Texas Melts & Sandwiches"},{"id":"texas-chicken-melt","name":"Texas Chicken Melt","avgPrice":"$10.35","numPrice":10.35,"states":25,"cal":"730 cal","cheapState":"Tennessee ($9.65)","expState":"Virginia ($10.95)","category":"Texas Melts & Sandwiches"},{"id":"grilled-chicken-sandwich","name":"Grilled Chicken Sandwich","avgPrice":"$8.85","numPrice":8.85,"states":25,"cal":"470 cal","cheapState":"Kentucky ($8.15)","expState":"Maryland ($9.45)","category":"Texas Melts & Sandwiches"},{"id":"bacon-lovers-blt","name":"Bacon Lover's BLT (Texas Toast)","avgPrice":"$8.95","numPrice":8.95,"states":25,"cal":"560 cal","cheapState":"Mississippi ($8.25)","expState":"Florida ($9.65)","category":"Texas Melts & Sandwiches"},{"id":"texas-grilled-cheese","name":"Texas Grilled Cheese","avgPrice":"$5.85","numPrice":5.85,"states":25,"cal":"540 cal","cheapState":"Alabama ($5.25)","expState":"Virginia ($6.35)","category":"Texas Melts & Sandwiches"},{"id":"quarter-pound-angus-burger","name":"1/4 Lb. Angus Burger","avgPrice":"$6.85","numPrice":6.85,"states":25,"cal":"480 cal","cheapState":"Arkansas ($6.25)","expState":"Maryland ($7.35)","category":"Classic Burgers & Dinners"},{"id":"double-angus-burger","name":"Double Angus Burger","avgPrice":"$8.95","numPrice":8.95,"states":25,"cal":"770 cal","cheapState":"Mississippi ($8.25)","expState":"Virginia ($9.65)","category":"Classic Burgers & Dinners"},{"id":"t-bone-dinner-plate","name":"T-Bone Steak Dinner Plate","avgPrice":"$15.45","numPrice":15.45,"states":25,"cal":"1120 cal","cheapState":"Alabama ($14.50)","expState":"Florida ($16.45)","category":"Classic Burgers & Dinners"},{"id":"sirloin-steak-dinner","name":"Sirloin Steak Dinner Plate","avgPrice":"$13.25","numPrice":13.25,"states":25,"cal":"890 cal","cheapState":"Tennessee ($12.45)","expState":"Maryland ($14.15)","category":"Classic Burgers & Dinners"},{"id":"grilled-chicken-dinner","name":"Grilled Chicken Breast Dinner","avgPrice":"$11.65","numPrice":11.65,"states":25,"cal":"680 cal","cheapState":"Georgia ($10.85)","expState":"Ohio ($12.35)","category":"Classic Burgers & Dinners"},{"id":"regular-hashbrowns-plain","name":"Regular Hashbrowns (Plain)","avgPrice":"$3.15","numPrice":3.15,"states":25,"cal":"190 cal","cheapState":"Mississippi ($2.85)","expState":"Virginia ($3.45)","category":"Sides & Hashbrown Enhancements"},{"id":"large-hashbrowns","name":"Large Hashbrowns","avgPrice":"$3.65","numPrice":3.65,"states":25,"cal":"380 cal","cheapState":"Alabama ($3.25)","expState":"Florida ($3.95)","category":"Sides & Hashbrown Enhancements"},{"id":"triple-hashbrowns","name":"Triple Hashbrowns","avgPrice":"$4.15","numPrice":4.15,"states":25,"cal":"570 cal","cheapState":"Arkansas ($3.75)","expState":"Maryland ($4.55)","category":"Sides & Hashbrown Enhancements"},{"id":"smothered-covered-hashbrowns","name":"Smothered & Covered Hashbrowns","avgPrice":"$4.95","numPrice":4.95,"states":25,"cal":"480 cal","cheapState":"Georgia ($4.45)","expState":"Ohio ($5.45)","category":"Sides & Hashbrown Enhancements"},{"id":"all-the-way-hashbrowns","name":"Hashbrowns 'All The Way' (Triple)","avgPrice":"$8.65","numPrice":8.65,"states":25,"cal":"890 cal","cheapState":"Mississippi ($7.85)","expState":"Virginia ($9.45)","category":"Sides & Hashbrown Enhancements"},{"id":"berts-best-chili-bowl","name":"Bert's Best Chili (Bowl)","avgPrice":"$4.95","numPrice":4.95,"states":25,"cal":"340 cal","cheapState":"Tennessee ($4.45)","expState":"Florida ($5.45)","category":"Sides & Hashbrown Enhancements"},{"id":"grilled-biscuit-with-jelly","name":"Grilled Biscuit with Butter & Jelly","avgPrice":"$2.65","numPrice":2.65,"states":25,"cal":"280 cal","cheapState":"Mississippi ($2.35)","expState":"Maryland ($2.95)","category":"Sides & Hashbrown Enhancements"},{"id":"sausage-gravy-biscuit","name":"Southern Sausage Gravy Biscuit","avgPrice":"$4.95","numPrice":4.95,"states":25,"cal":"540 cal","cheapState":"Alabama ($4.45)","expState":"Virginia ($5.45)","category":"Sides & Hashbrown Enhancements"},{"id":"bowl-of-southern-grits","name":"Bowl of Southern Grits","avgPrice":"$3.70","numPrice":3.7,"states":25,"cal":"200 cal","cheapState":"Georgia ($3.35)","expState":"Ohio ($4.05)","category":"Sides & Hashbrown Enhancements"},{"id":"southern-pecan-pie-slice","name":"Southern Pecan Pie Slice","avgPrice":"$4.65","numPrice":4.65,"states":25,"cal":"510 cal","cheapState":"Georgia ($4.15)","expState":"Florida ($5.15)","category":"Pies & Diner Sweets"},{"id":"triple-chocolate-silk-pie-slice","name":"Triple Chocolate Silk Pie Slice","avgPrice":"$4.65","numPrice":4.65,"states":25,"cal":"480 cal","cheapState":"Mississippi ($4.15)","expState":"Virginia ($5.15)","category":"Pies & Diner Sweets"},{"id":"whole-southern-pecan-pie","name":"Whole Southern Pecan Pie (To-Go)","avgPrice":"$22.00","numPrice":22,"states":24,"cal":"4080 cal","cheapState":"Alabama ($19.95)","expState":"Maryland ($24.00)","category":"Pies & Diner Sweets"},{"id":"whole-chocolate-silk-pie","name":"Whole Chocolate Silk Pie (To-Go)","avgPrice":"$22.00","numPrice":22,"states":24,"cal":"3840 cal","cheapState":"Tennessee ($19.95)","expState":"Florida ($24.00)","category":"Pies & Diner Sweets"},{"id":"royal-cup-dark-roast-coffee","name":"Royal Cup® Coffee (Free Refills)","avgPrice":"$2.65","numPrice":2.65,"states":25,"cal":"0 cal","cheapState":"Mississippi ($2.35)","expState":"Virginia ($2.95)","category":"Royal Cup Beverages"},{"id":"alices-sweet-tea","name":"Alice's Southern Sweet Tea (Free Refills)","avgPrice":"$2.85","numPrice":2.85,"states":25,"cal":"180 cal","cheapState":"Alabama ($2.50)","expState":"Florida ($3.15)","category":"Royal Cup Beverages"},{"id":"alices-unsweet-tea","name":"Alice's Unsweet Iced Tea","avgPrice":"$2.85","numPrice":2.85,"states":25,"cal":"0 cal","cheapState":"Georgia ($2.50)","expState":"Ohio ($3.15)","category":"Royal Cup Beverages"},{"id":"minute-maid-orange-juice","name":"Minute Maid® 100% Orange Juice","avgPrice":"$3.25","numPrice":3.25,"states":25,"cal":"170–240 cal","cheapState":"Florida ($2.85)","expState":"Maryland ($3.65)","category":"Royal Cup Beverages"},{"id":"borden-chocolate-milk","name":"Borden® Chocolate Milk Bottle","avgPrice":"$3.15","numPrice":3.15,"states":25,"cal":"230 cal","cheapState":"Arkansas ($2.75)","expState":"Virginia ($3.45)","category":"Royal Cup Beverages"},{"id":"coca-cola-soft-drinks","name":"Coca-Cola® Fountain Sodas (Refills)","avgPrice":"$2.85","numPrice":2.85,"states":25,"cal":"0–210 cal","cheapState":"Tennessee ($2.50)","expState":"Florida ($3.15)","category":"Royal Cup Beverages"},{"id":"hot-chocolate-whipped-cream","name":"Hot Chocolate with Whipped Cream","avgPrice":"$2.65","numPrice":2.65,"states":25,"cal":"180 cal","cheapState":"Mississippi ($2.35)","expState":"Maryland ($2.95)","category":"Royal Cup Beverages"}];
+
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // 2. Open State Modal
+    function openStateModal(itemId) {
+      const item = itemsData.find(it => it.id === itemId);
+      if (!item) return;
+
+      document.getElementById('modal-title').textContent = item.name;
+      document.getElementById('modal-category').textContent = item.category;
+      document.getElementById('modal-calories').textContent = item.cal + ' • Verified 2026 Diner Data';
+      document.getElementById('modal-nat-avg').textContent = item.avgPrice;
+      document.getElementById('modal-cheapest').textContent = item.cheapState;
+      document.getElementById('modal-expensive').textContent = item.expState;
+
+      // Populate States List
+      const listEl = document.getElementById('modal-states-list');
+      listEl.innerHTML = '';
+
+      // Calculate state price
+      const baseNum = item.numPrice;
+      stateFactors.forEach(st => {
+        const stPrice = (baseNum * st.factor).toFixed(2);
+        const diff = Math.round((st.factor - 1) * 100);
+        let diffBadge = '';
+        if (diff < -2) {
+          diffBadge = '<span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">' + diff + '% (Below Avg)</span>';
+        } else if (diff > 2) {
+          diffBadge = '<span class="text-xs font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md">+' + diff + '% (Above Avg)</span>';
+        } else {
+          diffBadge = '<span class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md">Average</span>';
+        }
+
+        const row = document.createElement('div');
+        row.className = 'py-3 flex items-center justify-between hover:bg-gray-50 px-2 rounded-xl transition-colors';
+        row.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-lg bg-gray-100 text-gray-800 font-bold text-xs flex items-center justify-center font-mono">${st.code}</span>
+            <div>
+              <span class="font-bold text-gray-900 block leading-none text-xs sm:text-sm">${st.name}</span>
+              <span class="text-[10px] text-gray-500">${st.count} &bull; ${st.tag}</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 text-right">
+            ${diffBadge}
+            <span class="font-black text-gray-900 text-sm sm:text-base font-sans">$${stPrice}</span>
+          </div>
+        `;
+        listEl.appendChild(row);
+      });
+
+      document.getElementById('state-modal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeStateModal() {
+      document.getElementById('state-modal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Close on escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeStateModal();
+    });
+
+    // Close on backdrop click
+    document.getElementById('state-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'state-modal') closeStateModal();
+    });
+
+    // 3. Search and Category Filter
+    const searchInput = document.getElementById('item-search-input');
+    const categoryPills = document.querySelectorAll('.cat-pill');
+    let activeCategory = 'all';
+
+    function filterItems() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      let visibleCount = 0;
+
+      document.querySelectorAll('.category-block').forEach(catBlock => {
+        const catSlug = catBlock.getAttribute('data-category');
+        const matchesCategory = (activeCategory === 'all' || activeCategory === catSlug);
+
+        let catVisibleItems = 0;
+        catBlock.querySelectorAll('.item-card').forEach(card => {
+          const name = card.getAttribute('data-name').toLowerCase();
+          const matchesSearch = !query || name.includes(query);
+
+          if (matchesCategory && matchesSearch) {
+            card.classList.remove('hidden');
+            catVisibleItems++;
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (catVisibleItems > 0) {
+          catBlock.classList.remove('hidden');
+        } else {
+          catBlock.classList.add('hidden');
+        }
+      });
+
+      const noResults = document.getElementById('no-search-results');
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', filterItems);
+    }
+
+    categoryPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        categoryPills.forEach(p => {
+          p.classList.remove('bg-[#0B0B0E]', 'text-white');
+          p.classList.add('bg-white', 'text-gray-700');
+        });
+        pill.classList.remove('bg-white', 'text-gray-700');
+        pill.classList.add('bg-[#0B0B0E]', 'text-white');
+
+        activeCategory = pill.getAttribute('data-target');
+        filterItems();
+      });
+    });
+
+    // 4. FAQ Accordion (Exact Home Page Single-Open Behavior)
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+        faqItems.forEach(otherItem => {
+          const otherBtn = otherItem.querySelector('.faq-btn');
+          const otherContent = otherItem.querySelector('.faq-content');
+          const otherIcon = otherItem.querySelector('.faq-icon');
+          otherBtn.setAttribute('aria-expanded', 'false');
+          otherContent.classList.add('hidden');
+          otherIcon.textContent = '↓';
+          otherItem.classList.remove('border-[#FFC72C]', 'shadow-sm');
+          otherItem.classList.add('border-gray-200');
+        });
+
+        if (!isOpen) {
+          btn.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          icon.textContent = '↑';
+          item.classList.remove('border-gray-200');
+          item.classList.add('border-[#FFC72C]', 'shadow-sm');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

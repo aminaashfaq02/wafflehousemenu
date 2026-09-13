@@ -1,0 +1,12 @@
+# Robots.txt for Waffle House Menu Guide
+# https://www.wafflehousemenu.us
+
+User-agent: *
+Allow: /
+
+# Disallow draft, system or private scripts if any
+Disallow: /scratch/
+Disallow: /server.js
+
+# Sitemap
+Sitemap: https://www.wafflehousemenu.us/sitemap.xml
