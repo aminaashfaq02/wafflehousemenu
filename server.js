@@ -28,16 +28,26 @@ const server = http.createServer((req, res) => {
     safeUrl = safeUrl.slice(0, -1);
   }
 
-  // Home page variants and nested index.html requests
-  if (
-    safeUrl === '/' || 
-    safeUrl === '' || 
-    safeUrl === '/index' || 
-    safeUrl === '/index.html' || 
-    safeUrl === '/home' || 
-    safeUrl.endsWith('/index.html') ||
-    safeUrl.endsWith('/index')
-  ) {
+  // If request is for nested index.html (e.g. /waffle-house-dietary-guide/index.html), redirect to root /
+  if (safeUrl !== '/index.html' && (safeUrl.endsWith('/index.html') || safeUrl.endsWith('/index'))) {
+    res.writeHead(302, { 'Location': '/' });
+    res.end();
+    return;
+  }
+
+  // If request is nested HTML page that exists in root (e.g. /waffle-house-dietary-guide/menu.html), redirect to root page
+  if (safeUrl.includes('/') && safeUrl.lastIndexOf('/') > 0) {
+    const base = path.basename(safeUrl);
+    const rootTarget = path.join(__dirname, base);
+    if (fs.existsSync(rootTarget) && fs.statSync(rootTarget).isFile() && base.endsWith('.html')) {
+      res.writeHead(302, { 'Location': '/' + base });
+      res.end();
+      return;
+    }
+  }
+
+  // Home page root
+  if (safeUrl === '/' || safeUrl === '' || safeUrl === '/index' || safeUrl === '/index.html' || safeUrl === '/home') {
     safeUrl = '/index.html';
   } else if (safeUrl === '/robots.txt') {
     safeUrl = '/robots.txt';
@@ -53,7 +63,7 @@ const server = http.createServer((req, res) => {
     safeUrl = '/cookies-policy.html';
   } else if (safeUrl === '/disclaimer' || safeUrl.endsWith('/disclaimer.html')) {
     safeUrl = '/disclaimer.html';
-  } else if (safeUrl === '/catering' || safeUrl === '/waffle-house-catering' || safeUrl === '/catering/guide' || safeUrl.endsWith('/catering.html')) {
+  } else if (safeUrl === '/catering' || safeUrl === '/waffle-house-catering' || safeUrl === '/catering/guide' || safeUrl.endsWith('/catering.html') || safeUrl.endsWith('/waffle-house-catering.html')) {
     safeUrl = '/catering.html';
   } else if (safeUrl === '/waffle-house-birthday-party' || safeUrl === '/birthday-party-catering' || safeUrl.endsWith('/waffle-house-birthday-party.html')) {
     safeUrl = '/waffle-house-birthday-party.html';
@@ -94,7 +104,7 @@ const server = http.createServer((req, res) => {
     if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
       filePath = htmlPath;
     } else {
-      // Fallback: check if basename exists in root directory (handles relative links from nested URLs)
+      // Fallback: check if basename exists in root directory
       const baseName = path.basename(safeUrl);
       const rootFile = path.join(__dirname, baseName);
       const rootHtml = path.join(__dirname, baseName + '.html');

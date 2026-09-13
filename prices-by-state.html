@@ -42,6 +42,21 @@
       color: #0B0B0E;
     }
   </style>
+
+  <style id="dropdown-visibility-styles">
+    /* Essential Dropdown Styles: Hidden by default, visible only on hover or .open */
+    .catering-dropdown-panel, 
+    .dropdown-panel {
+      display: none !important;
+    }
+    .group:hover > .catering-dropdown-panel,
+    .group:hover > .dropdown-panel,
+    .catering-dropdown-panel.open,
+    .dropdown-panel.open {
+      display: block !important;
+    }
+  </style>
+
 </head>
 <body class="bg-white text-gray-800 font-sans antialiased min-h-screen flex flex-col">
 
@@ -50,7 +65,7 @@
     
     <!-- Upper Tier: Clean Centered Branding -->
     <div class="py-4 md:py-5 text-center px-4 bg-white">
-      <a title="WaffleHouse Menu Home" class="inline-block group focus:outline-none" href="index.html">
+      <a title="WaffleHouse Menu Home" class="inline-block group focus:outline-none" href="/">
         <div class="flex items-center justify-center gap-2.5 mb-1">
           <div class="w-8 h-8 rounded-lg bg-[#0B0B0E] text-[#FFC72C] flex items-center justify-center p-1.5 shadow-xs">
             <!-- Custom Geometric Waffle Icon (pure diner restaurant SVG) -->
@@ -72,9 +87,9 @@
     <div class="bg-[#FFC72C] border-t border-yellow-400">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-                <!-- Desktop Nav -->
+                        <!-- Desktop Nav -->
         <nav class="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 py-3.5" aria-label="Main Navigation">
-          <a title="Menu &amp; Prices" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="menu.html">
+          <a title="Menu &amp; Prices" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/menu.html">
             Menu &amp; Prices
           </a>
           
@@ -93,10 +108,10 @@
               </svg>
             </button>
 
-            <!-- Dropdown Panel -->
+            <!-- Dropdown Panel (Hidden by default, shown on group-hover) -->
             <div 
               id="catering-dropdown-panel" 
-              class="catering-dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 text-left"
+              class="hidden group-hover:block catering-dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 text-left"
             >
               <div class="bg-white rounded-xl shadow-xl border border-gray-200 py-1.5 overflow-hidden">
                 <a href="/waffle-house-catering/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
@@ -136,13 +151,13 @@
               </svg>
             </button>
 
-            <!-- Nutrition Dropdown Panel -->
+            <!-- Dropdown Panel (Hidden by default, shown on group-hover) -->
             <div 
               id="nutrition-dropdown-panel" 
-              class="dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 text-left"
+              class="hidden group-hover:block dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 text-left"
             >
               <div class="bg-white rounded-xl shadow-xl border border-gray-200 py-1.5 overflow-hidden">
-                <a href="nutrition.html" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                <a href="/nutrition.html" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
                   Nutrition
                 </a>
                 <a href="/waffle-house-calories-allergies/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
@@ -155,19 +170,19 @@
             </div>
           </div>
 
-          <a title="Deals &amp; Coupons" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="coupons.html">
+          <a title="Deals &amp; Coupons" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/coupons.html">
             Deals &amp; Coupons
           </a>
-          <a title="Blog" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="blog.html">
+          <a title="Blog" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/blog.html">
             Blog
           </a>
-          <a title="Store Hours &amp; Locations" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="locations.html">
+          <a title="Store Hours &amp; Locations" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/locations.html">
             Store Hours &amp; Locations
           </a>
-          <a title="About Us" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="about.html">
+          <a title="About Us" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/about.html">
             About Us
           </a>
-          <a title="Contact" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="contact.html">
+          <a title="Contact" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/contact.html">
             Contact
           </a>
         </nav>
