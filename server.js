@@ -118,8 +118,11 @@ const server = http.createServer((req, res) => {
 
   // 6. Direct file resolution with fallbacks
   if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
+    const dirIndex = path.join(filePath, 'index.html');
     const htmlPath = filePath + '.html';
-    if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
+    if (fs.existsSync(dirIndex) && fs.statSync(dirIndex).isFile()) {
+      filePath = dirIndex;
+    } else if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
       filePath = htmlPath;
     } else {
       const baseName = path.basename(safeUrl);
