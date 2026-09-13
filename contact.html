@@ -72,17 +72,89 @@
     <div class="bg-[#FFC72C] border-t border-yellow-400">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Desktop Nav -->
+                <!-- Desktop Nav -->
         <nav class="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 py-3.5" aria-label="Main Navigation">
           <a title="Menu &amp; Prices" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="menu.html">
             Menu &amp; Prices
           </a>
-          <a title="Catering" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="catering.html">
-            Catering
-          </a>
-          <a title="Nutrition" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="nutrition.html">
-            Nutrition
-          </a>
+          
+          <!-- Short Text-Only Catering Dropdown (Hover + Click) -->
+          <div class="relative group" id="catering-nav-container">
+            <button 
+              id="catering-nav-btn" 
+              type="button" 
+              class="inline-flex items-center gap-1 text-[#0B0B0E] text-[15px] font-extrabold hover:text-black/70 transition-colors whitespace-nowrap focus:outline-none cursor-pointer py-1"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span>Catering</span>
+              <svg id="catering-nav-chevron" class="w-3.5 h-3.5 text-[#0B0B0E] transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+
+            <!-- Dropdown Panel -->
+            <div 
+              id="catering-dropdown-panel" 
+              class="catering-dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 text-left"
+            >
+              <div class="bg-white rounded-xl shadow-xl border border-gray-200 py-1.5 overflow-hidden">
+                <a href="/waffle-house-catering/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Catering Guide
+                </a>
+                <a href="/waffle-house-birthday-party/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Birthday Catering
+                </a>
+                <a href="/waffle-house-wedding-catering/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Wedding Catering
+                </a>
+                <a href="/waffle-house-corporate-catering/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Corporate Catering
+                </a>
+                <a href="/waffle-house-school-event-catering/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  School Catering
+                </a>
+                <a href="/waffle-house-food-truck/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Food Truck
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Short Text-Only Nutrition Dropdown (Hover + Click) -->
+          <div class="relative group" id="nutrition-nav-container">
+            <button 
+              id="nutrition-nav-btn" 
+              type="button" 
+              class="inline-flex items-center gap-1 text-[#0B0B0E] text-[15px] font-extrabold hover:text-black/70 transition-colors whitespace-nowrap focus:outline-none cursor-pointer py-1"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span>Nutrition</span>
+              <svg id="nutrition-nav-chevron" class="w-3.5 h-3.5 text-[#0B0B0E] transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+
+            <!-- Nutrition Dropdown Panel -->
+            <div 
+              id="nutrition-dropdown-panel" 
+              class="dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 text-left"
+            >
+              <div class="bg-white rounded-xl shadow-xl border border-gray-200 py-1.5 overflow-hidden">
+                <a href="nutrition.html" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Nutrition
+                </a>
+                <a href="/waffle-house-calories-allergies/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Calories &amp; Allergies
+                </a>
+                <a href="/waffle-house-dietary-guide/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Dietary Guide
+                </a>
+              </div>
+            </div>
+          </div>
+
           <a title="Deals &amp; Coupons" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="coupons.html">
             Deals &amp; Coupons
           </a>
@@ -95,8 +167,7 @@
           <a title="About Us" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="about.html">
             About Us
           </a>
-          <!-- Active Tab: Contact -->
-          <a title="Contact" class="text-[#0B0B0E] text-[15px] font-extrabold hover:text-black/70 transition-colors whitespace-nowrap border-b-2 border-[#0B0B0E] pb-0.5" href="contact.html" aria-current="page">
+          <a title="Contact" class="text-[#0B0B0E] text-[15px] font-black border-b-2 border-[#0B0B0E] pb-0.5 transition-colors whitespace-nowrap" href="contact.html">
             Contact
           </a>
         </nav>
@@ -850,68 +921,69 @@
   <!-- ================= FOOTER: EXACT MATCHING HOMEPAGE FOUR-COLUMN FOOTER ================= -->
     <!-- ================= SLEEK PROFESSIONAL FOOTER ================= -->
     <!-- ================= FOOTER: CHEESECAKE FACTORY GUIDE (CFG) STRUCTURE ================= -->
-  <footer id="footer-section" class="bg-[#0B0B0E] text-white pt-14 pb-12 font-sans border-t border-gray-800">
+    <!-- ================= FOOTER: CHEESECAKE FACTORY GUIDE (CFG) STRUCTURE ================= -->
+  <footer id="footer-section" class="bg-[#0B0B0E] text-white pt-10 pb-8 font-sans border-t border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Top Section: Brand Identity & Intro Tagline -->
-      <div class="mb-10 pb-8 border-b border-gray-800">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-8 h-8 rounded-lg bg-[#FFC72C] text-[#0B0B0E] flex items-center justify-center p-1.5 shadow-sm">
+      <div class="mb-8 pb-6 border-b border-gray-800/80">
+        <div class="flex items-center gap-2.5 mb-2">
+          <div class="w-6 h-6 rounded-md bg-[#FFC72C] text-[#0B0B0E] flex items-center justify-center p-1 shadow-xs">
             <!-- Geometric Waffle Icon -->
             <svg class="w-full h-full text-[#0B0B0E]" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm3 1v3h3V6H6zm5 0v3h3V6h-3zm5 0v3h3V6h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3z"/>
             </svg>
           </div>
-          <span class="font-heading font-black text-2xl text-white tracking-tight">
+          <span class="font-heading font-black text-lg text-white tracking-tight">
             WaffleHouse <span class="text-[#FFC72C]">Menu Guide</span>
           </span>
         </div>
-        <p class="text-gray-300 text-sm md:text-[15px] leading-relaxed max-w-2xl">
+        <p class="text-gray-400 text-xs leading-relaxed max-w-xl">
           Your complete guide to the Waffle House menu, including current prices, full nutrition facts, allergen information, catering options, and restaurant locations across the United States.
         </p>
       </div>
 
       <!-- 3-Column Navigation Grid (Cheesecake Factory Guide Structure) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 pb-10 border-b border-gray-800">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 pb-8 border-b border-gray-800/80">
         
         <!-- Column 1: Menu & nutrition -->
         <div>
-          <h4 class="font-heading font-bold text-white text-[16px] md:text-[17px] tracking-tight mb-4">
+          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">
             Menu &amp; nutrition
           </h4>
-          <ul class="space-y-3 text-[14px]">
+          <ul class="space-y-2 text-[13px]">
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="menu.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="menu.html">
                 Full menu
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="nutrition.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="nutrition.html">
                 Nutrition
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-calories-allergies.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-calories-allergies.html">
                 Allergen filter
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-dietary-guide.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-dietary-guide.html">
                 Dietary guides
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="menu.html#panel-waffles">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="menu.html#panel-waffles">
                 Breakfast &amp; Waffles
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="catering.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="catering.html">
                 Catering
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="prices-by-state.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="prices-by-state.html">
                 Prices by State (25 States)
               </a>
             </li>
@@ -920,52 +992,52 @@
 
         <!-- Column 2: Plan a visit -->
         <div>
-          <h4 class="font-heading font-bold text-white text-[16px] md:text-[17px] tracking-tight mb-4">
+          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">
             Plan a visit
           </h4>
-          <ul class="space-y-3 text-[14px]">
+          <ul class="space-y-2 text-[13px]">
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="locations.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="locations.html">
                 All locations
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="locations.html#hours-fema">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="locations.html#hours-fema">
                 Store Hours &amp; 24/7 Dining
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-food-truck.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-food-truck.html">
                 Food truck catering
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-wedding-catering.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-wedding-catering.html">
                 Wedding catering
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-corporate-catering.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-corporate-catering.html">
                 Corporate catering
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-school-event-catering.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-school-event-catering.html">
                 School &amp; other events
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-birthday-party.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="waffle-house-birthday-party.html">
                 Birthday parties
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="coupons.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="coupons.html">
                 Deals &amp; Regulars Club
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="blog.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="blog.html">
                 Blog &amp; diner guides
               </a>
             </li>
@@ -974,42 +1046,42 @@
 
         <!-- Column 3: About & Legal -->
         <div>
-          <h4 class="font-heading font-bold text-white text-[16px] md:text-[17px] tracking-tight mb-4">
+          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">
             About &amp; Legal
           </h4>
-          <ul class="space-y-3 text-[14px]">
+          <ul class="space-y-2 text-[13px]">
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="about.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="about.html">
                 About Us
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="index.html#faq">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="index.html#faq">
                 FAQ
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="contact.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="contact.html">
                 Contact
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="privacy-policy.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="privacy-policy.html">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="terms-and-conditions.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="terms-and-conditions.html">
                 Terms of Service
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="disclaimer.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="disclaimer.html">
                 Disclaimer
               </a>
             </li>
             <li>
-              <a class="text-gray-300 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="cookies-policy.html">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="cookies-policy.html">
                 Cookies Policy
               </a>
             </li>
@@ -1018,12 +1090,12 @@
 
       </div>
 
-      <!-- Bottom Legal Disclaimer & Copyright (Matching Cheesecake Factory Style) -->
-      <div class="pt-8 text-xs text-gray-400 leading-relaxed space-y-3">
-        <p class="text-gray-400 text-xs md:text-[13px] leading-relaxed">
+      <!-- Bottom Legal Disclaimer & Copyright (Cheesecake Factory Style) -->
+      <div class="pt-6 text-xs text-gray-500 leading-relaxed space-y-2">
+        <p class="text-[11px] leading-relaxed text-gray-400">
           Waffle House Menu Guide is not affiliated with, endorsed by, or sponsored by Waffle House, Inc. Prices, nutrition, and availability are compiled from published sources. Prices are the restaurant&#39;s published figures and can vary by location and over time. For food allergies, always confirm directly with restaurant staff. <a href="disclaimer.html" class="text-gray-300 underline hover:text-[#FFC72C] transition-colors">Full disclaimer</a> &middot; <a href="about.html" class="text-gray-300 underline hover:text-[#FFC72C] transition-colors">About us</a>
         </p>
-        <p class="text-gray-500 text-xs md:text-[13px] pt-1">
+        <p class="text-gray-500 text-[11px]">
           &copy; 2026 Waffle House Menu Guide. All rights reserved.
         </p>
       </div>
