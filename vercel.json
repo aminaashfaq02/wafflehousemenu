@@ -1,79 +1,15 @@
 {
+  "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/waffle-house-catering/",
-      "destination": "/waffle-house-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-dietary-guide/",
-      "destination": "/waffle-house-dietary-guide/index.html"
-    },
-    {
-      "source": "/waffle-house-wedding-catering/",
-      "destination": "/waffle-house-wedding-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-birthday-party/",
-      "destination": "/waffle-house-birthday-party/index.html"
-    },
-    {
-      "source": "/waffle-house-corporate-catering/",
-      "destination": "/waffle-house-corporate-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-school-event-catering/",
-      "destination": "/waffle-house-school-event-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-food-truck/",
-      "destination": "/waffle-house-food-truck/index.html"
-    },
-    {
-      "source": "/waffle-house-calories-allergies/",
-      "destination": "/waffle-house-calories-allergies/index.html"
-    },
-    {
-      "source": "/waffle-house-menu/",
-      "destination": "/menu.html"
-    },
-    {
-      "source": "/waffle-house-nutrition/",
-      "destination": "/nutrition.html"
-    },
-    {
-      "source": "/blog/",
-      "destination": "/blog/index.html"
+  "functions": {
+    "server.js": {
+      "includeFiles": "**"
     }
-  ],
-  "headers": [
+  },
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/favicon.ico",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, immutable"
-        }
-      ]
+      "src": "/(.*)",
+      "dest": "/server.js"
     }
   ]
 }

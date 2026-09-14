@@ -20,11 +20,12 @@ const mimeTypes = {
   '.xml': 'application/xml; charset=utf-8',
 };
 
-// Clean route table: maps clean URLs directly to HTML filenames
+// Route Table: Maps all clean URLs to their physical HTML file
 const routeTable = {
   '/': 'index.html',
   '/index': 'index.html',
   '/home': 'index.html',
+  '/about': 'about.html',
   '/menu': 'menu.html',
   '/waffle-house-menu': 'menu.html',
   '/catering': 'catering.html',
@@ -35,7 +36,6 @@ const routeTable = {
   '/blog': 'blog.html',
   '/coupons': 'coupons.html',
   '/contact': 'contact.html',
-  '/about': 'about.html',
   '/prices-by-state': 'prices-by-state.html',
   '/privacy-policy': 'privacy-policy.html',
   '/terms-and-conditions': 'terms-and-conditions.html',
@@ -62,7 +62,7 @@ const routeTable = {
   '/favicon.ico': 'favicon.ico'
 };
 
-// 301 Redirect map for legacy .html requests so the browser displays clean URLs
+// 301 Redirect map for legacy .html paths -> clean URLs (No .html!)
 const legacyHtmlRedirects = {
   '/index.html': '/',
   '/menu.html': '/menu',
@@ -89,41 +89,64 @@ const legacyHtmlRedirects = {
   '/waffle-house-calories-allergies.html': '/waffle-house-calories-allergies/'
 };
 
-function resolveFilePath(target) {
+// IN-MEMORY FILE CACHE FOR LIGHTNING-FAST RESPONSES (<5ms)
+const memCache = {};
+
+function getFileContent(filename) {
+  if (memCache[filename]) return memCache[filename];
+  
   const candidates = [
-    path.join(__dirname, target),
-    path.join(process.cwd(), target),
-    path.join(__dirname, 'assets', path.basename(target)),
-    path.join(process.cwd(), 'assets', path.basename(target))
+    path.join(__dirname, filename),
+    path.join(process.cwd(), filename),
+    path.join(__dirname, 'assets', path.basename(filename)),
+    path.join(process.cwd(), 'assets', path.basename(filename)),
+    path.join(__dirname, path.basename(filename)),
+    path.join(process.cwd(), path.basename(filename))
   ];
+
   for (const c of candidates) {
     if (fs.existsSync(c) && fs.statSync(c).isFile()) {
-      return c;
+      const buf = fs.readFileSync(c);
+      memCache[filename] = buf;
+      return buf;
     }
   }
   return null;
 }
 
+// Pre-warm cache at boot time
+for (const fn of Object.values(routeTable)) {
+  getFileContent(fn);
+}
+
 function handler(req, res) {
-  let [rawPath, rawQuery] = (req.url || '/').split('?');
-  let urlPath = decodeURIComponent(rawPath);
+  const [rawPath, rawQuery] = (req.url || '/').split('?');
+  const urlPath = decodeURIComponent(rawPath);
 
   // 1. Favicon Handler
   if (urlPath === '/favicon.ico' || urlPath.endsWith('/favicon.ico')) {
-    const fPath = resolveFilePath('favicon.ico');
-    if (fPath) {
-      res.writeHead(200, { 'Content-Type': 'image/x-icon', 'Cache-Control': 'public, max-age=86400' });
-      return fs.createReadStream(fPath).pipe(res);
+    const favBuf = getFileContent('favicon.ico');
+    if (favBuf) {
+      res.writeHead(200, {
+        'Content-Type': 'image/x-icon',
+        'Content-Length': favBuf.length,
+        'Cache-Control': 'public, max-age=86400, s-maxage=604800, immutable'
+      });
+      return res.end(favBuf);
     }
   }
 
   // 2. PDF Handler
   if (urlPath.toLowerCase().endsWith('.pdf')) {
     const base = path.basename(urlPath);
-    let pPath = resolveFilePath(base) || resolveFilePath('waffle-house-nutrition-allergen-guide-2026.pdf') || resolveFilePath(path.join('assets', 'waffle-house-nutrition-2026.pdf'));
-    if (pPath) {
-      res.writeHead(200, { 'Content-Type': 'application/pdf', 'Cache-Control': 'public, max-age=86400' });
-      return fs.createReadStream(pPath).pipe(res);
+    const pdfBuf = getFileContent(base) || getFileContent('waffle-house-nutrition-allergen-guide-2026.pdf') || getFileContent('waffle-house-nutrition-2026.pdf');
+    if (pdfBuf) {
+      res.writeHead(200, {
+        'Content-Type': 'application/pdf',
+        'Content-Length': pdfBuf.length,
+        'Cache-Control': 'public, max-age=86400, s-maxage=604800, immutable'
+      });
+      return res.end(pdfBuf);
     }
   }
 
@@ -134,7 +157,7 @@ function handler(req, res) {
     return res.end();
   }
 
-  // Also catch any nested legacy .html
+  // Catch nested .html requests
   if (urlPath.includes('/') && urlPath.lastIndexOf('/') > 0 && urlPath.endsWith('.html')) {
     const baseName = path.basename(urlPath);
     const cleanTarget = legacyHtmlRedirects['/' + baseName] || ('/' + baseName.replace(/\.html$/, ''));
@@ -143,50 +166,42 @@ function handler(req, res) {
   }
 
   // 4. Exact Route Table Match
-  if (routeTable[urlPath]) {
-    const filename = routeTable[urlPath];
-    const resolved = resolveFilePath(filename);
-    if (resolved) {
-      const ext = path.extname(resolved).toLowerCase();
+  const targetFile = routeTable[urlPath] || (urlPath.endsWith('/') && urlPath.length > 1 ? routeTable[urlPath.slice(0, -1)] : null);
+  if (targetFile) {
+    const buf = getFileContent(targetFile);
+    if (buf) {
+      const ext = path.extname(targetFile).toLowerCase();
       res.writeHead(200, {
         'Content-Type': mimeTypes[ext] || 'text/html; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600'
+        'Content-Length': buf.length,
+        'Cache-Control': 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400'
       });
-      return fs.createReadStream(resolved).pipe(res);
+      return res.end(buf);
     }
   }
 
-  // 5. Try without trailing slash if routeTable has it
-  const trimmedPath = urlPath.endsWith('/') && urlPath.length > 1 ? urlPath.slice(0, -1) : urlPath;
-  if (routeTable[trimmedPath]) {
-    const filename = routeTable[trimmedPath];
-    const resolved = resolveFilePath(filename);
-    if (resolved) {
-      const ext = path.extname(resolved).toLowerCase();
-      res.writeHead(200, {
-        'Content-Type': mimeTypes[ext] || 'text/html; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600'
-      });
-      return fs.createReadStream(resolved).pipe(res);
-    }
-  }
+  // 5. Direct Static File Resolution
+  const cleanRel = urlPath.startsWith('/') ? urlPath.slice(1) : urlPath;
+  const staticBuf = getFileContent(cleanRel) || getFileContent(cleanRel + '.html') || getFileContent(path.join(cleanRel, 'index.html'));
 
-  // 6. Direct Static File Resolution
-  const relativeTarget = urlPath.startsWith('/') ? urlPath.slice(1) : urlPath;
-  const staticResolved = resolveFilePath(relativeTarget) || resolveFilePath(relativeTarget + '.html') || resolveFilePath(path.join(relativeTarget, 'index.html'));
-
-  if (staticResolved) {
-    const ext = path.extname(staticResolved).toLowerCase();
+  if (staticBuf) {
+    const ext = path.extname(cleanRel).toLowerCase() || '.html';
     res.writeHead(200, {
       'Content-Type': mimeTypes[ext] || 'application/octet-stream',
-      'Cache-Control': 'public, max-age=86400'
+      'Content-Length': staticBuf.length,
+      'Cache-Control': 'public, max-age=86400, s-maxage=604800'
     });
-    return fs.createReadStream(staticResolved).pipe(res);
+    return res.end(staticBuf);
   }
 
-  // 7. Not Found
-  res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
-  res.end('<!DOCTYPE html><html><head><title>404 Not Found</title></head><body style="font-family:sans-serif;text-align:center;padding:50px;"><h1>404 Not Found</h1><p>The requested page was not found.</p><a href="/" style="display:inline-block;margin-top:20px;padding:10px 20px;background:#FFD700;color:#000;text-decoration:none;font-weight:bold;border-radius:6px;">Return to Home</a></body></html>');
+  // 6. Not Found Fallback
+  const notFoundHtml = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body style="font-family:sans-serif;text-align:center;padding:50px;"><h1>404 Not Found</h1><p>The requested page was not found.</p><a href="/" style="display:inline-block;margin-top:20px;padding:10px 20px;background:#FFD700;color:#000;text-decoration:none;font-weight:bold;border-radius:6px;">Return to Home</a></body></html>';
+  const notFoundBuf = Buffer.from(notFoundHtml, 'utf8');
+  res.writeHead(404, {
+    'Content-Type': 'text/html; charset=utf-8',
+    'Content-Length': notFoundBuf.length
+  });
+  res.end(notFoundBuf);
 }
 
 const server = http.createServer(handler);
@@ -195,6 +210,6 @@ module.exports = handler;
 
 if (require.main === module) {
   server.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/`);
+    console.log(`Lightning fast server running at http://localhost:${PORT}/`);
   });
 }

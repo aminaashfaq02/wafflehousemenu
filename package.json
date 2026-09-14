@@ -2,8 +2,8 @@
   "name": "wafflehousemenu",
   "version": "1.0.0",
   "description": "Waffle House Menu & Catering Guide 2026",
+  "main": "server.js",
   "scripts": {
-    "build": "node -e \"console.log('Edge CDN build ready')\"",
     "start": "node server.js"
   }
 }
