@@ -1,0 +1,9 @@
+{
+  "name": "wafflehousemenu",
+  "version": "1.0.0",
+  "description": "Waffle House Menu & Catering Guide 2026",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

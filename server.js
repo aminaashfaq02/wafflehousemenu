@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
@@ -20,142 +20,181 @@ const mimeTypes = {
   '.xml': 'application/xml; charset=utf-8',
 };
 
-const server = http.createServer((req, res) => {
-  let safeUrl = decodeURIComponent(req.url.split('?')[0]);
-  
-  // 1. Favicon Handler: Never allow 404 on favicon anywhere
-  if (safeUrl.endsWith('/favicon.ico') || safeUrl === '/favicon.ico') {
-    const favPath = path.join(__dirname, 'favicon.ico');
-    if (fs.existsSync(favPath)) {
+// Clean route table: maps clean URLs directly to HTML filenames
+const routeTable = {
+  '/': 'index.html',
+  '/index': 'index.html',
+  '/home': 'index.html',
+  '/menu': 'menu.html',
+  '/waffle-house-menu': 'menu.html',
+  '/catering': 'catering.html',
+  '/nutrition': 'nutrition.html',
+  '/waffle-house-nutrition': 'nutrition.html',
+  '/nutrition-guide-2026': 'nutrition-guide-2026.html',
+  '/locations': 'locations.html',
+  '/blog': 'blog.html',
+  '/coupons': 'coupons.html',
+  '/contact': 'contact.html',
+  '/about': 'about.html',
+  '/prices-by-state': 'prices-by-state.html',
+  '/privacy-policy': 'privacy-policy.html',
+  '/terms-and-conditions': 'terms-and-conditions.html',
+  '/disclaimer': 'disclaimer.html',
+  '/cookies-policy': 'cookies-policy.html',
+  '/waffle-house-catering': 'waffle-house-catering.html',
+  '/waffle-house-catering/': 'waffle-house-catering.html',
+  '/waffle-house-dietary-guide': 'waffle-house-dietary-guide.html',
+  '/waffle-house-dietary-guide/': 'waffle-house-dietary-guide.html',
+  '/waffle-house-wedding-catering': 'waffle-house-wedding-catering.html',
+  '/waffle-house-wedding-catering/': 'waffle-house-wedding-catering.html',
+  '/waffle-house-birthday-party': 'waffle-house-birthday-party.html',
+  '/waffle-house-birthday-party/': 'waffle-house-birthday-party.html',
+  '/waffle-house-corporate-catering': 'waffle-house-corporate-catering.html',
+  '/waffle-house-corporate-catering/': 'waffle-house-corporate-catering.html',
+  '/waffle-house-school-event-catering': 'waffle-house-school-event-catering.html',
+  '/waffle-house-school-event-catering/': 'waffle-house-school-event-catering.html',
+  '/waffle-house-food-truck': 'waffle-house-food-truck.html',
+  '/waffle-house-food-truck/': 'waffle-house-food-truck.html',
+  '/waffle-house-calories-allergies': 'waffle-house-calories-allergies.html',
+  '/waffle-house-calories-allergies/': 'waffle-house-calories-allergies.html',
+  '/robots.txt': 'robots.txt',
+  '/sitemap.xml': 'sitemap.xml',
+  '/favicon.ico': 'favicon.ico'
+};
+
+// 301 Redirect map for legacy .html requests so the browser displays clean URLs
+const legacyHtmlRedirects = {
+  '/index.html': '/',
+  '/menu.html': '/menu',
+  '/catering.html': '/catering',
+  '/nutrition.html': '/nutrition',
+  '/about.html': '/about',
+  '/contact.html': '/contact',
+  '/locations.html': '/locations',
+  '/blog.html': '/blog',
+  '/coupons.html': '/coupons',
+  '/prices-by-state.html': '/prices-by-state',
+  '/privacy-policy.html': '/privacy-policy',
+  '/terms-and-conditions.html': '/terms-and-conditions',
+  '/disclaimer.html': '/disclaimer',
+  '/cookies-policy.html': '/cookies-policy',
+  '/nutrition-guide-2026.html': '/nutrition-guide-2026',
+  '/waffle-house-catering.html': '/waffle-house-catering/',
+  '/waffle-house-dietary-guide.html': '/waffle-house-dietary-guide/',
+  '/waffle-house-wedding-catering.html': '/waffle-house-wedding-catering/',
+  '/waffle-house-birthday-party.html': '/waffle-house-birthday-party/',
+  '/waffle-house-corporate-catering.html': '/waffle-house-corporate-catering/',
+  '/waffle-house-school-event-catering.html': '/waffle-house-school-event-catering/',
+  '/waffle-house-food-truck.html': '/waffle-house-food-truck/',
+  '/waffle-house-calories-allergies.html': '/waffle-house-calories-allergies/'
+};
+
+function resolveFilePath(target) {
+  const candidates = [
+    path.join(__dirname, target),
+    path.join(process.cwd(), target),
+    path.join(__dirname, 'assets', path.basename(target)),
+    path.join(process.cwd(), 'assets', path.basename(target))
+  ];
+  for (const c of candidates) {
+    if (fs.existsSync(c) && fs.statSync(c).isFile()) {
+      return c;
+    }
+  }
+  return null;
+}
+
+function handler(req, res) {
+  let [rawPath, rawQuery] = (req.url || '/').split('?');
+  let urlPath = decodeURIComponent(rawPath);
+
+  // 1. Favicon Handler
+  if (urlPath === '/favicon.ico' || urlPath.endsWith('/favicon.ico')) {
+    const fPath = resolveFilePath('favicon.ico');
+    if (fPath) {
       res.writeHead(200, { 'Content-Type': 'image/x-icon', 'Cache-Control': 'public, max-age=86400' });
-      fs.createReadStream(favPath).pipe(res);
-      return;
+      return fs.createReadStream(fPath).pipe(res);
     }
   }
 
-  // 2. PDF Handler: Never allow 404 on nutrition PDF anywhere
-  if (safeUrl.toLowerCase().endsWith('.pdf')) {
-    const pdfPath = path.join(__dirname, 'assets', 'waffle-house-nutrition-2026.pdf');
-    if (fs.existsSync(pdfPath)) {
+  // 2. PDF Handler
+  if (urlPath.toLowerCase().endsWith('.pdf')) {
+    const base = path.basename(urlPath);
+    let pPath = resolveFilePath(base) || resolveFilePath('waffle-house-nutrition-allergen-guide-2026.pdf') || resolveFilePath(path.join('assets', 'waffle-house-nutrition-2026.pdf'));
+    if (pPath) {
       res.writeHead(200, { 'Content-Type': 'application/pdf', 'Cache-Control': 'public, max-age=86400' });
-      fs.createReadStream(pdfPath).pipe(res);
-      return;
+      return fs.createReadStream(pPath).pipe(res);
     }
   }
 
-  // 3. Normalize trailing slash if not root
-  if (safeUrl.length > 1 && safeUrl.endsWith('/')) {
-    safeUrl = safeUrl.slice(0, -1);
+  // 3. 301 Permanent Redirect for legacy .html paths -> clean URLs (No .html!)
+  if (legacyHtmlRedirects[urlPath]) {
+    const targetUrl = legacyHtmlRedirects[urlPath] + (rawQuery ? '?' + rawQuery : '');
+    res.writeHead(301, { 'Location': targetUrl });
+    return res.end();
   }
 
-  // 4. Nested URL Redirects (Prevent URL bloat and nested 404s)
-  if (safeUrl !== '/index.html' && (safeUrl.endsWith('/index.html') || safeUrl.endsWith('/index'))) {
-    res.writeHead(302, { 'Location': '/' });
-    res.end();
-    return;
+  // Also catch any nested legacy .html
+  if (urlPath.includes('/') && urlPath.lastIndexOf('/') > 0 && urlPath.endsWith('.html')) {
+    const baseName = path.basename(urlPath);
+    const cleanTarget = legacyHtmlRedirects['/' + baseName] || ('/' + baseName.replace(/\.html$/, ''));
+    res.writeHead(301, { 'Location': cleanTarget + (rawQuery ? '?' + rawQuery : '') });
+    return res.end();
   }
 
-  if (safeUrl.includes('/') && safeUrl.lastIndexOf('/') > 0) {
-    const base = path.basename(safeUrl);
-    const rootTarget = path.join(__dirname, base);
-    if (fs.existsSync(rootTarget) && fs.statSync(rootTarget).isFile() && base.endsWith('.html')) {
-      res.writeHead(302, { 'Location': '/' + base });
-      res.end();
-      return;
+  // 4. Exact Route Table Match
+  if (routeTable[urlPath]) {
+    const filename = routeTable[urlPath];
+    const resolved = resolveFilePath(filename);
+    if (resolved) {
+      const ext = path.extname(resolved).toLowerCase();
+      res.writeHead(200, {
+        'Content-Type': mimeTypes[ext] || 'text/html; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600'
+      });
+      return fs.createReadStream(resolved).pipe(res);
     }
   }
 
-  // 5. Clean Route Aliases
-  if (safeUrl === '/' || safeUrl === '' || safeUrl === '/index' || safeUrl === '/index.html' || safeUrl === '/home') {
-    safeUrl = '/index.html';
-  } else if (safeUrl === '/robots.txt') {
-    safeUrl = '/robots.txt';
-  } else if (safeUrl === '/sitemap.xml' || safeUrl === '/sitemap') {
-    safeUrl = '/sitemap.xml';
-  } else if (safeUrl === '/prices-by-state' || safeUrl === '/menu/prices-by-state' || safeUrl.endsWith('/prices-by-state.html')) {
-    safeUrl = '/prices-by-state.html';
-  } else if (safeUrl === '/privacy-policy' || safeUrl === '/privacy' || safeUrl.endsWith('/privacy-policy.html')) {
-    safeUrl = '/privacy-policy.html';
-  } else if (safeUrl === '/terms-and-conditions' || safeUrl === '/terms-conditions' || safeUrl === '/terms' || safeUrl.endsWith('/terms-and-conditions.html')) {
-    safeUrl = '/terms-and-conditions.html';
-  } else if (safeUrl === '/cookies-policy' || safeUrl === '/cookies' || safeUrl.endsWith('/cookies-policy.html')) {
-    safeUrl = '/cookies-policy.html';
-  } else if (safeUrl === '/disclaimer' || safeUrl.endsWith('/disclaimer.html')) {
-    safeUrl = '/disclaimer.html';
-  } else if (safeUrl === '/catering' || safeUrl === '/waffle-house-catering' || safeUrl === '/catering/guide' || safeUrl.endsWith('/catering.html') || safeUrl.endsWith('/waffle-house-catering.html')) {
-    safeUrl = '/catering.html';
-  } else if (safeUrl === '/waffle-house-birthday-party' || safeUrl === '/birthday-party-catering' || safeUrl === '/birthday' || safeUrl.endsWith('/waffle-house-birthday-party.html')) {
-    safeUrl = '/waffle-house-birthday-party.html';
-  } else if (safeUrl === '/waffle-house-wedding-catering' || safeUrl === '/wedding-catering' || safeUrl === '/wedding' || safeUrl.endsWith('/waffle-house-wedding-catering.html')) {
-    safeUrl = '/waffle-house-wedding-catering.html';
-  } else if (safeUrl === '/waffle-house-corporate-catering' || safeUrl === '/corporate-catering' || safeUrl === '/corporate' || safeUrl.endsWith('/waffle-house-corporate-catering.html')) {
-    safeUrl = '/waffle-house-corporate-catering.html';
-  } else if (safeUrl === '/waffle-house-school-event-catering' || safeUrl === '/school-event-catering' || safeUrl === '/school-catering' || safeUrl === '/school' || safeUrl.endsWith('/waffle-house-school-event-catering.html')) {
-    safeUrl = '/waffle-house-school-event-catering.html';
-  } else if (safeUrl === '/waffle-house-food-truck' || safeUrl === '/food-truck' || safeUrl === '/food-truck-catering' || safeUrl.endsWith('/waffle-house-food-truck.html')) {
-    safeUrl = '/waffle-house-food-truck.html';
-  } else if (safeUrl === '/waffle-house-calories-allergies' || safeUrl === '/calories-allergies' || safeUrl === '/allergies' || safeUrl.endsWith('/waffle-house-calories-allergies.html')) {
-    safeUrl = '/waffle-house-calories-allergies.html';
-  } else if (safeUrl === '/waffle-house-dietary-guide' || safeUrl === '/dietary-guide' || safeUrl === '/dietary' || safeUrl.endsWith('/waffle-house-dietary-guide.html')) {
-    safeUrl = '/waffle-house-dietary-guide.html';
-  } else if (safeUrl === '/nutrition' || safeUrl === '/waffle-house-nutrition' || safeUrl.endsWith('/nutrition.html')) {
-    safeUrl = '/nutrition.html';
-  } else if (safeUrl === '/menu' || safeUrl === '/waffle-house-menu' || safeUrl.endsWith('/menu.html')) {
-    safeUrl = '/menu.html';
-  } else if (safeUrl === '/blog' || safeUrl === '/waffle-house-blog' || safeUrl.endsWith('/blog.html')) {
-    safeUrl = '/blog.html';
-  } else if (safeUrl === '/locations' || safeUrl === '/hours' || safeUrl === '/store-hours' || safeUrl.endsWith('/locations.html')) {
-    safeUrl = '/locations.html';
-  } else if (safeUrl === '/coupons' || safeUrl === '/deals' || safeUrl === '/waffle-house-deals' || safeUrl === '/regulars-club' || safeUrl.endsWith('/coupons.html')) {
-    safeUrl = '/coupons.html';
-  } else if (safeUrl === '/about' || safeUrl.endsWith('/about.html')) {
-    safeUrl = '/about.html';
-  } else if (safeUrl === '/contact' || safeUrl.endsWith('/contact.html')) {
-    safeUrl = '/contact.html';
-  }
-
-  let filePath = path.join(__dirname, safeUrl);
-
-  // 6. Direct file resolution with fallbacks
-  if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
-    const dirIndex = path.join(filePath, 'index.html');
-    const htmlPath = filePath + '.html';
-    if (fs.existsSync(dirIndex) && fs.statSync(dirIndex).isFile()) {
-      filePath = dirIndex;
-    } else if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
-      filePath = htmlPath;
-    } else {
-      const baseName = path.basename(safeUrl);
-      const rootFile = path.join(__dirname, baseName);
-      const rootHtml = path.join(__dirname, baseName + '.html');
-      const assetFile = path.join(__dirname, 'assets', baseName);
-
-      if (fs.existsSync(rootFile) && fs.statSync(rootFile).isFile()) {
-        filePath = rootFile;
-      } else if (fs.existsSync(rootHtml) && fs.statSync(rootHtml).isFile()) {
-        filePath = rootHtml;
-      } else if (fs.existsSync(assetFile) && fs.statSync(assetFile).isFile()) {
-        filePath = assetFile;
-      } else {
-        res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
-        res.end('<h1>404 Not Found</h1><p>The requested URL was not found on this server.</p>');
-        return;
-      }
+  // 5. Try without trailing slash if routeTable has it
+  const trimmedPath = urlPath.endsWith('/') && urlPath.length > 1 ? urlPath.slice(0, -1) : urlPath;
+  if (routeTable[trimmedPath]) {
+    const filename = routeTable[trimmedPath];
+    const resolved = resolveFilePath(filename);
+    if (resolved) {
+      const ext = path.extname(resolved).toLowerCase();
+      res.writeHead(200, {
+        'Content-Type': mimeTypes[ext] || 'text/html; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600'
+      });
+      return fs.createReadStream(resolved).pipe(res);
     }
   }
 
-  const ext = path.extname(filePath).toLowerCase();
-  const contentType = mimeTypes[ext] || 'application/octet-stream';
+  // 6. Direct Static File Resolution
+  const relativeTarget = urlPath.startsWith('/') ? urlPath.slice(1) : urlPath;
+  const staticResolved = resolveFilePath(relativeTarget) || resolveFilePath(relativeTarget + '.html') || resolveFilePath(path.join(relativeTarget, 'index.html'));
 
-  res.writeHead(200, { 
-    'Content-Type': contentType,
-    'Cache-Control': 'no-cache, no-store, must-revalidate',
-    'Pragma': 'no-cache',
-    'Expires': '0'
+  if (staticResolved) {
+    const ext = path.extname(staticResolved).toLowerCase();
+    res.writeHead(200, {
+      'Content-Type': mimeTypes[ext] || 'application/octet-stream',
+      'Cache-Control': 'public, max-age=86400'
+    });
+    return fs.createReadStream(staticResolved).pipe(res);
+  }
+
+  // 7. Not Found
+  res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+  res.end('<!DOCTYPE html><html><head><title>404 Not Found</title></head><body style="font-family:sans-serif;text-align:center;padding:50px;"><h1>404 Not Found</h1><p>The requested page was not found.</p><a href="/" style="display:inline-block;margin-top:20px;padding:10px 20px;background:#FFD700;color:#000;text-decoration:none;font-weight:bold;border-radius:6px;">Return to Home</a></body></html>');
+}
+
+const server = http.createServer(handler);
+
+module.exports = handler;
+
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}/`);
   });
-  fs.createReadStream(filePath).pipe(res);
-});
-
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
+}

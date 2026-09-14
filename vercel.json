@@ -1,94 +1,15 @@
 {
+  "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
+  "functions": {
+    "server.js": {
+      "includeFiles": "**"
+    }
+  },
+  "routes": [
     {
-      "source": "/waffle-house-catering/",
-      "destination": "/waffle-house-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-catering",
-      "destination": "/waffle-house-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-dietary-guide/",
-      "destination": "/waffle-house-dietary-guide/index.html"
-    },
-    {
-      "source": "/waffle-house-dietary-guide",
-      "destination": "/waffle-house-dietary-guide/index.html"
-    },
-    {
-      "source": "/waffle-house-wedding-catering/",
-      "destination": "/waffle-house-wedding-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-wedding-catering",
-      "destination": "/waffle-house-wedding-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-birthday-party/",
-      "destination": "/waffle-house-birthday-party/index.html"
-    },
-    {
-      "source": "/waffle-house-birthday-party",
-      "destination": "/waffle-house-birthday-party/index.html"
-    },
-    {
-      "source": "/waffle-house-corporate-catering/",
-      "destination": "/waffle-house-corporate-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-corporate-catering",
-      "destination": "/waffle-house-corporate-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-school-event-catering/",
-      "destination": "/waffle-house-school-event-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-school-event-catering",
-      "destination": "/waffle-house-school-event-catering/index.html"
-    },
-    {
-      "source": "/waffle-house-food-truck/",
-      "destination": "/waffle-house-food-truck/index.html"
-    },
-    {
-      "source": "/waffle-house-food-truck",
-      "destination": "/waffle-house-food-truck/index.html"
-    },
-    {
-      "source": "/waffle-house-calories-allergies/",
-      "destination": "/waffle-house-calories-allergies/index.html"
-    },
-    {
-      "source": "/waffle-house-calories-allergies",
-      "destination": "/waffle-house-calories-allergies/index.html"
-    },
-    {
-      "source": "/waffle-house-menu/",
-      "destination": "/menu.html"
-    },
-    {
-      "source": "/waffle-house-menu",
-      "destination": "/menu.html"
-    },
-    {
-      "source": "/waffle-house-nutrition/",
-      "destination": "/nutrition.html"
-    },
-    {
-      "source": "/waffle-house-nutrition",
-      "destination": "/nutrition.html"
-    },
-    {
-      "source": "/blog/",
-      "destination": "/blog/index.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog/index.html"
+      "src": "/(.*)",
+      "dest": "/server.js"
     }
   ]
 }
