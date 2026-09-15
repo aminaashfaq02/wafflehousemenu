@@ -1,6 +1,68 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/waffle-house-birthday-party",
+      "destination": "/waffle-house-catering/#birthday-catering",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-birthday-party/",
+      "destination": "/waffle-house-catering/#birthday-catering",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-wedding-catering",
+      "destination": "/waffle-house-catering/#wedding-catering",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-wedding-catering/",
+      "destination": "/waffle-house-catering/#wedding-catering",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-corporate-catering",
+      "destination": "/waffle-house-corporate-catering/#corporate-catering",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-corporate-catering/",
+      "destination": "/waffle-house-catering/#corporate-catering",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-school-event-catering",
+      "destination": "/waffle-house-catering/#school-events",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-school-event-catering/",
+      "destination": "/waffle-house-catering/#school-events",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-food-truck",
+      "destination": "/waffle-house-catering/#food-truck",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-food-truck/",
+      "destination": "/waffle-house-catering/#food-truck",
+      "permanent": true
+    },
+    {
+      "source": "/catering",
+      "destination": "/waffle-house-catering/",
+      "permanent": true
+    },
+    {
+      "source": "/catering.html",
+      "destination": "/waffle-house-catering/",
+      "permanent": true
+    }
+  ],
   "functions": {
     "server.js": {
       "includeFiles": "**"
