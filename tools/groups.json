@@ -1,0 +1,31 @@
+{
+  "base": [
+    "about.html",
+    "contact.html",
+    "cookies-policy.html",
+    "coupons.html",
+    "disclaimer.html",
+    "locations.html",
+    "prices-by-state.html",
+    "privacy-policy.html",
+    "terms-and-conditions.html"
+  ],
+  "guide": [
+    "blog/index.html",
+    "waffle-house-calories-allergies/index.html",
+    "waffle-house-dietary-guide/index.html"
+  ],
+  "home": [
+    "index.html",
+    "nutrition.html"
+  ],
+  "menu": [
+    "menu.html"
+  ],
+  "nutrition-guide": [
+    "nutrition-guide-2026.html"
+  ],
+  "catering": [
+    "waffle-house-catering/index.html"
+  ]
+}

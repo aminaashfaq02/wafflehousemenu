@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "cleanUrls": true,
   "redirects": [
     {
@@ -9,6 +8,11 @@
     },
     {
       "source": "/waffle-house-birthday-party/",
+      "destination": "/waffle-house-catering/#birthday-catering",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-birthday-party.html",
       "destination": "/waffle-house-catering/#birthday-catering",
       "permanent": true
     },
@@ -23,12 +27,22 @@
       "permanent": true
     },
     {
+      "source": "/waffle-house-wedding-catering.html",
+      "destination": "/waffle-house-catering/#wedding-catering",
+      "permanent": true
+    },
+    {
       "source": "/waffle-house-corporate-catering",
-      "destination": "/waffle-house-corporate-catering/#corporate-catering",
+      "destination": "/waffle-house-catering/#corporate-catering",
       "permanent": true
     },
     {
       "source": "/waffle-house-corporate-catering/",
+      "destination": "/waffle-house-catering/#corporate-catering",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-corporate-catering.html",
       "destination": "/waffle-house-catering/#corporate-catering",
       "permanent": true
     },
@@ -43,6 +57,11 @@
       "permanent": true
     },
     {
+      "source": "/waffle-house-school-event-catering.html",
+      "destination": "/waffle-house-catering/#school-events",
+      "permanent": true
+    },
+    {
       "source": "/waffle-house-food-truck",
       "destination": "/waffle-house-catering/#food-truck",
       "permanent": true
@@ -53,7 +72,17 @@
       "permanent": true
     },
     {
+      "source": "/waffle-house-food-truck.html",
+      "destination": "/waffle-house-catering/#food-truck",
+      "permanent": true
+    },
+    {
       "source": "/catering",
+      "destination": "/waffle-house-catering/",
+      "permanent": true
+    },
+    {
+      "source": "/catering/",
       "destination": "/waffle-house-catering/",
       "permanent": true
     },
@@ -61,17 +90,101 @@
       "source": "/catering.html",
       "destination": "/waffle-house-catering/",
       "permanent": true
+    },
+    {
+      "source": "/waffle-house-catering.html",
+      "destination": "/waffle-house-catering/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-dietary-guide.html",
+      "destination": "/waffle-house-dietary-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-calories-allergies.html",
+      "destination": "/waffle-house-calories-allergies/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-menu",
+      "destination": "/menu",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-menu/",
+      "destination": "/menu",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-nutrition",
+      "destination": "/nutrition",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-nutrition/",
+      "destination": "/nutrition",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-nutrition-allergen-guide-2026.pdf",
+      "destination": "/assets/waffle-house-nutrition-2026.pdf",
+      "permanent": true
     }
   ],
-  "functions": {
-    "server.js": {
-      "includeFiles": "**"
-    }
-  },
-  "routes": [
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/server.js"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; frame-src 'self'; object-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
     }
   ]
 }

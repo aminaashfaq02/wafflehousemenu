@@ -8,41 +8,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Waffle House Prices by State (2026) — Compare Every Menu Item Across 25 States</title>
-  <meta name="description" content="Compare 2026 Waffle House menu prices state by state across 25 U.S. states. Discover which state has the cheapest All-Star Special, waffles, and hashbrown bowls, and see how your local diner compares to the national average.">
-  <link rel="canonical" href="http://localhost:3000/prices-by-state.html">
+  <title>Waffle House Prices by State (2026) | Compare 25 States</title>
+  <meta name="description" content="Compare 2026 Waffle House menu prices across 25 US states. See the cheapest All-Star Special, waffles and hashbrown bowls, and how your local diner compares.">
+  <link rel="canonical" href="https://www.wafflehouse-menu.com/prices-by-state">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Waffle House Prices by State (2026) | Compare 25 States">
+  <meta property="og:description" content="Compare 2026 Waffle House menu prices across 25 US states. See the cheapest All-Star Special, waffles and hashbrown bowls, and how your local diner compares.">
+  <meta property="og:url" content="https://www.wafflehouse-menu.com/prices-by-state">
+  <meta property="og:site_name" content="Waffle House Menu Guide">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&h=630&q=80">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Waffle House style waffles and breakfast plate">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Waffle House Prices by State (2026) | Compare 25 States">
+  <meta name="twitter:description" content="Compare 2026 Waffle House menu prices across 25 US states. See the cheapest All-Star Special, waffles and hashbrown bowls, and how your local diner compares.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&h=630&q=80">
   
   <!-- Google Fonts: Poppins (headings) & Work Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              yellow: '#FFC72C',
-              dark: '#0B0B0E',
-              gray: '#F9FAFB',
-              accent: '#E5B020',
-            }
-          },
-          fontFamily: {
-            sans: ['"Work Sans"', 'sans-serif'],
-            heading: ['"Poppins"', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Compiled Tailwind CSS (rebuild with: npm run build:css) -->
+  <link rel="stylesheet" href="/assets/css/base.css">
   <style>
     html {
       scroll-behavior: smooth;
@@ -68,6 +66,7 @@
 
 </head>
 <body class="bg-white text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#FFC72C] focus:text-[#0B0B0E] focus:font-bold focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">Skip to main content</a>
 
   <!-- ================= HEADER: EXACT HOMEPAGE TWO-TIER NAVBAR ================= -->
   <header class="w-full flex flex-col sticky top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-200">
@@ -75,19 +74,15 @@
     <!-- Upper Tier: Clean Centered Branding -->
     <div class="py-4 md:py-5 text-center px-4 bg-white">
       <a title="WaffleHouse Menu Home" class="inline-block group focus:outline-none" href="/">
-        <div class="flex items-center justify-center gap-2.5 mb-1">
-          <div class="w-8 h-8 rounded-lg bg-[#0B0B0E] text-[#FFC72C] flex items-center justify-center p-1.5 shadow-xs">
-            <!-- Custom Geometric Waffle Icon (pure diner restaurant SVG) -->
-            <svg class="w-full h-full text-[#FFC72C]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm3 1v3h3V6H6zm5 0v3h3V6h-3zm5 0v3h3V6h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3z"/>
-            </svg>
-          </div>
-          <span class="block text-[26px] sm:text-3xl md:text-[34px] whitespace-nowrap font-black text-[#0B0B0E] tracking-tight group-hover:opacity-90 transition-opacity font-heading">
-            WaffleHouse <span class="text-[#FFC72C]">Menu</span>
+        <div class="flex items-center justify-center gap-3 mb-1.5">
+          <img src="/assets/logo-icon.svg" width="44" height="44" alt="" decoding="async" class="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl shadow-sm group-hover:scale-105 group-hover:-rotate-3 transition-transform duration-200">
+          <span class="flex items-center gap-2 text-[26px] sm:text-3xl md:text-[34px] whitespace-nowrap font-black text-[#0B0B0E] tracking-tight font-heading leading-none">
+            WaffleHouse
+            <span class="bg-[#FFC72C] text-[#0B0B0E] rounded-lg px-2.5 py-1.5 text-[0.62em] uppercase tracking-wider leading-none shadow-sm">Menu</span>
           </span>
         </div>
       </a>
-      <p class="text-gray-500 font-medium text-xs sm:text-[14px]">
+      <p class="text-gray-500 font-medium text-xs sm:text-[13px] tracking-wide">
         Full Information About Waffle House Menu 2026
       </p>
     </div>
@@ -143,7 +138,7 @@
           <a title="Deals &amp; Coupons" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/coupons">
             Deals &amp; Coupons
           </a>
-          <a title="Blog" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/blog">
+          <a title="Blog" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/blog/">
             Blog
           </a>
           <a title="Store Hours &amp; Locations" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/locations">
@@ -183,9 +178,9 @@
 
   </header>
 
-  <main class="flex-1 font-sans">
+  <main id="main-content" tabindex="-1" class="flex-1 font-sans">
 
-    <!-- ================= BREADCRUMB (SALADWORKS STYLE) ================= -->
+    <!-- ================= BREADCRUMB () ================= -->
     <nav class="bg-[#F9FAFB] border-b border-gray-200 py-3 text-xs font-medium text-gray-600" aria-label="Breadcrumb">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol class="flex items-center space-x-2">
@@ -208,7 +203,7 @@
       </div>
     </nav>
 
-    <!-- ================= HERO SECTION (SALADWORKS STYLE) ================= -->
+    <!-- ================= HERO SECTION () ================= -->
     <section class="w-full pt-12 pb-14 md:pt-16 md:pb-16 bg-[#FBFBFC] flex flex-col items-center justify-center text-center px-4 border-b border-gray-200">
       <div class="max-w-4xl mx-auto">
         
@@ -223,7 +218,7 @@
           Waffle House Prices by State
         </h1>
 
-        <!-- Subtitle (Exact SaladWorks Pattern adapted for Waffle House) -->
+        <!-- Subtitle  -->
         <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
           Pick a menu item below to see its average price in every state &mdash; which state is cheapest, which is most expensive, and how each compares to the national average across all 25 Waffle House states.
         </p>
@@ -279,7 +274,7 @@
       </div>
     </section>
 
-    <!-- ================= MAIN SALADWORKS-STYLE MENU ITEMS DIRECTORY ================= -->
+    <!-- ================= MAIN MENU ITEMS DIRECTORY ================= -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       
       <!-- Search notice (hidden by default) -->
@@ -300,7 +295,7 @@
       </div>
       <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Farm-fresh eggs cooked to order, savory breakfast meats, buttered toast, and creamy grits.</p>
       
-      <!-- SaladWorks-Style Item Chips Grid -->
+      <!-- Item Chips Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
   
         <button 
@@ -557,7 +552,7 @@
       </div>
       <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Double crispy scattered hashbrowns layered with melted American cheese and hearty diner toppings.</p>
       
-      <!-- SaladWorks-Style Item Chips Grid -->
+      <!-- Item Chips Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
   
         <button 
@@ -784,7 +779,7 @@
       </div>
       <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">The golden American diner icons baked fresh to order since 1955 in authentic commercial waffle irons.</p>
       
-      <!-- SaladWorks-Style Item Chips Grid -->
+      <!-- Item Chips Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
   
         <button 
@@ -981,7 +976,7 @@
       </div>
       <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Thick, buttery Texas toast grilled on the flat top with caramelized sweet onions and melted cheese.</p>
       
-      <!-- SaladWorks-Style Item Chips Grid -->
+      <!-- Item Chips Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
   
         <button 
@@ -1238,7 +1233,7 @@
       </div>
       <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">100% Angus beef patties smashed fresh on the flat-top grill and hearty dinner steaks.</p>
       
-      <!-- SaladWorks-Style Item Chips Grid -->
+      <!-- Item Chips Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
   
         <button 
@@ -1405,7 +1400,7 @@
       </div>
       <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Idaho shredded potatoes cooked in sweet cream oil, southern biscuits, and Bert's Best Chili.</p>
       
-      <!-- SaladWorks-Style Item Chips Grid -->
+      <!-- Item Chips Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
   
         <button 
@@ -1692,7 +1687,7 @@
       </div>
       <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Classic Southern bakery pies baked fresh and served chilled or warmed on the flat top.</p>
       
-      <!-- SaladWorks-Style Item Chips Grid -->
+      <!-- Item Chips Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
   
         <button 
@@ -1829,7 +1824,7 @@
       </div>
       <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">Custom dark roast coffee brewed fresh around the clock, authentic Southern sweet tea, and diner shakes.</p>
       
-      <!-- SaladWorks-Style Item Chips Grid -->
+      <!-- Item Chips Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
   
         <button 
@@ -2351,12 +2346,7 @@
       <!-- Top Section: Brand Identity & Intro Tagline -->
       <div class="mb-8 pb-6 border-b border-gray-800/80">
         <div class="flex items-center gap-2.5 mb-2">
-          <div class="w-6 h-6 rounded-md bg-[#FFC72C] text-[#0B0B0E] flex items-center justify-center p-1 shadow-xs">
-            <!-- Geometric Waffle Icon -->
-            <svg class="w-full h-full text-[#0B0B0E]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm3 1v3h3V6H6zm5 0v3h3V6h-3zm5 0v3h3V6h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3zm-10 5v3h3v-3H6zm5 0v3h3v-3h-3zm5 0v3h3v-3h-3z"/>
-            </svg>
-          </div>
+          <img src="/assets/logo-icon.svg" width="32" height="32" alt="" decoding="async" loading="lazy" class="w-8 h-8 shrink-0 rounded-lg">
           <span class="font-heading font-black text-lg text-white tracking-tight">
             WaffleHouse <span class="text-[#FFC72C]">Menu Guide</span>
           </span>
@@ -2396,12 +2386,17 @@
               </a>
             </li>
             <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/nutrition-guide-2026">
+                Nutrition guide 2026 (PDF)
+              </a>
+            </li>
+            <li>
               <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/menu#panel-waffles">
                 Breakfast &amp; Waffles
               </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/catering">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/">
                 Catering
               </a>
             </li>
@@ -2430,27 +2425,27 @@
               </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-food-truck/">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#food-truck">
                 Food truck catering
               </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-wedding-catering/">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#wedding-catering">
                 Wedding catering
               </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-corporate-catering/">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#corporate-catering">
                 Corporate catering
               </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-school-event-catering/">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#school-events">
                 School &amp; other events
               </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-birthday-party/">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#birthday-catering">
                 Birthday parties
               </a>
             </li>
@@ -2460,7 +2455,7 @@
               </a>
             </li>
             <li>
-              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/blog">
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/blog/">
                 Blog &amp; diner guides
               </a>
             </li>
