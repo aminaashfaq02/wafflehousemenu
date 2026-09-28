@@ -410,78 +410,100 @@
     </div>
   </section>
 
-  <!-- ================= 4. BLOG CONTENT AREA (EMPTY STATE) ================= -->
-  <main id="main-content" tabindex="-1" class="py-14 sm:py-20 bg-[#FAF7F0] border-b border-amber-200/60 font-sans">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ================= 4. BLOG CONTENT AREA (SALADWORKS STYLE GRID) ================= -->
+  <main id="main-content" tabindex="-1" class="py-12 sm:py-16 bg-[#FAF7F0] border-b border-amber-200/60 font-sans">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Filter Status Indicator -->
-      <div class="flex items-center justify-between gap-4 mb-6">
-        <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-500 font-medium">
+      <div class="flex items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-600 font-medium">
           <span>Viewing Category:</span>
-          <span id="active-category-display" class="font-heading font-black text-[#0B0B0E] bg-white border border-gray-200 px-3 py-1 rounded-lg">
+          <span id="active-category-display" class="font-heading font-black text-[#0B0B0E] bg-white border border-gray-200 px-3 py-1 rounded-lg shadow-2xs">
             All Guides
           </span>
         </div>
-        <span class="text-xs text-gray-400 font-semibold">0 Articles Published</span>
+        <span id="article-count-display" class="text-xs text-gray-500 font-bold bg-white border border-gray-200 px-2.5 py-1 rounded-lg">1 Article Published</span>
       </div>
 
-      <!-- Clean Elegant Empty State Container -->
-      <div class="bg-white border border-gray-200 rounded-3xl p-8 sm:p-14 text-center shadow-xs">
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="articles-grid">
         
-        <!-- Minimalist Diner Bookmark Icon -->
-        <div class="w-16 h-16 rounded-2xl bg-[#0B0B0E] text-[#FFC72C] flex items-center justify-center mx-auto mb-6 shadow-sm">
-          <svg class="w-8 h-8 text-[#FFC72C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            <line x1="8" y1="6" x2="16" y2="6"></line>
-            <line x1="8" y1="10" x2="14" y2="10"></line>
-          </svg>
-        </div>
-
-        <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wider mb-3">
-          Coming Soon
-        </span>
-
-        <h2 class="font-heading font-black text-2xl sm:text-3xl text-[#0B0B0E] tracking-tight mb-3">
-          Guides &amp; Articles Coming Soon
-        </h2>
-
-        <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto mb-8 font-normal">
-          Our editorial team is currently putting together in-depth price comparisons, diner order guides, secret hashbrown combinations, and catering breakdowns for 2026. Check back soon for new articles!
-        </p>
-
-        <!-- Helpful Quick Navigation Grid -->
-        <div class="pt-6 border-t border-gray-100">
-          <span class="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-4">
-            Meanwhile, Explore Verified Diner Resources:
-          </span>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <a 
-              href="/menu" 
-              class="p-4 rounded-2xl bg-gray-50 hover:bg-amber-50/50 border border-gray-200 hover:border-[#FFC72C] text-left transition-all group"
-            >
-              <span class="block font-heading font-bold text-sm text-[#0B0B0E] group-hover:text-black mb-1">Menu &amp; Prices</span>
-              <span class="block text-xs text-gray-500">Updated 2026 full breakfast, waffles &amp; melts</span>
+        <!-- Article Card 1: Waffle House Menu 2026 (Pillar) -->
+        <article class="article-card group bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col" data-category="Menu &amp; Prices">
+          
+          <!-- Image Container with Zoom Effect -->
+          <div class="relative overflow-hidden aspect-video bg-gray-100 border-b border-gray-100">
+            <a href="/blog/waffle-house-menu-prices-2026/" class="block overflow-hidden w-full h-full">
+              <img 
+                src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=600&q=80" 
+                alt="Waffle House breakfast plate with waffles, eggs, bacon and hashbrowns"
+                width="600"
+                height="338"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
             </a>
-
-            <a 
-              href="/waffle-house-catering/" 
-              class="p-4 rounded-2xl bg-gray-50 hover:bg-amber-50/50 border border-gray-200 hover:border-[#FFC72C] text-left transition-all group"
-            >
-              <span class="block font-heading font-bold text-sm text-[#0B0B0E] group-hover:text-black mb-1">Catering Guide</span>
-              <span class="block text-xs text-gray-500">Food truck, stations, trays &amp; event booking</span>
-            </a>
-
-            <a 
-              href="/waffle-house-calories-allergies/" 
-              class="p-4 rounded-2xl bg-gray-50 hover:bg-amber-50/50 border border-gray-200 hover:border-[#FFC72C] text-left transition-all group"
-            >
-              <span class="block font-heading font-bold text-sm text-[#0B0B0E] group-hover:text-black mb-1">Calories &amp; Allergies</span>
-              <span class="block text-xs text-gray-500">Macro breakdowns &amp; shared-grill guide</span>
-            </a>
+            <!-- Floating Category Pill (SaladWorks style) -->
+            <div class="absolute top-3.5 left-3.5">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#FFC72C] text-[#0B0B0E] shadow-sm">
+                Menu &amp; Prices
+              </span>
+            </div>
           </div>
-        </div>
 
+          <!-- Card Content -->
+          <div class="p-6 sm:p-7 flex-1 flex flex-col">
+            
+            <!-- Date & Read Time Row -->
+            <div class="flex items-center gap-2 text-xs font-semibold text-gray-500 mb-3">
+              <time datetime="2026-09-28">Sep 28, 2026</time>
+              <span class="text-gray-300">•</span>
+              <span>7 min read</span>
+            </div>
+
+            <!-- Title -->
+            <h2 class="font-heading font-black text-xl sm:text-2xl text-[#0B0B0E] leading-snug tracking-tight mb-3 group-hover:text-black">
+              <a href="/blog/waffle-house-menu-prices-2026/" class="hover:underline decoration-[#FFC72C] decoration-2 underline-offset-4">
+                Waffle House Menu 2026: Full Menu with Prices &amp; Popular Items
+              </a>
+            </h2>
+
+            <!-- Excerpt -->
+            <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6 font-normal flex-1 line-clamp-3">
+              Explore the updated Waffle House menu with current 2026 prices, popular items, calorie counts, and hashbrown ordering secrets in this complete diner guide.
+            </p>
+
+            <!-- Card Bottom Row: Read More Button -->
+            <div class="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
+              <a 
+                href="/blog/waffle-house-menu-prices-2026/" 
+                class="inline-flex items-center gap-1.5 font-heading font-bold text-sm text-[#0B0B0E] group-hover:text-black transition-colors group-hover:translate-x-1 duration-200"
+              >
+                <span>Read Full Guide</span>
+                <span class="text-[#0B0B0E] font-black text-base">&rarr;</span>
+              </a>
+              <span class="text-xs font-bold text-gray-400">Pillar Guide</span>
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <!-- Empty State for Filtered Categories with 0 posts -->
+      <div id="no-articles-found" class="hidden bg-white border border-gray-200 rounded-3xl p-10 text-center shadow-xs my-6">
+        <div class="w-12 h-12 rounded-xl bg-gray-100 text-gray-500 flex items-center justify-center mx-auto mb-4 font-bold text-xl">
+          ?
+        </div>
+        <h3 class="font-heading font-bold text-lg text-[#0B0B0E] mb-2">No Articles in This Category Yet</h3>
+        <p class="text-sm text-gray-600 max-w-md mx-auto mb-6">
+          We are currently preparing guides for this category. In the meantime, explore our comprehensive menu and price analysis!
+        </p>
+        <button type="button" id="reset-filter-btn" class="px-5 py-2.5 rounded-xl bg-[#0B0B0E] text-white text-xs font-bold hover:bg-black transition-colors cursor-pointer">
+          View All Guides
+        </button>
       </div>
 
     </div>

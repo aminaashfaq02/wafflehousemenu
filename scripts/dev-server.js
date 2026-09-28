@@ -53,7 +53,8 @@ function isPublic(rel) {
   if (parts.some((p) => p.startsWith('.'))) return false;
   if (parts.length === 1) return PUBLIC_FILES.test(parts[0]);
   if (PUBLIC_DIRS.has(parts[0])) return true;
-  return parts.length === 2 && parts[1] === 'index.html' && !NON_PAGE_DIRS.has(parts[0]); // page directories: /blog/index.html
+  if (NON_PAGE_DIRS.has(parts[0])) return false;
+  return parts[parts.length - 1] === 'index.html' || /\.html$/i.test(parts[parts.length - 1]);
 }
 
 function fileFor(rel) {

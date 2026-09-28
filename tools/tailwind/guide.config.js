@@ -1,7 +1,7 @@
 // Generated from the inline Tailwind Play-CDN config that used to live in these pages.
 // Build with: npm run build:css
 module.exports = {
-  content: ["./blog/index.html","./waffle-house-calories-allergies/index.html","./waffle-house-dietary-guide/index.html"],
+  content: ["./blog/index.html","./blog/**/*.html","./waffle-house-calories-allergies/index.html","./waffle-house-dietary-guide/index.html"],
   ...{
       theme: {
         extend: {
