@@ -191,17 +191,32 @@
       </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 py-4 space-y-2 shadow-lg">
-      <a class="block px-3 py-2 rounded-lg text-sm font-bold text-[#0B0B0E] bg-[#FFC72C]/20" href="/menu">Menu &amp; Prices</a>
-      <a title="Catering" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/waffle-house-catering/">Catering</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/nutrition">Nutrition</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/coupons">Deals &amp; Coupons</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/locations">Store Hours &amp; Locations</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/about">About Us</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/contact">Contact</a>
-    </div>
+        <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#FFC72C] border-b border-yellow-500/80 px-4 py-4 space-y-1.5 shadow-xl transition-all duration-300">
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/menu">Menu &amp; Prices</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/waffle-house-catering/">Catering</a>
+      
+      <!-- Mobile Nutrition Dropdown (Accordion with Chevron) -->
+      <div class="rounded-xl overflow-hidden bg-black/5 border border-black/10">
+        <button id="mobile-nutrition-btn" type="button" class="w-full flex items-center justify-between px-3.5 py-2.5 text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors focus:outline-none cursor-pointer" aria-expanded="false">
+          <span>Nutrition</span>
+          <svg id="mobile-nutrition-chevron" class="w-4 h-4 text-[#0B0B0E] transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        <div id="mobile-nutrition-sub" class="hidden px-2 pb-2 space-y-1 border-t border-black/10 pt-1.5 bg-[#FFC72C]">
+          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/nutrition">&bull; Nutrition Overview</a>
+          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/waffle-house-calories-allergies/">&bull; Calories &amp; Allergies</a>
+          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/waffle-house-dietary-guide/">&bull; Dietary Guide</a>
+        </div>
+      </div>
 
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/coupons">Deals &amp; Coupons</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/blog/">Blog</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/locations">Store Hours &amp; Locations</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/about">About Us</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/contact">Contact</a>
+    </div>
   </header>
 
   <main id="main-content" tabindex="-1" class="flex-1">
@@ -329,7 +344,7 @@
                     title="ALL-STAR SPECIAL™" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-all-star-special.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -370,7 +385,7 @@
                     title="Classic Sweet Cream Waffle" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/classic-sweet-cream-waffle.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -411,7 +426,7 @@
                     title="Texas Bacon Cheesesteak Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -452,7 +467,7 @@
                     title="Sausage Egg & Cheese Bowl" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-all-star-special.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -583,7 +598,7 @@
                     title="Two Egg Breakfast" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-all-star-special.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -624,7 +639,7 @@
                     title="Cheese N' Eggs with Raisin Toast" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/country-ham-and-eggs.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -665,7 +680,7 @@
                     title="Country Ham & Eggs" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/country-ham-and-eggs.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -706,7 +721,7 @@
                     title="T-Bone Steak & Eggs" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/country-ham-and-eggs.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -859,7 +874,7 @@
                     title="Cheesesteak Melt Hashbrown Bowl" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/cheesesteak-hashbrown-bowl.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -900,7 +915,7 @@
                     title="Chicken Melt Hashbrown Bowl" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/chicken-melt-hashbrown-bowl.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -941,7 +956,7 @@
                     title="Sausage Egg & Cheese Bowl" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/sausage-egg-and-cheese-bowl.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -982,7 +997,7 @@
                     title="Bacon Egg & Cheese Bowl" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1135,7 +1150,7 @@
                     title="Classic Sweet Cream Waffle" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/classic-sweet-cream-waffle.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1176,7 +1191,7 @@
                     title="Pecan Waffle" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/pecan-waffle.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1217,7 +1232,7 @@
                     title="Chocolate Chip Waffle" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/chocolate-chip-waffle.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1258,7 +1273,7 @@
                     title="Peanut Butter Chip Waffle" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/peanut-butter-chip-waffle.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1411,7 +1426,7 @@
                     title="Texas Bacon Cheesesteak Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1452,7 +1467,7 @@
                     title="Texas Sausage Egg & Cheese Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1493,7 +1508,7 @@
                     title="Texas Patty Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1534,7 +1549,7 @@
                     title="Texas Cheesesteak Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1549611016-3a70d82b5040?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1687,7 +1702,7 @@
                     title="Large Hashbrowns (Smothered & Covered)" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/large-hashbrowns.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1728,7 +1743,7 @@
                     title="Southern Pecan Pie" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/southern-pecan-pie.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1769,7 +1784,7 @@
                     title="Georgia Style Sausage Gravy Biscuit" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/georgia-sausage-gravy-biscuit.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1810,7 +1825,7 @@
                     title="Triple Chocolate Silk Pie" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/triple-chocolate-silk-pie.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -2119,7 +2134,7 @@
                     title="Borden® Chocolate Milk" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=600&q=80"
+                    src="/assets/menu/borden-chocolate-milk.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">

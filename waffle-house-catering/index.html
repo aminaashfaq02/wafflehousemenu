@@ -332,17 +332,32 @@
       </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 py-4 space-y-2 shadow-lg">
-      <a class="block px-3 py-2 rounded-lg text-sm font-bold text-[#0B0B0E] bg-[#FFC72C]/20" href="/menu">Menu &amp; Prices</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-bold text-[#0B0B0E] bg-[#FFC72C]/30" href="/waffle-house-catering/">Catering</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/nutrition">Nutrition</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/coupons">Deals &amp; Coupons</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/locations">Store Hours &amp; Locations</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/about">About Us</a>
-      <a class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100" href="/contact">Contact</a>
-    </div>
+        <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#FFC72C] border-b border-yellow-500/80 px-4 py-4 space-y-1.5 shadow-xl transition-all duration-300">
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/menu">Menu &amp; Prices</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/waffle-house-catering/">Catering</a>
+      
+      <!-- Mobile Nutrition Dropdown (Accordion with Chevron) -->
+      <div class="rounded-xl overflow-hidden bg-black/5 border border-black/10">
+        <button id="mobile-nutrition-btn" type="button" class="w-full flex items-center justify-between px-3.5 py-2.5 text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors focus:outline-none cursor-pointer" aria-expanded="false">
+          <span>Nutrition</span>
+          <svg id="mobile-nutrition-chevron" class="w-4 h-4 text-[#0B0B0E] transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        <div id="mobile-nutrition-sub" class="hidden px-2 pb-2 space-y-1 border-t border-black/10 pt-1.5 bg-[#FFC72C]">
+          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/nutrition">&bull; Nutrition Overview</a>
+          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/waffle-house-calories-allergies/">&bull; Calories &amp; Allergies</a>
+          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/waffle-house-dietary-guide/">&bull; Dietary Guide</a>
+        </div>
+      </div>
 
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/coupons">Deals &amp; Coupons</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/blog/">Blog</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/locations">Store Hours &amp; Locations</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/about">About Us</a>
+      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/contact">Contact</a>
+    </div>
   </header>
 
   <!-- ================= BREADCRUMBS ================= -->
