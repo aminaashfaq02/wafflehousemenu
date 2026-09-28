@@ -23,11 +23,12 @@ const mimeTypes = {
   '.pdf': 'application/pdf',
   '.txt': 'text/plain; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
+  '.webmanifest': 'application/manifest+json',
 };
 
 // Only these top-level entries are public. Everything else (server scripts, configs, .git, node_modules) is never served.
 const PUBLIC_DIRS = new Set(['assets']);
-const PUBLIC_FILES = /^[^/]+\.(html|xml|txt|ico|pdf)$/i;
+const PUBLIC_FILES = /^[^/]+\.(html|xml|txt|ico|pdf|png|webmanifest)$/i;
 const NON_PAGE_DIRS = new Set(['scripts', 'tools', 'node_modules']);
 
 const redirects = new Map((config.redirects || []).map((r) => [r.source, r]));
