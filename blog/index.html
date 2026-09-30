@@ -135,7 +135,7 @@
             "name": "How often is the Waffle House blog updated?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The blog is updated regularly throughout the month with verified 2026 diner prices, seasonal specials, secret menu ordering techniques, and catering developments."
+              "text": "The blog is updated regularly throughout the month with published 2026 diner prices, seasonal specials, secret menu ordering techniques, and catering developments."
             }
           },
           {
@@ -291,14 +291,14 @@
       </div>
     </div>
 
-        <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-[#FFC72C] border-b border-yellow-500/80 px-4 py-4 space-y-1.5 shadow-xl transition-all duration-300">
+            <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#FFC72C] border-b border-yellow-500 px-4 py-4 space-y-1.5 shadow-xl transition-all duration-300">
       <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/menu">Menu &amp; Prices</a>
       <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/waffle-house-catering/">Catering</a>
       
       <!-- Mobile Nutrition Dropdown (Accordion with Chevron) -->
       <div class="rounded-xl overflow-hidden bg-black/5 border border-black/10">
-        <button id="mobile-nutrition-btn" type="button" class="w-full flex items-center justify-between px-3.5 py-2.5 text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors focus:outline-none cursor-pointer" aria-expanded="false">
+        <button id="mobile-nutrition-btn" type="button" onclick="toggleMobileNutrition(event)" class="w-full flex items-center justify-between px-3.5 py-2.5 text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors focus:outline-none cursor-pointer" aria-expanded="false">
           <span>Nutrition</span>
           <svg id="mobile-nutrition-chevron" class="w-4 h-4 text-[#0B0B0E] transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -558,7 +558,7 @@
             <span class="faq-icon text-[#0B0B0E] text-base shrink-0 font-mono transition-transform duration-200">&darr;</span>
           </button>
           <div class="faq-content hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100 pt-3">
-            We cover verified 2026 prices across states, food truck booking tips, complete meal nutrition comparisons, allergen warnings, hashbrown ordering hacks, and diner history.
+            We cover estimated 2026 prices across states, food truck booking tips, complete meal nutrition comparisons, allergen warnings, hashbrown ordering hacks, and diner history.
           </div>
         </div>
 
@@ -900,5 +900,25 @@
     });
   </script>
 
+
+  <script>
+    function toggleMobileNutrition(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      var sub = document.getElementById('mobile-nutrition-sub');
+      var chevron = document.getElementById('mobile-nutrition-chevron');
+      var btn = document.getElementById('mobile-nutrition-btn');
+      if (sub) {
+        sub.classList.toggle('hidden');
+        var isOpen = !sub.classList.contains('hidden');
+        if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (chevron) {
+          chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+      }
+    }
+  </script>
 </body>
 </html>

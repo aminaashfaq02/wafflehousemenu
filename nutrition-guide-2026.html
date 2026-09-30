@@ -111,8 +111,8 @@
 
         <!-- CTA Back / PDF Button -->
         <div class="flex items-center gap-3">
-          <a href="/assets/waffle-house-nutrition-2026.pdf" download class="hidden sm:inline-flex items-center gap-2 bg-brand-yellow hover:bg-brand-yellow-hover text-black font-extrabold px-4 py-2 rounded-xl text-xs uppercase tracking-wider transition shadow-sm">
-            <span>Download PDF</span>
+          <a href="/nutrition" class="hidden sm:inline-flex items-center gap-2 bg-brand-yellow hover:bg-brand-yellow-hover text-black font-extrabold px-4 py-2 rounded-xl text-xs uppercase tracking-wider transition shadow-sm">
+            <span>Interactive Guide</span>
           </a>
           <a href="/" class="inline-flex items-center gap-1.5 text-xs text-white bg-neutral-800 hover:bg-neutral-700 px-3.5 py-2 rounded-xl font-bold transition">
             <span>&larr; Back to Menu</span>
@@ -136,13 +136,11 @@
           The comprehensive diner nutritional index covering all breakfast plates, waffles, signature hashbrown bowls, melts, dinner steaks, beverages, and allergen cross-contact warnings.
         </p>
         <div class="mt-6 flex flex-wrap items-center gap-3">
-          <a href="/assets/waffle-house-nutrition-2026.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-yellow hover:bg-brand-yellow-hover text-black font-black px-6 py-3 rounded-xl shadow-btn-yellow transition text-sm">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-            <span>Open PDF In Full Window</span>
+          <a href="https://www.wafflehouse.com/nutrition-facts/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-yellow hover:bg-brand-yellow-hover text-black font-black px-6 py-3 rounded-xl shadow-btn-yellow transition text-sm">
+            <span>View Official Restaurant Site</span>
           </a>
-          <a href="/assets/waffle-house-nutrition-2026.pdf" download class="inline-flex items-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-white font-bold px-5 py-3 rounded-xl border border-neutral-700 transition text-sm">
-            <svg class="w-4 h-4 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-            <span>Save PDF (280 KB)</span>
+          <a href="/nutrition" class="inline-flex items-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-white font-bold px-5 py-3 rounded-xl border border-neutral-700 transition text-sm">
+            <span>Interactive HTML Tables</span>
           </a>
         </div>
       </div>
@@ -153,20 +151,20 @@
   <main id="main-content" tabindex="-1" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
 
     <!-- EMBEDDED PDF VIEWER CARD -->
-    <div class="bg-white rounded-3xl border-2 border-yellow-300 shadow-xl overflow-hidden p-4 sm:p-6">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-4 mb-4 border-b border-gray-100 gap-3">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-black font-heading text-gray-900">Interactive PDF Document Reader</h2>
-          <p class="text-xs sm:text-sm text-gray-600">Scroll through all 10 pages of the 2026 nutrition tables directly below.</p>
-        </div>
-        <div class="flex items-center gap-2 text-xs font-semibold text-yellow-700 bg-yellow-50 border border-yellow-200 px-3 py-1.5 rounded-lg">
-          <span>Direct Embed &bull; 10 Pages</span>
+    <div class="bg-white rounded-3xl border-2 border-yellow-300 shadow-xl overflow-hidden p-6 sm:p-8 text-center max-w-2xl mx-auto space-y-4">
+        <h2 class="text-xl sm:text-2xl font-black font-heading text-gray-900">Official Brand Nutrition Notice</h2>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Waffle House Menu Guide does not host or redistribute proprietary brand documents. To view the official PDF documents directly from the restaurant chain, please visit the official Waffle House website:
+        </p>
+        <div class="pt-2 flex flex-wrap justify-center gap-4">
+          <a href="https://www.wafflehouse.com/nutrition-facts/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#FFC72C] text-[#0B0B0E] font-black px-6 py-3 rounded-xl shadow-btn-yellow transition text-sm">
+            <span>Official Waffle House Nutrition &rarr;</span>
+          </a>
+          <a href="/nutrition" class="inline-flex items-center gap-2 bg-[#0B0B0E] text-white font-bold px-6 py-3 rounded-xl transition text-sm">
+            <span>Interactive Nutrition Guide</span>
+          </a>
         </div>
       </div>
-      <div class="w-full h-[650px] rounded-2xl overflow-hidden bg-gray-100 border border-gray-200">
-        <iframe src="/assets/waffle-house-nutrition-2026.pdf" class="w-full h-full" title="Waffle House 2026 Nutrition Guide PDF"></iframe>
-      </div>
-    </div>
 
     <!-- 10 PAGE DETAILED TABULAR BREAKDOWN -->
     <div class="space-y-10">
@@ -565,5 +563,25 @@
 
 
 
+
+  <script>
+    function toggleMobileNutrition(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      var sub = document.getElementById('mobile-nutrition-sub');
+      var chevron = document.getElementById('mobile-nutrition-chevron');
+      var btn = document.getElementById('mobile-nutrition-btn');
+      if (sub) {
+        sub.classList.toggle('hidden');
+        var isOpen = !sub.classList.contains('hidden');
+        if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (chevron) {
+          chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+      }
+    }
+  </script>
 </body>
 </html>

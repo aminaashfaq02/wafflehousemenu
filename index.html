@@ -191,14 +191,14 @@
       </div>
     </div>
 
-        <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-[#FFC72C] border-b border-yellow-500/80 px-4 py-4 space-y-1.5 shadow-xl transition-all duration-300">
+            <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#FFC72C] border-b border-yellow-500 px-4 py-4 space-y-1.5 shadow-xl transition-all duration-300">
       <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/menu">Menu &amp; Prices</a>
       <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/waffle-house-catering/">Catering</a>
       
       <!-- Mobile Nutrition Dropdown (Accordion with Chevron) -->
       <div class="rounded-xl overflow-hidden bg-black/5 border border-black/10">
-        <button id="mobile-nutrition-btn" type="button" class="w-full flex items-center justify-between px-3.5 py-2.5 text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors focus:outline-none cursor-pointer" aria-expanded="false">
+        <button id="mobile-nutrition-btn" type="button" onclick="toggleMobileNutrition(event)" class="w-full flex items-center justify-between px-3.5 py-2.5 text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors focus:outline-none cursor-pointer" aria-expanded="false">
           <span>Nutrition</span>
           <svg id="mobile-nutrition-chevron" class="w-4 h-4 text-[#0B0B0E] transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -241,37 +241,35 @@
           <!-- Left: Official Document Badge + Info -->
           <div class="flex items-start sm:items-center gap-3.5">
             <div class="w-12 h-12 rounded-xl bg-red-50 border border-red-200 flex flex-col items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-xs">
-              <span class="text-[9px] font-black tracking-widest text-red-700 uppercase">PDF</span>
-              <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm1 7V3.5L18.5 9H15zM8 15h8v2H8v-2zm0-4h8v2H8v-2z"/>
+              <span class="text-[9px] font-black tracking-widest text-[#0B0B0E] uppercase">GUIDE</span>
+              <svg class="w-5 h-5 text-[#0B0B0E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
               </svg>
             </div>
             <div>
               <div class="flex flex-wrap items-center gap-2">
                 <span class="font-extrabold text-[15px] sm:text-base text-[#0B0B0E] group-hover:text-amber-700 transition-colors">
-                  Official 2026 Nutrition &amp; Allergen Guide
+                  Waffle House Nutrition &amp; Allergen Guide
                 </span>
                 <span class="bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
-                  Verified Data
+                  Independent Guide
                 </span>
               </div>
               <p class="text-xs text-gray-500 mt-1 font-medium leading-relaxed">
-                Direct PDF reference with full breakdown of calories, fat, carbs &amp; protein across all 73+ items (280 KB).
+                Explore calories, fat, carbs, and protein breakdowns across all diner categories with allergen cross-contact guidance.
               </p>
             </div>
           </div>
 
-          <!-- Right: Download Action Button -->
+          <!-- Right: View Guide Button -->
           <div class="shrink-0 flex items-center">
             <a 
-              href="/assets/waffle-house-nutrition-2026.pdf" 
-              download="waffle-house-nutrition-2026.pdf" 
-              target="_blank" rel="noopener noreferrer" 
+              href="/nutrition" 
               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0B0B0E] group-hover:bg-[#FFC72C] group-hover:text-[#0B0B0E] text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-200 shadow-xs"
             >
-              <span>Download PDF</span>
-              <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              <span>View Nutrition Guide</span>
+              <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
             </a>
           </div>
@@ -287,7 +285,7 @@
           73+ Menu Items
         </span>
         <span class="px-4 py-2 rounded-full border border-gray-200 text-xs sm:text-sm font-bold text-gray-700 bg-white shadow-2xs">
-          Prices Verified 2026
+          Menu & Price Estimates (2026)
         </span>
       </div>
 
@@ -426,7 +424,7 @@
                     title="Texas Bacon Cheesesteak Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
+                    src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -467,7 +465,7 @@
                     title="Sausage Egg & Cheese Bowl" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/blog/waffle-house-all-star-special.jpg"
+                    src="/assets/menu/sausage-egg-and-cheese-bowl.jpg"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -598,7 +596,7 @@
                     title="Two Egg Breakfast" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/blog/waffle-house-all-star-special.jpg"
+                    src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -639,7 +637,7 @@
                     title="Cheese N' Eggs with Raisin Toast" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/menu/country-ham-and-eggs.jpg"
+                    src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=600&q=80"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -721,7 +719,7 @@
                     title="T-Bone Steak & Eggs" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/menu/country-ham-and-eggs.jpg"
+                    src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=600&q=80"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -997,7 +995,7 @@
                     title="Bacon Egg & Cheese Bowl" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1426,7 +1424,7 @@
                     title="Texas Bacon Cheesesteak Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
+                    src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1467,7 +1465,7 @@
                     title="Texas Sausage Egg & Cheese Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
+                    src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -1549,7 +1547,7 @@
                     title="Texas Cheesesteak Melt" 
                     loading="lazy" 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" 
-                    src="/assets/blog/waffle-house-texas-patty-melt.jpg"
+                    src="https://images.unsplash.com/photo-1549611016-3a70d82b5040?auto=format&fit=crop&w=600&q=80"
                   />
                   <div class="absolute top-2.5 right-2.5">
                     <span class="bg-[#0B0B0E]/85 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold backdrop-blur-xs shadow-xs">
@@ -2363,7 +2361,7 @@
               Join the Waffle House Regulars Club
             </h2>
             <p class="text-gray-700 text-base sm:text-lg mt-2 font-sans leading-relaxed">
-              Become a Waffle House Regular to receive exclusive coupons, a free waffle voucher on your birthday, and secret diner promotions delivered straight to your email.
+              Become a Waffle House Regular to receive official coupons from the restaurant, a free waffle voucher on your birthday, and secret diner promotions delivered straight to your email.
             </p>
           </div>
 
@@ -2859,6 +2857,26 @@
         }
       });
     });
+  </script>
+
+  <script>
+    function toggleMobileNutrition(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      var sub = document.getElementById('mobile-nutrition-sub');
+      var chevron = document.getElementById('mobile-nutrition-chevron');
+      var btn = document.getElementById('mobile-nutrition-btn');
+      if (sub) {
+        sub.classList.toggle('hidden');
+        var isOpen = !sub.classList.contains('hidden');
+        if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (chevron) {
+          chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+      }
+    }
   </script>
 </body>
 </html>

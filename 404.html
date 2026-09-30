@@ -52,5 +52,25 @@
       <a href="/waffle-house-catering/">Catering</a>
     </nav>
   </main>
+
+  <script>
+    function toggleMobileNutrition(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      var sub = document.getElementById('mobile-nutrition-sub');
+      var chevron = document.getElementById('mobile-nutrition-chevron');
+      var btn = document.getElementById('mobile-nutrition-btn');
+      if (sub) {
+        sub.classList.toggle('hidden');
+        var isOpen = !sub.classList.contains('hidden');
+        if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (chevron) {
+          chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+      }
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+# Waffle House Menu Guide
+> An independent, unofficial consumer guide to Waffle House menu items, estimated price ranges, nutrition facts, store locations, and diner culture. Not affiliated with or endorsed by Waffle House, Inc.
+
+## Core Informational Pages
+- [Full Menu & Prices](https://www.wafflehouse-menu.com/menu): Categorized menu listings including waffles, breakfast platters, hashbrown bowls, and Texas melts with estimated price ranges.
+- [Prices by State](https://www.wafflehouse-menu.com/prices-by-state): State-by-state price comparisons across 25 operational states.
+- [Nutrition Guide](https://www.wafflehouse-menu.com/nutrition): Nutrition facts including calories, fat, protein, and carbohydrates compiled from published sources.
+- [Calories & Allergens](https://www.wafflehouse-menu.com/waffle-house-calories-allergies/): Big-9 allergen matrix, cross-contact disclosures, and calorie filtering.
+- [Dietary Guide](https://www.wafflehouse-menu.com/waffle-house-dietary-guide/): Low-carb, keto, high-protein, and sodium awareness ordering suggestions.
+- [Catering Guide](https://www.wafflehouse-menu.com/waffle-house-catering/): Informational guide to Waffle House event catering and food truck options.
+- [Store Hours & Locations](https://www.wafflehouse-menu.com/locations): 24/7 store hours directory and diner locator.
+- [Deals & Discounts](https://www.wafflehouse-menu.com/coupons): Community savings tips and official Regulars Club coupon guidance.
+- [Diner Blog](https://www.wafflehouse-menu.com/blog/): Articles and ordering guides for American diner enthusiasts.
+
+## Disclaimers & Notes
+- Prices and menu availability vary by location and are subject to change.
+- Waffle House Menu Guide is an independent informational publisher and does not represent Waffle House, Inc.
+- For official orders, employment, or corporate inquiries, visit the official website at https://www.wafflehouse.com.
