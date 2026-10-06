@@ -82,6 +82,27 @@
     }
   </style>
 
+
+  <style>
+    /* Mobile Slide-In Navigation Drawer (Cheesecake Factory Style) */
+    body.mobile-nav-open {
+      overflow: hidden !important;
+    }
+    body.mobile-nav-open #mobile-nav-wrapper {
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+    body.mobile-nav-open #mobile-nav {
+      transform: translateX(0) !important;
+    }
+    #mobile-nav-wrapper {
+      transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+    }
+    #mobile-nav {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800 font-sans antialiased min-h-screen flex flex-col">
   <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#FFC72C] focus:text-[#0B0B0E] focus:font-bold focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">Skip to main content</a>
@@ -173,7 +194,7 @@
         <!-- Mobile Header Row -->
         <div class="flex lg:hidden justify-between items-center py-2.5">
           <span class="text-[#0B0B0E] font-black text-sm tracking-wide uppercase">Prices by State</span>
-          <button id="mobile-menu-btn" class="text-[#0B0B0E] p-1.5 hover:bg-black/10 rounded-lg transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+          <button id="mobile-menu-btn" type="button" class="text-[#0B0B0E] p-1.5 hover:bg-black/10 rounded-lg transition-colors focus:outline-none cursor-pointer" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -183,33 +204,94 @@
       </div>
     </div>
 
-            <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-[#FFC72C] border-b border-yellow-500 px-4 py-4 space-y-1.5 shadow-xl transition-all duration-300">
-      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/menu">Menu &amp; Prices</a>
-      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/waffle-house-catering/">Catering</a>
-      
-      <!-- Mobile Nutrition Dropdown (Accordion with Chevron) -->
-      <div class="rounded-xl overflow-hidden bg-black/5 border border-black/10">
-        <button id="mobile-nutrition-btn" type="button" onclick="toggleMobileNutrition(event)" class="w-full flex items-center justify-between px-3.5 py-2.5 text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors focus:outline-none cursor-pointer" aria-expanded="false">
-          <span>Nutrition</span>
-          <svg id="mobile-nutrition-chevron" class="w-4 h-4 text-[#0B0B0E] transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </header>
+
+  <!-- ================= MOBILE NAVIGATION DRAWER (CHEESECAKE FACTORY STYLE) ================= -->
+  <div id="mobile-nav-wrapper" class="fixed inset-0 z-[60] overflow-hidden transition-all duration-300 lg:hidden invisible opacity-0 pointer-events-none" aria-hidden="true">
+    <!-- Dimmed Backdrop (Click outside to close) -->
+    <button id="mobile-nav-backdrop" type="button" tabindex="-1" aria-label="Close navigation" class="absolute inset-0 block h-full w-full cursor-pointer border-0 bg-black/60 backdrop-blur-xs p-0"></button>
+    
+    <!-- Slide-in Drawer Aside (from right) -->
+    <aside id="mobile-nav" role="dialog" aria-modal="true" aria-label="Site navigation" class="absolute inset-y-0 right-0 flex w-[min(100vw-2.5rem,21.5rem)] flex-col bg-[#FAF7F0] shadow-2xl transition-transform duration-300 ease-out translate-x-full">
+      <!-- Drawer Header with Brand and Close Cross -->
+      <div class="flex h-14 shrink-0 items-center justify-between border-b border-gray-200/80 px-4 bg-white">
+        <div class="flex items-center gap-2">
+          <img src="/assets/logo-icon.png" width="30" height="30" alt="Waffle House Menu Guide Logo" class="w-7 h-7 rounded-lg object-cover">
+          <span class="text-xs font-black uppercase tracking-[0.14em] text-[#0B0B0E]">Navigation</span>
+        </div>
+        <button id="mobile-nav-close-btn" type="button" aria-label="Close navigation" class="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-gray-200 text-[#0B0B0E] transition-colors hover:border-[#FFC72C] hover:bg-[#FFC72C]/20 hover:text-black focus:outline-none">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="5" x2="19" y2="19"></line>
+            <line x1="19" y1="5" x2="5" y2="19"></line>
           </svg>
         </button>
-        <div id="mobile-nutrition-sub" class="hidden px-2 pb-2 space-y-1 border-t border-black/10 pt-1.5 bg-[#FFC72C]">
-          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/nutrition">&bull; Nutrition Overview</a>
-          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/waffle-house-calories-allergies/">&bull; Calories &amp; Allergies</a>
-          <a class="block px-3 py-2 rounded-lg text-xs font-bold text-[#0B0B0E] hover:bg-black/10 transition-colors pl-4" href="/waffle-house-dietary-guide/">&bull; Dietary Guide</a>
-        </div>
       </div>
 
-      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/coupons">Deals &amp; Coupons</a>
-      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/blog/">Blog</a>
-      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/locations">Store Hours &amp; Locations</a>
-      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/about">About Us</a>
-      <a class="block px-3.5 py-2.5 rounded-xl text-[15px] font-black text-[#0B0B0E] hover:bg-black/10 transition-colors" href="/contact">Contact</a>
-    </div>
-  </header>
+      <!-- Scrollable Drawer Body -->
+      <div class="flex-1 overflow-y-auto overscroll-contain px-4 py-3 space-y-1.5">
+        <!-- Quick Action Buttons -->
+        <a href="/coupons" class="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-full font-heading font-black text-xs uppercase tracking-wider bg-[#FFC72C] text-[#0B0B0E] shadow-xs hover:brightness-105 transition-all text-center mb-1">
+          Deals &amp; Coupons
+        </a>
+        <a href="/menu" class="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-full font-heading font-bold text-xs uppercase tracking-wider border-2 border-[#0B0B0E] text-[#0B0B0E] bg-white hover:bg-gray-50 transition-all text-center mb-3">
+          Full Menu &amp; Prices
+        </a>
+
+        <!-- Navigation Links -->
+        <a class="flex min-h-[44px] items-center px-3.5 py-2 rounded-xl text-[15px] font-bold text-[#0B0B0E] hover:bg-black/5 transition-colors border-b border-gray-200/60" href="/menu">
+          Menu &amp; Prices
+        </a>
+        <a class="flex min-h-[44px] items-center px-3.5 py-2 rounded-xl text-[15px] font-bold text-[#0B0B0E] hover:bg-black/5 transition-colors border-b border-gray-200/60" href="/waffle-house-catering/">
+          Catering
+        </a>
+
+        <!-- Nutrition Expandable Section -->
+        <details class="group border-b border-gray-200/60 py-1">
+          <summary class="flex min-h-[44px] w-full cursor-pointer list-none items-center justify-between px-3.5 py-2 text-left text-[15px] font-bold text-[#0B0B0E] hover:bg-black/5 rounded-xl transition-colors [&::-webkit-details-marker]:hidden">
+            <span>Nutrition</span>
+            <svg class="w-4 h-4 text-[#0B0B0E] transition-transform duration-200 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </summary>
+          <div class="pb-2 pt-1 pl-2 space-y-1">
+            <a class="flex min-h-[38px] items-center px-4 py-1.5 rounded-lg text-xs font-bold text-gray-700 hover:text-black hover:bg-black/5 transition-colors" href="/nutrition">&bull; Nutrition Overview</a>
+            <a class="flex min-h-[38px] items-center px-4 py-1.5 rounded-lg text-xs font-bold text-gray-700 hover:text-black hover:bg-black/5 transition-colors" href="/waffle-house-calories-allergies/">&bull; Calories &amp; Allergies</a>
+            <a class="flex min-h-[38px] items-center px-4 py-1.5 rounded-lg text-xs font-bold text-gray-700 hover:text-black hover:bg-black/5 transition-colors" href="/waffle-house-dietary-guide/">&bull; Dietary Guide</a>
+          </div>
+        </details>
+
+        <a class="flex min-h-[44px] items-center px-3.5 py-2 rounded-xl text-[15px] font-bold text-[#0B0B0E] hover:bg-black/5 transition-colors border-b border-gray-200/60" href="/coupons">
+          Deals &amp; Coupons
+        </a>
+        <a class="flex min-h-[44px] items-center px-3.5 py-2 rounded-xl text-[15px] font-bold text-[#0B0B0E] hover:bg-black/5 transition-colors border-b border-gray-200/60" href="/blog/">
+          Blog &amp; Guides
+        </a>
+        <a class="flex min-h-[44px] items-center px-3.5 py-2 rounded-xl text-[15px] font-bold text-[#0B0B0E] hover:bg-black/5 transition-colors border-b border-gray-200/60" href="/locations">
+          Store Hours &amp; Locations
+        </a>
+        <a class="flex min-h-[44px] items-center px-3.5 py-2 rounded-xl text-[15px] font-bold text-[#0B0B0E] hover:bg-black/5 transition-colors border-b border-gray-200/60" href="/about">
+          About Us
+        </a>
+        <a class="flex min-h-[44px] items-center px-3.5 py-2 rounded-xl text-[15px] font-bold text-[#0B0B0E] hover:bg-black/5 transition-colors border-b border-gray-200/60" href="/contact">
+          Contact Us
+        </a>
+
+        <!-- Support & Legal Links -->
+        <div class="pt-5 pb-4">
+          <div class="text-[10px] font-extrabold uppercase tracking-widest text-gray-400 mb-2 px-3.5">Support &amp; Legal</div>
+          <div class="flex flex-wrap gap-x-3 gap-y-1.5 text-xs text-gray-600 px-3.5">
+            <a href="/#faq" class="hover:text-black transition-colors py-0.5">FAQ</a>
+            <span class="text-gray-300 py-0.5">&bull;</span>
+            <a href="/privacy-policy" class="hover:text-black transition-colors py-0.5">Privacy</a>
+            <span class="text-gray-300 py-0.5">&bull;</span>
+            <a href="/terms-and-conditions" class="hover:text-black transition-colors py-0.5">Terms</a>
+            <span class="text-gray-300 py-0.5">&bull;</span>
+            <a href="/disclaimer" class="hover:text-black transition-colors py-0.5">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <main id="main-content" tabindex="-1" class="flex-1 font-sans">
 
@@ -2562,108 +2644,7 @@
     // Items Dictionary
     const itemsData = [{"id":"all-star-special","name":"ALL-STAR SPECIAL™","avgPrice":"$12.60","numPrice":12.6,"states":25,"cal":"1050 cal","cheapState":"Mississippi ($11.85)","expState":"Virginia ($13.45)","category":"Breakfast Classics"},{"id":"two-egg-breakfast","name":"Two Egg Breakfast","avgPrice":"$7.00","numPrice":7,"states":25,"cal":"450–580 cal","cheapState":"Alabama ($6.50)","expState":"Florida ($7.50)","category":"Breakfast Classics"},{"id":"cheese-n-eggs-raisin-toast","name":"Cheese 'N Eggs with Raisin Toast","avgPrice":"$8.00","numPrice":8,"states":25,"cal":"670 cal","cheapState":"Mississippi ($7.50)","expState":"Virginia ($8.50)","category":"Breakfast Classics"},{"id":"country-ham-and-eggs","name":"Country Ham & Eggs","avgPrice":"$9.85","numPrice":9.85,"states":25,"cal":"600 cal","cheapState":"Tennessee ($9.25)","expState":"Maryland ($10.45)","category":"Breakfast Classics"},{"id":"t-bone-and-eggs","name":"T-Bone & Eggs Breakfast","avgPrice":"$14.25","numPrice":14.25,"states":25,"cal":"880–1050 cal","cheapState":"Arkansas ($13.45)","expState":"Florida ($15.15)","category":"Breakfast Classics"},{"id":"sirloin-steak-and-eggs","name":"Sirloin Steak & Eggs","avgPrice":"$11.85","numPrice":11.85,"states":25,"cal":"520–710 cal","cheapState":"Alabama ($11.15)","expState":"Virginia ($12.65)","category":"Breakfast Classics"},{"id":"chicken-sausage-and-eggs","name":"Chicken Sausage & Eggs","avgPrice":"$8.50","numPrice":8.5,"states":22,"cal":"520–710 cal","cheapState":"Georgia ($7.95)","expState":"Ohio ($8.95)","category":"Breakfast Classics"},{"id":"pork-chops-and-eggs","name":"Pork Chops & Eggs Breakfast","avgPrice":"$11.45","numPrice":11.45,"states":24,"cal":"740–910 cal","cheapState":"Mississippi ($10.75)","expState":"Florida ($12.15)","category":"Breakfast Classics"},{"id":"cheesesteak-melt-bowl","name":"Cheesesteak Melt Hashbrown Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"625 cal","cheapState":"Mississippi ($10.35)","expState":"Maryland ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"chicken-melt-bowl","name":"Chicken Melt Hashbrown Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"635 cal","cheapState":"Alabama ($10.35)","expState":"Virginia ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"sausage-egg-cheese-bowl","name":"Sausage Egg & Cheese Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"920 cal","cheapState":"Arkansas ($10.35)","expState":"Florida ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"bacon-egg-cheese-bowl","name":"Bacon Egg & Cheese Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"795 cal","cheapState":"Georgia ($10.35)","expState":"Ohio ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"ham-egg-cheese-bowl","name":"Ham Egg & Cheese Bowl","avgPrice":"$11.05","numPrice":11.05,"states":25,"cal":"800 cal","cheapState":"Tennessee ($10.35)","expState":"Virginia ($11.75)","category":"Signature Hashbrown Bowls"},{"id":"texas-sausage-melt-bowl","name":"Texas Sausage Melt Hashbrown Bowl","avgPrice":"$11.65","numPrice":11.65,"states":24,"cal":"980 cal","cheapState":"Texas ($10.95)","expState":"Florida ($12.35)","category":"Signature Hashbrown Bowls"},{"id":"chicken-fiesta-protein-bowl","name":"Chicken Fiesta Protein Bowl","avgPrice":"$11.85","numPrice":11.85,"states":23,"cal":"480 cal","cheapState":"Mississippi ($11.15)","expState":"Maryland ($12.55)","category":"Signature Hashbrown Bowls"},{"id":"classic-sweet-cream-waffle","name":"Classic Sweet Cream Waffle","avgPrice":"$4.95","numPrice":4.95,"states":25,"cal":"410 cal","cheapState":"Mississippi ($4.50)","expState":"Virginia ($5.35)","category":"Sweet Cream Waffles"},{"id":"pecan-waffle","name":"Pecan Waffle","avgPrice":"$5.45","numPrice":5.45,"states":25,"cal":"560 cal","cheapState":"Georgia ($4.95)","expState":"Florida ($5.85)","category":"Sweet Cream Waffles"},{"id":"chocolate-chip-waffle","name":"Chocolate Chip Waffle","avgPrice":"$5.45","numPrice":5.45,"states":25,"cal":"520 cal","cheapState":"Alabama ($4.95)","expState":"Maryland ($5.85)","category":"Sweet Cream Waffles"},{"id":"peanut-butter-chip-waffle","name":"Peanut Butter Chip Waffle","avgPrice":"$5.45","numPrice":5.45,"states":25,"cal":"580 cal","cheapState":"Tennessee ($4.95)","expState":"Ohio ($5.85)","category":"Sweet Cream Waffles"},{"id":"firework-waffle","name":"Firework Waffle (Strawberry)","avgPrice":"$5.95","numPrice":5.95,"states":21,"cal":"560–620 cal","cheapState":"Texas ($5.45)","expState":"Virginia ($6.45)","category":"Sweet Cream Waffles"},{"id":"double-waffle-stack","name":"Double Sweet Cream Waffle","avgPrice":"$7.95","numPrice":7.95,"states":25,"cal":"820 cal","cheapState":"Mississippi ($7.35)","expState":"Florida ($8.55)","category":"Sweet Cream Waffles"},{"id":"texas-bacon-cheesesteak-melt","name":"Texas Bacon Cheesesteak Melt","avgPrice":"$10.95","numPrice":10.95,"states":25,"cal":"910 cal","cheapState":"Arkansas ($10.25)","expState":"Maryland ($11.65)","category":"Texas Melts & Sandwiches"},{"id":"texas-sausage-egg-cheese-melt","name":"Texas Sausage Egg & Cheese Melt","avgPrice":"$10.05","numPrice":10.05,"states":25,"cal":"970 cal","cheapState":"Alabama ($9.35)","expState":"Virginia ($10.75)","category":"Texas Melts & Sandwiches"},{"id":"texas-patty-melt","name":"Texas Patty Melt","avgPrice":"$9.65","numPrice":9.65,"states":25,"cal":"810 cal","cheapState":"Mississippi ($8.95)","expState":"Florida ($10.35)","category":"Texas Melts & Sandwiches"},{"id":"texas-cheesesteak-melt","name":"Texas Cheesesteak Melt","avgPrice":"$10.35","numPrice":10.35,"states":25,"cal":"760 cal","cheapState":"Georgia ($9.65)","expState":"Ohio ($10.95)","category":"Texas Melts & Sandwiches"},{"id":"texas-chicken-melt","name":"Texas Chicken Melt","avgPrice":"$10.35","numPrice":10.35,"states":25,"cal":"730 cal","cheapState":"Tennessee ($9.65)","expState":"Virginia ($10.95)","category":"Texas Melts & Sandwiches"},{"id":"grilled-chicken-sandwich","name":"Grilled Chicken Sandwich","avgPrice":"$8.85","numPrice":8.85,"states":25,"cal":"470 cal","cheapState":"Kentucky ($8.15)","expState":"Maryland ($9.45)","category":"Texas Melts & Sandwiches"},{"id":"bacon-lovers-blt","name":"Bacon Lover's BLT (Texas Toast)","avgPrice":"$8.95","numPrice":8.95,"states":25,"cal":"560 cal","cheapState":"Mississippi ($8.25)","expState":"Florida ($9.65)","category":"Texas Melts & Sandwiches"},{"id":"texas-grilled-cheese","name":"Texas Grilled Cheese","avgPrice":"$5.85","numPrice":5.85,"states":25,"cal":"540 cal","cheapState":"Alabama ($5.25)","expState":"Virginia ($6.35)","category":"Texas Melts & Sandwiches"},{"id":"quarter-pound-angus-burger","name":"1/4 Lb. Angus Burger","avgPrice":"$6.85","numPrice":6.85,"states":25,"cal":"480 cal","cheapState":"Arkansas ($6.25)","expState":"Maryland ($7.35)","category":"Classic Burgers & Dinners"},{"id":"double-angus-burger","name":"Double Angus Burger","avgPrice":"$8.95","numPrice":8.95,"states":25,"cal":"770 cal","cheapState":"Mississippi ($8.25)","expState":"Virginia ($9.65)","category":"Classic Burgers & Dinners"},{"id":"t-bone-dinner-plate","name":"T-Bone Steak Dinner Plate","avgPrice":"$15.45","numPrice":15.45,"states":25,"cal":"1120 cal","cheapState":"Alabama ($14.50)","expState":"Florida ($16.45)","category":"Classic Burgers & Dinners"},{"id":"sirloin-steak-dinner","name":"Sirloin Steak Dinner Plate","avgPrice":"$13.25","numPrice":13.25,"states":25,"cal":"890 cal","cheapState":"Tennessee ($12.45)","expState":"Maryland ($14.15)","category":"Classic Burgers & Dinners"},{"id":"grilled-chicken-dinner","name":"Grilled Chicken Breast Dinner","avgPrice":"$11.65","numPrice":11.65,"states":25,"cal":"680 cal","cheapState":"Georgia ($10.85)","expState":"Ohio ($12.35)","category":"Classic Burgers & Dinners"},{"id":"regular-hashbrowns-plain","name":"Regular Hashbrowns (Plain)","avgPrice":"$3.15","numPrice":3.15,"states":25,"cal":"190 cal","cheapState":"Mississippi ($2.85)","expState":"Virginia ($3.45)","category":"Sides & Hashbrown Enhancements"},{"id":"large-hashbrowns","name":"Large Hashbrowns","avgPrice":"$3.65","numPrice":3.65,"states":25,"cal":"380 cal","cheapState":"Alabama ($3.25)","expState":"Florida ($3.95)","category":"Sides & Hashbrown Enhancements"},{"id":"triple-hashbrowns","name":"Triple Hashbrowns","avgPrice":"$4.15","numPrice":4.15,"states":25,"cal":"570 cal","cheapState":"Arkansas ($3.75)","expState":"Maryland ($4.55)","category":"Sides & Hashbrown Enhancements"},{"id":"smothered-covered-hashbrowns","name":"Smothered & Covered Hashbrowns","avgPrice":"$4.95","numPrice":4.95,"states":25,"cal":"480 cal","cheapState":"Georgia ($4.45)","expState":"Ohio ($5.45)","category":"Sides & Hashbrown Enhancements"},{"id":"all-the-way-hashbrowns","name":"Hashbrowns 'All The Way' (Triple)","avgPrice":"$8.65","numPrice":8.65,"states":25,"cal":"890 cal","cheapState":"Mississippi ($7.85)","expState":"Virginia ($9.45)","category":"Sides & Hashbrown Enhancements"},{"id":"berts-best-chili-bowl","name":"Bert's Best Chili (Bowl)","avgPrice":"$4.95","numPrice":4.95,"states":25,"cal":"340 cal","cheapState":"Tennessee ($4.45)","expState":"Florida ($5.45)","category":"Sides & Hashbrown Enhancements"},{"id":"grilled-biscuit-with-jelly","name":"Grilled Biscuit with Butter & Jelly","avgPrice":"$2.65","numPrice":2.65,"states":25,"cal":"280 cal","cheapState":"Mississippi ($2.35)","expState":"Maryland ($2.95)","category":"Sides & Hashbrown Enhancements"},{"id":"sausage-gravy-biscuit","name":"Southern Sausage Gravy Biscuit","avgPrice":"$4.95","numPrice":4.95,"states":25,"cal":"540 cal","cheapState":"Alabama ($4.45)","expState":"Virginia ($5.45)","category":"Sides & Hashbrown Enhancements"},{"id":"bowl-of-southern-grits","name":"Bowl of Southern Grits","avgPrice":"$3.70","numPrice":3.7,"states":25,"cal":"200 cal","cheapState":"Georgia ($3.35)","expState":"Ohio ($4.05)","category":"Sides & Hashbrown Enhancements"},{"id":"southern-pecan-pie-slice","name":"Southern Pecan Pie Slice","avgPrice":"$4.65","numPrice":4.65,"states":25,"cal":"510 cal","cheapState":"Georgia ($4.15)","expState":"Florida ($5.15)","category":"Pies & Diner Sweets"},{"id":"triple-chocolate-silk-pie-slice","name":"Triple Chocolate Silk Pie Slice","avgPrice":"$4.65","numPrice":4.65,"states":25,"cal":"480 cal","cheapState":"Mississippi ($4.15)","expState":"Virginia ($5.15)","category":"Pies & Diner Sweets"},{"id":"whole-southern-pecan-pie","name":"Whole Southern Pecan Pie (To-Go)","avgPrice":"$22.00","numPrice":22,"states":24,"cal":"4080 cal","cheapState":"Alabama ($19.95)","expState":"Maryland ($24.00)","category":"Pies & Diner Sweets"},{"id":"whole-chocolate-silk-pie","name":"Whole Chocolate Silk Pie (To-Go)","avgPrice":"$22.00","numPrice":22,"states":24,"cal":"3840 cal","cheapState":"Tennessee ($19.95)","expState":"Florida ($24.00)","category":"Pies & Diner Sweets"},{"id":"royal-cup-dark-roast-coffee","name":"Royal Cup® Coffee (Free Refills)","avgPrice":"$2.65","numPrice":2.65,"states":25,"cal":"0 cal","cheapState":"Mississippi ($2.35)","expState":"Virginia ($2.95)","category":"Royal Cup Beverages"},{"id":"alices-sweet-tea","name":"Alice's Southern Sweet Tea (Free Refills)","avgPrice":"$2.85","numPrice":2.85,"states":25,"cal":"180 cal","cheapState":"Alabama ($2.50)","expState":"Florida ($3.15)","category":"Royal Cup Beverages"},{"id":"alices-unsweet-tea","name":"Alice's Unsweet Iced Tea","avgPrice":"$2.85","numPrice":2.85,"states":25,"cal":"0 cal","cheapState":"Georgia ($2.50)","expState":"Ohio ($3.15)","category":"Royal Cup Beverages"},{"id":"minute-maid-orange-juice","name":"Minute Maid® 100% Orange Juice","avgPrice":"$3.25","numPrice":3.25,"states":25,"cal":"170–240 cal","cheapState":"Florida ($2.85)","expState":"Maryland ($3.65)","category":"Royal Cup Beverages"},{"id":"borden-chocolate-milk","name":"Borden® Chocolate Milk Bottle","avgPrice":"$3.15","numPrice":3.15,"states":25,"cal":"230 cal","cheapState":"Arkansas ($2.75)","expState":"Virginia ($3.45)","category":"Royal Cup Beverages"},{"id":"coca-cola-soft-drinks","name":"Coca-Cola® Fountain Sodas (Refills)","avgPrice":"$2.85","numPrice":2.85,"states":25,"cal":"0–210 cal","cheapState":"Tennessee ($2.50)","expState":"Florida ($3.15)","category":"Royal Cup Beverages"},{"id":"hot-chocolate-whipped-cream","name":"Hot Chocolate with Whipped Cream","avgPrice":"$2.65","numPrice":2.65,"states":25,"cal":"180 cal","cheapState":"Mississippi ($2.35)","expState":"Maryland ($2.95)","category":"Royal Cup Beverages"}];
 
-    // 1. Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-
-    // 2. Open State Modal
-    function openStateModal(itemId) {
-      const item = itemsData.find(it => it.id === itemId);
-      if (!item) return;
-
-      document.getElementById('modal-title').textContent = item.name;
-      document.getElementById('modal-category').textContent = item.category;
-      document.getElementById('modal-calories').textContent = item.cal + ' • Published 2026 Reference';
-      document.getElementById('modal-nat-avg').textContent = item.avgPrice;
-      document.getElementById('modal-cheapest').textContent = item.cheapState;
-      document.getElementById('modal-expensive').textContent = item.expState;
-
-      // Populate States List
-      const listEl = document.getElementById('modal-states-list');
-      listEl.innerHTML = '';
-
-      // Calculate state price
-      const baseNum = item.numPrice;
-      stateFactors.forEach(st => {
-        const stPrice = (baseNum * st.factor).toFixed(2);
-        const diff = Math.round((st.factor - 1) * 100);
-        let diffBadge = '';
-        if (diff < -2) {
-          diffBadge = '<span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">' + diff + '% (Below Avg)</span>';
-        } else if (diff > 2) {
-          diffBadge = '<span class="text-xs font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md">+' + diff + '% (Above Avg)</span>';
-        } else {
-          diffBadge = '<span class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded-md">Average</span>';
-        }
-
-        const row = document.createElement('div');
-        row.className = 'py-3 flex items-center justify-between hover:bg-gray-50 px-2 rounded-xl transition-colors';
-        row.innerHTML = `
-          <div class="flex items-center gap-3">
-            <span class="w-7 h-7 rounded-lg bg-gray-100 text-gray-800 font-bold text-xs flex items-center justify-center font-mono">${st.code}</span>
-            <div>
-              <span class="font-bold text-gray-900 block leading-none text-xs sm:text-sm">${st.name}</span>
-              <span class="text-[10px] text-gray-500">${st.count} &bull; ${st.tag}</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 text-right">
-            ${diffBadge}
-            <span class="font-black text-gray-900 text-sm sm:text-base font-sans">$${stPrice}</span>
-          </div>
-        `;
-        listEl.appendChild(row);
-      });
-
-      document.getElementById('state-modal').classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    }
-
-    function closeStateModal() {
-      document.getElementById('state-modal').classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    // Close on escape key
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeStateModal();
-    });
-
-    // Close on backdrop click
-    document.getElementById('state-modal').addEventListener('click', (e) => {
-      if (e.target.id === 'state-modal') closeStateModal();
-    });
-
-    // 3. Search and Category Filter
-    const searchInput = document.getElementById('item-search-input');
-    const categoryPills = document.querySelectorAll('.cat-pill');
-    let activeCategory = 'all';
-
-    function filterItems() {
-      const query = (searchInput.value || '').toLowerCase().trim();
-      let visibleCount = 0;
-
-      document.querySelectorAll('.category-block').forEach(catBlock => {
-        const catSlug = catBlock.getAttribute('data-category');
-        const matchesCategory = (activeCategory === 'all' || activeCategory === catSlug);
-
-        let catVisibleItems = 0;
-        catBlock.querySelectorAll('.item-card').forEach(card => {
-          const name = card.getAttribute('data-name').toLowerCase();
-          const matchesSearch = !query || name.includes(query);
-
-          if (matchesCategory && matchesSearch) {
-            card.classList.remove('hidden');
-            catVisibleItems++;
-            visibleCount++;
-          } else {
-            card.classList.add('hidden');
-          }
-        });
+    );
 
         if (catVisibleItems > 0) {
           catBlock.classList.remove('hidden');
@@ -2731,24 +2712,70 @@
   </script>
 
 
+  <!-- Mobile Navigation Drawer Controller (Cheesecake Factory Smooth Side-Drawer) -->
   <script>
-    function toggleMobileNutrition(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      var sub = document.getElementById('mobile-nutrition-sub');
-      var chevron = document.getElementById('mobile-nutrition-chevron');
-      var btn = document.getElementById('mobile-nutrition-btn');
-      if (sub) {
-        sub.classList.toggle('hidden');
-        var isOpen = !sub.classList.contains('hidden');
-        if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        if (chevron) {
-          chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+    (function() {
+      function initMobileDrawer() {
+        const openBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-nav-close-btn');
+        const backdrop = document.getElementById('mobile-nav-backdrop');
+        const wrapper = document.getElementById('mobile-nav-wrapper');
+        const drawer = document.getElementById('mobile-nav');
+
+        if (!openBtn || !wrapper || !drawer) return;
+
+        function openDrawer() {
+          document.body.classList.add('mobile-nav-open');
+          wrapper.setAttribute('aria-hidden', 'false');
+          openBtn.setAttribute('aria-expanded', 'true');
+          if (closeBtn) closeBtn.focus();
         }
+
+        function closeDrawer() {
+          document.body.classList.remove('mobile-nav-open');
+          wrapper.setAttribute('aria-hidden', 'true');
+          openBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        openBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          openDrawer();
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeDrawer();
+          });
+        }
+
+        if (backdrop) {
+          backdrop.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeDrawer();
+          });
+        }
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && document.body.classList.contains('mobile-nav-open')) {
+            closeDrawer();
+          }
+        });
+
+        drawer.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            closeDrawer();
+          });
+        });
       }
-    }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileDrawer);
+      } else {
+        initMobileDrawer();
+      }
+    })();
   </script>
 </body>
 </html>
