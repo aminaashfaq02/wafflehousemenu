@@ -704,169 +704,285 @@
     <!-- ================= COMPREHENSIVE MENU CATEGORIES (13 SECTIONS) ================= -->
 
         <!-- Category 1: Breakfast All-Star Specials -->
-    <section id="cat-all-star-specials" class="scroll-mt-28 mb-16">
-      <div class="border-b-4 border-[#FFC72C] pb-4 mb-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0B0E] uppercase tracking-wide">
-          Breakfast All-Star Specials™
-        </h2>
-        <p class="text-gray-600 mt-2 text-base sm:text-lg max-w-3xl">
-          The crown jewel of the Waffle House breakfast menu. Each All-Star Special features a golden sweet cream waffle, two farm-fresh eggs cooked your way, a choice of savory diner meat, hashbrowns or grits, and buttered toast.
-        </p>
-      </div>
+        <!-- Category 1: Breakfast All-Star Specials -->
+    <section id="cat-all-star-specials" class="py-12 sm:py-16 bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Category Header (Centered exactly like Classic Egg Breakfasts) -->
+        <div class="mb-10 text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#0B0B0E] tracking-tight">
+            Breakfast All-Star Specials™
+          </h2>
+          <p class="mt-3 text-base sm:text-lg text-gray-600 font-sans leading-relaxed">
+            The crown jewel of the Waffle House breakfast menu. Each All-Star Special features a golden sweet cream waffle, two farm-fresh eggs cooked your way, a choice of savory diner meat, hashbrowns or grits, and buttered toast.
+          </p>
+        </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Item 1 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/menu/allstar_recipe1.jpg" alt="All-Star Special with Classic Waffle & Sausage Patties" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Special with Classic Waffle & Sausage Patties</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$11.99</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">One classic golden sweet cream waffle, two farm eggs cooked to order, two country sausage patties seared hot, regular hashbrowns, and buttered toast.</p>
-            </div>
-          </div>
-        </article>
+        <!-- 3-Column Responsive Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 
-        <!-- Item 2 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/menu/allstar_recipe2.jpg" alt="All-Star Special with Classic Waffle & Bacon" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Special with Classic Waffle & Bacon (3 Slices)</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$11.49</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">Golden sweet cream waffle served with two eggs, three crispy thick-cut hickory smoked bacon strips, crisp hashbrowns, and white toast.</p>
+          <!-- Card 1 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/menu/allstar_recipe1.jpg"
+                alt="All-Star Special with Classic Waffle & Sausage Patties"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
             </div>
-          </div>
-        </article>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Special with Classic Waffle & Sausage Patties
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $11.99
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                One classic golden sweet cream waffle, two farm eggs cooked to order, two country sausage patties seared hot, regular hashbrowns, and buttered toast.
+              </p>
+            </div>
+          </article>
 
-        <!-- Item 3 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/menu/allstar_recipe3.jpg" alt="All-Star Special with Classic Waffle & Chicken Sausage" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Special with Classic Waffle & Chicken Sausage</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$11.99</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">A leaner protein option pairing the classic sweet cream waffle with chicken sausage patties, two eggs, hashbrowns, and toast.</p>
+          <!-- Card 2 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/menu/allstar_recipe2.jpg"
+                alt="All-Star Special with Classic Waffle & Bacon (3 Slices)"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
             </div>
-          </div>
-        </article>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Special with Classic Waffle & Bacon (3 Slices)
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $11.49
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                Golden sweet cream waffle served with two eggs, three crispy thick-cut hickory smoked bacon strips, crisp hashbrowns, and white toast.
+              </p>
+            </div>
+          </article>
 
-        <!-- Item 4 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/blog/Hickory-smoked_city_ham_on_plate_202608101139.jpeg" alt="All-Star Special with City Ham" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Special with City Ham</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$11.79</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">A grilled slice of savory Hickory City Ham paired with a sweet cream waffle, two eggs, hashbrowns, and buttered toast.</p>
+          <!-- Card 3 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/menu/allstar_recipe3.jpg"
+                alt="All-Star Special with Classic Waffle & Chicken Sausage"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
             </div>
-          </div>
-        </article>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Special with Classic Waffle & Chicken Sausage
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $11.99
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                A leaner protein option pairing the classic sweet cream waffle with chicken sausage patties, two eggs, hashbrowns, and toast.
+              </p>
+            </div>
+          </article>
 
-        <!-- Item 5 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/blog/Grilled_country_ham_slice_2K_202608101140.jpeg" alt="All-Star Special with Country Ham" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Special with Country Ham</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$12.49</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">Thick-cut salt-cured Southern country ham seared on the flat-top, served with a waffle, two farm eggs, hashbrowns, and toast.</p>
+          <!-- Card 4 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/blog/Hickory-smoked_city_ham_on_plate_202608101139.jpeg"
+                alt="All-Star Special with City Ham"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
             </div>
-          </div>
-        </article>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Special with City Ham
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $11.79
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                A grilled slice of savory Hickory City Ham paired with a sweet cream waffle, two eggs, hashbrowns, and buttered toast.
+              </p>
+            </div>
+          </article>
 
-        <!-- Item 6 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/blog/Crispy_shredded_potato_hashbrowns_2K_202608101306.jpeg" alt="All-Star Combination with Regular Hashbrowns & White Toast" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Combination with Regular Hashbrowns & White Toast</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$10.99</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">The traditional All-Star setup featuring classic white toast and a single portion of golden shredded hashbrowns.</p>
+          <!-- Card 5 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/blog/Grilled_country_ham_slice_2K_202608101140.jpeg"
+                alt="All-Star Special with Country Ham"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
             </div>
-          </div>
-        </article>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Special with Country Ham
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $12.49
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                Thick-cut salt-cured Southern country ham seared on the flat-top, served with a waffle, two farm eggs, hashbrowns, and toast.
+              </p>
+            </div>
+          </article>
 
-        <!-- Item 7 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/blog/Bowl_of_grits_with_toppings_202608101329.jpeg" alt="All-Star Combination with Wheat Toast & Buttered Grits" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Combination with Wheat Toast & Buttered Grits</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$10.99</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">Subbing hashbrowns for creamy stone-ground buttered grits and white toast for whole wheat toast for a warm Southern twist.</p>
+          <!-- Card 6 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/blog/Crispy_shredded_potato_hashbrowns_2K_202608101306.jpeg"
+                alt="All-Star Combination with Regular Hashbrowns & White Toast"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
             </div>
-          </div>
-        </article>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Combination with Regular Hashbrowns & White Toast
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $10.99
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                The traditional All-Star setup featuring classic white toast and a single portion of golden shredded hashbrowns.
+              </p>
+            </div>
+          </article>
 
-        <!-- Item 8 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/menu/allstar_recipe8.jpg" alt="All-Star Combination with Grilled Biscuit & Sliced Tomatoes" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Combination with Grilled Biscuit & Sliced Tomatoes</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$11.29</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">A lighter side substitution swapping hashbrowns for fresh sliced tomatoes and toast for a split grilled buttermilk biscuit.</p>
+          <!-- Card 7 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/blog/Bowl_of_grits_with_toppings_202608101329.jpeg"
+                alt="All-Star Combination with Wheat Toast & Buttered Grits"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
             </div>
-          </div>
-        </article>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Combination with Wheat Toast & Buttered Grits
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $10.99
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                Subbing hashbrowns for creamy stone-ground buttered grits and white toast for whole wheat toast for a warm Southern twist.
+              </p>
+            </div>
+          </article>
 
-        <!-- Item 9 -->
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-md transition duration-200 border border-gray-100 overflow-hidden flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-gray-50">
-            <img src="assets/blog/Texas_toast_BLT_sandwich_2K_202608101353.jpeg" alt="All-Star Combination with Texas Toast Option" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
-            <span class="absolute top-3 left-3 bg-[#0B0B0E]/80 backdrop-blur-sm text-[#FFC72C] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Breakfast</span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start gap-2 mb-2">
-                <h3 class="font-bold text-lg text-[#0B0B0E] leading-snug">All-Star Combination with Texas Toast Option</h3>
-                <span class="text-lg font-black text-[#0B0B0E] bg-[#FFC72C]/20 px-2.5 py-1 rounded-lg shrink-0">$11.29</span>
-              </div>
-              <p class="text-gray-600 text-sm leading-relaxed">Thick-cut grilled Texas toast added to the complete All-Star platter for extra buttery crunch in every bite.</p>
+          <!-- Card 8 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/menu/allstar_recipe8.jpg"
+                alt="All-Star Combination with Grilled Biscuit & Sliced Tomatoes"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
             </div>
-          </div>
-        </article>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Combination with Grilled Biscuit & Sliced Tomatoes
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $11.29
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                A lighter side substitution swapping hashbrowns for fresh sliced tomatoes and toast for a split grilled buttermilk biscuit.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="bg-white rounded-3xl border-2 border-[#FFC72C] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden h-52 bg-gray-100">
+              <img
+                src="assets/blog/Texas_toast_BLT_sandwich_2K_202608101353.jpeg"
+                alt="All-Star Combination with Texas Toast Option"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600" height="400"
+                decoding="async" />
+              <span class="absolute top-3 left-3 bg-[#FFC72C] text-[#0B0B0E] text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-2xs">
+                Breakfast
+              </span>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B0B0E] font-heading leading-snug group-hover:text-amber-700 transition-colors">
+                  All-Star Combination with Texas Toast Option
+                </h3>
+                <span class="bg-[#FFC72C] text-[#0B0B0E] text-sm font-black px-2.5 py-1 rounded-xl shadow-2xs shrink-0 font-heading">
+                  $11.29
+                </span>
+              </div>
+              <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-sans">
+                Thick-cut grilled Texas toast added to the complete All-Star platter for extra buttery crunch in every bite.
+              </p>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
