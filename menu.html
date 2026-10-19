@@ -8338,34 +8338,34 @@
         <div class="space-y-4" id="faq-accordion-list">
           
           <!-- FAQ 1 -->
-          <div class="faq-accordion-item bg-white rounded-2xl border-2 border-gray-200 overflow-hidden transition-all duration-200 shadow-xs">
-            <button type="button" class="faq-accordion-btn w-full py-5 px-6 text-left font-heading font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFC72C]" aria-expanded="false">
+          <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-xs transition-all">
+            <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-heading font-extrabold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
               <span>What is the cheapest item at Waffle House?</span>
-              <span class="faq-accordion-icon w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-gray-700 transition-transform duration-200 font-bold text-sm">↓</span>
+              <span class="faq-icon text-[#FFC72C] font-black text-xl shrink-0 transition-transform duration-200">&darr;</span>
             </button>
-            <div class="faq-accordion-content hidden px-6 pb-6 text-sm sm:text-base text-gray-700 leading-relaxed border-t border-gray-100 pt-4 font-sans">
+            <div class="faq-content hidden px-5 pb-5 text-gray-700 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3 font-sans">
               The Grilled Biscuit ($2.65, 280 Cal) is the lowest-priced food item, while a Classic Waffle ($4.95, 410 Cal) is the most budget-friendly complete plate. Hot beverages like regular coffee also start at $2.65.
             </div>
           </div>
 
           <!-- FAQ 2 -->
-          <div class="faq-accordion-item bg-white rounded-2xl border-2 border-gray-200 overflow-hidden transition-all duration-200 shadow-xs">
-            <button type="button" class="faq-accordion-btn w-full py-5 px-6 text-left font-heading font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFC72C]" aria-expanded="false">
+          <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-xs transition-all">
+            <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-heading font-extrabold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
               <span>Do Waffle House prices vary by location?</span>
-              <span class="faq-accordion-icon w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-gray-700 transition-transform duration-200 font-bold text-sm">↓</span>
+              <span class="faq-icon text-[#FFC72C] font-black text-xl shrink-0 transition-transform duration-200">&darr;</span>
             </button>
-            <div class="faq-accordion-content hidden px-6 pb-6 text-sm sm:text-base text-gray-700 leading-relaxed border-t border-gray-100 pt-4 font-sans">
+            <div class="faq-content hidden px-5 pb-5 text-gray-700 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3 font-sans">
               Yes, prices may vary slightly by state and franchise location due to local operating costs, sales taxes, and regional distribution. The prices listed in this guide reflect standard 2026 corporate averages.
             </div>
           </div>
 
           <!-- FAQ 3 -->
-          <div class="faq-accordion-item bg-white rounded-2xl border-2 border-gray-200 overflow-hidden transition-all duration-200 shadow-xs">
-            <button type="button" class="faq-accordion-btn w-full py-5 px-6 text-left font-heading font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFC72C]" aria-expanded="false">
+          <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-xs transition-all">
+            <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-heading font-extrabold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
               <span>How many items are on the full menu?</span>
-              <span class="faq-accordion-icon w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-gray-700 transition-transform duration-200 font-bold text-sm">↓</span>
+              <span class="faq-icon text-[#FFC72C] font-black text-xl shrink-0 transition-transform duration-200">&darr;</span>
             </button>
-            <div class="faq-accordion-content hidden px-6 pb-6 text-sm sm:text-base text-gray-700 leading-relaxed border-t border-gray-100 pt-4 font-sans">
+            <div class="faq-content hidden px-5 pb-5 text-gray-700 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3 font-sans">
               Over 73 verified menu items across 13 categories are covered on this menu, including customizable hashbrown bowls, signature Texas melts, classic waffles, egg breakfasts, and southern dinners.
             </div>
           </div>
@@ -8640,20 +8640,20 @@
     });
 
     // 3. FAQ Accordion (Single-Open behavior)
-    const faqItems = document.querySelectorAll('.faq-accordion-item');
+    const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
-      const btn = item.querySelector('.faq-accordion-btn');
-      const content = item.querySelector('.faq-accordion-content');
-      const icon = item.querySelector('.faq-accordion-icon');
+      const btn = item.querySelector('.faq-btn');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
 
       btn.addEventListener('click', () => {
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
         // Close all other accordion items
         faqItems.forEach(otherItem => {
-          const otherBtn = otherItem.querySelector('.faq-accordion-btn');
-          const otherContent = otherItem.querySelector('.faq-accordion-content');
-          const otherIcon = otherItem.querySelector('.faq-accordion-icon');
+          const otherBtn = otherItem.querySelector('.faq-btn');
+          const otherContent = otherItem.querySelector('.faq-content');
+          const otherIcon = otherItem.querySelector('.faq-icon');
           
           otherBtn.setAttribute('aria-expanded', 'false');
           otherContent.classList.add('hidden');
