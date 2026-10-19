@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://www.wafflehouse-menu.com/locations</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://www.wafflehouse-menu.com/blog/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -84,7 +84,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
+    <url>
+    <loc>https://www.wafflehouse-menu.com/blog/waffle-house-hash-browns/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://www.wafflehouse-menu.com/about</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
