@@ -939,74 +939,70 @@
         </h2>
 
         <!-- FAQ Accordion -->
-        <div class="space-y-4 my-6 not-prose">
-
-          <!-- FAQ 1 -->
-          <div class="rounded-2xl border-2 border-gray-200 bg-white overflow-hidden shadow-xs">
-            <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between font-heading font-black text-sm sm:text-base text-[#0B0B0E] hover:bg-gray-50 cursor-pointer" aria-expanded="false">
-              <span>What are all the ways to order hash browns at Waffle House?</span>
-              <span class="faq-icon text-lg text-amber-600 font-black">&darr;</span>
-            </button>
-            <div class="faq-content hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-              There are eight official topping terms: Scattered (spread on grill), Smothered (sautéed onions), Covered (melted American cheese), Chunked (hickory-smoked ham), Diced (grilled tomatoes), Peppered (jalapeño peppers), Capped (grilled button mushrooms), Topped (Bert's chili), and Country (sausage gravy). Ordering "All the Way" gives you all toppings combined.
+        <!-- FAQ Container with Brand Yellow Border -->
+        <div class="border-2 border-[#FFC72C] rounded-3xl p-5 sm:p-7 bg-[#FAF7F0] shadow-sm my-6 not-prose">
+          <div class="space-y-3 font-sans" id="faq-accordion">
+            <!-- FAQ 1 -->
+            <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-2xs">
+              <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
+                <span>What are all the ways to order hash browns at Waffle House?</span>
+                <span class="faq-icon text-[#0B0B0E] font-black text-base shrink-0 transition-transform duration-200">&darr;</span>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3">
+                There are eight official topping terms: Scattered (spread on grill), Smothered (saut&eacute;ed onions), Covered (melted American cheese), Chunked (hickory-smoked ham), Diced (grilled tomatoes), Peppered (jalape&ntilde;o peppers), Capped (grilled button mushrooms), Topped (Bert's chili), and Country (sausage gravy). Ordering "All the Way" gives you all toppings combined.
+              </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-2xs">
+              <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
+                <span>How much do Waffle House hash browns cost in 2026?</span>
+                <span class="faq-icon text-[#0B0B0E] font-black text-base shrink-0 transition-transform duration-200">&darr;</span>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3">
+                Plain hash browns average $3.15 for Regular, $3.65 for Large, and $4.15 for Triple. Adding toppings generally costs around $0.60 to $0.85 per topping, or you can order "All the Way" for approximately $6.00 to $7.25 depending on size and local pricing.
+              </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-2xs">
+              <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
+                <span>How many calories are in Waffle House hash browns?</span>
+                <span class="faq-icon text-[#0B0B0E] font-black text-base shrink-0 transition-transform duration-200">&darr;</span>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3">
+                A plain Regular order contains about 190 calories, Large has 380 calories, and Triple contains 570 calories. Topping with cheese adds about 100 calories, onions add 45 calories, chili adds 110 calories, and sausage gravy adds 90 calories.
+              </div>
+            </div>
+            <!-- FAQ 4 -->
+            <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-2xs">
+              <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
+                <span>Why are Waffle House hash browns so crispy?</span>
+                <span class="faq-icon text-[#0B0B0E] font-black text-base shrink-0 transition-transform duration-200">&darr;</span>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3">
+                Waffle House uses dehydrated Idaho shredded russet potatoes rehydrated in water, cooked in metal rings on a blazing flat-top grill lubricated with a custom butter-flavored vegetable oil blend, achieving maximum surface crunch without getting soggy.
+              </div>
+            </div>
+            <!-- FAQ 5 -->
+            <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-2xs">
+              <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
+                <span>Can you order hash browns well-done or steamed?</span>
+                <span class="faq-icon text-[#0B0B0E] font-black text-base shrink-0 transition-transform duration-200">&darr;</span>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3">
+                Yes. You can ask for your hash browns "scattered well-done" for extra brown crunch, or "steamed" where the cook covers them under a metal dome with an ice cube to cook the potatoes with minimal oil.
+              </div>
+            </div>
+            <!-- FAQ 6 -->
+            <div class="faq-item bg-white border-2 border-[#FFC72C] rounded-2xl overflow-hidden shadow-2xs">
+              <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left font-bold text-base sm:text-lg text-[#0B0B0E] flex items-center justify-between gap-4 focus:outline-none cursor-pointer" aria-expanded="false">
+                <span>Are Waffle House hash browns gluten-free?</span>
+                <span class="faq-icon text-[#0B0B0E] font-black text-base shrink-0 transition-transform duration-200">&darr;</span>
+              </button>
+              <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed border-t border-amber-100 pt-3">
+                The plain shredded potatoes and onions do not naturally contain gluten, but they are prepared on shared flat-top grills where Texas toast, hamburger buns, and waffles are prepared, presenting a high risk of cross-contact. Visit our <a href="/waffle-house-calories-allergies/" class="underline font-bold text-[#0B0B0E]">Calorie &amp; Allergen Guide</a> for more information.
+              </div>
             </div>
           </div>
-
-          <!-- FAQ 2 -->
-          <div class="rounded-2xl border-2 border-gray-200 bg-white overflow-hidden shadow-xs">
-            <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between font-heading font-black text-sm sm:text-base text-[#0B0B0E] hover:bg-gray-50 cursor-pointer" aria-expanded="false">
-              <span>How much do Waffle House hash browns cost in 2026?</span>
-              <span class="faq-icon text-lg text-amber-600 font-black">&darr;</span>
-            </button>
-            <div class="faq-content hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-              Plain hash browns average $3.15 for Regular, $3.65 for Large, and $4.15 for Triple. Adding toppings generally costs around $0.60 to $0.85 per topping, or you can order "All the Way" for approximately $6.00 to $7.25 depending on size and local pricing.
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="rounded-2xl border-2 border-gray-200 bg-white overflow-hidden shadow-xs">
-            <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between font-heading font-black text-sm sm:text-base text-[#0B0B0E] hover:bg-gray-50 cursor-pointer" aria-expanded="false">
-              <span>How many calories are in Waffle House hash browns?</span>
-              <span class="faq-icon text-lg text-amber-600 font-black">&darr;</span>
-            </button>
-            <div class="faq-content hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-              A plain Regular order contains about 190 calories, Large has 380 calories, and Triple contains 570 calories. Topping with cheese adds about 100 calories, onions add 45 calories, chili adds 110 calories, and sausage gravy adds 90 calories.
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="rounded-2xl border-2 border-gray-200 bg-white overflow-hidden shadow-xs">
-            <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between font-heading font-black text-sm sm:text-base text-[#0B0B0E] hover:bg-gray-50 cursor-pointer" aria-expanded="false">
-              <span>Why are Waffle House hash browns so crispy?</span>
-              <span class="faq-icon text-lg text-amber-600 font-black">&darr;</span>
-            </button>
-            <div class="faq-content hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-              Waffle House uses dehydrated Idaho shredded russet potatoes rehydrated in water, cooked in metal rings on a blazing flat-top grill lubricated with a custom butter-flavored vegetable oil blend, achieving maximum surface crunch without getting soggy.
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="rounded-2xl border-2 border-gray-200 bg-white overflow-hidden shadow-xs">
-            <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between font-heading font-black text-sm sm:text-base text-[#0B0B0E] hover:bg-gray-50 cursor-pointer" aria-expanded="false">
-              <span>Can you order hash browns well-done or steamed?</span>
-              <span class="faq-icon text-lg text-amber-600 font-black">&darr;</span>
-            </button>
-            <div class="faq-content hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-              Yes. You can ask for your hash browns "scattered well-done" for extra brown crunch, or "steamed" where the cook covers them under a metal dome with an ice cube to cook the potatoes with minimal oil.
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="rounded-2xl border-2 border-gray-200 bg-white overflow-hidden shadow-xs">
-            <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between font-heading font-black text-sm sm:text-base text-[#0B0B0E] hover:bg-gray-50 cursor-pointer" aria-expanded="false">
-              <span>Are Waffle House hash browns gluten-free?</span>
-              <span class="faq-icon text-lg text-amber-600 font-black">&darr;</span>
-            </button>
-            <div class="faq-content hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100">
-              The plain shredded potatoes and onions do not naturally contain gluten, but they are prepared on shared flat-top grills where Texas toast, hamburger buns, and waffles are prepared, presenting a high risk of cross-contact. Visit our <a href="/waffle-house-calories-allergies/" class="underline font-bold text-[#0B0B0E]">Calorie &amp; Allergen Guide</a> for more information.
-            </div>
-          </div>
-
         </div>
 
         <!-- Related Guides Card Box -->
@@ -1155,69 +1151,53 @@
   </script>
 
   <!-- Mobile Navigation Drawer Controller (Cheesecake Factory Smooth Side-Drawer) -->
-  <script>
-    (function() {
-      function initMobileDrawer() {
-        const openBtn = document.getElementById('mobile-menu-btn');
-        const closeBtn = document.getElementById('mobile-nav-close-btn');
-        const backdrop = document.getElementById('mobile-nav-backdrop');
-        const wrapper = document.getElementById('mobile-nav-wrapper');
-        const drawer = document.getElementById('mobile-nav');
+    <script>
+    // Universal FAQ Accordion Toggle
+    document.querySelectorAll('.faq-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item') || button.parentElement;
+        const content = item ? item.querySelector('.faq-content') : button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-        if (!openBtn || !wrapper || !drawer) return;
-
-        function openDrawer() {
-          document.body.classList.add('mobile-nav-open');
-          wrapper.setAttribute('aria-hidden', 'false');
-          openBtn.setAttribute('aria-expanded', 'true');
-          if (closeBtn) closeBtn.focus();
+        button.setAttribute('aria-expanded', !isExpanded);
+        if (content) {
+          content.classList.toggle('hidden');
         }
-
-        function closeDrawer() {
-          document.body.classList.remove('mobile-nav-open');
-          wrapper.setAttribute('aria-hidden', 'true');
-          openBtn.setAttribute('aria-expanded', 'false');
+        if (icon) {
+          icon.innerHTML = isExpanded ? '&darr;' : '&uarr;';
         }
+      });
+    });
 
-        openBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          openDrawer();
-        });
+    // Mobile Navigation Drawer Controller
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNavWrapper = document.getElementById('mobile-nav-wrapper');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
+    const mobileNavClose = document.getElementById('mobile-nav-close');
 
-        if (closeBtn) {
-          closeBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            closeDrawer();
-          });
-        }
+    function openMobileMenu() {
+      if (!mobileNavWrapper || !mobileNav) return;
+      mobileNavWrapper.classList.remove('hidden');
+      setTimeout(() => {
+        mobileNav.classList.remove('-translate-x-full');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
 
-        if (backdrop) {
-          backdrop.addEventListener('click', function(e) {
-            e.preventDefault();
-            closeDrawer();
-          });
-        }
+    function closeMobileMenu() {
+      if (!mobileNavWrapper || !mobileNav) return;
+      mobileNav.classList.add('-translate-x-full');
+      setTimeout(() => {
+        mobileNavWrapper.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
 
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && document.body.classList.contains('mobile-nav-open')) {
-            closeDrawer();
-          }
-        });
-
-        drawer.querySelectorAll('a').forEach(function(link) {
-          link.addEventListener('click', function() {
-            closeDrawer();
-          });
-        });
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initMobileDrawer);
-      } else {
-        initMobileDrawer();
-      }
-    })();
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+    if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileMenu);
+    if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileMenu);
   </script>
 </body>
 </html>

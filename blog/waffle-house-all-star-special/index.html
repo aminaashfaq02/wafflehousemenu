@@ -1036,63 +1036,59 @@
   </main>
 
   <!-- ================= 4. FOOTER ================= -->
-  <footer id="footer-section" class="bg-[#0B0B0E] text-white pt-10 pb-8 font-sans border-t border-gray-800">
+    <!-- ================= 4. FOOTER: REUSABLE SITE FOOTER ================= -->
+  <footer class="bg-[#0B0B0E] text-white pt-12 pb-10 border-t-4 border-[#FFC72C] font-sans">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Top Section -->
-      <div class="mb-8 pb-6 border-b border-gray-800/80">
-        <div class="flex items-center gap-2.5 mb-2">
-          <img src="/assets/logo-icon.png" width="32" height="32" alt="Waffle House Menu Logo" decoding="async" loading="lazy" class="w-8 h-8 shrink-0 rounded-lg">
-          <span class="font-heading font-black text-lg text-white tracking-tight">
-            WaffleHouse <span class="text-[#FFC72C]">Menu Guide</span>
-          </span>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        <!-- Col 1: Brand & Disclaimer -->
+        <div class="space-y-3">
+          <div class="text-xl font-black tracking-tight text-[#FFC72C]">
+            Waffle House Menu Guide
+          </div>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Independent informational guide dedicated to providing up-to-date Waffle House menu prices, nutritional breakdowns, and dining tips. Not affiliated with or endorsed by Waffle House, Inc.
+          </p>
         </div>
-        <p class="text-gray-400 text-xs leading-relaxed max-w-xl">
-          Your complete guide to the Waffle House menu, including current prices, full nutrition facts, allergen information, catering options, and restaurant locations across the United States.
-        </p>
+
+        <!-- Col 2: Popular Guides -->
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-3">Popular Guides</h4>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li><a href="/menu" class="hover:text-[#FFC72C] transition-colors">Complete Menu &amp; Prices</a></li>
+            <li><a href="/blog/waffle-house-all-star-special/" class="hover:text-[#FFC72C] transition-colors">All-Star Special Breakdown</a></li>
+            <li><a href="/blog/waffle-house-hash-browns/" class="hover:text-[#FFC72C] transition-colors">Hashbrown Ways &amp; Lingo</a></li>
+            <li><a href="/blog/healthiest-breakfast-for-weight-loss/" class="hover:text-[#FFC72C] transition-colors">Healthiest Breakfast Guide</a></li>
+            <li><a href="/blog/waffle-house-thanksgiving-hours/" class="hover:text-[#FFC72C] transition-colors">Holiday &amp; Thanksgiving Hours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Nutrition & Diets -->
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-3">Nutrition &amp; Diets</h4>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li><a href="/nutrition" class="hover:text-[#FFC72C] transition-colors">Full Nutrition Hub</a></li>
+            <li><a href="/waffle-house-calories-allergies/" class="hover:text-[#FFC72C] transition-colors">Calorie &amp; Allergen Chart</a></li>
+            <li><a href="/waffle-house-dietary-guide/" class="hover:text-[#FFC72C] transition-colors">Keto &amp; Gluten-Free Options</a></li>
+            <li><a href="/waffle-house-catering/" class="hover:text-[#FFC72C] transition-colors">Catering Menu &amp; Trays</a></li>
+            <li><a href="/locations" class="hover:text-[#FFC72C] transition-colors">Locations &amp; Hours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Contact -->
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-3">Information</h4>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li><a href="/about" class="hover:text-[#FFC72C] transition-colors">About Our Team</a></li>
+            <li><a href="/contact" class="hover:text-[#FFC72C] transition-colors">Contact Us</a></li>
+            <li><a href="/privacy" class="hover:text-[#FFC72C] transition-colors">Privacy Policy</a></li>
+            <li><a href="/terms" class="hover:text-[#FFC72C] transition-colors">Terms of Service</a></li>
+            <li><a href="/disclaimer" class="hover:text-[#FFC72C] transition-colors">Disclaimer</a></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- 3-Column Navigation Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 pb-8 border-b border-gray-800/80">
-        <div>
-          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">Menu &amp; nutrition</h4>
-          <ul class="space-y-2 text-[13px]">
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/menu">Full menu</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/nutrition">Nutrition</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/waffle-house-calories-allergies/">Allergen filter</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/waffle-house-dietary-guide/">Dietary guides</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/waffle-house-catering/">Catering</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/prices-by-state">Prices by State</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">Plan a visit</h4>
-          <ul class="space-y-2 text-[13px]">
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/locations">All locations</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/locations#hours-fema">Store Hours &amp; 24/7 Dining</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/coupons">Deals &amp; Discounts</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/blog/">Diner Guides Blog</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">About this guide</h4>
-          <ul class="space-y-2 text-[13px]">
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/about">About Us</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/contact">Contact</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/privacy-policy">Privacy policy</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/terms-and-conditions">Terms &amp; conditions</a></li>
-            <li><a class="text-gray-400 hover:text-[#FFC72C] transition-colors inline-block" href="/disclaimer">Disclaimer</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Legal Disclaimer -->
-      <div class="pt-6 text-gray-500 text-[11px] leading-relaxed">
-        <p class="mb-2">
-          Disclaimer: WaffleHouse-Menu.com is an independent, unofficial fan guide and informational blog. We are not affiliated with, endorsed by, or sponsored by Waffle House, Inc. All trademarks, service marks, logos, and brand names are the property of their respective owners.
-        </p>
-        <p>
-          &copy; 2026 Waffle House Menu Guide. All rights reserved.
-        </p>
+      <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+        <p>&copy; 2026 WaffleHouse-Menu.com &bull; Independent Consumer Guide. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -1131,69 +1127,53 @@
   </script>
 
   <!-- Mobile Navigation Drawer Controller (Cheesecake Factory Smooth Side-Drawer) -->
-  <script>
-    (function() {
-      function initMobileDrawer() {
-        const openBtn = document.getElementById('mobile-menu-btn');
-        const closeBtn = document.getElementById('mobile-nav-close-btn');
-        const backdrop = document.getElementById('mobile-nav-backdrop');
-        const wrapper = document.getElementById('mobile-nav-wrapper');
-        const drawer = document.getElementById('mobile-nav');
+    <script>
+    // Universal FAQ Accordion Toggle
+    document.querySelectorAll('.faq-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item') || button.parentElement;
+        const content = item ? item.querySelector('.faq-content') : button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-        if (!openBtn || !wrapper || !drawer) return;
-
-        function openDrawer() {
-          document.body.classList.add('mobile-nav-open');
-          wrapper.setAttribute('aria-hidden', 'false');
-          openBtn.setAttribute('aria-expanded', 'true');
-          if (closeBtn) closeBtn.focus();
+        button.setAttribute('aria-expanded', !isExpanded);
+        if (content) {
+          content.classList.toggle('hidden');
         }
-
-        function closeDrawer() {
-          document.body.classList.remove('mobile-nav-open');
-          wrapper.setAttribute('aria-hidden', 'true');
-          openBtn.setAttribute('aria-expanded', 'false');
+        if (icon) {
+          icon.innerHTML = isExpanded ? '&darr;' : '&uarr;';
         }
+      });
+    });
 
-        openBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          openDrawer();
-        });
+    // Mobile Navigation Drawer Controller
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNavWrapper = document.getElementById('mobile-nav-wrapper');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
+    const mobileNavClose = document.getElementById('mobile-nav-close');
 
-        if (closeBtn) {
-          closeBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            closeDrawer();
-          });
-        }
+    function openMobileMenu() {
+      if (!mobileNavWrapper || !mobileNav) return;
+      mobileNavWrapper.classList.remove('hidden');
+      setTimeout(() => {
+        mobileNav.classList.remove('-translate-x-full');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
 
-        if (backdrop) {
-          backdrop.addEventListener('click', function(e) {
-            e.preventDefault();
-            closeDrawer();
-          });
-        }
+    function closeMobileMenu() {
+      if (!mobileNavWrapper || !mobileNav) return;
+      mobileNav.classList.add('-translate-x-full');
+      setTimeout(() => {
+        mobileNavWrapper.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
 
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && document.body.classList.contains('mobile-nav-open')) {
-            closeDrawer();
-          }
-        });
-
-        drawer.querySelectorAll('a').forEach(function(link) {
-          link.addEventListener('click', function() {
-            closeDrawer();
-          });
-        });
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initMobileDrawer);
-      } else {
-        initMobileDrawer();
-      }
-    })();
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+    if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileMenu);
+    if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileMenu);
   </script>
 </body>
 </html>
