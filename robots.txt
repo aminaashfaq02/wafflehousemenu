@@ -1,6 +1,9 @@
 # robots.txt for Waffle House Menu Guide
 # https://www.wafflehouse-menu.com
 
+User-agent: Mediapartners-Google
+Allow: /
+
 User-agent: *
 Allow: /
 
