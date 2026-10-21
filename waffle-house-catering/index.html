@@ -1797,23 +1797,31 @@
   <!-- FAQ Accordion & Navigation Script -->
   <script>
     // FAQ Accordion Toggle
-    const faqButtons = document.querySelectorAll('.faq-btn');
-    faqButtons.forEach(btn => {
-      btn.addEventListener('click', function () {
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        const content = this.nextElementSibling;
-        const icon = this.querySelector('.faq-icon');
-        
-        this.setAttribute('aria-expanded', !expanded);
-        if (!expanded) {
-          content.classList.remove('hidden');
-          if (icon) icon.innerHTML = '&uarr;';
-        } else {
-          content.classList.add('hidden');
-          if (icon) icon.innerHTML = '&darr;';
-        }
+    function initCateringFaqAccordion() {
+      const faqButtons = document.querySelectorAll('.faq-btn');
+      faqButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          const content = this.nextElementSibling;
+          const icon = this.querySelector('.faq-icon');
+          
+          this.setAttribute('aria-expanded', !expanded);
+          if (!expanded) {
+            content.classList.remove('hidden');
+            if (icon) icon.innerHTML = '&uarr;';
+          } else {
+            content.classList.add('hidden');
+            if (icon) icon.innerHTML = '&darr;';
+          }
+        });
       });
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCateringFaqAccordion);
+    } else {
+      initCateringFaqAccordion();
+    }
 
     // Mobile Navigation Toggle
     const mobileBtn = document.getElementById('mobile-menu-btn');
