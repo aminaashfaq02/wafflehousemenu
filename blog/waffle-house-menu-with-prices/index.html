@@ -1087,59 +1087,184 @@
 
   <!-- ================= SLEEK PROFESSIONAL FOOTER ================= -->
     <!-- ================= 4. FOOTER: REUSABLE SITE FOOTER ================= -->
-  <footer class="bg-[#0B0B0E] text-white pt-12 pb-10 border-t-4 border-[#FFC72C] font-sans">
+  <footer id="footer-section" class="bg-[#0B0B0E] text-white pt-10 pb-8 font-sans border-t border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
-        <!-- Col 1: Brand & Disclaimer -->
-        <div class="space-y-3">
-          <div class="text-xl font-black tracking-tight text-[#FFC72C]">
-            Waffle House Menu Guide
-          </div>
-          <p class="text-gray-400 text-xs leading-relaxed">
-            Independent informational guide dedicated to providing up-to-date Waffle House menu prices, nutritional breakdowns, and dining tips. Not affiliated with or endorsed by Waffle House, Inc.
-          </p>
+      
+      <!-- Top Section: Brand Identity & Intro Tagline -->
+      <div class="mb-8 pb-6 border-b border-gray-800/80">
+        <div class="flex items-center gap-2.5 mb-2">
+          <img src="/assets/logo-icon.png" width="32" height="32" alt="Waffle House Menu Guide Logo" decoding="async" loading="lazy" class="w-8 h-8 shrink-0 rounded-lg">
+          <span class="font-heading font-black text-lg text-white tracking-tight">
+            WaffleHouse <span class="text-[#FFC72C]">Menu Guide</span>
+          </span>
         </div>
-
-        <!-- Col 2: Popular Guides -->
-        <div>
-          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-3">Popular Guides</h4>
-          <ul class="space-y-2 text-xs text-gray-400">
-            <li><a href="/menu" class="hover:text-[#FFC72C] transition-colors">Complete Menu &amp; Prices</a></li>
-            <li><a href="/blog/waffle-house-all-star-special/" class="hover:text-[#FFC72C] transition-colors">All-Star Special Breakdown</a></li>
-            <li><a href="/blog/waffle-house-hash-browns/" class="hover:text-[#FFC72C] transition-colors">Hashbrown Ways &amp; Lingo</a></li>
-            <li><a href="/blog/healthiest-breakfast-for-weight-loss/" class="hover:text-[#FFC72C] transition-colors">Healthiest Breakfast Guide</a></li>
-            <li><a href="/blog/waffle-house-thanksgiving-hours/" class="hover:text-[#FFC72C] transition-colors">Holiday &amp; Thanksgiving Hours</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Nutrition & Diets -->
-        <div>
-          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-3">Nutrition &amp; Diets</h4>
-          <ul class="space-y-2 text-xs text-gray-400">
-            <li><a href="/nutrition" class="hover:text-[#FFC72C] transition-colors">Full Nutrition Hub</a></li>
-            <li><a href="/waffle-house-calories-allergies/" class="hover:text-[#FFC72C] transition-colors">Calorie &amp; Allergen Chart</a></li>
-            <li><a href="/waffle-house-dietary-guide/" class="hover:text-[#FFC72C] transition-colors">Keto &amp; Gluten-Free Options</a></li>
-            <li><a href="/waffle-house-catering/" class="hover:text-[#FFC72C] transition-colors">Catering Menu &amp; Trays</a></li>
-            <li><a href="/locations" class="hover:text-[#FFC72C] transition-colors">Locations &amp; Hours</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Legal & Contact -->
-        <div>
-          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-3">Information</h4>
-          <ul class="space-y-2 text-xs text-gray-400">
-            <li><a href="/about" class="hover:text-[#FFC72C] transition-colors">About Our Team</a></li>
-            <li><a href="/contact" class="hover:text-[#FFC72C] transition-colors">Contact Us</a></li>
-            <li><a href="/privacy" class="hover:text-[#FFC72C] transition-colors">Privacy Policy</a></li>
-            <li><a href="/terms" class="hover:text-[#FFC72C] transition-colors">Terms of Service</a></li>
-            <li><a href="/disclaimer" class="hover:text-[#FFC72C] transition-colors">Disclaimer</a></li>
-          </ul>
-        </div>
+        <p class="text-gray-400 text-xs leading-relaxed max-w-xl">
+          Your complete guide to the Waffle House menu, including current prices, full nutrition facts, allergen information, catering options, and restaurant locations across the United States.
+        </p>
       </div>
 
-      <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
-        <p>&copy; 2026 WaffleHouse-Menu.com &bull; Independent Consumer Guide. All rights reserved.</p>
+      <!-- 3-Column Navigation Grid (Cheesecake Factory Guide Structure) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 pb-8 border-b border-gray-800/80">
+        
+        <!-- Column 1: Menu & nutrition -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">
+            Menu &amp; nutrition
+          </h4>
+          <ul class="space-y-2 text-[13px]">
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/menu">
+                Full menu
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/nutrition">
+                Nutrition
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-calories-allergies/">
+                Allergen filter
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-dietary-guide/">
+                Dietary guides
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/nutrition-guide-2026">
+                Nutrition guide 2026 (PDF)
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/menu#panel-waffles">
+                Breakfast &amp; Waffles
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/">
+                Catering
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/prices-by-state">
+                Prices by State (25 States)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Plan a visit -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">
+            Plan a visit
+          </h4>
+          <ul class="space-y-2 text-[13px]">
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/locations">
+                All locations
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/locations#hours-fema">
+                Store Hours &amp; 24/7 Dining
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#food-truck">
+                Food truck catering
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#wedding-catering">
+                Wedding catering
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#corporate-catering">
+                Corporate catering
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#school-events">
+                School &amp; other events
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/waffle-house-catering/#birthday-catering">
+                Birthday parties
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/coupons">
+                Deals &amp; Regulars Club
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/blog/">
+                Blog &amp; diner guides
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: About & Legal -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-[13px] uppercase tracking-wider mb-3.5">
+            About &amp; Legal
+          </h4>
+          <ul class="space-y-2 text-[13px]">
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/about">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/#faq">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/contact">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/privacy-policy">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/terms-and-conditions">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/disclaimer">
+                Disclaimer
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-[#FFC72C] transition-colors duration-150 inline-block" href="/cookies-policy">
+                Cookies Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
+
+      <!-- Bottom Legal Disclaimer & Copyright (Cheesecake Factory Style) -->
+      <div class="pt-6 text-xs text-gray-500 leading-relaxed space-y-2">
+        <p class="text-[11px] leading-relaxed text-gray-400">
+          Waffle House Menu Guide is not affiliated with, endorsed by, or sponsored by Waffle House, Inc. Prices, nutrition, and availability are compiled from published sources. Prices are the restaurant&#39;s published figures and can vary by location and over time. For food allergies, always confirm directly with restaurant staff. <a href="/disclaimer" class="text-gray-300 underline hover:text-[#FFC72C] transition-colors">Full disclaimer</a> &middot; <a href="/about" class="text-gray-300 underline hover:text-[#FFC72C] transition-colors">About us</a>
+        </p>
+        <p class="text-gray-500 text-[11px]">
+          &copy; 2026 Waffle House Menu Guide. All rights reserved.
+        </p>
+      </div>
+
     </div>
   </footer>
 
