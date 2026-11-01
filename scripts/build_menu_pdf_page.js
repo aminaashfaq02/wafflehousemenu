@@ -662,179 +662,128 @@ function generateHtml() {
       </div>
     </section>
 
-    <!-- ================= WHAT'S INSIDE SECTION (CHEESECAKE FACTORY EXACT 3 CARDS) ================= -->
+    <!-- ================= WHAT'S INSIDE SECTION (PERFECTLY ALIGNED CHEESECAKE FACTORY STYLE) ================= -->
     <section class="py-14 md:py-16 px-4 bg-[#FBFBFC] border-b border-gray-200">
       <div class="max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <p class="text-gray-500 text-xs font-black uppercase tracking-[0.2em] font-heading mb-2">Guide Overview</p>
+        
+        <!-- Eyebrow & Title (Aligned Left to Match Reference Design) -->
+        <div class="mb-8 md:mb-10">
+          <span class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-amber-700 font-heading block mb-1.5">
+            What's inside
+          </span>
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B0B0E] font-heading uppercase tracking-tight">
-            What's Inside
+            Laid out like a menu you'd hand around a table
           </h2>
-          <p class="text-gray-600 text-sm sm:text-base mt-2">
-            Every diner favorite laid out clearly for easy kitchen reference, travel planning, and group orders.
-          </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 3 Perfectly Aligned Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           
           <!-- Card 1: A contents page that jumps -->
-          <div class="bg-white rounded-3xl p-7 border-2 border-gray-200 hover:border-[#FFC72C] transition-all shadow-xs flex flex-col">
-            <div class="w-12 h-12 rounded-2xl bg-[#FFF8E1] border border-[#FFC72C] flex items-center justify-center text-[#0B0B0E] font-black text-xl mb-5 font-heading">
-              1
+          <div class="bg-white rounded-2xl border-2 border-gray-200 hover:border-[#FFC72C] p-6 sm:p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center gap-3.5 mb-3.5">
+                <span class="w-8 h-8 rounded-lg bg-[#FFC72C] text-[#0B0B0E] font-black text-sm flex items-center justify-center font-heading shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                  1
+                </span>
+                <h3 class="text-lg sm:text-xl font-black text-[#0B0B0E] font-heading tracking-tight leading-snug">
+                  A contents page that jumps
+                </h3>
+              </div>
+              <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed">
+                The first page lays out all 12 diner sections — from Breakfast Classics to Hashbrown Bowls, Texas Melts, and Beverages. On tablets, phones, or PDF readers, every section header links right to that page.
+              </p>
             </div>
-            <h3 class="text-xl font-black text-[#0B0B0E] font-heading mb-3">A contents page that jumps</h3>
-            <p class="text-gray-600 text-sm leading-relaxed flex-1">
-              The first page lays out all 12 diner sections — from Breakfast Classics to Hashbrown Bowls, Texas Melts, and Beverages. On tablets, phones, or PDF readers, every section header links right to that page.
-            </p>
           </div>
 
           <!-- Card 2: One line per dish -->
-          <div class="bg-white rounded-3xl p-7 border-2 border-gray-200 hover:border-[#FFC72C] transition-all shadow-xs flex flex-col">
-            <div class="w-12 h-12 rounded-2xl bg-[#FFF8E1] border border-[#FFC72C] flex items-center justify-center text-[#0B0B0E] font-black text-xl mb-5 font-heading">
-              2
+          <div class="bg-white rounded-2xl border-2 border-gray-200 hover:border-[#FFC72C] p-6 sm:p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center gap-3.5 mb-3.5">
+                <span class="w-8 h-8 rounded-lg bg-[#FFC72C] text-[#0B0B0E] font-black text-sm flex items-center justify-center font-heading shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                  2
+                </span>
+                <h3 class="text-lg sm:text-xl font-black text-[#0B0B0E] font-heading tracking-tight leading-snug">
+                  One line per dish
+                </h3>
+              </div>
+              <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed">
+                Every dish gets a single horizontal row across landscape orientation: calories, total fat, saturated fat, sodium, carbs, protein, and allergens clearly printed beside each item for immediate comparison.
+              </p>
             </div>
-            <h3 class="text-xl font-black text-[#0B0B0E] font-heading mb-3">One line per dish</h3>
-            <p class="text-gray-600 text-sm leading-relaxed flex-1">
-              Every dish gets a single horizontal row across landscape orientation: calories, total fat, saturated fat, sodium, carbs, protein, and allergens clearly printed beside each item for immediate comparison.
-            </p>
           </div>
 
           <!-- Card 3: Built for paper -->
-          <div class="bg-white rounded-3xl p-7 border-2 border-gray-200 hover:border-[#FFC72C] transition-all shadow-xs flex flex-col">
-            <div class="w-12 h-12 rounded-2xl bg-[#FFF8E1] border border-[#FFC72C] flex items-center justify-center text-[#0B0B0E] font-black text-xl mb-5 font-heading">
-              3
+          <div class="bg-white rounded-2xl border-2 border-gray-200 hover:border-[#FFC72C] p-6 sm:p-7 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center gap-3.5 mb-3.5">
+                <span class="w-8 h-8 rounded-lg bg-[#FFC72C] text-[#0B0B0E] font-black text-sm flex items-center justify-center font-heading shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                  3
+                </span>
+                <h3 class="text-lg sm:text-xl font-black text-[#0B0B0E] font-heading tracking-tight leading-snug">
+                  Built for paper
+                </h3>
+              </div>
+              <p class="text-gray-600 text-sm sm:text-[15px] leading-relaxed">
+                Standard US Letter and A4 landscape layout with generous margins. Black text on white with high-contrast tables means your printer uses minimum ink and everything is legible at arm's length.
+              </p>
             </div>
-            <h3 class="text-xl font-black text-[#0B0B0E] font-heading mb-3">Built for paper</h3>
-            <p class="text-gray-600 text-sm leading-relaxed flex-1">
-              Formatted in crisp high-contrast black and yellow tables for standard 8.5 &times; 11 inch US Letter or A4 paper. Crisp typography avoids ink bleeding so you can keep a copy on the fridge or take orders on group runs.
-            </p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ================= PRINTING & PAPER GUIDE ================= -->
-    <section class="py-14 md:py-16 px-4 bg-[#FBFBFC] border-b border-gray-200" id="print-tips">
-      <div class="max-w-5xl mx-auto">
-        
-        <div class="bg-white rounded-3xl border-2 border-[#FFC72C] p-6 sm:p-10 shadow-sm">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.656"/>
-              </svg>
-            </span>
-            <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading uppercase">
-              Paper &amp; Printing Best Practices
-            </h2>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700 leading-relaxed font-sans">
-            <div>
-              <h4 class="font-bold text-[#0B0B0E] text-base mb-1">Standard Paper Formatting (US Letter &amp; A4)</h4>
-              <p class="text-gray-600">
-                In your computer or mobile print dialog, set the orientation to <strong>Landscape</strong> and choose <strong>&ldquo;Fit to printable area&rdquo;</strong>. This prevents margin clipping and keeps all 12 columns perfectly centered across the sheet.
-              </p>
-            </div>
-            <div>
-              <h4 class="font-bold text-[#0B0B0E] text-base mb-1">Double-Sided Printing &amp; Ink Conservation</h4>
-              <p class="text-gray-600">
-                If printing double-sided, select <strong>&ldquo;Flip on short edge&rdquo;</strong> for landscape layouts. To save color cartridge ink, select &ldquo;Black and White / Grayscale&rdquo; — all borders and numbers maintain 100% legibility.
-              </p>
-            </div>
-            <div>
-              <h4 class="font-bold text-[#0B0B0E] text-base mb-1">Group Orders &amp; Road Trip Logistics</h4>
-              <p class="text-gray-600">
-                Printing Pages 1, 4, and 5 provides the essentials for group breakfast call-ins, tailgate catering, sports teams, and road-trippers passing through the Interstate diner corridor.
-              </p>
-            </div>
-            <div>
-              <h4 class="font-bold text-[#0B0B0E] text-base mb-1">Prices &amp; Seasonal Revisions</h4>
-              <p class="text-gray-600">
-                Diner pricing varies slightly by location and local food cost index ($12.35 – $13.55 average for All-Star Special). When menu updates occur, this PDF document is replaced with the latest verified edition.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ================= WHEN THE WEBSITE IS BETTER (CHEESECAKE FACTORY EXACT 4 CARDS) ================= -->
+    <!-- ================= PRINTING IT & WHEN THE WEBSITE IS BETTER (CHEESECAKE FACTORY 2-COLUMN GRID) ================= -->
     <section class="py-14 md:py-16 px-4 bg-white border-b border-gray-200">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-          <p class="text-gray-500 text-xs font-black uppercase tracking-[0.2em] font-heading mb-2">Live Digital Features</p>
-          <h2 class="text-2xl sm:text-3xl font-black text-[#0B0B0E] font-heading uppercase mb-3">
-            When The Website Is Better
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+        
+        <!-- Left: Printing It -->
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-black text-[#0B0B0E] font-heading uppercase tracking-tight mb-4">
+            Printing it
           </h2>
-          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
-            Paper can't search, filter, or calculate custom orders. When you need real-time prices or custom hashbrown combos, use the live website:
+          <ul class="space-y-4 text-sm sm:text-[15px] leading-relaxed text-gray-700">
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-[#FFC72C] mt-2 shrink-0 border border-amber-500"></span>
+              <span>On standard <strong>US Letter</strong> or <strong>A4</strong> paper, choose <strong>&ldquo;Fit to printable area&rdquo;</strong> in the print dialog. Landscape formatting ensures all columns and page numbers stay neatly on the sheet.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-[#FFC72C] mt-2 shrink-0 border border-amber-500"></span>
+              <span><strong>Printing for a group order?</strong> The first two pages, the cover and contents, are the ones worth skipping if you only need the breakfast plates and hashbrown bowl tables to pass around.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-[#FFC72C] mt-2 shrink-0 border border-amber-500"></span>
+              <span><strong>Prices move:</strong> The edition date is on the cover (May 2026), and a new file replaces this one whenever official menu data or seasonal offerings refresh.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: When The Website Is Better -->
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-black text-[#0B0B0E] font-heading uppercase tracking-tight mb-4">
+            When the website is better
+          </h2>
+          <p class="text-sm sm:text-[15px] leading-relaxed text-gray-700 mb-6">
+            Paper can't filter. To hide every dish with an allergen, calculate custom combo calories, or find the 24/7 diners nearest you, use our live digital features:
           </p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="/menu" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FFC72C] text-[#0B0B0E] font-heading font-black text-xs sm:text-sm hover:brightness-105 transition-all shadow-xs">
+              <span>Interactive menu</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <a href="/waffle-house-calories-allergies/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-gray-300 hover:border-[#FFC72C] text-[#0B0B0E] font-heading font-bold text-xs sm:text-sm transition-all shadow-xs">
+              <span>Allergen filter</span>
+            </a>
+            <a href="/nutrition" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-gray-300 hover:border-[#FFC72C] text-[#0B0B0E] font-heading font-bold text-xs sm:text-sm transition-all shadow-xs">
+              <span>Nutrition facts</span>
+            </a>
+            <a href="/locations" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-gray-300 hover:border-[#FFC72C] text-[#0B0B0E] font-heading font-bold text-xs sm:text-sm transition-all shadow-xs">
+              <span>Locations near you</span>
+            </a>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <a href="/menu" class="group bg-[#FAF7F0] border-2 border-gray-200 hover:border-[#FFC72C] rounded-2xl p-5 transition-all shadow-xs flex flex-col justify-between">
-            <div>
-              <div class="w-10 h-10 rounded-xl bg-[#FFC72C] flex items-center justify-center text-[#0B0B0E] font-black mb-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
-              </div>
-              <h3 class="text-base font-black text-[#0B0B0E] font-heading group-hover:text-amber-700 transition-colors mb-1.5">Interactive menu</h3>
-              <p class="text-gray-600 text-xs leading-relaxed">
-                Browse full food photos, customizable hashbrown toppings (scattered, smothered, covered), and live pricing across categories.
-              </p>
-            </div>
-            <span class="inline-flex items-center gap-1 text-xs font-black text-amber-700 mt-4 font-heading group-hover:translate-x-1 transition-transform">
-              Explore Menu &rarr;
-            </span>
-          </a>
-
-          <a href="/waffle-house-calories-allergies/" class="group bg-[#FAF7F0] border-2 border-gray-200 hover:border-[#FFC72C] rounded-2xl p-5 transition-all shadow-xs flex flex-col justify-between">
-            <div>
-              <div class="w-10 h-10 rounded-xl bg-[#0B0B0E] flex items-center justify-center text-[#FFC72C] font-black mb-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
-              </div>
-              <h3 class="text-base font-black text-[#0B0B0E] font-heading group-hover:text-amber-700 transition-colors mb-1.5">Allergen filter</h3>
-              <p class="text-gray-600 text-xs leading-relaxed">
-                Instantly filter out dairy, eggs, soy, wheat, or gluten to find safe diner meals with kitchen cross-contact precautions.
-              </p>
-            </div>
-            <span class="inline-flex items-center gap-1 text-xs font-black text-amber-700 mt-4 font-heading group-hover:translate-x-1 transition-transform">
-              Filter Allergens &rarr;
-            </span>
-          </a>
-
-          <a href="/nutrition" class="group bg-[#FAF7F0] border-2 border-gray-200 hover:border-[#FFC72C] rounded-2xl p-5 transition-all shadow-xs flex flex-col justify-between">
-            <div>
-              <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-900 font-black mb-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
-              </div>
-              <h3 class="text-base font-black text-[#0B0B0E] font-heading group-hover:text-amber-700 transition-colors mb-1.5">Nutrition facts</h3>
-              <p class="text-gray-600 text-xs leading-relaxed">
-                Full macro breakdown, sodium levels, and calorie counts for customized combo orders and weight loss planning.
-              </p>
-            </div>
-            <span class="inline-flex items-center gap-1 text-xs font-black text-amber-700 mt-4 font-heading group-hover:translate-x-1 transition-transform">
-              View Nutrition &rarr;
-            </span>
-          </a>
-
-          <a href="/locations" class="group bg-[#FAF7F0] border-2 border-gray-200 hover:border-[#FFC72C] rounded-2xl p-5 transition-all shadow-xs flex flex-col justify-between">
-            <div>
-              <div class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center text-gray-900 font-black mb-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-              </div>
-              <h3 class="text-base font-black text-[#0B0B0E] font-heading group-hover:text-amber-700 transition-colors mb-1.5">Locations near you</h3>
-              <p class="text-gray-600 text-xs leading-relaxed">
-                Check 24/7 diner hours, directions, phone numbers, and dine-in or to-go ordering at over 1,900 restaurants.
-              </p>
-            </div>
-            <span class="inline-flex items-center gap-1 text-xs font-black text-amber-700 mt-4 font-heading group-hover:translate-x-1 transition-transform">
-              Find Diners &rarr;
-            </span>
-          </a>
-        </div>
       </div>
     </section>
 
