@@ -1,52 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Waffle House Low-Calorie Menu: 79 Dishes Under 600 Calories (2026)</title>
-  <meta name="description" content="Explore 79 Waffle House dishes under 600 calories ranked lightest first. Full nutritional profile: calories, protein, sodium, fat, and diner ordering hacks for weight loss.">
+  <meta name="description" content="Explore 79 official Waffle House dishes under 600 calories ranked lightest first. Full nutritional profile: calories, protein, sodium, fat, and ordering tips.">
   <link rel="canonical" href="https://www.wafflehouse-menu.com/diet/low-calorie/">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Waffle House Low-Calorie Menu: 79 Dishes Under 600 Calories (2026)">
   <meta property="og:description" content="Ranked lightest first: every Waffle House meal under 600 calories with exact protein, calories, and sodium counts.">
   <meta property="og:url" content="https://www.wafflehouse-menu.com/diet/low-calorie/">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://www.wafflehouse-menu.com/assets/waffle-house-menu-pdf-mockup.jpg">
+  <meta property="og:image" content="https://www.wafflehouse-menu.com/assets/nutrition/classic-waffle.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & Primary Site Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/home.css">
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandYellow: '#FFC72C',
-            brandBlack: '#0B0B0E',
-            brandDark: '#121216',
-          },
-          fontFamily: {
-            heading: ['Oswald', 'sans-serif'],
-            sans: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-
+  <!-- Robust Fallback & Component Styles -->
   <style>
-    .font-heading { font-family: 'Oswald', sans-serif; }
-    .font-sans { font-family: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
-    /* Table row transition */
-    .dish-row { transition: background-color 0.15s ease; }
-    .dish-row:hover { background-color: rgba(255, 199, 44, 0.08); }
+    body {
+      font-family: 'Work Sans', sans-serif;
+      background-color: #FAF7F0;
+      color: #0B0B0E;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, h3, h4, h5, .font-heading {
+      font-family: 'Poppins', sans-serif;
+    }
+    .bg-brandYellow { background-color: #FFC72C; }
+    .text-brandDark { color: #0B0B0E; }
+    
+    /* Interactive Filter Buttons */
+    .filter-btn {
+      transition: all 0.2s ease;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+    .filter-btn.active {
+      background-color: #FFC72C !important;
+      color: #0B0B0E !important;
+      border-color: #FFC72C !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    
+    /* Table Styling */
+    .dish-row {
+      transition: background-color 0.15s ease;
+    }
+    .dish-row:hover {
+      background-color: #FFFDF5;
+    }
+
+    /* Essential Dropdown Styles: Hidden by default, visible on hover */
+    .dropdown-panel {
+      display: none;
+    }
+    .group:hover > .dropdown-panel {
+      display: block;
+    }
   </style>
 
   <!-- Schema Markup -->
@@ -78,8 +98,8 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Diet Guides",
-              "item": "https://www.wafflehouse-menu.com/diet/"
+              "name": "Diet & Nutrition",
+              "item": "https://www.wafflehouse-menu.com/nutrition"
             },
             {
               "@type": "ListItem",
@@ -95,42 +115,42 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is the lowest calorie meal at Waffle House?",
+            "name": "What is the absolute lowest-calorie meal combo at Waffle House?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The lowest calorie meal combo is 2 farm fresh eggs cooked scrambled or over-easy (180 calories) with a side of sliced tomatoes (10 calories) and unsweetened iced tea or black coffee (0-5 calories), totaling just 190-195 calories with 12g of protein."
+              "text": "Order 2 farm fresh eggs cooked scrambled or poached (180 calories) with a side of sliced tomatoes (10 calories) and an unsweet iced tea or black coffee (0-5 calories). That entire breakfast is only 190–195 calories with 12 grams of protein."
             }
           },
           {
             "@type": "Question",
-            "name": "How can I order low-calorie eggs at Waffle House?",
+            "name": "How can I ensure eggs are cooked without added butter or grease?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ask your server for eggs cooked 'in the pan' or with cooking spray rather than on the well-oiled diner flat-top grill. This prevents eggs from absorbing excess bacon grease and liquid butter, saving 50 to 100 hidden calories."
+              "text": "Politely ask your server to have the grill operator prepare your eggs 'in the pan with cooking spray' rather than dropping them directly on the seasoned grill surface. This avoids 50 to 100 hidden fat calories."
             }
           },
           {
             "@type": "Question",
-            "name": "What is the lowest calorie meat option at Waffle House?",
+            "name": "What is the highest-protein meal under 500 calories?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "City Ham is the lowest calorie breakfast meat at only 100 calories and 3g fat for 14g of lean protein. A single grilled chicken breast filet provides 29g of protein for only 140 calories and 3g fat."
+              "text": "The Meat Lover's Chicken & Eggs platter (2 grilled chicken breasts and 2 whole eggs, plate only) provides 70 grams of protein for just 440 total calories and 16g fat."
             }
           },
           {
             "@type": "Question",
-            "name": "Are Waffle House hashbrowns low calorie?",
+            "name": "Can I fit Waffle House hashbrowns into a low-calorie diet?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A regular order of plain hashbrowns contains 190 calories and 7g of fat. To keep them healthy, request them cooked 'dry' (crisped with minimal added oil) and top with diced tomatoes, capped mushrooms, or sautéed onions rather than melted cheese or gravy."
+              "text": "Yes. A regular single order of hashbrowns is 190 calories. You can ask for them prepared 'dry' to minimize oil, and top with grilled tomatoes (+5 cal), capped mushrooms (+10 cal), or smothered onions (+15 cal)."
             }
           },
           {
             "@type": "Question",
-            "name": "How do I manage high sodium on the Waffle House menu?",
+            "name": "Why is sodium high on low-calorie diner items?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Avoid country ham, which has 2,110 mg of sodium. Choose city ham (850 mg sodium), grilled chicken (470 mg sodium), or plain eggs (176 mg sodium). Request that kitchen staff cook your meat and hashbrowns without additional salt or seasoned butter."
+              "text": "Traditional cured meats like country ham carry 2,110 mg of sodium. Choosing City Ham (850 mg sodium), grilled chicken (470 mg sodium), or plain eggs (176 mg sodium) dramatically reduces your sodium intake."
             }
           }
         ]
@@ -139,167 +159,236 @@
   }
   </script>
 </head>
-<body class="bg-[#FAF7F0] text-[#0B0B0E] font-sans antialiased selection:bg-[#FFC72C] selection:text-black">
+<body class="flex flex-col min-h-screen">
 
-  <!-- ================= HEADER NAVIGATION ================= -->
-  <header class="sticky top-0 z-50 bg-[#FFC72C] shadow-md border-b-2 border-black/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Top Row: Logo & Desktop Links -->
-      <div class="flex items-center justify-between h-16 sm:h-20">
-        
-        <!-- Brand Logo -->
-        <a href="/" class="flex items-center gap-2 group focus:outline-none">
-          <div class="bg-[#0B0B0E] text-[#FFC72C] px-3 py-1.5 rounded-lg font-heading font-black text-xl sm:text-2xl tracking-tighter uppercase transform group-hover:scale-105 transition-transform shadow-xs">
-            WAFFLE HOUSE
-          </div>
-          <span class="font-heading font-bold text-xs sm:text-sm tracking-widest uppercase text-[#0B0B0E] hidden sm:inline-block">
-            Menu 2026
+  <!-- ================= TOP HEADER (EXACT OFFICIAL SITE HEADER) ================= -->
+  <header class="w-full flex flex-col sticky top-0 left-0 right-0 z-50 bg-white shadow-xs border-b border-gray-200">
+    
+    <!-- Upper Branding Bar -->
+    <div class="py-4 md:py-5 text-center px-4 bg-white">
+      <a title="WaffleHouse Menu Home" class="inline-block group focus:outline-none" href="/">
+        <div class="flex items-center justify-center gap-3 mb-1">
+          <img src="/assets/logo-icon.png" width="44" height="44" alt="Waffle House Menu Guide Logo" decoding="async" class="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl shadow-xs group-hover:scale-105 group-hover:-rotate-3 transition-transform duration-200">
+          <span class="flex items-center gap-2 text-[26px] sm:text-3xl md:text-[34px] whitespace-nowrap font-black text-[#0B0B0E] tracking-tight font-heading leading-none">
+            WaffleHouse
+            <span class="bg-[#FFC72C] text-[#0B0B0E] rounded-lg px-2.5 py-1.5 text-[0.62em] uppercase tracking-wider leading-none shadow-xs">Menu</span>
           </span>
-        </a>
+        </div>
+      </a>
+      <p class="text-gray-500 font-medium text-xs sm:text-[13px] tracking-wide">
+        Full Information About Waffle House Menu 2026
+      </p>
+    </div>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8" aria-label="Main Navigation">
+    <!-- Lower Brand Yellow Navigation Bar -->
+    <div class="bg-[#FFC72C] border-t border-yellow-400">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 py-3.5" aria-label="Main Navigation">
           
-          <!-- Menu Dropdown -->
-          <div class="relative group">
-            <a href="/menu" class="inline-flex items-center gap-1 text-[#0B0B0E] text-[15px] font-extrabold hover:text-black/70 transition-colors py-1">
+          <!-- Menu & Prices Dropdown -->
+          <div class="relative group" id="menu-nav-container">
+            <a 
+              href="/menu"
+              id="menu-nav-btn" 
+              class="inline-flex items-center gap-1 text-[#0B0B0E] text-[15px] font-extrabold hover:text-black/70 transition-colors whitespace-nowrap focus:outline-none cursor-pointer py-1"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
               <span>Menu &amp; Prices</span>
-              <svg class="w-3.5 h-3.5 group-hover:rotate-180 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+              <svg class="w-3.5 h-3.5 text-[#0B0B0E] transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </a>
-            <div class="hidden group-hover:block absolute left-0 top-full pt-2 w-56 z-50">
+            <div class="hidden group-hover:block dropdown-panel absolute left-0 top-full pt-2 w-56 z-50 text-left">
               <div class="bg-white rounded-xl shadow-xl border border-gray-200 py-1.5 overflow-hidden">
-                <a href="/menu" class="block px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 transition-colors">Full Menu &amp; Prices</a>
-                <a href="/menu/pdf" class="flex items-center justify-between px-4 py-2 text-sm font-bold text-gray-900 bg-amber-50 hover:bg-[#FFC72C]/20 transition-colors">
+                <a href="/menu" class="block px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Full Menu &amp; Prices
+                </a>
+                <a href="/menu/pdf" class="flex items-center justify-between px-4 py-2 text-sm font-bold text-gray-900 bg-amber-50 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
                   <span>Printable Menu (PDF)</span>
                   <span class="bg-[#FFC72C] text-[#0B0B0E] text-[10px] font-black px-1.5 py-0.5 rounded uppercase">2026</span>
                 </a>
-                <a href="/prices-by-state" class="block px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 transition-colors">Prices by State</a>
+                <a href="/prices-by-state" class="block px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Prices by State
+                </a>
               </div>
             </div>
           </div>
 
-          <a href="/waffle-house-catering/" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors">Catering</a>
+          <a title="Catering" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/waffle-house-catering/">
+            Catering
+          </a>
 
           <!-- Nutrition Dropdown (Active) -->
-          <div class="relative group">
-            <button type="button" class="inline-flex items-center gap-1 text-[#0B0B0E] text-[15px] font-black hover:text-black/70 transition-colors py-1 border-b-2 border-[#0B0B0E]">
-              <span>Nutrition</span>
-              <svg class="w-3.5 h-3.5 group-hover:rotate-180 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+          <div class="relative group" id="nutrition-nav-container">
+            <button 
+              id="nutrition-nav-btn" 
+              type="button" 
+              class="inline-flex items-center gap-1 text-[#0B0B0E] text-[15px] font-extrabold hover:text-black/70 transition-colors whitespace-nowrap focus:outline-none cursor-pointer py-1"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span class="border-b-2 border-[#0B0B0E]">Nutrition</span>
+              <svg class="w-3.5 h-3.5 text-[#0B0B0E] transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </button>
-            <div class="hidden group-hover:block absolute left-1/2 -translate-x-1/2 top-full pt-2 w-56 z-50">
+            <div class="hidden group-hover:block dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-2 w-56 z-50 text-left">
               <div class="bg-white rounded-xl shadow-xl border border-gray-200 py-1.5 overflow-hidden">
-                <a href="/nutrition" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 transition-colors">Nutrition Facts</a>
-                <a href="/waffle-house-calories-allergies/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 transition-colors">Calories &amp; Allergies</a>
-                <a href="/diet/low-calorie/" class="flex items-center justify-between px-4 py-2.5 text-sm font-bold text-gray-900 bg-amber-100/60 hover:bg-[#FFC72C]/30 transition-colors">
+                <a href="/nutrition" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Nutrition Overview
+                </a>
+                <a href="/waffle-house-calories-allergies/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Calories &amp; Allergies
+                </a>
+                <a href="/diet/low-calorie/" class="flex items-center justify-between px-4 py-2.5 text-sm font-bold text-gray-900 bg-amber-100/70 hover:bg-[#FFC72C]/30 transition-colors">
                   <span>Low-Calorie Menu</span>
                   <span class="bg-[#FFC72C] text-[#0B0B0E] text-[10px] font-black px-1.5 py-0.5 rounded uppercase">Under 600</span>
                 </a>
-                <a href="/waffle-house-dietary-guide/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 transition-colors">Dietary Guide</a>
+                <a href="/waffle-house-dietary-guide/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Dietary Guide
+                </a>
+                <a href="/menu/pdf" class="block px-4 py-2.5 text-sm font-bold text-amber-900 bg-amber-50 hover:bg-[#FFC72C]/20 hover:text-black transition-colors">
+                  Printable Nutrition PDF
+                </a>
               </div>
             </div>
           </div>
 
-          <a href="/coupons" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors">Deals &amp; Coupons</a>
-          <a href="/blog/" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors">Blog</a>
-          <a href="/locations" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors">Locations</a>
-          <a href="/about" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors">About</a>
+          <a title="Deals &amp; Coupons" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/coupons">
+            Deals &amp; Coupons
+          </a>
+          <a title="Blog" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/blog/">
+            Blog
+          </a>
+          <a title="Store Hours &amp; Locations" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/locations">
+            Store Hours &amp; Locations
+          </a>
+          <a title="About Us" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/about">
+            About Us
+          </a>
+          <a title="Contact" class="text-[#0B0B0E] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/contact">
+            Contact
+          </a>
         </nav>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button type="button" id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-black/10 text-black hover:bg-black/20 focus:outline-none" aria-label="Toggle navigation">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
-        </button>
+        <!-- Mobile Header Bar -->
+        <div class="flex lg:hidden justify-between items-center py-2.5">
+          <span class="text-[#0B0B0E] font-black text-sm tracking-wide uppercase font-heading">Menu Navigation</span>
+          <button id="mobile-menu-btn" type="button" class="text-[#0B0B0E] p-1.5 hover:bg-black/10 rounded-lg transition-colors focus:outline-none cursor-pointer" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
 
       </div>
     </div>
   </header>
 
-  <!-- Mobile Menu Drawer -->
-  <div id="mobile-nav" class="hidden fixed inset-0 z-50 lg:hidden">
-    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-xs"></div>
-    <div class="fixed top-0 right-0 bottom-0 w-5/6 max-w-sm bg-white p-6 shadow-2xl overflow-y-auto">
-      <div class="flex items-center justify-between pb-4 border-b border-gray-200 mb-6">
-        <span class="font-heading font-black text-xl text-[#0B0B0E]">MENU NAVIGATION</span>
-        <button type="button" id="mobile-close-btn" class="p-2 text-gray-500 hover:text-black" aria-label="Close menu">&times;</button>
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav" class="fixed inset-0 z-50 hidden" aria-hidden="true">
+    <div id="mobile-nav-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity"></div>
+    <aside class="fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl flex flex-col z-10 overflow-hidden">
+      <div class="p-4 bg-[#FFC72C] flex items-center justify-between border-b border-yellow-400">
+        <span class="font-heading font-black text-base text-[#0B0B0E] uppercase">WaffleHouse Menu</span>
+        <button id="mobile-close-btn" class="p-1 rounded-lg text-[#0B0B0E] hover:bg-black/10" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </div>
-      <div class="space-y-3 font-heading font-bold text-base">
-        <a href="/menu" class="block p-3 rounded-xl hover:bg-amber-100 text-[#0B0B0E]">Full Menu &amp; Prices</a>
-        <a href="/diet/low-calorie/" class="block p-3 rounded-xl bg-[#FFF8E1] border border-[#FFC72C] text-[#0B0B0E]">Low-Calorie Menu (Under 600 Cal)</a>
-        <a href="/nutrition" class="block p-3 rounded-xl hover:bg-amber-100 text-[#0B0B0E]">Nutrition &amp; Calorie Guide</a>
-        <a href="/waffle-house-calories-allergies/" class="block p-3 rounded-xl hover:bg-amber-100 text-[#0B0B0E]">Calories &amp; Allergies</a>
-        <a href="/menu/pdf" class="block p-3 rounded-xl hover:bg-amber-100 text-[#0B0B0E]">Printable Menu (PDF)</a>
-        <a href="/waffle-house-catering/" class="block p-3 rounded-xl hover:bg-amber-100 text-[#0B0B0E]">Catering</a>
-        <a href="/locations" class="block p-3 rounded-xl hover:bg-amber-100 text-[#0B0B0E]">Store Hours &amp; Locations</a>
-        <a href="/coupons" class="block p-3 rounded-xl hover:bg-amber-100 text-[#0B0B0E]">Deals &amp; Coupons</a>
-        <a href="/blog/" class="block p-3 rounded-xl hover:bg-amber-100 text-[#0B0B0E]">Blog &amp; Diner Guides</a>
+      <div class="flex-1 overflow-y-auto px-4 py-3 space-y-2 text-sm font-bold">
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/menu">Full Menu &amp; Prices</a>
+        <a class="block py-2 border-b border-gray-100 text-amber-900 bg-amber-50 px-2 rounded-lg font-black" href="/diet/low-calorie/">Low-Calorie Menu (Under 600 Cal)</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/nutrition">Nutrition Overview</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/waffle-house-calories-allergies/">Calories &amp; Allergies</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/waffle-house-dietary-guide/">Dietary Guide</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/menu/pdf">Printable Menu (PDF)</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/waffle-house-catering/">Catering</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/locations">Store Hours &amp; Locations</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/coupons">Deals &amp; Coupons</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/blog/">Blog &amp; Guides</a>
+        <a class="block py-2 border-b border-gray-100 text-[#0B0B0E]" href="/about">About Us</a>
+        <a class="block py-2 text-[#0B0B0E]" href="/contact">Contact</a>
       </div>
-    </div>
+    </aside>
   </div>
 
-  <main id="main-content">
-    
-    <!-- ================= BREADCRUMB ================= -->
-    <nav class="bg-gray-100 border-b border-gray-200 py-3 px-4 text-xs font-sans text-gray-600">
-      <div class="max-w-6xl mx-auto flex items-center gap-2 flex-wrap">
-        <a href="/" class="hover:text-amber-700 font-medium">Home</a>
-        <span>/</span>
-        <a href="/nutrition" class="hover:text-amber-700 font-medium">Diet &amp; Nutrition</a>
-        <span>/</span>
-        <span class="text-[#0B0B0E] font-bold" aria-current="page">Low-Calorie</span>
+  <main id="main-content" tabindex="-1" class="flex-1">
+
+    <!-- ================= BREADCRUMBS ================= -->
+    <nav aria-label="breadcrumb" class="bg-[#FBFBFC] py-3 px-4 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ol class="flex flex-wrap items-center gap-2 text-sm font-sans">
+          <li class="flex items-center gap-2">
+            <a class="text-[#0B0B0E] hover:text-amber-600 font-bold transition-colors" href="/">Home</a>
+            <span class="text-gray-300">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"></path>
+              </svg>
+            </span>
+          </li>
+          <li class="flex items-center gap-2">
+            <a class="text-[#0B0B0E] hover:text-amber-600 font-bold transition-colors" href="/nutrition">Diet &amp; Nutrition</a>
+            <span class="text-gray-300">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"></path>
+              </svg>
+            </span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-amber-600 font-bold" aria-current="page">Low-Calorie</span>
+          </li>
+        </ol>
       </div>
     </nav>
 
-    <!-- ================= HERO HEADER (MATCHING CHEESECAKE REFERENCE) ================= -->
+    <!-- ================= HERO HEADER ================= -->
     <section class="bg-white py-12 md:py-16 px-4 border-b border-gray-200">
-      <div class="max-w-5xl mx-auto">
+      <div class="max-w-6xl mx-auto">
         
-        <!-- Eyebrow Tag -->
         <span class="text-xs sm:text-sm font-black uppercase tracking-widest text-amber-700 font-heading block mb-2">
           Lighter picks, ranked by calorie count
         </span>
 
-        <!-- H1 Title -->
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#0B0B0E] font-heading uppercase tracking-tight leading-tight mb-4">
           Waffle House Dishes Under 600 Calories
         </h1>
 
         <!-- Author / Verification Byline -->
-        <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-500 mb-6 font-medium">
+        <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-500 mb-6 font-medium flex-wrap">
           <span>By <a href="/about" class="text-amber-700 font-bold hover:underline">Editorial Staff</a></span>
           <span>&bull;</span>
           <span>Last updated May 2026 Edition</span>
           <span>&bull;</span>
-          <span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+          <span class="inline-flex items-center gap-1 text-emerald-800 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 text-xs">
             <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
             Official Nutrition Tables
           </span>
         </div>
 
-        <!-- Lead Description -->
         <p class="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl mb-8 font-normal">
           Every dish at or under 600 calories, ranked lightest first, so you can plan a satisfying meal around a specific calorie target without accidental hidden calories or guesswork.
         </p>
 
-        <!-- 4 Metric Highlight Cards (Cheesecake Factory Layout) -->
+        <!-- 4 Metric Highlight Cards -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="bg-[#FAF7F0] border-2 border-gray-200 rounded-2xl p-4 sm:p-5 text-center">
+          <div class="bg-[#FAF7F0] border-2 border-gray-200 rounded-2xl p-4 sm:p-5 text-center shadow-2xs">
             <span class="block text-[11px] font-extrabold uppercase tracking-widest text-gray-500 font-heading">Qualifying dishes</span>
             <span class="text-3xl sm:text-4xl font-black text-[#0B0B0E] font-heading mt-1 block">79</span>
           </div>
-          <div class="bg-[#FAF7F0] border-2 border-gray-200 rounded-2xl p-4 sm:p-5 text-center">
+          <div class="bg-[#FAF7F0] border-2 border-gray-200 rounded-2xl p-4 sm:p-5 text-center shadow-2xs">
             <span class="block text-[11px] font-extrabold uppercase tracking-widest text-gray-500 font-heading">Avg. calories</span>
             <span class="text-3xl sm:text-4xl font-black text-[#0B0B0E] font-heading mt-1 block">249</span>
           </div>
-          <div class="bg-[#FAF7F0] border-2 border-gray-200 rounded-2xl p-4 sm:p-5 text-center">
+          <div class="bg-[#FAF7F0] border-2 border-gray-200 rounded-2xl p-4 sm:p-5 text-center shadow-2xs">
             <span class="block text-[11px] font-extrabold uppercase tracking-widest text-gray-500 font-heading">Avg. protein</span>
             <span class="text-3xl sm:text-4xl font-black text-[#0B0B0E] font-heading mt-1 block">16 g</span>
           </div>
-          <div class="bg-[#FAF7F0] border-2 border-[#FFC72C] bg-[#FFFDF7] rounded-2xl p-4 sm:p-5 text-center">
+          <div class="bg-[#FAF7F0] border-2 border-[#FFC72C] bg-[#FFFDF7] rounded-2xl p-4 sm:p-5 text-center shadow-2xs">
             <span class="block text-[11px] font-extrabold uppercase tracking-widest text-gray-500 font-heading">Avg. sodium</span>
             <span class="text-3xl sm:text-4xl font-black text-[#0B0B0E] font-heading mt-1 block">606 mg</span>
           </div>
@@ -309,13 +398,13 @@
     </section>
 
     <!-- ================= ADVISORY & AT A GLANCE ================= -->
-    <section class="py-12 px-4 bg-[#FBFBFC] border-b border-gray-200">
-      <div class="max-w-5xl mx-auto space-y-8">
+    <section class="py-12 md:py-14 px-4 bg-[#FBFBFC] border-b border-gray-200">
+      <div class="max-w-6xl mx-auto space-y-8">
         
         <!-- What to Watch For (AEO Snippet Box) -->
-        <div class="bg-white rounded-3xl border-2 border-amber-300 p-6 sm:p-8 shadow-xs">
+        <div class="bg-white rounded-3xl border-2 border-[#FFC72C] p-6 sm:p-8 shadow-xs">
           <div class="flex items-center gap-3 mb-3">
-            <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center font-black">!</span>
+            <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-black text-base border border-amber-300">!</span>
             <h2 class="text-xl sm:text-2xl font-black text-[#0B0B0E] font-heading uppercase">
               What to watch for on the low-calorie menu
             </h2>
@@ -328,7 +417,7 @@
         <!-- How this list is built & At A Glance Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <div class="bg-white rounded-3xl border-2 border-gray-200 p-6 sm:p-8">
+          <div class="bg-white rounded-3xl border-2 border-gray-200 p-6 sm:p-8 shadow-xs">
             <h3 class="text-lg font-black text-[#0B0B0E] font-heading uppercase mb-3">
               How this list is built
             </h3>
@@ -340,7 +429,7 @@
             </p>
           </div>
 
-          <div class="bg-white rounded-3xl border-2 border-gray-200 p-6 sm:p-8">
+          <div class="bg-white rounded-3xl border-2 border-gray-200 p-6 sm:p-8 shadow-xs">
             <h3 class="text-lg font-black text-[#0B0B0E] font-heading uppercase mb-3">
               At a glance
             </h3>
@@ -394,7 +483,7 @@
                 type="text" 
                 id="search-input" 
                 placeholder="Search dish name..." 
-                class="w-full pl-9 pr-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-[#FFC72C] focus:outline-none text-sm font-medium"
+                class="w-full pl-9 pr-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-[#FFC72C] focus:outline-none text-sm font-medium bg-[#FBFBFC]"
               >
               <svg class="w-4 h-4 text-gray-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -403,7 +492,7 @@
           </div>
         </div>
 
-        <!-- Filter Buttons Bar (Cheesecake Factory Filter Buttons) -->
+        <!-- Filter Buttons Bar -->
         <div class="flex flex-wrap items-center gap-2 mb-6" id="filter-pills">
           <button type="button" class="filter-btn active px-4 py-2 rounded-full text-xs font-bold font-heading uppercase bg-[#FFC72C] text-[#0B0B0E] border-2 border-[#FFC72C] transition-all cursor-pointer shadow-2xs" data-category="all">
             All Dishes (79)
@@ -2583,7 +2672,7 @@
       </div>
     </section>
 
-    <!-- ================= DIETARY & REFERENCE HUB (CHEESECAKE FACTORY EXACT 3-COL HUB) ================= -->
+    <!-- ================= DIETARY & REFERENCE HUB ================= -->
     <section class="py-14 md:py-16 px-4 bg-[#FAF7F0] border-b border-gray-200">
       <div class="max-w-6xl mx-auto">
         
@@ -2695,7 +2784,7 @@
       </div>
     </section>
 
-    <!-- ================= FREQUENTLY ASKED QUESTIONS (HOMEPAGE EXACT STYLING) ================= -->
+    <!-- ================= FREQUENTLY ASKED QUESTIONS ================= -->
     <section class="py-16 md:py-20 bg-[#F9FAFB] border-t border-gray-200" id="faq">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -2709,7 +2798,6 @@
           </p>
         </div>
 
-        <!-- FAQ Container with Brand Yellow Border (Exact Homepage Style) -->
         <div class="border-2 border-[#FFC72C] rounded-3xl p-5 sm:p-7 bg-[#FAF7F0] shadow-sm my-6">
           <div class="space-y-3 font-sans" id="home-faq-list">
             
@@ -2787,7 +2875,7 @@
 
   </main>
 
-  <!-- ================= HOMEPAGE MATCHING FOOTER ================= -->
+  <!-- ================= FOOTER ================= -->
   <footer id="footer-section" class="bg-[#0B0B0E] text-white pt-10 pb-8 font-sans border-t border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -2858,7 +2946,7 @@
     </div>
   </footer>
 
-  <!-- ================= JAVASCRIPT: SEARCH, FILTER & FAQ ACCORDION ================= -->
+  <!-- ================= JAVASCRIPT ================= -->
   <script>
     // Live Search and Category Filtering
     const searchInput = document.getElementById('search-input');
@@ -2900,11 +2988,11 @@
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
-          b.classList.remove('bg-[#FFC72C]', 'text-[#0B0B0E]', 'border-[#FFC72C]', 'shadow-2xs', 'active');
+          b.classList.remove('active', 'bg-[#FFC72C]', 'text-[#0B0B0E]', 'border-[#FFC72C]', 'shadow-2xs');
           b.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
         });
         btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
-        btn.classList.add('bg-[#FFC72C]', 'text-[#0B0B0E]', 'border-[#FFC72C]', 'shadow-2xs', 'active');
+        btn.classList.add('active', 'bg-[#FFC72C]', 'text-[#0B0B0E]', 'border-[#FFC72C]', 'shadow-2xs');
 
         currentCategory = btn.getAttribute('data-category');
         filterTable();
