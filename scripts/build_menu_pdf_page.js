@@ -714,91 +714,6 @@ function generateHtml() {
       </div>
     </section>
 
-    <!-- ================= INTERACTIVE 10-PAGE DIRECTORY & TABLE EXPLORER ================= -->
-    <section class="py-14 md:py-16 px-4 bg-white border-b border-gray-200" id="directory">
-      <div class="max-w-6xl mx-auto">
-        
-        <div class="text-center max-w-3xl mx-auto mb-10">
-          <span class="text-xs font-black text-gray-500 uppercase tracking-widest font-heading mb-2 block">Interactive Explorer</span>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B0B0E] font-heading uppercase tracking-tight">
-            Browse The 10-Page Waffle House Menu Directory
-          </h2>
-          <p class="text-gray-600 text-sm sm:text-base mt-2">
-            Click on any page number below to inspect the verified nutritional data directly on your screen without opening a PDF reader.
-          </p>
-        </div>
-
-        <!-- Page Navigator Tabs -->
-        <div class="flex flex-wrap items-center justify-center gap-2 mb-8" id="jump-nav">
-          ${pageData.map((p, idx) => `
-            <button 
-              type="button" 
-              class="page-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold font-heading transition-all cursor-pointer ${idx === 0 ? 'bg-[#FFC72C] text-[#0B0B0E] shadow-xs' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}"
-              data-page="${p.pageNum}"
-            >
-              Page ${p.pageNum}
-            </button>
-          `).join('')}
-        </div>
-
-        <!-- 10 Page Content Panels -->
-        <div id="pages-container">
-          ${pageData.map((p, idx) => `
-            <div id="page-panel-${p.pageNum}" class="page-panel ${idx === 0 ? 'block' : 'hidden'} printable-section">
-              
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 p-4 rounded-2xl bg-[#FFF8E1] border-2 border-[#FFC72C]">
-                <div>
-                  <h3 class="text-lg sm:text-xl font-black text-[#0B0B0E] font-heading uppercase">${p.title}</h3>
-                  <p class="text-xs sm:text-sm text-gray-600 font-medium">${p.subtitle}</p>
-                </div>
-                <span class="bg-[#0B0B0E] text-[#FFC72C] text-xs font-black px-3 py-1.5 rounded-xl uppercase tracking-wider shrink-0 font-heading text-center">
-                  Official Sheet #${p.pageNum}
-                </span>
-              </div>
-
-              <!-- Responsive Table -->
-              <div class="overflow-x-auto rounded-2xl border-2 border-gray-200 shadow-2xs mb-6">
-                <table class="w-full text-left text-xs sm:text-sm">
-                  <thead class="bg-gray-100 text-[#0B0B0E] font-heading font-black border-b border-gray-200 uppercase text-[11px] tracking-wider">
-                    <tr>
-                      <th class="py-3 px-3.5">Menu Item Name</th>
-                      <th class="py-3 px-2 text-center">Calories</th>
-                      <th class="py-3 px-2 text-center">Total Fat</th>
-                      <th class="py-3 px-2 text-center">Sat Fat</th>
-                      <th class="py-3 px-2 text-center">Sodium</th>
-                      <th class="py-3 px-2 text-center">Carbs</th>
-                      <th class="py-3 px-2 text-center">Protein</th>
-                      <th class="py-3 px-3">Allergens Disclosed</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-gray-200 bg-white">
-                    ${p.items.map(it => `
-                      <tr class="hover:bg-amber-50/40 transition-colors">
-                        <td class="py-2.5 px-3.5 font-bold text-[#0B0B0E]">${it.name}</td>
-                        <td class="py-2.5 px-2 text-center font-black text-amber-700 bg-amber-50/30">${it.cal}</td>
-                        <td class="py-2.5 px-2 text-center text-gray-600 font-semibold">${it.fat}</td>
-                        <td class="py-2.5 px-2 text-center text-gray-600 font-semibold">${it.satFat}</td>
-                        <td class="py-2.5 px-2 text-center text-gray-600 font-semibold">${it.sodium}</td>
-                        <td class="py-2.5 px-2 text-center text-gray-600 font-semibold">${it.carbs}</td>
-                        <td class="py-2.5 px-2 text-center font-bold text-gray-900">${it.protein}</td>
-                        <td class="py-2.5 px-3">
-                          ${it.allergens !== 'None' 
-                            ? `<span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900 border border-amber-300">${it.allergens}</span>` 
-                            : `<span class="text-gray-400 text-xs">None</span>`}
-                        </td>
-                      </tr>
-                    `).join('')}
-                  </tbody>
-                </table>
-              </div>
-
-            </div>
-          `).join('')}
-        </div>
-
-      </div>
-    </section>
-
     <!-- ================= PRINTING & PAPER GUIDE ================= -->
     <section class="py-14 md:py-16 px-4 bg-[#FBFBFC] border-b border-gray-200" id="print-tips">
       <div class="max-w-5xl mx-auto">
@@ -1215,40 +1130,8 @@ function generateHtml() {
     </div>
   </footer>
 
-  <!-- Scripts: Interactive Tab Switching & Homepage FAQ Accordion -->
+  <!-- Scripts: Mobile Navigation & Homepage FAQ Accordion -->
   <script>
-    // Tab switching for 10-page directory
-    const tabBtns = document.querySelectorAll('.page-tab-btn');
-    const panels = document.querySelectorAll('.page-panel');
-
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const page = btn.getAttribute('data-page');
-
-        // Reset all buttons
-        tabBtns.forEach(b => {
-          b.classList.remove('bg-[#FFC72C]', 'text-[#0B0B0E]', 'shadow-xs');
-          b.classList.add('bg-gray-100', 'text-gray-700');
-        });
-
-        // Activate clicked button
-        btn.classList.remove('bg-gray-100', 'text-gray-700');
-        btn.classList.add('bg-[#FFC72C]', 'text-[#0B0B0E]', 'shadow-xs');
-
-        // Show matching panel
-        panels.forEach(p => {
-          p.classList.add('hidden');
-          p.classList.remove('block');
-        });
-
-        const activePanel = document.getElementById('page-panel-' + page);
-        if (activePanel) {
-          activePanel.classList.remove('hidden');
-          activePanel.classList.add('block');
-        }
-      });
-    });
-
     // Mobile navigation toggle
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileClose = document.getElementById('mobile-close-btn');
