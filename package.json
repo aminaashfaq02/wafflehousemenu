@@ -5,9 +5,11 @@
   "description": "Waffle House Menu & Catering Guide 2026 (static site)",
   "scripts": {
     "start": "node scripts/dev-server.js",
-    "build:css": "node tools/build-css.js"
+    "build:css": "node tools/build-css.js",
+    "optimize:images": "node tools/optimize-images.js"
   },
   "devDependencies": {
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.17"
   }
 }

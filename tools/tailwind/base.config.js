@@ -7,10 +7,10 @@ module.exports = {
         extend: {
           colors: {
             brand: {
-              yellow: '#FFC72C',
-              dark: '#0B0B0E',
+              yellow: '#F59E0B',
+              dark: '#1C1410',
               gray: '#F9FAFB',
-              accent: '#E5B020',
+              accent: '#D97706',
             }
           },
           fontFamily: {

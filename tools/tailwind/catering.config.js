@@ -7,10 +7,10 @@ module.exports = {
         extend: {
           colors: {
             brand: {
-              yellow: '#FFC72C',
-              dark: '#0B0B0E',
+              yellow: '#F59E0B',
+              dark: '#1C1410',
               gray: '#F9FAFB',
-              accent: '#E5B020',
+              accent: '#D97706',
             }
           },
           fontFamily: {
@@ -20,7 +20,7 @@ module.exports = {
           boxShadow: {
             'card': '0 4px 20px -2px rgba(11, 11, 14, 0.05)',
             'card-hover': '0 12px 30px -4px rgba(11, 11, 14, 0.12)',
-            'btn-yellow': '0 4px 14px 0 rgba(255, 199, 44, 0.39)',
+            'btn-yellow': '0 4px 14px 0 rgba(245, 158, 11, 0.39)',
           }
         }
       }

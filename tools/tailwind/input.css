@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---- Site-wide readability / mobile UX rules (shared by every page group) ---- */
+
+/* In-page anchor jumps must not land under the sticky nav bar. */
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* Minimum readable text size: nothing below 12px. */
+.text-\[9px\],
+.text-\[10px\],
+.text-\[11px\] {
+  font-size: 12px;
+}
+
+/* Touch screens: give small stacked links (breadcrumbs, footer lists, tables of contents) a 24px+ hit area. */
+@media (pointer: coarse) {
+  nav[aria-label="Breadcrumb"] a,
+  nav[aria-label="breadcrumb"] a,
+  footer li > a,
+  nav[aria-label*="sections" i] a {
+    display: inline-block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+/* Visible keyboard focus for links and buttons that only had hover styles. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #b45309;
+  outline-offset: 2px;
+}
+
 /* Mobile Slide-In Navigation Drawer (Cheesecake Factory Style) */
 body.mobile-nav-open {
   overflow: hidden !important;

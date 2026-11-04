@@ -142,8 +142,183 @@
       "permanent": true
     },
     {
-      "source": "/waffle-house-nutrition-allergen-guide-2026.pdf",
-      "destination": "/assets/waffle-house-nutrition-2026.pdf",
+      "source": "/diet-high-calorie",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/diet-high-calorie/",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/diet-high-protein",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/diet-high-protein/",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/diet/high-calorie",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/diet/high-calorie/",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-high-calorie-menu",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-high-calorie-menu/",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-high-protein-menu",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-high-protein-menu/",
+      "destination": "/diet/high-protein/",
+      "permanent": true
+    },
+    {
+      "source": "/diet-low-calorie",
+      "destination": "/diet/low-calorie/",
+      "permanent": true
+    },
+    {
+      "source": "/diet-low-calorie/",
+      "destination": "/diet/low-calorie/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-low-calorie-menu",
+      "destination": "/diet/low-calorie/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-low-calorie-menu/",
+      "destination": "/diet/low-calorie/",
+      "permanent": true
+    },
+    {
+      "source": "/menu-pdf",
+      "destination": "/menu/pdf/",
+      "permanent": true
+    },
+    {
+      "source": "/menu-pdf/",
+      "destination": "/menu/pdf/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-menu-pdf",
+      "destination": "/menu/pdf/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-menu-pdf/",
+      "destination": "/menu/pdf/",
+      "permanent": true
+    },
+    {
+      "source": "/nutrition-guide-2026",
+      "destination": "/menu/pdf/",
+      "permanent": true
+    },
+    {
+      "source": "/nutrition-guide-2026/",
+      "destination": "/menu/pdf/",
+      "permanent": true
+    },
+    {
+      "source": "/menu/",
+      "destination": "/menu",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-all-star-special-price",
+      "destination": "/blog/waffle-house-all-star-special-price/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-all-star-special-price/",
+      "destination": "/blog/waffle-house-all-star-special-price/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waffle-house-sweet-cream-waffle-copycat",
+      "destination": "/recipes/waffle-house-sweet-cream-waffle-copycat/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waffle-house-sweet-cream-waffle-copycat/",
+      "destination": "/recipes/waffle-house-sweet-cream-waffle-copycat/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-and-conditions",
+      "permanent": true
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms-and-conditions",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waffle-house-secret-menu",
+      "destination": "/blog/waffle-house-secret-menu-items/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waffle-house-secret-menu/",
+      "destination": "/blog/waffle-house-secret-menu-items/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waffle-house-hashbrowns",
+      "destination": "/blog/waffle-house-hash-browns/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waffle-house-hashbrowns/",
+      "destination": "/blog/waffle-house-hash-browns/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-menu-with-prices",
+      "destination": "/blog/waffle-house-menu-with-prices/",
+      "permanent": true
+    },
+    {
+      "source": "/waffle-house-menu-with-prices/",
+      "destination": "/blog/waffle-house-menu-with-prices/",
+      "permanent": true
+    },
+    {
+      "source": "/assets/waffle-house-menu-nutrition-facts-2026.pdf",
+      "destination": "/menu/pdf/",
       "permanent": true
     }
   ],
@@ -173,7 +348,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com; frame-src 'self'; object-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://fundingchoicesmessages.google.com; object-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
         }
       ]
     },

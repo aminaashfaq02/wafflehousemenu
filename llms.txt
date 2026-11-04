@@ -1,18 +1,42 @@
-# Waffle House Menu Guide
-> An independent, unofficial consumer guide to Waffle House menu items, estimated price ranges, nutrition facts, store locations, and diner culture. Not affiliated with or endorsed by Waffle House, Inc.
+# Waffle Guide
+> An independent, unofficial consumer guide to Waffle House menu items, typical price ranges, nutrition estimates, locations and diner culture. Not affiliated with or endorsed by Waffle House, Inc.
 
-## Core Informational Pages
-- [Full Menu & Prices](https://www.wafflehouse-menu.com/menu): Categorized menu listings including waffles, breakfast platters, hashbrown bowls, and Texas melts with estimated price ranges.
-- [Prices by State](https://www.wafflehouse-menu.com/prices-by-state): State-by-state price comparisons across 25 operational states.
-- [Nutrition Guide](https://www.wafflehouse-menu.com/nutrition): Nutrition facts including calories, fat, protein, and carbohydrates compiled from published sources.
-- [Calories & Allergens](https://www.wafflehouse-menu.com/waffle-house-calories-allergies/): Big-9 allergen matrix, cross-contact disclosures, and calorie filtering.
-- [Dietary Guide](https://www.wafflehouse-menu.com/waffle-house-dietary-guide/): Low-carb, keto, high-protein, and sodium awareness ordering suggestions.
-- [Catering Guide](https://www.wafflehouse-menu.com/waffle-house-catering/): Informational guide to Waffle House event catering and food truck options.
-- [Store Hours & Locations](https://www.wafflehouse-menu.com/locations): 24/7 store hours directory and diner locator.
-- [Deals & Discounts](https://www.wafflehouse-menu.com/coupons): Community savings tips and official Regulars Club coupon guidance.
-- [Diner Blog](https://www.wafflehouse-menu.com/blog/): Articles and ordering guides for American diner enthusiasts.
+## Menu & Prices
+- [Full Menu & Prices](https://www.wafflehouse-menu.com/menu): Menu items across 13 categories with typical prices and calorie counts.
+- [Menu PDF](https://www.wafflehouse-menu.com/menu/pdf/): Where to find Waffle House nutrition information online and how to print our menu guide.
+- [Prices by State](https://www.wafflehouse-menu.com/prices-by-state): Typical price ranges across the 25 states where Waffle House operates.
+- [Coupons & Deals](https://www.wafflehouse-menu.com/coupons): Ways to save, including the free Regulars Club email program. No promo codes are listed.
 
-## Disclaimers & Notes
-- Prices and menu availability vary by location and are subject to change.
-- Waffle House Menu Guide is an independent informational publisher and does not represent Waffle House, Inc.
-- For official orders, employment, or corporate inquiries, visit the official website at https://www.wafflehouse.com.
+## Nutrition & Diet
+- [Nutrition Facts](https://www.wafflehouse-menu.com/nutrition): Calorie, protein, carb and fat estimates by menu category, with a hashbrown bowl calculator.
+- [Calories & Allergens](https://www.wafflehouse-menu.com/waffle-house-calories-allergies/): Calorie comparisons and allergen guidance, including shared-kitchen cross-contact notes.
+- [Dietary Guide](https://www.wafflehouse-menu.com/waffle-house-dietary-guide/): How to compare calories, protein, carbs, sodium and allergens for different dietary goals.
+- [Low-Calorie Menu](https://www.wafflehouse-menu.com/diet/low-calorie/): 79 dishes under 600 calories, ranked lightest first.
+- [High-Protein Menu](https://www.wafflehouse-menu.com/diet/high-protein/): 45 dishes ranked by protein.
+
+## Guides & Articles
+- [Blog](https://www.wafflehouse-menu.com/blog/): All guides and articles.
+- [Menu with Prices Guide](https://www.wafflehouse-menu.com/blog/waffle-house-menu-with-prices/)
+- [All-Star Special: What's in It](https://www.wafflehouse-menu.com/blog/waffle-house-all-star-special/)
+- [All-Star Special Price](https://www.wafflehouse-menu.com/blog/waffle-house-all-star-special-price/)
+- [Hash Browns: 8 Ways & Lingo](https://www.wafflehouse-menu.com/blog/waffle-house-hash-browns/)
+- [Secret Menu Orders](https://www.wafflehouse-menu.com/blog/waffle-house-secret-menu-items/)
+- [Healthiest Breakfast for Weight Loss](https://www.wafflehouse-menu.com/blog/healthiest-breakfast-for-weight-loss/)
+- [Thanksgiving Hours](https://www.wafflehouse-menu.com/blog/waffle-house-thanksgiving-hours/)
+- [Sweet Cream Waffle Copycat Recipe](https://www.wafflehouse-menu.com/recipes/waffle-house-sweet-cream-waffle-copycat/)
+
+## Visiting & Events
+- [Locations & Hours](https://www.wafflehouse-menu.com/locations): A selection of Waffle House locations across the 25 states where the chain operates (more than 2,000 restaurants in total); most are open 24/7.
+- [Catering Guide](https://www.wafflehouse-menu.com/waffle-house-catering/): Catering formats (delivery, on-site stations, food truck) and how to request them.
+
+## About & Policies
+- [About](https://www.wafflehouse-menu.com/about)
+- [Contact](https://www.wafflehouse-menu.com/contact)
+- [Disclaimer](https://www.wafflehouse-menu.com/disclaimer)
+- [Privacy Policy](https://www.wafflehouse-menu.com/privacy-policy)
+- [Terms & Conditions](https://www.wafflehouse-menu.com/terms-and-conditions)
+- [Cookies Policy](https://www.wafflehouse-menu.com/cookies-policy)
+
+## Notes
+- Prices, nutrition figures and availability are estimates compiled by our editorial team. They vary by location and change over time.
+- For orders, employment or corporate inquiries, use the official Waffle House website: https://www.wafflehouse.com
