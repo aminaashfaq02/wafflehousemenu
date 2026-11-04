@@ -71,3 +71,34 @@ body.mobile-nav-open #mobile-nav {
     margin-top: -4px;
   }
 }
+
+/* Text contrast (WCAG AA, 4.5:1 for body text). The lightest grey, amber, green and rose text utilities are too
+   faint on white and cream backgrounds, so they use one shade darker there... */
+.text-gray-400 {
+  color: #6b7280;
+}
+.text-amber-500,
+.text-amber-600 {
+  color: #b45309;
+}
+.text-emerald-600 {
+  color: #047857;
+}
+.text-rose-600 {
+  color: #be123c;
+}
+/* ...while on the dark brown footer and other dark panels, grey text is lightened instead and amber stays bright.
+   (Scoped to dark backgrounds, not <footer>, because article author boxes are light <footer> elements.) */
+.bg-\[\#1C1410\] .text-gray-400,
+.bg-\[\#1C1410\] .text-gray-500,
+.bg-\[\#1C1410\] .text-gray-600,
+.bg-gray-900 .text-gray-400,
+.bg-gray-900 .text-gray-500,
+.bg-gray-800 .text-gray-400,
+.bg-neutral-800 .text-gray-400 {
+  color: #a8a29e;
+}
+.bg-\[\#1C1410\] .text-amber-500,
+.bg-\[\#1C1410\] .text-amber-600 {
+  color: #f59e0b;
+}
