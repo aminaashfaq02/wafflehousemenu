@@ -62,6 +62,47 @@ document.addEventListener(
   });
 })();
 
+// Desktop menu-bar dropdowns open on hover and keyboard focus through CSS. Buttons marked `data-nav-dropdown`
+// also toggle their panel on click (touch screens), and Escape or a click elsewhere closes it. Handled in the
+// capture phase so older inline toggles on some pages don't fire a second time.
+(function () {
+  function closeAll(except) {
+    var btns = document.querySelectorAll('[data-nav-dropdown]');
+    for (var i = 0; i < btns.length; i++) {
+      var panel = document.getElementById(btns[i].getAttribute('aria-controls'));
+      if (!panel || panel === except) continue;
+      panel.classList.remove('open');
+      btns[i].setAttribute('aria-expanded', 'false');
+    }
+  }
+  document.addEventListener(
+    'click',
+    function (e) {
+      var btn = e.target && e.target.closest ? e.target.closest('[data-nav-dropdown]') : null;
+      if (!btn) {
+        if (!(e.target && e.target.closest && e.target.closest('.dropdown-panel'))) closeAll(null);
+        return;
+      }
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      if (!panel) return;
+      e.stopPropagation();
+      e.preventDefault();
+      var open = !panel.classList.contains('open');
+      closeAll(panel);
+      panel.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    },
+    true
+  );
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    closeAll(null);
+    if (document.activeElement && document.activeElement.closest && document.activeElement.closest('.dropdown-panel')) {
+      document.activeElement.blur();
+    }
+  });
+})();
+
 (function () {
   // Two-tier sticky header: let the logo tier scroll away and keep only the amber navigation bar pinned,
   // so the sticky area stays small on phones. Pages with a single-tier header are left unchanged.

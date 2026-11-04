@@ -36,7 +36,7 @@ summary:focus-visible {
   outline-offset: 2px;
 }
 
-/* Mobile Slide-In Navigation Drawer (Cheesecake Factory Style) */
+/* Mobile Slide-In Navigation Drawer */
 body.mobile-nav-open {
   overflow: hidden !important;
 }
@@ -53,4 +53,21 @@ body.mobile-nav-open #mobile-nav {
 }
 #mobile-nav {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Desktop menu-bar dropdowns: open on hover, keyboard focus, or a click (the .open class from site.js). */
+.dropdown-panel {
+  display: none !important;
+}
+.group:hover > .dropdown-panel,
+.group:focus-within > .dropdown-panel,
+.dropdown-panel.open {
+  display: block !important;
+  animation: dropdown-in 0.15s ease-out;
+}
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    margin-top: -4px;
+  }
 }

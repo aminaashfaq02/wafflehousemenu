@@ -141,96 +141,65 @@
         <nav class="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 py-3.5" aria-label="Main Navigation">
           <!-- Menu & Prices Dropdown -->
           <div class="relative group" id="menu-nav-container">
-            <a 
-              href="/menu" 
-              id="menu-nav-btn" 
-              class="inline-flex items-center gap-1 text-[#1C1410] text-[15px] font-extrabold hover:text-black/70 transition-colors whitespace-nowrap focus:outline-none cursor-pointer py-1"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
+            <a href="/menu" id="menu-nav-btn" class="inline-flex items-center gap-1 text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap cursor-pointer py-1" aria-haspopup="true">
               <span>Menu &amp; Prices</span>
-              <svg id="menu-nav-chevron" class="w-3.5 h-3.5 text-[#1C1410] transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+              <svg id="menu-nav-chevron" class="w-3.5 h-3.5 text-[#1C1410] transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </a>
-            <!-- Dropdown Panel -->
-            <div class="hidden group-hover:block dropdown-panel absolute left-0 top-full pt-2 w-56 z-50 text-left">
-              <div class="bg-white rounded-xl shadow-xl border border-gray-200 py-1.5 overflow-hidden">
-                <a href="/menu" class="block px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-[#F59E0B]/20 hover:text-black transition-colors">
-                  Full Menu &amp; Prices
+            <div id="menu-dropdown-panel" class="hidden group-hover:block group-focus-within:block dropdown-panel absolute left-0 top-full pt-3 w-64 z-50 text-left">
+              <div class="rounded-2xl bg-white p-2 shadow-xl ring-1 ring-black/5">
+                <a href="/menu" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-800 whitespace-nowrap hover:bg-amber-50 hover:text-[#1C1410] focus-visible:bg-amber-50 focus-visible:outline-none transition-colors">
+                  <span>Full Menu &amp; Prices</span>
                 </a>
-                <a href="/menu/pdf/" class="flex items-center justify-between px-4 py-2 text-sm font-bold text-gray-900 bg-amber-50 hover:bg-[#F59E0B]/20 hover:text-black transition-colors">
-                  <span>Printable Menu (PDF)</span>
-                  <span class="bg-[#F59E0B] text-[#1C1410] text-[10px] font-black px-1.5 py-0.5 rounded uppercase">2026</span>
+                <a href="/prices-by-state" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-800 whitespace-nowrap hover:bg-amber-50 hover:text-[#1C1410] focus-visible:bg-amber-50 focus-visible:outline-none transition-colors">
+                  <span>Prices by State</span>
                 </a>
-                <a href="/prices-by-state" class="block px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-[#F59E0B]/20 hover:text-black transition-colors">
-                  Prices by State
+                <a href="/menu/pdf/" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-800 whitespace-nowrap hover:bg-amber-50 hover:text-[#1C1410] focus-visible:bg-amber-50 focus-visible:outline-none transition-colors">
+                  <span>Menu PDF Guide</span>
                 </a>
               </div>
             </div>
           </div>
-          
-          <a title="Catering" class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/waffle-house-catering/">
-            Catering
-          </a>
 
-          <!-- Short Text-Only Nutrition Dropdown (Hover + Click) -->
+          <a class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/waffle-house-catering/">Catering</a>
+
+          <!-- Nutrition Dropdown -->
           <div class="relative group" id="nutrition-nav-container">
-            <button 
-              id="nutrition-nav-btn" 
-              type="button" 
-              class="inline-flex items-center gap-1 text-[#1C1410] text-[15px] font-extrabold hover:text-black/70 transition-colors whitespace-nowrap focus:outline-none cursor-pointer py-1"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
+            <button id="nutrition-nav-btn" type="button" class="inline-flex items-center gap-1 text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap cursor-pointer py-1" aria-expanded="false" aria-haspopup="true" aria-controls="nutrition-dropdown-panel" data-nav-dropdown>
               <span>Nutrition</span>
-              <svg id="nutrition-nav-chevron" class="w-3.5 h-3.5 text-[#1C1410] transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+              <svg id="nutrition-nav-chevron" class="w-3.5 h-3.5 text-[#1C1410] transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </button>
-
-            <!-- Dropdown Panel (Hidden by default, shown on group-hover) -->
-            <div 
-              id="nutrition-dropdown-panel" 
-              class="hidden group-hover:block dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-2 w-48 z-50 text-left"
-            >
-              <div class="bg-white rounded-xl shadow-xl border border-gray-200 py-1.5 overflow-hidden">
-                <a href="/nutrition" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#F59E0B]/20 hover:text-black transition-colors">
-                  Nutrition
+            <div id="nutrition-dropdown-panel" class="hidden group-hover:block group-focus-within:block dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-3 w-64 z-50 text-left">
+              <div class="rounded-2xl bg-white p-2 shadow-xl ring-1 ring-black/5">
+                <a href="/nutrition" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-800 whitespace-nowrap hover:bg-amber-50 hover:text-[#1C1410] focus-visible:bg-amber-50 focus-visible:outline-none transition-colors">
+                  <span>Nutrition Facts</span>
                 </a>
-                <a href="/waffle-house-calories-allergies/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#F59E0B]/20 hover:text-black transition-colors">
-                  Calories &amp; Allergies
+                <a href="/waffle-house-calories-allergies/" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-800 whitespace-nowrap hover:bg-amber-50 hover:text-[#1C1410] focus-visible:bg-amber-50 focus-visible:outline-none transition-colors">
+                  <span>Calories &amp; Allergens</span>
                 </a>
-                <a href="/diet/low-calorie/" class="flex items-center justify-between px-4 py-2 text-sm font-bold text-gray-900 bg-amber-50 hover:bg-[#F59E0B]/20 hover:text-black transition-colors">
+                <a href="/diet/low-calorie/" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-800 whitespace-nowrap hover:bg-amber-50 hover:text-[#1C1410] focus-visible:bg-amber-50 focus-visible:outline-none transition-colors">
                   <span>Low-Calorie Menu</span>
-                  <span class="bg-[#F59E0B] text-[#1C1410] text-[10px] font-black px-1.5 py-0.5 rounded uppercase">Under 600</span>
+                  <span class="shrink-0 rounded-md bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-900">Under 600 cal</span>
                 </a>
-                <a href="/diet/high-protein/" class="flex items-center justify-between px-4 py-2 text-sm font-bold text-gray-900 bg-amber-50 hover:bg-[#F59E0B]/20 hover:text-black transition-colors">
+                <a href="/diet/high-protein/" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-800 whitespace-nowrap hover:bg-amber-50 hover:text-[#1C1410] focus-visible:bg-amber-50 focus-visible:outline-none transition-colors">
                   <span>High-Protein Menu</span>
-                  <span class="bg-[#F59E0B] text-[#1C1410] text-[10px] font-black px-1.5 py-0.5 rounded uppercase">20g–76g</span>
+                  <span class="shrink-0 rounded-md bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-900">20g+ protein</span>
                 </a>
-                <a href="/waffle-house-dietary-guide/" class="block px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-[#F59E0B]/20 hover:text-black transition-colors">
-                  Dietary Guide
+                <a href="/waffle-house-dietary-guide/" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-800 whitespace-nowrap hover:bg-amber-50 hover:text-[#1C1410] focus-visible:bg-amber-50 focus-visible:outline-none transition-colors">
+                  <span>Dietary Guide</span>
                 </a>
               </div>
             </div>
           </div>
 
-          <a title="Deals &amp; Coupons" class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/coupons">
-            Deals &amp; Coupons
-          </a>
-          <a title="Blog" class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/blog/">
-            Blog
-          </a>
-          <a title="Store Hours &amp; Locations" class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/locations">
-            Store Hours &amp; Locations
-          </a>
-          <a title="About Us" class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/about">
-            About Us
-          </a>
-          <a title="Contact" class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/contact">
-            Contact
-          </a>
+          <a class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/coupons">Deals &amp; Coupons</a>
+          <a class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/blog/">Blog</a>
+          <a class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/locations">Store Hours &amp; Locations</a>
+          <a class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/about">About Us</a>
+          <a class="text-[#1C1410] text-[15px] font-bold hover:text-black/70 transition-colors whitespace-nowrap" href="/contact">Contact</a>
         </nav>
 
         <!-- Mobile Header Row -->
