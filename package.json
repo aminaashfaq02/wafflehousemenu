@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node scripts/dev-server.js",
     "build:css": "node tools/build-css.js",
-    "optimize:images": "node tools/optimize-images.js"
+    "build:data": "node tools/build-menu.js && node tools/build-nutrition.js && node tools/build-home.js && node tools/build-diet.js && node tools/build-guides.js && node tools/build-prices.js && node tools/build-printable.js && node tools/build-coupons.js && npm run build:articles && node tools/build-drawer.js && node tools/sync-tables.js --write",
+    "check:data": "node tools/sync-tables.js && node tools/check-prose.js",
+    "optimize:images": "node tools/optimize-images.js",
+    "build:articles": "node tools/build-article.js all-star-special coffee hash-browns healthiest-breakfast menu-with-prices secret-menu texas-melts thanksgiving-hours waffle-house-index && node tools/build-blog-index.js"
   },
   "devDependencies": {
     "sharp": "^0.34.5",

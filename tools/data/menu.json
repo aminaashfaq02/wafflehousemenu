@@ -1,0 +1,1640 @@
+{
+  "_about": "Canonical menu composition for every page. Nutrition is the sum of the component values in components.json (Waffle House’s published per-component nutrition); each recipe follows the meal composition Waffle House lists (sides default to hashbrowns and white toast). Typical prices and ranges are in prices.json.",
+  "updated": "2026-11-04",
+  "categories": [
+    {
+      "id": "cat-all-star-specials",
+      "nav": "All-Star Special",
+      "title": "All-Star Special™",
+      "intro": "The All-Star Special is the biggest breakfast on the menu: a sweet cream waffle, two scrambled eggs, toast, hashbrowns (or grits or sliced tomatoes) and a choice of bacon, sausage or city ham. The figures below assume hashbrowns and white toast.",
+      "label": "Breakfast",
+      "items": [
+        {
+          "name": "All-Star Special with Bacon",
+          "desc": "Sweet cream waffle, two scrambled eggs, white toast, regular hashbrowns and three slices of bacon.",
+          "recipe": [
+            [
+              "WAFFLE",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ],
+            [
+              "BACON",
+              1
+            ]
+          ],
+          "img": "assets/nutrition/all-star-special.jpg"
+        },
+        {
+          "name": "All-Star Special with Sausage",
+          "desc": "Sweet cream waffle, two scrambled eggs, white toast, regular hashbrowns and two sausage patties.",
+          "recipe": [
+            [
+              "WAFFLE",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ],
+            [
+              "SAUSAGE",
+              1
+            ]
+          ],
+          "img": "assets/menu/allstar_recipe1.jpg"
+        },
+        {
+          "name": "All-Star Special with City Ham",
+          "desc": "Sweet cream waffle, two scrambled eggs, white toast, regular hashbrowns and a slice of hickory smoked city ham.",
+          "recipe": [
+            [
+              "WAFFLE",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ],
+            [
+              "HAM",
+              1
+            ]
+          ],
+          "img": "assets/blog/waffle-house-all-star-special-price.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-hashbrown-bowls",
+      "nav": "Breakfast Bowls",
+      "title": "Breakfast Hashbrown Bowls",
+      "intro": "Each breakfast bowl starts with a large order of hashbrowns, two slices of melted American cheese and two scrambled eggs, then adds crumbled meat. The Chicken Fiesta Protein Bowl swaps the hashbrowns for grilled chicken and three eggs.",
+      "label": "Breakfast",
+      "items": [
+        {
+          "name": "Sausage Egg & Cheese Hashbrown Bowl",
+          "desc": "Large hashbrowns, two slices of American cheese, two scrambled eggs and two crumbled sausage patties.",
+          "recipe": [
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "SAUSAGE",
+              1
+            ]
+          ],
+          "img": "assets/menu/hashbrown_sausage_egg_cheese_bowl.jpg"
+        },
+        {
+          "name": "Bacon Egg & Cheese Hashbrown Bowl",
+          "desc": "Large hashbrowns, two slices of American cheese, two scrambled eggs and three slices of crumbled bacon.",
+          "recipe": [
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "BACON",
+              1
+            ]
+          ],
+          "img": "assets/menu/bacon_or_sausage_bowl.jpg"
+        },
+        {
+          "name": "Ham Egg & Cheese Hashbrown Bowl",
+          "desc": "Large hashbrowns, two slices of American cheese, two scrambled eggs and chunks of hickory smoked ham.",
+          "recipe": [
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "CHUNKED",
+              1
+            ]
+          ],
+          "img": "assets/menu/ham_egg_cheese_bowl.jpg"
+        },
+        {
+          "name": "Chicken Fiesta Protein Bowl",
+          "desc": "Grilled chicken, three scrambled eggs, two slices of American cheese, grilled onions, tomatoes and jalapeños.",
+          "recipe": [
+            [
+              "CHICKEN",
+              1
+            ],
+            [
+              "EGG",
+              3
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "SMOTHERED",
+              1
+            ],
+            [
+              "DICED",
+              1
+            ],
+            [
+              "PEPPERED",
+              1
+            ]
+          ],
+          "img": "assets/menu/fiesta_protein_bowl.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-classic-egg-breakfasts",
+      "nav": "Egg Breakfasts",
+      "title": "Egg Breakfasts",
+      "intro": "Every egg breakfast comes with two scrambled eggs, toast and jelly, and a choice of grits, hashbrowns or sliced tomatoes. Add a steak, chop, ham or chicken for a bigger plate. Figures assume hashbrowns and white toast; jelly is not included.",
+      "label": "Breakfast",
+      "items": [
+        {
+          "name": "Two Egg Breakfast",
+          "desc": "Two scrambled eggs, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/blog/Egg_breakfast_plate_with_toast_202608101154.jpeg"
+        },
+        {
+          "name": "Two Egg Breakfast with Bacon",
+          "desc": "Two scrambled eggs, white toast, regular hashbrowns and three slices of bacon.",
+          "recipe": [
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ],
+            [
+              "BACON",
+              1
+            ]
+          ],
+          "img": "assets/nutrition/bacon-eggs.jpg"
+        },
+        {
+          "name": "Cheese 'N Eggs",
+          "desc": "Two scrambled eggs with a slice of melted American cheese, raisin toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "COVERED",
+              1
+            ],
+            [
+              "RAISIN",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/menu/cheese_n_eggs_raisin_toast.jpg"
+        },
+        {
+          "name": "T-Bone & Eggs",
+          "desc": "A 10-oz USDA Choice T-bone steak, two scrambled eggs, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "TBONE",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/blog/Steak_and_eggs_breakfast_platter_202608101156.jpeg"
+        },
+        {
+          "name": "Sirloin & Eggs",
+          "desc": "A 5-oz USDA Choice sirloin steak, two scrambled eggs, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "STEAK",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/blog/Steak_and_eggs_breakfast_2K_202608101157.jpeg"
+        },
+        {
+          "name": "Country Ham & Eggs",
+          "desc": "A 5-oz slice of country ham, two scrambled eggs, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "COHAM",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/menu/country-ham-and-eggs.jpg"
+        },
+        {
+          "name": "Chicken & Eggs",
+          "desc": "A 5-oz grilled chicken breast, two scrambled eggs, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "CHICKEN",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/blog/Grilled_chicken_and_scrambled_eggs_202608101159.jpeg"
+        },
+        {
+          "name": "Pork Chops & Eggs",
+          "desc": "Two 5-oz pork chops, two scrambled eggs, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "CHOP",
+              1
+            ],
+            [
+              "EGG_TWO",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/blog/Grilled_pork_chops_with_eggs_202608101201.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "cat-toddle-house-omelets",
+      "nav": "Omelets",
+      "title": "Toddle House Omelets",
+      "intro": "Toddle House omelets are served with toast and jelly and a choice of grits, hashbrowns or sliced tomatoes. Figures assume the standard omelet, hashbrowns and white toast.",
+      "label": "Breakfast",
+      "items": [
+        {
+          "name": "Cheese Omelet",
+          "desc": "Omelet with two slices of American cheese, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "EGGOM",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/menu/classic_2egg_cheese_omelet.jpg"
+        },
+        {
+          "name": "Ham & Cheese Omelet",
+          "desc": "Omelet with hickory smoked ham and two slices of American cheese, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "EGGOM",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "CHUNKED",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/menu/diced_ham_cheese_omelet.jpg"
+        },
+        {
+          "name": "Fiesta Omelet",
+          "desc": "Omelet with ham, diced tomatoes, jalapeños, grilled onions and two slices of American cheese, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "EGGOM",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "CHUNKED",
+              1
+            ],
+            [
+              "DICED",
+              1
+            ],
+            [
+              "PEPPERED",
+              1
+            ],
+            [
+              "SMOTHERED",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/menu/fiesta_omelet.jpg"
+        },
+        {
+          "name": "Cheesesteak Omelet",
+          "desc": "Omelet with thin-sliced chuck cheesesteak and two slices of American cheese, white toast and regular hashbrowns.",
+          "recipe": [
+            [
+              "EGGOM",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "CHSTKOTS",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ],
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/menu/cheesesteak_omelet.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-signature-waffles",
+      "nav": "Waffles",
+      "title": "Waffles",
+      "intro": "The sweet cream waffle is the item the chain is named for. Pecan pieces are baked in; chocolate chips and peanut butter chips go on top. Syrup and butter are not included in the figures.",
+      "label": "Waffles",
+      "items": [
+        {
+          "name": "Classic Waffle",
+          "desc": "One sweet cream waffle.",
+          "recipe": [
+            [
+              "WAFFLE",
+              1
+            ]
+          ],
+          "img": "assets/menu/classic-sweet-cream-waffle.jpg"
+        },
+        {
+          "name": "Pecan Waffle",
+          "desc": "Sweet cream waffle with pecan pieces baked in.",
+          "recipe": [
+            [
+              "WAFFLE",
+              1
+            ],
+            [
+              "PECAN",
+              1
+            ]
+          ],
+          "img": "assets/menu/pecan-waffle.jpg"
+        },
+        {
+          "name": "Chocolate Chip Waffle",
+          "desc": "Sweet cream waffle topped with chocolate chips.",
+          "recipe": [
+            [
+              "WAFFLE",
+              1
+            ],
+            [
+              "CHOCCHIP",
+              1
+            ]
+          ],
+          "img": "assets/menu/chocolate-chip-waffle.jpg"
+        },
+        {
+          "name": "Peanut Butter Chip Waffle",
+          "desc": "Sweet cream waffle topped with peanut butter chips.",
+          "recipe": [
+            [
+              "WAFFLE",
+              1
+            ],
+            [
+              "PBCHIP",
+              1
+            ]
+          ],
+          "img": "assets/menu/peanut_butter_chip_waffle.jpg"
+        },
+        {
+          "name": "Waffle with Bacon",
+          "desc": "Sweet cream waffle with three slices of bacon on the side.",
+          "recipe": [
+            [
+              "WAFFLE",
+              1
+            ],
+            [
+              "BACON",
+              1
+            ]
+          ],
+          "img": "assets/menu/kids_waffle_bacon.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-hashbrowns-toppings",
+      "nav": "Hashbrowns",
+      "title": "Hashbrowns & Toppings",
+      "intro": "Hashbrowns come regular, large or triple, and each topping has its own one-word call: smothered (onions), covered (cheese), chunked (ham), diced (tomatoes), peppered (jalapeños), capped (mushrooms), topped (chili) and country (sausage gravy). Ask for all of them and the order is \"all the way\".",
+      "label": "Hashbrowns",
+      "items": [
+        {
+          "name": "Hashbrowns (Regular)",
+          "desc": "A regular order of hashbrowns, scattered on the grill.",
+          "recipe": [
+            [
+              "HASH",
+              1
+            ]
+          ],
+          "img": "assets/nutrition/hashbrowns.jpg"
+        },
+        {
+          "name": "Large Hashbrowns",
+          "desc": "A double order of hashbrowns.",
+          "recipe": [
+            [
+              "LGHASH",
+              1
+            ]
+          ],
+          "img": "assets/menu/large-hashbrowns.jpg"
+        },
+        {
+          "name": "Triple Hashbrowns",
+          "desc": "A triple order of hashbrowns.",
+          "recipe": [
+            [
+              "TRIPHASH",
+              1
+            ]
+          ],
+          "img": "assets/blog/Plate_of_potato_hashbrowns_2K_202608101310.jpeg"
+        },
+        {
+          "name": "Hashbrowns Scattered, Smothered & Covered",
+          "desc": "Regular hashbrowns with grilled onions and a slice of melted American cheese.",
+          "recipe": [
+            [
+              "HASH",
+              1
+            ],
+            [
+              "SMOTHERED",
+              1
+            ],
+            [
+              "COVERED",
+              1
+            ]
+          ],
+          "img": "assets/blog/waffle-house-hashbrowns-smothered-covered.jpg"
+        },
+        {
+          "name": "Hashbrowns All The Way",
+          "desc": "Regular hashbrowns with onions, cheese, ham, tomatoes, jalapeños, mushrooms, chili and sausage gravy.",
+          "recipe": [
+            [
+              "HASHATW",
+              1
+            ]
+          ],
+          "img": "assets/blog/Hashbrowns_with_cheese_and_onions_202608101311.jpeg"
+        }
+      ],
+      "toppings": [
+        {
+          "call": "Smothered",
+          "what": "Grilled onions",
+          "id": "SMOTHERED"
+        },
+        {
+          "call": "Covered",
+          "what": "Slice of American cheese",
+          "id": "COVERED"
+        },
+        {
+          "call": "Chunked",
+          "what": "Hickory smoked ham",
+          "id": "CHUNKED"
+        },
+        {
+          "call": "Diced",
+          "what": "Grilled tomatoes",
+          "id": "DICED"
+        },
+        {
+          "call": "Peppered",
+          "what": "Jalapeño peppers",
+          "id": "PEPPERED"
+        },
+        {
+          "call": "Capped",
+          "what": "Grilled mushrooms",
+          "id": "MUSHROOM"
+        },
+        {
+          "call": "Topped",
+          "what": "Bert's Chili",
+          "id": "TOPPED"
+        },
+        {
+          "call": "Country",
+          "what": "Sausage gravy",
+          "id": "COUNTRY"
+        }
+      ]
+    },
+    {
+      "id": "cat-biscuit-sandwiches",
+      "nav": "Biscuits",
+      "title": "Biscuits",
+      "intro": "Biscuits are grilled before they are filled. The ham biscuits come as a pair, with one slice of ham split between two biscuits.",
+      "label": "Biscuits",
+      "items": [
+        {
+          "name": "Sausage Egg & Cheese Biscuit",
+          "desc": "Sausage patty, one egg and a slice of American cheese on a grilled biscuit.",
+          "recipe": [
+            [
+              "SECBISC",
+              1
+            ]
+          ],
+          "img": "assets/menu/sausage_egg_cheese_biscuit.jpg"
+        },
+        {
+          "name": "Bacon Egg & Cheese Biscuit",
+          "desc": "Two slices of bacon, one egg and a slice of American cheese on a grilled biscuit.",
+          "recipe": [
+            [
+              "BEBISC",
+              1
+            ]
+          ],
+          "img": "assets/blog/Bacon_egg_cheese_biscuit_sandwich_202608101255.jpeg"
+        },
+        {
+          "name": "City Ham Biscuits (2)",
+          "desc": "A slice of hickory smoked city ham, halved, on two grilled biscuits.",
+          "recipe": [
+            [
+              "HAMBISC",
+              1
+            ]
+          ],
+          "img": "assets/menu/city_ham_biscuit.jpg"
+        },
+        {
+          "name": "Country Ham Biscuits (2)",
+          "desc": "A slice of country ham, halved, on two grilled biscuits.",
+          "recipe": [
+            [
+              "COHAMBISC",
+              1
+            ]
+          ],
+          "img": "assets/menu/country_ham_twin_biscuits.jpg"
+        },
+        {
+          "name": "Chicken Biscuit",
+          "desc": "Grilled chicken breast on a grilled biscuit.",
+          "recipe": [
+            [
+              "BISC",
+              1
+            ],
+            [
+              "CHICKEN",
+              1
+            ]
+          ],
+          "img": "assets/menu/tender_chicken_filet_biscuit.jpg"
+        },
+        {
+          "name": "Biscuit & Gravy",
+          "desc": "A grilled biscuit with sausage gravy.",
+          "recipe": [
+            [
+              "GRVYBISC",
+              1
+            ]
+          ],
+          "img": "assets/menu/georgia-sausage-gravy-biscuit.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-breakfast-sandwiches",
+      "nav": "Breakfast Sandwiches",
+      "title": "Breakfast Sandwiches & Texas Breakfast Melts",
+      "intro": "Breakfast sandwiches come on a choice of toast with one egg and one slice of cheese. The Texas breakfast melts move to Texas toast and add a second slice of cheese. Figures assume white toast.",
+      "label": "Sandwiches",
+      "items": [
+        {
+          "name": "Sausage Egg & Cheese Sandwich",
+          "desc": "Two sausage patties, one egg and a slice of American cheese on white toast.",
+          "recipe": [
+            [
+              "SAUSAGE",
+              1
+            ],
+            [
+              "EGG",
+              1
+            ],
+            [
+              "COVERED",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ]
+          ],
+          "img": "assets/menu/sausage_egg_sandwich.jpg"
+        },
+        {
+          "name": "Bacon Egg & Cheese Sandwich",
+          "desc": "Three slices of bacon, one egg and a slice of American cheese on white toast.",
+          "recipe": [
+            [
+              "BACON",
+              1
+            ],
+            [
+              "EGG",
+              1
+            ],
+            [
+              "COVERED",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ]
+          ],
+          "img": "assets/menu/bacon_egg_sandwich.jpg"
+        },
+        {
+          "name": "Texas Sausage Egg & Cheese Melt",
+          "desc": "Two sausage patties, one egg and two slices of American cheese on Texas toast.",
+          "recipe": [
+            [
+              "SAUSAGE",
+              1
+            ],
+            [
+              "EGG",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "TXSAND",
+              1
+            ]
+          ],
+          "img": "assets/menu/texas_sausage_egg_cheese_melt.jpg"
+        },
+        {
+          "name": "Texas Bacon Egg & Cheese Melt",
+          "desc": "Three slices of bacon, one egg and two slices of American cheese on Texas toast.",
+          "recipe": [
+            [
+              "BACON",
+              1
+            ],
+            [
+              "EGG",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "TXSAND",
+              1
+            ]
+          ],
+          "img": "assets/menu/texas_bacon_egg_cheese_melt.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-texas-melts",
+      "nav": "Texas Melts",
+      "title": "Texas Melts",
+      "intro": "Texas melts are built on two slices of grilled Texas toast with two slices of melted American cheese and grilled onions.",
+      "label": "Melts",
+      "items": [
+        {
+          "name": "Texas Cheesesteak Melt",
+          "desc": "Thin-sliced chuck cheesesteak with grilled onions and two slices of American cheese on Texas toast.",
+          "recipe": [
+            [
+              "TXCSMLT",
+              1
+            ]
+          ],
+          "img": "assets/menu/texas_cheesesteak_melt.jpg"
+        },
+        {
+          "name": "Texas Bacon Cheesesteak Melt",
+          "desc": "The Texas Cheesesteak Melt with bacon added: cheesesteak, grilled onions, bacon and two slices of American cheese on Texas toast.",
+          "recipe": [
+            [
+              "TXCSMLT",
+              1
+            ],
+            [
+              "ADDBACON",
+              1
+            ]
+          ],
+          "img": "assets/nutrition/texas-bacon-cheesesteak-melt.jpg"
+        },
+        {
+          "name": "Texas Angus Patty Melt",
+          "desc": "A quarter-pound Angus patty with grilled onions and two slices of American cheese on Texas toast.",
+          "recipe": [
+            [
+              "TXPATTY",
+              1
+            ]
+          ],
+          "img": "assets/blog/Angus_patty_melt_on_toast_202608101240.jpeg"
+        },
+        {
+          "name": "Texas Grilled Chicken Melt",
+          "desc": "Grilled chicken with grilled onions and two slices of American cheese on Texas toast.",
+          "recipe": [
+            [
+              "TXCHIXMLT",
+              1
+            ]
+          ],
+          "img": "assets/blog/Texas_grilled_chicken_melt_2K_202608101239.jpeg"
+        },
+        {
+          "name": "Texas Sausage Melt",
+          "desc": "A sausage patty with grilled onions and two slices of American cheese on Texas toast.",
+          "recipe": [
+            [
+              "ADDSAUSAGE",
+              1
+            ],
+            [
+              "SMOTHERED",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "TXSAND",
+              1
+            ]
+          ],
+          "img": "assets/menu/texas_sausage_egg_cheese_melt_home.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-lunch-dinner-bowls",
+      "nav": "Lunch Bowls",
+      "title": "Lunch & Dinner Hashbrown Bowls",
+      "intro": "The lunch and dinner bowls pair a large order of hashbrowns and two slices of cheese with a melt filling instead of eggs.",
+      "label": "Lunch & Dinner",
+      "items": [
+        {
+          "name": "Cheesesteak Melt Hashbrown Bowl",
+          "desc": "Large hashbrowns, two slices of American cheese, thin-sliced chuck cheesesteak and grilled onions.",
+          "recipe": [
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "CHSTKOTS",
+              1
+            ],
+            [
+              "SMOTHERED",
+              1
+            ]
+          ],
+          "img": "assets/menu/cheesesteak_melt_hashbrown_bowl.jpg"
+        },
+        {
+          "name": "Chicken Melt Hashbrown Bowl",
+          "desc": "Large hashbrowns, two slices of American cheese, grilled chicken and grilled onions.",
+          "recipe": [
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "CHICKEN",
+              1
+            ],
+            [
+              "SMOTHERED",
+              1
+            ]
+          ],
+          "img": "assets/menu/chicken_melt_hashbrown_bowl.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-sandwiches-burgers",
+      "nav": "Sandwiches & Burgers",
+      "title": "Sandwiches & Burgers",
+      "intro": "Sandwiches come on a choice of toast (white toast in the figures), and burgers and the grilled chicken sandwich come on a grilled bun.",
+      "label": "Lunch & Dinner",
+      "items": [
+        {
+          "name": "Grilled Chicken Sandwich",
+          "desc": "Grilled chicken breast with lettuce, tomato and grilled onions on a grilled bun.",
+          "recipe": [
+            [
+              "CHICKEN",
+              1
+            ],
+            [
+              "DELUXE",
+              1
+            ],
+            [
+              "BUN",
+              1
+            ]
+          ],
+          "img": "assets/blog/Grilled_chicken_sandwich_on_plate_202608101347.jpeg"
+        },
+        {
+          "name": "Angus Hamburger Deluxe",
+          "desc": "A quarter-pound Angus patty with lettuce, tomato and grilled onions on a grilled bun.",
+          "recipe": [
+            [
+              "BURGERDLX",
+              1
+            ]
+          ],
+          "img": "assets/blog/Classic_burger_on_white_plate_202608101338.jpeg"
+        },
+        {
+          "name": "Ham & Cheese Sandwich",
+          "desc": "A slice of city ham and a slice of American cheese with lettuce and tomato on white toast.",
+          "recipe": [
+            [
+              "HAM",
+              1
+            ],
+            [
+              "COVERED",
+              1
+            ],
+            [
+              "LT",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ]
+          ],
+          "img": "assets/menu/grilled_ham_sandwich.jpg"
+        },
+        {
+          "name": "Grilled Ham & Cheese Sandwich",
+          "desc": "A slice of city ham and a slice of American cheese on grilled white toast.",
+          "recipe": [
+            [
+              "HAM",
+              1
+            ],
+            [
+              "COVERED",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ]
+          ],
+          "img": "assets/menu/ham_egg_sandwich.jpg"
+        },
+        {
+          "name": "BLT Sandwich",
+          "desc": "Three slices of bacon with lettuce and tomato on white toast.",
+          "recipe": [
+            [
+              "BACON",
+              1
+            ],
+            [
+              "LT",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ]
+          ],
+          "img": "assets/blog/BLT_sandwich_cut_in_half_202608101351.jpeg"
+        },
+        {
+          "name": "Texas Bacon Lover's BLT",
+          "desc": "Five slices of bacon with lettuce and tomato on grilled Texas toast.",
+          "recipe": [
+            [
+              "LGBACON",
+              1
+            ],
+            [
+              "LT",
+              1
+            ],
+            [
+              "TXSAND",
+              1
+            ]
+          ],
+          "img": "assets/menu/bacon_lovers_blt.jpg"
+        },
+        {
+          "name": "Grilled Cheese Sandwich",
+          "desc": "Two slices of melted American cheese on grilled white toast.",
+          "recipe": [
+            [
+              "OMELETCHEESE",
+              1
+            ],
+            [
+              "WHITE",
+              1
+            ]
+          ],
+          "img": "assets/menu/classic_grilled_cheese.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-dinners",
+      "nav": "Dinners",
+      "title": "Dinners",
+      "intro": "Dinners pair a steak, chop, ham or grilled chicken with a double order of hashbrowns and a slice of grilled Texas toast.",
+      "label": "Lunch & Dinner",
+      "items": [
+        {
+          "name": "T-Bone Dinner",
+          "desc": "A 10-oz USDA Choice T-bone steak, large hashbrowns and a slice of grilled Texas toast.",
+          "recipe": [
+            [
+              "TBONE",
+              1
+            ],
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "TEXAS",
+              1
+            ]
+          ],
+          "img": "assets/blog/Sirloin_steak_with_grits_and_202608101346.jpeg"
+        },
+        {
+          "name": "Sirloin Dinner",
+          "desc": "A 5-oz USDA Choice sirloin steak, large hashbrowns and a slice of grilled Texas toast.",
+          "recipe": [
+            [
+              "STEAK",
+              1
+            ],
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "TEXAS",
+              1
+            ]
+          ],
+          "img": "assets/blog/Steak_and_eggs_breakfast_2K_202608101157.jpeg"
+        },
+        {
+          "name": "Country Ham Dinner",
+          "desc": "A 5-oz slice of country ham, large hashbrowns and a slice of grilled Texas toast.",
+          "recipe": [
+            [
+              "COHAM",
+              1
+            ],
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "TEXAS",
+              1
+            ]
+          ],
+          "img": "assets/blog/Grilled_country_ham_slice_2K_202608101140.jpeg"
+        },
+        {
+          "name": "Chicken Dinner",
+          "desc": "Grilled chicken, large hashbrowns and a slice of grilled Texas toast.",
+          "recipe": [
+            [
+              "CHICKEN",
+              1
+            ],
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "TEXAS",
+              1
+            ]
+          ],
+          "img": "assets/nutrition/grilled-chicken-breast.jpg"
+        },
+        {
+          "name": "Pork Chop Dinner",
+          "desc": "Two 5-oz pork chops, large hashbrowns and a slice of grilled Texas toast.",
+          "recipe": [
+            [
+              "CHOP",
+              1
+            ],
+            [
+              "LGHASH",
+              1
+            ],
+            [
+              "TEXAS",
+              1
+            ]
+          ],
+          "img": "assets/blog/Pork_chops_with_eggs_and_202608101203.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "cat-breakfast-sides",
+      "nav": "Sides",
+      "title": "Sides & Grits",
+      "intro": "Sides can be added to any meal. The grits bowls are side-size: one scrambled egg, one slice of cheese and meat on a bowl of grits.",
+      "label": "Sides",
+      "items": [
+        {
+          "name": "Bacon (3 Slices)",
+          "desc": "A side of three slices of bacon.",
+          "recipe": [
+            [
+              "BACON",
+              1
+            ]
+          ],
+          "img": "assets/blog/Pork_bacon_strips_on_plate_202608101134.jpeg"
+        },
+        {
+          "name": "Sausage (2 Patties)",
+          "desc": "A side of two sausage patties.",
+          "recipe": [
+            [
+              "SAUSAGE",
+              1
+            ]
+          ],
+          "img": "assets/blog/Grilled_pork_sausage_patties_on_202608101136.jpeg"
+        },
+        {
+          "name": "City Ham",
+          "desc": "A slice of hickory smoked city ham.",
+          "recipe": [
+            [
+              "HAM",
+              1
+            ]
+          ],
+          "img": "assets/menu/city_ham_slice.jpg"
+        },
+        {
+          "name": "Country Ham",
+          "desc": "A 5-oz slice of country ham.",
+          "recipe": [
+            [
+              "COHAM",
+              1
+            ]
+          ],
+          "img": "assets/menu/country_ham_slice.jpg"
+        },
+        {
+          "name": "Grits",
+          "desc": "A regular bowl of grits.",
+          "recipe": [
+            [
+              "GRITS",
+              1
+            ]
+          ],
+          "img": "assets/menu/traditional_buttered_grits.jpg"
+        },
+        {
+          "name": "Cheese Grits",
+          "desc": "Grits with a slice of melted American cheese.",
+          "recipe": [
+            [
+              "GRITS",
+              1
+            ],
+            [
+              "COVERED",
+              1
+            ]
+          ],
+          "img": "assets/menu/creamy_cheese_grits.jpg"
+        },
+        {
+          "name": "Sausage Egg & Cheese Grits Bowl",
+          "desc": "A crumbled sausage patty, one scrambled egg and a slice of American cheese on grits.",
+          "recipe": [
+            [
+              "SECGRITS",
+              1
+            ]
+          ],
+          "img": "assets/menu/sausage_egg_cheese_grits_bowl.jpg"
+        },
+        {
+          "name": "Bacon Egg & Cheese Grits Bowl",
+          "desc": "Two slices of crumbled bacon, one scrambled egg and a slice of American cheese on grits.",
+          "recipe": [
+            [
+              "BECGRITS",
+              1
+            ]
+          ],
+          "img": "assets/blog/Bowl_of_grits_with_toppings_202608101329.jpeg"
+        },
+        {
+          "name": "Ham Egg & Cheese Grits Bowl",
+          "desc": "Chunks of hickory smoked ham, one scrambled egg and a slice of American cheese on grits.",
+          "recipe": [
+            [
+              "HAMGRITS",
+              1
+            ]
+          ],
+          "img": "assets/menu/ham_egg_cheese_grits_bowl.jpg"
+        },
+        {
+          "name": "Sliced Tomatoes",
+          "desc": "Sliced tomatoes on the side.",
+          "recipe": [
+            [
+              "TOMATOINSTEAD",
+              1
+            ]
+          ],
+          "img": "assets/nutrition/southern-grits.jpg",
+          "noCard": true
+        },
+        {
+          "name": "Toast (White)",
+          "desc": "A side of white toast.",
+          "recipe": [
+            [
+              "WHITE",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Grilled Biscuit",
+          "desc": "A grilled biscuit on the side.",
+          "recipe": [
+            [
+              "BISC",
+              1
+            ]
+          ],
+          "img": "assets/blog/Grilled_buttermilk_biscuit_on_plate_202608101242.jpeg"
+        },
+        {
+          "name": "Bert's Chili (Regular)",
+          "desc": "A regular bowl of Bert's Chili.",
+          "recipe": [
+            [
+              "BERTS",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        }
+      ]
+    },
+    {
+      "id": "cat-pies",
+      "nav": "Pies",
+      "title": "Pies",
+      "intro": "Two pies are on the menu, served by the slice.",
+      "label": "Dessert",
+      "items": [
+        {
+          "name": "Southern Pecan Pie",
+          "desc": "A regular slice of pecan pie.",
+          "recipe": [
+            [
+              "PECANPIE",
+              1
+            ]
+          ],
+          "img": "assets/menu/southern-pecan-pie.jpg"
+        },
+        {
+          "name": "Triple Chocolate Pie",
+          "desc": "A regular slice of chocolate pie in a chocolate cookie crust with whipped cream.",
+          "recipe": [
+            [
+              "CHOCPIE",
+              1
+            ]
+          ],
+          "img": "assets/menu/triple_chocolate_pie_new_1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cat-beverages",
+      "nav": "Drinks",
+      "title": "Drinks",
+      "intro": "Coffee is the classic order. Sodas, Alice's Iced Tea, juices and milk are also on the menu; figures are for the regular size.",
+      "label": "Drinks",
+      "items": [
+        {
+          "name": "Coffee",
+          "desc": "Classic blend, dark roast or decaf, black.",
+          "recipe": [
+            [
+              "COFFEE",
+              1
+            ]
+          ],
+          "img": "assets/blog/Steaming_coffee_on_diner_saucer_202608101413.jpeg"
+        },
+        {
+          "name": "Coca-Cola",
+          "desc": "Fountain Coca-Cola.",
+          "recipe": [
+            [
+              "COKE",
+              1
+            ]
+          ],
+          "img": "assets/menu/fountain_sodas.jpg"
+        },
+        {
+          "name": "Diet Coke",
+          "desc": "Fountain Diet Coke.",
+          "recipe": [
+            [
+              "DTCOKE",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Sprite",
+          "desc": "Fountain Sprite.",
+          "recipe": [
+            [
+              "SPRITE",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Pibb Xtra",
+          "desc": "Fountain Pibb Xtra.",
+          "recipe": [
+            [
+              "PIBB",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Barq's Root Beer",
+          "desc": "Fountain root beer.",
+          "recipe": [
+            [
+              "BAR",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Hi-C Fruit Punch",
+          "desc": "Fountain fruit punch.",
+          "recipe": [
+            [
+              "PUNCH",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Minute Maid Lemonade",
+          "desc": "Fountain lemonade.",
+          "recipe": [
+            [
+              "MMLEMON",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Alice's Iced Tea (Sweet)",
+          "desc": "Sweet iced tea.",
+          "recipe": [
+            [
+              "TEA",
+              1
+            ]
+          ],
+          "img": "assets/menu/alices_iced_tea.jpg"
+        },
+        {
+          "name": "Alice's Iced Tea (Unsweet)",
+          "desc": "Unsweetened iced tea.",
+          "recipe": [
+            [
+              "TEAUN",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Alice's Teamonade",
+          "desc": "Sweet tea mixed with lemonade.",
+          "recipe": [
+            [
+              "TEAMON",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Orange Juice (9-oz)",
+          "desc": "Minute Maid orange juice.",
+          "recipe": [
+            [
+              "OJREG",
+              1
+            ]
+          ],
+          "img": "assets/menu/orange_apple_juice.jpg"
+        },
+        {
+          "name": "Apple Juice",
+          "desc": "Minute Maid apple juice.",
+          "recipe": [
+            [
+              "AJ",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        },
+        {
+          "name": "Milk (9-oz)",
+          "desc": "2% milk.",
+          "recipe": [
+            [
+              "MILK",
+              1
+            ]
+          ],
+          "img": "assets/menu/regular_and_chocolate_milk.jpg"
+        },
+        {
+          "name": "Chocolate Milk (9-oz)",
+          "desc": "Whole chocolate milk.",
+          "recipe": [
+            [
+              "CHOCMILK",
+              1
+            ]
+          ],
+          "img": "",
+          "noCard": true
+        }
+      ]
+    }
+  ]
+}

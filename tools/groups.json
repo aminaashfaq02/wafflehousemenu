@@ -13,7 +13,6 @@
   "guide": [
     "blog/healthiest-breakfast-for-weight-loss/index.html",
     "blog/index.html",
-    "blog/waffle-house-all-star-special-price/index.html",
     "blog/waffle-house-all-star-special/index.html",
     "blog/waffle-house-hash-browns/index.html",
     "blog/waffle-house-menu-with-prices/index.html",
@@ -21,7 +20,10 @@
     "blog/waffle-house-thanksgiving-hours/index.html",
     "recipes/waffle-house-sweet-cream-waffle-copycat/index.html",
     "waffle-house-calories-allergies/index.html",
-    "waffle-house-dietary-guide/index.html"
+    "waffle-house-dietary-guide/index.html",
+    "blog/waffle-house-coffee/index.html",
+    "blog/waffle-house-index/index.html",
+    "blog/waffle-house-texas-melts/index.html"
   ],
   "home": [
     "diet/high-protein/index.html",

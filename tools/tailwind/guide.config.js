@@ -1,7 +1,7 @@
 // Generated from the inline Tailwind Play-CDN config that used to live in these pages.
 // Build with: npm run build:css
 module.exports = {
-  content: ["./blog/healthiest-breakfast-for-weight-loss/index.html","./blog/index.html","./blog/waffle-house-all-star-special-price/index.html","./blog/waffle-house-all-star-special/index.html","./blog/waffle-house-hash-browns/index.html","./blog/waffle-house-menu-with-prices/index.html","./blog/waffle-house-secret-menu-items/index.html","./blog/waffle-house-thanksgiving-hours/index.html","./recipes/waffle-house-sweet-cream-waffle-copycat/index.html","./waffle-house-calories-allergies/index.html","./waffle-house-dietary-guide/index.html"],
+  content: ["./blog/waffle-house-texas-melts/index.html","./blog/waffle-house-index/index.html","./blog/waffle-house-coffee/index.html","./blog/healthiest-breakfast-for-weight-loss/index.html","./blog/index.html","./blog/waffle-house-all-star-special/index.html","./blog/waffle-house-hash-browns/index.html","./blog/waffle-house-menu-with-prices/index.html","./blog/waffle-house-secret-menu-items/index.html","./blog/waffle-house-thanksgiving-hours/index.html","./recipes/waffle-house-sweet-cream-waffle-copycat/index.html","./waffle-house-calories-allergies/index.html","./waffle-house-dietary-guide/index.html"],
   ...{
       theme: {
         extend: {

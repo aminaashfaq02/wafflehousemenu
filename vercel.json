@@ -248,12 +248,12 @@
     },
     {
       "source": "/waffle-house-all-star-special-price",
-      "destination": "/blog/waffle-house-all-star-special-price/",
+      "destination": "/blog/waffle-house-all-star-special/",
       "permanent": true
     },
     {
       "source": "/waffle-house-all-star-special-price/",
-      "destination": "/blog/waffle-house-all-star-special-price/",
+      "destination": "/blog/waffle-house-all-star-special/",
       "permanent": true
     },
     {
@@ -319,6 +319,16 @@
     {
       "source": "/assets/waffle-house-menu-nutrition-facts-2026.pdf",
       "destination": "/menu/pdf/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waffle-house-all-star-special-price/",
+      "destination": "/blog/waffle-house-all-star-special/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/waffle-house-all-star-special-price",
+      "destination": "/blog/waffle-house-all-star-special/",
       "permanent": true
     }
   ],

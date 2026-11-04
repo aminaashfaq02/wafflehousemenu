@@ -1,0 +1,1071 @@
+{
+ "ADDBACON": {
+  "name": "Add Bacon",
+  "cal": 90,
+  "protein": 5,
+  "carbs": 0,
+  "fat": 8,
+  "sodium": 350,
+  "allergens": []
+ },
+ "ADDSAUSAGE": {
+  "name": "Add Sausage",
+  "cal": 130,
+  "protein": 5,
+  "carbs": 0,
+  "fat": 12,
+  "sodium": 260,
+  "allergens": []
+ },
+ "AJ": {
+  "name": "Regular Apple Juice",
+  "cal": 100,
+  "protein": 0,
+  "carbs": 23,
+  "fat": 0,
+  "sodium": 15,
+  "allergens": []
+ },
+ "AJLG": {
+  "name": "Large Apple Juice",
+  "cal": 200,
+  "protein": 0,
+  "carbs": 46,
+  "fat": 0,
+  "sodium": 30,
+  "allergens": []
+ },
+ "BACON": {
+  "name": "Regular Bacon",
+  "cal": 140,
+  "protein": 8,
+  "carbs": 0,
+  "fat": 12,
+  "sodium": 520,
+  "allergens": []
+ },
+ "BAR": {
+  "name": "Barq's Root Beer",
+  "cal": 180,
+  "protein": 0,
+  "carbs": 50,
+  "fat": 0,
+  "sodium": 75,
+  "allergens": []
+ },
+ "BEBISC": {
+  "name": "Bacon & Egg Biscuit",
+  "cal": 560,
+  "protein": 17,
+  "carbs": 35,
+  "fat": 40,
+  "sodium": 1310,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "BECGRITS": {
+  "name": "Bacon Egg & Cheese Grits Bowl",
+  "cal": 330,
+  "protein": 16,
+  "carbs": 17,
+  "fat": 21,
+  "sodium": 960,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "BERTS": {
+  "name": "Regular Bert's Chili",
+  "cal": 150,
+  "protein": 10,
+  "carbs": 15,
+  "fat": 6,
+  "sodium": 770,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "BISC": {
+  "name": "Grilled Biscuit",
+  "cal": 380,
+  "protein": 5,
+  "carbs": 34,
+  "fat": 25,
+  "sodium": 900,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "BUN": {
+  "name": "Grilled Hamburger Bun",
+  "cal": 340,
+  "protein": 4,
+  "carbs": 27,
+  "fat": 24,
+  "sodium": 490,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "BURGERDLX": {
+  "name": "Angus Hamburger Deluxe",
+  "cal": 570,
+  "protein": 19,
+  "carbs": 29,
+  "fat": 41,
+  "sodium": 550,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "CHICKEN": {
+  "name": "Grilled Chicken",
+  "cal": 140,
+  "protein": 29,
+  "carbs": 1,
+  "fat": 3,
+  "sodium": 930,
+  "allergens": []
+ },
+ "CHOCCHIP": {
+  "name": "Chocolate Chips",
+  "cal": 110,
+  "protein": 1,
+  "carbs": 16,
+  "fat": 6,
+  "sodium": 0,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "CHOCMILK": {
+  "name": "Regular Chocolate Milk",
+  "cal": 230,
+  "protein": 9,
+  "carbs": 31,
+  "fat": 9,
+  "sodium": 190,
+  "allergens": [
+   "Milk"
+  ]
+ },
+ "CHOCMILKLG": {
+  "name": "Large Chocolate Milk",
+  "cal": 440,
+  "protein": 16,
+  "carbs": 58,
+  "fat": 16,
+  "sodium": 360,
+  "allergens": [
+   "Milk"
+  ]
+ },
+ "CHOCPIE": {
+  "name": "Regular Slice Triple Chocolate Pie",
+  "cal": 880,
+  "protein": 8,
+  "carbs": 120,
+  "fat": 42,
+  "sodium": 660,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "CHOCSM": {
+  "name": "Small Slice Triple Chocolate Pie",
+  "cal": 440,
+  "protein": 4,
+  "carbs": 60,
+  "fat": 21,
+  "sodium": 330,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "CHOP": {
+  "name": "Pork Chops",
+  "cal": 290,
+  "protein": 38,
+  "carbs": 0,
+  "fat": 15,
+  "sodium": 530,
+  "allergens": []
+ },
+ "CHSTKOTS": {
+  "name": "Cheesesteak",
+  "cal": 130,
+  "protein": 16,
+  "carbs": 0,
+  "fat": 7,
+  "sodium": 300,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "CHUNKED": {
+  "name": "Hickory Smoked Ham Chunks",
+  "cal": 60,
+  "protein": 9,
+  "carbs": 2,
+  "fat": 2,
+  "sodium": 500,
+  "allergens": []
+ },
+ "COFFEE": {
+  "name": "Coffee",
+  "cal": 5,
+  "protein": 0,
+  "carbs": 1,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "COHAM": {
+  "name": "Country Ham",
+  "cal": 210,
+  "protein": 32,
+  "carbs": 0,
+  "fat": 9,
+  "sodium": 1720,
+  "allergens": []
+ },
+ "COHAMBISC": {
+  "name": "Country Ham Biscuits (2)",
+  "cal": 970,
+  "protein": 42,
+  "carbs": 68,
+  "fat": 60,
+  "sodium": 3520,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "COKE": {
+  "name": "Coca-Cola",
+  "cal": 160,
+  "protein": 0,
+  "carbs": 44,
+  "fat": 0,
+  "sodium": 35,
+  "allergens": []
+ },
+ "COUNTRY": {
+  "name": "Sausage Gravy",
+  "cal": 90,
+  "protein": 1,
+  "carbs": 10,
+  "fat": 5,
+  "sodium": 910,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "COVERED": {
+  "name": "American Cheese",
+  "cal": 50,
+  "protein": 3,
+  "carbs": 0,
+  "fat": 4,
+  "sodium": 250,
+  "allergens": [
+   "Milk",
+   "Soy"
+  ]
+ },
+ "DECAF": {
+  "name": "Coffee - Decaf",
+  "cal": 5,
+  "protein": 0,
+  "carbs": 1,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "DELUXE": {
+  "name": "Lettuce Tomato & Onion",
+  "cal": 10,
+  "protein": 0,
+  "carbs": 2,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "DICED": {
+  "name": "Grilled Tomatoes",
+  "cal": 5,
+  "protein": 0,
+  "carbs": 2,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "DTCOKE": {
+  "name": "Diet Coke",
+  "cal": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 0,
+  "sodium": 50,
+  "allergens": []
+ },
+ "EGG": {
+  "name": "Egg(s) - Scrambled",
+  "cal": 90,
+  "protein": 6,
+  "carbs": 1,
+  "fat": 7,
+  "sodium": 60,
+  "allergens": [
+   "Egg",
+   "Soy"
+  ]
+ },
+ "EGG_CHEESE": {
+  "name": "Egg(s) - Scrambled with Cheese",
+  "cal": 140,
+  "protein": 9,
+  "carbs": 1,
+  "fat": 11,
+  "sodium": 310,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy"
+  ]
+ },
+ "EGG_TWO": {
+  "name": "2 Eggs Scrambled",
+  "cal": 180,
+  "protein": 13,
+  "carbs": 1,
+  "fat": 14,
+  "sodium": 125,
+  "allergens": [
+   "Egg",
+   "Soy"
+  ]
+ },
+ "EGGOM": {
+  "name": "Egg(s) - Omelet",
+  "cal": 200,
+  "protein": 6,
+  "carbs": 1,
+  "fat": 19,
+  "sodium": 60,
+  "allergens": [
+   "Egg",
+   "Soy"
+  ]
+ },
+ "GRITS": {
+  "name": "Grits",
+  "cal": 90,
+  "protein": 1,
+  "carbs": 16,
+  "fat": 3,
+  "sodium": 300,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "GRVYBISC": {
+  "name": "Biscuit & Sausage Gravy",
+  "cal": 470,
+  "protein": 6,
+  "carbs": 44,
+  "fat": 30,
+  "sodium": 1810,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "HAM": {
+  "name": "City Ham",
+  "cal": 110,
+  "protein": 15,
+  "carbs": 7,
+  "fat": 3,
+  "sodium": 740,
+  "allergens": []
+ },
+ "HAMBISC": {
+  "name": "City Ham Biscuits (2)",
+  "cal": 870,
+  "protein": 25,
+  "carbs": 75,
+  "fat": 53,
+  "sodium": 2540,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "HAMBURGER": {
+  "name": "Angus 1/4 LB Patty",
+  "cal": 560,
+  "protein": 19,
+  "carbs": 27,
+  "fat": 41,
+  "sodium": 540,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "HAMGRITS": {
+  "name": "Ham Egg & Cheese Grits Bowl",
+  "cal": 290,
+  "protein": 19,
+  "carbs": 19,
+  "fat": 15,
+  "sodium": 1110,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "HASH": {
+  "name": "Hashbrowns",
+  "cal": 190,
+  "protein": 3,
+  "carbs": 29,
+  "fat": 7,
+  "sodium": 240,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "HASHATW": {
+  "name": "Hashbrowns \"All The Way\"",
+  "cal": 520,
+  "protein": 22,
+  "carbs": 59,
+  "fat": 21,
+  "sodium": 2970,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "HOTTEA": {
+  "name": "Hot Tea",
+  "cal": 5,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "LGBACON": {
+  "name": "Large Bacon",
+  "cal": 230,
+  "protein": 13,
+  "carbs": 1,
+  "fat": 19,
+  "sodium": 870,
+  "allergens": []
+ },
+ "LGCHILI": {
+  "name": "Large Bert's Chili",
+  "cal": 230,
+  "protein": 15,
+  "carbs": 23,
+  "fat": 8,
+  "sodium": 1150,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "LGSAUSAGE": {
+  "name": "Large Sausage",
+  "cal": 390,
+  "protein": 15,
+  "carbs": 1,
+  "fat": 36,
+  "sodium": 770,
+  "allergens": []
+ },
+ "LT": {
+  "name": "Lettuce & Tomato",
+  "cal": 5,
+  "protein": 0,
+  "carbs": 1,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "MILK": {
+  "name": "Regular Milk",
+  "cal": 130,
+  "protein": 9,
+  "carbs": 13,
+  "fat": 5,
+  "sodium": 125,
+  "allergens": [
+   "Milk"
+  ]
+ },
+ "MILKLG": {
+  "name": "Large Milk",
+  "cal": 250,
+  "protein": 16,
+  "carbs": 24,
+  "fat": 10,
+  "sodium": 230,
+  "allergens": [
+   "Milk"
+  ]
+ },
+ "MMLEMON": {
+  "name": "Minute Maid Classic Style Lemonade",
+  "cal": 210,
+  "protein": 0,
+  "carbs": 56,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "MUSHROOM": {
+  "name": "Grilled Mushrooms",
+  "cal": 20,
+  "protein": 2,
+  "carbs": 3,
+  "fat": 0,
+  "sodium": 280,
+  "allergens": []
+ },
+ "OJLG": {
+  "name": "Minute Maid Orange Juice (16-oz)",
+  "cal": 230,
+  "protein": 0,
+  "carbs": 53,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "OJREG": {
+  "name": "Minute Maid Orange Juice (9-oz)",
+  "cal": 120,
+  "protein": 0,
+  "carbs": 28,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "OMELETCHEESE": {
+  "name": "2 Slices of American Cheese",
+  "cal": 100,
+  "protein": 5,
+  "carbs": 1,
+  "fat": 8,
+  "sodium": 500,
+  "allergens": [
+   "Milk",
+   "Soy"
+  ]
+ },
+ "ORIGINAL": {
+  "name": "Original (2oz) Angus Patty",
+  "cal": 110,
+  "protein": 7,
+  "carbs": 0,
+  "fat": 9,
+  "sodium": 30,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "PATTY": {
+  "name": "Angus 1/4 Patty",
+  "cal": 220,
+  "protein": 15,
+  "carbs": 0,
+  "fat": 17,
+  "sodium": 55,
+  "allergens": []
+ },
+ "PBCHIP": {
+  "name": "Peanut Butter Chips",
+  "cal": 150,
+  "protein": 3,
+  "carbs": 17,
+  "fat": 8,
+  "sodium": 95,
+  "allergens": [
+   "Milk",
+   "Peanut",
+   "Soy"
+  ]
+ },
+ "PECAN": {
+  "name": "Pecans",
+  "cal": 150,
+  "protein": 2,
+  "carbs": 3,
+  "fat": 15,
+  "sodium": 0,
+  "allergens": [
+   "Tree Nuts"
+  ]
+ },
+ "PECANPIE": {
+  "name": "Regular Slice Southern Pecan Pie",
+  "cal": 520,
+  "protein": 4,
+  "carbs": 65,
+  "fat": 27,
+  "sodium": 280,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Tree Nuts",
+   "Wheat"
+  ]
+ },
+ "PECANSM": {
+  "name": "Small Slice Southern Pecan Pie",
+  "cal": 260,
+  "protein": 2,
+  "carbs": 32,
+  "fat": 13,
+  "sodium": 140,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Tree Nuts",
+   "Wheat"
+  ]
+ },
+ "PEPPERED": {
+  "name": "Jalapeo Peppers",
+  "cal": 10,
+  "protein": 0,
+  "carbs": 2,
+  "fat": 0,
+  "sodium": 390,
+  "allergens": []
+ },
+ "PIBB": {
+  "name": "Pibb-Xtra",
+  "cal": 150,
+  "protein": 0,
+  "carbs": 42,
+  "fat": 0,
+  "sodium": 60,
+  "allergens": []
+ },
+ "PUNCH": {
+  "name": "Hi-C Fruit Punch",
+  "cal": 170,
+  "protein": 0,
+  "carbs": 46,
+  "fat": 0,
+  "sodium": 55,
+  "allergens": []
+ },
+ "RAISIN": {
+  "name": "Raisin Toast",
+  "cal": 300,
+  "protein": 6,
+  "carbs": 38,
+  "fat": 14,
+  "sodium": 360,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "SALAD": {
+  "name": "Garden Salad",
+  "cal": 35,
+  "protein": 2,
+  "carbs": 7,
+  "fat": 0,
+  "sodium": 20,
+  "allergens": []
+ },
+ "SANDRAISIN": {
+  "name": "Raisin Bread",
+  "cal": 200,
+  "protein": 6,
+  "carbs": 38,
+  "fat": 3,
+  "sodium": 250,
+  "allergens": [
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "SANDWHEAT": {
+  "name": "Wheat Bread",
+  "cal": 120,
+  "protein": 8,
+  "carbs": 22,
+  "fat": 1,
+  "sodium": 220,
+  "allergens": [
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "SANDWHITE": {
+  "name": "White Bread",
+  "cal": 130,
+  "protein": 4,
+  "carbs": 26,
+  "fat": 2,
+  "sodium": 260,
+  "allergens": [
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "SAUSAGE": {
+  "name": "Regular Sausage",
+  "cal": 260,
+  "protein": 10,
+  "carbs": 1,
+  "fat": 24,
+  "sodium": 510,
+  "allergens": []
+ },
+ "SECBISC": {
+  "name": "Sausage Egg & Cheese Biscuit",
+  "cal": 650,
+  "protein": 19,
+  "carbs": 35,
+  "fat": 48,
+  "sodium": 1470,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "SECGRITS": {
+  "name": "Sausage, Egg & Cheese Grits Bowl",
+  "cal": 360,
+  "protein": 15,
+  "carbs": 17,
+  "fat": 26,
+  "sodium": 870,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "SMOTHERED": {
+  "name": "Grilled Onions",
+  "cal": 15,
+  "protein": 0,
+  "carbs": 3,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "SPRITE": {
+  "name": "Sprite",
+  "cal": 160,
+  "protein": 0,
+  "carbs": 42,
+  "fat": 0,
+  "sodium": 70,
+  "allergens": []
+ },
+ "STEAK": {
+  "name": "Sirloin Steak",
+  "cal": 190,
+  "protein": 21,
+  "carbs": 0,
+  "fat": 11,
+  "sodium": 310,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "TBONE": {
+  "name": "T-Bone Steak",
+  "cal": 300,
+  "protein": 34,
+  "carbs": 1,
+  "fat": 18,
+  "sodium": 370,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "TEA": {
+  "name": "Alice's Iced Tea - Sweet",
+  "cal": 70,
+  "protein": 0,
+  "carbs": 17,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "TEAMON": {
+  "name": "Alice's Iced Tea-Monade",
+  "cal": 140,
+  "protein": 0,
+  "carbs": 36,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "TEAUN": {
+  "name": "Alice's Iced Tea - Unsweet",
+  "cal": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "TEXAS": {
+  "name": "Texas Toast",
+  "cal": 200,
+  "protein": 3,
+  "carbs": 19,
+  "fat": 12,
+  "sodium": 300,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "TOMATOINSTEAD": {
+  "name": "Tomatoes",
+  "cal": 10,
+  "protein": 1,
+  "carbs": 2,
+  "fat": 0,
+  "sodium": 0,
+  "allergens": []
+ },
+ "TOPPED": {
+  "name": "Bert's Chili on Top",
+  "cal": 80,
+  "protein": 5,
+  "carbs": 8,
+  "fat": 3,
+  "sodium": 380,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "TXCHIXMLT": {
+  "name": "Texas Grilled Chicken Melt",
+  "cal": 660,
+  "protein": 41,
+  "carbs": 43,
+  "fat": 35,
+  "sodium": 2040,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "TXCSMLT": {
+  "name": "Texas Cheesesteak Melt",
+  "cal": 650,
+  "protein": 28,
+  "carbs": 42,
+  "fat": 40,
+  "sodium": 1400,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "TXPATTY": {
+  "name": "Texas Angus Patty Melt",
+  "cal": 730,
+  "protein": 26,
+  "carbs": 42,
+  "fat": 50,
+  "sodium": 1160,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "WAFFLE": {
+  "name": "Waffle",
+  "cal": 410,
+  "protein": 8,
+  "carbs": 55,
+  "fat": 18,
+  "sodium": 870,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Tree Nuts",
+   "Wheat"
+  ]
+ },
+ "WHEAT": {
+  "name": "Wheat Toast",
+  "cal": 220,
+  "protein": 8,
+  "carbs": 22,
+  "fat": 12,
+  "sodium": 330,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "WHITE": {
+  "name": "White Toast",
+  "cal": 230,
+  "protein": 4,
+  "carbs": 26,
+  "fat": 13,
+  "sodium": 370,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "LGGRITS": {
+  "name": "Large Grits",
+  "cal": 190,
+  "protein": 3,
+  "carbs": 32,
+  "fat": 5,
+  "sodium": 590,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "LGHASH": {
+  "name": "Large Hashbrowns",
+  "cal": 380,
+  "protein": 5,
+  "carbs": 59,
+  "fat": 14,
+  "sodium": 490,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "TRIPHASH": {
+  "name": "Triple Hashbrowns",
+  "cal": 580,
+  "protein": 8,
+  "carbs": 88,
+  "fat": 21,
+  "sodium": 730,
+  "allergens": [
+   "Soy"
+  ]
+ },
+ "TXSAND": {
+  "name": "Texas Toast",
+  "cal": 400,
+  "protein": 6,
+  "carbs": 38,
+  "fat": 24,
+  "sodium": 600,
+  "allergens": [
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "DBLBECGB": {
+  "name": "Double Bacon Egg & Cheese Grits Bowl",
+  "cal": 610,
+  "protein": 28,
+  "carbs": 35,
+  "fat": 39,
+  "sodium": 1750,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "DBLSECGB": {
+  "name": "Double Ham Egg & Cheese Grits Bowl",
+  "cal": 580,
+  "protein": 38,
+  "carbs": 38,
+  "fat": 30,
+  "sodium": 2220,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ },
+ "DBLHECGB": {
+  "name": "Double Sausage Egg & Cheese Grits Bowl",
+  "cal": 730,
+  "protein": 31,
+  "carbs": 35,
+  "fat": 51,
+  "sodium": 1730,
+  "allergens": [
+   "Egg",
+   "Milk",
+   "Soy",
+   "Wheat"
+  ]
+ }
+}

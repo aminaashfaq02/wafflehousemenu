@@ -1,0 +1,45 @@
+{
+  "_about": "Articles listed on /blog/. Title, excerpt (meta description), image (og:image), date (datePublished) and read time are read from each page by tools/build-blog-index.js; only the category is set here.",
+  "articles": [
+    {
+      "file": "recipes/waffle-house-sweet-cream-waffle-copycat/index.html",
+      "category": "Recipes"
+    },
+    {
+      "file": "blog/waffle-house-secret-menu-items/index.html",
+      "category": "Ordering Tips"
+    },
+    {
+      "file": "blog/healthiest-breakfast-for-weight-loss/index.html",
+      "category": "Nutrition"
+    },
+    {
+      "file": "blog/waffle-house-hash-browns/index.html",
+      "category": "Ordering Tips"
+    },
+    {
+      "file": "blog/waffle-house-menu-with-prices/index.html",
+      "category": "Menu & Prices"
+    },
+    {
+      "file": "blog/waffle-house-thanksgiving-hours/index.html",
+      "category": "Hours & Holidays"
+    },
+    {
+      "file": "blog/waffle-house-all-star-special/index.html",
+      "category": "Menu & Prices"
+    },
+    {
+      "file": "blog/waffle-house-coffee/index.html",
+      "category": "Menu & Prices"
+    },
+    {
+      "file": "blog/waffle-house-index/index.html",
+      "category": "Diner Culture"
+    },
+    {
+      "file": "blog/waffle-house-texas-melts/index.html",
+      "category": "Menu & Prices"
+    }
+  ]
+}

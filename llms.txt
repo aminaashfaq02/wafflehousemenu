@@ -1,29 +1,31 @@
 # Waffle Guide
-> An independent, unofficial consumer guide to Waffle House menu items, typical price ranges, nutrition estimates, locations and diner culture. Not affiliated with or endorsed by Waffle House, Inc.
+> An independent consumer guide to Waffle House menu items, typical price ranges, nutrition estimates, locations and diner culture. Not affiliated with or endorsed by Waffle House, Inc.
 
 ## Menu & Prices
-- [Full Menu & Prices](https://www.wafflehouse-menu.com/menu): Menu items across 13 categories with typical prices and calorie counts.
+- [Full Menu & Prices](https://www.wafflehouse-menu.com/menu): 88 menu items across 15 categories with typical prices, calories, protein, carbs, fat, sodium and allergens.
 - [Menu PDF](https://www.wafflehouse-menu.com/menu/pdf/): Where to find Waffle House nutrition information online and how to print our menu guide.
-- [Prices by State](https://www.wafflehouse-menu.com/prices-by-state): Typical price ranges across the 25 states where Waffle House operates.
+- [Prices by State](https://www.wafflehouse-menu.com/prices-by-state): Typical prices and the range of prices seen at different restaurants, and why prices vary across the 25 states.
 - [Coupons & Deals](https://www.wafflehouse-menu.com/coupons): Ways to save, including the free Regulars Club email program. No promo codes are listed.
 
 ## Nutrition & Diet
 - [Nutrition Facts](https://www.wafflehouse-menu.com/nutrition): Calorie, protein, carb and fat estimates by menu category, with a hashbrown bowl calculator.
 - [Calories & Allergens](https://www.wafflehouse-menu.com/waffle-house-calories-allergies/): Calorie comparisons and allergen guidance, including shared-kitchen cross-contact notes.
 - [Dietary Guide](https://www.wafflehouse-menu.com/waffle-house-dietary-guide/): How to compare calories, protein, carbs, sodium and allergens for different dietary goals.
-- [Low-Calorie Menu](https://www.wafflehouse-menu.com/diet/low-calorie/): 79 dishes under 600 calories, ranked lightest first.
-- [High-Protein Menu](https://www.wafflehouse-menu.com/diet/high-protein/): 45 dishes ranked by protein.
+- [Low-Calorie Menu](https://www.wafflehouse-menu.com/diet/low-calorie/): 50 dishes under 600 calories, ranked lightest first.
+- [High-Protein Menu](https://www.wafflehouse-menu.com/diet/high-protein/): 41 dishes with 20g of protein or more, ranked by protein.
 
 ## Guides & Articles
 - [Blog](https://www.wafflehouse-menu.com/blog/): All guides and articles.
 - [Menu with Prices Guide](https://www.wafflehouse-menu.com/blog/waffle-house-menu-with-prices/)
-- [All-Star Special: What's in It](https://www.wafflehouse-menu.com/blog/waffle-house-all-star-special/)
-- [All-Star Special Price](https://www.wafflehouse-menu.com/blog/waffle-house-all-star-special-price/)
+- [All-Star Special: Price, What's Included & Calories](https://www.wafflehouse-menu.com/blog/waffle-house-all-star-special/)
 - [Hash Browns: 8 Ways & Lingo](https://www.wafflehouse-menu.com/blog/waffle-house-hash-browns/)
 - [Secret Menu Orders](https://www.wafflehouse-menu.com/blog/waffle-house-secret-menu-items/)
 - [Healthiest Breakfast for Weight Loss](https://www.wafflehouse-menu.com/blog/healthiest-breakfast-for-weight-loss/)
 - [Thanksgiving Hours](https://www.wafflehouse-menu.com/blog/waffle-house-thanksgiving-hours/)
 - [Sweet Cream Waffle Copycat Recipe](https://www.wafflehouse-menu.com/recipes/waffle-house-sweet-cream-waffle-copycat/)
+- [The Waffle House Index Explained](https://www.wafflehouse-menu.com/blog/waffle-house-index/)
+- [Waffle House Coffee](https://www.wafflehouse-menu.com/blog/waffle-house-coffee/)
+- [Texas Melts Compared](https://www.wafflehouse-menu.com/blog/waffle-house-texas-melts/)
 
 ## Visiting & Events
 - [Locations & Hours](https://www.wafflehouse-menu.com/locations): A selection of Waffle House locations across the 25 states where the chain operates (more than 2,000 restaurants in total); most are open 24/7.
