@@ -50,7 +50,7 @@ const tables = categories.filter((c) => c.items.some((i) => i.price != null)).ma
 
 const box = (title, body) => `
           <div class="bg-white rounded-3xl border-2 border-gray-200 p-6 sm:p-8 shadow-xs">
-            <h3 class="text-lg sm:text-xl font-black text-[#1C1410] font-heading mb-3">${title}</h3>
+            <h2 class="text-lg sm:text-xl font-black text-[#1C1410] font-heading mb-3">${title}</h2>
             ${body}
           </div>`;
 const ul = (rows) => `<ul class="space-y-2 text-sm sm:text-base text-gray-700">${rows.map((r) => `
