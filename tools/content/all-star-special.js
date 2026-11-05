@@ -23,8 +23,9 @@ module.exports = (h) => {
     published: '2026-09-29',
     modified: '2026-10-29',
     readMin: 8,
-    image: '/assets/blog/waffle-house-all-star-special.jpg',
-    imageAlt: 'Waffle House All-Star Special with a waffle, eggs, bacon, hashbrowns and toast on a diner table',
+    image: '/assets/blog/waffle-house-all-star-special-breakfast-plate.webp',
+    imageAlt: 'An All-Star Special style breakfast plate with a waffle, scrambled eggs, bacon, hashbrowns and buttered toast, with a mug of coffee on a diner table',
+    imageTitle: 'All-Star Special: Worth It?',
     caption: 'The All-Star Special: a waffle, two eggs, toast, a side and a breakfast meat.',
     lead: `The All-Star Special is the order most people picture when they think of Waffle House: a sweet cream waffle, two eggs, toast, hashbrowns or grits and a breakfast meat, all for one price. Here is what it costs in 2026, what you actually get, how many calories it adds up to, and how to order it the way you like it.`,
     quick: {

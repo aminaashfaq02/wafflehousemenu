@@ -21,8 +21,9 @@ module.exports = (h) => {
     published: '2026-11-05',
     modified: '2026-11-05',
     readMin: 6,
-    image: '/assets/blog/Texas_grilled_chicken_melt_2K_202608101239.jpeg',
-    imageAlt: 'A grilled chicken melt on thick toasted Texas toast with melted cheese and fries',
+    image: '/assets/blog/waffle-house-texas-melts-compared.webp',
+    imageAlt: 'A beef Texas melt on grilled Texas toast with melted American cheese and grilled onions, served with hashbrowns',
+    imageTitle: '5 Texas Melts Compared',
     caption: 'Every Texas melt is built on two slices of grilled Texas toast with two slices of cheese.',
     lead: 'The Texas melts are the lunch and dinner side of Waffle House: thick grilled Texas toast, two slices of melted American cheese, grilled onions and a hot filling. There are five to choose from, and they differ more than you might expect in protein, calories and price. Here they are side by side.',
     quick: {

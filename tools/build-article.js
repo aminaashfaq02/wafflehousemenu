@@ -10,6 +10,9 @@ const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.wafflehouse-menu.com';
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const plain = (s) => String(s).replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&ndash;/g, '–').replace(/&mdash;/g, '—').replace(/&rsquo;/g, '’').replace(/&lsquo;/g, '‘').replace(/&ldquo;|&rdquo;/g, '"').replace(/&middot;/g, '·').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+// WebP heroes ship as name.webp (1200w) plus name-768.webp (768w) for phones.
+const srcset = (img) => /\.webp$/.test(img) && fs.existsSync(path.join(ROOT, img.replace(/\.webp$/, '-768.webp')))
+  ? ` srcset="${img.replace(/\.webp$/, '-768.webp')} 768w, ${img} 1200w" sizes="(min-width: 800px) 720px, 100vw"` : '';
 const longDate = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 
 // ---- helpers for content modules
@@ -77,7 +80,7 @@ function render(c) {
         <div><div class="font-heading font-black text-sm text-[#1C1410]">By <a href="/about" class="hover:underline">Editorial Team</a></div><div class="text-xs text-gray-600">Waffle Guide</div></div>
       </div>
       <figure class="rounded-3xl overflow-hidden border-2 border-gray-200 shadow-md mb-10">
-        <img src="${c.image}" alt="${esc(c.imageAlt)}" class="w-full h-auto object-cover max-h-[480px]" loading="eager" fetchpriority="high" width="1200" height="675" />
+        <img src="${c.image}"${srcset(c.image)} alt="${esc(c.imageAlt)}"${c.imageTitle ? ` title="${esc(c.imageTitle)}"` : ''} class="w-full h-auto object-cover max-h-[480px]" loading="eager" fetchpriority="high" decoding="async" width="1200" height="675" />
         <figcaption class="p-3 bg-white border-t border-gray-100 text-sm text-gray-600 text-center">${c.caption}</figcaption>
       </figure>
 ${quick}
@@ -113,7 +116,10 @@ function build(name) {
   html = html.replace(/(<meta\s+(?:property="og:title"|name="twitter:title"|name="title")\s+content=")[^"]*(")/g, (m, a, b) => a + esc(c.title) + b);
   html = html.replace(/(<meta\s+(?:name="description"|property="og:description"|name="twitter:description")\s+content=")[^"]*(")/g, (m, a, b) => a + esc(c.description) + b);
   html = html.replace(/(<meta\s+(?:property="og:image"|name="twitter:image")\s+content=")[^"]*(")/g, (m, a, b) => a + SITE + c.image + b);
-  html = html.replace(/(<meta\s+property="og:image:alt"\s+content=")[^"]*(")/, (m, a, b) => a + esc(c.imageAlt) + b);
+  html = html.replace(/(<meta\s+(?:property="og:image:alt"|name="twitter:image:alt")\s+content=")[^"]*(")/g, (m, a, b) => a + esc(c.imageAlt) + b);
+  const type = /\.webp$/.test(c.image) ? 'image/webp' : /\.png$/.test(c.image) ? 'image/png' : 'image/jpeg';
+  if (/<meta\s+property="og:image:type"/.test(html)) html = html.replace(/(<meta\s+property="og:image:type"\s+content=")[^"]*(")/, (m, a, b) => a + type + b);
+  else html = html.replace(/([ \t]*)(<meta\s+property="og:image:width"[^>]*>)/, (m, ind, tag) => `${ind}<meta property="og:image:type" content="${type}">\n${ind}${tag}`);
   html = html.replace(/(<meta\s+property="article:published_time"\s+content=")[^"]*(")/, (m, a, b) => a + c.published + 'T09:00:00Z' + b);
   html = html.replace(/(<meta\s+property="article:modified_time"\s+content=")[^"]*(")/, (m, a, b) => a + c.modified + 'T09:00:00Z' + b);
   html = html.replace(/(<meta\s+property="article:section"\s+content=")[^"]*(")/, (m, a, b) => a + esc(c.eyebrow) + b);
@@ -121,7 +127,8 @@ function build(name) {
   html = html.replace(/(<meta\s+property="og:url"\s+content=")[^"]*(")/, (m, a, b) => a + SITE + c.url + b);
   const org = { '@type': 'Organization', name: 'Waffle Guide', url: SITE + '/', logo: { '@type': 'ImageObject', url: SITE + '/assets/logo-icon.png' } };
   const ld = { '@context': 'https://schema.org', '@graph': [
-    { '@type': c.schemaType || 'Article', '@id': SITE + c.url + '#article', headline: plain(c.h1), description: c.description, image: SITE + c.image,
+    { '@type': c.schemaType || 'Article', '@id': SITE + c.url + '#article', headline: plain(c.h1), description: c.description,
+      image: { '@type': 'ImageObject', url: SITE + c.image, width: 1200, height: 675, caption: plain(c.imageAlt) },
       datePublished: c.published + 'T09:00:00Z', dateModified: c.modified + 'T09:00:00Z',
       author: { '@type': 'Organization', name: 'Waffle Guide Editorial Team', url: SITE + '/about' }, publisher: org,
       mainEntityOfPage: { '@type': 'WebPage', '@id': SITE + c.url } },

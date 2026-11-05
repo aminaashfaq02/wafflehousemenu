@@ -1,6 +1,11 @@
 {
   "cleanUrls": true,
   "redirects": [
+    { "source": "/assets/blog/waffle-house-all-star-special.jpg", "destination": "/assets/blog/waffle-house-all-star-special-breakfast-plate.webp", "permanent": true },
+    { "source": "/assets/blog/waffle-house-menu-with-prices.jpg", "destination": "/assets/blog/waffle-house-menu-prices-meal-cost.webp", "permanent": true },
+    { "source": "/assets/blog/waffle-house-sweet-cream-waffle-copycat.jpg", "destination": "/assets/blog/waffle-house-sweet-cream-waffle-copycat-recipe.webp", "permanent": true },
+    { "source": "/assets/blog/waffle-house-texas-patty-melt.jpg", "destination": "/assets/blog/waffle-house-secret-menu-chocolate-peanut-butter-chip-waffle.webp", "permanent": true },
+    { "source": "/assets/blog/waffle-house-thanksgiving-hours.jpg", "destination": "/assets/blog/waffle-house-thanksgiving-hours-pecan-pie.webp", "permanent": true },
     {
       "source": "/waffle-house-birthday-party",
       "destination": "/waffle-house-catering/#birthday-catering",

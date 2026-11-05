@@ -12,8 +12,9 @@ module.exports = (h) => {
     published: '2026-11-05',
     modified: '2026-11-05',
     readMin: 5,
-    image: '/assets/blog/waffle-house-menu-with-prices.jpg',
-    imageAlt: 'A diner counter with breakfast plates, a waffle and coffee',
+    image: '/assets/blog/waffle-house-index-green-yellow-red-storm.webp',
+    imageAlt: 'A roadside diner with its lights on during a hurricane at night, with green, yellow and red lights for the three index levels',
+    imageTitle: 'Green, Yellow, Red',
     caption: 'The index rests on one simple fact: these restaurants are almost always open.',
     lead: 'Most restaurants close when a hurricane is on the way. Waffle House is famous for doing the opposite, and that habit turned into one of the more unusual tools in American disaster response. Here is what the Waffle House Index is, what its three colors mean, where it came from and why it works.',
     quick: {

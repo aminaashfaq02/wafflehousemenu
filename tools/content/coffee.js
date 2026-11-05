@@ -16,8 +16,9 @@ module.exports = (h) => {
     published: '2026-11-05',
     modified: '2026-11-05',
     readMin: 5,
-    image: '/assets/blog/Steaming_coffee_on_diner_saucer_202608101413.jpeg',
-    imageAlt: 'A steaming white mug of black coffee on a saucer on a diner table',
+    image: '/assets/blog/waffle-house-coffee-diner-mug.webp',
+    imageAlt: 'A steaming white diner mug of black coffee on a saucer with roasted coffee beans on a wooden counter',
+    imageTitle: 'The Coffee Behind the Cup',
     caption: 'A cup of coffee is one of the lowest-priced things on the menu.',
     lead: 'Coffee is the quiet constant at Waffle House: it is on the table at breakfast, at lunch and at three in the morning. If you have ever wondered who makes it, which blends there are and what a cup costs, here is everything worth knowing.',
     quick: {

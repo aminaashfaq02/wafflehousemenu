@@ -24,9 +24,10 @@ module.exports = (h) => {
     published: '2026-10-21',
     modified: '2026-10-28',
     readMin: 6,
-    image: '/assets/blog/waffle-house-texas-patty-melt.jpg',
-    imageAlt: 'A Texas patty melt on grilled Texas toast with melted cheese',
-    caption: 'Most &ldquo;secret menu&rdquo; orders are regular menu items with a few changes.',
+    image: '/assets/blog/waffle-house-secret-menu-chocolate-peanut-butter-chip-waffle.webp',
+    imageAlt: 'A waffle topped with chocolate chips, peanut butter chips and a pat of butter on a diner plate',
+    imageTitle: '8 Secret Menu Orders',
+    caption: 'Most &ldquo;secret menu&rdquo; orders are regular menu items with a few changes, like a waffle with both chocolate and peanut butter chips.',
     lead: 'Waffle House does not have an official secret menu. What it has is a grill where almost everything is cooked to order, which means many changes are possible if you ask clearly and the cook is willing. These are eight custom orders built from regular menu items, with the calories for each and a few tips on how to ask.',
     quick: {
       heading: 'The short answer',

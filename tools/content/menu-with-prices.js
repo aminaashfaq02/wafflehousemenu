@@ -32,8 +32,9 @@ module.exports = (h) => {
     published: '2026-10-06',
     modified: '2026-10-30',
     readMin: 6,
-    image: '/assets/blog/waffle-house-menu-with-prices.jpg',
-    imageAlt: 'A Waffle House meal with a waffle, a melt and hashbrowns on a diner counter',
+    image: '/assets/blog/waffle-house-menu-prices-meal-cost.webp',
+    imageAlt: 'A diner table with a Texas melt, hashbrowns, a waffle and coffee next to a guest check and cash',
+    imageTitle: 'What a Meal Really Costs',
     caption: 'Most Waffle House meals land between about $8 and $20 a person, before tax and tip.',
     lead: `The full menu tells you what each item costs. This guide answers the question most people actually have: how much will I spend? Using typical 2026 prices, here is what a breakfast, lunch, dinner or late-night stop usually comes to, what a family of four pays, and where the best value is.`,
     quick: {

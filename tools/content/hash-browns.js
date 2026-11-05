@@ -17,8 +17,9 @@ module.exports = (h) => {
     published: '2026-10-19',
     modified: '2026-10-29',
     readMin: 7,
-    image: '/assets/blog/waffle-house-hashbrowns-smothered-covered.jpg',
-    imageAlt: 'Waffle House hashbrowns smothered in grilled onions and covered with melted cheese',
+    image: '/assets/blog/waffle-house-hashbrowns-smothered-covered-toppings.webp',
+    imageAlt: 'Crispy hashbrowns smothered in grilled onions and covered with melted cheese on an oval diner plate',
+    imageTitle: '8 Ways to Order Hashbrowns',
     caption: 'Scattered, smothered and covered: hashbrowns with grilled onions and a slice of cheese.',
     lead: 'Hashbrowns are the side most people build their Waffle House order around, and they come with their own vocabulary. Scattered, smothered, covered, chunked: each word adds something specific. Here is what every term means, what the sizes and toppings cost, and how the calories change as you add them.',
     quick: {

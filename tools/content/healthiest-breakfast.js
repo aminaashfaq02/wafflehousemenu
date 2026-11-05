@@ -25,9 +25,10 @@ module.exports = (h) => {
     published: '2026-10-20',
     modified: '2026-10-30',
     readMin: 7,
-    image: '/assets/blog/Egg_breakfast_plate_with_toast_202608101154.jpeg',
-    imageAlt: 'Scrambled eggs with toast and hashbrowns on a diner plate',
-    caption: 'Eggs, a light side and the right toast make a filling plate for a few hundred calories.',
+    image: '/assets/blog/waffle-house-healthy-breakfast-under-450-calories.webp',
+    imageAlt: 'A light diner breakfast of scrambled eggs, sliced tomatoes and wheat toast with a mug of black coffee',
+    imageTitle: 'Breakfast Under 450 Calories',
+    caption: `Two scrambled eggs, sliced tomatoes and wheat toast come to about ${plates[0].cal} calories.`,
     lead: 'Waffle House is not a diet restaurant, but almost everything is cooked to order, which makes it easy to build a breakfast that fits a calorie target. The trick is knowing where the calories are. Here are the lighter plates that still fill you up, the swaps that save the most, and the orders that add up faster than you would think.',
     quick: {
       heading: 'The short answer',

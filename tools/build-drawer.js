@@ -70,18 +70,23 @@ for (const f of files) {
   h = h.replace(/\r\n/g, '\n');
   // drop any existing drawer: wrapper, bare #mobile-nav container, or #mobile-menu-drawer, plus its comment line
   h = h.replace(/[ \t]*<!-- =+ MOBILE NAVIGATION DRAWER[^\n]*-->\n/g, '');
+  let removed = false;
   for (const id of ['mobile-nav-wrapper', 'mobile-nav', 'mobile-menu-drawer']) {
     let at;
     while ((at = h.search(new RegExp(`<(div|aside)\\b[^>]*\\bid="${id}"`))) >= 0) {
       const lineStart = h.lastIndexOf('\n', at) + 1;
       h = removeElement(h, at);
+      removed = true;
       if (/^[ \t]*\n/.test(h.slice(lineStart))) h = h.slice(0, lineStart) + h.slice(lineStart).replace(/^[ \t]*\n/, '');
     }
   }
   const hdrEnd = h.indexOf('</header>');
   if (hdrEnd < 0) throw new Error('no </header> in ' + f);
   const at = h.indexOf('\n', hdrEnd) + 1;
-  h = h.slice(0, at) + '\n' + DRAWER + h.slice(at);
+  // the blank line inserted before an earlier drawer is still here; drop it so re-runs do not add blank lines
+  let rest = h.slice(at);
+  if (removed && /^[ \t]*\n/.test(rest)) rest = rest.replace(/^[ \t]*\n/, '');
+  h = h.slice(0, at) + '\n' + DRAWER + rest;
   fs.writeFileSync(file, h.replace(/\n/g, nl));
 }
 console.log('drawer placed on', files.length, 'pages');

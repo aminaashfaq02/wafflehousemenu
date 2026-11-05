@@ -9,6 +9,11 @@ const FILE = path.join(ROOT, 'blog', 'index.html');
 const SITE = 'https://www.wafflehouse-menu.com';
 const { articles } = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'articles.json'), 'utf8'));
 const esc = (s) => String(s).replace(/&(?![a-z]+;|#\d+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+// Cards show at about 600px wide, so use the 768w WebP when an article has one.
+const small = (img) => {
+  const s = img.replace(/\.webp$/, '-768.webp');
+  return s !== img && fs.existsSync(path.join(ROOT, s)) ? s : img;
+};
 const text = (s) => s.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 
 const posts = articles.map((a) => {
@@ -39,9 +44,9 @@ const cards = posts.map((p) => `
         <article class="article-card group bg-white rounded-3xl border-2 border-[#F59E0B] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col" data-category="${esc(p.category)}">
           <div class="relative overflow-hidden aspect-video bg-gray-100 border-b border-gray-100">
             <a href="${p.url}" class="block overflow-hidden w-full h-full" tabindex="-1" aria-hidden="true">
-              <img src="${p.image}" alt="${esc(p.alt)}" width="600" height="338" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <img src="${small(p.image)}" alt="${esc(p.alt)}" width="600" height="338" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </a>
-            <div class="absolute top-3.5 left-3.5"><span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#F59E0B] text-[#1C1410] shadow-sm">${esc(p.category)}</span></div>
+            <div class="absolute bottom-3 left-3"><span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#F59E0B] text-[#1C1410] shadow-md ring-1 ring-black/10">${esc(p.category)}</span></div>
           </div>
           <div class="p-6 sm:p-7 flex-1 flex flex-col">
             <div class="flex items-center gap-2 text-xs font-semibold text-gray-600 mb-3"><time datetime="${p.date}">${short(p.date)}</time><span class="text-gray-300">&bull;</span><span>${p.read} min read</span></div>

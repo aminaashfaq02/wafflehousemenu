@@ -21,8 +21,9 @@ module.exports = (h) => {
     published: '2026-09-30',
     modified: '2026-10-29',
     readMin: 5,
-    image: '/assets/blog/waffle-house-thanksgiving-hours.jpg',
-    imageAlt: 'A diner table with a waffle stack and a slice of pecan pie by a window on an autumn day',
+    image: '/assets/blog/waffle-house-thanksgiving-hours-pecan-pie.webp',
+    imageAlt: 'A slice of pecan pie and a steaming mug of coffee in a diner booth by a window with autumn trees outside',
+    imageTitle: 'Open on Thanksgiving?',
     caption: 'Waffle House stays open around the clock, holidays included.',
     lead: 'If the oven is full, the plans fell through or you are on the road, Waffle House is one of the few places reliably open on Thanksgiving. Here is what to expect on the day, what you can order, and how to make sure your local restaurant is open before you go.',
     quick: {
