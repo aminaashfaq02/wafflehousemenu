@@ -102,7 +102,7 @@ ${c.sections.map((s) => `
       </section>`).join('')}
 ${faq}
 ${related}
-      <p class="text-sm text-gray-600 border-t border-gray-200 pt-6">Prices are typical 2026 prices compiled by Waffle Guide and vary by location; nutrition figures are estimates for each item as normally served. Waffle Guide is an independent guide and is not affiliated with Waffle House, Inc. For allergies, confirm with the restaurant.</p>
+      <p class="text-sm text-gray-600 border-t border-gray-200 pt-6">Prices are typical 2026 prices compiled by Waffle Guide and vary by location. Nutrition figures are estimates for each item as normally served. Waffle Guide is an independent guide and is not affiliated with Waffle House, Inc. For allergies, confirm with the restaurant.</p>
     </article>
   </main>`;
 }

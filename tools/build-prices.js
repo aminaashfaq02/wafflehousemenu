@@ -9,7 +9,7 @@ const SITE = 'https://www.wafflehouse-menu.com';
 const URL = '/prices-by-state';
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const plain = (s) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&ndash;/g, '–').replace(/&rsquo;/g, '’');
-const range = (r) => (r ? `${money(r[0])} &ndash; ${money(r[1])}` : '&mdash;');
+const range = (r) => (r ? `${money(r[0])} &ndash; ${money(r[1])}` : 'n/a');
 const STATES = ['Alabama', 'Arizona', 'Arkansas', 'Colorado', 'Delaware', 'Florida', 'Georgia', 'Illinois', 'Indiana', 'Kansas', 'Kentucky', 'Louisiana', 'Maryland', 'Mississippi', 'Missouri', 'New Mexico', 'North Carolina', 'Ohio', 'Oklahoma', 'Pennsylvania', 'South Carolina', 'Tennessee', 'Texas', 'Virginia', 'West Virginia'];
 
 const as = byName['All-Star Special with Bacon'];
@@ -89,8 +89,8 @@ const main = `
     <section class="py-12 md:py-14 px-4 bg-[#FBFBFC] border-b border-gray-200">
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">${box('Why the price changes from place to place', `<p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">Prices are set restaurant by restaurant rather than nationally. The reasons most often given for the differences are:</p>
             <ul class="list-disc pl-5 space-y-1.5 text-sm sm:text-base text-gray-700">
-              <li>local wages and rent, which are higher in some cities and states;</li>
-              <li>restaurants beside highways, near airports or in tourist areas;</li>
+              <li>local wages and rent, which are higher in some cities and states,</li>
+              <li>restaurants beside highways, near airports or in tourist areas,</li>
               <li>sales tax, which is added at the register and differs by state and city.</li>
             </ul>`)}${box('Where prices vary the most', `<p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">Lowest and highest prices seen for the same item:</p>${ul(spread.map((i) => [esc(i.name), range(i.range)]))}`)}${box('Lowest-priced items', ul(cheapest.map((i) => [esc(i.name), money(i.price)])))}${box('How to check your local price', `<p class="text-gray-700 text-sm sm:text-base leading-relaxed">Find your restaurant on the <a class="font-bold underline text-[#1C1410]" href="https://locations.wafflehouse.com/" target="_blank" rel="noopener noreferrer">official Waffle House locator</a> and call ahead, or check the menu board when you arrive. Use the typical prices below to plan, and expect your bill to land inside or close to the range shown.</p>`)}
       </div>
@@ -99,7 +99,7 @@ const main = `
     <section class="py-14 md:py-16 px-4 bg-white border-b border-gray-200" id="price-tables">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-[#1C1410] font-heading tracking-tight mb-2">Typical Prices and Price Ranges</h2>
-        <p class="text-gray-600 text-sm sm:text-base mb-8 max-w-3xl">Typical price is the middle of the prices seen; &ldquo;Varies&rdquo; means no reliable price was found. Hashbrown toppings usually add about ${money(toppingPrice)} each.</p>${tables}
+        <p class="text-gray-600 text-sm sm:text-base mb-8 max-w-3xl">Typical price is the middle of the prices seen. &ldquo;Varies&rdquo; means no reliable price was found. Hashbrown toppings usually add about ${money(toppingPrice)} each.</p>${tables}
       </div>
     </section>
 

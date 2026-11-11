@@ -40,15 +40,15 @@ module.exports = (h) => {
         ${p(`A cup of coffee typically costs about <strong>${money(coffee.price)}</strong>, and published 2026 price lists show it from ${money(coffee.range[0])} to ${money(coffee.range[1])} depending on the restaurant. Waffle House does not publish a refill policy, so ask your server how refills work at your restaurant.`)}
         ${p('Here is how it compares with the other drinks on the menu:')}
         ${table(['Drink', 'Typical price', 'Calories'], drinks)}
-        ${p(`Prices vary by location; see ${a('/prices-by-state', 'prices by state')} for the ranges.`)}` },
+        ${p(`Prices vary by location. See ${a('/prices-by-state', 'prices by state')} for the ranges.`)}` },
       { id: 'calories', title: 'Calories and caffeine', html: `
-        ${p(`A cup of black coffee has about ${coffee.cal} calories. Cream, half-and-half and sugar add to that, depending on how much you use. Waffle House does not publish the caffeine content of its coffee, but as a general guide, an 8-ounce cup of brewed coffee has around 95 milligrams of caffeine, and decaf has very little.`)}
+        ${p(`A cup of black coffee has about ${coffee.cal} calories. Cream, half-and-half and sugar add more, depending on how much you use. Waffle House does not publish the caffeine content of its coffee, but as a general guide, an 8-ounce cup of brewed coffee has around 95 milligrams of caffeine, and decaf has little.`)}
         ${note('If you are watching calories, black coffee and unsweet iced tea are the two drinks with next to none.')}` },
       { id: 'pairings', title: 'Coffee and a bite: what it costs', html: `
         ${p('A coffee with something small makes one of the cheapest stops on the menu:')}
         ${table(['Coffee plus', 'Typical total', 'Calories'], pairs)}
         ${p(`For a full meal, the ${a('/blog/waffle-house-all-star-special/', 'All-Star Special')} with coffee comes to about ${money(B['All-Star Special with Bacon'].price + coffee.price)}. See more budgets in ${a('/blog/waffle-house-menu-with-prices/', 'what a meal costs')}.`)}` },
-      { id: 'take-home', title: 'Can you buy Waffle House coffee?', html: `
+      { id: 'take-home', title: 'Does Waffle House sell its coffee to take home?', html: `
         ${p('The merchandise section of the official Waffle House website is the place to check for take-home items. In summer 2025, a canned cold brew made from the Classic Blend was sold for a limited time at selected restaurants in Atlanta.')}` },
     ],
     faqs: [

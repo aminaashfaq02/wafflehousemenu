@@ -68,7 +68,7 @@ fill('nutrition.html', 'nutrition', `
   fill(file, 'recipe-time', total);
   fill(file, 'recipe', `
       <div id="quick-answer" class="mb-6 rounded-3xl bg-white border-2 border-[#F59E0B] p-5 sm:p-6 shadow-sm not-prose">
-        <p class="text-lg sm:text-xl text-[#1C1410] font-medium leading-relaxed">This copycat recipe makes <strong>${yieldN} sweet cream waffles in about ${total} minutes</strong>, at about ${cal} calories each. Half-and-half, buttermilk, malted milk powder and whipped egg whites give a thin, crisp crust and a tender center.</p>
+        <p class="text-lg sm:text-xl text-[#1C1410] font-medium leading-relaxed">This copycat recipe makes <strong>${yieldN} sweet cream waffles in about ${total} minutes</strong>. Each one has about ${cal} calories. Half-and-half, buttermilk, malted milk powder and whipped egg whites give a thin, crisp crust and a tender center.</p>
         <p class="text-sm text-gray-600 mt-3">Calories are an estimate for one plain waffle, before butter and syrup.</p>
       </div>
       `);

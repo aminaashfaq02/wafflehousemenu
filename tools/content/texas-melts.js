@@ -27,7 +27,7 @@ module.exports = (h) => {
     caption: 'Every Texas melt is built on two slices of grilled Texas toast with two slices of cheese.',
     lead: 'The Texas melts are the lunch and dinner side of Waffle House: thick grilled Texas toast, two slices of melted American cheese, grilled onions and a hot filling. There are five to choose from, and they differ more than you might expect in protein, calories and price. Here they are side by side.',
     quick: {
-      html: `For the most protein, order the <strong>${byP[0].name}</strong> (${byP[0].protein}g of protein, ${byP[0].cal} calories). For the fewest calories, the <strong>${byCal[0].name}</strong> (${byCal[0].cal}). Most melts typically cost about ${money(B['Texas Cheesesteak Melt'].price)}&ndash;${money(B['Texas Angus Patty Melt'].price)}; the bacon cheesesteak is the priciest at about ${money(B['Texas Bacon Cheesesteak Melt'].price)}.`,
+      html: `For the most protein, order the <strong>${byP[0].name}</strong> (${byP[0].protein}g of protein, ${byP[0].cal} calories). For the fewest calories, the <strong>${byCal[0].name}</strong> (${byCal[0].cal}). Most melts typically cost about ${money(B['Texas Cheesesteak Melt'].price)}&ndash;${money(B['Texas Angus Patty Melt'].price)}. The bacon cheesesteak is the priciest at about ${money(B['Texas Bacon Cheesesteak Melt'].price)}.`,
       stats: [['Melts', '5', 'Plus 2 breakfast melts'], ['Most protein', `${byP[0].protein}g`, byP[0].name.replace('Texas ', '')], ['Calories', `${byCal[0].cal}&ndash;${byCal[byCal.length - 1].cal}`, 'Per melt'], ['Typical price', `${money(priced[0].price)}&ndash;${money(priced[priced.length - 1].price)}`, 'Varies by location']],
     },
     sections: [
@@ -44,7 +44,7 @@ module.exports = (h) => {
         ])}
         ${p('All five list milk, wheat and soy, from the cheese and the Texas toast. See every item in the ' + a('/waffle-house-calories-allergies/', 'allergen chart') + '.')}` },
       { id: 'add-ons', title: 'Add-ons and what they change', html: `
-        ${p('Melts take the same toppings as hashbrowns and bowls. Add-ons usually cost extra; here is what they add nutritionally:')}
+        ${p('Melts take the same toppings as hashbrowns and bowls. Add-ons usually cost extra. Here is what each one adds:')}
         ${table(['Add-on', 'Calories', 'Protein', 'Sodium'], addons.map(([n, id]) => [n, '+' + C[id].cal, '+' + C[id].protein + 'g', '+' + fmt(C[id].sodium) + 'mg']))}
         ${p('Jalape&ntilde;os and grilled tomatoes add flavour for almost no calories, though jalape&ntilde;os bring a surprising amount of sodium.')}` },
       { id: 'make-it-a-meal', title: 'Make it a meal', html: `
@@ -59,7 +59,7 @@ module.exports = (h) => {
       ['What Texas melts does Waffle House have?', 'Five: the Texas Cheesesteak Melt, Texas Bacon Cheesesteak Melt, Texas Angus Patty Melt, Texas Grilled Chicken Melt and Texas Sausage Melt. Breakfast also has Texas sausage and bacon egg and cheese melts.'],
       ['Which Waffle House melt has the most protein?', `The ${byP[0].name}, with about ${byP[0].protein}g of protein and ${byP[0].cal} calories.`],
       ['How many calories are in a Waffle House Texas melt?', `Between about ${byCal[0].cal} (${byCal[0].name}) and ${byCal[byCal.length - 1].cal} (${byCal[byCal.length - 1].name}), before hashbrowns or toppings.`],
-      ['How much is a Texas melt at Waffle House?', `Most melts typically cost about ${money(B['Texas Cheesesteak Melt'].price)} to ${money(B['Texas Angus Patty Melt'].price)}; the Texas Bacon Cheesesteak Melt is about ${money(B['Texas Bacon Cheesesteak Melt'].price)}. Prices vary by location.`],
+      ['How much is a Texas melt at Waffle House?', `Most melts typically cost about ${money(B['Texas Cheesesteak Melt'].price)} to ${money(B['Texas Angus Patty Melt'].price)}. The Texas Bacon Cheesesteak Melt is about ${money(B['Texas Bacon Cheesesteak Melt'].price)}. Prices vary by location.`],
       ['What comes on a Waffle House Texas melt?', 'Every Texas melt has two slices of grilled Texas toast, two slices of melted American cheese and grilled onions, plus its filling: cheesesteak, an Angus patty, grilled chicken or a sausage patty.'],
     ],
     related: [

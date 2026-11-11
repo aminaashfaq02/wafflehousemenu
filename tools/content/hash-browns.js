@@ -31,7 +31,7 @@ module.exports = (h) => {
         ${table(['Size', 'Typical price', 'Calories', 'Carbs'], [[ 'Regular', money(reg.price), reg.cal, reg.carbs + 'g'], ['Large (a double order)', money(lg.price), lg.cal, lg.carbs + 'g'], ['Triple', money(tri.price), tri.cal, tri.carbs + 'g']])}
         ${p(`A regular order comes with breakfast plates such as the ${a('/blog/waffle-house-all-star-special/', 'All-Star Special')}, and the breakfast hashbrown bowls are built on a large order. Plain hashbrowns list soy as their only major allergen.`)}` },
       { id: 'lingo', title: 'The eight toppings and what to call them', html: `
-        ${p('Hashbrowns are cooked &ldquo;scattered&rdquo;, spread thin across the grill so more of them crisps. After that, each topping has its own word:')}
+        ${p('Hashbrowns are cooked &ldquo;scattered&rdquo;, spread thin across the grill so more of them crisps. Each topping then has its own word:')}
         ${table(['Say', 'You get', 'Calories added', 'Sodium added'], tops.map(([w, t, id]) => [w, t, '+' + C[id].cal, '+' + fmt(C[id].sodium) + 'mg']))}
         ${p(`Stack the words in any order: &ldquo;scattered, smothered and covered&rdquo; (onions and cheese) is about ${sc.cal} calories on a regular order. &ldquo;All the way&rdquo; means every topping on the list, about ${atw.cal} calories and ${fmt(atw.sodium)}mg of sodium.`)}` },
       { id: 'cooking', title: 'Other ways to have them cooked', html: `
@@ -43,7 +43,7 @@ module.exports = (h) => {
         ${note('These are cooking requests rather than menu items, so how they turn out depends on the cook. The nutrition figures on this page are for a standard order.')}` },
       { id: 'prices-calories', title: 'Typical prices and calories', html: `
         ${table(['Order', 'Typical price', 'Calories', 'Sodium'], [reg, lg, tri, sc, atw].map((i) => [i.name.replace('Hashbrowns ', '').replace('(Regular)', 'Regular').replace(/^Large Hashbrowns$/, 'Large').replace(/^Triple Hashbrowns$/, 'Triple'), money(i.price), i.cal, fmt(i.sodium) + 'mg']))}
-        ${p(`Prices vary by location; see ${a('/prices-by-state', 'prices by state')} for the ranges. Calories for every topping combination are easy to add up from the table above, or use the ${a('/nutrition#calculator', 'hashbrown bowl calculator')}.`)}` },
+        ${p(`Prices vary by location. See ${a('/prices-by-state', 'prices by state')} for the ranges. Calories for every topping combination are easy to add up from the table above, or use the ${a('/nutrition#calculator', 'hashbrown bowl calculator')}.`)}` },
       { id: 'bowls', title: 'Hashbrown bowls', html: `
         ${p('If you want hashbrowns as the meal rather than the side, the bowls start with a large order and add cheese and a filling:')}
         ${table(['Bowl', 'Typical price', 'Calories', 'Protein'], bowls.map((b) => [b.name, money(b.price), b.cal, b.protein + 'g']))}
@@ -62,7 +62,7 @@ module.exports = (h) => {
       ['What does all the way mean for Waffle House hashbrowns?', `All the way means every topping: onions, cheese, ham, tomatoes, jalapeños, mushrooms, chili and sausage gravy. On a regular order it is about ${atw.cal} calories.`],
       ['How much are hashbrowns at Waffle House?', `A regular order is typically about ${money(reg.price)}, a large ${money(lg.price)} and a triple ${money(tri.price)}. Each topping usually adds about ${money(toppingPrice)}.`],
       ['How many calories are in Waffle House hashbrowns?', `About ${reg.cal} calories in a regular order, ${lg.cal} in a large and ${tri.cal} in a triple, before toppings.`],
-      ['Can you get Waffle House hashbrowns without oil?', 'You can ask for them cooked dry, without the usual oil on the grill. Some cooks will also steam them if you ask.'],
+      ['Does Waffle House cook hashbrowns without oil?', 'Yes, if you ask. Order them cooked dry, without the usual oil on the grill. Some cooks will also steam them on request.'],
     ],
     related: [
       ['/blog/waffle-house-all-star-special/', 'All-Star Special', 'Price, what you get and calories'],

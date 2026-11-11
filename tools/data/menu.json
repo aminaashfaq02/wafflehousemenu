@@ -205,7 +205,7 @@
       "id": "cat-classic-egg-breakfasts",
       "nav": "Egg Breakfasts",
       "title": "Egg Breakfasts",
-      "intro": "Every egg breakfast comes with two scrambled eggs, toast and jelly, and a choice of grits, hashbrowns or sliced tomatoes. Add a steak, chop, ham or chicken for a bigger plate. Figures assume hashbrowns and white toast; jelly is not included.",
+      "intro": "Every egg breakfast comes with two scrambled eggs, toast and jelly, and a choice of grits, hashbrowns or sliced tomatoes. Add a steak, chop, ham or chicken for a bigger plate. Figures assume hashbrowns and white toast. Jelly is not included.",
       "label": "Breakfast",
       "items": [
         {
@@ -519,7 +519,7 @@
       "id": "cat-signature-waffles",
       "nav": "Waffles",
       "title": "Waffles",
-      "intro": "The sweet cream waffle is the item the chain is named for. Pecan pieces are baked in; chocolate chips and peanut butter chips go on top. Syrup and butter are not included in the figures.",
+      "intro": "The sweet cream waffle is the item the chain is named for. Pecan pieces are baked in. Chocolate chips and peanut butter chips go on top. Syrup and butter are not included in the figures.",
       "label": "Waffles",
       "items": [
         {
@@ -1266,7 +1266,7 @@
       "id": "cat-breakfast-sides",
       "nav": "Sides",
       "title": "Sides & Grits",
-      "intro": "Sides can be added to any meal. The grits bowls are side-size: one scrambled egg, one slice of cheese and meat on a bowl of grits.",
+      "intro": "Add sides to any meal. The grits bowls are side-size: one scrambled egg, one slice of cheese and meat on a bowl of grits.",
       "label": "Sides",
       "items": [
         {
@@ -1456,7 +1456,7 @@
       "id": "cat-beverages",
       "nav": "Drinks",
       "title": "Drinks",
-      "intro": "Coffee is the classic order. Sodas, Alice's Iced Tea, juices and milk are also on the menu; figures are for the regular size.",
+      "intro": "Coffee is the classic order. Sodas, Alice's Iced Tea, juices and milk are also on the menu. Figures are for the regular size.",
       "label": "Drinks",
       "items": [
         {

@@ -100,7 +100,7 @@ function listSection({ id, eyebrow, h2, rowsItems, sortNote, cols }) {
             </tbody>
           </table>
         </div>
-        <p class="text-xs text-gray-600 mt-4">Totals are estimates for each dish as it is normally served. Prices are typical and vary by location; &ldquo;Varies&rdquo; means no reliable typical price was found.</p>
+        <p class="text-xs text-gray-600 mt-4">Totals are estimates for each dish as it is normally served. Prices are typical and vary by location. &ldquo;Varies&rdquo; means no reliable typical price was found.</p>
       </div>
     </section>`;
 }
@@ -218,11 +218,11 @@ ${hero({
     eyebrow: 'Lighter orders, ranked by calories',
     h1: `Waffle House Dishes Under ${LIMIT} Calories`,
     updated: 'October 30, 2026',
-    intro: `All ${rowsItems.length} regular menu items under ${LIMIT} calories, ranked from lightest to heaviest. Each total counts the dish the way it is normally served, so a plate that comes with toast and hashbrowns is counted with them.`,
+    intro: `All ${rowsItems.length} regular menu items under ${LIMIT} calories, ranked from lightest to heaviest. Each total counts the dish the way it is normally served, so a plate served with toast and hashbrowns counts them too.`,
     stats: [['Dishes', rowsItems.length], ['Avg. calories', avg(rowsItems, 'cal')], ['Avg. protein', avg(rowsItems, 'protein') + 'g'], ['Avg. sodium', fmt(avg(rowsItems, 'sodium')) + 'mg']],
   })}
     <section class="py-12 md:py-14 px-4 bg-[#FBFBFC] border-b border-gray-200">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">${card('Easy swaps that save calories', list(swaps))}${card('Three lighter full plates', list(plates) + `
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">${card('Easy swaps to save calories', list(swaps))}${card('Three lighter full plates', list(plates) + `
             <p class="text-xs text-gray-600 mt-4">Estimates for each plate as listed. Jelly, butter and syrup are not included.</p>`)}${card('Watch the sodium', `<p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">A low calorie count does not mean low sodium. These dishes on the list have ${fmt(1500)}mg of sodium or more:</p>` + list(hiSodium.map((i) => [esc(i.name), fmt(i.sodium) + 'mg'])))}${card('At a glance', list([
     ['Dishes on the list', `${rowsItems.length} across ${nCat} menu sections`],
     ['Lightest food item', `${food[0].name} (${food[0].cal} cal)`],
@@ -263,7 +263,7 @@ ${faqSection(faqs, 'Low-Calorie Menu FAQ')}`;
     ['What is the highest-protein dish under 600 calories?', `The ${under600[0].name} has about ${under600[0].protein}g of protein for ${under600[0].cal} calories, the most protein of any dish under 600 calories.`],
     ['How much protein is in the All-Star Special?', `About ${byName['All-Star Special with Bacon'].protein}g with bacon, ${byName['All-Star Special with Sausage'].protein}g with sausage and ${byName['All-Star Special with City Ham'].protein}g with city ham, with hashbrowns and white toast.`],
     ['Which meat has the most protein?', `Pork chops (two) have about ${C.CHOP.protein}g, a T-bone ${C.TBONE.protein}g, country ham ${C.COHAM.protein}g and grilled chicken ${C.CHICKEN.protein}g. Grilled chicken gives the most protein per calorie, at ${C.CHICKEN.cal} calories.`],
-    ['How can I add protein to a Waffle House order?', `Each extra scrambled egg adds about ${C.EGG.protein}g of protein (${C.EGG.cal} calories), a slice of cheese ${C.COVERED.protein}g (${C.COVERED.cal} calories), and a side of grilled chicken ${C.CHICKEN.protein}g (${C.CHICKEN.cal} calories).`],
+    ['How do I add protein to a Waffle House order?', `Each extra scrambled egg adds about ${C.EGG.protein}g of protein (${C.EGG.cal} calories), a slice of cheese ${C.COVERED.protein}g (${C.COVERED.cal} calories), and a side of grilled chicken ${C.CHICKEN.protein}g (${C.CHICKEN.cal} calories).`],
   ];
   const leaderCards = leaders.map((it, n) => `
           <a href="/menu#${it.category}" class="block bg-white rounded-2xl border-2 ${n < 3 ? 'border-[#F59E0B]' : 'border-gray-200'} hover:border-[#F59E0B] p-5 transition-colors">

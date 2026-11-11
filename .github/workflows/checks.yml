@@ -1,0 +1,32 @@
+# Vercel serves this site as static files and runs no build, so these checks run here instead.
+# They fail on: style violations in page copy, FAQ schema out of step with the visible FAQ,
+# tables out of step with the data, and generated pages edited by hand (build:data must be a no-op).
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # The generators and checks use only Node built-ins, so no npm install is needed.
+      - name: Style guard (handover note, section 2)
+        run: node tools/check-style.js
+      - name: FAQ schema matches the visible FAQ
+        run: node tools/sync-faq-schema.js --check
+      - name: Tables and prose match the data
+        run: npm run check:data
+      - name: Generated pages are up to date
+        run: |
+          npm run build:data
+          git diff --exit-code --stat || { echo "::error::Generated pages differ from their generators. Run npm run build:data and commit."; exit 1; }

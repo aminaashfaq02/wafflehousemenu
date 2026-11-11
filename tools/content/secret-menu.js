@@ -4,12 +4,12 @@ module.exports = (h) => {
   const sum = (ids) => ids.reduce((t, [id, q = 1]) => ({ cal: t.cal + C[id].cal * q, protein: t.protein + C[id].protein * q, sodium: t.sodium + C[id].sodium * q }), { cal: 0, protein: 0, sodium: 0 });
   const orders = [
     ['Hashbrowns all the way', 'Every topping on a regular order: onions, cheese, ham, tomatoes, jalape&ntilde;os, mushrooms, chili and sausage gravy.', [['HASHATW']], `On the menu as &ldquo;all the way&rdquo;, about ${money(B['Hashbrowns All The Way'].price)}.`],
-    ['Double-chip waffle', 'A classic waffle with both chocolate chips and peanut butter chips.', [['WAFFLE'], ['CHOCCHIP'], ['PBCHIP']], 'Ask for both toppings; expect to pay for each.'],
-    ['Cheese eggs', 'Scrambled eggs with a slice of American cheese per egg, an option you can add to any breakfast.', [['EGG_TWO'], ['COVERED', 2]], 'Add to any egg breakfast.'],
+    ['Double-chip waffle', 'A classic waffle with both chocolate chips and peanut butter chips.', [['WAFFLE'], ['CHOCCHIP'], ['PBCHIP']], 'Ask for both toppings and expect to pay for each.'],
+    ['Cheese eggs', 'Scrambled eggs with a slice of American cheese per egg, an option for any breakfast.', [['EGG_TWO'], ['COVERED', 2]], 'Add to any egg breakfast.'],
     ['Biscuit, gravy and an egg', 'Biscuit and sausage gravy with a scrambled egg on top.', [['GRVYBISC'], ['EGG']], 'Ask to add an egg.'],
     ['Peppered patty melt', 'The Texas Angus Patty Melt with jalape&ntilde;os added.', [['TXPATTY'], ['PEPPERED']], 'Add jalape&ntilde;os to the melt.'],
     ['Bacon cheesesteak melt', 'The Texas Cheesesteak Melt with bacon added, which some restaurants list as its own item.', [['TXCSMLT'], ['ADDBACON']], `About ${money(B['Texas Bacon Cheesesteak Melt'].price)} where it is listed.`],
-    ['Waffle &ldquo;burger&rdquo;', 'An Angus patty and cheese served with a waffle in place of the bun, a request that has done the rounds online.', [['WAFFLE'], ['PATTY'], ['COVERED']], 'Not a menu item; it is up to the cook.'],
+    ['Waffle &ldquo;burger&rdquo;', 'An Angus patty and cheese served with a waffle in place of the bun, a request you will see online.', [['WAFFLE'], ['PATTY'], ['COVERED']], 'Not a menu item. The cook decides.'],
     ['Triple hashbrowns, scattered, smothered and covered', 'A triple order with onions and cheese for sharing.', [['TRIPHASH'], ['SMOTHERED'], ['COVERED']], `A triple order is about ${money(B['Triple Hashbrowns'].price)} before toppings.`],
   ].map(([n, d, ids, how]) => ({ n, d, how, ...sum(ids) }));
 
@@ -33,9 +33,9 @@ module.exports = (h) => {
       html: 'There is no official secret menu. &ldquo;Secret menu&rdquo; orders are combinations of regular items, such as hashbrowns <strong>all the way</strong>, a waffle with <strong>both chocolate and peanut butter chips</strong>, or <strong>cheese eggs</strong>. Whether an off-menu request is made is up to the cook, and extras are usually charged.',
     },
     sections: [
-      { id: 'how-it-works', title: 'How the &ldquo;secret menu&rdquo; really works', html: `
+      { id: 'how-it-works', title: 'How the &ldquo;secret menu&rdquo; works', html: `
         ${p('Everything at Waffle House is cooked on the grill in front of you, from the eggs to the melts. Because the kitchen works from individual ingredients (the same eggs, cheese, meats and toppings go into dozens of dishes), it is often possible to add or swap something.')}
-        ${p('If an item is not on the menu, though, the cook decides whether to make it. The best &ldquo;secret&rdquo; orders are simple changes to things that are already on the menu.')}` },
+        ${p('If an item is not on the menu, though, the cook decides whether to make it. The best &ldquo;secret&rdquo; orders are simple changes to items already on the menu.')}` },
       { id: 'orders', title: '8 custom orders to ask for', html: orders.map((o, i) => `
         ${h3(`${i + 1}. ${o.n}`)}
         ${p(o.d)}
@@ -46,7 +46,7 @@ module.exports = (h) => {
       { id: 'how-to-ask', title: 'How to ask for an off-menu order', html: `
         ${ol([
           'Order it as changes to a menu item (&ldquo;a patty melt with jalape&ntilde;os&rdquo;) rather than by a name you saw online.',
-          'Keep it simple during busy times; one or two changes are easier than a whole new dish.',
+          'Keep it simple at busy times. One or two changes are easier than a whole new dish.',
           'Expect to pay for extras such as cheese, toppings and added meat.',
           'If the cook says no, take it gracefully: it is their grill.',
         ])}
@@ -54,9 +54,9 @@ module.exports = (h) => {
     ],
     faqs: [
       ['Does Waffle House have a secret menu?', 'No. Waffle House does not have an official secret menu. &ldquo;Secret menu&rdquo; orders are custom combinations of regular menu items, and the cook decides whether to make an off-menu request.'],
-      ['What is the most popular Waffle House secret menu order?', 'Hashbrowns ordered &ldquo;all the way&rdquo;, with every topping, is the best-known example. It is actually on the menu; it just takes knowing the words to order it.'],
+      ['What is the most popular Waffle House secret menu order?', 'Hashbrowns ordered &ldquo;all the way&rdquo;, with every topping, is the best-known example. It is on the menu. You only need the words to order it.'],
       ['How many calories are in Waffle House hashbrowns all the way?', `About ${B['Hashbrowns All The Way'].cal} calories on a regular order, with ${fmt(B['Hashbrowns All The Way'].sodium)}mg of sodium.`],
-      ['Can you get a waffle with chocolate chips and peanut butter chips?', `You can ask for both. A classic waffle with both toppings comes to about ${fmt(C.WAFFLE.cal + C.CHOCCHIP.cal + C.PBCHIP.cal)} calories, and each topping is usually charged.`],
+      ['Does Waffle House make a waffle with chocolate and peanut butter chips?', `Yes, if you ask for both. A classic waffle with both toppings comes to about ${fmt(C.WAFFLE.cal + C.CHOCCHIP.cal + C.PBCHIP.cal)} calories, and each topping is usually charged.`],
       ['Will Waffle House make a waffle burger?', 'It is not a menu item, so it depends on the cook. If they will make it, expect to pay for the waffle and the patty separately.'],
     ],
     related: [
