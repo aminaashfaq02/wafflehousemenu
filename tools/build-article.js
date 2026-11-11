@@ -109,6 +109,10 @@ ${related}
 
 function build(name) {
   const c = require(path.join(__dirname, 'content', name + '.js'))(h);
+  if (c.title.includes(data.monthYear())) {
+    const worst = c.title.replace(data.monthYear(), data.monthYear().replace(/^\S+/, 'September'));
+    if (worst.length > 60) throw new Error(`${name}: title is ${worst.length} chars in September: ${worst}`);
+  }
   const file = path.join(ROOT, c.file);
   let html = fs.readFileSync(file, 'utf8');
   const nl = html.includes('\r\n') ? '\r\n' : '\n';

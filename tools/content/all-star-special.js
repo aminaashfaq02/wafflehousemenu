@@ -16,7 +16,7 @@ module.exports = (h) => {
     file: 'blog/waffle-house-all-star-special/index.html',
     url: '/blog/waffle-house-all-star-special/',
     crumb: 'All-Star Special',
-    title: 'Waffle House All-Star Special 2026: Price, Calories & Sides',
+    title: `Waffle House All-Star Special ${h.monthYear()}: Price ${money(B['All-Star Special with Bacon'].price)}`,
     h1: 'Waffle House All-Star Special: Price, What&rsquo;s Included &amp; Calories',
     description: `The Waffle House All-Star Special costs about ${money(bacon.price)} in 2026. What comes on the plate, how much it saves, calories for each meat and side, and how to order it.`,
     eyebrow: 'Menu Guide',

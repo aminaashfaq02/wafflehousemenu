@@ -10,7 +10,7 @@ module.exports = (h) => {
     file: 'blog/waffle-house-hash-browns/index.html',
     url: '/blog/waffle-house-hash-browns/',
     crumb: 'Hashbrowns',
-    title: 'Waffle House Hashbrowns: Toppings, Lingo, Prices & Calories',
+    title: `Waffle House Hashbrowns ${h.monthYear()}: Toppings & Prices`,
     h1: 'Waffle House Hashbrowns: Every Topping, the Lingo, Prices &amp; Calories',
     description: 'How to order Waffle House hashbrowns: the three sizes, all eight toppings and what to call them, ways to cook them, typical 2026 prices and calories.',
     eyebrow: 'Ordering Tips',

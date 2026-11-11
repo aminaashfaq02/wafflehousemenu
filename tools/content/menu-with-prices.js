@@ -25,7 +25,7 @@ module.exports = (h) => {
     file: 'blog/waffle-house-menu-with-prices/index.html',
     url: '/blog/waffle-house-menu-with-prices/',
     crumb: 'What a Meal Costs',
-    title: 'Waffle House Menu Prices 2026: What a Meal Costs',
+    title: `Waffle House Meal Prices ${h.monthYear()}: What a Meal Costs`,
     h1: 'Waffle House Menu Prices: What a Meal Really Costs in 2026',
     description: `What a meal at Waffle House costs in 2026: breakfast, lunch, dinner and late-night budgets, a family bill, price ranges and the cheapest orders.`,
     eyebrow: 'Menu & Prices',

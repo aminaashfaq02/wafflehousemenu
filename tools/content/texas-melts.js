@@ -14,7 +14,7 @@ module.exports = (h) => {
     file: 'blog/waffle-house-texas-melts/index.html',
     url: '/blog/waffle-house-texas-melts/',
     crumb: 'Texas Melts',
-    title: 'Waffle House Texas Melts Compared: Calories, Protein & Price',
+    title: `Waffle House Texas Melts ${h.monthYear()}: Calories & Price`,
     h1: 'Waffle House Texas Melts Compared: Which One Should You Order?',
     description: 'All five Waffle House Texas melts side by side: what is in each, calories, protein, sodium and typical 2026 prices, plus add-ons and the breakfast melts.',
     eyebrow: 'Menu Guide',

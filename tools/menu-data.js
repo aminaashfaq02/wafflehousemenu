@@ -39,4 +39,7 @@ const byName = Object.fromEntries(items.map((i) => [i.name, i]));
 
 const money = (p) => (p == null ? 'Varies' : '$' + p.toFixed(2));
 
-module.exports = { categories, items, byName, components, updated: menu.updated, money, slug, toppingPrice: prices.toppingPrice };
+// "November 2026" from the data's compiled date (not today's date), for month + year titles.
+const monthYear = () => new Date(menu.updated + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+module.exports = { monthYear, categories, items, byName, components, updated: menu.updated, money, slug, toppingPrice: prices.toppingPrice };
