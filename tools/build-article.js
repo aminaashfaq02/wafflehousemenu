@@ -39,13 +39,19 @@ const h = {
 
 function render(c) {
   const toc = c.sections.map((s) => `<li><a class="hover:underline" href="#${s.id}">${s.title}</a></li>`).join('');
+  // Answer block: sits straight under the h1 so AI Overviews and snippets quote the figure, not the context.
+  // Every number in it comes from the content module, which reads the same data as the page's tables.
+  const basis = c.quick && (c.quick.basis || (/\$\d/.test(c.quick.html)
+    ? `Typical prices compiled by Waffle Guide on ${longDate(data.updated)}. Prices vary by location.`
+    : /calorie|protein/i.test(c.quick.html) ? `Nutrition figures are for each item as normally served. Updated ${longDate(data.updated)}.` : `Updated ${longDate(c.modified)}.`));
   const quick = c.quick ? `
-      <div id="quick-answer" class="mb-10 rounded-3xl bg-white border-2 border-[#F59E0B] p-6 sm:p-8 shadow-sm">
-        <h2 class="font-heading font-black text-lg sm:text-xl text-[#1C1410] mb-3">${c.quick.heading}</h2>
-        <p class="text-base sm:text-[17px] text-gray-800 leading-relaxed ${c.quick.stats ? 'mb-6' : ''}">${c.quick.html}</p>${c.quick.stats ? `
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">${c.quick.stats.map(([l, v, s]) => `
-          <div class="p-4 rounded-2xl bg-[#FAF7F0] border border-amber-200"><span class="text-[11px] font-bold uppercase text-gray-600 block mb-1">${l}</span><span class="font-heading font-black text-xl sm:text-2xl text-[#1C1410]">${v}</span>${s ? `<span class="text-[11px] text-gray-600 block mt-0.5">${s}</span>` : ''}</div>`).join('')}
-        </div>` : ''}
+      <div id="quick-answer" class="mb-6 rounded-3xl bg-white border-2 border-[#F59E0B] p-5 sm:p-6 shadow-sm">
+        <p class="text-lg sm:text-xl text-[#1C1410] font-medium leading-relaxed">${c.quick.html}</p>
+        <p class="text-sm text-gray-600 mt-3">${basis}</p>
+      </div>` : '';
+  const stats = c.quick && c.quick.stats ? `
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-10">${c.quick.stats.map(([l, v, s]) => `
+        <div class="p-4 rounded-2xl bg-[#FAF7F0] border border-amber-200"><span class="text-[11px] font-bold uppercase text-gray-600 block mb-1">${l}</span><span class="font-heading font-black text-xl sm:text-2xl text-[#1C1410]">${v}</span>${s ? `<span class="text-[11px] text-gray-600 block mt-0.5">${s}</span>` : ''}</div>`).join('')}
       </div>` : '';
   const faq = c.faqs && c.faqs.length ? `
       <section id="faq" class="mb-12 scroll-mt-28">
@@ -74,7 +80,8 @@ function render(c) {
         <span class="text-sm text-gray-600 font-medium">Published ${longDate(c.published)} &bull; ${c.readMin} min read</span>
       </div>
       <h1 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-[#1C1410] tracking-tight leading-tight mb-5">${c.h1}</h1>
-      <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">${c.lead}</p>
+${quick}
+      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">${c.lead}</p>
       <div class="flex items-center gap-3 p-4 rounded-2xl bg-[#FAF7F0] border border-amber-200 mb-8">
         <div class="w-11 h-11 rounded-xl bg-[#1C1410] text-[#F59E0B] flex items-center justify-center font-black text-lg shrink-0" aria-hidden="true">WG</div>
         <div><div class="font-heading font-black text-sm text-[#1C1410]">By <a href="/about" class="hover:underline">Editorial Team</a></div><div class="text-xs text-gray-600">Waffle Guide</div></div>
@@ -83,7 +90,7 @@ function render(c) {
         <img src="${c.image}"${srcset(c.image)} alt="${esc(c.imageAlt)}"${c.imageTitle ? ` title="${esc(c.imageTitle)}"` : ''} class="w-full h-auto object-cover max-h-[480px]" loading="eager" fetchpriority="high" decoding="async" width="1200" height="675" />
         <figcaption class="p-3 bg-white border-t border-gray-100 text-sm text-gray-600 text-center">${c.caption}</figcaption>
       </figure>
-${quick}
+${stats}
       <nav aria-label="In this article" class="mb-10 p-6 rounded-3xl bg-[#FAF7F0] border-2 border-[#F59E0B]">
         <h2 class="font-heading font-black text-sm uppercase tracking-wider text-[#1C1410] mb-3">In this article</h2>
         <ol class="list-decimal pl-5 space-y-1.5 text-sm sm:text-base text-gray-800 font-medium">${toc}</ol>

@@ -23,7 +23,6 @@ module.exports = (h) => {
     caption: 'Scattered, smothered and covered: hashbrowns with grilled onions and a slice of cheese.',
     lead: 'Hashbrowns are the side most people build their Waffle House order around, and they come with their own vocabulary. Scattered, smothered, covered, chunked: each word adds something specific. Here is what every term means, what the sizes and toppings cost, and how the calories change as you add them.',
     quick: {
-      heading: 'The short answer',
       html: `Waffle House hashbrowns come regular, large or triple. A regular order is typically about <strong>${money(reg.price)}</strong> and ${reg.cal} calories. Each topping usually adds about ${money(toppingPrice)}: <strong>smothered</strong> (onions), <strong>covered</strong> (cheese), <strong>chunked</strong> (ham), <strong>diced</strong> (tomatoes), <strong>peppered</strong> (jalape&ntilde;os), <strong>capped</strong> (mushrooms), <strong>topped</strong> (chili) and <strong>country</strong> (sausage gravy). Order them all and they are &ldquo;all the way&rdquo;.`,
       stats: [['Regular order', money(reg.price), `${reg.cal} cal`], ['Large order', money(lg.price), `${lg.cal} cal`], ['Each topping', `~${money(toppingPrice)}`, `${C.DICED.cal}&ndash;${C.COUNTRY.cal} cal`], ['All the way', money(atw.price), `${atw.cal} cal`]],
     },

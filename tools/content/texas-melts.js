@@ -27,7 +27,6 @@ module.exports = (h) => {
     caption: 'Every Texas melt is built on two slices of grilled Texas toast with two slices of cheese.',
     lead: 'The Texas melts are the lunch and dinner side of Waffle House: thick grilled Texas toast, two slices of melted American cheese, grilled onions and a hot filling. There are five to choose from, and they differ more than you might expect in protein, calories and price. Here they are side by side.',
     quick: {
-      heading: 'The short answer',
       html: `For the most protein, order the <strong>${byP[0].name}</strong> (${byP[0].protein}g of protein, ${byP[0].cal} calories). For the fewest calories, the <strong>${byCal[0].name}</strong> (${byCal[0].cal}). Most melts typically cost about ${money(B['Texas Cheesesteak Melt'].price)}&ndash;${money(B['Texas Angus Patty Melt'].price)}; the bacon cheesesteak is the priciest at about ${money(B['Texas Bacon Cheesesteak Melt'].price)}.`,
       stats: [['Melts', '5', 'Plus 2 breakfast melts'], ['Most protein', `${byP[0].protein}g`, byP[0].name.replace('Texas ', '')], ['Calories', `${byCal[0].cal}&ndash;${byCal[byCal.length - 1].cal}`, 'Per melt'], ['Typical price', `${money(priced[0].price)}&ndash;${money(priced[priced.length - 1].price)}`, 'Varies by location']],
     },

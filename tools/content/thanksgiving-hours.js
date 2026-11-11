@@ -27,7 +27,6 @@ module.exports = (h) => {
     caption: 'Waffle House stays open around the clock, holidays included.',
     lead: 'If the oven is full, the plans fell through or you are on the road, Waffle House is one of the few places reliably open on Thanksgiving. Here is what to expect on the day, what you can order, and how to make sure your local restaurant is open before you go.',
     quick: {
-      heading: 'The short answer',
       html: 'Yes. All of Waffle House&rsquo;s more than 2,000 restaurants are <strong>open 24 hours a day, seven days a week</strong>, and that includes Thanksgiving. The regular menu is served all day. A restaurant can still close for local reasons such as staffing or severe weather, so check the official locator or call ahead if you are driving a long way.',
       stats: [['Thanksgiving', 'Open', 'Regular 24-hour hours'], ['Menu', 'Full menu', 'No special holiday menu'], ['Pie by the slice', money(pie.price), 'Pecan or chocolate'], ['Restaurants', '2,000+', 'In 25 states']],
     },

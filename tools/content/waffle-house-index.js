@@ -18,7 +18,6 @@ module.exports = (h) => {
     caption: 'The index rests on one simple fact: these restaurants are almost always open.',
     lead: 'Most restaurants close when a hurricane is on the way. Waffle House is famous for doing the opposite, and that habit turned into one of the more unusual tools in American disaster response. Here is what the Waffle House Index is, what its three colors mean, where it came from and why it works.',
     quick: {
-      heading: 'The short answer',
       html: 'The Waffle House Index is an <strong>informal measure of how hard a storm has hit an area</strong>, based on whether the local Waffle House is open. <strong>Green</strong> means a full menu, <strong>yellow</strong> a limited menu, and <strong>red</strong> that the restaurant is closed, which signals serious damage. It was coined in 2004 by Craig Fugate, then Florida&rsquo;s emergency management director and later head of FEMA.',
       stats: [['Green', 'Full menu', 'Little or no damage'], ['Yellow', 'Limited menu', 'Power or supplies short'], ['Red', 'Closed', 'Severe damage'], ['Coined', '2004', 'After Hurricane Charley']],
     },

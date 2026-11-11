@@ -31,7 +31,6 @@ module.exports = (h) => {
     caption: `Two scrambled eggs, sliced tomatoes and wheat toast come to about ${plates[0].cal} calories.`,
     lead: 'Waffle House is not a diet restaurant, but almost everything is cooked to order, which makes it easy to build a breakfast that fits a calorie target. The trick is knowing where the calories are. Here are the lighter plates that still fill you up, the swaps that save the most, and the orders that add up faster than you would think.',
     quick: {
-      heading: 'The short answer',
       html: `For the fewest calories with real staying power, order <strong>two scrambled eggs with sliced tomatoes and wheat toast</strong> (about ${plates[0].cal} calories and ${plates[0].protein}g of protein). For more protein, <strong>grilled chicken and two eggs with sliced tomatoes</strong> comes to about ${plates[1].cal} calories and ${plates[1].protein}g of protein, and the <strong>Chicken Fiesta Protein Bowl</strong> is about ${fiesta.cal} calories with ${fiesta.protein}g.`,
       stats: [['Lightest full plate', `${plates[0].cal} cal`, 'Eggs, tomatoes, wheat toast'], ['Most protein per calorie', 'Grilled chicken', `${per100('CHICKEN')}g per 100 cal`], ['Biggest single swap', `&minus;${C.WHITE.cal} cal`, 'Leave off the toast'], ['Lighter All-Star', `${fmt(lightAS.cal)} cal`, `vs ${fmt(heavyAS.cal)} with sausage`]],
     },

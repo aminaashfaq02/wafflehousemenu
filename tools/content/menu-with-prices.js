@@ -38,7 +38,6 @@ module.exports = (h) => {
     caption: 'Most Waffle House meals land between about $8 and $20 a person, before tax and tip.',
     lead: `The full menu tells you what each item costs. This guide answers the question most people actually have: how much will I spend? Using typical 2026 prices, here is what a breakfast, lunch, dinner or late-night stop usually comes to, what a family of four pays, and where the best value is.`,
     quick: {
-      heading: 'The short answer',
       html: `Expect to pay about <strong>${budgets[0][2]}</strong> for a two egg breakfast with coffee and about <strong>${budgets[1][2]}</strong> for the All-Star Special with coffee. Lunch with a Texas melt runs about ${budgets[2][2]}, and a T-bone dinner with a drink about ${budgets[4][2]}. Tax and tip are extra, and prices vary by location.`,
       stats: [['Breakfast for one', budgets[0][2], 'Two eggs + coffee'], ['All-Star + coffee', budgets[1][2], 'Typical price'], ['Family of four', `~${money(family)}`, 'Before tax and tip'], ['Lowest-priced item', money(cheap[0].price), cheap[0].name]],
     },

@@ -29,7 +29,6 @@ module.exports = (h) => {
     caption: 'The All-Star Special: a waffle, two eggs, toast, a side and a breakfast meat.',
     lead: `The All-Star Special is the order most people picture when they think of Waffle House: a sweet cream waffle, two eggs, toast, hashbrowns or grits and a breakfast meat, all for one price. Here is what it costs in 2026, what you actually get, how many calories it adds up to, and how to order it the way you like it.`,
     quick: {
-      heading: 'The short answer',
       html: `The All-Star Special typically costs about <strong>${money(bacon.price)}</strong>, and published price lists show it from <strong>${money(bacon.range[0])} to ${money(bacon.range[1])}</strong> depending on the restaurant. It comes with two scrambled eggs, toast and jelly, a choice of hashbrowns, grits or sliced tomatoes, a waffle, and bacon, sausage or city ham. With hashbrowns and white toast it is about <strong>${fmt(ham.cal)}&ndash;${fmt(sausage.cal)} calories</strong>.`,
       stats: [['Typical price', money(bacon.price), `${money(bacon.range[0])}&ndash;${money(bacon.range[1])} seen`], ['On the plate', '5 items', 'Waffle, eggs, toast, side, meat'], ['Calories', `${fmt(ham.cal)}&ndash;${fmt(sausage.cal)}`, 'With hashbrowns'], ['Combo saving', `~${money(save)}`, 'vs ordering separately']],
     },

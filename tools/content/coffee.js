@@ -22,7 +22,6 @@ module.exports = (h) => {
     caption: 'A cup of coffee is one of the lowest-priced things on the menu.',
     lead: 'Coffee is the quiet constant at Waffle House: it is on the table at breakfast, at lunch and at three in the morning. If you have ever wondered who makes it, which blends there are and what a cup costs, here is everything worth knowing.',
     quick: {
-      heading: 'The short answer',
       html: `Waffle House coffee is roasted by <strong>Royal Cup Coffee &amp; Tea</strong> of Birmingham, Alabama, which has supplied the chain since the 1970s. It is made from 100% Arabica beans grown in Central and South America and comes in three versions: <strong>Classic Blend</strong>, <strong>Specialty Dark Roast</strong> and <strong>Premium Decaf</strong>. A cup typically costs about <strong>${money(coffee.price)}</strong>.`,
       stats: [['Roaster', 'Royal Cup', 'Birmingham, Alabama'], ['Beans', '100% Arabica', 'Central & South America'], ['Typical price', money(coffee.price), `${money(coffee.range[0])}&ndash;${money(coffee.range[1])} seen`], ['Black coffee', `${coffee.cal} cal`, 'Before cream and sugar']],
     },

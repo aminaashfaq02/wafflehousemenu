@@ -16,6 +16,7 @@ const as = byName['All-Star Special with Bacon'];
 const priced = categories.flatMap((c) => c.items).filter((i) => i.price != null);
 const withRange = priced.filter((i) => i.range);
 const spread = [...withRange].sort((a, b) => (b.range[1] - b.range[0]) - (a.range[1] - a.range[0])).slice(0, 5);
+const rangeLine = `${withRange.length} of the ${priced.length} priced items show a range. The widest is the ${spread[0].name}, from ${money(spread[0].range[0])} to ${money(spread[0].range[1])}.`;
 const cheapest = [...priced].filter((i) => i.cal > 0 || i.name === 'Coffee').sort((a, b) => a.price - b.price).slice(0, 5);
 
 const faqs = [
@@ -72,7 +73,10 @@ const main = `
       <div class="max-w-6xl mx-auto">
         <span class="text-xs sm:text-sm font-black uppercase tracking-widest text-amber-800 font-heading block mb-2">State-by-State Price Guide &bull; Updated November 2, 2026</span>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#1C1410] font-heading tracking-tight leading-tight mb-4">Waffle House Prices by State</h1>
-        <p class="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl mb-8">Waffle House does not publish one national price list, so the same order can cost different amounts from one town or state to the next. This guide gives the typical price of each menu item and the range of prices seen across published restaurant price lists, so you know roughly what to expect before you order.</p>
+        <div id="quick-answer" class="max-w-4xl mb-8">
+          <p class="text-[#1C1410] text-base sm:text-lg leading-relaxed font-medium">The All-Star Special typically costs <strong>${money(as.price)}</strong> at Waffle House, and published price lists show it from ${money(as.range[0])} to ${money(as.range[1])} depending on the restaurant. ${rangeLine}</p>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed mt-3">Waffle House does not publish one national price list, so the same order costs different amounts from one town or state to the next. Each item below shows its typical price and the range seen across published restaurant price lists.</p>
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div class="border-2 border-gray-200 bg-[#FAF7F0] rounded-2xl p-4 text-center"><span class="block text-[11px] font-extrabold uppercase tracking-widest text-gray-600 font-heading">Items priced</span><span class="text-3xl font-black font-heading text-[#1C1410]">${priced.length}</span></div>
           <div class="border-2 border-gray-200 bg-[#FAF7F0] rounded-2xl p-4 text-center"><span class="block text-[11px] font-extrabold uppercase tracking-widest text-gray-600 font-heading">States</span><span class="text-3xl font-black font-heading text-[#1C1410]">25</span></div>
