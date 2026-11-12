@@ -26,6 +26,12 @@ html {
     padding-top: 4px;
     padding-bottom: 4px;
   }
+  /* Other standalone text links in the page body (bylines, "read more" links, email links). :where() keeps
+     the specificity at zero, so any Tailwind padding already on a link or button still wins. */
+  :where(main a:not(p a, li a, td a, th a, h1 a, h2 a, h3 a)) {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
 }
 
 /* Visible keyboard focus for links and buttons that only had hover styles. */

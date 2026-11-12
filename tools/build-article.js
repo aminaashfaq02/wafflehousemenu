@@ -43,11 +43,11 @@ function render(c) {
   // Every number in it comes from the content module, which reads the same data as the page's tables.
   const basis = c.quick && (c.quick.basis || (/\$\d/.test(c.quick.html)
     ? `Typical prices compiled by Waffle Guide on ${longDate(data.updated)}. Prices vary by location.`
-    : /calorie|protein/i.test(c.quick.html) ? `Nutrition figures are for each item as normally served. Updated ${longDate(data.updated)}.` : `Updated ${longDate(c.modified)}.`));
+    : /calorie|protein/i.test(c.quick.html) ? `Nutrition figures compiled by Waffle Guide on ${longDate(data.updated)}, for each item as normally served.` : ''));
   const quick = c.quick ? `
       <div id="quick-answer" class="mb-6 rounded-3xl bg-white border-2 border-[#F59E0B] p-5 sm:p-6 shadow-sm">
-        <p class="text-lg sm:text-xl text-[#1C1410] font-medium leading-relaxed">${c.quick.html}</p>
-        <p class="text-sm text-gray-600 mt-3">${basis}</p>
+        <p class="text-lg sm:text-xl text-[#1C1410] font-medium leading-relaxed">${c.quick.html}</p>${basis ? `
+        <p class="text-sm text-gray-600 mt-3">${basis}</p>` : ''}
       </div>` : '';
   const stats = c.quick && c.quick.stats ? `
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-10">${c.quick.stats.map(([l, v, s]) => `
@@ -77,7 +77,7 @@ function render(c) {
       </nav>
       <div class="flex flex-wrap items-center gap-2 mb-4">
         <span class="px-3 py-1 rounded-full bg-[#F59E0B] text-[#1C1410] font-heading font-black text-xs uppercase tracking-wider">${c.eyebrow}</span>
-        <span class="text-sm text-gray-600 font-medium">Published ${longDate(c.published)} &bull; ${c.readMin} min read</span>
+        <span class="text-sm text-gray-600 font-medium">Published ${longDate(c.published)}${c.modified && c.modified !== c.published ? ` &bull; Updated <time datetime="${c.modified}">${longDate(c.modified)}</time>` : ''} &bull; ${c.readMin} min read</span>
       </div>
       <h1 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-[#1C1410] tracking-tight leading-tight mb-5">${c.h1}</h1>
 ${quick}
@@ -109,6 +109,9 @@ ${related}
 
 function build(name) {
   const c = require(path.join(__dirname, 'content', name + '.js'))(h);
+  // tools/data/pages.json is the one place page modified dates live (visible label, JSON-LD, sitemap)
+  const pages = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'pages.json'), 'utf8')).pages;
+  if (pages[c.file]) c.modified = pages[c.file];
   if (c.title.includes(data.monthYear())) {
     const worst = c.title.replace(data.monthYear(), data.monthYear().replace(/^\S+/, 'September'));
     if (worst.length > 60) throw new Error(`${name}: title is ${worst.length} chars in September: ${worst}`);

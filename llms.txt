@@ -1,6 +1,15 @@
 # Waffle Guide
 > An independent consumer guide to Waffle House menu items, typical price ranges, nutrition estimates, locations and diner culture. Not affiliated with or endorsed by Waffle House, Inc.
 
+
+<!-- key-figures -->
+## Key figures (typical prices compiled November 4, 2026, they vary by location)
+
+- All-Star Special: $12.35 ($10.30 to $14.10 seen), about 1,150 calories with bacon.
+- Two Egg Breakfast: $7.25. Classic waffle: $5.55, 410 calories. Coffee: $2.65.
+- Menu: 88 items in 15 categories, 74 with a typical price, from $2.45 (white toast) to $18.95 (T-Bone Dinner).
+- Calories: 10 (sliced tomatoes) to 1,270 (All-Star Special with Sausage).
+<!-- /key-figures -->
 ## Menu & Prices
 - [Full Menu & Prices](https://www.wafflehouse-menu.com/menu): 88 menu items across 15 categories with typical prices, calories, protein, carbs, fat, sodium and allergens.
 - [Menu PDF](https://www.wafflehouse-menu.com/menu/pdf/): Where to find Waffle House nutrition information online and how to print our menu guide.

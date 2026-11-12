@@ -12,11 +12,14 @@ module.exports = (h) => {
     ['Steak dinner', ['T-Bone Dinner', "Alice's Iced Tea (Sweet)"]],
     ['Late-night waffle', ['Classic Waffle', 'Coffee']],
   ].map(([n, list]) => [n, list.join(' + ').replace(/ \(Regular\)| \(Sweet\)/g, ''), money(meal(list))]);
+  const totals = budgets.map(([n, l, m]) => Number(m.replace('$', '')));
+  const lo = Math.min(...totals), hi = Math.max(...totals);
   const family = meal(['All-Star Special with Bacon', 'All-Star Special with Sausage', 'Two Egg Breakfast', 'Two Egg Breakfast']) + 2 * coffee + 2 * B['Milk (9-oz)'].price;
   const catRows = categories.filter((c) => c.items.some((i) => i.price != null)).map((c) => {
     const ps = c.items.filter((i) => i.price != null).map((i) => i.price);
     return [c.title, ps.length > 1 ? `${money(Math.min(...ps))} &ndash; ${money(Math.max(...ps))}` : money(ps[0])];
   });
+  const top = [...priced].sort((a, b) => b.price - a.price)[0];
   const cheap = [...priced].filter((i) => i.category !== 'cat-beverages').sort((a, b) => a.price - b.price).slice(0, 6);
   const dear = [...priced].sort((a, b) => b.price - a.price).slice(0, 5);
   const allstar = B['All-Star Special with Bacon'];
@@ -26,7 +29,7 @@ module.exports = (h) => {
     url: '/blog/waffle-house-menu-with-prices/',
     crumb: 'What a Meal Costs',
     title: `Waffle House Meal Prices ${h.monthYear()}: What a Meal Costs`,
-    h1: 'Waffle House Menu Prices: What a Meal Costs in 2026',
+    h1: 'What a Meal Costs at Waffle House in 2026',
     description: `What a meal at Waffle House costs in 2026: breakfast, lunch, dinner and late-night budgets, a family bill, price ranges and the cheapest orders.`,
     eyebrow: 'Menu & Prices',
     published: '2026-10-06',
@@ -35,7 +38,7 @@ module.exports = (h) => {
     image: '/assets/blog/waffle-house-menu-prices-meal-cost.webp',
     imageAlt: 'A diner table with a Texas melt, hashbrowns, a waffle and coffee next to a guest check and cash',
     imageTitle: 'What a Meal Costs',
-    caption: 'Most Waffle House meals land between about $8 and $20 a person, before tax and tip.',
+    caption: `The meals on this page run from about ${money(lo)} to ${money(hi)} a person, before tax and tip.`,
     lead: `The full menu tells you what each item costs. This guide answers the question most people have: how much will I spend? Using typical 2026 prices, here is what a breakfast, lunch, dinner or late-night stop usually comes to, what a family of four pays, and where the best value is.`,
     quick: {
       html: `Expect to pay about <strong>${budgets[0][2]}</strong> for a two egg breakfast with coffee and about <strong>${budgets[1][2]}</strong> for the All-Star Special with coffee. Lunch with a Texas melt runs about ${budgets[2][2]}, and a T-bone dinner with a drink about ${budgets[4][2]}. Tax and tip are extra, and prices vary by location.`,
@@ -58,21 +61,23 @@ module.exports = (h) => {
         ${p(`For a full plate, the two egg breakfast at about ${money(B['Two Egg Breakfast'].price)} is the lowest-priced option, and the biscuits give the most calories for the money. See more ways to save on the ${a('/coupons', 'coupons and deals')} page.`)}` },
       { id: 'priciest', title: 'The most expensive items', html: `
         ${table(['Item', 'Typical price'], dear.map((i) => [i.name, money(i.price)]))}
-        ${p('Steak dinners and the All-Star Special top the menu, but even the most expensive plate stays under $20 at typical prices.')}` },
+        ${p(`Steak dinners and the All-Star Special top the menu. The most expensive plate, the ${top.name}, is about ${money(top.price)} at typical prices.`)}` },
       { id: 'tax-and-tip', title: 'Tax, tips and why your bill differs', html: `
         ${ul([
           'Menu prices do not include sales tax, which is added at the register and differs by state and city.',
           'Waffle House is a table-service restaurant, so leaving a tip for your server is customary in the US.',
           'Restaurants near highways, airports and in bigger cities often charge a little more than the typical prices shown here.',
           'Toppings, extra eggs, cheese and upgraded waffles all add to the bill. Each hashbrown topping usually adds about ' + money(h.toppingPrice) + '.',
+          'In February 2025, Waffle House added a temporary surcharge of 50 cents per egg because of high egg prices. Ask your restaurant whether it still applies.',
         ])}` },
     ],
     faqs: [
-      ['How much does it cost to eat at Waffle House?', `Most meals cost about $8 to $20 per person before tax and tip. A two egg breakfast with coffee is about ${budgets[0][2]}, and the All-Star Special with coffee about ${budgets[1][2]}.`],
+      ['How much does it cost to eat at Waffle House?', `The meals in this guide cost about ${money(lo)} to ${money(hi)} per person before tax and tip. A two egg breakfast with coffee is about ${budgets[0][2]}, and the All-Star Special with coffee about ${budgets[1][2]}.`],
       ['What is the cheapest meal at Waffle House?', `The two egg breakfast, at about ${money(B['Two Egg Breakfast'].price)}, is the lowest-priced full plate. For a snack, a grilled biscuit or a side of toast is about ${money(B['Grilled Biscuit'].price)}.`],
       ['What is the most expensive item at Waffle House?', `The T-Bone Dinner, at about ${money(B['T-Bone Dinner'].price)}, is the highest-priced item at typical prices.`],
       ['How much is coffee at Waffle House?', `A cup of coffee is typically about ${money(coffee)}.`],
       ['Do Waffle House prices include tax?', 'No. Sales tax is added at the register, and the rate depends on the state and city.'],
+      ['Does Waffle House still charge extra for eggs?', 'In February 2025, Waffle House added a temporary surcharge of 50 cents per egg because of high egg prices. Ask your restaurant whether it still applies.'],
     ],
     related: [
       ['/menu', 'Full menu with prices', 'Every item, typical prices and nutrition'],
